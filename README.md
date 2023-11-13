@@ -18,6 +18,9 @@ Researchers and practitioners are encouraged to comment on the available data an
 	+ Hazus Earthquake Model for Buildings
 	+ Hazus Earthquake Model for Transportation
 
+#### v2.1
+- Adding Tsunami for Buildings
+
 ### Documentation
 
 Every model available in the database is documented under Damage and Loss DB in: https://nheri-simcenter.github.io/PBE-Documentation/
