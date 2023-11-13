@@ -18,8 +18,6 @@ Researchers and practitioners are encouraged to comment on the available data an
 	+ Hazus Earthquake Model for Buildings
 	+ Hazus Earthquake Model for Transportation
 
-#### v1.1
-- Adding Tsunami model for Buildings
 
 ### Documentation
 
