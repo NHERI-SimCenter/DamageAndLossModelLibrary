@@ -423,8 +423,10 @@ def main():
     # pre_calc
 
     flt_bldg_df = bldg_df.copy()
-    # flt_bldg_df = bldg_df.iloc[:100] # this allows you to test it with a
-    # few archetypes before running the whole thing
+
+    # # this allows you to test it with a few archetypes before
+    # # running the whole thing
+    # flt_bldg_df = bldg_df.iloc[:100]
 
     # labels for all features, damage state data, and loss data
     column_names = [
@@ -476,6 +478,11 @@ def main():
         "L4",
         "L_fit",
         "L_meps",
+        "DS1_original",
+        "DS2_original",
+        "DS3_original",
+        "DS4_original",
+        "L_original",
     ]
 
     # resulting dataframe
@@ -531,6 +538,11 @@ def main():
                     frag_df_arch_terrain.loc[
                         frag_df_arch_terrain["DamLossDescID"] == DS, wind_speeds_str
                     ].values[0]
+                )
+                multilinear_CDF_parameters = (
+                    ','.join([str(x) for x in P_exc])
+                    + '|'
+                    + ','.join([str(x) for x in wind_speeds])
                 )
 
                 mu_0 = max(
@@ -693,6 +705,7 @@ def main():
                 new_row_terrain[f"DS{DS}_sig"] = res.x[1]
                 new_row_terrain[f"DS{DS}_fit"] = res.fun
                 new_row_terrain[f"DS{DS}_meps"] = res.maxcv
+                new_row_terrain[f"DS{DS}_original"] = multilinear_CDF_parameters
 
                 # consecutive damage states should have increasing capacities
                 mu_min = res.x[0]
@@ -704,6 +717,12 @@ def main():
                 frag_df_arch_terrain.loc[
                     frag_df_arch_terrain["DamLossDescID"] == 5, wind_speeds_str
                 ].values[0]
+            )
+
+            multilinear_CDF_parameters = (
+                ','.join([str(x) for x in L_ref])
+                + '|'
+                + ','.join([str(x) for x in wind_speeds])
             )
 
             # We'll need the probability of each Damage State across the
@@ -791,6 +810,7 @@ def main():
             new_row_terrain["L2"] = res.x[1]
             new_row_terrain["L3"] = res.x[2]
             new_row_terrain["L4"] = L4
+            new_row_terrain["L_original"] = multilinear_CDF_parameters
             new_row_terrain["L_fit"] = res.fun
             new_row_terrain["L_meps"] = res.maxcv
 
@@ -1164,7 +1184,7 @@ def main():
         os.makedirs(output_directory)
 
     # initialize the fragility table
-    df_db = pd.DataFrame(
+    df_db_fit = pd.DataFrame(
         columns=[
             "ID",
             "Incomplete",
@@ -1189,30 +1209,78 @@ def main():
         dtype=float,
     )
 
-    df_db['ID'] = out_df['ID']
-    df_db['Incomplete'] = 0
-    df_db['Demand-Type'] = 'Peak Gust Wind Speed'
-    df_db['Demand-Unit'] = 'mph'
-    df_db['Demand-Offset'] = 0
-    df_db['Demand-Directional'] = 0
+    df_db_original = pd.DataFrame(
+        columns=[
+            "ID",
+            "Incomplete",
+            "Demand-Type",
+            "Demand-Unit",
+            "Demand-Offset",
+            "Demand-Directional",
+            "LS1-Family",
+            "LS1-Theta_0",
+            "LS2-Family",
+            "LS2-Theta_0",
+            "LS3-Family",
+            "LS3-Theta_0",
+            "LS4-Family",
+            "LS4-Theta_0",
+        ],
+        index=out_df.index,
+        dtype=float,
+    )
+
+    for df_db in (df_db_original, df_db_fit):
+        df_db['ID'] = out_df['ID']
+        df_db['Incomplete'] = 0
+        df_db['Demand-Type'] = 'Peak Gust Wind Speed'
+        df_db['Demand-Unit'] = 'mph'
+        df_db['Demand-Offset'] = 0
+        df_db['Demand-Directional'] = 0
 
     for LS_i in range(1, 5):
-        df_db[f'LS{LS_i}-Family'] = out_df[f'DS{LS_i}_dist']
-        df_db[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_mu']
-        df_db[f'LS{LS_i}-Theta_1'] = out_df[f'DS{LS_i}_sig']
 
-    df_db = df_db.loc[df_db['ID'] != '']
+        df_db_original[f'LS{LS_i}-Family'] = 'multilinear_CDF'
+        df_db_original[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_original']
 
-    df_db.set_index("ID", inplace=True)
-    df_db.sort_index(inplace=True)
+        df_db_fit[f'LS{LS_i}-Family'] = out_df[f'DS{LS_i}_dist']
+        df_db_fit[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_mu']
+        df_db_fit[f'LS{LS_i}-Theta_1'] = out_df[f'DS{LS_i}_sig']
 
-    df_db = df_db.convert_dtypes()
+    for df_db in (df_db_original, df_db_fit):
+        df_db = df_db.loc[df_db['ID'] != '']
 
-    # we'll need to update the location
-    df_db.to_csv(f'{output_directory}/damage_DB_SimCenter_Hazus_HU_bldg.csv')
+        df_db.set_index("ID", inplace=True)
+        df_db.sort_index(inplace=True)
+
+        df_db = df_db.convert_dtypes()
+
+    df_db_fit.to_csv(
+        f'{output_directory}/damage_DB_SimCenter_Hazus_HU_bldg_fitted.csv'
+    )
+    df_db_original.to_csv(
+        f'{output_directory}/damage_DB_SimCenter_Hazus_HU_bldg_original.csv'
+    )
 
     # initialize the output loss table
     # define the columns
+    out_cols = [
+        "ID",
+        "Incomplete",
+        "DV-Unit",
+        "Demand-Unit",
+        "LossFunction",
+    ]
+    df_db_original = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
+    df_db_original['ID'] = [f'{id}-Cost' for id in out_df['ID']]
+    df_db_original['Incomplete'] = 0
+    df_db_original['DV-Unit'] = 'loss_ratio'
+    df_db_original['LossFunction'] = out_df['L_original']
+    df_db_original = df_db.loc[df_db['ID'] != '-Cost']
+    df_db_original.set_index("ID", inplace=True)
+    df_db_original.sort_index(inplace=True)
+    df_db_original = df_db.convert_dtypes()
+
     out_cols = [
         "Incomplete",
         "Quantity-Unit",
@@ -1222,26 +1290,24 @@ def main():
         out_cols += [
             f"DS{DS_i}-Theta_0",
         ]
-
-    df_db = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
-
-    df_db['ID'] = [f'{id}-Cost' for id in out_df['ID']]
-    df_db['Incomplete'] = 0
-    df_db['Quantity-Unit'] = '1 EA'
-    df_db['DV-Unit'] = 'loss_ratio'
-
+    df_db_fit = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
+    df_db_fit['ID'] = [f'{id}-Cost' for id in out_df['ID']]
+    df_db_fit['Incomplete'] = 0
+    df_db_fit['Quantity-Unit'] = '1 EA'
+    df_db_fit['DV-Unit'] = 'loss_ratio'
     for LS_i in range(1, 5):
-        df_db[f'DS{LS_i}-Theta_0'] = out_df[f'L{LS_i}']
+        df_db_fit[f'DS{LS_i}-Theta_0'] = out_df[f'L{LS_i}']
+    df_db_fit = df_db.loc[df_db['ID'] != '-Cost']
+    df_db_fit.set_index("ID", inplace=True)
+    df_db_fit.sort_index(inplace=True)
+    df_db_fit = df_db.convert_dtypes()
 
-    df_db = df_db.loc[df_db['ID'] != '-Cost']
-
-    df_db.set_index("ID", inplace=True)
-    df_db.sort_index(inplace=True)
-
-    df_db = df_db.convert_dtypes()
-
-    # we'll need to update the location
-    df_db.to_csv(f'{output_directory}/loss_repair_DB_SimCenter_Hazus_HU_bldg.csv')
+    df_db_fit.to_csv(
+        f'{output_directory}/loss_repair_DB_SimCenter_Hazus_HU_bldg_fitted.csv'
+    )
+    df_db_original.to_csv(
+        f'{output_directory}/loss_repair_DB_SimCenter_Hazus_HU_bldg_original.csv'
+    )
 
 
 if __name__ == '__main__':
