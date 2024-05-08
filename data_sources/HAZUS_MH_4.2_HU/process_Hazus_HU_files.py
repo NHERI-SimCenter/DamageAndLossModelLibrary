@@ -510,7 +510,8 @@ def main():
         if descr != "":
             print('WARNING', index, descr)
 
-        # filter only those parts of the frag_df that correspond to this archetype
+        # filter only those parts of the frag_df that correspond to
+        # this archetype
         frag_df_arch = frag_df[frag_df["wbID"] == index]
 
         # cycle through the five terrain types in Hazus
@@ -533,7 +534,8 @@ def main():
 
             # for each damage state
             for DS in [1, 2, 3, 4]:
-                # get the exceedence probabilities for this DS of this archetype
+                # get the exceedence probabilities for this DS of this
+                # archetype
                 P_exc = np.asarray(
                     frag_df_arch_terrain.loc[
                         frag_df_arch_terrain["DamLossDescID"] == DS, wind_speeds_str
@@ -1179,6 +1181,9 @@ def main():
 
     # ## Export to CSV file
 
+    # import dill
+    # dill.load_session('session.dill')
+
     output_directory = 'output'
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
@@ -1249,11 +1254,7 @@ def main():
 
     for df_db in (df_db_original, df_db_fit):
         df_db = df_db.loc[df_db['ID'] != '']
-
-        df_db.set_index("ID", inplace=True)
-        df_db.sort_index(inplace=True)
-
-        df_db = df_db.convert_dtypes()
+        df_db = df_db.set_index("ID").sort_index().convert_dtypes()
 
     df_db_fit.to_csv(
         f'{output_directory}/damage_DB_SimCenter_Hazus_HU_bldg_fitted.csv'
@@ -1267,19 +1268,24 @@ def main():
     out_cols = [
         "ID",
         "Incomplete",
-        "DV-Unit",
+        "Demand-Type",
         "Demand-Unit",
-        "LossFunction",
+        "Demand-Offset",
+        "Demand-Directional",
+        "DV-Unit",
+        "LossFunction-Theta_0",
     ]
     df_db_original = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
     df_db_original['ID'] = [f'{id}-Cost' for id in out_df['ID']]
     df_db_original['Incomplete'] = 0
+    df_db_original['Demand-Type'] = 'Peak Gust Wind Speed'
+    df_db_original['Demand-Unit'] = 'mph'
+    df_db_original['Demand-Offset'] = 0
+    df_db_original['Demand-Directional'] = 0
     df_db_original['DV-Unit'] = 'loss_ratio'
-    df_db_original['LossFunction'] = out_df['L_original']
-    df_db_original = df_db.loc[df_db['ID'] != '-Cost']
-    df_db_original.set_index("ID", inplace=True)
-    df_db_original.sort_index(inplace=True)
-    df_db_original = df_db.convert_dtypes()
+    df_db_original['LossFunction-Theta_0'] = out_df['L_original']
+    df_db_original = df_db_original.loc[df_db_original['ID'] != '-Cost']
+    df_db_original = df_db_original.set_index("ID").sort_index().convert_dtypes()
 
     out_cols = [
         "Incomplete",
@@ -1287,9 +1293,7 @@ def main():
         "DV-Unit",
     ]
     for DS_i in range(1, 5):
-        out_cols += [
-            f"DS{DS_i}-Theta_0",
-        ]
+        out_cols += [f"DS{DS_i}-Theta_0"]
     df_db_fit = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
     df_db_fit['ID'] = [f'{id}-Cost' for id in out_df['ID']]
     df_db_fit['Incomplete'] = 0
@@ -1297,10 +1301,8 @@ def main():
     df_db_fit['DV-Unit'] = 'loss_ratio'
     for LS_i in range(1, 5):
         df_db_fit[f'DS{LS_i}-Theta_0'] = out_df[f'L{LS_i}']
-    df_db_fit = df_db.loc[df_db['ID'] != '-Cost']
-    df_db_fit.set_index("ID", inplace=True)
-    df_db_fit.sort_index(inplace=True)
-    df_db_fit = df_db.convert_dtypes()
+    df_db_fit = df_db_fit.loc[df_db_fit['ID'] != '-Cost']
+    df_db_fit = df_db_fit.set_index("ID").sort_index().convert_dtypes()
 
     df_db_fit.to_csv(
         f'{output_directory}/loss_repair_DB_SimCenter_Hazus_HU_bldg_fitted.csv'
