@@ -1,0 +1,57 @@
+A,Substructure
+B,Shell
+B.10,Superstructure
+B.10.31,Steel Columns
+B.10.33,Steel Braces
+B.10.35,Steel Connections
+B.10.41,RC or Composite Columns
+B.10.42,RC or Composite Beams
+B.10.44,RC or Composite Shearwalls
+B.10.49,RC Flat Slabs
+B.10.51,Ordinary Reinforced Masonry Walls
+B.10.52,Special Reinforced Masonry Walls
+B.10.61,Cold-formed Steel Walls
+B.10.71,Wood Light Frame
+B.20,Exterior Enclosure
+B.20.11,Exterior Walls
+B.20.22,Curtain Walls
+B.20.23,Storefronts
+B.30,Roof
+B.30.11,Roof Finishes
+B.30.31,Masonry Chimney
+B.30.41,Masonry Parapet
+C,Interiors
+C.10,Interior Construction
+C.10.11,Fixed Partitions
+C.20,Stairs
+C.20.11,Regular Stairs
+C.30,Interior Finishes
+C.30.11,Wall Finishes
+C.30.21,Floor Covering
+C.30.27,Access Pedastal Flooring
+C.30.32,Suspended Ceilings
+C.30.34,Independent Pendant Lighting
+D,Services
+D.10,Conveying
+D.10.14,Elevators
+D.20,Plumbing
+D.20.21,Cold Water Service
+D.20.22,Hot Water Service
+D.20.31,Waste Piping 
+D.20.51,Chilled Water Piping
+D.20.61,Steam Piping
+D.30,HVAC
+D.30.31,Chilled Water Systems
+D.30.32,Direct Expansion Systems
+D.30.41,Air Distribution Systems
+D.30.52,Package Units
+D.30.67,Energy Monitoring & Control
+D.40,Fire Protection
+D.40.11,Sprinkler Water Supply
+D.50,Electrical
+D.50.11,High Tension Service & Dist.
+D.50.12,Low Tension Service & Dist.
+D.50.92,Emergency Light & Power Systems
+E,Equipment
+F,Special Construction & Demolition
+F.10.12,Pre-engineered Structures
