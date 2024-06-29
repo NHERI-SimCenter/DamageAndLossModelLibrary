@@ -3,6 +3,8 @@ Generates Hazus Hurricane damage and loss database files.
 
 """
 
+# pylint: skip-file
+
 import os
 import warnings
 import numpy as np
@@ -570,8 +572,8 @@ def main():
                     if (np.round(mu, decimals=1) <= mu_min) or (sig <= 0):
                         return 1e10
 
-                    eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[
-                        :max_speed_id_mod
+                    eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[  # noqa
+                        :max_speed_id_mod  # noqa
                     ]
 
                     if res_type == 'MSE':
@@ -596,8 +598,8 @@ def main():
 
                     eps = (
                         norm.cdf(np.log(wind_speeds), loc=np.log(mu), scale=beta)
-                        - P_exc
-                    )[:max_speed_id_mod]
+                        - P_exc  # noqa
+                    )[:max_speed_id_mod]  # noqa
 
                     if res_type == 'MSE':
                         MSE = sum(eps**2.0)
@@ -767,12 +769,12 @@ def main():
                 loss_ratios = params.copy()
 
                 # assume 1.0 for DS4
-                loss_ratios = np.append(loss_ratios, L4)
+                loss_ratios = np.append(loss_ratios, L4)  # noqa
 
-                L_est = np.sum(loss_ratios * DS_probs.T, axis=1)
+                L_est = np.sum(loss_ratios * DS_probs.T, axis=1)  # noqa
 
                 # the error is the difference between reference and estimated losses
-                eps = (L_est - L_ref)[:max_speed_id]
+                eps = (L_est - L_ref)[:max_speed_id]  # noqa
 
                 if res_type == 'SSE':
                     # calculate the sum of squared errors across wind speeds
@@ -786,7 +788,7 @@ def main():
             cons = (
                 {'type': 'ineq', 'fun': lambda x: x[1] - x[0] - 0.002},
                 {'type': 'ineq', 'fun': lambda x: x[2] - x[1] - 0.002},
-                {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},
+                {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},  # noqa
             )
 
             res = minimize(
