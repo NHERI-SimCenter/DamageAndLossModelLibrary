@@ -220,4 +220,4 @@ def create_Hazus_Flood_repair_db(
 
     lf_data['ID'] = lf_data['ID'].apply(remove_repeated_chars)
 
-    lf_data.to_csv(target_data_file)
+    lf_data.to_csv(target_data_file, index=False)
