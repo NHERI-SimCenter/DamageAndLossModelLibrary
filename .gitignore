@@ -1,2 +1,5 @@
 /data_sources/HAZUS_MH_4.2_HU/output/
 /data_sources/HAZUS_MH_4.2_HU/session.dill
+/doc/build/
+*.pyc
+/.ropeproject/
