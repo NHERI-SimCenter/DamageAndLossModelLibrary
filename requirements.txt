@@ -1,0 +1,12 @@
+numpy
+scipy
+pandas
+matplotlib
+plotly
+pelicun
+colorlover
+sphinx
+sphinx_design
+sphinx-rtd-theme
+sphinxcontrib-bibtex
+numpydoc

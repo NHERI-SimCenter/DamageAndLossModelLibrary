@@ -1,0 +1,585 @@
+import json
+import os
+import shutil
+import subprocess
+import sys
+import time
+from copy import deepcopy
+from pathlib import Path
+from textwrap import dedent
+from zipfile import ZipFile
+
+from doc.source._extensions.visuals import plot_fragility, plot_repair
+
+import numpy as np
+
+
+def create_component_group_directory(cmp_groups, root, dlml):
+    member_ids = []
+
+    if isinstance(cmp_groups, dict):
+        for grp_name, grp_members in cmp_groups.items():
+            grp_id = f"{grp_name.split('-')[0].strip()}"
+
+            # create the first-level dirs
+            grp_dir = Path(root) / grp_id
+            grp_dir.mkdir(parents=True, exist_ok=True)
+
+            # call this function again to add subdirs
+            subgrp_ids = create_component_group_directory(
+                grp_members, grp_dir, dlml=dlml
+            )
+
+            grp_index_contents = dedent(f"""
+            .. _lbl-dldb_damage_{dlml}_{grp_id.replace(".", "_")}
+
+            {"*" * len(grp_name)}
+            {grp_name}
+            {"*" * len(grp_name)}
+
+            The following models are available:
+
+            .. toctree::
+               :maxdepth: 1
+
+            """)
+
+            for member_id in subgrp_ids:
+                grp_index_contents += f'   {member_id}/index\n'
+
+            grp_index_path = grp_dir / 'index.rst'
+            with grp_index_path.open('w', encoding='utf-8') as f:
+                f.write(grp_index_contents)
+
+            member_ids.append(grp_id)
+
+    else:
+        for grp_name in cmp_groups:
+            grp_id = f"{grp_name.split('-')[0].strip()}"
+
+            grp_dir = Path(root) / grp_id
+
+            # create group dirs
+            grp_dir.mkdir(parents=True, exist_ok=True)
+
+            grp_index_contents = dedent(f"""
+            .. _lbl-dldb_damage_{dlml}_{grp_id.replace(".", "_")}
+
+            {"*" * len(grp_name)}
+            {grp_name}
+            {"*" * len(grp_name)}
+
+            The following models are available:
+
+            """)
+
+            grp_index_path = grp_dir / 'index.rst'
+            with grp_index_path.open('w', encoding='utf-8') as f:
+                f.write(grp_index_contents)
+
+            member_ids.append(grp_id)
+
+    return member_ids
+
+
+def generate_damage_docs():
+    resource_folder = Path('.')
+
+    doc_folder = Path('/tmp/damage')
+    if os.path.exists(doc_folder):
+        shutil.rmtree(doc_folder)
+    doc_folder.mkdir(parents=True, exist_ok=True)
+
+    # get all the available damage dlmls
+    damage_dlmls = list(resource_folder.rglob('fragility.csv'))
+
+    # create the main index file
+    damage_index_contents = dedent("""\
+    .. _lbl-dldb_damage:
+
+    *************
+    Damage Models
+    *************
+
+    The following collections are available in our Damage and Loss Model Library:
+
+    .. toctree::
+       :maxdepth: 1
+
+    """)
+
+    # for each database
+    for dlml in damage_dlmls:
+        print('Working on ', dlml)
+
+        # add dlml to main damage index file
+        damage_index_contents += f'   {dlml}/index\n'
+
+        # create a folder
+        (doc_folder / dlml.parent).mkdir(parents=True, exist_ok=True)
+
+        # rm # check if figures are available
+        # rm # create figures in zip files
+        # rm # We could recognize if the zip is already there and skip this,
+        # rm # but that could lead to issues with the zip not being updated.
+        # rm # So, we are just creating a new zip every time to be safe.
+        # rm dlml_zip = Path(f'./temp/{file_prefix}{dlml}.zip').resolve()
+        # rm viz_script = backend_pelicun_folder / 'DL_visuals.py'
+        # rm dlml_path = resource_folder / f'{file_prefix}{dlml}.csv'
+
+        plot_fragility(
+            str(dlml),
+            str((doc_folder / dlml.parent) / 'fragility.zip'),
+            create_zip='1',
+        )
+
+        # check if there are metadata available
+        dlml_json = dlml.with_suffix('.json')
+        if dlml_json.is_file():
+            with open(dlml_json) as f:
+                dlml_meta = json.load(f)
+        else:
+            dlml_meta = None
+
+        if dlml_meta is not None:
+            dlml_general = dlml_meta.get('_GeneralInformation', {})
+
+            # create the top of the dlml index file
+            dlml_short_name = dlml_general.get('ShortName', dlml)
+
+            dlml_description = dlml_general.get(
+                'Description', f'The following models are available in {dlml}:'
+            )
+
+            dlml_index_contents = dedent(f"""
+            .. _lbl-dldb_damage_{dlml}
+
+            {"*" * len(dlml_short_name)}
+            {dlml_short_name}
+            {"*" * len(dlml_short_name)}
+
+            {dlml_description}
+
+            """)
+
+            # check if there are component groups defined
+            dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
+
+            # if yes, create the corresponding directory structure and index files
+            if dlml_cmp_groups is not None:
+                dlml_index_contents += dedent("""
+                .. toctree::
+                   :maxdepth: 1
+
+                """)
+
+                # create the directory structure and index files
+                grp_ids = create_component_group_directory(
+                    dlml_cmp_groups, root=(doc_folder / dlml), dlml=dlml
+                )
+
+                for member_id in grp_ids:
+                    dlml_index_contents += f'   {member_id}/index\n'
+
+        else:
+            print(f'No metadata available for {dlml}')
+
+            # create the top of the dlml index file
+            dlml_index_contents = dedent(f"""\
+            .. _lbl-dldb_damage_{dlml}
+
+            {"*" * len(dlml)}
+            {dlml}
+            {"*" * len(dlml)}
+
+            The following models are available in {dlml}:
+
+            """)
+
+        dlml_index_path = doc_folder / dlml.parent / 'index.rst'
+        with dlml_index_path.open('w', encoding='utf-8') as f:
+            f.write(dlml_index_contents)
+
+        # now open the zip file
+        with ZipFile((doc_folder / dlml.parent) / 'fragility.zip', 'r') as zipObj:
+            # for each component
+            for comp in sorted(zipObj.namelist()):
+                comp = Path(comp).stem.removesuffix('.html')
+
+                # check where the component belongs
+                comp_labels = comp.split('.')
+                comp_path = doc_folder / dlml.parent
+                new_path = deepcopy(comp_path)
+
+                c_i = 0
+                while new_path.is_dir():
+                    comp_path = new_path
+
+                    if c_i > len(comp_labels):
+                        break
+
+                    new_path = comp_path / f"{'.'.join(comp_labels[:c_i])}"
+
+                    c_i += 1
+
+                grp_index_path = comp_path / 'index.rst'
+
+                comp_meta = None
+                if dlml_meta is not None:
+                    comp_meta = dlml_meta.get(comp, None)
+
+                with grp_index_path.open('a', encoding='utf-8') as f:
+                    # add the component info to the docs
+
+                    if comp_meta is None:
+                        comp_contents = dedent(f"""
+                        {comp}
+                        {"*" * len(comp)}
+
+                        .. raw:: html
+                           :file: {comp}.html
+
+
+                        .. raw:: html
+
+                           <hr>
+
+                        """)
+
+                    else:
+                        comp_contents = dedent(f"""
+                        .. raw:: html
+
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <div>
+
+                        """)
+
+                        comp_comments = comp_meta.get('Comments', '').split('\n')
+
+                        for comment_line in comp_comments:
+                            if comment_line != '':
+                                comp_contents += f'| {comment_line}\n'
+
+                        if 'SuggestedComponentBlockSize' in comp_meta:
+                            roundup = comp_meta.get(
+                                'RoundUpToIntegerQuantity', 'False'
+                            )
+                            if roundup == 'True':
+                                roundup_text = '(round up to integer quantity)'
+                            else:
+                                roundup_text = ''
+
+                            comp_contents += dedent(f"""
+
+                            Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
+
+                            """)
+
+                        comp_contents += dedent(f"""
+
+                        .. raw:: html
+                           :file: {comp}.html
+
+                        .. raw:: html
+
+                           <hr>
+                        """)
+
+                    f.write(comp_contents)
+
+                # copy the file from the zip to the dlml folder
+                zipObj.extract(f'{comp}.html', path=comp_path)
+
+    damage_index_path = doc_folder / 'index.rst'
+    with damage_index_path.open('w', encoding='utf-8') as f:
+        f.write(damage_index_contents)
+
+
+def generate_repair_docs():
+    resource_folder = Path('../../../../DamageAndLossModelLibrary/DLML').resolve()
+    backend_pelicun_folder = Path(
+        '../../../../SimCenterBackendApplications/modules/performDL/pelicun3'
+    ).resolve()
+    file_prefix = 'loss_repair_DLML_'
+
+    # initialize the repair doc folder
+    doc_folder = './repair'
+
+    if os.path.exists(doc_folder):
+        shutil.rmtree(doc_folder)
+
+    doc_folder = Path(doc_folder)
+
+    doc_folder.mkdir(parents=True, exist_ok=True)
+
+    # get all the available repair dlmls
+    repair_dlmls = []
+    for file in os.listdir(resource_folder):
+        filename = Path(file).stem
+
+        if filename.startswith(file_prefix):
+            filename = filename[len(file_prefix) :]
+
+            if filename not in repair_dlmls:
+                repair_dlmls.append(filename)
+
+    repair_dlmls = sorted(repair_dlmls)
+
+    # create the main index file
+    repair_index_contents = dedent("""\
+    .. _lbl-dldb_repair:
+
+    *************************
+    Repair Consequence Models
+    *************************
+
+    The following collections are available in our Damage and Loss Model Library:
+
+    .. toctree::
+       :maxdepth: 1
+
+    """)
+
+    # for each database
+    for dlml in repair_dlmls:
+        print('Working on ', dlml)
+
+        # add dlml to main repair index file
+        repair_index_contents += f'   {dlml}/index\n'
+
+        # create a folder
+        (doc_folder / dlml).mkdir(parents=True, exist_ok=True)
+
+        # check if figures are available
+        # create figures in zip files
+        # We could recognize if the zip is already there and skip this,
+        # but that could lead to issues with the zip not being updated.
+        # So, we are just creating a new zip every time to be safe.
+        dlml_zip = Path(f'./temp/{file_prefix}{dlml}.zip').resolve()
+        viz_script = backend_pelicun_folder / 'DL_visuals.py'
+        dlml_path = resource_folder / f'{file_prefix}{dlml}.csv'
+
+        viz_command = ' '.join(
+            [
+                'python3',
+                str(viz_script),
+                'repair',
+                str(dlml_path),
+                '-o',
+                str(dlml_zip),
+                '-z',
+                '1',
+            ]
+        )
+        print(viz_command)
+
+        try:
+            result = subprocess.check_output(viz_command, shell=True, text=True)
+            returncode = 0
+
+        except subprocess.CalledProcessError as e:
+            result = e.output
+            returncode = e.returncode
+
+        print(result)
+
+        if returncode != 0:
+            continue
+
+        # check if there is metadata available
+        dlml_json = resource_folder / f'{file_prefix}{dlml}.json'
+        if dlml_json.is_file():
+            with open(dlml_json) as f:
+                dlml_meta = json.load(f)
+        else:
+            dlml_meta = None
+
+        if dlml_meta is not None:
+            dlml_general = dlml_meta.get('_GeneralInformation', {})
+
+            # create the top of the dlml index file
+            dlml_short_name = dlml_general.get('ShortName', dlml)
+
+            dlml_description = dlml_general.get(
+                'Description', f'The following models are available in {dlml}:'
+            )
+
+            dlml_index_contents = dedent(f"""
+            .. _lbl-dldb_repair_{dlml}
+
+            {"*" * len(dlml_short_name)}
+            {dlml_short_name}
+            {"*" * len(dlml_short_name)}
+
+            {dlml_description}
+
+            """)
+
+            # check if there are component groups defined
+            dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
+
+            # if yes, create the corresponding directory structure and index files
+            if dlml_cmp_groups is not None:
+                dlml_index_contents += dedent("""
+                .. toctree::
+                   :maxdepth: 1
+
+                """)
+
+                # create the directory structure and index files
+                grp_ids = create_component_group_directory(
+                    dlml_cmp_groups, root=(doc_folder / dlml), dlml=dlml
+                )
+
+                for member_id in grp_ids:
+                    dlml_index_contents += f'   {member_id}/index\n'
+
+        else:
+            print(f'No metadata available for {dlml}')
+
+            # create the top of the dlml index file
+            dlml_index_contents = dedent(f"""\
+            .. _lbl-dldb_repair_{dlml}
+
+            {"*" * len(dlml)}
+            {dlml}
+            {"*" * len(dlml)}
+
+            The following models are available in {dlml}:
+
+            """)
+
+        dlml_index_path = doc_folder / f'{dlml}/index.rst'
+        with dlml_index_path.open('w', encoding='utf-8') as f:
+            f.write(dlml_index_contents)
+
+        # now open the zip file
+        with ZipFile(dlml_zip, 'r') as zipObj:
+            html_files = [
+                Path(filepath).stem for filepath in sorted(zipObj.namelist())
+            ]
+
+            comp_ids = np.unique([c_id.split('-')[0] for c_id in html_files])
+
+            dv_types = np.unique([c_id.split('-')[1] for c_id in html_files])
+
+            # for each component
+            for comp in comp_ids:
+                comp_files = []
+                for dv_i in dv_types:
+                    filename = f'{comp}-{dv_i}'
+                    if filename in html_files:
+                        comp_files.append(filename)
+
+                # check where the component belongs
+                comp_labels = comp.split('.')
+                comp_path = doc_folder / dlml
+                new_path = deepcopy(comp_path)
+
+                c_i = 0
+                while new_path.is_dir():
+                    comp_path = new_path
+
+                    if c_i > len(comp_labels):
+                        break
+
+                    new_path = comp_path / f"{'.'.join(comp_labels[:c_i])}"
+
+                    c_i += 1
+
+                grp_index_path = comp_path / 'index.rst'
+
+                comp_meta = None
+                if dlml_meta is not None:
+                    comp_meta = dlml_meta.get(comp, None)
+
+                with grp_index_path.open('a', encoding='utf-8') as f:
+                    # add the component info to the docs
+
+                    if comp_meta is None:
+                        comp_contents = dedent(f"""
+                        {comp}
+                        {"*" * len(comp)}
+
+                        """)
+
+                    else:
+                        comp_contents = dedent(f"""
+
+                        .. raw:: html
+
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <div>
+
+                        """)
+
+                        comp_comments = comp_meta.get('Comments', '').split('\n')
+
+                        for comment_line in comp_comments:
+                            if comment_line != '':
+                                comp_contents += f'| {comment_line}\n'
+
+                        if 'SuggestedComponentBlockSize' in comp_meta:
+                            roundup = comp_meta.get(
+                                'RoundUpToIntegerQuantity', 'False'
+                            )
+                            if roundup == 'True':
+                                roundup_text = '(round up to integer quantity)'
+                            else:
+                                roundup_text = ''
+
+                            comp_contents += dedent(f"""
+
+                            Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
+
+                            """)
+
+                    comp_contents += dedent("""
+
+                    The following repair consequences are available for this model:
+
+                    """)
+
+                    for comp_file in comp_files:
+                        dv_type = comp_file.split('-')[1]
+
+                        comp_contents += dedent(f"""
+
+                        **{dv_type}**
+
+                        .. raw:: html
+                           :file: {comp_file}.html
+
+                        """)
+
+                        # copy the file from the zip to the dlml folder
+                        zipObj.extract(f'{comp_file}.html', path=comp_path)
+
+                    comp_contents += dedent("""
+
+                    .. raw:: html
+
+                       <hr>
+
+                    """)
+
+                    f.write(comp_contents)
+
+    repair_index_path = doc_folder / 'index.rst'
+    with repair_index_path.open('w', encoding='utf-8') as f:
+        f.write(repair_index_contents)
+
+
+def main(args):
+    start_time = time.perf_counter()
+
+    generate_damage_docs()
+
+    generate_repair_docs()
+
+    print('--- Elapsed: {time.perf_counter() - start_time:.0f} seconds ---')
+
+
+if __name__ == '__main__':
+    main(sys.argv[1:])
