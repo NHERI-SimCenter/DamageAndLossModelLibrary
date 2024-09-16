@@ -10,3 +10,4 @@ sphinx_design
 sphinx-rtd-theme
 sphinxcontrib-bibtex
 numpydoc
+tqdm
