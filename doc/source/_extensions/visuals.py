@@ -1,4 +1,4 @@
-#  # noqa: INP001, D100
+#  # noqa: D100
 # Copyright (c) 2023 Leland Stanford Junior University
 # Copyright (c) 2023 The Regents of the University of California
 #
@@ -53,8 +53,6 @@ from pelicun.base import convert_to_MultiIndex, pelicun_path
 from plotly import graph_objects as go
 from plotly.subplots import make_subplots
 from scipy.stats import norm
-
-# start_time = time.time()
 
 
 def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103
@@ -410,11 +408,11 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         with open(f'{output_path}/{comp_id}.html', 'w') as f:  # noqa: PTH123
             f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
 
-    # store the source database file(s) in the output directory for future reference
-    shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
+    # rm: # store the source database file(s) in the output directory for future reference
+    # rm: shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
 
-    if frag_meta is not None:
-        shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
+    # rm: if frag_meta is not None:
+    # rm:     shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
 
     if create_zip == '1':
         files = [f'{output_path}/{file}' for file in os.listdir(output_path)]
@@ -923,7 +921,7 @@ def plot_repair(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103,
                 gridcolor='rgb(220,220,220)',
             )
 
-            quantity_unit = comp_data.loc[('Quantity', 'Unit')]
+            quantity_unit = comp_data.loc['Quantity', 'Unit']
             if quantity_unit in ['unitless', '1 EA', '1 ea']:
                 quantity_unit = '-'
             elif quantity_unit.split()[0] == '1':
@@ -980,11 +978,11 @@ def plot_repair(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103,
                 # internet connection is required to view the figure.
                 f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
 
-    # store the source database file(s) in the output directory for future reference
-    shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
+    # rm: # store the source database file(s) in the output directory for future reference
+    # rm: shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
 
-    if repair_meta is not None:
-        shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
+    # rm: if repair_meta is not None:
+    # rm:     shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
 
     if create_zip == '1':
         files = [f'{output_path}/{file}' for file in os.listdir(output_path)]
@@ -1083,8 +1081,6 @@ def main(args):  # noqa: D103
 
     raise ValueError(f'Invalid `viz_type`: {viz_type}')
 
-
-# python3 DL_visuals.py repair /Users/adamzs/SimCenter/applications/performDL/pelicun3/pelicun/resources/SimCenterDBDL/loss_repair_DB_FEMA_P58_2nd.csv
 
 if __name__ == '__main__':
     main(sys.argv[1:])

@@ -9,12 +9,11 @@ from pathlib import Path
 from textwrap import dedent
 from zipfile import ZipFile
 
+import numpy as np
 from doc.source._extensions.visuals import plot_fragility, plot_repair
 
-import numpy as np
 
-
-def create_component_group_directory(cmp_groups, root, dlml):
+def create_component_group_directory(cmp_groups, root, dlml_tag):
     member_ids = []
 
     if isinstance(cmp_groups, dict):
@@ -27,11 +26,11 @@ def create_component_group_directory(cmp_groups, root, dlml):
 
             # call this function again to add subdirs
             subgrp_ids = create_component_group_directory(
-                grp_members, grp_dir, dlml=dlml
+                grp_members, grp_dir, dlml_tag=dlml_tag
             )
 
             grp_index_contents = dedent(f"""
-            .. _lbl-dldb_damage_{dlml}_{grp_id.replace(".", "_")}
+            .. _lbl-dlml_{dlml_tag}_{grp_id.replace(".", "_")}
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -63,7 +62,7 @@ def create_component_group_directory(cmp_groups, root, dlml):
             grp_dir.mkdir(parents=True, exist_ok=True)
 
             grp_index_contents = dedent(f"""
-            .. _lbl-dldb_damage_{dlml}_{grp_id.replace(".", "_")}
+            .. _lbl-dlml_{dlml_tag}_{grp_id.replace(".", "_")}
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -83,7 +82,7 @@ def create_component_group_directory(cmp_groups, root, dlml):
 
 
 def generate_damage_docs():
-    resource_folder = Path('.')
+    resource_folder = Path()
 
     doc_folder = Path('/tmp/damage')
     if os.path.exists(doc_folder):
@@ -95,7 +94,7 @@ def generate_damage_docs():
 
     # create the main index file
     damage_index_contents = dedent("""\
-    .. _lbl-dldb_damage:
+    .. _lbl-dlml_damage:
 
     *************
     Damage Models
@@ -118,15 +117,6 @@ def generate_damage_docs():
         # create a folder
         (doc_folder / dlml.parent).mkdir(parents=True, exist_ok=True)
 
-        # rm # check if figures are available
-        # rm # create figures in zip files
-        # rm # We could recognize if the zip is already there and skip this,
-        # rm # but that could lead to issues with the zip not being updated.
-        # rm # So, we are just creating a new zip every time to be safe.
-        # rm dlml_zip = Path(f'./temp/{file_prefix}{dlml}.zip').resolve()
-        # rm viz_script = backend_pelicun_folder / 'DL_visuals.py'
-        # rm dlml_path = resource_folder / f'{file_prefix}{dlml}.csv'
-
         plot_fragility(
             str(dlml),
             str((doc_folder / dlml.parent) / 'fragility.zip'),
@@ -136,7 +126,7 @@ def generate_damage_docs():
         # check if there are metadata available
         dlml_json = dlml.with_suffix('.json')
         if dlml_json.is_file():
-            with open(dlml_json) as f:
+            with dlml_json.open('r', encoding='utf-8') as f:
                 dlml_meta = json.load(f)
         else:
             dlml_meta = None
@@ -152,7 +142,7 @@ def generate_damage_docs():
             )
 
             dlml_index_contents = dedent(f"""
-            .. _lbl-dldb_damage_{dlml}
+            .. _lbl-dlml_damage_{dlml}
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -174,8 +164,11 @@ def generate_damage_docs():
                 """)
 
                 # create the directory structure and index files
+                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
                 grp_ids = create_component_group_directory(
-                    dlml_cmp_groups, root=(doc_folder / dlml), dlml=dlml
+                    dlml_cmp_groups,
+                    root=(doc_folder / dlml.parent),
+                    dlml_tag=dlml_tag,
                 )
 
                 for member_id in grp_ids:
@@ -186,7 +179,7 @@ def generate_damage_docs():
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(f"""\
-            .. _lbl-dldb_damage_{dlml}
+            .. _lbl-dlml_damage_{dlml}
 
             {"*" * len(dlml)}
             {dlml}
@@ -204,6 +197,8 @@ def generate_damage_docs():
         with ZipFile((doc_folder / dlml.parent) / 'fragility.zip', 'r') as zipObj:
             # for each component
             for comp in sorted(zipObj.namelist()):
+                if comp == 'fragility':
+                    continue
                 comp = Path(comp).stem.removesuffix('.html')
 
                 # check where the component belongs
@@ -297,38 +292,19 @@ def generate_damage_docs():
 
 
 def generate_repair_docs():
-    resource_folder = Path('../../../../DamageAndLossModelLibrary/DLML').resolve()
-    backend_pelicun_folder = Path(
-        '../../../../SimCenterBackendApplications/modules/performDL/pelicun3'
-    ).resolve()
-    file_prefix = 'loss_repair_DLML_'
+    resource_folder = Path()
 
-    # initialize the repair doc folder
-    doc_folder = './repair'
-
+    doc_folder = Path('/tmp/repair')
     if os.path.exists(doc_folder):
         shutil.rmtree(doc_folder)
-
-    doc_folder = Path(doc_folder)
-
     doc_folder.mkdir(parents=True, exist_ok=True)
 
     # get all the available repair dlmls
-    repair_dlmls = []
-    for file in os.listdir(resource_folder):
-        filename = Path(file).stem
-
-        if filename.startswith(file_prefix):
-            filename = filename[len(file_prefix) :]
-
-            if filename not in repair_dlmls:
-                repair_dlmls.append(filename)
-
-    repair_dlmls = sorted(repair_dlmls)
+    repair_dlmls = list(resource_folder.rglob('consequence_repair.csv'))
 
     # create the main index file
     repair_index_contents = dedent("""\
-    .. _lbl-dldb_repair:
+    .. _lbl-dlml_repair:
 
     *************************
     Repair Consequence Models
@@ -349,48 +325,18 @@ def generate_repair_docs():
         repair_index_contents += f'   {dlml}/index\n'
 
         # create a folder
-        (doc_folder / dlml).mkdir(parents=True, exist_ok=True)
+        (doc_folder / dlml.parent).mkdir(parents=True, exist_ok=True)
 
-        # check if figures are available
-        # create figures in zip files
-        # We could recognize if the zip is already there and skip this,
-        # but that could lead to issues with the zip not being updated.
-        # So, we are just creating a new zip every time to be safe.
-        dlml_zip = Path(f'./temp/{file_prefix}{dlml}.zip').resolve()
-        viz_script = backend_pelicun_folder / 'DL_visuals.py'
-        dlml_path = resource_folder / f'{file_prefix}{dlml}.csv'
-
-        viz_command = ' '.join(
-            [
-                'python3',
-                str(viz_script),
-                'repair',
-                str(dlml_path),
-                '-o',
-                str(dlml_zip),
-                '-z',
-                '1',
-            ]
+        plot_repair(
+            str(dlml),
+            str((doc_folder / dlml.parent) / 'consequence_repair.zip'),
+            create_zip='1',
         )
-        print(viz_command)
-
-        try:
-            result = subprocess.check_output(viz_command, shell=True, text=True)
-            returncode = 0
-
-        except subprocess.CalledProcessError as e:
-            result = e.output
-            returncode = e.returncode
-
-        print(result)
-
-        if returncode != 0:
-            continue
 
         # check if there is metadata available
-        dlml_json = resource_folder / f'{file_prefix}{dlml}.json'
+        dlml_json = dlml.with_suffix('.json')
         if dlml_json.is_file():
-            with open(dlml_json) as f:
+            with dlml_json.open('r', encoding='utf-8') as f:
                 dlml_meta = json.load(f)
         else:
             dlml_meta = None
@@ -406,7 +352,7 @@ def generate_repair_docs():
             )
 
             dlml_index_contents = dedent(f"""
-            .. _lbl-dldb_repair_{dlml}
+            .. _lbl-dlml_repair_{dlml}
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -428,8 +374,11 @@ def generate_repair_docs():
                 """)
 
                 # create the directory structure and index files
+                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
                 grp_ids = create_component_group_directory(
-                    dlml_cmp_groups, root=(doc_folder / dlml), dlml=dlml
+                    dlml_cmp_groups,
+                    root=(doc_folder / dlml.parent),
+                    dlml_tag=dlml_tag,
                 )
 
                 for member_id in grp_ids:
@@ -440,7 +389,7 @@ def generate_repair_docs():
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(f"""\
-            .. _lbl-dldb_repair_{dlml}
+            .. _lbl-dlml_repair_{dlml}
 
             {"*" * len(dlml)}
             {dlml}
@@ -450,12 +399,14 @@ def generate_repair_docs():
 
             """)
 
-        dlml_index_path = doc_folder / f'{dlml}/index.rst'
+        dlml_index_path = doc_folder / dlml.parent / 'index.rst'
         with dlml_index_path.open('w', encoding='utf-8') as f:
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(dlml_zip, 'r') as zipObj:
+        with ZipFile(
+            (doc_folder / dlml.parent) / 'consequence_repair.zip', 'r'
+        ) as zipObj:
             html_files = [
                 Path(filepath).stem for filepath in sorted(zipObj.namelist())
             ]
@@ -474,7 +425,7 @@ def generate_repair_docs():
 
                 # check where the component belongs
                 comp_labels = comp.split('.')
-                comp_path = doc_folder / dlml
+                comp_path = doc_folder / dlml.parent
                 new_path = deepcopy(comp_path)
 
                 c_i = 0
@@ -506,7 +457,6 @@ def generate_repair_docs():
 
                     else:
                         comp_contents = dedent(f"""
-
                         .. raw:: html
 
                            <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
@@ -572,13 +522,8 @@ def generate_repair_docs():
 
 
 def main(args):
-    start_time = time.perf_counter()
-
     generate_damage_docs()
-
     generate_repair_docs()
-
-    print('--- Elapsed: {time.perf_counter() - start_time:.0f} seconds ---')
 
 
 if __name__ == '__main__':
