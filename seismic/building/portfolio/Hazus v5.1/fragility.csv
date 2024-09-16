@@ -1,5 +1,5 @@
 ID,Incomplete,Demand-Type,Demand-Unit,Demand-Offset,Demand-Directional,LS1-Family,LS1-Theta_0,LS1-Theta_1,LS1-DamageStateWeights,LS2-Family,LS2-Theta_0,LS2-Theta_1,LS2-DamageStateWeights,LS3-Family,LS3-Theta_0,LS3-Theta_1,LS3-DamageStateWeights,LS4-Family,LS4-Theta_0,LS4-Theta_1,LS4-DamageStateWeights
-STR.W1.HC,0,Peak Roof Drift Ratio,rad,0,0,lognormal,0.0004,0.4,,lognormal,0.012,0.4,,lognormal,0.04,0.4,,lognormal,0.1,0.4,0.97 | 0.03
+STR.W1.HC,0,Peak Roof Drift Ratio,rad,0,0,lognormal,0.004,0.4,,lognormal,0.012,0.4,,lognormal,0.04,0.4,,lognormal,0.1,0.4,0.97 | 0.03
 STR.W1.MC,0,Peak Roof Drift Ratio,rad,0,0,lognormal,0.004,0.4,,lognormal,0.0099,0.4,,lognormal,0.0306,0.4,,lognormal,0.075,0.4,0.97 | 0.03
 STR.W1.LC,0,Peak Roof Drift Ratio,rad,0,0,lognormal,0.004,0.4,,lognormal,0.0099,0.4,,lognormal,0.0306,0.4,,lognormal,0.075,0.4,0.97 | 0.03
 STR.W1.PC,0,Peak Roof Drift Ratio,rad,0,0,lognormal,0.0032,0.4,,lognormal,0.0079,0.4,,lognormal,0.0245,0.4,,lognormal,0.06,0.4,0.97 | 0.03
