@@ -1,0 +1,10 @@
+.. _changes_v1_0:
+
+==========================
+Version 1.0 (May 19, 2023)
+==========================
+
+Initial Release.
+
+- FEMA P-58 2nd edition.
+- Hazus Earthquake Model for Buildings.
