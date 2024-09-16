@@ -79,7 +79,8 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
                 grp_members, grp_dir, dlml_tag=dlml_tag
             )
 
-            grp_index_contents = dedent(f"""
+            grp_index_contents = dedent(
+                f"""
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -90,7 +91,8 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             .. toctree::
                :maxdepth: 8
 
-            """)
+            """
+            )
 
             for member_id in subgrp_ids:
                 grp_index_contents += f'   {member_id}/index\n'
@@ -110,7 +112,8 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             # create group dirs
             grp_dir.mkdir(parents=True, exist_ok=True)
 
-            grp_index_contents = dedent(f"""
+            grp_index_contents = dedent(
+                f"""
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -118,7 +121,8 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
 
             The following models are available:
 
-            """)
+            """
+            )
 
             grp_index_path = grp_dir / 'index.rst'
             with grp_index_path.open('w', encoding='utf-8') as f:
@@ -139,7 +143,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
     damage_dlmls = list(resource_folder.rglob('fragility.csv'))
 
     # create the main index file
-    damage_index_contents = dedent("""\
+    damage_index_contents = dedent(
+        """\
 
     *************
     Damage Models
@@ -150,7 +155,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
     .. toctree::
        :maxdepth: 8
 
-    """)
+    """
+    )
 
     # for each database
     for dlml in (pbar := tqdm(damage_dlmls)):
@@ -196,7 +202,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                 'Description', f'The following models are available in {dlml}:'
             )
 
-            dlml_index_contents = dedent(f"""
+            dlml_index_contents = dedent(
+                f"""
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -204,18 +211,21 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
 
             {dlml_description}
 
-            """)
+            """
+            )
 
             # check if there are component groups defined
             dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
 
             # if yes, create the corresponding directory structure and index files
             if dlml_cmp_groups is not None:
-                dlml_index_contents += dedent("""
+                dlml_index_contents += dedent(
+                    """
                 .. toctree::
                    :maxdepth: 8
 
-                """)
+                """
+                )
 
                 # create the directory structure and index files
                 dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
@@ -232,7 +242,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
             print(f'No metadata available for {dlml}')
 
             # create the top of the dlml index file
-            dlml_index_contents = dedent(f"""\
+            dlml_index_contents = dedent(
+                f"""\
 
             {"*" * len(dlml)}
             {dlml}
@@ -240,7 +251,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
 
             The following models are available in {dlml}:
 
-            """)
+            """
+            )
 
         dlml_index_path = doc_folder / dlml.parent / 'index.rst'
         with dlml_index_path.open('w', encoding='utf-8') as f:
@@ -280,7 +292,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                     # add the component info to the docs
 
                     if comp_meta is None:
-                        comp_contents = dedent(f"""
+                        comp_contents = dedent(
+                            f"""
                         {comp}
                         {"*" * len(comp)}
 
@@ -292,16 +305,19 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
 
                            <hr>
 
-                        """)
+                        """
+                        )
 
                     else:
-                        comp_contents = dedent(f"""
+                        comp_contents = dedent(
+                            f"""
                         .. raw:: html
 
                            <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
                            <div>
 
-                        """)
+                        """
+                        )
 
                         comp_comments = comp_meta.get('Comments', '').split('\n')
 
@@ -318,13 +334,16 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                             else:
                                 roundup_text = ''
 
-                            comp_contents += dedent(f"""
+                            comp_contents += dedent(
+                                f"""
 
                             Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
 
-                            """)
+                            """
+                            )
 
-                        comp_contents += dedent(f"""
+                        comp_contents += dedent(
+                            f"""
 
                         .. raw:: html
                            :file: {comp}.html
@@ -332,7 +351,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                         .. raw:: html
 
                            <hr>
-                        """)
+                        """
+                        )
 
                     f.write(comp_contents)
 
@@ -353,7 +373,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
     repair_dlmls = list(resource_folder.rglob('consequence_repair.csv'))
 
     # create the main index file
-    repair_index_contents = dedent("""\
+    repair_index_contents = dedent(
+        """\
 
     *************************
     Repair Consequence Models
@@ -364,7 +385,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
     .. toctree::
        :maxdepth: 8
 
-    """)
+    """
+    )
 
     # for each database
     for dlml in (pbar := tqdm(repair_dlmls)):
@@ -410,7 +432,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                 'Description', f'The following models are available in {dlml}:'
             )
 
-            dlml_index_contents = dedent(f"""
+            dlml_index_contents = dedent(
+                f"""
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -418,18 +441,21 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
 
             {dlml_description}
 
-            """)
+            """
+            )
 
             # check if there are component groups defined
             dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
 
             # if yes, create the corresponding directory structure and index files
             if dlml_cmp_groups is not None:
-                dlml_index_contents += dedent("""
+                dlml_index_contents += dedent(
+                    """
                 .. toctree::
                    :maxdepth: 8
 
-                """)
+                """
+                )
 
                 # create the directory structure and index files
                 dlml_tag = get_dlml_tag(dlml)
@@ -446,7 +472,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
             print(f'No metadata available for {dlml}')
 
             # create the top of the dlml index file
-            dlml_index_contents = dedent(f"""\
+            dlml_index_contents = dedent(
+                f"""\
 
             {"*" * len(dlml)}
             {dlml}
@@ -454,7 +481,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
 
             The following models are available in {dlml}:
 
-            """)
+            """
+            )
 
         dlml_index_path = doc_folder / dlml.parent / 'index.rst'
         with dlml_index_path.open('w', encoding='utf-8') as f:
@@ -504,20 +532,24 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                     # add the component info to the docs
 
                     if comp_meta is None:
-                        comp_contents = dedent(f"""
+                        comp_contents = dedent(
+                            f"""
                         {comp}
                         {"*" * len(comp)}
 
-                        """)
+                        """
+                        )
 
                     else:
-                        comp_contents = dedent(f"""
+                        comp_contents = dedent(
+                            f"""
                         .. raw:: html
 
                            <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
                            <div>
 
-                        """)
+                        """
+                        )
 
                         comp_comments = comp_meta.get('Comments', '').split('\n')
 
@@ -534,40 +566,48 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                             else:
                                 roundup_text = ''
 
-                            comp_contents += dedent(f"""
+                            comp_contents += dedent(
+                                f"""
 
                             Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
 
-                            """)
+                            """
+                            )
 
-                    comp_contents += dedent("""
+                    comp_contents += dedent(
+                        """
 
                     The following repair consequences are available for this model:
 
-                    """)
+                    """
+                    )
 
                     for comp_file in comp_files:
                         dv_type = comp_file.split('-')[1]
 
-                        comp_contents += dedent(f"""
+                        comp_contents += dedent(
+                            f"""
 
                         **{dv_type}**
 
                         .. raw:: html
                            :file: {comp_file}.html
 
-                        """)
+                        """
+                        )
 
                         # copy the file from the zip to the dlml folder
                         zipObj.extract(f'{comp_file}.html', path=comp_path)
 
-                    comp_contents += dedent("""
+                    comp_contents += dedent(
+                        """
 
                     .. raw:: html
 
                        <hr>
 
-                    """)
+                    """
+                    )
 
                     f.write(comp_contents)
 
