@@ -4,9 +4,6 @@
  Damage and Loss Model Library
 ===============================
 
-This is a test.
-
-
 .. warning::
 
    Development Preview Only.
