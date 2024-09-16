@@ -13,6 +13,10 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 from datetime import datetime
+import os
+import sys
+
+sys.path.insert(0, os.path.abspath('./_extensions'))
 
 # -- Project information -----------------------------------------------------
 project = 'Damage and Loss Model Library'
@@ -38,6 +42,7 @@ extensions = [
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
     'sphinx.ext.doctest',
+    'sphinx_generate_dl_doc',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -61,8 +66,8 @@ autosummary_generate = True  # Turn on sphinx.ext.autosummary
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'numpy': ('http://docs.scipy.org/doc/numpy/', None),
-    'scipy': ('http://docs.scipy.org/doc/scipy/reference/', None),
+    'numpy': ('https://numpy.org/doc/stable/objects.inv', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy/objects.inv', None),
 }
 
 numpydoc_show_class_members = False  # TODO(JVM): remove and extend docstrings
@@ -83,7 +88,7 @@ html_theme_options = {
     'logo_only': True,
     'collapse_navigation': False,
     'prev_next_buttons_location': None,
-    'navigation_depth': 2,
+    'navigation_depth': 8,
     'style_nav_header_background': '#F2F2F2',
 }
 html_show_sphinx = False  # Removes "Built with Sphinx using a theme [...]"

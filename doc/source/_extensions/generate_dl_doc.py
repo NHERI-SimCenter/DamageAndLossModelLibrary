@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import shutil
@@ -10,7 +11,56 @@ from textwrap import dedent
 from zipfile import ZipFile
 
 import numpy as np
-from doc.source._extensions.visuals import plot_fragility, plot_repair
+from tqdm import tqdm
+
+from visuals import plot_fragility, plot_repair
+
+os.chdir('../')
+
+
+def generate_md5(file_path):
+    """
+    Generate an MD5 hash of a file.
+
+    Parameters
+    ----------
+    file_path : str
+        The path to the file for which to generate the MD5 hash.
+
+    Returns
+    -------
+    str
+        The MD5 hash of the file.
+    """
+    md5 = hashlib.md5()
+    with open(file_path, 'rb') as f:
+        for chunk in iter(lambda: f.read(4096), b''):
+            md5.update(chunk)
+    return md5.hexdigest()
+
+
+def combine_md5_hashes(md5_list):
+    """
+    Combine a list of MD5 hashes and generate a new MD5 hash.
+
+    Parameters
+    ----------
+    md5_list : list of str
+        A list of MD5 hashes.
+
+    Returns
+    -------
+    str
+        A new MD5 hash based on the combination of the given hashes.
+    """
+    combined_md5 = hashlib.md5()
+    for md5_hash in md5_list:
+        combined_md5.update(md5_hash.encode('utf-8'))
+    return combined_md5.hexdigest()
+
+
+def get_dlml_tag(dlml):
+    return '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
 
 
 def create_component_group_directory(cmp_groups, root, dlml_tag):
@@ -30,7 +80,6 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             )
 
             grp_index_contents = dedent(f"""
-            .. _lbl-dlml_{dlml_tag}_{grp_id.replace(".", "_")}
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -39,7 +88,7 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             The following models are available:
 
             .. toctree::
-               :maxdepth: 1
+               :maxdepth: 8
 
             """)
 
@@ -62,7 +111,6 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             grp_dir.mkdir(parents=True, exist_ok=True)
 
             grp_index_contents = dedent(f"""
-            .. _lbl-dlml_{dlml_tag}_{grp_id.replace(".", "_")}
 
             {"*" * len(grp_name)}
             {grp_name}
@@ -81,20 +129,17 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
     return member_ids
 
 
-def generate_damage_docs():
-    resource_folder = Path()
+def generate_damage_docs(doc_folder: Path, cache_folder: Path):
 
-    doc_folder = Path('/tmp/damage')
-    if os.path.exists(doc_folder):
-        shutil.rmtree(doc_folder)
-    doc_folder.mkdir(parents=True, exist_ok=True)
+    doc_folder = doc_folder / 'damage'
+
+    resource_folder = Path()
 
     # get all the available damage dlmls
     damage_dlmls = list(resource_folder.rglob('fragility.csv'))
 
     # create the main index file
     damage_index_contents = dedent("""\
-    .. _lbl-dlml_damage:
 
     *************
     Damage Models
@@ -103,25 +148,35 @@ def generate_damage_docs():
     The following collections are available in our Damage and Loss Model Library:
 
     .. toctree::
-       :maxdepth: 1
+       :maxdepth: 8
 
     """)
 
     # for each database
-    for dlml in damage_dlmls:
-        print('Working on ', dlml)
+    for dlml in (pbar := tqdm(damage_dlmls)):
+        pbar.set_postfix({'File': f'{str(dlml)[:80]:<80}'})
+
+        # blacklist
+        if ignore_file(dlml):
+            continue
 
         # add dlml to main damage index file
-        damage_index_contents += f'   {dlml}/index\n'
+        damage_index_contents += f'   {dlml.parent}/index\n'
 
         # create a folder
         (doc_folder / dlml.parent).mkdir(parents=True, exist_ok=True)
 
-        plot_fragility(
-            str(dlml),
-            str((doc_folder / dlml.parent) / 'fragility.zip'),
-            create_zip='1',
-        )
+        zip_hash = generate_md5(dlml)
+        zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
+
+        # if it doesn't exist in the cahce, craete it.
+        # otherwise it exists, obviously.
+        if not zip_filepath.is_file():
+            plot_fragility(
+                str(dlml),
+                str(zip_filepath),
+                create_zip='1',
+            )
 
         # check if there are metadata available
         dlml_json = dlml.with_suffix('.json')
@@ -142,7 +197,6 @@ def generate_damage_docs():
             )
 
             dlml_index_contents = dedent(f"""
-            .. _lbl-dlml_damage_{dlml}
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -159,7 +213,7 @@ def generate_damage_docs():
             if dlml_cmp_groups is not None:
                 dlml_index_contents += dedent("""
                 .. toctree::
-                   :maxdepth: 1
+                   :maxdepth: 8
 
                 """)
 
@@ -179,7 +233,6 @@ def generate_damage_docs():
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(f"""\
-            .. _lbl-dlml_damage_{dlml}
 
             {"*" * len(dlml)}
             {dlml}
@@ -194,7 +247,7 @@ def generate_damage_docs():
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile((doc_folder / dlml.parent) / 'fragility.zip', 'r') as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:
             # for each component
             for comp in sorted(zipObj.namelist()):
                 if comp == 'fragility':
@@ -291,20 +344,16 @@ def generate_damage_docs():
         f.write(damage_index_contents)
 
 
-def generate_repair_docs():
+def generate_repair_docs(doc_folder: Path, cache_folder: Path):
     resource_folder = Path()
 
-    doc_folder = Path('/tmp/repair')
-    if os.path.exists(doc_folder):
-        shutil.rmtree(doc_folder)
-    doc_folder.mkdir(parents=True, exist_ok=True)
+    doc_folder = doc_folder / 'repair'
 
     # get all the available repair dlmls
     repair_dlmls = list(resource_folder.rglob('consequence_repair.csv'))
 
     # create the main index file
     repair_index_contents = dedent("""\
-    .. _lbl-dlml_repair:
 
     *************************
     Repair Consequence Models
@@ -313,25 +362,35 @@ def generate_repair_docs():
     The following collections are available in our Damage and Loss Model Library:
 
     .. toctree::
-       :maxdepth: 1
+       :maxdepth: 8
 
     """)
 
     # for each database
-    for dlml in repair_dlmls:
-        print('Working on ', dlml)
+    for dlml in (pbar := tqdm(repair_dlmls)):
+        pbar.set_postfix({'File': f'{str(dlml)[:80]:<80}'})
+
+        # blacklist
+        if ignore_file(dlml):
+            continue
 
         # add dlml to main repair index file
-        repair_index_contents += f'   {dlml}/index\n'
+        repair_index_contents += f'   {dlml.parent}/index\n'
 
         # create a folder
         (doc_folder / dlml.parent).mkdir(parents=True, exist_ok=True)
 
-        plot_repair(
-            str(dlml),
-            str((doc_folder / dlml.parent) / 'consequence_repair.zip'),
-            create_zip='1',
-        )
+        zip_hash = generate_md5(dlml)
+        zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
+
+        # if it doesn't exist in the cahce, craete it.
+        # otherwise it exists, obviously.
+        if not zip_filepath.is_file():
+            plot_repair(
+                str(dlml),
+                str(zip_filepath),
+                create_zip='1',
+            )
 
         # check if there is metadata available
         dlml_json = dlml.with_suffix('.json')
@@ -352,7 +411,6 @@ def generate_repair_docs():
             )
 
             dlml_index_contents = dedent(f"""
-            .. _lbl-dlml_repair_{dlml}
 
             {"*" * len(dlml_short_name)}
             {dlml_short_name}
@@ -369,12 +427,12 @@ def generate_repair_docs():
             if dlml_cmp_groups is not None:
                 dlml_index_contents += dedent("""
                 .. toctree::
-                   :maxdepth: 1
+                   :maxdepth: 8
 
                 """)
 
                 # create the directory structure and index files
-                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
+                dlml_tag = get_dlml_tag(dlml)
                 grp_ids = create_component_group_directory(
                     dlml_cmp_groups,
                     root=(doc_folder / dlml.parent),
@@ -389,7 +447,6 @@ def generate_repair_docs():
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(f"""\
-            .. _lbl-dlml_repair_{dlml}
 
             {"*" * len(dlml)}
             {dlml}
@@ -404,9 +461,7 @@ def generate_repair_docs():
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(
-            (doc_folder / dlml.parent) / 'consequence_repair.zip', 'r'
-        ) as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:
             html_files = [
                 Path(filepath).stem for filepath in sorted(zipObj.namelist())
             ]
@@ -521,10 +576,27 @@ def generate_repair_docs():
         f.write(repair_index_contents)
 
 
-def main(args):
-    generate_damage_docs()
-    generate_repair_docs()
+def ignore_file(dlml):
+    """Ignore certain paths due to lack of support. To remove."""
+    if str(dlml.parent) in {
+        'seismic/water_network/portfolio/Hazus v6.1',
+        'flood/building/portfolio/Hazus v6.1',
+    }:
+        return True
+    return False
+
+
+def main():
+    cache_folder = Path('doc/cache')
+
+    doc_folder = Path('doc/source/dl_doc')
+    if os.path.exists(doc_folder):
+        shutil.rmtree(doc_folder)
+    doc_folder.mkdir(parents=True, exist_ok=True)
+
+    generate_damage_docs(doc_folder, cache_folder)
+    generate_repair_docs(doc_folder, cache_folder)
 
 
 if __name__ == '__main__':
-    main(sys.argv[1:])
+    main()

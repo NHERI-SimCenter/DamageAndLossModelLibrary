@@ -12,7 +12,9 @@
 
 .. toctree::
    :caption: About
-   :maxdepth: 1
+   :maxdepth: 8
 
    about/about.rst
    release_notes/index.rst
+   dl_doc/damage/index.rst
+   dl_doc/repair/index.rst

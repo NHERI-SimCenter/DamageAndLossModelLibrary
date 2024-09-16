@@ -423,8 +423,6 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
 
         shutil.rmtree(output_path)
 
-    print('Successfully generated component vulnerability figures.')  # noqa: T201
-
 
 def plot_repair(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103, PLR0912, PLR0915
     # TODO:  # noqa: TD002
@@ -992,8 +990,6 @@ def plot_repair(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103,
                 zip.write(file, arcname=Path(file).name)
 
         shutil.rmtree(output_path)
-
-    print('Successfully generated component repair consequence figures.')  # noqa: T201
 
 
 def check_diff(comp_db_path, output_path):  # noqa: D103

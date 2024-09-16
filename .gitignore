@@ -3,3 +3,5 @@
 /doc/build/
 *.pyc
 /.ropeproject/
+/doc/cache/
+/doc/source/dl_doc/
