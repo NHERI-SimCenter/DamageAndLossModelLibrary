@@ -587,7 +587,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                     if res_type == 'max abs eps':
                         return max(abs(eps))
 
-                    if res_type == 'eps':
+                    if res_type == 'eps':  # noqa: RET503
                         return eps
 
                 # assuming Lognormal distribution for building capacity
@@ -614,7 +614,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                     if res_type == 'max abs eps':
                         return max(abs(eps))
 
-                    if res_type == 'eps':
+                    if res_type == 'eps':  # noqa: RET503
                         return eps
 
                 # minimize MSE assuming Normal distribution
