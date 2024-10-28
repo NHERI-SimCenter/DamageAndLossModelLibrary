@@ -1830,7 +1830,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
     for fragility_id in fragility_data['ID'].to_list():
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        # TODO
+        # TODO(JVM)
         # This is a temporary fix until we resolve the presence of NaN
         # values in the ID column of the fragility library file.
         if pd.isna(fragility_id):
@@ -1890,7 +1890,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
     for fragility_id in fragility_data['ID'].to_list():
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        # TODO
+        # TODO(JVM)
         # This is a temporary fix until we resolve the presence of NaN
         # values in the ID column of the fragility library file.
         if pd.isna(fragility_id):
