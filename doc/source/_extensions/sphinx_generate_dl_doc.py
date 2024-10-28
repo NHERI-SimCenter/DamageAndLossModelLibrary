@@ -6,6 +6,8 @@ from sphinx.application import Sphinx
 
 def run_script(app: Sphinx):
     """
+    Generate files before building docs.
+
     Run a custom Python script to generate files before Sphinx builds
     the documentation.
 

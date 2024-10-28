@@ -48,6 +48,8 @@ def create_Hazus_Flood_repair_db(  # noqa: C901
     target_data_file: str = 'flood/building/portfolio/Hazus v6.1/loss_repair.csv',
 ):
     """
+    Create HAZUS Flood metadata.
+
     Create a database metadata file for the HAZUS Flood
     loss functions.
 

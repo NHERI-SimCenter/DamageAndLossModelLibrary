@@ -1540,6 +1540,8 @@ def create_Hazus_HU_metadata_files(  # noqa: C901
 
     def find_class_type(entry: str) -> str | None:
         """
+        Find the class type code.
+
         Find the class type code from an entry string based on
         predefined patterns.
 
