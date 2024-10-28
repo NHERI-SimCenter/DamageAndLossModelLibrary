@@ -4,9 +4,11 @@ Generates HAZUS 5.1 building seismic damage and loss library files.
 """
 
 from __future__ import annotations
+
 import json
-from pathlib import Path
 from copy import deepcopy
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from pelicun import base
@@ -40,14 +42,13 @@ def create_Hazus_EQ_fragility_db(
         is expected.
 
     """
-
     # parse the source file
-    with open(source_file, 'r', encoding='utf-8') as f:
+    with open(source_file, encoding='utf-8') as f:
         raw_data = json.load(f)
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -569,14 +570,13 @@ def create_Hazus_EQ_repair_db(
         is expected.
 
     """
-
     # parse the source file
-    with open(source_file, 'r', encoding='utf-8') as f:
+    with open(source_file, encoding='utf-8') as f:
         raw_data = json.load(f)
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -835,7 +835,6 @@ def main():
     Generates HAZUS 5.1 building seismic damage and loss library files.
 
     """
-
     create_Hazus_EQ_fragility_db(
         source_file=(
             'seismic/building/portfolio/Hazus v5.1/'

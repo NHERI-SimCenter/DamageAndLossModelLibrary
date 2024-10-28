@@ -4,9 +4,10 @@ Generates Hazus Flood loss functions.
 """
 
 from __future__ import annotations
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from pelicun import base
 
 idx = base.idx
@@ -31,7 +32,6 @@ def remove_repeated_chars(s):
         by a single instance.
 
     """
-
     if not s:
         return ''
 
@@ -64,7 +64,6 @@ def create_Hazus_Flood_repair_db(
         is expected.
 
     """
-
     source_data = {}
     for subassembly_type in ('structural', 'inventory', 'contents'):
         source_file = (

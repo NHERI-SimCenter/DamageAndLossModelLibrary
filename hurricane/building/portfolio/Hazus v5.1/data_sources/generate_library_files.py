@@ -9,15 +9,17 @@ Generates Hazus Hurricane damage and loss database files.
 # pylint: skip-file
 
 from __future__ import annotations
+
 import json
 import shutil
-from copy import deepcopy
 import warnings
+from copy import deepcopy
+
 import numpy as np
 import pandas as pd
-from tqdm import tqdm
-from scipy.stats import norm
 from scipy.optimize import minimize
+from scipy.stats import norm
+from tqdm import tqdm
 
 warnings.simplefilter('ignore', RuntimeWarning)
 warnings.simplefilter('ignore', FutureWarning)
@@ -35,7 +37,6 @@ def parse_description(descr, parsed_data):
         A pandas Series to collect parsed data.
 
     """
-
     # Roof Shape
     if 'rsflt' in descr:
         parsed_data['roof_shape'] = 'flt'
@@ -586,10 +587,10 @@ def create_Hazus_HU_damage_and_loss_files():
 
                         return MSE
 
-                    elif res_type == 'max abs eps':
+                    if res_type == 'max abs eps':
                         return max(abs(eps))
 
-                    elif res_type == 'eps':
+                    if res_type == 'eps':
                         return eps
 
                 # assuming Lognormal distribution for building capacity
@@ -613,10 +614,10 @@ def create_Hazus_HU_damage_and_loss_files():
 
                         return MSE
 
-                    elif res_type == 'max abs eps':
+                    if res_type == 'max abs eps':
                         return max(abs(eps))
 
-                    elif res_type == 'eps':
+                    if res_type == 'eps':
                         return eps
 
                 # minimize MSE assuming Normal distribution
@@ -699,16 +700,15 @@ def create_Hazus_HU_damage_and_loss_files():
                         dist_type = 'normal'
                         res = res_normal
 
-                else:
-                    if (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (
-                        np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1
-                    ):
-                        dist_type = 'normal'
-                        res = res_normal
+                elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (
+                    np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1
+                ):
+                    dist_type = 'normal'
+                    res = res_normal
 
-                    else:
-                        dist_type = 'lognormal'
-                        res = res_lognormal
+                else:
+                    dist_type = 'lognormal'
+                    res = res_lognormal
 
                 # store the parameters
                 new_row_terrain[f'DS{DS}_dist'] = dist_type
@@ -771,7 +771,6 @@ def create_Hazus_HU_damage_and_loss_files():
 
             # define the loss error measures to be minimized
 
-            #
             def SSE_loss(params, res_type='SSE'):
                 loss_ratios = params.copy()
 
@@ -1003,7 +1002,7 @@ def create_Hazus_HU_damage_and_loss_files():
                 'terr_rough',
             ]
 
-        elif bldg_type[:4] == 'MERB':
+        elif bldg_type[:4] == 'MERB' or bldg_type[:4] == 'MECB':
             cols_of_interest = [
                 'bldg_type',
                 'roof_cover',
@@ -1014,18 +1013,7 @@ def create_Hazus_HU_damage_and_loss_files():
                 'terr_rough',
             ]
 
-        elif bldg_type[:4] == 'MECB':
-            cols_of_interest = [
-                'bldg_type',
-                'roof_cover',
-                'shutters',
-                'wind_debris',
-                'metal_rda',
-                'window_area',
-                'terr_rough',
-            ]
-
-        elif bldg_type[:4] == 'CERB':
+        elif bldg_type[:4] == 'CERB' or bldg_type[:4] == 'CECB':
             cols_of_interest = [
                 'bldg_type',
                 'roof_cover',
@@ -1035,28 +1023,7 @@ def create_Hazus_HU_damage_and_loss_files():
                 'terr_rough',
             ]
 
-        elif bldg_type[:4] == 'CECB':
-            cols_of_interest = [
-                'bldg_type',
-                'roof_cover',
-                'shutters',
-                'wind_debris',
-                'window_area',
-                'terr_rough',
-            ]
-
-        elif bldg_type[:4] == 'SERB':
-            cols_of_interest = [
-                'bldg_type',
-                'roof_cover',
-                'shutters',
-                'wind_debris',
-                'metal_rda',
-                'window_area',
-                'terr_rough',
-            ]
-
-        elif bldg_type[:4] == 'SECB':
+        elif bldg_type[:4] == 'SERB' or bldg_type[:4] == 'SECB':
             cols_of_interest = [
                 'bldg_type',
                 'roof_cover',
@@ -1094,18 +1061,7 @@ def create_Hazus_HU_damage_and_loss_files():
                 'terr_rough',
             ]
 
-        elif bldg_type[:6] == 'HUEFPS':
-            cols_of_interest = [
-                'bldg_type',
-                'roof_cover',
-                'shutters',
-                'wind_debris',
-                'metal_rda',
-                'window_area',
-                'terr_rough',
-            ]
-
-        elif bldg_type[:6] == 'HUEFEO':
+        elif bldg_type[:6] == 'HUEFPS' or bldg_type[:6] == 'HUEFEO':
             cols_of_interest = [
                 'bldg_type',
                 'roof_cover',
@@ -1357,7 +1313,6 @@ def create_Hazus_HU_metadata_files(
         saved. A json file is expected.
 
     """
-
     # Procedure Overview:
     # (1) We define several dictionaries mapping chunks of the
     # composite asset ID (the parts between periods) to human-readable
@@ -1870,7 +1825,7 @@ def create_Hazus_HU_metadata_files(
 
     fragility_data = pd.read_csv(source_file)
 
-    with open(meta_file, 'r', encoding='utf-8') as f:
+    with open(meta_file, encoding='utf-8') as f:
         meta_dict = json.load(f)
 
     # retrieve damage state descriptions and remove that part from
@@ -1928,7 +1883,7 @@ def create_Hazus_HU_metadata_files(
 
     # Create loss metadata & original loss function metadata
 
-    with open(meta_file, 'r', encoding='utf-8') as f:
+    with open(meta_file, encoding='utf-8') as f:
         meta_dict = json.load(f)
 
     # retrieve damage state descriptions and remove that part from
@@ -1996,7 +1951,6 @@ def main():
     Generates Hazus Hurricane damage and loss database files.
 
     """
-
     create_Hazus_HU_damage_and_loss_files()
     create_Hazus_HU_metadata_files()
 

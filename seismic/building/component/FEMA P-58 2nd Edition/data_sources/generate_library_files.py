@@ -4,15 +4,16 @@ Generates FEMA P-58 2nd edition damage and loss library files.
 """
 
 from __future__ import annotations
-import re
+
 import json
+import re
 from pathlib import Path
+
 import numpy as np
-from scipy.stats import norm  # type: ignore
 import pandas as pd
 from pelicun import base
 from pelicun.uq import fit_distribution_to_percentiles
-
+from scipy.stats import norm  # type: ignore
 
 # pylint: disable=possibly-used-before-assignment
 # pylint: disable=too-many-locals
@@ -84,7 +85,6 @@ def create_FEMA_P58_fragility_files(
         If there are problems with the mutually exclusive damage state
         definition of some component.
     """
-
     # parse the source file
     df = pd.read_excel(
         source_file,
@@ -97,7 +97,7 @@ def create_FEMA_P58_fragility_files(
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -381,7 +381,7 @@ def create_FEMA_P58_fragility_files(
                         ds_map = format(ds_id, f'0{sim_ds_count}b')
 
                         sim_weights.append(
-                            np.product(
+                            np.prod(
                                 [
                                     (
                                         weights[ds_i]
@@ -541,7 +541,6 @@ def create_FEMA_P58_repair_files(
         expected.
 
     """
-
     # parse the source file
     df = pd.concat(
         [
@@ -553,7 +552,7 @@ def create_FEMA_P58_repair_files(
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -1193,7 +1192,6 @@ def main():
     Generates FEMA P-58 2nd edition damage and loss library files.
 
     """
-
     create_FEMA_P58_fragility_files(
         source_file=(
             'seismic/building/component/FEMA P-58 2nd Edition/'
