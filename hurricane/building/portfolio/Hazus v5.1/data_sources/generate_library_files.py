@@ -247,10 +247,10 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
     # read bldg data
 
-    bldg_df_ST = pd.read_excel(
+    bldg_df_ST = pd.read_excel(  # noqa: N806
         raw_data_path + 'huListOfWindBldgTypes.xlsx', index_col=0
     )
-    bldg_df_EF = pd.read_excel(
+    bldg_df_EF = pd.read_excel(  # noqa: N806
         raw_data_path + 'huListOfWindBldgTypesEF.xlsx', index_col=0
     )
 
@@ -265,9 +265,9 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
     # read fragility data
 
-    frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')
+    frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')  # noqa: N806
 
-    frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')
+    frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')  # noqa: N806
     frag_df_EF['wbID'] += max(bldg_df_ST.index)
 
     frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
@@ -314,7 +314,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     max_speed = 200
     max_speed_id = max(np.where(wind_speeds <= max_speed)[0]) + 1
 
-    DS_data = [
+    DS_data = [  # noqa: N806
         frag_df[frag_df['DamLossDescID'] == ds].loc[:, wind_speeds_str]
         for ds in range(1, 5)
     ]
@@ -324,7 +324,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     # go through each affected archetype and fix the problem
     for frag_id in archetypes[archetypes == True].index:  # noqa
         # get the wbID and terrain_id
-        wbID, terrain_id = frag_df.loc[frag_id, ['wbID', 'TERRAINID']]
+        wbID, terrain_id = frag_df.loc[frag_id, ['wbID', 'TERRAINID']]  # noqa: N806
 
         # load the fragility info for the archetype
         frag_df_arch = frag_df.loc[
@@ -343,25 +343,25 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
         # then check where to store the values at DS4 to maintain
         # ascending exceedance probabilities
-        target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]
+        target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806
 
         # since this is always DS1 in the current database,
         # the script below works with that assumption and checks for exceptions
         if target_DS == 0:
             # first, extract the probabilities stored at DS4
-            DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].values
+            DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].values  # noqa: N806
 
             # then offset the probabilities of DS1-3 by one level
             for ds in [3, 2, 1]:
-                source_DS_index = frag_df_arch.index[ds - 1]
-                target_DS_index = frag_df_arch.index[ds]
+                source_DS_index = frag_df_arch.index[ds - 1]  # noqa: N806
+                target_DS_index = frag_df_arch.index[ds]  # noqa: N806
 
                 frag_df.loc[target_DS_index, wind_speeds_str] = frag_df.loc[
                     source_DS_index, wind_speeds_str
                 ].values
 
             # finally store the DS4 probs at the DS1 cells
-            target_DS_index = frag_df_arch.index[0]
+            target_DS_index = frag_df_arch.index[0]  # noqa: N806
 
             frag_df.loc[target_DS_index, wind_speeds_str] = DS4_probs
 
@@ -389,7 +389,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     # one Damage State
 
     # get the damage data for all archetypes
-    DS_data = frag_df[frag_df['DamLossDescID'].isin([1, 2, 3, 4])].loc[
+    DS_data = frag_df[frag_df['DamLossDescID'].isin([1, 2, 3, 4])].loc[  # noqa: N806
         :, wind_speeds_str
     ]
 
@@ -398,14 +398,14 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     # print(f'Global maximum value: {np.max(DS_data.values)}')
 
     # sum up the probabilities of exceeding each DS at various wind speeds
-    DS_zero = DS_data.sum(axis=1)
+    DS_zero = DS_data.sum(axis=1)  # noqa: N806
 
     # and look for the lines where the sum is zero - i.e., all values are zero
-    no_DS_info = frag_df.loc[DS_zero[DS_zero == 0].index]
+    no_DS_info = frag_df.loc[DS_zero[DS_zero == 0].index]  # noqa: N806
 
     def overwrite_ds4_data():
         # now go through the building types in no_DS_info
-        for wbID in no_DS_info['wbID'].unique():
+        for wbID in no_DS_info['wbID'].unique():  # noqa: N806
             # and each terrain type that is affected
             for terrain_id in no_DS_info.loc[
                 no_DS_info['wbID'] == wbID, 'TERRAINID'
@@ -416,12 +416,12 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                 ]
 
                 # extract the DS3 information
-                DS3_data = frag_df_arch.loc[
+                DS3_data = frag_df_arch.loc[  # noqa: N806
                     frag_df['DamLossDescID'] == 3, wind_speeds_str
                 ].values
 
                 # and overwrite the DS4 values in the original dataset
-                DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index
+                DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806
                 frag_df.loc[DS4_index, wind_speeds_str] = DS3_data
 
     overwrite_ds4_data()
@@ -538,15 +538,15 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             mu_min = 0
 
             # for each damage state
-            for DS in [1, 2, 3, 4]:
+            for DS in [1, 2, 3, 4]:  # noqa: N806
                 # get the exceedence probabilities for this DS of this
                 # archetype
-                P_exc = np.asarray(
+                P_exc = np.asarray(  # noqa: N806
                     frag_df_arch_terrain.loc[
                         frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
                     ].values[0]
                 )
-                multilinear_CDF_parameters = (
+                multilinear_CDF_parameters = (  # noqa: N806
                     ','.join([str(x) for x in P_exc])
                     + '|'
                     + ','.join([str(x) for x in wind_speeds])
@@ -580,7 +580,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                     ]
 
                     if res_type == 'MSE':
-                        MSE = sum(eps**2.0)
+                        MSE = sum(eps**2.0)  # noqa: N806
 
                         return MSE
 
@@ -607,7 +607,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                     ]
 
                     if res_type == 'MSE':
-                        MSE = sum(eps**2.0)
+                        MSE = sum(eps**2.0)  # noqa: N806
 
                         return MSE
 
@@ -721,13 +721,13 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             # Now we have the damages, continue with Losses
 
             # Focus on "Building losses" first
-            L_ref = np.asarray(
+            L_ref = np.asarray(  # noqa: N806
                 frag_df_arch_terrain.loc[
                     frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str
                 ].values[0]
             )
 
-            multilinear_CDF_parameters = (
+            multilinear_CDF_parameters = (  # noqa: N806
                 ','.join([str(x) for x in L_ref])
                 + '|'
                 + ','.join([str(x) for x in wind_speeds])
@@ -735,9 +735,9 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
             # We'll need the probability of each Damage State across the
             # pre-defined wind speeds
-            DS_probs = np.zeros((4, len(wind_speeds)))
+            DS_probs = np.zeros((4, len(wind_speeds)))  # noqa: N806
 
-            for DS_id, DS in enumerate([1, 2, 3, 4]):
+            for DS_id, DS in enumerate([1, 2, 3, 4]):  # noqa: N806
                 if new_row_terrain[f'DS{DS}_dist'] == 'normal':
                     DS_probs[DS_id] = norm.cdf(
                         wind_speeds,
@@ -753,12 +753,12 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
             # The losses for DS4 are calculated based on outcomes at the
             # highest wind speeds
-            L_max = frag_df_arch_terrain.loc[
+            L_max = frag_df_arch_terrain.loc[  # noqa: N806
                 frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'
             ].values[0]
-            DS4_max = DS_probs[3][-1]
+            DS4_max = DS_probs[3][-1]  # noqa: N806
 
-            L4 = np.round(min(L_max / DS4_max, 1.0), decimals=3)
+            L4 = np.round(min(L_max / DS4_max, 1.0), decimals=3)  # noqa: N806
 
             # if L4 < 0.75:
             #    print(index, terrain_id, L_max, DS4_max, L4)
@@ -781,7 +781,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
                 if res_type == 'SSE':
                     # calculate the sum of squared errors across wind speeds
-                    SSE = sum(eps**2.0)
+                    SSE = sum(eps**2.0)  # noqa: N806
 
                 elif res_type == 'max abs eps':
                     return max(abs(eps))
@@ -1195,7 +1195,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
         df_db['Demand-Offset'] = 0
         df_db['Demand-Directional'] = 0
 
-    for LS_i in range(1, 5):
+    for LS_i in range(1, 5):  # noqa: N806
         df_db_original[f'LS{LS_i}-Family'] = 'multilinear_CDF'
         df_db_original[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_original']
 
@@ -1241,14 +1241,14 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
         'Quantity-Unit',
         'DV-Unit',
     ]
-    for DS_i in range(1, 5):
+    for DS_i in range(1, 5):  # noqa: N806
         out_cols += [f'DS{DS_i}-Theta_0']
     df_db_fit = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
     df_db_fit['ID'] = [f'{x}-Cost' for x in out_df['ID']]
     df_db_fit['Incomplete'] = 0
     df_db_fit['Quantity-Unit'] = '1 EA'
     df_db_fit['DV-Unit'] = 'loss_ratio'
-    for LS_i in range(1, 5):
+    for LS_i in range(1, 5):  # noqa: N806
         df_db_fit[f'DS{LS_i}-Theta_0'] = out_df[f'L{LS_i}']
     df_db_fit = df_db_fit.loc[df_db_fit['ID'] != '-Cost']
     df_db_fit = df_db_fit.set_index('ID').sort_index().convert_dtypes()

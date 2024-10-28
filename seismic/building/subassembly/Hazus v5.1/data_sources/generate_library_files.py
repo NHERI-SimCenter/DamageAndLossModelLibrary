@@ -101,7 +101,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
 
     # add the general information to the meta dict
     if '_GeneralInformation' in frag_meta.keys():
-        GI = frag_meta['_GeneralInformation']
+        GI = frag_meta['_GeneralInformation']  # noqa: N806
 
         # remove the decision variable part from the general info
         GI.pop('DecisionVariables', None)
@@ -118,7 +118,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     counter = 0
 
     # First, prepare the structural fragilities
-    S_data = raw_data['Structural_Fragility_Groups']
+    S_data = raw_data['Structural_Fragility_Groups']  # noqa: N806
 
     for bt in building_types:
         for dl in design_levels:
@@ -209,7 +209,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
 
                 # store the Limit State parameters
                 ds_meta = frag_meta['Meta']['StructuralSystems'][st]['DamageStates']
-                for LS_i in range(1, 5):
+                for LS_i in range(1, 5):  # noqa: N806
                     df_db.loc[counter, f'LS{LS_i}-Family'] = 'lognormal'
                     df_db.loc[counter, f'LS{LS_i}-Theta_0'] = S_data['EDP_limits'][
                         dl
@@ -250,7 +250,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
                 counter += 1
 
     # Second, the non-structural drift sensitive one
-    NSD_data = raw_data['NonStructural_Drift_Sensitive_Fragility_Groups']
+    NSD_data = raw_data['NonStructural_Drift_Sensitive_Fragility_Groups']  # noqa: N806
 
     # create the component id
     df_db.loc[counter, 'ID'] = 'NSD'
@@ -272,7 +272,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
 
     # store the Limit State parameters
     ds_meta = frag_meta['Meta']['Collections']['NSD']['DamageStates']
-    for LS_i in range(1, 5):
+    for LS_i in range(1, 5):  # noqa: N806
         df_db.loc[counter, f'LS{LS_i}-Family'] = 'lognormal'
         df_db.loc[counter, f'LS{LS_i}-Theta_0'] = NSD_data['EDP_limits'][LS_i - 1]
         df_db.loc[counter, f'LS{LS_i}-Theta_1'] = NSD_data['Fragility_beta']
@@ -288,7 +288,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     counter += 1
 
     # Third, the non-structural acceleration sensitive fragilities
-    NSA_data = raw_data['NonStructural_Acceleration_Sensitive_Fragility_Groups']
+    NSA_data = raw_data['NonStructural_Acceleration_Sensitive_Fragility_Groups']  # noqa: N806
 
     for dl in design_levels:
         # create the component id
@@ -323,7 +323,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
 
         # store the Limit State parameters
         ds_meta = frag_meta['Meta']['Collections']['NSA']['DamageStates']
-        for LS_i in range(1, 5):
+        for LS_i in range(1, 5):  # noqa: N806
             df_db.loc[counter, f'LS{LS_i}-Family'] = 'lognormal'
             df_db.loc[counter, f'LS{LS_i}-Theta_0'] = NSA_data['EDP_limits'][dl][
                 LS_i - 1
@@ -343,7 +343,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     # Fourth, the lifeline facilities - only at the building-level resolution
 
     # Fifth, the ground failure fragilities
-    GF_data = raw_data['Ground_Failure']
+    GF_data = raw_data['Ground_Failure']  # noqa: N806
 
     for direction in ('Horizontal', 'Vertical'):
         for f_depth in ('Shallow', 'Deep'):
@@ -471,7 +471,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         'Quantity-Unit',
         'DV-Unit',
     ]
-    for DS_i in range(1, 6):
+    for DS_i in range(1, 6):  # noqa: N806
         out_cols += [
             f'DS{DS_i}-Theta_0',
         ]
@@ -483,8 +483,8 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         for cmp_type in cmp_types
         for occ_type in occupancies
     ]
-    DVs = ['Cost', 'Time']
-    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])
+    DVs = ['Cost', 'Time']  # noqa: N806
+    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])  # noqa: N806
 
     df_db = pd.DataFrame(columns=out_cols, index=df_MI, dtype=float)
 
@@ -493,7 +493,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
     # add the general information to the meta dict
     if '_GeneralInformation' in frag_meta.keys():
-        GI = frag_meta['_GeneralInformation']
+        GI = frag_meta['_GeneralInformation']  # noqa: N806
 
         for key, item in deepcopy(GI).items():
             if key == 'ComponentGroups_Loss_Repair':
@@ -505,7 +505,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         meta_dict.update({'_GeneralInformation': GI})
 
     # First, prepare the structural damage consequences
-    S_data = raw_data['Structural_Fragility_Groups']
+    S_data = raw_data['Structural_Fragility_Groups']  # noqa: N806
 
     for occ_type in occupancies:
         # create the component id
@@ -529,7 +529,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['STR']['DamageStates']
-        for DS_i in range(1, 6):
+        for DS_i in range(1, 6):  # noqa: N806
             cmp_meta['DamageStates'].update(
                 {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )
@@ -553,7 +553,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         meta_dict.update({cmp_id: cmp_meta})
 
     # Second, the non-structural drift sensitive one
-    NSD_data = raw_data['NonStructural_Drift_Sensitive_Fragility_Groups']
+    NSD_data = raw_data['NonStructural_Drift_Sensitive_Fragility_Groups']  # noqa: N806
 
     for occ_type in occupancies:
         # create the component id
@@ -577,7 +577,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['NSD']['DamageStates']
-        for DS_i in range(1, 5):
+        for DS_i in range(1, 5):  # noqa: N806
             cmp_meta['DamageStates'].update(
                 {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )
@@ -591,7 +591,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         meta_dict.update({cmp_id: cmp_meta})
 
     # Third, the non-structural acceleration sensitive fragilities
-    NSA_data = raw_data['NonStructural_Acceleration_Sensitive_Fragility_Groups']
+    NSA_data = raw_data['NonStructural_Acceleration_Sensitive_Fragility_Groups']  # noqa: N806
 
     for occ_type in occupancies:
         # create the component id
@@ -615,7 +615,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['NSA']['DamageStates']
-        for DS_i in range(1, 5):
+        for DS_i in range(1, 5):  # noqa: N806
             cmp_meta['DamageStates'].update(
                 {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )

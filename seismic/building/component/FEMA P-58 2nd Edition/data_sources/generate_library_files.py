@@ -33,18 +33,18 @@ def parse_DS_Hierarchy(DSH):  # noqa: N802, N803
       Damage state setup
     """
     if DSH[:3] == 'Seq':
-        DSH = DSH[4:-1]
+        DSH = DSH[4:-1]  # noqa: N806
 
-    DS_setup = []
+    DS_setup = []  # noqa: N806
 
     while len(DSH) > 0:
         if DSH[:2] == 'DS':
             DS_setup.append(DSH[:3])
-            DSH = DSH[4:]
+            DSH = DSH[4:]  # noqa: N806
         elif DSH[:5] in {'MutEx', 'Simul'}:
             closing_pos = DSH.find(')')
-            subDSH = DSH[: closing_pos + 1]
-            DSH = DSH[closing_pos + 2 :]
+            subDSH = DSH[: closing_pos + 1]  # noqa: N806
+            DSH = DSH[closing_pos + 2 :]  # noqa: N806
 
             DS_setup.append([subDSH[:5]] + subDSH[6:-1].split(','))
 
@@ -236,8 +236,8 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     # more important than efficiency.)
     for cmp in df_db_source.itertuples():
         # create a dotted component index
-        ID = cmp.Index.split('.')
-        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'
+        ID = cmp.Index.split('.')  # noqa: N806
+        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'  # noqa: N806
 
         # store the new index
         df_db.loc[cmp.Index, 'Index'] = cmpID
@@ -258,7 +258,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
         df_db.loc[cmp.Index, 'Demand-Directional'] = int(cmp.Directional)
 
         # parse the damage state hierarchy
-        DS_setup = parse_DS_Hierarchy(cmp.DS_Hierarchy)
+        DS_setup = parse_DS_Hierarchy(cmp.DS_Hierarchy)  # noqa: N806
 
         # get the raw metadata for the component
         cmp_meta = df_meta.loc[cmp.Index, :]
@@ -305,9 +305,9 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
         }
 
         # now look at each Limit State
-        for LS_i, LS_contents in enumerate(DS_setup):
-            LS_i = LS_i + 1
-            LS_contents = np.atleast_1d(LS_contents)
+        for LS_i, LS_contents in enumerate(DS_setup):  # noqa: N806
+            LS_i = LS_i + 1  # noqa: N806
+            LS_contents = np.atleast_1d(LS_contents)  # noqa: N806
 
             ls_meta = {}
 
@@ -568,7 +568,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         'Fragility Unit of Measure',
         'DS Hierarchy',
     ]
-    for DS_i in range(1, 6):
+    for DS_i in range(1, 6):  # noqa: N806
         cols_to_db += [
             f'Best Fit, DS{DS_i}',
             f'Lower Qty Mean, DS{DS_i}',
@@ -656,7 +656,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         'Quantity-Unit',
         'DV-Unit',
     ]
-    for DS_i in range(1, 16):
+    for DS_i in range(1, 16):  # noqa: N806
         out_cols += [
             f'DS{DS_i}-Family',
             f'DS{DS_i}-Theta_0',
@@ -666,8 +666,8 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
 
     # create the MultiIndex
     comps = df_db_source.index.values
-    DVs = ['Cost', 'Time', 'Carbon', 'Energy']
-    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])
+    DVs = ['Cost', 'Time', 'Carbon', 'Energy']  # noqa: N806
+    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])  # noqa: N806
 
     df_db = pd.DataFrame(columns=out_cols, index=df_MI, dtype=float)
 
@@ -686,8 +686,8 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
     # (this approach is not efficient, but easy to follow which was considered
     # more important than efficiency.)
     for cmp in df_db_source.itertuples():
-        ID = cmp.Index.split('.')
-        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'
+        ID = cmp.Index.split('.')  # noqa: N806
+        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'  # noqa: N806
 
         # store the new index
         df_db.loc[cmp.Index, 'Index'] = cmpID
@@ -767,7 +767,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
             energy_est = {}
 
             # get the p10, p50, and p90 estimates for all damage states
-            for DS_i in range(1, 6):
+            for DS_i in range(1, 6):  # noqa: N806
                 if not pd.isna(getattr(cmp, f'Repair_Cost_p10_DS{DS_i}')):
                     cost_est.update(
                         {
@@ -845,7 +845,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
             sim_ds_count = len(cost_est.keys())
             ds_count = 2 ** (sim_ds_count) - 1
 
-            for DS_i in range(1, ds_count + 1):
+            for DS_i in range(1, ds_count + 1):  # noqa: N806
                 ds_map = format(DS_i, f'0{sim_ds_count}b')
 
                 cost_vals = np.sum(
@@ -1029,7 +1029,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         # for every other component...
         else:
             # now look at each Damage State
-            for DS_i in range(1, 6):
+            for DS_i in range(1, 6):  # noqa: N806
                 # cost
                 if not pd.isna(getattr(cmp, f'Best_Fit_DS{DS_i}')):
                     df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Family'] = (
@@ -1154,7 +1154,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
     for cmp in df_db.index:
         empty = True
 
-        for DS_i in range(1, 6):
+        for DS_i in range(1, 6):  # noqa: N806
             if not pd.isna(df_db.loc[cmp, f'DS{DS_i}-Family']):
                 empty = False
                 break
