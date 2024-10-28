@@ -46,7 +46,7 @@ def parse_DS_Hierarchy(DSH):  # noqa: N802, N803
             subDSH = DSH[: closing_pos + 1]  # noqa: N806
             DSH = DSH[closing_pos + 2 :]  # noqa: N806
 
-            DS_setup.append([subDSH[:5]] + subDSH[6:-1].split(','))
+            DS_setup.append([subDSH[:5], *subDSH[6:-1].split(',')])
 
     return DS_setup
 
