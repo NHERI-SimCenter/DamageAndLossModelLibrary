@@ -100,7 +100,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     meta_dict = {}
 
     # add the general information to the meta dict
-    if '_GeneralInformation' in frag_meta.keys():
+    if '_GeneralInformation' in frag_meta:
         GI = frag_meta['_GeneralInformation']  # noqa: N806
 
         # remove the decision variable part from the general info
@@ -122,7 +122,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
 
     for bt in building_types:
         for dl in design_levels:
-            if bt in S_data['EDP_limits'][dl].keys():
+            if bt in S_data['EDP_limits'][dl]:
                 # add a dot in bt between structure and height labels, if needed
                 if (len(bt) > 2) and (bt[-1] in {'L', 'M', 'H'}):  # noqa: PLR2004
                     bt_exp = f'{bt[:-1]}.{bt[-1]}'
@@ -492,7 +492,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
     meta_dict = {}
 
     # add the general information to the meta dict
-    if '_GeneralInformation' in frag_meta.keys():
+    if '_GeneralInformation' in frag_meta:
         GI = frag_meta['_GeneralInformation']  # noqa: N806
 
         for key, item in deepcopy(GI).items():

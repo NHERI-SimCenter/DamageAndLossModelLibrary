@@ -205,7 +205,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     meta_dict = {}
 
     # add the general information to the meta dict
-    if '_GeneralInformation' in frag_meta.keys():
+    if '_GeneralInformation' in frag_meta:
         frag_meta = frag_meta['_GeneralInformation']
 
         # remove the decision variable part from the general info
@@ -675,7 +675,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
     meta_dict = {}
 
     # add the general information to the meta dict
-    if '_GeneralInformation' in frag_meta.keys():
+    if '_GeneralInformation' in frag_meta:
         frag_meta = frag_meta['_GeneralInformation']
 
         meta_dict.update({'_GeneralInformation': frag_meta})
