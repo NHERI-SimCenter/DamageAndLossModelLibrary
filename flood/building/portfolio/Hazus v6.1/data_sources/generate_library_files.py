@@ -149,7 +149,7 @@ def create_Hazus_Flood_repair_db(  # noqa: C901
         lf_data.loc[row_index, 'LossFunction-Theta_0'] = lf_str
 
         # assign an ID
-        lf_id = '.'.join([occupancy, source, data_type])
+        lf_id = f'{occupancy}.{source}.{data_type}'
 
         other_data = (
             description.lower()
