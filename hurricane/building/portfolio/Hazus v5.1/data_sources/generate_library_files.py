@@ -1824,7 +1824,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
     fragility_data = pd.read_csv(source_file)
 
-    with open(meta_file, encoding='utf-8') as f:
+    with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
         meta_dict = json.load(f)
 
     # retrieve damage state descriptions and remove that part from
@@ -1873,7 +1873,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
         meta_dict[fragility_id] = record
 
     # save the metadata
-    with open(target_meta_file_damage, 'w', encoding='utf-8') as f:
+    with open(target_meta_file_damage, 'w', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
     # the unmodified damage state metadata are the same as those for
@@ -1882,7 +1882,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
     # Create loss metadata & original loss function metadata
 
-    with open(meta_file, encoding='utf-8') as f:
+    with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
         meta_dict = json.load(f)
 
     # retrieve damage state descriptions and remove that part from
@@ -1939,9 +1939,9 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
         meta_dict_original[fragility_id] = record_no_ds
 
     # save the metadata
-    with open(target_meta_file_loss, 'w', encoding='utf-8') as f:
+    with open(target_meta_file_loss, 'w', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
-    with open(target_meta_file_loss_original, 'w', encoding='utf-8') as f:
+    with open(target_meta_file_loss_original, 'w', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict_original, f, indent=2)
 
 

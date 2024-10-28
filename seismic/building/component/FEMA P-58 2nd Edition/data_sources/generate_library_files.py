@@ -94,7 +94,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -507,7 +507,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     df_db.to_csv(target_data_file)
 
     # save the metadata
-    with open(target_meta_file, 'w+', encoding='utf-8') as f:
+    with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
     print('Successfully parsed and saved the fragility data from FEMA P58')
@@ -550,7 +550,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
             frag_meta = json.load(f)
     else:
         frag_meta = {}
@@ -1179,7 +1179,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
     df_db.to_csv(target_data_file)
 
     # save the metadata
-    with open(target_meta_file, 'w+', encoding='utf-8') as f:
+    with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
     print('Successfully parsed and saved the repair consequence data from FEMA P58')
