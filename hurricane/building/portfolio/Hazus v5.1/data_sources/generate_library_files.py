@@ -238,7 +238,7 @@ def parse_description(descr, parsed_data):  # noqa: C901
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
+def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     # Load RAW Hazus data
 
     raw_data_path = (
@@ -567,7 +567,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
                 # define the two error measures to be minimized
 
                 # assuming Normal distribution for building capacity
-                def MSE_normal(params, mu_min, res_type='MSE'):
+                def MSE_normal(params, mu_min, res_type='MSE'):  # noqa: N802
                     # unpack the parameters
                     mu, sig = params
 
@@ -591,7 +591,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
                         return eps
 
                 # assuming Lognormal distribution for building capacity
-                def MSE_lognormal(params, mu_min, res_type='MSE'):
+                def MSE_lognormal(params, mu_min, res_type='MSE'):  # noqa: N802
                     # unpack the parameters
                     mu, beta = params
 
@@ -768,7 +768,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
 
             # define the loss error measures to be minimized
 
-            def SSE_loss(params, res_type='SSE'):
+            def SSE_loss(params, res_type='SSE'):  # noqa: N802
                 loss_ratios = params.copy()
 
                 # assume 1.0 for DS4
@@ -1261,7 +1261,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
     )
 
 
-def create_Hazus_HU_metadata_files(  # noqa: C901
+def create_Hazus_HU_metadata_files(  # noqa: C901, N802
     source_file: str = (
         'hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv'
     ),

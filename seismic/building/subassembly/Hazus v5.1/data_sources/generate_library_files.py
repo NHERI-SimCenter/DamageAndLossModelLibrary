@@ -11,7 +11,7 @@ import pandas as pd
 from pelicun import base
 
 
-def create_Hazus_EQ_fragility_db(  # noqa: C901
+def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     source_file,
     meta_file,
     target_data_file,
@@ -422,7 +422,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901
     print('Successfully parsed and saved the fragility data from Hazus EQ')
 
 
-def create_Hazus_EQ_repair_db(  # noqa: C901
+def create_Hazus_EQ_repair_db(  # noqa: C901, N802
     source_file,
     meta_file,
     target_data_file,

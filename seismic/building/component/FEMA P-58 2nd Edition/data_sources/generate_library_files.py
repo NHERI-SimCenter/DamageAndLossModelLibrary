@@ -18,7 +18,7 @@ from scipy.stats import norm  # type: ignore
 # pylint: disable=used-before-assignment
 
 
-def parse_DS_Hierarchy(DSH):
+def parse_DS_Hierarchy(DSH):  # noqa: N802
     """
     Parse the FEMA P58 DS hierarchy into a set of arrays.
 
@@ -51,7 +51,7 @@ def parse_DS_Hierarchy(DSH):
     return DS_setup
 
 
-def create_FEMA_P58_fragility_files(  # noqa: C901
+def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     source_file,
     meta_file,
     target_data_file,
@@ -513,7 +513,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901
     print('Successfully parsed and saved the fragility data from FEMA P58')
 
 
-def create_FEMA_P58_repair_files(  # noqa: C901
+def create_FEMA_P58_repair_files(  # noqa: C901, N802
     source_file,
     meta_file,
     target_data_file,
