@@ -510,7 +510,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print('Successfully parsed and saved the fragility data from FEMA P58')
+    print('Successfully parsed and saved the fragility data from FEMA P58')  # noqa: T201
 
 
 def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
@@ -1182,7 +1182,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
     with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print('Successfully parsed and saved the repair consequence data from FEMA P58')
+    print('Successfully parsed and saved the repair consequence data from FEMA P58')  # noqa: T201
 
 
 def main():

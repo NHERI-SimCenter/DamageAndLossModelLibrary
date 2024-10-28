@@ -513,7 +513,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
 
         # check if any part of the description remained unparsed
         if descr != '':
-            print('WARNING', index, descr)
+            print('WARNING', index, descr)  # noqa: T201
 
         # filter only those parts of the frag_df that correspond to
         # this archetype
@@ -669,7 +669,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                         pass
 
                     else:
-                        print(
+                        print(  # noqa: T201
                             f'WARNING: Error in CDF fitting '
                             f'for {index}, {terrain_id}, {DS}'
                         )

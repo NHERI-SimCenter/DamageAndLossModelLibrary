@@ -419,7 +419,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print('Successfully parsed and saved the fragility data from Hazus EQ')
+    print('Successfully parsed and saved the fragility data from Hazus EQ')  # noqa: T201
 
 
 def create_Hazus_EQ_repair_db(  # noqa: C901, N802
@@ -661,7 +661,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
     with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print('Successfully parsed and saved the repair consequence data from Hazus EQ')
+    print('Successfully parsed and saved the repair consequence data from Hazus EQ')  # noqa: T201
 
 
 def main():
