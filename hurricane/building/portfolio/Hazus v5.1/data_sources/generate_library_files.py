@@ -1228,7 +1228,7 @@ def create_Hazus_HU_damage_and_loss_files():
         'LossFunction-Theta_0',
     ]
     df_db_original = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
-    df_db_original['ID'] = [f'{id}-Cost' for id in out_df['ID']]
+    df_db_original['ID'] = [f'{x}-Cost' for x in out_df['ID']]
     df_db_original['Incomplete'] = 0
     df_db_original['Demand-Type'] = 'Peak Gust Wind Speed'
     df_db_original['Demand-Unit'] = 'mph'
@@ -1247,7 +1247,7 @@ def create_Hazus_HU_damage_and_loss_files():
     for DS_i in range(1, 5):
         out_cols += [f'DS{DS_i}-Theta_0']
     df_db_fit = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
-    df_db_fit['ID'] = [f'{id}-Cost' for id in out_df['ID']]
+    df_db_fit['ID'] = [f'{x}-Cost' for x in out_df['ID']]
     df_db_fit['Incomplete'] = 0
     df_db_fit['Quantity-Unit'] = '1 EA'
     df_db_fit['DV-Unit'] = 'loss_ratio'

@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('./_extensions'))
 
 # -- Project information -----------------------------------------------------
 project = 'Damage and Loss Model Library'
-copyright = (
+copyright = (  # noqa: A001
     f'{datetime.now().year}, Leland Stanford Junior '
     f'University and The Regents of the University of California'
 )
