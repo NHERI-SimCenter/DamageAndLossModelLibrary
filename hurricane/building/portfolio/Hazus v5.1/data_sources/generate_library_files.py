@@ -320,7 +320,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     ]
 
     # the problem affects DS4 probabilities
-    archetypes = (DS_data[2] - DS_data[3].values < -0.02).max(axis=1)
+    archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)
     # go through each affected archetype and fix the problem
     for frag_id in archetypes[archetypes == True].index:  # noqa
         # get the wbID and terrain_id
@@ -336,7 +336,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
         # through simple interpolation
         median_capacities = [
             np.interp(
-                0.5, frag_df_arch[wind_speeds_str].iloc[ds].values, wind_speeds
+                0.5, frag_df_arch[wind_speeds_str].iloc[ds].to_numpy(), wind_speeds
             )
             for ds in range(4)
         ]
@@ -349,7 +349,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
         # the script below works with that assumption and checks for exceptions
         if target_DS == 0:
             # first, extract the probabilities stored at DS4
-            DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].values  # noqa: N806
+            DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].to_numpy()  # noqa: N806
 
             # then offset the probabilities of DS1-3 by one level
             for ds in [3, 2, 1]:
@@ -358,7 +358,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
                 frag_df.loc[target_DS_index, wind_speeds_str] = frag_df.loc[
                     source_DS_index, wind_speeds_str
-                ].values
+                ].to_numpy()
 
             # finally store the DS4 probs at the DS1 cells
             target_DS_index = frag_df_arch.index[0]  # noqa: N806
@@ -394,8 +394,8 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     ]
 
     # # check for invalid values
-    # print(f'Global minimum value: {np.min(DS_data.values)}')
-    # print(f'Global maximum value: {np.max(DS_data.values)}')
+    # print(f'Global minimum value: {np.min(DS_data.to_numpy())}')
+    # print(f'Global maximum value: {np.max(DS_data.to_numpy())}')
 
     # sum up the probabilities of exceeding each DS at various wind speeds
     DS_zero = DS_data.sum(axis=1)  # noqa: N806
@@ -409,7 +409,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             # and each terrain type that is affected
             for terrain_id in no_DS_info.loc[
                 no_DS_info['wbID'] == wbID, 'TERRAINID'
-            ].values:
+            ].to_numpy():
                 # get the fragility data for each archetype
                 frag_df_arch = frag_df.loc[
                     (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
@@ -418,7 +418,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                 # extract the DS3 information
                 DS3_data = frag_df_arch.loc[  # noqa: N806
                     frag_df['DamLossDescID'] == 3, wind_speeds_str
-                ].values
+                ].to_numpy()
 
                 # and overwrite the DS4 values in the original dataset
                 DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806
@@ -544,7 +544,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                 P_exc = np.asarray(  # noqa: N806
                     frag_df_arch_terrain.loc[
                         frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
-                    ].values[0]
+                    ].to_numpy()[0]
                 )
                 multilinear_CDF_parameters = (  # noqa: N806
                     ','.join([str(x) for x in P_exc])
@@ -724,7 +724,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             L_ref = np.asarray(  # noqa: N806
                 frag_df_arch_terrain.loc[
                     frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str
-                ].values[0]
+                ].to_numpy()[0]
             )
 
             multilinear_CDF_parameters = (  # noqa: N806
@@ -755,7 +755,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             # highest wind speeds
             L_max = frag_df_arch_terrain.loc[  # noqa: N806
                 frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'
-            ].values[0]
+            ].to_numpy()[0]
             DS4_max = DS_probs[3][-1]  # noqa: N806
 
             L4 = np.round(min(L_max / DS4_max, 1.0), decimals=3)  # noqa: N806

@@ -665,7 +665,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         ]
 
     # create the MultiIndex
-    comps = df_db_source.index.values
+    comps = df_db_source.index.to_numpy()
     DVs = ['Cost', 'Time', 'Carbon', 'Energy']  # noqa: N806
     df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])  # noqa: N806
 
@@ -1144,7 +1144,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
 
     # assign the Index column as the new ID
     df_db.index = pd.MultiIndex.from_arrays(
-        [df_db['Index'].values, df_db.index.get_level_values(1)]
+        [df_db['Index'].to_numpy(), df_db.index.get_level_values(1)]
     )
 
     df_db.drop('Index', axis=1, inplace=True)  # noqa: PD002
