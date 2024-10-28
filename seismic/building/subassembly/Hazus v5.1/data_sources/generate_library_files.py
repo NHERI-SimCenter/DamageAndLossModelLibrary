@@ -398,7 +398,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
             counter += 1
 
     # remove empty rows (from the end)
-    df_db.dropna(how='all', inplace=True)
+    df_db.dropna(how='all', inplace=True)  # noqa: PD002
 
     # All Hazus components have complete fragility info,
     df_db['Incomplete'] = 0
@@ -407,7 +407,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
     df_db['Demand-Directional'] = 0
 
     # rename the index
-    df_db.set_index('ID', inplace=True)
+    df_db.set_index('ID', inplace=True)  # noqa: PD002
 
     # convert to optimal datatypes to reduce file size
     df_db = df_db.convert_dtypes()
@@ -631,7 +631,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
     # Fourth, the lifeline facilities - only at the building-level resolution
 
     # remove empty rows (from the end)
-    df_db.dropna(how='all', inplace=True)
+    df_db.dropna(how='all', inplace=True)  # noqa: PD002
 
     # All Hazus components have complete fragility info,
     df_db['Incomplete'] = 0

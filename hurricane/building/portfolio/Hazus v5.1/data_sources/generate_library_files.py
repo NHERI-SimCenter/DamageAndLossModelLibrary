@@ -259,7 +259,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
     # offset the EF building IDs to ensure each archetype has a unique ID
     bldg_df_EF.index = max(bldg_df_ST.index) + bldg_df_EF.index
-    bldg_df_EF.sort_index(inplace=True)
+    bldg_df_EF.sort_index(inplace=True)  # noqa: PD002
 
     bldg_df = pd.concat([bldg_df_ST, bldg_df_EF], axis=0)
 
@@ -272,9 +272,9 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
     frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
 
-    frag_df.sort_values(['wbID', 'TERRAINID', 'DamLossDescID'], inplace=True)
+    frag_df.sort_values(['wbID', 'TERRAINID', 'DamLossDescID'], inplace=True)  # noqa: PD002
 
-    frag_df.reset_index(drop=True, inplace=True)
+    frag_df.reset_index(drop=True, inplace=True)  # noqa: PD002
 
     # Fix errors and fill missing data in the raw fragility database
 

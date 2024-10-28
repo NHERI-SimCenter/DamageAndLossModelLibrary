@@ -100,8 +100,8 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
         frag_meta = {}
 
     # remove the empty rows and columns
-    df.dropna(axis=0, how='all', inplace=True)
-    df.dropna(axis=1, how='all', inplace=True)
+    df.dropna(axis=0, how='all', inplace=True)  # noqa: PD002
+    df.dropna(axis=1, how='all', inplace=True)  # noqa: PD002
 
     # filter the columns that we need for the fragility database
     cols_to_db = [
@@ -162,12 +162,12 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
 
     df_db_source = df.loc[:, cols_to_db]
     df_db_source.columns = [s.translate(str_map) for s in cols_to_db]
-    df_db_source.sort_index(inplace=True)
+    df_db_source.sort_index(inplace=True)  # noqa: PD002
 
     df_meta = df.loc[:, cols_to_meta]
     df_meta.columns = [s.translate(str_map) for s in cols_to_meta]
     # replace missing values with an empty string
-    df_meta.fillna('', inplace=True)
+    df_meta.fillna('', inplace=True)  # noqa: PD002
     # the metadata shall be stored in strings
     df_meta = df_meta.astype(str)
 
@@ -495,7 +495,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
         meta_dict.update({cmpID: meta_data})
 
     # assign the Index column as the new ID
-    df_db.set_index('Index', inplace=True)
+    df_db.set_index('Index', inplace=True)  # noqa: PD002
 
     # rename the index
     df_db.index.name = 'ID'
@@ -560,8 +560,8 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
     df = df.loc[:, ~df.columns.duplicated()]
 
     # remove empty rows and columns
-    df.dropna(axis=0, how='all', inplace=True)
-    df.dropna(axis=1, how='all', inplace=True)
+    df.dropna(axis=0, how='all', inplace=True)  # noqa: PD002
+    df.dropna(axis=1, how='all', inplace=True)  # noqa: PD002
 
     # filter the columns we need for the repair database
     cols_to_db = [
@@ -641,12 +641,12 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
 
     df_db_source = df.loc[:, cols_to_db]
     df_db_source.columns = [s.translate(str_map) for s in cols_to_db]
-    df_db_source.sort_index(inplace=True)
+    df_db_source.sort_index(inplace=True)  # noqa: PD002
 
     df_meta = df.loc[:, cols_to_meta]
     df_meta.columns = [s.translate(str_map) for s in cols_to_meta]
 
-    df_db_source.replace('BY USER', np.nan, inplace=True)
+    df_db_source.replace('BY USER', np.nan, inplace=True)  # noqa: PD002
 
     # initialize the output loss table
     # define the columns
@@ -1147,7 +1147,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         [df_db['Index'].values, df_db.index.get_level_values(1)]
     )
 
-    df_db.drop('Index', axis=1, inplace=True)
+    df_db.drop('Index', axis=1, inplace=True)  # noqa: PD002
 
     # review the database and drop rows with no information
     cmp_to_drop = []
@@ -1162,7 +1162,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
         if empty:
             cmp_to_drop.append(cmp)
 
-    df_db.drop(cmp_to_drop, axis=0, inplace=True)
+    df_db.drop(cmp_to_drop, axis=0, inplace=True)  # noqa: PD002
     for cmp in cmp_to_drop:
         if cmp[0] in meta_dict:
             del meta_dict[cmp[0]]
