@@ -1,7 +1,4 @@
-"""
-Generates Hazus Hurricane damage and loss database files.
-
-"""
+"""nerates Hazus Hurricane damage and loss database files."""
 
 # This code was written before we began enforcing more strict linting
 # standards. pylint warnings are ignored for this file.
@@ -1947,10 +1944,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901
 
 
 def main():
-    """
-    Generates Hazus Hurricane damage and loss database files.
-
-    """
+    """Generates Hazus Hurricane damage and loss database files."""
     create_Hazus_HU_damage_and_loss_files()
     create_Hazus_HU_metadata_files()
 

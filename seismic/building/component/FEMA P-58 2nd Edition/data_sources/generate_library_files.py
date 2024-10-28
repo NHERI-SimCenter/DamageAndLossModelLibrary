@@ -1,7 +1,4 @@
-"""
-Generates FEMA P-58 2nd edition damage and loss library files.
-
-"""
+"""Generates FEMA P-58 2nd edition damage and loss library files."""
 
 from __future__ import annotations
 
@@ -1188,10 +1185,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901
 
 
 def main():
-    """
-    Generates FEMA P-58 2nd edition damage and loss library files.
-
-    """
+    """Generates FEMA P-58 2nd edition damage and loss library files."""
     create_FEMA_P58_fragility_files(
         source_file=(
             'seismic/building/component/FEMA P-58 2nd Edition/'

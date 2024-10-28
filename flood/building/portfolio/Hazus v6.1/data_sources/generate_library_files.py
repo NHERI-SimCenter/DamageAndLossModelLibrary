@@ -1,7 +1,4 @@
-"""
-Generates Hazus Flood loss functions.
-
-"""
+"""Generates Hazus Flood loss functions."""
 
 from __future__ import annotations
 

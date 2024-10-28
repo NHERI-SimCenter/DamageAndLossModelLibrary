@@ -1,7 +1,4 @@
-"""
-Generates HAZUS 5.1 story seismic damage and loss library files.
-
-"""
+"""Generates HAZUS 5.1 story seismic damage and loss library files."""
 
 from __future__ import annotations
 
@@ -668,10 +665,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901
 
 
 def main():
-    """
-    Generates HAZUS 5.1 story seismic damage and loss library files.
-
-    """
+    """Generates HAZUS 5.1 story seismic damage and loss library files."""
     create_Hazus_EQ_fragility_db(
         source_file=(
             'seismic/building/portfolio/Hazus v5.1/'
