@@ -161,7 +161,7 @@ def create_Hazus_Flood_repair_db(  # noqa: C901, N802
             .split(',')
         )
         for other in other_data:
-            other = other.strip()
+            other = other.strip()  # noqa: PLW2901
             if not other:
                 continue
             elements = [

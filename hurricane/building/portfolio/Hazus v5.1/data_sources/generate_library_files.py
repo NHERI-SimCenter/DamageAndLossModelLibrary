@@ -522,7 +522,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
         # cycle through the five terrain types in Hazus
         for terrain_id, roughness in enumerate([0.03, 0.15, 0.35, 0.7, 1.0]):
             # Hazus array indexing is 1-based
-            terrain_id += 1
+            terrain_id += 1  # noqa: PLW2901
 
             new_row_terrain = new_row.copy()
 
@@ -1204,8 +1204,8 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
         df_db_fit[f'LS{LS_i}-Theta_1'] = out_df[f'DS{LS_i}_sig']
 
     for df_db in (df_db_original, df_db_fit):
-        df_db = df_db.loc[df_db['ID'] != '']
-        df_db = df_db.set_index('ID').sort_index().convert_dtypes()
+        df_db = df_db.loc[df_db['ID'] != '']  # noqa: PLW2901
+        df_db = df_db.set_index('ID').sort_index().convert_dtypes()  # noqa: PLW2901
 
     df_db_fit.to_csv('hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv')
     df_db_original.to_csv(

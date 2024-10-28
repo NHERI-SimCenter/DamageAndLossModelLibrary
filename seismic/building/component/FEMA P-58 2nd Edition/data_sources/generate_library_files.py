@@ -306,8 +306,8 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
 
         # now look at each Limit State
         for LS_i, LS_contents in enumerate(DS_setup):  # noqa: N806
-            LS_i = LS_i + 1  # noqa: N806
-            LS_contents = np.atleast_1d(LS_contents)  # noqa: N806
+            LS_i = LS_i + 1  # noqa: N806, PLW2901
+            LS_contents = np.atleast_1d(LS_contents)  # noqa: N806, PLW2901
 
             ls_meta = {}
 
