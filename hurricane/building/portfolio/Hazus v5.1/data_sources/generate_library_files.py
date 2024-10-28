@@ -22,7 +22,7 @@ warnings.simplefilter('ignore', RuntimeWarning)
 warnings.simplefilter('ignore', FutureWarning)
 
 
-def parse_description(descr, parsed_data):  # noqa: C901
+def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
     """
     Parse the descr string and store params in row Series.
 
@@ -238,7 +238,7 @@ def parse_description(descr, parsed_data):  # noqa: C901
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
+def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912, PLR0915
     # Load RAW Hazus data
 
     raw_data_path = (
@@ -320,7 +320,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
     ]
 
     # the problem affects DS4 probabilities
-    archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)
+    archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)  # noqa: PLR2004
     # go through each affected archetype and fix the problem
     for frag_id in archetypes[archetypes == True].index:
         # get the wbID and terrain_id
@@ -343,7 +343,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
         # then check where to store the values at DS4 to maintain
         # ascending exceedance probabilities
-        target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806
+        target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806, PLR2004
 
         # since this is always DS1 in the current database,
         # the script below works with that assumption and checks for exceptions
@@ -417,11 +417,11 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
 
                 # extract the DS3 information
                 DS3_data = frag_df_arch.loc[  # noqa: N806
-                    frag_df['DamLossDescID'] == 3, wind_speeds_str
+                    frag_df['DamLossDescID'] == 3, wind_speeds_str  # noqa: PLR2004
                 ].to_numpy()
 
                 # and overwrite the DS4 values in the original dataset
-                DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806
+                DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806, PLR2004
                 frag_df.loc[DS4_index, wind_speeds_str] = DS3_data
 
     overwrite_ds4_data()
@@ -559,7 +559,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                 beta_0 = 0.2
 
                 median_id = max(np.where(wind_speeds <= mu_0)[0]) + 1
-                min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1
+                min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1  # noqa: PLR2004
                 max_speed_id_mod = max(
                     [min([median_id, max_speed_id]), min_speed_id]
                 )
@@ -687,8 +687,8 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                     # are very close AND one model has substantially
                     # smaller maximum error than the other, then
                     # choose the model with the smaller maximum error
-                    if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (
-                        np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1
+                    if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (  # noqa: PLR2004
+                        np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1  # noqa: PLR2004
                     ):
                         dist_type = 'lognormal'
                         res = res_lognormal
@@ -697,8 +697,8 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
                         dist_type = 'normal'
                         res = res_normal
 
-                elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (
-                    np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1
+                elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (  # noqa: PLR2004
+                    np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1  # noqa: PLR2004
                 ):
                     dist_type = 'normal'
                     res = res_normal
@@ -723,7 +723,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             # Focus on "Building losses" first
             L_ref = np.asarray(  # noqa: N806
                 frag_df_arch_terrain.loc[
-                    frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str
+                    frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str  # noqa: PLR2004
                 ].to_numpy()[0]
             )
 
@@ -754,7 +754,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802
             # The losses for DS4 are calculated based on outcomes at the
             # highest wind speeds
             L_max = frag_df_arch_terrain.loc[  # noqa: N806
-                frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'
+                frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'  # noqa: PLR2004
             ].to_numpy()[0]
             DS4_max = DS_probs[3][-1]  # noqa: N806
 

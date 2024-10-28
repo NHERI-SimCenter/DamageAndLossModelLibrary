@@ -513,7 +513,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     print('Successfully parsed and saved the fragility data from FEMA P58')
 
 
-def create_FEMA_P58_repair_files(  # noqa: C901, N802
+def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
     source_file,
     meta_file,
     target_data_file,
