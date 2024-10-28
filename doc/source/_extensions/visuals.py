@@ -178,9 +178,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         x=demand_vals,
                         y=cdf_vals,
                         mode='lines',
-                        line=dict(
+                        line=dict(  # noqa: C408
                             width=3, color=colors[LS_count][i_ls]
-                        ),  # noqa: C408
+                        ),
                         name=LS,
                     ),
                     row=1,
@@ -976,8 +976,8 @@ def plot_repair(
                         **shared_ax_props,
                     )
                     if need_x_axis == True  # noqa: E712
-                    else dict(showgrid=False, showticklabels=False)
-                ),  # noqa: C408
+                    else dict(showgrid=False, showticklabels=False)  # noqa: C408
+                ),
                 yaxis1=dict(
                     title_text=f'{c_type} [{dv_unit}]',
                     rangemode='tozero',

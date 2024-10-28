@@ -626,7 +626,7 @@ def create_Hazus_HU_damage_and_loss_files():
                     [mu_0, sig_0],
                     args=(mu_min),
                     method='BFGS',
-                    options=dict(maxiter=50),
+                    options={'maxiter': 50},
                 )
 
                 res_normal.x = np.array(
@@ -651,7 +651,7 @@ def create_Hazus_HU_damage_and_loss_files():
                     [mu_0, beta_0],
                     args=(mu_min),
                     method='BFGS',
-                    options=dict(maxiter=50),
+                    options={'maxiter': 50},
                 )
 
                 res_lognormal.x = np.array(
