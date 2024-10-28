@@ -322,7 +322,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
     # the problem affects DS4 probabilities
     archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)  # noqa: PLR2004
     # go through each affected archetype and fix the problem
-    for frag_id in archetypes[archetypes == True].index:
+    for frag_id in archetypes[archetypes == True].index:  # noqa: E712
         # get the wbID and terrain_id
         wbID, terrain_id = frag_df.loc[frag_id, ['wbID', 'TERRAINID']]  # noqa: N806
 
@@ -575,8 +575,8 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                     if (np.round(mu, decimals=1) <= mu_min) or (sig <= 0):
                         return 1e10
 
-                    eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[
-                        :max_speed_id_mod
+                    eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[  # noqa: B023
+                        :max_speed_id_mod  # noqa: B023
                     ]
 
                     if res_type == 'MSE':
@@ -599,9 +599,9 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
 
                     eps = (
                         norm.cdf(np.log(wind_speeds), loc=np.log(mu), scale=beta)
-                        - P_exc
+                        - P_exc  # noqa: B023
                     )[
-                        :max_speed_id_mod
+                        :max_speed_id_mod  # noqa: B023
                     ]
 
                     if res_type == 'MSE':
@@ -768,12 +768,12 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                 loss_ratios = params.copy()
 
                 # assume 1.0 for DS4
-                loss_ratios = np.append(loss_ratios, L4)
+                loss_ratios = np.append(loss_ratios, L4)  # noqa: B023
 
-                L_est = np.sum(loss_ratios * DS_probs.T, axis=1)
+                L_est = np.sum(loss_ratios * DS_probs.T, axis=1)  # noqa: B023, N806
 
                 # the error is the difference between reference and estimated losses
-                eps = (L_est - L_ref)[:max_speed_id]
+                eps = (L_est - L_ref)[:max_speed_id]  # noqa: B023
 
                 if res_type == 'SSE':
                     # calculate the sum of squared errors across wind speeds
@@ -787,7 +787,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
             cons = (
                 {'type': 'ineq', 'fun': lambda x: x[1] - x[0] - 0.002},
                 {'type': 'ineq', 'fun': lambda x: x[2] - x[1] - 0.002},
-                {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},
+                {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},  # noqa: B023
             )
 
             res = minimize(
