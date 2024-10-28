@@ -84,7 +84,7 @@ def create_Hazus_Flood_repair_db(  # noqa: C901, N802
     )
 
     # Merge the three subassembly datasets
-    df = pd.concat(source_data.values(), keys=source_data.keys(), axis=0)
+    df = pd.concat(source_data.values(), keys=source_data.keys(), axis=0)  # noqa: PD901
     df.index.names = ['subassembly', 'index']
 
     # Columns defining the loss for each inundation height

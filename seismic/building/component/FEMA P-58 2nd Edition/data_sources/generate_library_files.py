@@ -83,7 +83,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901, N802
         definition of some component.
     """
     # parse the source file
-    df = pd.read_excel(
+    df = pd.read_excel(  # noqa: PD901
         source_file,
         sheet_name='Summary',
         header=2,
@@ -540,7 +540,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
 
     """
     # parse the source file
-    df = pd.concat(
+    df = pd.concat(  # noqa: PD901
         [
             pd.read_excel(source_file, sheet_name=sheet, header=2, index_col=1)
             for sheet in ('Summary', 'Cost Summary', 'Env Summary')
@@ -557,7 +557,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802
 
     # remove duplicate columns
     # (there are such because we joined two tables that were read separately)
-    df = df.loc[:, ~df.columns.duplicated()]
+    df = df.loc[:, ~df.columns.duplicated()]  # noqa: PD901
 
     # remove empty rows and columns
     df.dropna(axis=0, how='all', inplace=True)  # noqa: PD002
