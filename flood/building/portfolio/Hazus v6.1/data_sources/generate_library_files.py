@@ -88,10 +88,7 @@ def create_Hazus_Flood_repair_db(  # noqa: C901, N802
     df.index.names = ['subassembly', 'index']
 
     # Columns defining the loss for each inundation height
-    ft_cols = []
-    for col in df.columns:
-        if col.startswith('ft'):
-            ft_cols.append(col)
+    ft_cols = [col for col in df.columns if col.startswith('ft')]
     ft_values_list = []
     for x in ft_cols:
         if 'm' in x:
