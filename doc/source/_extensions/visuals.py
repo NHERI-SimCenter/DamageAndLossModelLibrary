@@ -447,6 +447,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
 def plot_repair(  # noqa: C901
     comp_db_path, output_path, create_zip='0'
 ):  # noqa: C901, D103, PLR0912, PLR0915
+    """Generate repair parameter plots."""
     # TODO:  # noqa: TD002
     # change limit_states names
 

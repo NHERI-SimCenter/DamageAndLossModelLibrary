@@ -241,7 +241,7 @@ def parse_description(descr, parsed_data):  # noqa: C901
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files():  # noqa: C901
+def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103
     # Load RAW Hazus data
 
     raw_data_path = (

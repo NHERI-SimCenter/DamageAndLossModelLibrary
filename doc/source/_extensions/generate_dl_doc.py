@@ -60,10 +60,12 @@ def combine_md5_hashes(md5_list):
 
 
 def get_dlml_tag(dlml):
+    """Get the damage and loss model tag."""
     return '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
 
 
 def create_component_group_directory(cmp_groups, root, dlml_tag):
+    """Create a component group directory."""
     member_ids = []
 
     if isinstance(cmp_groups, dict):
@@ -134,6 +136,7 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
 
 
 def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
+    """Generate damage parameter documentation."""
 
     doc_folder = doc_folder / 'damage'
 
@@ -365,6 +368,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 
 
 def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
+    """Generate repair parameter documentation."""
     resource_folder = Path()
 
     doc_folder = doc_folder / 'repair'
@@ -627,6 +631,7 @@ def ignore_file(dlml):
 
 
 def main():
+    """Run the code."""
     cache_folder = Path('doc/cache')
 
     doc_folder = Path('doc/source/dl_doc')
