@@ -58,7 +58,7 @@ def create_FEMA_P58_fragility_files(  # noqa: C901
     target_meta_file,
 ):
     """
-    Create a fragility parameter database based on the FEMA P58 data
+    Create a fragility parameter database based on the FEMA P58 data.
 
     The method was developed to process v3.1.2 of the FragilityDatabase xls
     that is provided with FEMA P58 2nd edition.
@@ -519,7 +519,7 @@ def create_FEMA_P58_repair_files(  # noqa: C901
     target_meta_file,
 ):
     """
-    Create a repair consequence parameter database based on the FEMA P58 data
+    Create a repair consequence parameter database based on the FEMA P58 data.
 
     The method was developed to process v3.1.2 of the FragilityDatabase xls
     that is provided with FEMA P58 2nd edition.

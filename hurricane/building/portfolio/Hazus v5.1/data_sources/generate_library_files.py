@@ -24,7 +24,7 @@ warnings.simplefilter('ignore', FutureWarning)
 
 def parse_description(descr, parsed_data):  # noqa: C901
     """
-    Parses the descr string and stores params in row Series
+    Parses the descr string and stores params in row Series.
 
     Parameters
     ----------
