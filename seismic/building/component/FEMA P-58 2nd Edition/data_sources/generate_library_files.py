@@ -18,7 +18,7 @@ from scipy.stats import norm  # type: ignore
 # pylint: disable=used-before-assignment
 
 
-def parse_DS_Hierarchy(DSH):  # noqa: N802
+def parse_DS_Hierarchy(DSH):  # noqa: N802, N803
     """
     Parse the FEMA P58 DS hierarchy into a set of arrays.
 
