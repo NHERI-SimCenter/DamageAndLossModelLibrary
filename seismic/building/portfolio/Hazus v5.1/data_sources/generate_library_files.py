@@ -828,7 +828,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901
 
 
 def main():
-    """Generates HAZUS 5.1 building seismic damage and loss library files."""
+    """Generate HAZUS 5.1 building seismic damage and loss library files."""
     create_Hazus_EQ_fragility_db(
         source_file=(
             'seismic/building/portfolio/Hazus v5.1/'

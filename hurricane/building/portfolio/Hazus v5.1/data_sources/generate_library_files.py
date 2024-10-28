@@ -24,7 +24,7 @@ warnings.simplefilter('ignore', FutureWarning)
 
 def parse_description(descr, parsed_data):  # noqa: C901
     """
-    Parses the descr string and stores params in row Series.
+    Parse the descr string and store params in row Series.
 
     Parameters
     ----------
@@ -1946,7 +1946,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901
 
 
 def main():
-    """Generates Hazus Hurricane damage and loss database files."""
+    """Generate Hazus Hurricane damage and loss database files."""
     create_Hazus_HU_damage_and_loss_files()
     create_Hazus_HU_metadata_files()
 
