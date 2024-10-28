@@ -54,7 +54,7 @@ def parse_DS_Hierarchy(DSH):
     return DS_setup
 
 
-def create_FEMA_P58_fragility_files(
+def create_FEMA_P58_fragility_files(  # noqa: C901
     source_file,
     meta_file,
     target_data_file,
@@ -515,7 +515,7 @@ def create_FEMA_P58_fragility_files(
     print('Successfully parsed and saved the fragility data from FEMA P58')
 
 
-def create_FEMA_P58_repair_files(
+def create_FEMA_P58_repair_files(  # noqa: C901
     source_file,
     meta_file,
     target_data_file,

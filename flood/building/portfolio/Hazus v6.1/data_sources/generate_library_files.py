@@ -44,7 +44,7 @@ def remove_repeated_chars(s):
     return ''.join(result)
 
 
-def create_Hazus_Flood_repair_db(
+def create_Hazus_Flood_repair_db(  # noqa: C901
     source_file_dir: str = (
         'flood/building/portfolio/Hazus v6.1/data_sources/input_files'
     ),

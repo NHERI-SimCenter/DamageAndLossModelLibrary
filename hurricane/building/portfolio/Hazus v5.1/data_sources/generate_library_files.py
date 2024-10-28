@@ -25,7 +25,7 @@ warnings.simplefilter('ignore', RuntimeWarning)
 warnings.simplefilter('ignore', FutureWarning)
 
 
-def parse_description(descr, parsed_data):
+def parse_description(descr, parsed_data):  # noqa: C901
     """
     Parses the descr string and stores params in row Series
 
@@ -241,7 +241,7 @@ def parse_description(descr, parsed_data):
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files():
+def create_Hazus_HU_damage_and_loss_files():  # noqa: C901
     # Load RAW Hazus data
 
     raw_data_path = (
@@ -1264,7 +1264,7 @@ def create_Hazus_HU_damage_and_loss_files():
     )
 
 
-def create_Hazus_HU_metadata_files(
+def create_Hazus_HU_metadata_files(  # noqa: C901
     source_file: str = (
         'hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv'
     ),

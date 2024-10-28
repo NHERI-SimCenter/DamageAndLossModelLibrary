@@ -133,7 +133,7 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
     return member_ids
 
 
-def generate_damage_docs(doc_folder: Path, cache_folder: Path):
+def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 
     doc_folder = doc_folder / 'damage'
 
@@ -364,7 +364,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
         f.write(damage_index_contents)
 
 
-def generate_repair_docs(doc_folder: Path, cache_folder: Path):
+def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
     resource_folder = Path()
 
     doc_folder = doc_folder / 'repair'
