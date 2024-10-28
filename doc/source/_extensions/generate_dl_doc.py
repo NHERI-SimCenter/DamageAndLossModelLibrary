@@ -175,7 +175,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
         zip_hash = generate_md5(dlml)
         zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
 
-        # if it doesn't exist in the cahce, craete it.
+        # if it doesn't exist in the cache, create it.
         # otherwise it exists, obviously.
         if not zip_filepath.is_file():
             plot_fragility(
@@ -405,7 +405,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
         zip_hash = generate_md5(dlml)
         zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
 
-        # if it doesn't exist in the cahce, craete it.
+        # if it doesn't exist in the cache, create it.
         # otherwise it exists, obviously.
         if not zip_filepath.is_file():
             plot_repair(

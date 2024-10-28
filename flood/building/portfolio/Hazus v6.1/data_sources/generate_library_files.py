@@ -14,6 +14,8 @@ idx = base.idx
 
 def remove_repeated_chars(s):
     """
+    Remove repeated characters.
+
     Removes all repeated instances of a character in a string with a
     single instance of that character, unless it is [A-Za-z].
 

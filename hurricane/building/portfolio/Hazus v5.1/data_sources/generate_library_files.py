@@ -1145,7 +1145,7 @@ def create_Hazus_HU_damage_and_loss_files():
 
         bldg_chars = row[cols_of_interest]
 
-        # If a critical feature is underfined, we consider the archetype
+        # If a critical feature is undefined, we consider the archetype
         # unreliable and skip it
         skip_archetype = False
         for critical_col in critical_cols:
@@ -1437,7 +1437,7 @@ def create_Hazus_HU_metadata_files(
     masonry_reinforcing = {
         '1': 'Has masonry reinforcing.',
         '0': 'No masonry reinforcing.',
-        'null': 'Unknown information on masonry reinfocing.',
+        'null': 'Unknown information on masonry reinforcing.',
     }
 
     roof_frame_type = {
@@ -1886,7 +1886,7 @@ def create_Hazus_HU_metadata_files(
 
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # TODO
-        # This is a temporary fix until we resolve the presense of NaN
+        # This is a temporary fix until we resolve the presence of NaN
         # values in the ID column of the fragility library file.
         if pd.isna(fragility_id):
             continue
@@ -1947,7 +1947,7 @@ def create_Hazus_HU_metadata_files(
 
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # TODO
-        # This is a temporary fix until we resolve the presense of NaN
+        # This is a temporary fix until we resolve the presence of NaN
         # values in the ID column of the fragility library file.
         if pd.isna(fragility_id):
             continue
