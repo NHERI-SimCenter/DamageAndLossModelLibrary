@@ -580,7 +580,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                     ]
 
                     if res_type == 'MSE':
-                        return sum(eps**2.0)  # noqa: N806
+                        return sum(eps**2.0)
 
                     if res_type == 'max abs eps':
                         return max(abs(eps))
@@ -605,7 +605,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
                     ]
 
                     if res_type == 'MSE':
-                        return sum(eps**2.0)  # noqa: N806
+                        return sum(eps**2.0)
 
                     if res_type == 'max abs eps':
                         return max(abs(eps))
