@@ -330,11 +330,12 @@ def create_FEMA_P58_fragility_files(  # noqa: C901
                 if (np.unique(median_demands).size != 1) or (
                     np.unique(dispersions).size != 1
                 ):
-                    raise ValueError(
+                    msg = (
                         f'Incorrect mutually exclusive DS '
                         f'definition in component {cmp.Index} at '
                         f'Limit State {LS_i}'
                     )
+                    raise ValueError(msg)
 
                 if LS_contents[0] == 'MutEx':
                     # in mutually exclusive cases, make sure the specified DS
