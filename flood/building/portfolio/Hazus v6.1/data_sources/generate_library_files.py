@@ -33,7 +33,7 @@ def remove_repeated_chars(s):
     """
 
     if not s:
-        return ""
+        return ''
 
     result = [s[0]]  # Initialize result with the first character
 
@@ -135,7 +135,6 @@ def create_Hazus_Flood_repair_db(
     lf_data['DV-Unit'] = 'loss_ratio'
 
     for index, row in df.iterrows():
-
         # Extract row data
         data_type = index[0]
         row_index = index[1]

@@ -71,28 +71,28 @@ def create_Hazus_EQ_fragility_db(
     # initialize the fragility table
     df_db = pd.DataFrame(
         columns=[
-            "ID",
-            "Incomplete",
-            "Demand-Type",
-            "Demand-Unit",
-            "Demand-Offset",
-            "Demand-Directional",
-            "LS1-Family",
-            "LS1-Theta_0",
-            "LS1-Theta_1",
-            "LS1-DamageStateWeights",
-            "LS2-Family",
-            "LS2-Theta_0",
-            "LS2-Theta_1",
-            "LS2-DamageStateWeights",
-            "LS3-Family",
-            "LS3-Theta_0",
-            "LS3-Theta_1",
-            "LS3-DamageStateWeights",
-            "LS4-Family",
-            "LS4-Theta_0",
-            "LS4-Theta_1",
-            "LS4-DamageStateWeights",
+            'ID',
+            'Incomplete',
+            'Demand-Type',
+            'Demand-Unit',
+            'Demand-Offset',
+            'Demand-Directional',
+            'LS1-Family',
+            'LS1-Theta_0',
+            'LS1-Theta_1',
+            'LS1-DamageStateWeights',
+            'LS2-Family',
+            'LS2-Theta_0',
+            'LS2-Theta_1',
+            'LS2-DamageStateWeights',
+            'LS3-Family',
+            'LS3-Theta_0',
+            'LS3-Theta_1',
+            'LS3-DamageStateWeights',
+            'LS4-Family',
+            'LS4-Theta_0',
+            'LS4-Theta_1',
+            'LS4-DamageStateWeights',
         ],
         index=np.arange(len(building_types) * len(design_levels) * 5),
         dtype=float,
@@ -102,11 +102,11 @@ def create_Hazus_EQ_fragility_db(
     meta_dict = {}
 
     # add the general information to the meta dict
-    if "_GeneralInformation" in frag_meta.keys():
-        GI = frag_meta["_GeneralInformation"]
+    if '_GeneralInformation' in frag_meta.keys():
+        GI = frag_meta['_GeneralInformation']
 
         # remove the decision variable part from the general info
-        GI.pop("DecisionVariables", None)
+        GI.pop('DecisionVariables', None)
 
         for key, item in deepcopy(GI).items():
             if key == 'ComponentGroups_Damage':
@@ -115,7 +115,7 @@ def create_Hazus_EQ_fragility_db(
             if key.startswith('ComponentGroups'):
                 GI.pop(key, None)
 
-        meta_dict.update({"_GeneralInformation": GI})
+        meta_dict.update({'_GeneralInformation': GI})
 
     counter = 0
 
@@ -146,67 +146,67 @@ def create_Hazus_EQ_fragility_db(
                 df_db.loc[counter, 'ID'] = cmp_id
 
                 # store demand specifications
-                df_db.loc[counter, 'Demand-Type'] = "Peak Interstory Drift Ratio"
+                df_db.loc[counter, 'Demand-Type'] = 'Peak Interstory Drift Ratio'
 
-                df_db.loc[counter, 'Demand-Unit'] = "rad"
+                df_db.loc[counter, 'Demand-Unit'] = 'rad'
                 df_db.loc[counter, 'Demand-Offset'] = 0
 
                 # add metadata
                 if hc is not None:
                     cmp_meta = {
-                        "Description": (
+                        'Description': (
                             frag_meta['Meta']['Collections']['STR']['Description']
-                            + ", "
+                            + ', '
                             + frag_meta['Meta']['StructuralSystems'][st][
                                 'Description'
                             ]
-                            + ", "
+                            + ', '
                             + frag_meta['Meta']['HeightClasses'][hc]['Description']
-                            + ", "
+                            + ', '
                             + frag_meta['Meta']['DesignLevels'][
                                 convert_design_level[dl]
                             ]['Description']
                         ),
-                        "Comments": (
+                        'Comments': (
                             frag_meta['Meta']['Collections']['STR']['Comment']
-                            + "\n"
+                            + '\n'
                             + frag_meta['Meta']['StructuralSystems'][st]['Comment']
-                            + "\n"
+                            + '\n'
                             + frag_meta['Meta']['HeightClasses'][hc]['Comment']
-                            + "\n"
+                            + '\n'
                             + frag_meta['Meta']['DesignLevels'][
                                 convert_design_level[dl]
                             ]['Comment']
                         ),
-                        "SuggestedComponentBlockSize": "1 EA",
-                        "RoundUpToIntegerQuantity": "True",
-                        "LimitStates": {},
+                        'SuggestedComponentBlockSize': '1 EA',
+                        'RoundUpToIntegerQuantity': 'True',
+                        'LimitStates': {},
                     }
                 else:
                     cmp_meta = {
-                        "Description": (
+                        'Description': (
                             frag_meta['Meta']['Collections']['STR']['Description']
-                            + ", "
+                            + ', '
                             + frag_meta['Meta']['StructuralSystems'][st][
                                 'Description'
                             ]
-                            + ", "
+                            + ', '
                             + frag_meta['Meta']['DesignLevels'][
                                 convert_design_level[dl]
                             ]['Description']
                         ),
-                        "Comments": (
+                        'Comments': (
                             frag_meta['Meta']['Collections']['STR']['Comment']
-                            + "\n"
+                            + '\n'
                             + frag_meta['Meta']['StructuralSystems'][st]['Comment']
-                            + "\n"
+                            + '\n'
                             + frag_meta['Meta']['DesignLevels'][
                                 convert_design_level[dl]
                             ]['Comment']
                         ),
-                        "SuggestedComponentBlockSize": "1 EA",
-                        "RoundUpToIntegerQuantity": "True",
-                        "LimitStates": {},
+                        'SuggestedComponentBlockSize': '1 EA',
+                        'RoundUpToIntegerQuantity': 'True',
+                        'LimitStates': {},
                     }
 
                 # store the Limit State parameters
@@ -226,21 +226,21 @@ def create_Hazus_EQ_fragility_db(
                             f'{1.0 - p_coll} | {p_coll}'
                         )
 
-                        cmp_meta["LimitStates"].update(
+                        cmp_meta['LimitStates'].update(
                             {
-                                "LS4": {
-                                    "DS4": {"Description": ds_meta['DS4']},
-                                    "DS5": {"Description": ds_meta['DS5']},
+                                'LS4': {
+                                    'DS4': {'Description': ds_meta['DS4']},
+                                    'DS5': {'Description': ds_meta['DS5']},
                                 }
                             }
                         )
 
                     else:
-                        cmp_meta["LimitStates"].update(
+                        cmp_meta['LimitStates'].update(
                             {
-                                f"LS{LS_i}": {
-                                    f"DS{LS_i}": {
-                                        "Description": ds_meta[f"DS{LS_i}"]
+                                f'LS{LS_i}': {
+                                    f'DS{LS_i}': {
+                                        'Description': ds_meta[f'DS{LS_i}']
                                     }
                                 }
                             }
@@ -258,18 +258,18 @@ def create_Hazus_EQ_fragility_db(
     df_db.loc[counter, 'ID'] = 'NSD'
 
     # store demand specifications
-    df_db.loc[counter, 'Demand-Type'] = "Peak Interstory Drift Ratio"
+    df_db.loc[counter, 'Demand-Type'] = 'Peak Interstory Drift Ratio'
 
-    df_db.loc[counter, 'Demand-Unit'] = "rad"
+    df_db.loc[counter, 'Demand-Unit'] = 'rad'
     df_db.loc[counter, 'Demand-Offset'] = 0
 
     # add metadata
     cmp_meta = {
-        "Description": frag_meta['Meta']['Collections']['NSD']['Description'],
-        "Comments": frag_meta['Meta']['Collections']['NSD']['Comment'],
-        "SuggestedComponentBlockSize": "1 EA",
-        "RoundUpToIntegerQuantity": "True",
-        "LimitStates": {},
+        'Description': frag_meta['Meta']['Collections']['NSD']['Description'],
+        'Comments': frag_meta['Meta']['Collections']['NSD']['Comment'],
+        'SuggestedComponentBlockSize': '1 EA',
+        'RoundUpToIntegerQuantity': 'True',
+        'LimitStates': {},
     }
 
     # store the Limit State parameters
@@ -280,8 +280,8 @@ def create_Hazus_EQ_fragility_db(
         df_db.loc[counter, f'LS{LS_i}-Theta_1'] = NSD_data['Fragility_beta']
 
         # add limit state metadata
-        cmp_meta["LimitStates"].update(
-            {f"LS{LS_i}": {f"DS{LS_i}": {"Description": ds_meta[f"DS{LS_i}"]}}}
+        cmp_meta['LimitStates'].update(
+            {f'LS{LS_i}': {f'DS{LS_i}': {'Description': ds_meta[f'DS{LS_i}']}}}
         )
 
     # store metadata
@@ -298,29 +298,29 @@ def create_Hazus_EQ_fragility_db(
         df_db.loc[counter, 'ID'] = cmp_id
 
         # store demand specifications
-        df_db.loc[counter, 'Demand-Type'] = "Peak Floor Acceleration"
-        df_db.loc[counter, 'Demand-Unit'] = "g"
+        df_db.loc[counter, 'Demand-Type'] = 'Peak Floor Acceleration'
+        df_db.loc[counter, 'Demand-Unit'] = 'g'
         df_db.loc[counter, 'Demand-Offset'] = 0
 
         # add metadata
         cmp_meta = {
-            "Description": (
+            'Description': (
                 frag_meta['Meta']['Collections']['NSA']['Description']
-                + ", "
+                + ', '
                 + frag_meta['Meta']['DesignLevels'][convert_design_level[dl]][
                     'Description'
                 ]
             ),
-            "Comments": (
+            'Comments': (
                 frag_meta['Meta']['Collections']['NSA']['Comment']
-                + "\n"
+                + '\n'
                 + frag_meta['Meta']['DesignLevels'][convert_design_level[dl]][
                     'Comment'
                 ]
             ),
-            "SuggestedComponentBlockSize": "1 EA",
-            "RoundUpToIntegerQuantity": "True",
-            "LimitStates": {},
+            'SuggestedComponentBlockSize': '1 EA',
+            'RoundUpToIntegerQuantity': 'True',
+            'LimitStates': {},
         }
 
         # store the Limit State parameters
@@ -333,8 +333,8 @@ def create_Hazus_EQ_fragility_db(
             df_db.loc[counter, f'LS{LS_i}-Theta_1'] = NSA_data['Fragility_beta']
 
             # add limit state metadata
-            cmp_meta["LimitStates"].update(
-                {f"LS{LS_i}": {f"DS{LS_i}": {"Description": ds_meta[f"DS{LS_i}"]}}}
+            cmp_meta['LimitStates'].update(
+                {f'LS{LS_i}': {f'DS{LS_i}': {'Description': ds_meta[f'DS{LS_i}']}}}
             )
 
         # store metadata
@@ -354,20 +354,20 @@ def create_Hazus_EQ_fragility_db(
             df_db.loc[counter, 'ID'] = cmp_id
 
             # store demand specifications
-            df_db.loc[counter, 'Demand-Type'] = "Permanent Ground Deformation"
-            df_db.loc[counter, 'Demand-Unit'] = "inch"
+            df_db.loc[counter, 'Demand-Type'] = 'Permanent Ground Deformation'
+            df_db.loc[counter, 'Demand-Unit'] = 'inch'
             df_db.loc[counter, 'Demand-Offset'] = 0
 
             # add metadata
             cmp_meta = {
-                "Description": (
+                'Description': (
                     frag_meta['Meta']['Collections']['GF']['Description']
-                    + f", {direction} Direction, {f_depth} Foundation"
+                    + f', {direction} Direction, {f_depth} Foundation'
                 ),
-                "Comments": (frag_meta['Meta']['Collections']['GF']['Comment']),
-                "SuggestedComponentBlockSize": "1 EA",
-                "RoundUpToIntegerQuantity": "True",
-                "LimitStates": {},
+                'Comments': (frag_meta['Meta']['Collections']['GF']['Comment']),
+                'SuggestedComponentBlockSize': '1 EA',
+                'RoundUpToIntegerQuantity': 'True',
+                'LimitStates': {},
             }
 
             # store the Limit State parameters
@@ -385,11 +385,11 @@ def create_Hazus_EQ_fragility_db(
                 f'{1.0 - p_complete} | {p_complete}'
             )
 
-            cmp_meta["LimitStates"].update(
+            cmp_meta['LimitStates'].update(
                 {
-                    "LS1": {
-                        "DS1": {"Description": ds_meta['DS1']},
-                        "DS2": {"Description": ds_meta['DS2']},
+                    'LS1': {
+                        'DS1': {'Description': ds_meta['DS1']},
+                        'DS2': {'Description': ds_meta['DS2']},
                     }
                 }
             )
@@ -409,7 +409,7 @@ def create_Hazus_EQ_fragility_db(
     df_db['Demand-Directional'] = 0
 
     # rename the index
-    df_db.set_index("ID", inplace=True)
+    df_db.set_index('ID', inplace=True)
 
     # convert to optimal datatypes to reduce file size
     df_db = df_db.convert_dtypes()
@@ -421,7 +421,7 @@ def create_Hazus_EQ_fragility_db(
     with open(target_meta_file, 'w+', encoding='utf-8') as f:
         json.dump(meta_dict, f, indent=2)
 
-    print("Successfully parsed and saved the fragility data from Hazus EQ")
+    print('Successfully parsed and saved the fragility data from Hazus EQ')
 
 
 def create_Hazus_EQ_repair_db(
@@ -470,13 +470,13 @@ def create_Hazus_EQ_repair_db(
     # initialize the output loss table
     # define the columns
     out_cols = [
-        "Incomplete",
-        "Quantity-Unit",
-        "DV-Unit",
+        'Incomplete',
+        'Quantity-Unit',
+        'DV-Unit',
     ]
     for DS_i in range(1, 6):
         out_cols += [
-            f"DS{DS_i}-Theta_0",
+            f'DS{DS_i}-Theta_0',
         ]
 
     # create the MultiIndex
@@ -495,8 +495,8 @@ def create_Hazus_EQ_repair_db(
     meta_dict = {}
 
     # add the general information to the meta dict
-    if "_GeneralInformation" in frag_meta.keys():
-        GI = frag_meta["_GeneralInformation"]
+    if '_GeneralInformation' in frag_meta.keys():
+        GI = frag_meta['_GeneralInformation']
 
         for key, item in deepcopy(GI).items():
             if key == 'ComponentGroups_Loss_Repair':
@@ -505,7 +505,7 @@ def create_Hazus_EQ_repair_db(
             if key.startswith('ComponentGroups'):
                 GI.pop(key, None)
 
-        meta_dict.update({"_GeneralInformation": GI})
+        meta_dict.update({'_GeneralInformation': GI})
 
     # First, prepare the structural damage consequences
     S_data = raw_data['Structural_Fragility_Groups']
@@ -515,26 +515,26 @@ def create_Hazus_EQ_repair_db(
         cmp_id = f'STR.{occ_type}'
 
         cmp_meta = {
-            "Description": (
+            'Description': (
                 frag_meta['Meta']['Collections']['STR']['Description']
-                + ", "
+                + ', '
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Description']
             ),
-            "Comments": (
+            'Comments': (
                 frag_meta['Meta']['Collections']['STR']['Comment']
-                + "\n"
+                + '\n'
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Comment']
             ),
-            "SuggestedComponentBlockSize": "1 EA",
-            "RoundUpToIntegerQuantity": "True",
-            "DamageStates": {},
+            'SuggestedComponentBlockSize': '1 EA',
+            'RoundUpToIntegerQuantity': 'True',
+            'DamageStates': {},
         }
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['STR']['DamageStates']
         for DS_i in range(1, 6):
-            cmp_meta["DamageStates"].update(
-                {f"DS{DS_i}": {"Description": ds_meta[f"DS{DS_i}"]}}
+            cmp_meta['DamageStates'].update(
+                {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )
 
             # DS4 and DS5 have identical repair consequences
@@ -563,26 +563,26 @@ def create_Hazus_EQ_repair_db(
         cmp_id = f'NSD.{occ_type}'
 
         cmp_meta = {
-            "Description": (
+            'Description': (
                 frag_meta['Meta']['Collections']['NSD']['Description']
-                + ", "
+                + ', '
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Description']
             ),
-            "Comments": (
+            'Comments': (
                 frag_meta['Meta']['Collections']['NSD']['Comment']
-                + "\n"
+                + '\n'
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Comment']
             ),
-            "SuggestedComponentBlockSize": "1 EA",
-            "RoundUpToIntegerQuantity": "True",
-            "DamageStates": {},
+            'SuggestedComponentBlockSize': '1 EA',
+            'RoundUpToIntegerQuantity': 'True',
+            'DamageStates': {},
         }
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['NSD']['DamageStates']
         for DS_i in range(1, 5):
-            cmp_meta["DamageStates"].update(
-                {f"DS{DS_i}": {"Description": ds_meta[f"DS{DS_i}"]}}
+            cmp_meta['DamageStates'].update(
+                {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )
 
             # Convert percentage to ratio.
@@ -601,26 +601,26 @@ def create_Hazus_EQ_repair_db(
         cmp_id = f'NSA.{occ_type}'
 
         cmp_meta = {
-            "Description": (
+            'Description': (
                 frag_meta['Meta']['Collections']['NSA']['Description']
-                + ", "
+                + ', '
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Description']
             ),
-            "Comments": (
+            'Comments': (
                 frag_meta['Meta']['Collections']['NSA']['Comment']
-                + "\n"
+                + '\n'
                 + frag_meta['Meta']['OccupancyTypes'][occ_type]['Comment']
             ),
-            "SuggestedComponentBlockSize": "1 EA",
-            "RoundUpToIntegerQuantity": "True",
-            "DamageStates": {},
+            'SuggestedComponentBlockSize': '1 EA',
+            'RoundUpToIntegerQuantity': 'True',
+            'DamageStates': {},
         }
 
         # store the consequence values for each Damage State
         ds_meta = frag_meta['Meta']['Collections']['NSA']['DamageStates']
         for DS_i in range(1, 5):
-            cmp_meta["DamageStates"].update(
-                {f"DS{DS_i}": {"Description": ds_meta[f"DS{DS_i}"]}}
+            cmp_meta['DamageStates'].update(
+                {f'DS{DS_i}': {'Description': ds_meta[f'DS{DS_i}']}}
             )
 
             # Convert percentage to ratio.
@@ -641,18 +641,18 @@ def create_Hazus_EQ_repair_db(
     # df_db.loc[:, 'Incomplete'] = 0
 
     # The damage quantity unit is the same for all consequence values
-    df_db.loc[:, 'Quantity-Unit'] = "1 EA"
+    df_db.loc[:, 'Quantity-Unit'] = '1 EA'
 
     # The output units are also identical among all components
     idx = base.idx
-    df_db.loc[idx[:, 'Cost'], 'DV-Unit'] = "loss_ratio"
-    df_db.loc[idx[:, 'Time'], 'DV-Unit'] = "day"
+    df_db.loc[idx[:, 'Cost'], 'DV-Unit'] = 'loss_ratio'
+    df_db.loc[idx[:, 'Time'], 'DV-Unit'] = 'day'
 
     # convert to simple index
     df_db = base.convert_to_SimpleIndex(df_db, 0)
 
     # rename the index
-    df_db.index.name = "ID"
+    df_db.index.name = 'ID'
 
     # convert to optimal datatypes to reduce file size
     df_db = df_db.convert_dtypes()
@@ -664,7 +664,7 @@ def create_Hazus_EQ_repair_db(
     with open(target_meta_file, 'w+', encoding='utf-8') as f:
         json.dump(meta_dict, f, indent=2)
 
-    print("Successfully parsed and saved the repair consequence data from Hazus EQ")
+    print('Successfully parsed and saved the repair consequence data from Hazus EQ')
 
 
 def main():

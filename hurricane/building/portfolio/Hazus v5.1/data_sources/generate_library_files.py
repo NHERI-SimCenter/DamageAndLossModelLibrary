@@ -19,8 +19,8 @@ from tqdm import tqdm
 from scipy.stats import norm
 from scipy.optimize import minimize
 
-warnings.simplefilter("ignore", RuntimeWarning)
-warnings.simplefilter("ignore", FutureWarning)
+warnings.simplefilter('ignore', RuntimeWarning)
+warnings.simplefilter('ignore', FutureWarning)
 
 
 def parse_description(descr, parsed_data):
@@ -37,228 +37,227 @@ def parse_description(descr, parsed_data):
     """
 
     # Roof Shape
-    if "rsflt" in descr:
-        parsed_data["roof_shape"] = "flt"
-        descr = descr.replace("rsflt", "")
-    elif "rsgab" in descr:
-        parsed_data["roof_shape"] = "gab"
-        descr = descr.replace("rsgab", "")
-    elif "rship" in descr:
-        parsed_data["roof_shape"] = "hip"
-        descr = descr.replace("rship", "")
+    if 'rsflt' in descr:
+        parsed_data['roof_shape'] = 'flt'
+        descr = descr.replace('rsflt', '')
+    elif 'rsgab' in descr:
+        parsed_data['roof_shape'] = 'gab'
+        descr = descr.replace('rsgab', '')
+    elif 'rship' in descr:
+        parsed_data['roof_shape'] = 'hip'
+        descr = descr.replace('rship', '')
 
     # Secondary Water Resistance
-    if "swrys" in descr:
-        parsed_data["sec_water_res"] = True
-        descr = descr.replace("swrys", "")
-    elif "swrno" in descr:
-        parsed_data["sec_water_res"] = False
-        descr = descr.replace("swrno", "")
+    if 'swrys' in descr:
+        parsed_data['sec_water_res'] = True
+        descr = descr.replace('swrys', '')
+    elif 'swrno' in descr:
+        parsed_data['sec_water_res'] = False
+        descr = descr.replace('swrno', '')
 
     # Roof Deck Attachment
-    if "rda6d" in descr:
-        parsed_data["roof_deck_attch"] = "6d"
-        descr = descr.replace("rda6d", "")
-    elif "rda8d" in descr:
-        parsed_data["roof_deck_attch"] = "8d"
-        descr = descr.replace("rda8d", "")
-    elif "rda6s" in descr:
-        parsed_data["roof_deck_attch"] = "6s"
-        descr = descr.replace("rda6s", "")
-    elif "rda8s" in descr:
-        parsed_data["roof_deck_attch"] = "8s"
-        descr = descr.replace("rda8s", "")
+    if 'rda6d' in descr:
+        parsed_data['roof_deck_attch'] = '6d'
+        descr = descr.replace('rda6d', '')
+    elif 'rda8d' in descr:
+        parsed_data['roof_deck_attch'] = '8d'
+        descr = descr.replace('rda8d', '')
+    elif 'rda6s' in descr:
+        parsed_data['roof_deck_attch'] = '6s'
+        descr = descr.replace('rda6s', '')
+    elif 'rda8s' in descr:
+        parsed_data['roof_deck_attch'] = '8s'
+        descr = descr.replace('rda8s', '')
 
     # Roof Deck Attachment - Alternative Description
-    if "rdast" in descr:
-        parsed_data["roof_deck_attch"] = "st"  # standard
-        descr = descr.replace("rdast", "")
-    elif "rdasu" in descr:
-        parsed_data["roof_deck_attch"] = "su"  # superior
-        descr = descr.replace("rdasu", "")
+    if 'rdast' in descr:
+        parsed_data['roof_deck_attch'] = 'st'  # standard
+        descr = descr.replace('rdast', '')
+    elif 'rdasu' in descr:
+        parsed_data['roof_deck_attch'] = 'su'  # superior
+        descr = descr.replace('rdasu', '')
 
     # Roof-Wall Connection
-    if "tnail" in descr:
-        parsed_data["roof_wall_conn"] = "tnail"
-        descr = descr.replace("tnail", "")
-    elif "strap" in descr:
-        parsed_data["roof_wall_conn"] = "strap"
-        descr = descr.replace("strap", "")
+    if 'tnail' in descr:
+        parsed_data['roof_wall_conn'] = 'tnail'
+        descr = descr.replace('tnail', '')
+    elif 'strap' in descr:
+        parsed_data['roof_wall_conn'] = 'strap'
+        descr = descr.replace('strap', '')
 
     # Garage
-    if "gdnod" in descr:
-        parsed_data["garage"] = "no"
-        descr = descr.replace("gdnod", "")
-    elif "gdno2" in descr:
-        parsed_data["garage"] = "no"
-        descr = descr.replace("gdno2", "")
-    elif "gdstd" in descr:
-        parsed_data["garage"] = "std"
-        descr = descr.replace("gdstd", "")
-    elif "gdwkd" in descr:
-        parsed_data["garage"] = "wkd"
-        descr = descr.replace("gdwkd", "")
-    elif "gdsup" in descr:
-        parsed_data["garage"] = "sup"
-        descr = descr.replace("gdsup", "")
+    if 'gdnod' in descr:
+        parsed_data['garage'] = 'no'
+        descr = descr.replace('gdnod', '')
+    elif 'gdno2' in descr:
+        parsed_data['garage'] = 'no'
+        descr = descr.replace('gdno2', '')
+    elif 'gdstd' in descr:
+        parsed_data['garage'] = 'std'
+        descr = descr.replace('gdstd', '')
+    elif 'gdwkd' in descr:
+        parsed_data['garage'] = 'wkd'
+        descr = descr.replace('gdwkd', '')
+    elif 'gdsup' in descr:
+        parsed_data['garage'] = 'sup'
+        descr = descr.replace('gdsup', '')
 
     # Shutters
-    if "shtys" in descr:
-        parsed_data["shutters"] = True
-        descr = descr.replace("shtys", "")
-    elif "shtno" in descr:
-        parsed_data["shutters"] = False
-        descr = descr.replace("shtno", "")
+    if 'shtys' in descr:
+        parsed_data['shutters'] = True
+        descr = descr.replace('shtys', '')
+    elif 'shtno' in descr:
+        parsed_data['shutters'] = False
+        descr = descr.replace('shtno', '')
 
     # Roof Cover
-    if "rcbur" in descr:
-        parsed_data["roof_cover"] = "bur"
-        descr = descr.replace("rcbur", "")
-    elif "rcspm" in descr:
-        parsed_data["roof_cover"] = "spm"
-        descr = descr.replace("rcspm", "")
+    if 'rcbur' in descr:
+        parsed_data['roof_cover'] = 'bur'
+        descr = descr.replace('rcbur', '')
+    elif 'rcspm' in descr:
+        parsed_data['roof_cover'] = 'spm'
+        descr = descr.replace('rcspm', '')
 
     # Roof Cover - Alternative Description
-    if "rcshl" in descr:
-        parsed_data["roof_cover"] = "cshl"  # cover, shingle
-        descr = descr.replace("rcshl", "")
-    elif "rsmtl" in descr:
-        parsed_data["roof_cover"] = "smtl"  # sheet metal
-        descr = descr.replace("rsmtl", "")
+    if 'rcshl' in descr:
+        parsed_data['roof_cover'] = 'cshl'  # cover, shingle
+        descr = descr.replace('rcshl', '')
+    elif 'rsmtl' in descr:
+        parsed_data['roof_cover'] = 'smtl'  # sheet metal
+        descr = descr.replace('rsmtl', '')
 
     # Roof Quality
-    if "rqgod" in descr:
-        parsed_data["roof_quality"] = "god"
-        descr = descr.replace("rqgod", "")
-    elif "rqpor" in descr:
-        parsed_data["roof_quality"] = "por"
-        descr = descr.replace("rqpor", "")
+    if 'rqgod' in descr:
+        parsed_data['roof_quality'] = 'god'
+        descr = descr.replace('rqgod', '')
+    elif 'rqpor' in descr:
+        parsed_data['roof_quality'] = 'por'
+        descr = descr.replace('rqpor', '')
 
     # Masonry Reinforcing
-    if "rmfys" in descr:
-        parsed_data["masonry_reinforcing"] = True
-        descr = descr.replace("rmfys", "")
-    elif "rmfno" in descr:
-        parsed_data["masonry_reinforcing"] = False
-        descr = descr.replace("rmfno", "")
+    if 'rmfys' in descr:
+        parsed_data['masonry_reinforcing'] = True
+        descr = descr.replace('rmfys', '')
+    elif 'rmfno' in descr:
+        parsed_data['masonry_reinforcing'] = False
+        descr = descr.replace('rmfno', '')
 
     # Roof Frame Type
-    if "rftrs" in descr:
-        parsed_data["roof_frame_type"] = "trs"  # wood truss
-        descr = descr.replace("rftrs", "")
-    elif "rfows" in descr:
-        parsed_data["roof_frame_type"] = "ows"  # OWSJ
-        descr = descr.replace("rfows", "")
+    if 'rftrs' in descr:
+        parsed_data['roof_frame_type'] = 'trs'  # wood truss
+        descr = descr.replace('rftrs', '')
+    elif 'rfows' in descr:
+        parsed_data['roof_frame_type'] = 'ows'  # OWSJ
+        descr = descr.replace('rfows', '')
 
     # Wind Debris Environment
-    if "widdA" in descr:
-        parsed_data["wind_debris"] = "A"  # res/comm.
-        descr = descr.replace("widdA", "")
-    elif "widdB" in descr:
-        parsed_data["wind_debris"] = "B"  # varies by direction
-        descr = descr.replace("widdB", "")
-    elif "widdC" in descr:
-        parsed_data["wind_debris"] = "C"  # residential
-        descr = descr.replace("widdC", "")
-    elif "widdD" in descr:
-        parsed_data["wind_debris"] = "D"  # none
-        descr = descr.replace("widdD", "")
+    if 'widdA' in descr:
+        parsed_data['wind_debris'] = 'A'  # res/comm.
+        descr = descr.replace('widdA', '')
+    elif 'widdB' in descr:
+        parsed_data['wind_debris'] = 'B'  # varies by direction
+        descr = descr.replace('widdB', '')
+    elif 'widdC' in descr:
+        parsed_data['wind_debris'] = 'C'  # residential
+        descr = descr.replace('widdC', '')
+    elif 'widdD' in descr:
+        parsed_data['wind_debris'] = 'D'  # none
+        descr = descr.replace('widdD', '')
 
     # Roof Deck Age
-    if "dqgod" in descr:
-        parsed_data["roof_deck_age"] = "god"  # new or average
-        descr = descr.replace("dqgod", "")
-    elif "dqpor" in descr:
-        parsed_data["roof_deck_age"] = "por"  # old
-        descr = descr.replace("dqpor", "")
+    if 'dqgod' in descr:
+        parsed_data['roof_deck_age'] = 'god'  # new or average
+        descr = descr.replace('dqgod', '')
+    elif 'dqpor' in descr:
+        parsed_data['roof_deck_age'] = 'por'  # old
+        descr = descr.replace('dqpor', '')
 
     # Metal Roof Deck Attachment
-    if "rd100" in descr:
-        parsed_data["metal_rda"] = "std"  # standard
-        descr = descr.replace("rd100", "")
-    elif "rd110" in descr:
-        parsed_data["metal_rda"] = "sup"  # superior
-        descr = descr.replace("rd110", "")
+    if 'rd100' in descr:
+        parsed_data['metal_rda'] = 'std'  # standard
+        descr = descr.replace('rd100', '')
+    elif 'rd110' in descr:
+        parsed_data['metal_rda'] = 'sup'  # superior
+        descr = descr.replace('rd110', '')
 
     # Number of Units
-    if "nusgl" in descr:
-        parsed_data["num_of_units"] = "sgl"
-        descr = descr.replace("nusgl", "")
-    elif "numlt" in descr:
-        parsed_data["num_of_units"] = "mlt"
-        descr = descr.replace("numlt", "")
+    if 'nusgl' in descr:
+        parsed_data['num_of_units'] = 'sgl'
+        descr = descr.replace('nusgl', '')
+    elif 'numlt' in descr:
+        parsed_data['num_of_units'] = 'mlt'
+        descr = descr.replace('numlt', '')
 
     # Joist Spacing
-    if "jspa4" in descr:
-        parsed_data["joist_spacing"] = "4"
-        descr = descr.replace("jspa4", "")
-    elif "jspa6" in descr:
-        parsed_data["joist_spacing"] = "6"
-        descr = descr.replace("jspa6", "")
+    if 'jspa4' in descr:
+        parsed_data['joist_spacing'] = '4'
+        descr = descr.replace('jspa4', '')
+    elif 'jspa6' in descr:
+        parsed_data['joist_spacing'] = '6'
+        descr = descr.replace('jspa6', '')
 
     # Window Area
-    if "walow" in descr:
-        parsed_data["window_area"] = "low"
-        descr = descr.replace("walow", "")
-    elif "wamed" in descr:
-        parsed_data["window_area"] = "med"
-        descr = descr.replace("wamed", "")
-    elif "wahig" in descr:
-        parsed_data["window_area"] = "hig"
-        descr = descr.replace("wahig", "")
+    if 'walow' in descr:
+        parsed_data['window_area'] = 'low'
+        descr = descr.replace('walow', '')
+    elif 'wamed' in descr:
+        parsed_data['window_area'] = 'med'
+        descr = descr.replace('wamed', '')
+    elif 'wahig' in descr:
+        parsed_data['window_area'] = 'hig'
+        descr = descr.replace('wahig', '')
 
     # ----- unknown attributes ---------
 
-    if "uprys" in descr:
-        parsed_data["upgrade_??"] = True
-        descr = descr.replace("uprys", "")
-    elif "uprno" in descr:
-        parsed_data["upgrade_??"] = False
-        descr = descr.replace("uprno", "")
+    if 'uprys' in descr:
+        parsed_data['upgrade_??'] = True
+        descr = descr.replace('uprys', '')
+    elif 'uprno' in descr:
+        parsed_data['upgrade_??'] = False
+        descr = descr.replace('uprno', '')
 
-    if "wcdbl" in descr:
-        parsed_data["wall_cover_??"] = "dbl"
-        descr = descr.replace("wcdbl", "")
-    elif "wcsgl" in descr:
-        parsed_data["wall_cover_??"] = "sgl"
-        descr = descr.replace("wcsgl", "")
+    if 'wcdbl' in descr:
+        parsed_data['wall_cover_??'] = 'dbl'
+        descr = descr.replace('wcdbl', '')
+    elif 'wcsgl' in descr:
+        parsed_data['wall_cover_??'] = 'sgl'
+        descr = descr.replace('wcsgl', '')
 
-    if "tspa2" in descr:
-        parsed_data["tspa_??"] = "2"
-        descr = descr.replace("tspa2", "")
-    elif "tspa4" in descr:
-        parsed_data["tspa_??"] = "4"
-        descr = descr.replace("tspa4", "")
+    if 'tspa2' in descr:
+        parsed_data['tspa_??'] = '2'
+        descr = descr.replace('tspa2', '')
+    elif 'tspa4' in descr:
+        parsed_data['tspa_??'] = '4'
+        descr = descr.replace('tspa4', '')
 
-    if "mtdys" in descr:
-        parsed_data["tie_downs"] = True
-        descr = descr.replace("mtdys", "")
-    elif "mtdno" in descr:
-        parsed_data["tie_downs"] = False
-        descr = descr.replace("mtdno", "")
+    if 'mtdys' in descr:
+        parsed_data['tie_downs'] = True
+        descr = descr.replace('mtdys', '')
+    elif 'mtdno' in descr:
+        parsed_data['tie_downs'] = False
+        descr = descr.replace('mtdno', '')
 
     return descr
 
 
 def create_Hazus_HU_damage_and_loss_files():
-
     # Load RAW Hazus data
 
     raw_data_path = (
-        "hurricane/building/portfolio/Hazus v4.2/data_sources/input_files/"
+        'hurricane/building/portfolio/Hazus v4.2/data_sources/input_files/'
     )
 
     # read bldg data
 
     bldg_df_ST = pd.read_excel(
-        raw_data_path + "huListOfWindBldgTypes.xlsx", index_col=0
+        raw_data_path + 'huListOfWindBldgTypes.xlsx', index_col=0
     )
     bldg_df_EF = pd.read_excel(
-        raw_data_path + "huListOfWindBldgTypesEF.xlsx", index_col=0
+        raw_data_path + 'huListOfWindBldgTypesEF.xlsx', index_col=0
     )
 
     # make sure the column headers are in sync
-    bldg_df_EF.columns = ["sbtName", *bldg_df_EF.columns[1:]]
+    bldg_df_EF.columns = ['sbtName', *bldg_df_EF.columns[1:]]
 
     # offset the EF building IDs to ensure each archetype has a unique ID
     bldg_df_EF.index = max(bldg_df_ST.index) + bldg_df_EF.index
@@ -268,9 +267,9 @@ def create_Hazus_HU_damage_and_loss_files():
 
     # read fragility data
 
-    frag_df_ST = pd.read_excel(raw_data_path + "huDamLossFun.xlsx")
+    frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')
 
-    frag_df_EF = pd.read_excel(raw_data_path + "huDamLossFunEF.xlsx")
+    frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')
     frag_df_EF['wbID'] += max(bldg_df_ST.index)
 
     frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
@@ -308,7 +307,7 @@ def create_Hazus_HU_damage_and_loss_files():
     #
 
     # get labels of columns in frag_df with damage and loss data
-    wind_speeds_str = [c for c in frag_df.columns if "WS" in c]
+    wind_speeds_str = [c for c in frag_df.columns if 'WS' in c]
 
     # also get a list of floats based on the above labels
     wind_speeds = np.array([float(ws[2:]) for ws in wind_speeds_str])
@@ -441,59 +440,59 @@ def create_Hazus_HU_damage_and_loss_files():
 
     # labels for all features, damage state data, and loss data
     column_names = [
-        "bldg_type",
-        "roof_shape",
-        "roof_cover",
-        "roof_quality",
-        "sec_water_res",
-        "roof_deck_attch",
-        "roof_wall_conn",
-        "garage",
-        "shutters",
-        "terr_rough",
-        "upgrade_??",
-        "wall_cover_??",
-        "tspa_??",
-        "masonry_reinforcing",
-        "roof_frame_type",
-        "wind_debris",
-        "roof_deck_age",
-        "metal_rda",
-        "num_of_units",
-        "joist_spacing",
-        "window_area",
-        "tie_downs",
-        "DS1_dist",
-        "DS1_mu",
-        "DS1_sig",
-        "DS1_fit",
-        "DS1_meps",
-        "DS2_dist",
-        "DS2_mu",
-        "DS2_sig",
-        "DS2_fit",
-        "DS2_meps",
-        "DS3_dist",
-        "DS3_mu",
-        "DS3_sig",
-        "DS3_fit",
-        "DS3_meps",
-        "DS4_dist",
-        "DS4_mu",
-        "DS4_sig",
-        "DS4_fit",
-        "DS4_meps",
-        "L1",
-        "L2",
-        "L3",
-        "L4",
-        "L_fit",
-        "L_meps",
-        "DS1_original",
-        "DS2_original",
-        "DS3_original",
-        "DS4_original",
-        "L_original",
+        'bldg_type',
+        'roof_shape',
+        'roof_cover',
+        'roof_quality',
+        'sec_water_res',
+        'roof_deck_attch',
+        'roof_wall_conn',
+        'garage',
+        'shutters',
+        'terr_rough',
+        'upgrade_??',
+        'wall_cover_??',
+        'tspa_??',
+        'masonry_reinforcing',
+        'roof_frame_type',
+        'wind_debris',
+        'roof_deck_age',
+        'metal_rda',
+        'num_of_units',
+        'joist_spacing',
+        'window_area',
+        'tie_downs',
+        'DS1_dist',
+        'DS1_mu',
+        'DS1_sig',
+        'DS1_fit',
+        'DS1_meps',
+        'DS2_dist',
+        'DS2_mu',
+        'DS2_sig',
+        'DS2_fit',
+        'DS2_meps',
+        'DS3_dist',
+        'DS3_mu',
+        'DS3_sig',
+        'DS3_fit',
+        'DS3_meps',
+        'DS4_dist',
+        'DS4_mu',
+        'DS4_sig',
+        'DS4_fit',
+        'DS4_meps',
+        'L1',
+        'L2',
+        'L3',
+        'L4',
+        'L_fit',
+        'L_meps',
+        'DS1_original',
+        'DS2_original',
+        'DS3_original',
+        'DS4_original',
+        'L_original',
     ]
 
     # resulting dataframe
@@ -505,7 +504,6 @@ def create_Hazus_HU_damage_and_loss_files():
 
     # calculation
     for index, row in tqdm(list(flt_bldg_df.iterrows())):
-
         # initialize the row for the archetype
         new_row = pd.Series(index=new_df.columns, dtype=np.float64)
 
@@ -516,12 +514,12 @@ def create_Hazus_HU_damage_and_loss_files():
         descr = parse_description(row['charDescription'].strip(), new_row)
 
         # check if any part of the description remained unparsed
-        if descr != "":
+        if descr != '':
             print('WARNING', index, descr)
 
         # filter only those parts of the frag_df that correspond to
         # this archetype
-        frag_df_arch = frag_df[frag_df["wbID"] == index]
+        frag_df_arch = frag_df[frag_df['wbID'] == index]
 
         # cycle through the five terrain types in Hazus
         for terrain_id, roughness in enumerate([0.03, 0.15, 0.35, 0.7, 1.0]):
@@ -531,12 +529,12 @@ def create_Hazus_HU_damage_and_loss_files():
             new_row_terrain = new_row.copy()
 
             # store the roughness length
-            new_row_terrain["terr_rough"] = roughness
+            new_row_terrain['terr_rough'] = roughness
 
             # filter only those parts of the frag_df_arch that correspond
             # to this terrain type
             frag_df_arch_terrain = frag_df_arch[
-                frag_df_arch["TERRAINID"] == terrain_id
+                frag_df_arch['TERRAINID'] == terrain_id
             ]
 
             mu_min = 0
@@ -547,7 +545,7 @@ def create_Hazus_HU_damage_and_loss_files():
                 # archetype
                 P_exc = np.asarray(
                     frag_df_arch_terrain.loc[
-                        frag_df_arch_terrain["DamLossDescID"] == DS, wind_speeds_str
+                        frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
                     ].values[0]
                 )
                 multilinear_CDF_parameters = (
@@ -678,8 +676,8 @@ def create_Hazus_HU_damage_and_loss_files():
 
                     else:
                         print(
-                            f"WARNING: Error in CDF fitting "
-                            f"for {index}, {terrain_id}, {DS}"
+                            f'WARNING: Error in CDF fitting '
+                            f'for {index}, {terrain_id}, {DS}'
                         )
                         # display(res_normal)
                         # display(res_lognormal)
@@ -713,12 +711,12 @@ def create_Hazus_HU_damage_and_loss_files():
                         res = res_lognormal
 
                 # store the parameters
-                new_row_terrain[f"DS{DS}_dist"] = dist_type
-                new_row_terrain[f"DS{DS}_mu"] = res.x[0]
-                new_row_terrain[f"DS{DS}_sig"] = res.x[1]
-                new_row_terrain[f"DS{DS}_fit"] = res.fun
-                new_row_terrain[f"DS{DS}_meps"] = res.maxcv
-                new_row_terrain[f"DS{DS}_original"] = multilinear_CDF_parameters
+                new_row_terrain[f'DS{DS}_dist'] = dist_type
+                new_row_terrain[f'DS{DS}_mu'] = res.x[0]
+                new_row_terrain[f'DS{DS}_sig'] = res.x[1]
+                new_row_terrain[f'DS{DS}_fit'] = res.fun
+                new_row_terrain[f'DS{DS}_meps'] = res.maxcv
+                new_row_terrain[f'DS{DS}_original'] = multilinear_CDF_parameters
 
                 # consecutive damage states should have increasing capacities
                 mu_min = res.x[0]
@@ -728,7 +726,7 @@ def create_Hazus_HU_damage_and_loss_files():
             # Focus on "Building losses" first
             L_ref = np.asarray(
                 frag_df_arch_terrain.loc[
-                    frag_df_arch_terrain["DamLossDescID"] == 5, wind_speeds_str
+                    frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str
                 ].values[0]
             )
 
@@ -743,23 +741,23 @@ def create_Hazus_HU_damage_and_loss_files():
             DS_probs = np.zeros((4, len(wind_speeds)))
 
             for DS_id, DS in enumerate([1, 2, 3, 4]):
-                if new_row_terrain[f"DS{DS}_dist"] == "normal":
+                if new_row_terrain[f'DS{DS}_dist'] == 'normal':
                     DS_probs[DS_id] = norm.cdf(
                         wind_speeds,
-                        loc=new_row_terrain[f"DS{DS}_mu"],
-                        scale=new_row_terrain[f"DS{DS}_sig"],
+                        loc=new_row_terrain[f'DS{DS}_mu'],
+                        scale=new_row_terrain[f'DS{DS}_sig'],
                     )
                 else:
                     DS_probs[DS_id] = norm.cdf(
                         np.log(wind_speeds),
-                        loc=np.log(new_row_terrain[f"DS{DS}_mu"]),
-                        scale=new_row_terrain[f"DS{DS}_sig"],
+                        loc=np.log(new_row_terrain[f'DS{DS}_mu']),
+                        scale=new_row_terrain[f'DS{DS}_sig'],
                     )
 
             # The losses for DS4 are calculated based on outcomes at the
             # highest wind speeds
             L_max = frag_df_arch_terrain.loc[
-                frag_df_arch_terrain["DamLossDescID"] == 5, "WS250"
+                frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'
             ].values[0]
             DS4_max = DS_probs[3][-1]
 
@@ -819,13 +817,13 @@ def create_Hazus_HU_damage_and_loss_files():
             #    print(res.x, res.fun, res.maxcv)
 
             # store the parameters
-            new_row_terrain["L1"] = res.x[0]
-            new_row_terrain["L2"] = res.x[1]
-            new_row_terrain["L3"] = res.x[2]
-            new_row_terrain["L4"] = L4
-            new_row_terrain["L_original"] = multilinear_CDF_parameters
-            new_row_terrain["L_fit"] = res.fun
-            new_row_terrain["L_meps"] = res.maxcv
+            new_row_terrain['L1'] = res.x[0]
+            new_row_terrain['L2'] = res.x[1]
+            new_row_terrain['L3'] = res.x[2]
+            new_row_terrain['L4'] = L4
+            new_row_terrain['L_original'] = multilinear_CDF_parameters
+            new_row_terrain['L_fit'] = res.fun
+            new_row_terrain['L_meps'] = res.maxcv
 
             # display(new_row.to_frame().T)
 
@@ -897,247 +895,246 @@ def create_Hazus_HU_damage_and_loss_files():
     # parse_description function earlier
 
     out_df = main_df.copy()
-    out_df['ID'] = ""
+    out_df['ID'] = ''
 
     # some general formatting to make file name generation easier
     out_df['shutters'] = out_df['shutters'].astype(int)
     out_df['terr_rough'] = (out_df['terr_rough'] * 100.0).astype(int)
 
     for index, row in tqdm(list(out_df.iterrows())):
-
         # define the name of the building damage and loss configuration
-        bldg_type = row["bldg_type"]
+        bldg_type = row['bldg_type']
         critical_cols = []
 
-        if bldg_type[:3] == "WSF":
+        if bldg_type[:3] == 'WSF':
             cols_of_interest = [
-                "bldg_type",
-                "roof_shape",
-                "sec_water_res",
-                "roof_deck_attch",
-                "roof_wall_conn",
-                "garage",
-                "shutters",
-                "terr_rough",
+                'bldg_type',
+                'roof_shape',
+                'sec_water_res',
+                'roof_deck_attch',
+                'roof_wall_conn',
+                'garage',
+                'shutters',
+                'terr_rough',
             ]
-            critical_cols = ["roof_deck_attch", "garage"]
+            critical_cols = ['roof_deck_attch', 'garage']
 
-        elif bldg_type[:4] == "WMUH":
+        elif bldg_type[:4] == 'WMUH':
             cols_of_interest = [
-                "bldg_type",
-                "roof_shape",
-                "roof_cover",
-                "roof_quality",
-                "sec_water_res",
-                "roof_deck_attch",
-                "roof_wall_conn",
-                "shutters",
-                "terr_rough",
-            ]
-
-        elif bldg_type[:3] == "MSF":
-            cols_of_interest = [
-                "bldg_type",
-                "roof_shape",
-                "roof_wall_conn",
-                "roof_frame_type",
-                "roof_deck_attch",
-                "shutters",
-                "sec_water_res",
-                "garage",
-                "masonry_reinforcing",
-                "roof_cover",
-                "terr_rough",
+                'bldg_type',
+                'roof_shape',
+                'roof_cover',
+                'roof_quality',
+                'sec_water_res',
+                'roof_deck_attch',
+                'roof_wall_conn',
+                'shutters',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "MMUH":
+        elif bldg_type[:3] == 'MSF':
             cols_of_interest = [
-                "bldg_type",
-                "roof_shape",
-                "sec_water_res",
-                "roof_cover",
-                "roof_quality",
-                "roof_deck_attch",
-                "roof_wall_conn",
-                "shutters",
-                "masonry_reinforcing",
-                "terr_rough",
+                'bldg_type',
+                'roof_shape',
+                'roof_wall_conn',
+                'roof_frame_type',
+                'roof_deck_attch',
+                'shutters',
+                'sec_water_res',
+                'garage',
+                'masonry_reinforcing',
+                'roof_cover',
+                'terr_rough',
             ]
 
-        elif bldg_type[:5] == "MLRM1":
+        elif bldg_type[:4] == 'MMUH':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "masonry_reinforcing",
-                "wind_debris",
-                "roof_frame_type",
-                "roof_deck_attch",
-                "roof_wall_conn",
-                "roof_deck_age",
-                "metal_rda",
-                "terr_rough",
+                'bldg_type',
+                'roof_shape',
+                'sec_water_res',
+                'roof_cover',
+                'roof_quality',
+                'roof_deck_attch',
+                'roof_wall_conn',
+                'shutters',
+                'masonry_reinforcing',
+                'terr_rough',
             ]
 
-        elif bldg_type[:5] == "MLRM2":
+        elif bldg_type[:5] == 'MLRM1':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "masonry_reinforcing",
-                "wind_debris",
-                "roof_frame_type",
-                "roof_deck_attch",
-                "roof_wall_conn",
-                "roof_deck_age",
-                "metal_rda",
-                "num_of_units",
-                "joist_spacing",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'masonry_reinforcing',
+                'wind_debris',
+                'roof_frame_type',
+                'roof_deck_attch',
+                'roof_wall_conn',
+                'roof_deck_age',
+                'metal_rda',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "MLRI":
+        elif bldg_type[:5] == 'MLRM2':
             cols_of_interest = [
-                "bldg_type",
-                "shutters",
-                "masonry_reinforcing",
-                "roof_deck_age",
-                "metal_rda",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'masonry_reinforcing',
+                'wind_debris',
+                'roof_frame_type',
+                'roof_deck_attch',
+                'roof_wall_conn',
+                'roof_deck_age',
+                'metal_rda',
+                'num_of_units',
+                'joist_spacing',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "MERB":
+        elif bldg_type[:4] == 'MLRI':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'shutters',
+                'masonry_reinforcing',
+                'roof_deck_age',
+                'metal_rda',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "MECB":
+        elif bldg_type[:4] == 'MERB':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "CERB":
+        elif bldg_type[:4] == 'MECB':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "CECB":
+        elif bldg_type[:4] == 'CERB':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "SERB":
+        elif bldg_type[:4] == 'CECB':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "SECB":
+        elif bldg_type[:4] == 'SERB':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:4] == "SPMB":
+        elif bldg_type[:4] == 'SECB':
             cols_of_interest = [
-                "bldg_type",
-                "shutters",
-                "roof_deck_age",
-                "metal_rda",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:2] == "MH":
-            cols_of_interest = ["bldg_type", "shutters", "tie_downs", "terr_rough"]
+        elif bldg_type[:4] == 'SPMB':
+            cols_of_interest = [
+                'bldg_type',
+                'shutters',
+                'roof_deck_age',
+                'metal_rda',
+                'terr_rough',
+            ]
+
+        elif bldg_type[:2] == 'MH':
+            cols_of_interest = ['bldg_type', 'shutters', 'tie_downs', 'terr_rough']
 
             critical_cols = [
-                "tie_downs",
+                'tie_downs',
             ]
 
-        elif bldg_type[:6] == "HUEFFS":
+        elif bldg_type[:6] == 'HUEFFS':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "roof_deck_age",
-                "metal_rda",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'roof_deck_age',
+                'metal_rda',
+                'terr_rough',
             ]
 
-        elif bldg_type[:6] == "HUEFPS":
+        elif bldg_type[:6] == 'HUEFPS':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:6] == "HUEFEO":
+        elif bldg_type[:6] == 'HUEFEO':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "metal_rda",
-                "window_area",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'metal_rda',
+                'window_area',
+                'terr_rough',
             ]
 
-        elif bldg_type[:5] == "HUEFH":
+        elif bldg_type[:5] == 'HUEFH':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "wind_debris",
-                "metal_rda",
-                "shutters",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'wind_debris',
+                'metal_rda',
+                'shutters',
+                'terr_rough',
             ]
 
-        elif bldg_type[:5] == "HUEFS":
+        elif bldg_type[:5] == 'HUEFS':
             cols_of_interest = [
-                "bldg_type",
-                "roof_cover",
-                "shutters",
-                "wind_debris",
-                "roof_deck_age",
-                "metal_rda",
-                "terr_rough",
+                'bldg_type',
+                'roof_cover',
+                'shutters',
+                'wind_debris',
+                'roof_deck_age',
+                'metal_rda',
+                'terr_rough',
             ]
 
         else:
@@ -1172,15 +1169,15 @@ def create_Hazus_HU_damage_and_loss_files():
                 bldg_chars[col] = 'null'
 
         # Add roof frame type info to MSF archetypes
-        if bldg_type.startswith("MSF"):
-            if bldg_chars["roof_cover"] in ['smtl', 'cshl']:
+        if bldg_type.startswith('MSF'):
+            if bldg_chars['roof_cover'] in ['smtl', 'cshl']:
                 bldg_chars['roof_frame_type'] = 'ows'
             else:
                 bldg_chars['roof_frame_type'] = 'trs'
 
-        bldg_chars["bldg_type"] = bldg_type_map[bldg_chars["bldg_type"]]
+        bldg_chars['bldg_type'] = bldg_type_map[bldg_chars['bldg_type']]
 
-        out_df.loc[index, 'ID'] = ".".join(bldg_chars.astype(str))
+        out_df.loc[index, 'ID'] = '.'.join(bldg_chars.astype(str))
 
     # the out_df we have in the end is the direct input to generate the
     # damage and loss data
@@ -1193,24 +1190,24 @@ def create_Hazus_HU_damage_and_loss_files():
     # initialize the fragility table
     df_db_fit = pd.DataFrame(
         columns=[
-            "ID",
-            "Incomplete",
-            "Demand-Type",
-            "Demand-Unit",
-            "Demand-Offset",
-            "Demand-Directional",
-            "LS1-Family",
-            "LS1-Theta_0",
-            "LS1-Theta_1",
-            "LS2-Family",
-            "LS2-Theta_0",
-            "LS2-Theta_1",
-            "LS3-Family",
-            "LS3-Theta_0",
-            "LS3-Theta_1",
-            "LS4-Family",
-            "LS4-Theta_0",
-            "LS4-Theta_1",
+            'ID',
+            'Incomplete',
+            'Demand-Type',
+            'Demand-Unit',
+            'Demand-Offset',
+            'Demand-Directional',
+            'LS1-Family',
+            'LS1-Theta_0',
+            'LS1-Theta_1',
+            'LS2-Family',
+            'LS2-Theta_0',
+            'LS2-Theta_1',
+            'LS3-Family',
+            'LS3-Theta_0',
+            'LS3-Theta_1',
+            'LS4-Family',
+            'LS4-Theta_0',
+            'LS4-Theta_1',
         ],
         index=out_df.index,
         dtype=float,
@@ -1218,20 +1215,20 @@ def create_Hazus_HU_damage_and_loss_files():
 
     df_db_original = pd.DataFrame(
         columns=[
-            "ID",
-            "Incomplete",
-            "Demand-Type",
-            "Demand-Unit",
-            "Demand-Offset",
-            "Demand-Directional",
-            "LS1-Family",
-            "LS1-Theta_0",
-            "LS2-Family",
-            "LS2-Theta_0",
-            "LS3-Family",
-            "LS3-Theta_0",
-            "LS4-Family",
-            "LS4-Theta_0",
+            'ID',
+            'Incomplete',
+            'Demand-Type',
+            'Demand-Unit',
+            'Demand-Offset',
+            'Demand-Directional',
+            'LS1-Family',
+            'LS1-Theta_0',
+            'LS2-Family',
+            'LS2-Theta_0',
+            'LS3-Family',
+            'LS3-Theta_0',
+            'LS4-Family',
+            'LS4-Theta_0',
         ],
         index=out_df.index,
         dtype=float,
@@ -1246,7 +1243,6 @@ def create_Hazus_HU_damage_and_loss_files():
         df_db['Demand-Directional'] = 0
 
     for LS_i in range(1, 5):
-
         df_db_original[f'LS{LS_i}-Family'] = 'multilinear_CDF'
         df_db_original[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_original']
 
@@ -1256,7 +1252,7 @@ def create_Hazus_HU_damage_and_loss_files():
 
     for df_db in (df_db_original, df_db_fit):
         df_db = df_db.loc[df_db['ID'] != '']
-        df_db = df_db.set_index("ID").sort_index().convert_dtypes()
+        df_db = df_db.set_index('ID').sort_index().convert_dtypes()
 
     df_db_fit.to_csv('hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv')
     df_db_original.to_csv(
@@ -1266,14 +1262,14 @@ def create_Hazus_HU_damage_and_loss_files():
     # initialize the output loss table
     # define the columns
     out_cols = [
-        "ID",
-        "Incomplete",
-        "Demand-Type",
-        "Demand-Unit",
-        "Demand-Offset",
-        "Demand-Directional",
-        "DV-Unit",
-        "LossFunction-Theta_0",
+        'ID',
+        'Incomplete',
+        'Demand-Type',
+        'Demand-Unit',
+        'Demand-Offset',
+        'Demand-Directional',
+        'DV-Unit',
+        'LossFunction-Theta_0',
     ]
     df_db_original = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
     df_db_original['ID'] = [f'{id}-Cost' for id in out_df['ID']]
@@ -1285,15 +1281,15 @@ def create_Hazus_HU_damage_and_loss_files():
     df_db_original['DV-Unit'] = 'loss_ratio'
     df_db_original['LossFunction-Theta_0'] = out_df['L_original']
     df_db_original = df_db_original.loc[df_db_original['ID'] != '-Cost']
-    df_db_original = df_db_original.set_index("ID").sort_index().convert_dtypes()
+    df_db_original = df_db_original.set_index('ID').sort_index().convert_dtypes()
 
     out_cols = [
-        "Incomplete",
-        "Quantity-Unit",
-        "DV-Unit",
+        'Incomplete',
+        'Quantity-Unit',
+        'DV-Unit',
     ]
     for DS_i in range(1, 5):
-        out_cols += [f"DS{DS_i}-Theta_0"]
+        out_cols += [f'DS{DS_i}-Theta_0']
     df_db_fit = pd.DataFrame(columns=out_cols, index=out_df.index, dtype=float)
     df_db_fit['ID'] = [f'{id}-Cost' for id in out_df['ID']]
     df_db_fit['Incomplete'] = 0
@@ -1302,7 +1298,7 @@ def create_Hazus_HU_damage_and_loss_files():
     for LS_i in range(1, 5):
         df_db_fit[f'DS{LS_i}-Theta_0'] = out_df[f'L{LS_i}']
     df_db_fit = df_db_fit.loc[df_db_fit['ID'] != '-Cost']
-    df_db_fit = df_db_fit.set_index("ID").sort_index().convert_dtypes()
+    df_db_fit = df_db_fit.set_index('ID').sort_index().convert_dtypes()
 
     df_db_fit.to_csv(
         'hurricane/building/portfolio/Hazus v4.2/consequence_repair_fitted.csv'
@@ -1883,7 +1879,6 @@ def create_Hazus_HU_metadata_files(
     damage_state_descriptions = meta_dict.pop('DamageStateDescriptions')
 
     for fragility_id in fragility_data['ID'].to_list():
-
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # TODO
         # This is a temporary fix until we resolve the presence of NaN
@@ -1944,7 +1939,6 @@ def create_Hazus_HU_metadata_files(
     meta_dict_original = deepcopy(meta_dict)
 
     for fragility_id in fragility_data['ID'].to_list():
-
         # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         # TODO
         # This is a temporary fix until we resolve the presence of NaN
