@@ -2,7 +2,9 @@ name: Build and deploy documentation
 on:
   push:
     branches:
-      - docs
+      - main
+permissions:
+  contents: write
 jobs:
   build-docs:
     runs-on: ubuntu-latest
@@ -42,4 +44,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: doc/build/html
+          publish_dir: ./doc/build/html
