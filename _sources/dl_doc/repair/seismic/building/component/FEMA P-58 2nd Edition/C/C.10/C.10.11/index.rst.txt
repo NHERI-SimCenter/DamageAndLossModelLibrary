@@ -1,0 +1,258 @@
+
+
+********************
+C.10.11 - Partitions
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001a</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.10.11.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.10.11.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.10.11.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.10.11.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001b</b> | Wall Partition, Type: Gypsum with metal studs, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.10.11.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.10.11.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.10.11.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.10.11.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001c</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above with returns</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.10.11.001c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.10.11.001c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.10.11.001c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.10.11.001c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001d</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above w/o returns (friction connections)</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.10.11.001d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.10.11.001d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.10.11.001d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.10.11.001d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.011a</b> | Wall Partition, Type: Gypsum with wood studs, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.10.11.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.10.11.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.10.11.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.10.11.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

@@ -1,0 +1,530 @@
+
+
+*************
+HWB - Bridges
+*************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GF</b> | All bridges subjected ground failure effects</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GF.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.1</b> | Conventional (early seismic) design major bridge of maximum span length greater than 150 m (492 ft)</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.1.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.10</b> | Conventional (early seismic) design concrete bridge with continuous spans and not classified as HWB8</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.10.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.11</b> | Modern seismic design concrete bridge with continuous spans and not classified as HWB9</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.11.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.12</b> | Non-California conventional (early seismic) design steel bridge with multi-column bents and simply-supported spans that are 20 m or longer</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.12.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.13</b> | California conventional (early seismic) design steel bridge with multi-column bents and simply-supported spans that are 20 m or longer</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.13.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.14</b> | Modern seismic design steel bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.14.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.15</b> | Conventional (early seismic) design steel bridge with continuous spans that are 20 m or longer and not classified as HWB12 or HWB13</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.15.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.16</b> | Modern seismic design steel bridge with continuous spans that are 20 m or longer and not classified as HWB14</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.16.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.17</b> | Non-California conventional (early seismic) design prestressed concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.17.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.18</b> | California conventional (early seismic) design prestressed concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.18.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.19</b> | Modern seismic design prestressed concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.19.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.2</b> | Modern seismic design major bridge of maximum span length greater than 150 m (492 ft)</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.2.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.20</b> | Conventional (early seismic) design prestressed concrete bridge with single-column bents, box girder superstructure, and continuous spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.20.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.21</b> | Modern seismic design prestressed concrete bridge with single-column bents, box girder superstructure, and continuous spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.21.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.22</b> | Conventional (early seismic) design prestressed concrete bridge with with continuous spans and not classified as HWB20</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.22.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.23</b> | Modern seismic design prestressed concrete bridge with with continuous spans and not classified as HWB21</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.23.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.24</b> | Non-California conventional (early seismic) design steel bridge with multi-column bents and simply-supported spans that are less than 20 m in length</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.24.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.25</b> | California conventional (early seismic) design steel bridge with multi-column bents and simply-supported spans that are less than 20 m in length</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.25.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.26</b> | Non-California conventional (early seismic) design steel bridge with continuous spans that are less than 20 m in length and not classified as HWB24</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.26.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.27</b> | California conventional (early seismic) design steel bridge with continuous spans that are less than 20 m in length and not classified as HWB25</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.27.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.28</b> | A bridge that is not classified as HWB1-HWB27</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.28.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.3</b> | Conventional (early seismic) design single-span bridge</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.3.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.4</b> | Modern seismic design single-span bridge</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.4.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.5</b> | Non-California conventional (early seismic) design concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.5.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.6</b> | California conventional (early seismic) design concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.6.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.7</b> | Modern seismic design concrete bridge with multi-column bents and simply-supported spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.7.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.8</b> | California conventional (early seismic) design concrete bridge with single-column bents, box girder superstructure, and continuous spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.8.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB.GS.9</b> | California modern seismic design concrete bridge with single-column bents, box girder superstructure, and continuous spans</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HWB.GS.9.html
+
+.. raw:: html
+
+   <hr>

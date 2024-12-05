@@ -1,0 +1,1499 @@
+
+
+**********************
+B.10.33 - Steel Braces
+**********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.002a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.002b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.002c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.003a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.003b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.003c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.011c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.012c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.013a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.013b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.013c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.021b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.021c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.022b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.022c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.023a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.023b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.023c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031a</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.031a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031b</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.031b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031c</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.031c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032a</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.032a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032b</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.032b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032c</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.032c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033a</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.033a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033b</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.033b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033c</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.033c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041a</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.041a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041b</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.041b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041c</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.041c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042a</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.042a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042b</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.042b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042c</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.042c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043a</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.043a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043b</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.043b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043c</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.043c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051a</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.051a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051b</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.051b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051c</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.051c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052a</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.052a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052b</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.052b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052c</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.052c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053a</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.053a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053b</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.053b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053c</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.053c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.061a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.061b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.061c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.062a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.062b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.062c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.063a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.063b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.063c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071a</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.071a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071b</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.071b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071c</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.071c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072a</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.072a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072b</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace,  41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.072b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072c</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.072c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073a</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.073a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073b</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.073b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073c</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.073c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101a</b> | Steel Buckling Restrained Brace (BRB), Chevron Brace, Weight of brace < 40 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.101a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101b</b> | Steel Buckling Restrained Brace (BRB), Chevron brace, Weight of brace > 41 plf and < 99 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.101b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101c</b> | Steel Buckling Restrained Brace (BRB), Chevron Brace, Weight of brace > 100 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.101c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111a</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal Brace, Weight of brace < 40 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.111a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111b</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal brace, Weight of brace > 41 plf and < 99 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.111b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111c</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal Brace, Weight of brace > 100 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.33.111c.html
+
+.. raw:: html
+
+   <hr>

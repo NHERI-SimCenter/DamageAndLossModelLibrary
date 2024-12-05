@@ -1,0 +1,1862 @@
+
+
+*********************************************************
+D.50.12 - Electrical Service & Distribution - Low Tension
+*********************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.013a</b> | Motor Control Center - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.013b</b> | Motor Control Center - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.013c</b> | Motor Control Center - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.013d</b> | Motor Control Center - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.013d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.013d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.013d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.013d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.021a</b> | Low Voltage Switchgear - Capacity: 100 to <350 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.021b</b> | Low Voltage Switchgear - Capacity: 350 to <750 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.021c</b> | Low Voltage Switchgear - Capacity: 750 to <1200 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.021c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.021c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.021c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.021c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.021d</b> | Low Voltage Switchgear - Capacity: 1200 to 2000 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.021d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.021d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.021d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.021d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023a</b> | Low Voltage Switchgear - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023b</b> | Low Voltage Switchgear - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023c</b> | Low Voltage Switchgear - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023d</b> | Low Voltage Switchgear - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023e</b> | Low Voltage Switchgear - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023f</b> | Low Voltage Switchgear - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023g</b> | Low Voltage Switchgear - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023h</b> | Low Voltage Switchgear - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023i</b> | Low Voltage Switchgear - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023j</b> | Low Voltage Switchgear - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023k</b> | Low Voltage Switchgear - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.023l</b> | Low Voltage Switchgear - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.023l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.023l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.023l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.023l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.031a</b> | Distribution Panel - Capacity: 100 to <350 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.031b</b> | Distribution Panel - Capacity: 350 to <750 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.031b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.031b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.031b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.031b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.031c</b> | Distribution Panel - Capacity: 750 to <1200 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.031c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.031c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.031c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.031c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.031d</b> | Distribution Panel - Capacity: 1200 to 2000 Amp - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.031d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.031d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.031d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.031d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033a</b> | Distribution Panel - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033b</b> | Distribution Panel - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033c</b> | Distribution Panel - Capacity: 100 to <350 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 225 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033d</b> | Distribution Panel - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033e</b> | Distribution Panel - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033f</b> | Distribution Panel - Capacity: 350 to <750 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 400 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033g</b> | Distribution Panel - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033h</b> | Distribution Panel - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033i</b> | Distribution Panel - Capacity: 750 to <1200 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 800 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033j</b> | Distribution Panel - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033k</b> | Distribution Panel - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.12.033l</b> | Distribution Panel - Capacity: 1200 to 2000 Amp - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1600 Amp.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.12.033l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.12.033l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.12.033l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.12.033l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

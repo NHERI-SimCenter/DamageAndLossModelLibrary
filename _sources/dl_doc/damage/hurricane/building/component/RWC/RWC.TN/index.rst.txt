@@ -1,0 +1,223 @@
+
+
+*****************
+RWC.TN - Toe nail
+*****************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+   RWC.TN.STR/index
+   RWC.TN.EPX/index
+   RWC.TN.ADH/index
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.001a</b> | Roof-Wall Connection with Toe nails</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.001b</b> | Roof-Wall Connection with Toe nails</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.001c</b> | Roof-Wall Connection with Toe nails</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.002</b> | Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.</p> 
+   <div>
+
+| Simpson Strong-Tie H10 metal connector installed on every truss.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.003a</b> | Roof-Wall Connection with Toe nails, 2-16d layout.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.003a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.003b</b> | Roof-Wall Connection with Toe nails, 2-16d layout.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.003b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.004</b> | Roof-Wall Connection with Toe nails, 3-8d layout.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.004.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.005</b> | Roof-Wall Connection with Toe nails, 3-16d layout.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.005.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.006a</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.006a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.006b</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.006b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.006c</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.006c.html
+
+.. raw:: html
+
+   <hr>

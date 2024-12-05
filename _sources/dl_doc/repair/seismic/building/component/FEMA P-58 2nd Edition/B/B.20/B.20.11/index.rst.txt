@@ -1,0 +1,677 @@
+
+
+************************
+B.20.11 - Exterior Walls
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.001a</b> | Exterior Wall - Cold formed steel walls with wood structural panel sheathing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  38 mil cold formed steel framing with 7/16 OSB and 3/8 plywood panel sheathing with overturning restraint at each end of the wall per AISI design standard.  No. 8 screws 2" to 6" OC at perimeter and 12" OC EW in field.  
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restraint at each end of wall.
+| Notes: Copy of B1061.001a for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.001b</b> | Exterior Wall - Cold formed steel walls with wood structural panel sheathing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  38 mil cold formed steel framing with 7/16 OSB and 3/8 plywood panel sheathing with overturning restraint at each end of the wall per AISI design standard.  No. 8 screws 2" to 6" OC at perimeter and 12" OC EW in field.  
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restraint at each end of wall.
+| Notes: Copy of B1061.001b for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.011a</b> | Exterior Wall - Cold formed steel walls with flat strap X-bracing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 4.5 inch x 33 mil flat strap X-bracing on one side.  Straps attached to gussets with No. 8 screws.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+| Notes: Copy of B1061.011a for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.011b</b> | Exterior Wall - Cold formed steel walls with flat strap X-bracing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 4.5 inch x 33 mil flat strap X-bracing on one side.  Straps attached to gussets with No. 8 screws.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+| Notes: Copy of B1061.011b for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.021a</b> | Exterior Wall - Cold formed steel walls with 22 or 31 mil steel sheathing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 22 or 31 mil steel sheathing attached with No. 8 screws spaced 2" or 6" OC at perimeter and 12" OC EW in the field.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+| Notes: Copy of B1061.021a for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.021b</b> | Exterior Wall - Cold formed steel walls with 22 or 31 mil steel sheathing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 22 or 31 mil steel sheathing attached with No. 8 screws spaced 2" or 6" OC at perimeter and 12" OC EW in the field.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+| Notes: Copy of B1061.021b for use as an exterior wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.101</b> | Exterior Wall - Light framed wood walls with structural panel sheathing, gypsum wallboard no hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, no hold-downs. 
+| Notes: Copy of B1071.001 for use as an exterior wall.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.101-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.101-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.101-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.101-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.102</b> | Exterior Wall - Light framed wood walls with structural panel sheathing, stucco,  hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with hold-downs. Three layer 7/8" stucco with 1/2-inch chop strand fibers applied over wire mesh fastened with 1.25 -inch long staples.
+| Notes: Copy of B1071.002 for use as an exterior wall.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.102-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.102-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.102-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.102-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.111</b> | Exterior Wall - Light framed wood walls with structural panel sheathing, stucco no hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with no hold-downs. Three layer 7/8" stucco with 1/2-inch chop strand fibers applied over wire mesh fastened with 1.25 -inch long staples.
+| Notes: Copy of B1071.011 for use as an exterior wall.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.111-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.111-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.111-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.111-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.121</b> | Exterior Wall - Light framed wood walls with structural panel sheathing, gypsum wallboard and hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:   1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with hold-downs. 
+| Notes: Copy of B1071.021 for use as an exterior wall.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.121-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.121-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.121-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.121-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.131</b> | Exterior Wall - Wood walls with diagonal let-in bracing</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  Stud wall framing consists of 2 x 4’s at 16 inches on center with double top plates and single sill plate. Diagonal bracing includes 2 forms. Block-bracing consists of diagonal blocking between studs that extends from the top of one edge of the panel to the bottom of the opposite edge. Diagonal bracing may also consist of let-in bracing for which a 1x or 2x brace (with same inclination as described for block-bracing) is recessed into studs. Walls may be sheathed with horizontal or vertical lumber siding.
+| Notes: Copy of B1071.031 for use as an exterior wall.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.131-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.131-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.131-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.131-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.201a</b> | Precast Concrete Panels 4.5 inches thick - in plane deformation</p> 
+   <div>
+
+| Costing is based upon 30'x13' panels.
+| Seismic Installation Conditions: All
+| Notes: Determine fragility story drift median demand in accordance with Chapter 7 of Volume 2.
+
+
+Suggested Block Size: 30 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.201a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.201a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.201a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.201a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.11.201b</b> | Precast Concrete Panels 4.5 inches thick - out of plane deformation</p> 
+   <div>
+
+| Costing is based upon 30'x13' panels.
+| Seismic Installation Conditions: All
+| Notes: Determine fragility peak floor acceleration anchorage capacity in accordance with Chapter 7 of Volume 2.
+
+
+Suggested Block Size: 30 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.11.201b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.11.201b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.11.201b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.11.201b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

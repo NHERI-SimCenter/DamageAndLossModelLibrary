@@ -1,0 +1,112 @@
+
+
+**********************************
+C.30.27 - Access Pedastal Flooring
+**********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.27.001</b> | Raised Access Floor, non seismically rated.</p> 
+   <div>
+
+| Access floor unanchored or anchored with adhesive.  Costing is based upon a xxx SF floor area.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Consequence Note:  Some downtime for repair of floor and equipment.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.27.001-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.27.001-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.27.001-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.27.001-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.27.002</b> | Raised Access Floor, seismically rated.</p> 
+   <div>
+
+| Access floor is designed to meet code requirements and mechanically anchored and braced as necessary to resist anchor loads.  Equipment is anchored to floor systems and heavier equipment is anchored directly to the structural floor.  Costing is based upon a xxx SF floor area.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Consequence Note:  Some downtime for repair of floor and equipment.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.27.002-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.27.002-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.27.002-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.27.002-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

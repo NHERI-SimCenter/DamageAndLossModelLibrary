@@ -1,0 +1,16 @@
+
+
+****************************************
+Hazus Earthquake Methodology - Buildings
+****************************************
+
+The models in this dataset are based on version 5.1 of the Hazus Earthquake Model Technical Manual
+
+
+.. toctree::
+   :maxdepth: 8
+
+   LF/index
+   NSA/index
+   NSD/index
+   STR/index

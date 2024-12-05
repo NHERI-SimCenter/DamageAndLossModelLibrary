@@ -1,0 +1,1499 @@
+
+
+***********************
+B.20.22 - Curtain Walls
+***********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.001</b> | Curtain Walls - Generic Midrise Stick-Built Curtain wall, Config: Monolithic, Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.001-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.001-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.001-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.001-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.002</b> | Curtain Walls - Generic Midrise Stick-Built Curtain wall, Config: Insulating Glass Units (dual pane), Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.002-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.002-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.002-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.002-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.011</b> | Midrise stick-built curtain wall, Config: Asymmetric insulating glass units (dual-pane, unequal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/2 in. (13 mm) outer AN LAM (0.030 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.011-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.011-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.011-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.011-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.021</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN LAM (0.030 PVB); glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.021-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.021-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.021-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.021-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.022</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN laminated, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.022-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.022-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.022-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.022-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.023</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN laminated, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  User to confirm damage state, repair, lead time, and casualty data.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.023-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.023-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.023-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.023-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.031</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.031-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.031-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.031-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.031-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.032</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0 in. (0 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.032-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.032-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.032-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.032-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.033</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.13 in. (3 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.033-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.033-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.033-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.033-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.034</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.25 in. (6 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.034-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.034-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.034-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.034-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.035</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2:1 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 32 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.035-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.035-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.035-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.035-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.036</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1:2 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 32 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.036-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.036-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.036-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.036-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.037</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.037-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.037-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.037-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.037-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.038</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.038-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.038-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.038-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.038-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.039</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.039-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.039-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.039-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.039-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.040</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2:1 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.040-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.040-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.040-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.040-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.041</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1:2 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.041-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.041-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.041-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.041-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.051</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.051-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.051-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.051-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.051-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.052</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.052-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.052-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.052-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.052-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.053</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, Seamed Edge; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.053-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.053-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.053-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.053-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.054</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, Polished Edge; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.054-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.054-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.054-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.054-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.061</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Heat strengthened, Details: 1/4 in. (6 mm) HS monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.061-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.061-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.061-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.061-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.071</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/4 in. (6 mm) outer AN LAM (0.030 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.071-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.071-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.071-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.071-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.072</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/4 in. (6 mm) outer AN LAM (0.060 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.072-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.072-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.072-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.072-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.081</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN insulating glass unit (IGU) [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.081-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.081-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.081-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.081-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.082</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.25 in. (6 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.082-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.082-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.082-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.082-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.083</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes], 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.083-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.083-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.083-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.083-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.084</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes], 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.084-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.084-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.084-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.084-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.091</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.091-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.091-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.091-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.091-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.101</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Heat strengthened, Details: 1 in. (25 mm) HS IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.101-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.101-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.101-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.101-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.201</b> | Curtain Walls - Unitized curtain wall (also generic unitized curtain wall), Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1-1/4 in. (32 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], 4-sided SSG, VHBTM SGTTM; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = Varies sealant = wet</p> 
+   <div>
+
+| Notes: Damage state DS3 of glass fall out did not occur in physical testing to 10% drift.  DS3 0.1 median demand is intentional.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.20.22.201-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.20.22.201-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.20.22.201-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.20.22.201-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

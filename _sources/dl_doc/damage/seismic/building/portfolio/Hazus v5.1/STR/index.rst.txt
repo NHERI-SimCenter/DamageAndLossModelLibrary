@@ -1,0 +1,27 @@
+
+
+****************
+STR - Structural
+****************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+   STR.W1/index
+   STR.W2/index
+   STR.S1/index
+   STR.S2/index
+   STR.S3/index
+   STR.S4/index
+   STR.S5/index
+   STR.C1/index
+   STR.C2/index
+   STR.C3/index
+   STR.PC1/index
+   STR.PC2/index
+   STR.RM1/index
+   STR.RM2/index
+   STR.URM/index
+   STR.MH/index

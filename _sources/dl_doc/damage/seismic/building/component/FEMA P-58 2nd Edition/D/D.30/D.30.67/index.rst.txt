@@ -1,0 +1,94 @@
+
+
+**************************************
+D.30.67 - Controls and Instrumentation
+**************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.67.011a</b> | Control Panel - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.67.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.67.012a</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.67.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.67.012b</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.67.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.67.012c</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.67.012c.html
+
+.. raw:: html
+
+   <hr>

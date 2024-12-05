@@ -1,0 +1,746 @@
+
+
+************************************
+B.10.44 - RC or Composite Shearwalls
+************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.001</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.002</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain 16' high to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.003</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain 25' high to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.003.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.011</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of up to 15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.012</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of 16' to 24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.013</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of 24' to 40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.013.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.021</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights up to 15' </p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.022</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights  16' - 24' </p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.022.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.023</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights  25' - 40' </p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.023.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.031</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.031.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.032</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick,  16'  to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.032.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.033</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick,  25'  to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.033.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.041</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.041.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.042</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick, 16' to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.042.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.043</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick, 25' to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.043.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.051</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick" up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.051.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.052</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick,  16'  to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.052.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.053</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick,  25'  to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.053.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.061</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.061.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.062</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.062.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.063</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.063.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.071</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.071.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.072</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.072.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.073</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.073.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.081</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.081.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.082</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.082.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.083</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.083.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.091</b> | Slender Concrete Wall, 12" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.091.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.092</b> | Slender Concrete Wall, 12" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.092.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.093</b> | Slender Concrete Wall, 12" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.093.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.101</b> | Slender Concrete Wall, 18" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.101.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.102</b> | Slender Concrete Wall, 18" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.102.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.103</b> | Slender Concrete Wall, 18" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.103.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.111</b> | Slender Concrete Wall, 30" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.111.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.112</b> | Slender Concrete Wall, 30" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.112.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.113</b> | Slender Concrete Wall, 30" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+.. raw:: html
+   :file: B.10.44.113.html
+
+.. raw:: html
+
+   <hr>

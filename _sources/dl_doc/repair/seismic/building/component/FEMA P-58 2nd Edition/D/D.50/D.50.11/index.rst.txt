@@ -1,0 +1,832 @@
+
+
+**********************************************************
+D.50.11 - Electrical Service & Distribution - High Tension
+**********************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.011a</b> | Transformer/primary service - Capacity: <100 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.011b</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.011c</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.011d</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.011d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.011d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.011d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.011d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013a</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013b</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013c</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013d</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013e</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013f</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013g</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013h</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013i</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013j</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013k</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.11.013l</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.11.013l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.11.013l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.11.013l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.11.013l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

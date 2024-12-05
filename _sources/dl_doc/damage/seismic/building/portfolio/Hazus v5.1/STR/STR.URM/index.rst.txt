@@ -1,0 +1,106 @@
+
+
+********************************************
+STR.URM - Unreinforced Masonry Bearing Walls
+********************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.URM.L.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings include structural elements that vary depending on the building’s age and, to a lesser extent, its geographic location. In buildings built before 1900, the majority of floor and roof construction consists of wood sheathing supported by wood framing. In large multistory buildings, the floors are cast- in-place concrete supported by the unreinforced masonry walls and/or steel or concrete interior framing. In unreinforced masonry constructed built after 1950 outside California, wood floors usually have plywood rather than board sheathing. In regions of lower seismicity, buildings of this type constructed more recently can include floor and roof framing that consists of metal deck and concrete fill supported by steel framing elements. The perimeter walls, and possibly some interior walls, are unreinforced masonry. The walls may or may not be anchored to the diaphragms. Ties between the walls and diaphragms are more common for the bearing walls than for walls that are parallel to the floor framing. Roof ties are usually less common and more erratically spaced than those at the floor levels. Interior partitions that interconnect the floors and roof can reduce diaphragm displacements.
+| Low-Rise Building with 1-3 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.URM.L.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.URM.L.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings include structural elements that vary depending on the building’s age and, to a lesser extent, its geographic location. In buildings built before 1900, the majority of floor and roof construction consists of wood sheathing supported by wood framing. In large multistory buildings, the floors are cast- in-place concrete supported by the unreinforced masonry walls and/or steel or concrete interior framing. In unreinforced masonry constructed built after 1950 outside California, wood floors usually have plywood rather than board sheathing. In regions of lower seismicity, buildings of this type constructed more recently can include floor and roof framing that consists of metal deck and concrete fill supported by steel framing elements. The perimeter walls, and possibly some interior walls, are unreinforced masonry. The walls may or may not be anchored to the diaphragms. Ties between the walls and diaphragms are more common for the bearing walls than for walls that are parallel to the floor framing. Roof ties are usually less common and more erratically spaced than those at the floor levels. Interior partitions that interconnect the floors and roof can reduce diaphragm displacements.
+| Low-Rise Building with 1-3 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.URM.L.PC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.URM.M.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings include structural elements that vary depending on the building’s age and, to a lesser extent, its geographic location. In buildings built before 1900, the majority of floor and roof construction consists of wood sheathing supported by wood framing. In large multistory buildings, the floors are cast- in-place concrete supported by the unreinforced masonry walls and/or steel or concrete interior framing. In unreinforced masonry constructed built after 1950 outside California, wood floors usually have plywood rather than board sheathing. In regions of lower seismicity, buildings of this type constructed more recently can include floor and roof framing that consists of metal deck and concrete fill supported by steel framing elements. The perimeter walls, and possibly some interior walls, are unreinforced masonry. The walls may or may not be anchored to the diaphragms. Ties between the walls and diaphragms are more common for the bearing walls than for walls that are parallel to the floor framing. Roof ties are usually less common and more erratically spaced than those at the floor levels. Interior partitions that interconnect the floors and roof can reduce diaphragm displacements.
+| Mid-Rise Building with 4-7 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.URM.M.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.URM.M.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings include structural elements that vary depending on the building’s age and, to a lesser extent, its geographic location. In buildings built before 1900, the majority of floor and roof construction consists of wood sheathing supported by wood framing. In large multistory buildings, the floors are cast- in-place concrete supported by the unreinforced masonry walls and/or steel or concrete interior framing. In unreinforced masonry constructed built after 1950 outside California, wood floors usually have plywood rather than board sheathing. In regions of lower seismicity, buildings of this type constructed more recently can include floor and roof framing that consists of metal deck and concrete fill supported by steel framing elements. The perimeter walls, and possibly some interior walls, are unreinforced masonry. The walls may or may not be anchored to the diaphragms. Ties between the walls and diaphragms are more common for the bearing walls than for walls that are parallel to the floor framing. Roof ties are usually less common and more erratically spaced than those at the floor levels. Interior partitions that interconnect the floors and roof can reduce diaphragm displacements.
+| Mid-Rise Building with 4-7 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.URM.M.PC.html
+
+.. raw:: html
+
+   <hr>

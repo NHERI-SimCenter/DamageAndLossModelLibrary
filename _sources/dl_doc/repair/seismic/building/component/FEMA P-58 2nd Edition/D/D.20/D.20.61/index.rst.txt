@@ -1,0 +1,736 @@
+
+
+****************************
+D.20.61 - Steam Distribution
+****************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.011a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.011b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.012a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.012a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.012a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.012a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.012a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.012b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.012b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.012b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.012b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.012b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.013a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.013b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.014a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.014a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.014a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.014a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.014a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.014b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.014b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.014b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.014b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.014b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.021a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.022a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.023a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.023b</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.024a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.024a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.024a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.024a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.024a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.024b</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.20.61.024b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.20.61.024b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.20.61.024b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.20.61.024b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

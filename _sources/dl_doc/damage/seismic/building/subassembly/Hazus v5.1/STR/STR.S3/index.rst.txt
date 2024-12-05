@@ -1,0 +1,104 @@
+
+
+**************************
+STR.S3 - Steel Light Frame
+**************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.S3.HC</b> | Structural, Steel Light Frame, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings are pre-engineered and prefabricated with transverse rigid frames. The roof and walls consist of lightweight panels, usually corrugated metal. The frames are designed for maximum efficiency, often with tapered beam and column sections built up of light steel plates. The frames are built in segments and assembled in the field with bolted joints. Lateral loads in the transverse direction are resisted by the rigid frames with loads distributed to them by diaphragm elements, typically rod- braced steel roof framing bays. Tension rod bracing typically resists loads in the longitudinal direction.
+| These structures are mostly single-story structures combining rod-braced frames in one direction and moment frames in the other. Due to repetitive nature of the structural systems, the type of damage to structural members is expected to be rather uniform throughout the structure.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.S3.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.S3.LC</b> | Structural, Steel Light Frame, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings are pre-engineered and prefabricated with transverse rigid frames. The roof and walls consist of lightweight panels, usually corrugated metal. The frames are designed for maximum efficiency, often with tapered beam and column sections built up of light steel plates. The frames are built in segments and assembled in the field with bolted joints. Lateral loads in the transverse direction are resisted by the rigid frames with loads distributed to them by diaphragm elements, typically rod- braced steel roof framing bays. Tension rod bracing typically resists loads in the longitudinal direction.
+| These structures are mostly single-story structures combining rod-braced frames in one direction and moment frames in the other. Due to repetitive nature of the structural systems, the type of damage to structural members is expected to be rather uniform throughout the structure.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.S3.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.S3.MC</b> | Structural, Steel Light Frame, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings are pre-engineered and prefabricated with transverse rigid frames. The roof and walls consist of lightweight panels, usually corrugated metal. The frames are designed for maximum efficiency, often with tapered beam and column sections built up of light steel plates. The frames are built in segments and assembled in the field with bolted joints. Lateral loads in the transverse direction are resisted by the rigid frames with loads distributed to them by diaphragm elements, typically rod- braced steel roof framing bays. Tension rod bracing typically resists loads in the longitudinal direction.
+| These structures are mostly single-story structures combining rod-braced frames in one direction and moment frames in the other. Due to repetitive nature of the structural systems, the type of damage to structural members is expected to be rather uniform throughout the structure.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.S3.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.S3.PC</b> | Structural, Steel Light Frame, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings are pre-engineered and prefabricated with transverse rigid frames. The roof and walls consist of lightweight panels, usually corrugated metal. The frames are designed for maximum efficiency, often with tapered beam and column sections built up of light steel plates. The frames are built in segments and assembled in the field with bolted joints. Lateral loads in the transverse direction are resisted by the rigid frames with loads distributed to them by diaphragm elements, typically rod- braced steel roof framing bays. Tension rod bracing typically resists loads in the longitudinal direction.
+| These structures are mostly single-story structures combining rod-braced frames in one direction and moment frames in the other. Due to repetitive nature of the structural systems, the type of damage to structural members is expected to be rather uniform throughout the structure.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.S3.PC.html
+
+.. raw:: html
+
+   <hr>

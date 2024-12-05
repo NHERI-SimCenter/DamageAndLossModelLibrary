@@ -1,0 +1,601 @@
+
+
+*****************************
+E.20.22 - Movable Furnishings
+*****************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.001</b> | Modular office work stations.  </p> 
+   <div>
+
+| Unanchored and installed per manufacturer's recommendations on a carpeted floor.
+| Construction Quality: Any
+| Seismic Installation Conditions: Unsecured
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.010</b> | Unsecured fragile objects on shelves, unknown restraint</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: Unknown conditions: some objects may have museum putty. Some cabinets may have latches. Some cabinets may be secured to the wall.
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.010.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.011</b> | Fragile contents secured by museum putty, Velcro or other weak but sticky stuff</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: High adhesion surface (e.g., museum putty) and secured in cabinets (e.g., with latches & cabinet is secured to wall)
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.012</b> | Fragile contents on shelves in storage cabinets with latches</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: In secured cabinets (e.g., with latches)
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.013</b> | Unsecured fragile objects on shelves, low friction surface</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: Low friction coefficient (e.g., glass or metal on wood), in unsecured cabinets (e.g., no latches)
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.013.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.020</b> | Home entertainment equipment, unknown installation</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.020.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.021</b> | Electronic equipment on wall mount brackets</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: Unsecured
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.022</b> | Desktop electronics including computers, monitors, stereos, etc on a slip resistant surface</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: Unsecured
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.022.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.023</b> | Desktop electronics including computers, monitors, stereos, etc, smooth surface</p> 
+   <div>
+
+| Costing to be furnished by user.  Consequence data assumes 16 SF of damage area.
+| Construction Quality: Any
+| Seismic Installation Conditions: Unsecured
+| Notes: This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.023.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.102a</b> | Bookcase, 2 shelves, unanchored laterally</p> 
+   <div>
+
+| Standard bookcase, unanchored laterally.  Bookcase is 12-5/8" deep x 29" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.102a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.102b</b> | Bookcase, 2 shelves, anchored laterally</p> 
+   <div>
+
+| Standard bookcase, anchored laterally.  Bookcase is 12-5/8" deep x 29" tall.
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.102b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.103a</b> | Bookcase, 3 shelves, unanchored laterally</p> 
+   <div>
+
+| Standard bookcase, unanchored laterally.  Bookcase is 12-5/8" deep x 41" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.103a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.103b</b> | Bookcase, 3 shelves, anchored laterally</p> 
+   <div>
+
+| Standard bookcase, anchored laterally.  Bookcase is 12-5/8" deep x 41" tall.
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.103b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.104a</b> | Bookcase, 4 shelves, unanchored laterally</p> 
+   <div>
+
+| Standard bookcase, unanchored laterally.  Bookcase is 12-5/8" deep x 56" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.104a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.104b</b> | Bookcase, 4 shelves, anchored laterally</p> 
+   <div>
+
+| Standard bookcase, anchored laterally.  Bookcase is 12-5/8" deep x 56" tall.
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.104b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.105a</b> | Bookcase, 5 shelves, unanchored laterally</p> 
+   <div>
+
+| Standard bookcase, unanchored laterally.  Bookcase is 12-5/8" deep x 71" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.105a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.105b</b> | Bookcase, 5 shelves, anchored laterally</p> 
+   <div>
+
+| Standard bookcase, anchored laterally.  Bookcase is 12-5/8" deep x 71" tall.
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.105b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.106a</b> | Bookcase, 6 shelves, unanchored laterally</p> 
+   <div>
+
+| Standard bookcase, unanchored laterally.  Bookcase is 12-5/8" deep x 81-1/4" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.106a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.106b</b> | Bookcase, 6 shelves, anchored laterally</p> 
+   <div>
+
+| Standard bookcase, anchored laterally.  Bookcase is 12-5/8" deep x 81-1/4" tall.
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.106b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.112a</b> | Vertical Filing Cabinet, 2 drawer, unanchored laterally</p> 
+   <div>
+
+| Filing cabinet, unanchored laterally.  Cabinet has 2 drawers and is 15" deep x 24" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.112a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.112b</b> | Vertical Filing Cabinet, 2 drawer, anchored laterally</p> 
+   <div>
+
+| Filing cabinet, anchored laterally.  Cabinet has 2 drawers and is 15" deep x 24" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.112b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.114a</b> | Vertical Filing Cabinet, 4 drawer, unanchored laterally</p> 
+   <div>
+
+| Filing cabinet, unanchored laterally.  Cabinet has 4 drawers and is 15" deep x 52" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.114a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.114b</b> | Vertical Filing Cabinet, 4 drawer, anchored laterally</p> 
+   <div>
+
+| Filing cabinet, anchored laterally.  Cabinet has 4 drawers and is 15" deep x 52" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.114b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.124a</b> | Lateral Filing Cabinet, 2 drawer, unanchored laterally</p> 
+   <div>
+
+| Filing cabinet, unanchored laterally.  Cabinet has 4 drawers and is 18.6" deep x 52.5" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.124a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.124b</b> | Lateral Filing Cabinet, 2 drawer, anchored laterally</p> 
+   <div>
+
+| Filing cabinet, anchored laterally.  Cabinet has 4 drawers and is 18.6" deep x 52.5" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.124b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.125a</b> | Lateral Filing Cabinet, 4 drawer, unanchored laterally</p> 
+   <div>
+
+| Filing cabinet, unanchored laterally.  Cabinet has 5 drawers and is 18.6" deep x 67.75" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Unsecured
+| Notes: Peak floor velocity limit is calculated as a function of the aspect ratio of the filing cabinet and the building period, T.  At the ground floor the fragility will be based upon the ground motion only.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.125a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>E.20.22.125b</b> | Lateral Filing Cabinet, 4 drawer, anchored laterally</p> 
+   <div>
+
+| Filing cabinet, anchored laterally.  Cabinet has 5 drawers and is 18.6" deep x 67.75" tall
+| Construction Quality: Normal
+| Seismic Installation Conditions: Secured
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: E.20.22.125b.html
+
+.. raw:: html
+
+   <hr>

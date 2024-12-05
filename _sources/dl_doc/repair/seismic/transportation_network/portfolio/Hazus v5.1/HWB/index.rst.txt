@@ -1,0 +1,42 @@
+
+
+*************
+HWB - Bridges
+*************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HWB</b> | Highway/railway bridge structures</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: HWB-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: HWB-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

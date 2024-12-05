@@ -1,0 +1,48 @@
+
+
+**************************
+GF.V - Vertical Settlement
+**************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>GF.V.D</b> | Ground Failure, Vertical Direction, Deep Foundation</p> 
+   <div>
+
+| Under Ground Failure, separate fragility curves distinguish between damages due to lateral spreading and ground settlement. Only Extensive and Complete damage states are considered. In essence, buildings are assumed to be either undamaged or severely damaged due to ground failure. In fact, Slight or Moderate damage can occur due to ground failure, but the likelihood of this damage is considered to be small (relative to ground shaking damage) and tacitly included in predictions of Slight or Moderate damage due to ground shaking by STR or LF components. There is no available relationship between the likelihood of Extensive/Complete damage to buildings and PGD. Engineering judgment has been used to develop a set of assumptions which define building fragility.
+| No attempt is made to distinguish damage based on building type, since model building descriptions do not include foundation type. Foundation type is critical to PGD performance and buildings on deep foundations (e.g., piles) perform much better than buildings on spread footings, if the ground settles. When the building is known to be supported by a deep foundation, the probability of Extensive or Complete damage is reduced by a factor of 10 from that predicted for settlement-induced damage of the same building on a shallow foundation. Deep foundations will improve building performance by only a limited amount if the ground spreads laterally. When the building is known to be supported by a deep foundation, the probability of Extensive or Complete damage is reduced by a factor of 2 from that predicted for spread-induced damage of the same building on a shallow foundation.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: GF.V.D.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>GF.V.S</b> | Ground Failure, Vertical Direction, Shallow Foundation</p> 
+   <div>
+
+| Under Ground Failure, separate fragility curves distinguish between damages due to lateral spreading and ground settlement. Only Extensive and Complete damage states are considered. In essence, buildings are assumed to be either undamaged or severely damaged due to ground failure. In fact, Slight or Moderate damage can occur due to ground failure, but the likelihood of this damage is considered to be small (relative to ground shaking damage) and tacitly included in predictions of Slight or Moderate damage due to ground shaking by STR or LF components. There is no available relationship between the likelihood of Extensive/Complete damage to buildings and PGD. Engineering judgment has been used to develop a set of assumptions which define building fragility.
+| No attempt is made to distinguish damage based on building type, since model building descriptions do not include foundation type. Foundation type is critical to PGD performance and buildings on deep foundations (e.g., piles) perform much better than buildings on spread footings, if the ground settles. When the building is known to be supported by a deep foundation, the probability of Extensive or Complete damage is reduced by a factor of 10 from that predicted for settlement-induced damage of the same building on a shallow foundation. Deep foundations will improve building performance by only a limited amount if the ground spreads laterally. When the building is known to be supported by a deep foundation, the probability of Extensive or Complete damage is reduced by a factor of 2 from that predicted for spread-induced damage of the same building on a shallow foundation.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: GF.V.S.html
+
+.. raw:: html
+
+   <hr>

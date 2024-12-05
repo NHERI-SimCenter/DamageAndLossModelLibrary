@@ -1,0 +1,88 @@
+
+
+***************************
+D.10.14 - Elevators & Lifts
+***************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.10.14.011</b> | Traction Elevator – Applies to most California Installations 1976 or later, most western states installations 1982 or later and most other U.S installations 1998 or later.</p> 
+   <div>
+
+| Costing per elevator.  Elevator demand parameter shall be defined as the peak floor acceleration at the first floor.  The elevator fragility for a multiple story building should only be entered once on the first floor.
+| Construction Quality: Any
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.10.14.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.10.14.012</b> | Traction Elevator – Applies to most California Installations prior to 1976, most western states installations prior to 1982 and most other U.S installations prior to 1998.</p> 
+   <div>
+
+| Costing per elevator.  Elevator demand parameter shall be defined as the peak floor acceleration at the first floor.  The elevator fragility for a multiple story building should only be entered once on the first floor.
+| Construction Quality: Any
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.10.14.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.10.14.021</b> | Hydraulic Elevator – Applies to most California Installations 1976 or later, most western states installations postdating 1982 and most U.S installations postdating 1998.</p> 
+   <div>
+
+| Costing per elevator.  Elevator demand parameter shall be defined as the peak floor acceleration at the first floor.  The elevator fragility for a multiple story building should only be entered once on the first floor.
+| Construction Quality: Any
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.10.14.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.10.14.022</b> | Hydraulic Elevator – Applies to most California Installations prior to 1976, most western states installations prior to 1982 and most U.S installations prior to 1998.</p> 
+   <div>
+
+| Costing per elevator.  Elevator demand parameter shall be defined as the peak floor acceleration at the first floor.  The elevator fragility for a multiple story building should only be entered once on the first floor.
+| Construction Quality: Any
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.10.14.022.html
+
+.. raw:: html
+
+   <hr>

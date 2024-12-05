@@ -1,0 +1,29 @@
+
+
+*************************
+B.30.41 - Masonry Parapet
+*************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.41.001</b> | Masonry Parapet - unreinforced, unbraced</p> 
+   <div>
+
+| Unreinforced and unbraced masonry parapet as a component of a masonry building.  Parapet height / width of approximately 3.  Costing based upon repair of 3ft tall x 10ft segment.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+
+
+Suggested Block Size: 10 LF 
+
+
+
+.. raw:: html
+   :file: B.30.41.001.html
+
+.. raw:: html
+
+   <hr>

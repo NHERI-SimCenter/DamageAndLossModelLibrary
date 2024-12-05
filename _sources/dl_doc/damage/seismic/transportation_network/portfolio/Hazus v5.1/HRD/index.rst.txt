@@ -1,0 +1,44 @@
+
+
+*******************
+HRD - Road segments
+*******************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HRD.GF.1</b> | Major roads including interstate and state highways, other roads with four lanes or more, and parkways; railway tracks/roadbeds; or light rail track/roadbeds.</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HRD.GF.1.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>HRD.GF.2</b> | Urban roads including intercity roads and other roads with two lanes.</p> 
+   <div>
+
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: HRD.GF.2.html
+
+.. raw:: html
+
+   <hr>

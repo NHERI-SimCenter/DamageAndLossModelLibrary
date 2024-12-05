@@ -1,0 +1,161 @@
+
+
+**********************************************************
+LF.S5 - Steel Frame with Unreinforced Masonry Infill Walls
+**********************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.H.LC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| High-Rise Building with more than 8 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.H.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.H.PC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| High-Rise Building with more than 8 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.H.PC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.L.LC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| Low-Rise Building with 1-3 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.L.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.L.PC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| Low-Rise Building with 1-3 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.L.PC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.M.LC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| Mid-Rise Building with 4-7 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.M.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.S5.M.PC</b> | Lifeline Facilities, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: This is one of the older types of buildings. The infill walls usually are offset from the exterior frame members, wrap around them, and present a smooth masonry exterior with no indication of the frame. Solidly infilled masonry panels, when they fully engage the surrounding frame members (i.e., lie in the same plane), may provide stiffness and lateral load resistance to the structure.
+| This is a “composite” structural system where the initial lateral resistance is provided by the infill walls. Upon cracking of the infills, further lateral resistance is provided by the steel frames “braced” by the infill walls acting as diagonal compression struts. Collapse of the structure results when the infill walls disintegrate (due to compression failure of the masonry “struts”) and the steel frame loses its stability.
+| Mid-Rise Building with 4-7 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.S5.M.PC.html
+
+.. raw:: html
+
+   <hr>

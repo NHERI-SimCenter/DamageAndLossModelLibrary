@@ -1,0 +1,1216 @@
+
+
+****************************************************
+D.30.31 - Cooling Generating Systems - Chilled Water
+****************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011a</b> | Chiller - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011b</b> | Chiller - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011c</b> | Chiller - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.011c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011d</b> | Chiller - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.011d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012a</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012b</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012c</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012d</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012e</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012e.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012f</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012f.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012g</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012g.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012h</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012h.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012i</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012i.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012j</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012j.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012k</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012k.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012l</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.012l.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013a</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013b</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013c</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013d</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013e</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013e.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013f</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013f.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013g</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013g.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013h</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013h.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013i</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013i.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013j</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013j.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013k</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013k.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013l</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.013l.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021a</b> | Cooling Tower - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021b</b> | Cooling Tower - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.021b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021c</b> | Cooling Tower - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.021c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021d</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.021d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022a</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022b</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022c</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022e.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022f.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022g.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022h.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022i.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022j.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022k.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.022l.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023a</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023b</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023c</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023e.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023f.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023g.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023h.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023i.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023j.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023k.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: D.30.31.023l.html
+
+.. raw:: html
+
+   <hr>

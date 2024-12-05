@@ -1,0 +1,314 @@
+
+
+*********************************
+B.10.61 - Cold-formed Steel Walls
+*********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.001a</b> | Cold formed steel walls with wood structural panel sheathing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  38 mil cold formed steel framing with 7/16 OSB and 3/8 plywood panel sheathing with overturning restraint at each end of the wall per AISI design standard.  No. 8 screws 2" to 6" OC at perimeter and 12" OC EW in field.  
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restraint at each end of wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.001b</b> | Cold formed steel walls with wood structural panel sheathing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  38 mil cold formed steel framing with 7/16 OSB and 3/8 plywood panel sheathing with overturning restraint at each end of the wall per AISI design standard.  No. 8 screws 2" to 6" OC at perimeter and 12" OC EW in field.  
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restraint at each end of wall.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.011a</b> | Cold formed steel walls with flat strap X-bracing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 4.5 inch x 33 mil flat strap X-bracing on one side.  Straps attached to gussets with No. 8 screws.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.011b</b> | Cold formed steel walls with flat strap X-bracing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 4.5 inch x 33 mil flat strap X-bracing on one side.  Straps attached to gussets with No. 8 screws.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.021a</b> | Cold formed steel walls with 22 or 31 mil steel sheathing, interior - gypsum board</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 22 or 31 mil steel sheathing attached with No. 8 screws spaced 2" or 6" OC at perimeter and 12" OC EW in the field.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.61.021b</b> | Cold formed steel walls with 22 or 31 mil steel sheathing, exterior - stucco one side</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  33 mil cold formed steel framing with 22 or 31 mil steel sheathing attached with No. 8 screws spaced 2" or 6" OC at perimeter and 12" OC EW in the field.
+| Construction Quality: High quality
+| Seismic Installation Conditions: Overturning restrains required and sheathing screws driven flush with the surface of the strapping.
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.61.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.61.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.61.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.61.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

@@ -1,0 +1,361 @@
+
+
+***********************
+B.10.31 - Steel Columns
+***********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.001</b> | Bolted shear tab gravity connections</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.001-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.001-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.001-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.001-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.011a</b> | Steel Column Base Plates, Column W < 150 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.011b</b> | Steel Column Base Plates, Column 150 plf < W < 300 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.011c</b> | Steel Column Base Plates, Column W > 300 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.021a</b> | Welded column splices, Column W < 150 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Fracture is not expected where weld has adequate toughness and the maximum weld root stress is below 1.5Fu from column P/A+M/S under story drift using A and S from weld root area.  
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.021b</b> | Welded column splices, Column 150 plf < W < 300 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Fracture is not expected where weld has adequate toughness and the maximum weld root stress is below 1.5Fu from column P/A+M/S under story drift using A and S from weld root area.  
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.31.021c</b> | Welded column splices, Column W > 300 plf</p> 
+   <div>
+
+| Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Fracture is not expected where weld has adequate toughness and the maximum weld root stress is below 1.5Fu from column P/A+M/S under story drift using A and S from weld root area.  
+| Author: Greg Deierlein
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.31.021c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.31.021c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.31.021c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.31.021c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

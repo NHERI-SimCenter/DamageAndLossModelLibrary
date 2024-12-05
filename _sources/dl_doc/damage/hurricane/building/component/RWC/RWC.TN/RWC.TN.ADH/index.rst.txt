@@ -1,0 +1,122 @@
+
+
+**********************************
+RWC.TN.ADH - To nail with adhesive
+**********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.001</b> | Roof-Wall Connection with Toe nails and acrylic adhesive</p> 
+   <div>
+
+| Adhesive set for one week, toe-nailed when adhesive is wet.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.002</b> | Roof-Wall Connection with Toe nails and soaked with acrylic adhesive.</p> 
+   <div>
+
+| Wood first soaked for 24 hours, then toe-nailed when adhesive is wet.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.003</b> | Roof-Wall Connection with Toe nails and acrylic adhesive on small wood blocks.</p> 
+   <div>
+
+| Adhesive set for one week.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.003.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.004</b> | Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.004.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.005</b> | Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.005.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.ADH.006</b> | Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.ADH.006.html
+
+.. raw:: html
+
+   <hr>

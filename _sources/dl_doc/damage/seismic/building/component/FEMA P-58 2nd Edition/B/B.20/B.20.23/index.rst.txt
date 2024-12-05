@@ -1,0 +1,323 @@
+
+
+*********************
+B.20.23 - Storefronts
+*********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.001</b> | Generic Storefront, Config: Monolithic, Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+| Notes: None  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.002</b> | Generic Storefront, Config: IGU, Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.011</b> | Storefront, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN LAM (0.030 PVB); glass-frame clearance = 0.41 in. (10 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.021</b> | Storefront, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.41 in. (10 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.031</b> | Storefront, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 3/8 in. (10 mm) FT monolithic, Planar Specimen; glass-frame clearance = 0.5 in. (13 mm); aspect ratio = 1.93:1 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.031.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.032</b> | Storefront, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 3/8 in. (10 mm) FT monolithic, Corner Cond. Specimen, in-plane; glass-frame clearance = 0.5 in. (13 mm); aspect ratio = 1.93:1 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.032.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.033</b> | Storefront, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 3/8 in. (10 mm) FT monolithic, Corner Cond. Specimen, combined; glass-frame clearance = 0.5 in. (13 mm); aspect ratio = 1.93:1 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.033.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.034</b> | Storefront, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 3/8 in. (10 mm) FT monolithic, Corner Cond. Specimen, Short side; glass-frame clearance = 0.5 in. (13 mm); aspect ratio = 2.72:1 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.034.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.041</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU; glass-frame clearance = 0.59 in. (15 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.041.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.051</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Planar Specimen; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.89:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.051.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.052</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, in-plane; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.89:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.052.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.053</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, combined; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.89:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.053.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.054</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, Short side; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2.83:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.054.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.055</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Planar Specimen; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.88:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.055.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.056</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, in-plane; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.88:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.056.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.057</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, combined; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1.88:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.057.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.23.058</b> | Storefront, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], Corner Cond. Specimen, Short side; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2.82:1 sealant = dry</p> 
+   <div>
+
+| Notes: Median demand of 10% is intentional.  Physical testing did not cause frame or glass cracking damage at 10% drift.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.23.058.html
+
+.. raw:: html
+
+   <hr>

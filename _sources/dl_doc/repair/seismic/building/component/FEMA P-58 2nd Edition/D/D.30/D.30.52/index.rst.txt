@@ -1,0 +1,832 @@
+
+
+**********************************
+D.30.52 - Terminal & Package Units
+**********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.011a</b> | Air Handling Unit - Capacity: <5000 CFM - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 4000 CFM.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.011b</b> | Air Handling Unit - Capacity: 5000 to <10000 CFM - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 8000 CFM.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.011c</b> | Air Handling Unit - Capacity: 10000 to <25000 CFM - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 20000 CFM.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.011d</b> | Air Handling Unit - Capacity: 25000 to <40000 CFM - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 30000 CFM.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.011d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.011d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.011d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.011d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013a</b> | Air Handling Unit - Capacity: <5000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 4000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013b</b> | Air Handling Unit - Capacity: <5000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 4000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013c</b> | Air Handling Unit - Capacity: <5000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 4000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013d</b> | Air Handling Unit - Capacity: 5000 to <10000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 8000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013e</b> | Air Handling Unit - Capacity: 5000 to <10000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 8000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013f</b> | Air Handling Unit - Capacity: 5000 to <10000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 8000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013g</b> | Air Handling Unit - Capacity: 10000 to <25000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 20000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013h</b> | Air Handling Unit - Capacity: 10000 to <25000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 20000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013i</b> | Air Handling Unit - Capacity: 10000 to <25000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 20000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013j</b> | Air Handling Unit - Capacity: 25000 to <40000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 30000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013k</b> | Air Handling Unit - Capacity: 25000 to <40000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 30000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.52.013l</b> | Air Handling Unit - Capacity: 25000 to <40000 CFM - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 30000 CFM.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.52.013l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.52.013l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.52.013l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.52.013l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

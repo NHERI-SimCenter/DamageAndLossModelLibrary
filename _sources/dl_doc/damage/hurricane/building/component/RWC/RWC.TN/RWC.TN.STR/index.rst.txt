@@ -1,0 +1,141 @@
+
+
+*********************************
+RWC.TN.STR - Toe nail with straps
+*********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.001</b> | Roof-Wall Connection with Toe nails and a small strap inside</p> 
+   <div>
+
+| The small strap is located on the inside of the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.002</b> | Roof-Wall Connection with Toe nails and a small strap outside</p> 
+   <div>
+
+| The small strap is located on the outside of the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.003</b> | Roof-Wall Connection with Toe nails and small straps on both sides</p> 
+   <div>
+
+| Two small straps are installed, one inside and one outside of the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.003.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.004</b> | Roof-Wall Connection with Toe nails, a small strap outside, and plywood nailed.</p> 
+   <div>
+
+| The small strap is located on the outside of the wall. A plywood is nailed to the plate on the wall as spacer.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.004.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.005</b> | Roof-Wall Connection with Toe nails, a small strap outside, and plywood not nailed.</p> 
+   <div>
+
+| The small strap is located on the outside of the wall. A plywood is installed as spacer but not nailed to the plate on the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.005.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.006</b> | Roof-Wall Connection with Toe nails and a large strap outside</p> 
+   <div>
+
+| The large strap is located on the outside of the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.006.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.STR.007</b> | Roof-Wall Connection with Toe nails and a large strap inside</p> 
+   <div>
+
+| The large strap is located on the inside of the wall.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.STR.007.html
+
+.. raw:: html
+
+   <hr>

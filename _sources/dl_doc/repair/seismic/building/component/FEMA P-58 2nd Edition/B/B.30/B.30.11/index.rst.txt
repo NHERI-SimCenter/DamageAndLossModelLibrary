@@ -1,0 +1,212 @@
+
+
+************************
+B.30.11 - Roof Coverings
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.011</b> | Concrete tile roof, tiles secured and compliant with UBC94</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.11.011-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.11.011-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.11.011-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.11.011-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.012</b> | Clay tile roof, tiles secured and compliant with UBC94</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.11.012-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.11.012-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.11.012-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.11.012-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.013</b> | Concrete tile roof, unsecured tiles</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.11.013-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.11.013-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.11.013-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.11.013-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.014</b> | Clay tile roof, unsecured tiles</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.11.014-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.11.014-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.11.014-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.11.014-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

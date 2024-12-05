@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../../../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F.10.12 - Special Structures &mdash; Damage and Loss Model Library  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+      <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/css/custom.css?v=fa5cca48" />
+
+  
+      <script src="../../../../../../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../../../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../../../../../../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../../../../../../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../../../../../../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../../../../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../search.html" />
+    <link rel="next" title="Hazus Earthquake Methodology - Buildings" href="../../../../../portfolio/Hazus%20v5.1/index.html" />
+    <link rel="prev" title="F.10 - Special Construction" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #F2F2F2" >
+
+          
+          
+          <a href="../../../../../../../../../index.html">
+            
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../release_notes/index.html">Release Notes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../../../release_notes/index.html#version-1">Version 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../../release_notes/v1.0.html">Version 1.0 (May 19, 2023)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../../../../index.html">Damage Models</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../hurricane/building/component/index.html">SimCenter Hurricane Component Library</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/index.html">RWC - Roof-Wall Connection</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.EPX/index.html">RWC.EPX - Epoxy only</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.HCL/index.html">RWC.HCL - Hurricane Clip</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.STR/index.html">RWC.STR - Straps only</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.TN/index.html">RWC.TN - Toe nail</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.TN/RWC.TN.STR/index.html">RWC.TN.STR - Toe nail with straps</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.TN/RWC.TN.EPX/index.html">RWC.TN.EPX - To nail and epoxy</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/RWC/RWC.TN/RWC.TN.ADH/index.html">RWC.TN.ADH - To nail with adhesive</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html">WIN - Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-001b">WIN.001b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-002">WIN.002</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-003">WIN.003</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-004">WIN.004</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-005">WIN.005</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-006">WIN.006</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-007a">WIN.007a</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-007b">WIN.007b</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-008">WIN.008</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-009">WIN.009</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-010">WIN.010</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-011">WIN.011</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/WIN/index.html#win-012">WIN.012</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/index.html">DOR - Doors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html">DOR.REG - Regular Doors</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-001b">DOR.REG.001b</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-001c">DOR.REG.001c</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-002">DOR.REG.002</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-003">DOR.REG.003</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-004a">DOR.REG.004a</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-004b">DOR.REG.004b</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.REG/index.html#dor-reg-005">DOR.REG.005</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html">DOR.GAR - Garage Doors</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-001b">DOR.GAR.001b</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-001c">DOR.GAR.001c</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-001d">DOR.GAR.001d</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-002">DOR.GAR.002</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-003">DOR.GAR.003</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-004">DOR.GAR.004</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../hurricane/building/component/DOR/DOR.GAR/index.html#dor-gar-005">DOR.GAR.005</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Transportation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../transportation_network/portfolio/Hazus%20v5.1/HRD/index.html">HRD - Road segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../transportation_network/portfolio/Hazus%20v5.1/HWB/index.html">HWB - Bridges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../transportation_network/portfolio/Hazus%20v5.1/HTU/index.html">HTU - Tunnels</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">FEMA P-58 2nd Edition</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../B/index.html">B - Shell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../B/B.10/index.html">B.10 - Super Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.31/index.html">B.10.31 - Steel Columns</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.33/index.html">B.10.33 - Steel Braces</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.35/index.html">B.10.35 - Steel Connections</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.41/index.html">B.10.41 - RC or Composite Columns</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.42/index.html">B.10.42 - RC or Composite Beams</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.44/index.html">B.10.44 - RC or Composite Shearwalls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.49/index.html">B.10.49 - RC Flat Slabs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.51/index.html">B.10.51 - Ordinary Reinforced Masonry Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.52/index.html">B.10.52 - Special Reinforced Masonry Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.61/index.html">B.10.61 - Cold-formed Steel Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.10/B.10.71/index.html">B.10.71 - Wood Light Frame</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../B/B.20/index.html">B.20 - Exterior Enclosure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.20/B.20.11/index.html">B.20.11 - Exterior Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.20/B.20.22/index.html">B.20.22 - Curtain Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.20/B.20.23/index.html">B.20.23 - Storefronts</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../B/B.30/index.html">B.30 - Roofing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.30/B.30.11/index.html">B.30.11 - Roof Coverings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.30/B.30.31/index.html">B.30.31 - Masonry Chimney</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../B/B.30/B.30.41/index.html">B.30.41 - Masonry Parapet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../C/index.html">C - Interiors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../C/C.10/index.html">C.10 - Interior Construction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.10/C.10.11/index.html">C.10.11 - Partitions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../C/C.20/index.html">C.20 - Stairs</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.20/C.20.11/index.html">C.20.11 - Stair Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../C/C.30/index.html">C.30 - Interior Finishes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.30/C.30.11/index.html">C.30.11 - Wall Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.30/C.30.21/index.html">C.30.21 - Floor Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.30/C.30.27/index.html">C.30.27 - Access Pedastal Flooring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.30/C.30.32/index.html">C.30.32 - Ceiling Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../C/C.30/C.30.34/index.html">C.30.34 - Independent Pendant Lighting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../D/index.html">D - Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../D/D.10/index.html">D.10 - Conveying</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.10/D.10.14/index.html">D.10.14 - Elevators &amp; Lifts</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../D/D.20/index.html">D.20 - Plumbing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.20/D.20.21/index.html">D.20.21 - Domestic Water Distribution - Cold Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.20/D.20.22/index.html">D.20.22 - Domestic Water Distribution - Hot Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.20/D.20.31/index.html">D.20.31 - Sanitary Waste</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.20/D.20.51/index.html">D.20.51 - Chilled Water Distribution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.20/D.20.61/index.html">D.20.61 - Steam Distribution</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../D/D.30/index.html">D.30 - HVAC</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.30/D.30.31/index.html">D.30.31 - Cooling Generating Systems - Chilled Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.30/D.30.32/index.html">D.30.32 - Cooling Generating Systems - Direct Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.30/D.30.41/index.html">D.30.41 - Air Distribution Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.30/D.30.52/index.html">D.30.52 - Terminal &amp; Package Units</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.30/D.30.67/index.html">D.30.67 - Controls and Instrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../D/D.40/index.html">D.40 - Fire Protection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.40/D.40.11/index.html">D.40.11 - Sprinklers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../D/D.50/index.html">D.50 - Electrical</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.50/D.50.11/index.html">D.50.11 - Electrical Service &amp; Distribution - High Tension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.50/D.50.12/index.html">D.50.12 - Electrical Service &amp; Distribution - Low Tension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../D/D.50/D.50.92/index.html">D.50.92 - Other Electrical Systems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../E/index.html">E - Equipments and furnishings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../E/E.20/index.html">E.20 - Furnishings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../E/E.20/E.20.22/index.html">E.20.22 - Movable Furnishings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">F - Special Construction &amp; Demolition</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">F.10 - Special Construction</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">F.10.12 - Special Structures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/GF/index.html">GF - Geotechnical Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/GF/GF.H/index.html">GF.H - Horizontal Spreading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/GF/GF.V/index.html">GF.V - Vertical Settlement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.W1/index.html">LF.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.W2/index.html">LF.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.S1/index.html">LF.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.S2/index.html">LF.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.S3/index.html">LF.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.S4/index.html">LF.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.S5/index.html">LF.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.C1/index.html">LF.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.C2/index.html">LF.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.C3/index.html">LF.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.PC1/index.html">LF.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.PC2/index.html">LF.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.RM1/index.html">LF.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.RM2/index.html">LF.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.URM/index.html">LF.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/LF/LF.MH/index.html">LF.MH - Mobile Homes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/index.html">STR - Structural</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.W1/index.html">STR.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.W2/index.html">STR.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.S1/index.html">STR.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.S2/index.html">STR.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.S3/index.html">STR.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.S4/index.html">STR.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.S5/index.html">STR.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.C1/index.html">STR.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.C2/index.html">STR.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.C3/index.html">STR.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.PC1/index.html">STR.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.PC2/index.html">STR.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.RM1/index.html">STR.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.RM2/index.html">STR.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.URM/index.html">STR.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../portfolio/Hazus%20v5.1/STR/STR.MH/index.html">STR.MH - Mobile Homes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/GF/index.html">GF - Geotechnical Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/GF/GF.H/index.html">GF.H - Horizontal Spreading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/GF/GF.V/index.html">GF.V - Vertical Settlement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.W1/index.html">LF.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.W2/index.html">LF.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.S1/index.html">LF.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.S2/index.html">LF.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.S3/index.html">LF.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.S4/index.html">LF.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.S5/index.html">LF.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.C1/index.html">LF.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.C2/index.html">LF.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.C3/index.html">LF.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.PC1/index.html">LF.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.PC2/index.html">LF.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.RM1/index.html">LF.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.RM2/index.html">LF.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.URM/index.html">LF.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/LF/LF.MH/index.html">LF.MH - Mobile Homes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/index.html">STR - Structural</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.W1/index.html">STR.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.W2/index.html">STR.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.S1/index.html">STR.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.S2/index.html">STR.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.S3/index.html">STR.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.S4/index.html">STR.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.S5/index.html">STR.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.C1/index.html">STR.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.C2/index.html">STR.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.C3/index.html">STR.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.PC1/index.html">STR.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.PC2/index.html">STR.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.RM1/index.html">STR.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.RM2/index.html">STR.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.URM/index.html">STR.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../subassembly/Hazus%20v5.1/STR/STR.MH/index.html">STR.MH - Mobile Homes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../repair/index.html">Repair Consequence Models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../../repair/seismic/transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Transportation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/transportation_network/portfolio/Hazus%20v5.1/HRD/index.html">HRD - Road segments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/transportation_network/portfolio/Hazus%20v5.1/HWB/index.html">HWB - Bridges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/transportation_network/portfolio/Hazus%20v5.1/HTU/index.html">HTU - Tunnels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/index.html">FEMA P-58 2nd Edition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/index.html">B - Shell</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/index.html">B.10 - Super Structure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.31/index.html">B.10.31 - Steel Columns</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.33/index.html">B.10.33 - Steel Braces</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.35/index.html">B.10.35 - Steel Connections</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.41/index.html">B.10.41 - RC or Composite Columns</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.42/index.html">B.10.42 - RC or Composite Beams</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.44/index.html">B.10.44 - RC or Composite Shearwalls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.49/index.html">B.10.49 - RC Flat Slabs</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.51/index.html">B.10.51 - Ordinary Reinforced Masonry Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.52/index.html">B.10.52 - Special Reinforced Masonry Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.61/index.html">B.10.61 - Cold-formed Steel Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.10/B.10.71/index.html">B.10.71 - Wood Light Frame</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.20/index.html">B.20 - Exterior Enclosure</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.20/B.20.11/index.html">B.20.11 - Exterior Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.20/B.20.22/index.html">B.20.22 - Curtain Walls</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.20/B.20.23/index.html">B.20.23 - Storefronts</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.30/index.html">B.30 - Roofing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.30/B.30.11/index.html">B.30.11 - Roof Coverings</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.30/B.30.31/index.html">B.30.31 - Masonry Chimney</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/B/B.30/B.30.41/index.html">B.30.41 - Masonry Parapet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/index.html">C - Interiors</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.10/index.html">C.10 - Interior Construction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.10/C.10.11/index.html">C.10.11 - Partitions</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.20/index.html">C.20 - Stairs</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.20/C.20.11/index.html">C.20.11 - Stair Construction</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/index.html">C.30 - Interior Finishes</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/C.30.11/index.html">C.30.11 - Wall Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/C.30.21/index.html">C.30.21 - Floor Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/C.30.27/index.html">C.30.27 - Access Pedastal Flooring</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/C.30.32/index.html">C.30.32 - Ceiling Finishes</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/C/C.30/C.30.34/index.html">C.30.34 - Independent Pendant Lighting</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/index.html">D - Services</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.10/index.html">D.10 - Conveying</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.10/D.10.14/index.html">D.10.14 - Elevators &amp; Lifts</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/index.html">D.20 - Plumbing</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/D.20.21/index.html">D.20.21 - Domestic Water Distribution - Cold Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/D.20.22/index.html">D.20.22 - Domestic Water Distribution - Hot Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/D.20.31/index.html">D.20.31 - Sanitary Waste</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/D.20.51/index.html">D.20.51 - Chilled Water Distribution</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.20/D.20.61/index.html">D.20.61 - Steam Distribution</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/index.html">D.30 - HVAC</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/D.30.31/index.html">D.30.31 - Cooling Generating Systems - Chilled Water</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/D.30.32/index.html">D.30.32 - Cooling Generating Systems - Direct Expansion</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/D.30.41/index.html">D.30.41 - Air Distribution Systems</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/D.30.52/index.html">D.30.52 - Terminal &amp; Package Units</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.30/D.30.67/index.html">D.30.67 - Controls and Instrumentation</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.40/index.html">D.40 - Fire Protection</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.40/D.40.11/index.html">D.40.11 - Sprinklers</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.50/index.html">D.50 - Electrical</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.50/D.50.11/index.html">D.50.11 - Electrical Service &amp; Distribution - High Tension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.50/D.50.12/index.html">D.50.12 - Electrical Service &amp; Distribution - Low Tension</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/D/D.50/D.50.92/index.html">D.50.92 - Other Electrical Systems</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/E/index.html">E - Equipments and furnishings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/E/E.20/index.html">E.20 - Furnishings</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/E/E.20/E.20.22/index.html">E.20.22 - Movable Furnishings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/F/index.html">F - Special Construction &amp; Demolition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/F/F.10/index.html">F.10 - Special Construction</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../../../../repair/seismic/building/component/FEMA%20P-58%202nd%20Edition/F/F.10/F.10.12/index.html">F.10.12 - Special Structures</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../../repair/seismic/building/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/portfolio/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/portfolio/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/portfolio/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/portfolio/Hazus%20v5.1/STR/index.html">STR - Structural</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../../../../repair/seismic/building/subassembly/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/subassembly/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/subassembly/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/subassembly/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../../../repair/seismic/building/subassembly/Hazus%20v5.1/STR/index.html">STR - Structural</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #F2F2F2" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../../../../../index.html">Damage and Loss Model Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../../../../index.html">Damage Models</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">FEMA P-58 2nd Edition</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">F - Special Construction &amp; Demolition</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">F.10 - Special Construction</a></li>
+      <li class="breadcrumb-item active">F.10.12 - Special Structures</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="f-10-12-special-structures">
+<h1>F.10.12 - Special Structures<a class="headerlink" href="#f-10-12-special-structures" title="Link to this heading"></a></h1>
+<p>The following models are available:</p>
+<p class="dl_comp_name"><b>F.10.12.001</b> | Storage racks designed and installed before 2007, big box retail (12' to 15' tall)</p>
+<div><div class="line-block">
+<div class="line">Standard pallet back to back storage rack.  Three to five levels tall with total height from 15 to 20 ft.  Costing assumes one single side access rack.  Costing of rack and restocking based upon 50 LF of rack.  Costing of rack contents to be furnished by user.</div>
+<div class="line">Construction Quality: Normal</div>
+<div class="line">Seismic Installation Conditions: Varies</div>
+</div>
+<p>Suggested Block Size: 50 LF</p>
+<div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>                <div id="e7019fb7-e13c-47e5-a12f-2b536eb500e7" class="plotly-graph-div" style="height:300px; width:950px;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e7019fb7-e13c-47e5-a12f-2b536eb500e7")) {                    Plotly.newPlot(                        "e7019fb7-e13c-47e5-a12f-2b536eb500e7",                        [{"line":{"color":"rgb(222,45,38)","width":3},"mode":"lines","name":"LS1","x":[0.16562323857433936,0.17103368697362054,0.17644413537290174,0.18185458377218292,0.18726503217146412,0.1926754805707453,0.19808592897002647,0.20349637736930767,0.20890682576858885,0.21431727416787005,0.21972772256715123,0.2251381709664324,0.2305486193657136,0.2359590677649948,0.241369516164276,0.24677996456355716,0.25219041296283834,0.25760086136211957,0.26301130976140075,0.2684217581606819,0.2738322065599631,0.2792426549592443,0.28465310335852545,0.2900635517578067,0.29547400015708786,0.30088444855636903,0.30629489695565026,0.31170534535493144,0.3171157937542126,0.3225262421534938,0.32793669055277497,0.33334713895205614,0.3387575873513373,0.3441680357506185,0.3495784841498997,0.3549889325491809,0.36039938094846213,0.3658098293477433,0.3712202777470245,0.37663072614630566,0.38204117454558684,0.387451622944868,0.3928620713441492,0.39827251974343036,0.4036829681427116,0.40909341654199277,0.414503864941274,0.4199143133405552,0.42532476173983635,0.43073521013911753,0.4361456585383987,0.4415561069376799,0.4469665553369611,0.4523770037362423,0.45778745213552346,0.46319790053480464,0.4686083489340858,0.47401879733336705,0.4794292457326482,0.4848396941319294,0.4902501425312106,0.49566059093049175,0.501071039329773,0.5064814877290542,0.5118919361283354,0.5173023845276166,0.5227128329268977,0.5281232813261789,0.5335337297254601,0.5389441781247413,0.5443546265240224,0.5497650749233036,0.5551755233225848,0.560585971721866,0.5659964201211471,0.5714068685204283,0.5768173169197095,0.5822277653189908,0.587638213718272,0.5930486621175531,0.5984591105168343,0.6038695589161155,0.6092800073153968,0.614690455714678,0.6201009041139591,0.6255113525132403,0.6309218009125215,0.6363322493118027,0.6417426977110838,0.647153146110365,0.6525635945096462,0.6579740429089274,0.6633844913082085,0.6687949397074897,0.674205388106771,0.6796158365060522,0.6850262849053333,0.6904367333046145,0.6958471817038957,0.7012576301031769],"y":[0.01,0.01235247039787625,0.015074550710070942,0.018191619276005665,0.021726749773350526,0.0257003950214667,0.030130134557359477,0.03503048639775896,0.040412781457564564,0.04628509752741086,0.052652248510040356,0.059515823750640205,0.06687427173525555,0.07472302213380612,0.08305464008830649,0.09185900675152842,0.1011235203277947,0.1108333122205521,0.12097147331960878,0.13151928593750511,0.14245645740681018,0.15376135185967676,0.1654112172130272,0.17738240486592716,0.1896505800716924,0.20219092137023226,0.2149783078523786,0.22798749337555818,0.2411932671586015,0.25457060045331387,0.26809477922307956,0.28174152295620736,0.29548708990640327,0.3093083691873365,0.32318296025554993,0.33708924039882104,0.35100642090828005,0.3649145926548346,0.37879476181631033,0.39262887651353384,0.40639984511360727,0.4200915469487899,0.4336888361815713,0.44717753952224726,0.46054444847605913,0.4737773067639308,0.48686479352515216,0.4997965028728995,0.5125629203350791,0.5251553966742463,0.5375661195418748,0.5497880833844497,0.5618150579820993,0.5736415559650497,0.5852627996192872,0.596674687260606,0.6078737594258071,0.6188571651012625,0.6296226281823993,0.6401684143328757,0.65049329838932,0.6605965324364048,0.6704778146577138,0.6801372590502176,0.689575366074175,0.6987929942957838,0.7077913330668835,0.7165718762743346,0.7251363971812934,0.7334869243733713,0.7416257188145415,0.7495552520105175,0.7572781852711344,0.764797350057906,0.7721157293983476,0.7792364403447789,0.7861627174520692,0.7928978972461305,0.7994454036527904,0.8058087343550039,0.8119914480450612,0.8179971525375458,0.8238294937081949,0.8294921452235022,0.8349887990258449,0.8403231565390612,0.8454989205597442,0.8505197878000148,0.8553894420481647,0.860111547914302,0.8646897451289701,0.8691276433636218,0.8734288175427992,0.8775968036188919,0.8816350947813955,0.8855471380736646,0.8893363313912502,0.8930060208369979,0.8965594984091767,0.9],"type":"scatter","xaxis":"x","yaxis":"y"},{"cells":{"align":["center","left","center","center","center"],"fill":{"color":"rgba(0,0,0,0)"},"font":{"color":"black","size":16},"height":30,"line":{"color":"black"},"values":[["LS1"],["DS1 (60%)\u003cbr\u003eDS2 (40%)"],[0.42],["lognormal"],[0.4]]},"columnwidth":[50,70,65,95,80],"header":{"align":["center","left","center","center","center"],"fill":{"color":"rgb(200,200,200)"},"font":{"color":"black","size":16},"line":{"color":"black"},"values":["\u003cb\u003eLimit\u003cbr\u003eState\u003c\u002fb\u003e","\u003cb\u003eDamage State(s)\u003c\u002fb\u003e","\u003cb\u003e Median\u003cbr\u003eCapacity\u003c\u002fb\u003e","\u003cb\u003e  Capacity\u003cbr\u003eDistribution\u003c\u002fb\u003e","\u003cb\u003e  Capacity\u003cbr\u003eDispersion\u003c\u002fb\u003e"]},"type":"table","domain":{"x":[0.41200000000000003,1.0],"y":[0.0,1.0]}}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,0.392],"title":{"text":"Peak Floor Acceleration [g]"},"showgrid":true,"linecolor":"black","gridwidth":0.05,"gridcolor":"rgb(192,192,192)"},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"P(LS\u2265ls\u003csub\u003ei\u003c\u002fsub\u003e)"},"range":[0,1.01],"showgrid":true,"linecolor":"black","gridwidth":0.05,"gridcolor":"rgb(192,192,192)"},"annotations":[{"ax":0,"axref":"pixel","ay":0,"ayref":"pixel","font":{"size":10},"hovertext":"\u003cb\u003eDS1\u003c\u002fb\u003e\u003cbr\u003eSignificant merchandise shedding from rack shelves.\u003cbr\u003e\u003cbr\u003e\u003cb\u003eRepair Action\u003c\u002fb\u003e\u003cbr\u003eMinor repair to storage rack.  Resort and restock shelves.  Clean up\u003cbr\u003edebris.","showarrow":false,"text":"\u003cb\u003e*\u003c\u002fb\u003e","x":0.4928,"xanchor":"left","xref":"paper","y":0.6789999999999999,"yanchor":"bottom","yref":"paper"},{"ax":0,"axref":"pixel","ay":0,"ayref":"pixel","font":{"size":10},"hovertext":"\u003cb\u003eDS2\u003c\u002fb\u003e\u003cbr\u003eSignificant structural damage to rack structure.\u003cbr\u003e\u003cbr\u003e\u003cb\u003eRepair Action\u003c\u002fb\u003e\u003cbr\u003eRemove and replace storage rack system.  Make minor repair to adjacent\u003cbr\u003efinishes.  Resort and restock shelves.  Clean up debris.","showarrow":false,"text":"\u003cb\u003e*\u003c\u002fb\u003e","x":0.4928,"xanchor":"left","xref":"paper","y":0.593,"yanchor":"bottom","yref":"paper"}],"margin":{"b":5,"r":5,"l":5,"t":5},"height":300,"width":950,"paper_bgcolor":"rgba(0,0,0,0)","plot_bgcolor":"rgba(0,0,0,0)","showlegend":false},                        {"responsive": true}                    )                };                            </script>        </div><hr></section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Leland Stanford Junior University and The Regents of the University of California.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

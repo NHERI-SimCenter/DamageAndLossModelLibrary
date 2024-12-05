@@ -1,0 +1,8 @@
+
+
+**************************************************************************
+LF.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms
+**************************************************************************
+
+The following models are available:
+

@@ -1,0 +1,92 @@
+
+
+************************
+B.30.11 - Roof Coverings
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.011</b> | Concrete tile roof, tiles secured and compliant with UBC94</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.30.11.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.012</b> | Clay tile roof, tiles secured and compliant with UBC94</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.30.11.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.013</b> | Concrete tile roof, unsecured tiles</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.30.11.013.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.11.014</b> | Clay tile roof, unsecured tiles</p> 
+   <div>
+
+| Costing per roofing square (100 SF)
+| Construction Quality: Any
+| Seismic Installation Conditions: Compliant with UBC 1994
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.30.11.014.html
+
+.. raw:: html
+
+   <hr>

@@ -1,0 +1,3839 @@
+
+
+**********************
+B.10.33 - Steel Braces
+**********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.001c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.001c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.001c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.001c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.001c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.002a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.002a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.002a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.002a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.002b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.002b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.002b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.002b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.002c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.002c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.002c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.002c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.002c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003a</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.003a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.003a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.003a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.003a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003b</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.003b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.003b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.003b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.003b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.003c</b> | Special Concentric Braced Frame w WF braces, balanced design criteria, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.003c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.003c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.003c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.003c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.011c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.012a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.012a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.012a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.012a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.012b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.012b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.012b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.012b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.012c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.012c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.012c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.012c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.012c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013a</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013b</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.013c</b> | Special Concentric Braced Frame w HSS braces, balanced design criteria, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.021c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.021c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.021c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.021c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.021c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.022b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.022b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.022b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.022b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.022c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.022c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.022c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.022c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.022c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023a</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023b</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.023c</b> | Special Concentric Braced Frame w HSS braces, tapered gusset plates & design to AISC minimum standard, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.023c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.023c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.023c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.023c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031a</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031b</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.031b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.031b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.031b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.031b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.031c</b> | Special Concentric Braced Frame, design to AISC minimum standards, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.031c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.031c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.031c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.031c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032a</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.032a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.032a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.032a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.032a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032b</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.032b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.032b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.032b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.032b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.032c</b> | Special Concentric Braced Frame, design to AISC minimum standards, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.032c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.032c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.032c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.032c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033a</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.033a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.033a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.033a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.033a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033b</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.033b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.033b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.033b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.033b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.033c</b> | Special Concentric Braced Frame, design to AISC minimum standards, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.033c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.033c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.033c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.033c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041a</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.041a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.041a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.041a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.041a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041b</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.041b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.041b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.041b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.041b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.041c</b> | Special Concentric Braced Frame w double angle braces, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.041c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.041c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.041c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.041c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042a</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.042a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.042a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.042a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.042a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042b</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.042b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.042b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.042b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.042b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.042c</b> | Special Concentric Braced Frame w double angle braces, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.042c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.042c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.042c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.042c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043a</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.043a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.043a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.043a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.043a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043b</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.043b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.043b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.043b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.043b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.043c</b> | Special Concentric Braced Frame w double angle braces, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.043c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.043c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.043c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.043c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051a</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.051a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.051a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.051a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.051a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051b</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.051b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.051b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.051b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.051b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.051c</b> | Ordinary Concentric Braced Frame w compact braces, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.051c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.051c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.051c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.051c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052a</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.052a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.052a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.052a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.052a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052b</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.052b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.052b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.052b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.052b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.052c</b> | Ordinary Concentric Braced Frame w compact braces, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.052c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.052c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.052c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.052c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053a</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.053a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.053a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.053a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.053a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053b</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.053b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.053b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.053b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.053b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.053c</b> | Ordinary Concentric Braced Frame w compact braces, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.053c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.053c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.053c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.053c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.061a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.061a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.061a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.061a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.061b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.061b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.061b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.061b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.061c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.061c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.061c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.061c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.061c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.062a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.062a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.062a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.062a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.062b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.062b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.062b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.062b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.062c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.062c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.062c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.062c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.062c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063a</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.063a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.063a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.063a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.063a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063b</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.063b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.063b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.063b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.063b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.063c</b> | Ordinary Concentric Braced Frame, braces design to ductile slenderness limits, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.063c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.063c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.063c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.063c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071a</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.071a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.071a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.071a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.071a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071b</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.071b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.071b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.071b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.071b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.071c</b> | Braced frame, design for factored loads, no additional seismic detailing, Chevron Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.071c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.071c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.071c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.071c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072a</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.072a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.072a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.072a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.072a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072b</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace,  41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.072b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.072b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.072b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.072b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.072c</b> | Braced frame, design for factored loads, no additional seismic detailing, Single Diagonal Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.072c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.072c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.072c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.072c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073a</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace w < 40 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.073a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.073a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.073a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.073a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073b</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace 41 PLF < w < 99 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.073b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.073b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.073b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.073b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.073c</b> | Braced frame, design for factored loads, no additional seismic detailing, X Brace, Brace w > 100 PLF</p> 
+   <div>
+
+| Costing on a per bay basis, equivalent to current AISC R=3.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
+| Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.073c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.073c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.073c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.073c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101a</b> | Steel Buckling Restrained Brace (BRB), Chevron Brace, Weight of brace < 40 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.101a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.101a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.101a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.101a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101b</b> | Steel Buckling Restrained Brace (BRB), Chevron brace, Weight of brace > 41 plf and < 99 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.101b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.101b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.101b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.101b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.101c</b> | Steel Buckling Restrained Brace (BRB), Chevron Brace, Weight of brace > 100 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.101c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.101c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.101c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.101c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111a</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal Brace, Weight of brace < 40 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.111a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.111a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.111a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.111a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111b</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal brace, Weight of brace > 41 plf and < 99 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.111b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.111b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.111b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.111b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.33.111c</b> | Steel Buckling Restrained Brace (BRB), Single Diagonal Brace, Weight of brace > 100 plf.</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.33.111c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.33.111c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.33.111c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.33.111c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

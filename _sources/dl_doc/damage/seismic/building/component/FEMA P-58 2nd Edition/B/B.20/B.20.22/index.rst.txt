@@ -1,0 +1,569 @@
+
+
+***********************
+B.20.22 - Curtain Walls
+***********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.001</b> | Curtain Walls - Generic Midrise Stick-Built Curtain wall, Config: Monolithic, Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.002</b> | Curtain Walls - Generic Midrise Stick-Built Curtain wall, Config: Insulating Glass Units (dual pane), Lamination: Unknown, Glass Type: Unknown, Details: Aspect ratio = 6:5,  Other details Unknown</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.011</b> | Midrise stick-built curtain wall, Config: Asymmetric insulating glass units (dual-pane, unequal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/2 in. (13 mm) outer AN LAM (0.030 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.021</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN LAM (0.030 PVB); glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.022</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN laminated, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.022.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.023</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN laminated, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.  User to confirm damage state, repair, lead time, and casualty data.  This component requires user specified cost and time consequence data.  Values within PACT are defaults (equal to zero) and do not represent actual consequence.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.023.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.031</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.031.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.032</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0 in. (0 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.032.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.033</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.13 in. (3 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.033.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.034</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.25 in. (6 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.034.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.035</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2:1 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 32 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.035.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.036</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1:2 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 32 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.036.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.037</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.037.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.038</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.038.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.039</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.039.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.040</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 2:1 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.040.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.041</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) AN monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 1:2 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.041.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.051</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.051.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.052</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.052.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.053</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, Seamed Edge; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.053.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.054</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Full tempered, Details: 1/4 in. (6 mm) FT monolithic, Polished Edge; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.054.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.061</b> | Midrise stick-built curtain wall, Config: Monolithic, Lamination: Not laminated, Glass Type: Heat strengthened, Details: 1/4 in. (6 mm) HS monolithic; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.061.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.071</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/4 in. (6 mm) outer AN LAM (0.030 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.071.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.072</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Laminated, Glass Type: Annealed, Details: 1/4 in. (6 mm) inner AN / 1/4 in. (6 mm) outer AN LAM (0.060 PVB) IGU; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.072.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.081</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN insulating glass unit (IGU) [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.081.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.082</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.25 in. (6 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.082.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.083</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes], 2-sided SSG, Center Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.083.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.084</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Annealed, Details: 1 in. (25 mm) AN IGU [1/4 in. (6 mm) inner and outer panes], 2-sided SSG, Outside Panel; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = wet</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.084.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.091</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1 in. (25 mm) FT IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.091.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.101</b> | Midrise stick-built curtain wall, Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Heat strengthened, Details: 1 in. (25 mm) HS IGU [1/4 in. (6 mm) inner and outer panes]; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = 6:5 sealant = dry</p> 
+   <div>
+
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.101.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.20.22.201</b> | Curtain Walls - Unitized curtain wall (also generic unitized curtain wall), Config: Symmetric insulating glass units (dual-pane, equal-thickness IGU), Lamination: Not laminated, Glass Type: Full tempered, Details: 1-1/4 in. (32 mm) FT IGU [1/4 in. (6 mm) inner and outer panes], 4-sided SSG, VHBTM SGTTM; glass-frame clearance = 0.43 in. (11 mm); aspect ratio = Varies sealant = wet</p> 
+   <div>
+
+| Notes: Damage state DS3 of glass fall out did not occur in physical testing to 10% drift.  DS3 0.1 median demand is intentional.
+
+
+Suggested Block Size: 30 SF 
+
+
+
+.. raw:: html
+   :file: B.20.22.201.html
+
+.. raw:: html
+
+   <hr>

@@ -1,0 +1,1864 @@
+
+
+**********************************
+D.50.92 - Other Electrical Systems
+**********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.011a</b> | Battery Rack - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.013a</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.013b</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.013c</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.021a</b> | Battery Charger - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.023a</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.023b</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.023c</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.023c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.023c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.023c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.023c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.031a</b> | Diesel generator - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.031b</b> | Diesel generator - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.031b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.031b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.031b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.031b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.031c</b> | Diesel generator - Capacity: 750 to 1200 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.031c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.031c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.031c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.031c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.031d</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.031d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.031d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.031d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.031d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032a</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032b</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032c</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032d</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032e</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032f</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.032l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.032l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.032l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.032l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.032l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033a</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033b</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033c</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033d</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033e</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033f</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1000 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.50.92.033l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 1500 kVa.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.50.92.033l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.50.92.033l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.50.92.033l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.50.92.033l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

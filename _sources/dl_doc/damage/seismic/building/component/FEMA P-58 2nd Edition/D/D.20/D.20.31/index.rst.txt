@@ -1,0 +1,272 @@
+
+
+************************
+D.20.31 - Sanitary Waste
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.011b</b> | Sanitary Waste Piping - Cast Iron w/flexible couplings, SDC A,B, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.012b</b> | Sanitary Waste Piping - Cast Iron w/flexible couplings, SDC C, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.013b</b> | Sanitary Waste Piping - Cast Iron w/flexible couplings, SDC D,E,F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.013b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.014b</b> | Sanitary Waste Piping - Cast Iron w/flexible couplings, SDC D,E,F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.014b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.021a</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC A,B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.021b</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC A,B, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.021b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.022a</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.022b</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC C, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.022b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.023a</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC D,E,F, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.023a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.023b</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC D,E,F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.023b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.024a</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC D,E,F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.024a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.31.024b</b> | Sanitary Waste Piping - Cast Iron w/bell and spigot couplings, SDC D,E,F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.31.024b.html
+
+.. raw:: html
+
+   <hr>

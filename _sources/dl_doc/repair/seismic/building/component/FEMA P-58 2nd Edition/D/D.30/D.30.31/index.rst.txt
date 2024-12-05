@@ -1,0 +1,2896 @@
+
+
+****************************************************
+D.30.31 - Cooling Generating Systems - Chilled Water
+****************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011a</b> | Chiller - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011b</b> | Chiller - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011c</b> | Chiller - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.011d</b> | Chiller - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.011d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.011d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.011d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.011d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012a</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012b</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012c</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012d</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012e</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012f</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012g</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012h</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012i</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012j</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012k</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.012l</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.012l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.012l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.012l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.012l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013a</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013b</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013c</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013d</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013e</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013f</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013g</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013h</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013i</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013j</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013k</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.013l</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.013l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.013l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.013l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.013l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021a</b> | Cooling Tower - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021b</b> | Cooling Tower - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021c</b> | Cooling Tower - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.021c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.021c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.021c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.021c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.021d</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.021d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.021d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.021d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.021d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022a</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022b</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022c</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.022l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.022l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.022l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.022l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.022l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023a</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023b</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023c</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 75 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 250 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 500 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.31.023l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit and is based upon 850 Ton.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.31.023l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.31.023l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.31.023l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.31.023l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

@@ -1,0 +1,1016 @@
+
+
+************************
+LF - Lifeline Facilities
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.AGR1</b> | Lifeline Facilities, Agriculture</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Agriculture
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.AGR1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.AGR1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM1</b> | Lifeline Facilities, Retail Trade</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Retail Trade such as stores
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM10</b> | Lifeline Facilities, Parking</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Parking
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM10-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM10-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM2</b> | Lifeline Facilities, Wholesale Trade</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Wholesale Trade such as warehouses
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM3</b> | Lifeline Facilities, Personal and Repair Services</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Personal and Repair Services such as service stations and repair shops
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM4</b> | Lifeline Facilities, Professional and Technical Services</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Professional and Technical Services such as Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM5</b> | Lifeline Facilities, Banks and Financial Institutions</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Banks and Financial Institutions
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM6</b> | Lifeline Facilities, Hospital</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Hospital
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM7</b> | Lifeline Facilities, Medical Office and Clinic</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Medical Office and Clinic
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM7-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM7-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM8</b> | Lifeline Facilities, Entertainment and Recreation</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Entertainment and Recreation including restaurants and bars
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM8-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM8-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.COM9</b> | Lifeline Facilities, Theaters</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy type: Theatres
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.COM9-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.COM9-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.EDU1</b> | Lifeline Facilities, Schools</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Schools
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.EDU1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.EDU1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.EDU2</b> | Lifeline Facilities, Colleges/Universities</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Colleges/Universities excluding group housing
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.EDU2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.EDU2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.GOV1</b> | Lifeline Facilities, General Government Services</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: General Government Services offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.GOV1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.GOV1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.GOV2</b> | Lifeline Facilities, Emergency Response</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Emergency Response such as Police and Fire Stations
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.GOV2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.GOV2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND1</b> | Lifeline Facilities, Heavy Industry</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Heavy Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND2</b> | Lifeline Facilities, Light Industry</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Light Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND3</b> | Lifeline Facilities, Food/Drugs/Chemicals</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Food/Drug/Chemical plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND4</b> | Lifeline Facilities, Metals/Minerals Processing</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Metals/Minerals Processing plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND5</b> | Lifeline Facilities, High Technology</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: High Technology factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.IND6</b> | Lifeline Facilities, Construction</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Construction Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.IND6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.IND6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.REL1</b> | Lifeline Facilities, Church</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Church
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.REL1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.REL1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES1</b> | Lifeline Facilities, Single-family Dwelling</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Single-family Dwelling, Detached House
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES2</b> | Lifeline Facilities, Mobile Home</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Mobile Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES3</b> | Lifeline Facilities, Multi-family Dwelling</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Multi-family Dwelling, Apartments, Condominiums
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES4</b> | Lifeline Facilities, Temporary Lodging</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Temporary Lodging such as Hotel, Motel
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES5</b> | Lifeline Facilities, Institutional Dormitory</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Institutional Dormitory, including group housing (military, college) as well as jails
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.RES6</b> | Lifeline Facilities, Nursing Home</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Occupancy Type: Nursing Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: LF.RES6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: LF.RES6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

@@ -1,0 +1,848 @@
+
+
+************************************
+NSD - Non-Structural Drift-Sensitive
+************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.AGR1</b> | Drift-Sensitive Nonstructural, Agriculture</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Agriculture
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.AGR1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM1</b> | Drift-Sensitive Nonstructural, Retail Trade</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Retail Trade such as stores
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM10</b> | Drift-Sensitive Nonstructural, Parking</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Parking
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM10-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM2</b> | Drift-Sensitive Nonstructural, Wholesale Trade</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Wholesale Trade such as warehouses
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM2-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM3</b> | Drift-Sensitive Nonstructural, Personal and Repair Services</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Personal and Repair Services such as service stations and repair shops
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM3-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM4</b> | Drift-Sensitive Nonstructural, Professional and Technical Services</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Professional and Technical Services such as Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM4-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM5</b> | Drift-Sensitive Nonstructural, Banks and Financial Institutions</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Banks and Financial Institutions
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM5-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM6</b> | Drift-Sensitive Nonstructural, Hospital</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Hospital
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM6-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM7</b> | Drift-Sensitive Nonstructural, Medical Office and Clinic</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Medical Office and Clinic
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM7-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM8</b> | Drift-Sensitive Nonstructural, Entertainment and Recreation</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Entertainment and Recreation including restaurants and bars
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM8-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.COM9</b> | Drift-Sensitive Nonstructural, Theaters</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy type: Theatres
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.COM9-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.EDU1</b> | Drift-Sensitive Nonstructural, Schools</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Schools
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.EDU1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.EDU2</b> | Drift-Sensitive Nonstructural, Colleges/Universities</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Colleges/Universities excluding group housing
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.EDU2-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.GOV1</b> | Drift-Sensitive Nonstructural, General Government Services</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: General Government Services offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.GOV1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.GOV2</b> | Drift-Sensitive Nonstructural, Emergency Response</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Emergency Response such as Police and Fire Stations
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.GOV2-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND1</b> | Drift-Sensitive Nonstructural, Heavy Industry</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Heavy Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND2</b> | Drift-Sensitive Nonstructural, Light Industry</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Light Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND2-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND3</b> | Drift-Sensitive Nonstructural, Food/Drugs/Chemicals</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Food/Drug/Chemical plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND3-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND4</b> | Drift-Sensitive Nonstructural, Metals/Minerals Processing</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Metals/Minerals Processing plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND4-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND5</b> | Drift-Sensitive Nonstructural, High Technology</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: High Technology factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND5-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.IND6</b> | Drift-Sensitive Nonstructural, Construction</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Construction Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.IND6-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.REL1</b> | Drift-Sensitive Nonstructural, Church</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Church
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.REL1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES1</b> | Drift-Sensitive Nonstructural, Single-family Dwelling</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Single-family Dwelling, Detached House
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES1-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES2</b> | Drift-Sensitive Nonstructural, Mobile Home</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Mobile Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES2-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES3</b> | Drift-Sensitive Nonstructural, Multi-family Dwelling</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Multi-family Dwelling, Apartments, Condominiums
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES3-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES4</b> | Drift-Sensitive Nonstructural, Temporary Lodging</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Temporary Lodging such as Hotel, Motel
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES4-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES5</b> | Drift-Sensitive Nonstructural, Institutional Dormitory</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Institutional Dormitory, including group housing (military, college) as well as jails
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES5-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD.RES6</b> | Drift-Sensitive Nonstructural, Nursing Home</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Occupancy Type: Nursing Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: NSD.RES6-Cost.html
+
+
+
+.. raw:: html
+
+   <hr>
+

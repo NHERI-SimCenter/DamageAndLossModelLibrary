@@ -1,0 +1,296 @@
+
+
+***********************************************************
+STR.PC2 - Precast Concrete Frames with Concrete Shear Walls
+***********************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.H.HC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, High-Rise, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| High-Rise Building with more than 8 stories.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.H.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.H.LC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, High-Rise, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| High-Rise Building with more than 8 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.H.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.H.MC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, High-Rise, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| High-Rise Building with more than 8 stories.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.H.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.H.PC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, High-Rise, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| High-Rise Building with more than 8 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.H.PC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.L.HC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Low-Rise, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Low-Rise Building with 1-3 stories.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.L.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.L.LC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Low-Rise, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Low-Rise Building with 1-3 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.L.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.L.MC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Low-Rise, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Low-Rise Building with 1-3 stories.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.L.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.L.PC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Low-Rise, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Low-Rise Building with 1-3 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.L.PC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.M.HC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Mid-Rise, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Mid-Rise Building with 4-7 stories.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.M.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.M.LC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Mid-Rise, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Mid-Rise Building with 4-7 stories.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.M.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.M.MC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Mid-Rise, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Mid-Rise Building with 4-7 stories.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.M.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC2.M.PC</b> | Structural, Precast Concrete Frames with Concrete Shear Walls, Mid-Rise, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings contain floor and roof diaphragms, typically composed of precast concrete elements with or without cast-in-place concrete topping slabs. Precast concrete girders and columns support the diaphragms. The girders often bear on column corbels. Closure strips between precast floor elements and beam-column joints are usually cast-in-place concrete. Welded steel inserts are often used to interconnect precast elements. Precast or cast-in-place concrete shear walls resist lateral loads. For buildings with precast frames and concrete shear walls to perform well, the details used to connect the structural elements must have sufficient strength and displacement capacity; however, in some cases, the connection details between the precast elements have negligible ductility.
+| Mid-Rise Building with 4-7 stories.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC2.M.PC.html
+
+.. raw:: html
+
+   <hr>

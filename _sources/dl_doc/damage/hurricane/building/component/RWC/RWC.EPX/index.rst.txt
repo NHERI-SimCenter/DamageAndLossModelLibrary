@@ -1,0 +1,30 @@
+
+
+********************
+RWC.EPX - Epoxy only
+********************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.EPX.001</b> | Roof-Wall Connection with Epoxy.</p> 
+   <div>
+
+| Epoxy set for one week, no toe nails used.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.EPX.001.html
+
+.. raw:: html
+
+   <hr>

@@ -1,0 +1,34 @@
+
+
+**************************
+RWC - Roof-Wall Connection
+**************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+   RWC.EPX/index
+   RWC.HCL/index
+   RWC.STR/index
+   RWC.TN/index
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.001</b> | Roof-Wall Connection</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.001.html
+
+.. raw:: html
+
+   <hr>

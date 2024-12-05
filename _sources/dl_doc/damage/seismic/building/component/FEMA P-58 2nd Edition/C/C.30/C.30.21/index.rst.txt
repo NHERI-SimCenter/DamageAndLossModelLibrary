@@ -1,0 +1,328 @@
+
+
+************************
+C.30.21 - Floor Finishes
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001a</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Office - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet or vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001b</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Office - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet or vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001c</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Laboratory - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sheet vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001d</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Laboratory - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sheet vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001e</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Hospital - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sheet vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001e.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001f</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Hospital - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sheet vinyl. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001f.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001g</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - School - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be vinyl composition tile. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001g.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001h</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - School - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be vinyl composition tile. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001h.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001i</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Apartments - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001i.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001j</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Apartments - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001j.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001k</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Retail - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be vinyl composition tile. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001k.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001l</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Retail - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be vinyl composition tile. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001l.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001m</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Warehouse - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sealed concrete. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001m.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001n</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Warehouse - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be sealed concrete. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001n.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001o</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Hospitality - Dry</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001o.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.21.001p</b> | Generic Floor Covering - Flooding of floor caused by failure of pipe - Hospitality - Humid</p> 
+   <div>
+
+| The user needs to review the fragilities of all piping modeled in the ceiling of the floor and input the peak floor acceleration value for the pipe with the lowest median peak floor acceleration value, along with the associated total dispersion (beta).  Flooring type assumed to be carpet. Available costs are per one square foot of floor area.  
+| Construction Quality: Normal
+
+
+Suggested Block Size: 1 SF 
+
+
+
+.. raw:: html
+   :file: C.30.21.001p.html
+
+.. raw:: html
+
+   <hr>

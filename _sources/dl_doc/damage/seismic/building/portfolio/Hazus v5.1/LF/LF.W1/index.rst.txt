@@ -1,0 +1,100 @@
+
+
+*************************
+LF.W1 - Wood, Light Frame
+*************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W1.HC</b> | Lifeline Facilities, Wood, Light Frame, High-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are typically single-family or small, multi-family dwellings of not more than 5,000 square feet of floor area and 1-2 stories. The essential structural feature of these buildings is repetitive framing by wood rafters or joists on wood stud walls. Loads are light and spans are small. These buildings may have relatively heavy masonry chimneys and may be partially or fully covered with masonry veneer. Most of these buildings, especially the single-family residences, are not engineered but constructed in accordance with “conventional construction” provisions of building codes. Hence, they usually have the components of a lateral-force-resisting system even though it may be incomplete. Lateral loads are transferred by diaphragms to shear walls. The diaphragms are roof panels and floors that may be sheathed with sawn lumber, plywood or fiberboard sheathing. Shear walls are sheathed with boards, stucco, plaster, plywood, gypsum board, particle board, or fiberboard, or interior partition walls sheathed with plaster or gypsum board.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W1.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W1.LC</b> | Lifeline Facilities, Wood, Light Frame, Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are typically single-family or small, multi-family dwellings of not more than 5,000 square feet of floor area and 1-2 stories. The essential structural feature of these buildings is repetitive framing by wood rafters or joists on wood stud walls. Loads are light and spans are small. These buildings may have relatively heavy masonry chimneys and may be partially or fully covered with masonry veneer. Most of these buildings, especially the single-family residences, are not engineered but constructed in accordance with “conventional construction” provisions of building codes. Hence, they usually have the components of a lateral-force-resisting system even though it may be incomplete. Lateral loads are transferred by diaphragms to shear walls. The diaphragms are roof panels and floors that may be sheathed with sawn lumber, plywood or fiberboard sheathing. Shear walls are sheathed with boards, stucco, plaster, plywood, gypsum board, particle board, or fiberboard, or interior partition walls sheathed with plaster or gypsum board.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W1.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W1.MC</b> | Lifeline Facilities, Wood, Light Frame, Moderate-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are typically single-family or small, multi-family dwellings of not more than 5,000 square feet of floor area and 1-2 stories. The essential structural feature of these buildings is repetitive framing by wood rafters or joists on wood stud walls. Loads are light and spans are small. These buildings may have relatively heavy masonry chimneys and may be partially or fully covered with masonry veneer. Most of these buildings, especially the single-family residences, are not engineered but constructed in accordance with “conventional construction” provisions of building codes. Hence, they usually have the components of a lateral-force-resisting system even though it may be incomplete. Lateral loads are transferred by diaphragms to shear walls. The diaphragms are roof panels and floors that may be sheathed with sawn lumber, plywood or fiberboard sheathing. Shear walls are sheathed with boards, stucco, plaster, plywood, gypsum board, particle board, or fiberboard, or interior partition walls sheathed with plaster or gypsum board.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W1.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W1.PC</b> | Lifeline Facilities, Wood, Light Frame, Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are typically single-family or small, multi-family dwellings of not more than 5,000 square feet of floor area and 1-2 stories. The essential structural feature of these buildings is repetitive framing by wood rafters or joists on wood stud walls. Loads are light and spans are small. These buildings may have relatively heavy masonry chimneys and may be partially or fully covered with masonry veneer. Most of these buildings, especially the single-family residences, are not engineered but constructed in accordance with “conventional construction” provisions of building codes. Hence, they usually have the components of a lateral-force-resisting system even though it may be incomplete. Lateral loads are transferred by diaphragms to shear walls. The diaphragms are roof panels and floors that may be sheathed with sawn lumber, plywood or fiberboard sheathing. Shear walls are sheathed with boards, stucco, plaster, plywood, gypsum board, particle board, or fiberboard, or interior partition walls sheathed with plaster or gypsum board.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W1.PC.html
+
+.. raw:: html
+
+   <hr>

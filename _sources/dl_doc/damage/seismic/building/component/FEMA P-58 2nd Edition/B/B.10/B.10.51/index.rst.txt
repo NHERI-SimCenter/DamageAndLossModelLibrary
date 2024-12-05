@@ -1,0 +1,248 @@
+
+
+*******************************************
+B.10.51 - Ordinary Reinforced Masonry Walls
+*******************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.001</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated, 4" to 6"' thick, up to 12 foot tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.002</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated, 4" to 6"' thick, greater than 12 foot tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.003</b> | Ordinary reinforced masonry walls with partially grouted cells, 4" to 6" thick, flexure dominated up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.003.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.004</b> | Ordinary reinforced masonry walls with partially grouted cells, 4" to 6" thick, flexure dominated greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.004.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.011</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated, 8" to 12"' thick, up to 12 foot tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.012</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated, 8" to 12"' thick, greater than 12 foot tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.013</b> | Ordinary reinforced masonry walls with partially grouted cells, 8" to 12" thick, flexure dominated up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel,
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.013.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.014</b> | Ordinary reinforced masonry walls with partially grouted cells, 8" to 12" thick, flexure dominated greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.014.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.021</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated, 16" thick, up to 12 foot tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.021.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.022</b> | Ordinary reinforced masonry walls with partially grouted cells, shear dominated,16"' thick, greater than 12 foot tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.022.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.023</b> | Ordinary reinforced masonry walls with partially grouted cells, 16" thick, flexure dominated up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.023.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.51.024</b> | Ordinary reinforced masonry walls with partially grouted cells, 16" thick, flexure dominated greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+.. raw:: html
+   :file: B.10.51.024.html
+
+.. raw:: html
+
+   <hr>

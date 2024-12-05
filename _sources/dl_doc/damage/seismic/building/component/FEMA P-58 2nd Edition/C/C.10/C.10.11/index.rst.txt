@@ -1,0 +1,108 @@
+
+
+********************
+C.10.11 - Partitions
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001a</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.10.11.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001b</b> | Wall Partition, Type: Gypsum with metal studs, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.10.11.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001c</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above with returns</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.10.11.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.001d</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above w/o returns (friction connections)</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.10.11.001d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.10.11.011a</b> | Wall Partition, Type: Gypsum with wood studs, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.10.11.011a.html
+
+.. raw:: html
+
+   <hr>

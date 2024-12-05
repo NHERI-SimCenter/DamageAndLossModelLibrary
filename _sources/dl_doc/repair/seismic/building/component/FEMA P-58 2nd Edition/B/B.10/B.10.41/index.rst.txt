@@ -1,0 +1,4238 @@
+
+
+*********************************
+B.10.41 - RC or Composite Columns
+*********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.001a</b> | ACI 318 SMF , Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.001b</b> | ACI 318 SMF , Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.002a</b> | ACI 318 SMF , Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.002a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.002a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.002a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.002a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.002b</b> | ACI 318 SMF , Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.002b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.002b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.002b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.002b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.003a</b> | ACI 318 SMF , Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.003a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.003a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.003a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.003a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.003b</b> | ACI 318 SMF , Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 Concrete SMF, ductile response.  Meets the requirements of ACI318 SMF.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.003b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.003b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.003b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.003b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.011a</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.011b</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.012a</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.012a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.012a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.012a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.012a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.012b</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.012b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.012b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.012b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.012b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.013a</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.013b</b> | MF with SMF-conforming beam and column flexural and confinement reinforcement but weak joints , Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-conforming SMF, joint shear damage, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) Column Pu < 0.6f'cAg, (3) Column flexural response with HIGH ductility, (4) Beam compliant transverse reinforcing with low beam V/bwd(f'c)^0.5, (5) Joints with compliant transverse reinforcing details with spacing < d(column)/2 and Joint V/Vn < 1.2.  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.021a</b> | ACI 318 IMF, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.021b</b> | ACI 318 IMF, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.022a</b> | ACI 318 IMF, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.022b</b> | ACI 318 IMF, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.022b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.022b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.022b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.022b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.023a</b> | ACI 318 IMF, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.023b</b> | ACI 318 IMF, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 IMF, joint shear damage or failure, beam or column flexure-shear response.  Meets the following requirements: (1) Column Pu < 0.3Agf'c  Costing is on a per joint basis.
+| Notes: Note: DS4 is a copy of DS2 to create a mutually exclusive compliment to DS3.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.023b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.023b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.023b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.023b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.031a</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.031b</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.031b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.031b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.031b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.031b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.032a</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.032a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.032a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.032a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.032a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.032b</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.032b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.032b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.032b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.032b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.033a</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.033a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.033a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.033a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.033a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.033b</b> | ACI 318 OMF with weak joints and beam flexural response, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.033b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.033b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.033b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.033b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.041a</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.041a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.041a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.041a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.041a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.041b</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.041b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.041b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.041b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.041b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.042a</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.042a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.042a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.042a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.042a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.042b</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.042b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.042b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.042b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.042b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.043a</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.043a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.043a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.043a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.043a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.043b</b> | ACI 318 OMF with weak joints and column flexural response, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, joint shear failure, beam flexural response.  Meets the following requirements: (1) Sum Mcol / Sum Mbeam > 1.2, (2) Beam Vn > Veq, (3) Column Vn > Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.043b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.043b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.043b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.043b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.051a</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.051a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.051a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.051a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.051a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.051b</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.051b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.051b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.051b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.051b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.052a</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.052a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.052a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.052a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.052a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.052b</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.052b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.052b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.052b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.052b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.053a</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.053a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.053a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.053a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.053a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.053b</b> | ACI 318 OMF with weak beams and weak joints, beam flexural or shear response, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, beam flexure-shear or shear failure, beam flexural response.  Meets the following requirements:  (1) Beam Vn < Veq.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.053b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.053b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.053b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.053b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.061a</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.061a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.061a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.061a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.061a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.061b</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.061b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.061b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.061b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.061b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.062a</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.062a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.062a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.062a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.062a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.062b</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.062b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.062b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.062b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.062b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.063a</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.063a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.063a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.063a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.063a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.063b</b> | ACI 318 OMF with weak columns, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column shear or flexural-shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu < 0.6Agf'c,  (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.063b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.063b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.063b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.063b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.071a</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.071a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.071a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.071a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.071a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.071b</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.071b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.071b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.071b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.071b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.072a</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.072a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.072a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.072a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.072a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.072b</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.072b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.072b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.072b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.072b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.073a</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.073a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.073a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.073a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.073a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.073b</b> | ACI 318 OMF weak columns w/ high axial load, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| ACI318 OMF, column flexure, flexural-shear, or shear failure at high axial load.  Column flexural-shear response.  Meets the following requirements:  (1) Column Pu > 0.6Agf'c, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Notes: This fragility has been changed to match B1041.121. ASCE6 is closest to column  high axial OMF.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.073b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.073b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.073b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.073b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.081a</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.081a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.081a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.081a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.081a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.081b</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.081b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.081b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.081b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.081b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.082a</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.082a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.082a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.082a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.082a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.082b</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.082b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.082b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.082b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.082b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.083a</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.083a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.083a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.083a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.083a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.083b</b> | Non-conforming MF with weak joints and beam flexural response, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, beam flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam > 1.2, (2) ASCE41 non-compliant joint transverse reinforcing and or joint V/Vn > 1.2, (3) IGH beam ductility per ASCE41-06 Table 6-7i, (4) Compliant beam transverse reinforcing with LOW beam V / bwd(f'c)^0.5.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.083b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.083b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.083b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.083b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.091a</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.091a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.091a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.091a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.091a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.091b</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.091b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.091b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.091b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.091b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.092a</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.092a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.092a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.092a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.092a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.092b</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.092b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.092b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.092b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.092b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.093a</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.093a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.093a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.093a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.093a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.093b</b> | Non-conforming MF with weak joints and column flexural response, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, joint shear failure, column flexural response.  Meets the following requirements:  (1) Sum Mcol / Sum Mbeam < 0.8, (2) [...TBD…], (3) Non-compliant column transverse reinforcement and or joint V/Vn > 1.2  Costing is on a per joint basis.
+| Notes: This fragility is same as B1041.061. Closest match available.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.093b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.093b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.093b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.093b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.101a</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.101a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.101a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.101a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.101a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.101b</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.101b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.101b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.101b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.101b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.102a</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.102a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.102a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.102a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.102a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.102b</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.102b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.102b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.102b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.102b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.103a</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.103a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.103a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.103a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.103a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.103b</b> | Non-conforming MF, weak beams and strong joints, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, beam shear failure, beam flexural response.  Meets the following requirements:  (1) Beam with HIGH V/bwd(f'c)^0.5 or non-compliant transverse beam reinforcing.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.103b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.103b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.103b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.103b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.111a</b> | Non-conforming MF, weak columns, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.111a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.111a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.111a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.111a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.111b</b> | Non-conforming MF, weak columns, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.111b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.111b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.111b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.111b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.112a</b> | Non-conforming MF, weak columns, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.112a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.112a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.112a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.112a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.112b</b> | Non-conforming MF, weak columns, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.112b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.112b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.112b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.112b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.113a</b> | Non-conforming MF, weak columns, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.113a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.113a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.113a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.113a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.113b</b> | Non-conforming MF, weak columns, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure-shear or shear failure, column flexural response.  Meets the following requirements:  (1) […TBD…]   Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.113b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.113b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.113b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.113b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.121a</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.121a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.121a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.121a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.121a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.121b</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.121b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.121b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.121b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.121b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.122a</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.122a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.122a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.122a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.122a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.122b</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.122b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.122b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.122b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.122b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.123a</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.123a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.123a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.123a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.123a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.123b</b> | Non-conforming MF, weak columns and strong joints, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, column flexure, flexure-shear, or shear failure, column flexural response.  Meets the following requirements:  (1) Column Pu > 0.6f'cAg, (2) Column Vn < Veq  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.123b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.123b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.123b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.123b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.131a</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 24" x 24", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.131a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.131a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.131a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.131a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.131b</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 24" x 24", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.131b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.131b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.131b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.131b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.132a</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 24" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.132a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.132a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.132a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.132a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.132b</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 24" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.132b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.132b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.132b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.132b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.133a</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 36" x 36", Beam one side</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.133a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.133a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.133a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.133a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.41.133b</b> | Non-conforming MF with inadequate development of reinforcing, Conc Col & Bm = 36" x 36", Beam both sides</p> 
+   <div>
+
+| Non-Conforming MF, non-ductile failure, non-ductile response.  May exhibit the following:  (1) Splice detailing or length inadequate per ASCE 41-06 Table 6-7iii, (2) Beam or column reinforcing spliced at the face of joint, (3) Beam longitudinal steel discontinuous through joint per ASCE41-06 Table 6-7iii.  Costing is on a per joint basis.
+| Author: Laura Lowes
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.41.133b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.41.133b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.41.133b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.41.133b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

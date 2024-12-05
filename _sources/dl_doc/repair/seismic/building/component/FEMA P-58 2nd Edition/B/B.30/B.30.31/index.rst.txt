@@ -1,0 +1,326 @@
+
+
+*************************
+B.30.31 - Masonry Chimney
+*************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.001a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with masonry</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.001b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with masonry</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.001c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with masonry</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.001c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.001c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.001c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.001c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.002a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with framing</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.002a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.002a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.002a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.002a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.002b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with framing</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.002b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.002b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.002b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.002b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.30.31.002c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with framing</p> 
+   <div>
+
+| Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Rebuilding with masonry will restore the chimney to its pre-earthquake condition.  Some jurisdictions prohibit unreinforced reconstruction and require either replacement of the damaged portion of the chimney with a metal flue within wood frame chase or a complete removal of the existing fireplace and chimney with replacement with a code compliant reinforced masonry design.  
+| Toppled chimney may cause damage to adjacent structure.  
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.30.31.002c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.30.31.002c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.30.31.002c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.30.31.002c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

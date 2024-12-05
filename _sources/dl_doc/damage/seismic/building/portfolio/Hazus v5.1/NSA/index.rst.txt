@@ -1,0 +1,103 @@
+
+
+*******************************************
+NSA - Non-Structural Acceleration-Sensitive
+*******************************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSA.HC</b> | Acceleration-Sensitive Nonstructural, High-Code</p> 
+   <div>
+
+| Acceleration-Sensitive Nonstructural components include a large variety of different architectural, mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Cantilever elements and parapets, Racks and caibnets, Access floors, General mechanical, Manufacturing and process machinery, Piping systems, Storage tanks and spheres, HVAC systems, Elevators, Trussed towers, General electrical, and Lighting fixtures. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to acceleration-sensitive components (e.g., mechanical equipment) is a function of the floor acceleration. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: NSA.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSA.LC</b> | Acceleration-Sensitive Nonstructural, Low-Code</p> 
+   <div>
+
+| Acceleration-Sensitive Nonstructural components include a large variety of different architectural, mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Cantilever elements and parapets, Racks and caibnets, Access floors, General mechanical, Manufacturing and process machinery, Piping systems, Storage tanks and spheres, HVAC systems, Elevators, Trussed towers, General electrical, and Lighting fixtures. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to acceleration-sensitive components (e.g., mechanical equipment) is a function of the floor acceleration. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: NSA.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSA.MC</b> | Acceleration-Sensitive Nonstructural, Moderate-Code</p> 
+   <div>
+
+| Acceleration-Sensitive Nonstructural components include a large variety of different architectural, mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Cantilever elements and parapets, Racks and caibnets, Access floors, General mechanical, Manufacturing and process machinery, Piping systems, Storage tanks and spheres, HVAC systems, Elevators, Trussed towers, General electrical, and Lighting fixtures. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to acceleration-sensitive components (e.g., mechanical equipment) is a function of the floor acceleration. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: NSA.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSA.PC</b> | Acceleration-Sensitive Nonstructural, Pre-Code</p> 
+   <div>
+
+| Acceleration-Sensitive Nonstructural components include a large variety of different architectural, mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Cantilever elements and parapets, Racks and caibnets, Access floors, General mechanical, Manufacturing and process machinery, Piping systems, Storage tanks and spheres, HVAC systems, Elevators, Trussed towers, General electrical, and Lighting fixtures. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to acceleration-sensitive components (e.g., mechanical equipment) is a function of the floor acceleration. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: NSA.PC.html
+
+.. raw:: html
+
+   <hr>

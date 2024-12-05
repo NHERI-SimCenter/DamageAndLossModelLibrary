@@ -1,0 +1,924 @@
+
+
+***********************
+B.10.49 - RC Flat Slabs
+***********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.001a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, no continuity reinf</p> 
+   <div>
+
+| Costing per joint, minimum of 6" thick slab, maximum of 12" thick slab.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.001b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, with continuity reinf</p> 
+   <div>
+
+| Costing per joint, minimum of 6" thick slab, maximum of 12" thick slab.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.002a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI 318-56,  ACI 318-63, ACI 318-89, ACI 318-95, ACI 318-99, ACI 318-05 
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.002a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.002a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.002a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.002a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.002b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI 318-56,  ACI 318-63, ACI 318-89, ACI 318-95, ACI 318-99, ACI 318-05 
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.002b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.002b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.002b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.002b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.003a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI 318-63, ACI 318-83, ACI 318-99, ACI 318-02, CAN3-A23.2-M84, A23.3 & MC-90
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.003a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.003a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.003a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.003a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.003b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI 318-63, ACI 318-83, ACI 318-99, ACI 318-02, CAN3-A23.2-M84, A23.3 & MC-90
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.003b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.003b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.003b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.003b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.011</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.2<Vg/Vo<0.4</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI 318-71, ACI 318-95, ACI 318-99, ACI 318-05
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.011-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.011-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.011-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.011-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.012</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.6</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI-318-63, ACI-318-05, A23.3 & MC-90
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.012-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.012-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.012-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.012-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.021a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI-318-77, ACI-318-89, ACI-318-05, IBC-03 
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.021b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI-318-77, ACI-318-89, ACI-318-05, IBC-03 
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.022a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI-318-77, ACI-318-83, ACI-318-89, ACI-318-05
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.022b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Construction Quality: ACI-318-77, ACI-318-83, ACI-318-89, ACI-318-05
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.022b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.022b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.022b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.022b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.031</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0<Vg/Vo<.0.4</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.031-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.031-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.031-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.031-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.032</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.0.6</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.032-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.032-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.032-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.032-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.041a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.  The only available data were from a specimen that was constructed using ACI 318-89
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.041a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.041a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.041a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.041a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.041b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.  The only available data were from a specimen that was constructed using ACI 318-89
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.041b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.041b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.041b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.041b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.042a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, no continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.042a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.042a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.042a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.042a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.49.042b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, with continuity reinf</p> 
+   <div>
+
+| Costing is on a per joint basis.
+| Notes: Fragilities were based on judgment due to lack of test data.
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.49.042b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.49.042b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.49.042b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.49.042b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

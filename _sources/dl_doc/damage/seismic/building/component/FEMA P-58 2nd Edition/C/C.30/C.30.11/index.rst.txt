@@ -1,0 +1,248 @@
+
+
+***********************
+C.30.11 - Wall Finishes
+***********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.001a</b> | Wall Partition, Type: Gypsum + Wallpaper, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.001b</b> | Wall Partition, Type: Gypsum + Wallpaper, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.001c</b> | Wall Partition, Type: Gypsum + Wallpaper, Full Height, Fixed Below, Slip Track Above w/ returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.001d</b> | Wall Partition, Type: Gypsum + Wallpaper, Full Height, Fixed Below, Slip Track Above w/o returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.001d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.002a</b> | Wall Partition, Type: Gypsum + Ceramic Tile, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.002a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.002b</b> | Wall Partition, Type: Gypsum + Ceramic Tile, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.002b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.002c</b> | Wall Partition, Type: Gypsum + Ceramic Tile, Full Height, Fixed Below, Slip Track Above w/ returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.002c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.002d</b> | Wall Partition, Type: Gypsum + Ceramic Tile, Full Height, Fixed Below, Slip Track Above w/o returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.002d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.003a</b> | Wall Partition, Type: High End Marble or Wood Panel, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.003a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.003b</b> | Wall Partition, Type: High End Marble or Wood Panel, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.003b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.003c</b> | Wall Partition, Type: High End Marble or Wood Panel, Full Height, Fixed Below, Slip Track Above w/ returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.003c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.11.003d</b> | Wall Partition, Type: High End Marble or Wood Panel, Full Height, Fixed Below, Slip Track Above w/o returns (friction connection)</p> 
+   <div>
+
+| Costing based upon 9'x100' Panels
+| Construction Quality: Normal
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: C.30.11.003d.html
+
+.. raw:: html
+
+   <hr>

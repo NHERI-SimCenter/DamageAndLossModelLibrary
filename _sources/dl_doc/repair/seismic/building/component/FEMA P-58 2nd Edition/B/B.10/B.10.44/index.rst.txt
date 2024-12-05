@@ -1,0 +1,1826 @@
+
+
+************************************
+B.10.44 - RC or Composite Shearwalls
+************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.001</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.001-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.001-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.001-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.001-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.002</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain 16' high to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.002-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.002-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.002-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.002-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.003</b> | Rectangular low aspect ratio concrete walls 8" or less thick single curtain 25' high to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.003-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.003-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.003-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.003-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.011</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of up to 15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.011-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.011-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.011-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.011-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.012</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of 16' to 24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.012-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.012-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.012-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.012-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.013</b> | Rectangular low aspect ratio concrete walls 8"-16" double curtain; with heights of 24' to 40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.013-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.013-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.013-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.013-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.021</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights up to 15' </p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.021-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.021-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.021-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.021-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.022</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights  16' - 24' </p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.022-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.022-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.022-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.022-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.023</b> | Rectangular low aspect ratio concrete walls 18"-24" thick with double curtain and  heights  25' - 40' </p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.023-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.023-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.023-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.023-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.031</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.031-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.031-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.031-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.031-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.032</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick,  16'  to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.032-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.032-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.032-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.032-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.033</b> | Low-rise reinforced concrete walls with return flanges, less than 8" thick,  25'  to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.033-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.033-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.033-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.033-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.041</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.041-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.041-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.041-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.041-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.042</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick, 16' to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.042-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.042-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.042-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.042-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.043</b> | Low-rise reinforced concrete walls with return flanges, 8" to 16" thick, 25' to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.043-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.043-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.043-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.043-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.051</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick" up to 15' high</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.051-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.051-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.051-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.051-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.052</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick,  16'  to 24' high</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.052-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.052-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.052-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.052-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.053</b> | Low-rise reinforced concrete walls with return flanges, 17" to 24" thick,  25'  to 40' high</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.053-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.053-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.053-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.053-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.061</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.061-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.061-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.061-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.061-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.062</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.062-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.062-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.062-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.062-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.063</b> | Low rise reinforced concrete walls with boundary columns, less than 8" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.063-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.063-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.063-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.063-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.071</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.071-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.071-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.071-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.071-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.072</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.072-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.072-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.072-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.072-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.073</b> | Low rise reinforced concrete walls with boundary columns, 8" to 16" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.073-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.073-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.073-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.073-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.081</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height <15'</p> 
+   <div>
+
+| Costing for each 144 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.081-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.081-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.081-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.081-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.082</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height between 16'-24'</p> 
+   <div>
+
+| Costing for each 400 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 400 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.082-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.082-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.082-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.082-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.083</b> | Low rise reinforced concrete walls with boundary columns, 17"-24" thick, height between 24'-40'</p> 
+   <div>
+
+| Costing for each 900 ft^2 Wall Panel, Orthogonal web reinforcement, f'c > 2500 psi, P/(A*f'c) <= 0.2
+| Notes: Full repair description does not fully fit on sheet - consider shortening.  Description will fit in PACT.
+| Author: Andrew Whittaker
+
+
+Suggested Block Size: 900 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.083-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.083-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.083-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.083-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.091</b> | Slender Concrete Wall, 12" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.091-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.091-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.091-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.091-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.092</b> | Slender Concrete Wall, 12" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.092-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.092-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.092-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.092-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.093</b> | Slender Concrete Wall, 12" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.093-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.093-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.093-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.093-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.101</b> | Slender Concrete Wall, 18" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.101-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.101-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.101-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.101-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.102</b> | Slender Concrete Wall, 18" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.102-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.102-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.102-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.102-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.103</b> | Slender Concrete Wall, 18" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.103-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.103-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.103-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.103-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.111</b> | Slender Concrete Wall, 30" thick, 12' high, 15' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.111-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.111-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.111-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.111-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.112</b> | Slender Concrete Wall, 30" thick, 12' high, 20' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.112-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.112-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.112-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.112-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.44.113</b> | Slender Concrete Wall, 30" thick, 12' high, 30' long</p> 
+   <div>
+
+| Slender concrete shear wall with aspect ratio greater than or equal to 2.0.  Costing assumes a 144 ft^2 wall panel.
+
+
+Suggested Block Size: 144 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.44.113-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.44.113-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.44.113-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.44.113-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

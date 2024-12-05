@@ -1,0 +1,68 @@
+
+
+************************
+RWC.HCL - Hurricane Clip
+************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.HCL.001a</b> | Roof-Wall Connection with Hurricane Clip H2.5.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.HCL.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.HCL.001b</b> | Roof-Wall Connection with Hurricane Clip H2.5.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.HCL.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.HCL.001c</b> | Roof-Wall Connection with Hurricane Clip H2.5.</p> 
+   <div>
+
+| ...
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.HCL.001c.html
+
+.. raw:: html
+
+   <hr>

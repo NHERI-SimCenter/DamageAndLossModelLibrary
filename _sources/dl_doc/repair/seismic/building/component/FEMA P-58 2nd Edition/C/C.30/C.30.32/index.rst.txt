@@ -1,0 +1,620 @@
+
+
+**************************
+C.30.32 - Ceiling Finishes
+**************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.001a</b> | Suspended Ceiling, SDC A,B,C, Area (A): A < 250, Vert support only</p> 
+   <div>
+
+| Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A, B, or C
+
+
+Suggested Block Size: 250 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.001b</b> | Suspended Ceiling, SDC A,B,C, Area (A): 250 < A < 1000, Vert support only</p> 
+   <div>
+
+| Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.    Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A, B, or C
+
+
+Suggested Block Size: 600 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.001c</b> | Suspended Ceiling, SDC A,B,C, Area (A): 1000 < A < 2500, Vert support only</p> 
+   <div>
+
+| Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A, B, or C
+
+
+Suggested Block Size: 1800 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.001c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.001c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.001c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.001c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.001d</b> | Suspended Ceiling, SDC A,B,C, Area (A): A > 2500, Vert support only</p> 
+   <div>
+
+| Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A, B, or C
+
+
+Suggested Block Size: 2500 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.001d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.001d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.001d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.001d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.003a</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A < 250, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.   Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D or E (Ip = 1.0)
+
+
+Suggested Block Size: 250 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.003a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.003a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.003a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.003a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.003b</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 250 < A < 1000, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.    Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D or E (Ip = 1.0)
+
+
+Suggested Block Size: 600 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.003b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.003b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.003b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.003b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.003c</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 1000 < A < 2500, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D or E (Ip = 1.0)
+
+
+Suggested Block Size: 1800 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.003c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.003c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.003c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.003c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.003d</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A > 2500, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D or E (Ip = 1.0)
+
+
+Suggested Block Size: 2500 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.003d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.003d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.003d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.003d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.004a</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A < 250, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Special Inspection (e.g. OSHPD)
+| Seismic Installation Conditions: SDC D, E or F (Ip = 1.5)
+
+
+Suggested Block Size: 250 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.004a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.004a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.004a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.004a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.004b</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 250 < A < 1000, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Special Inspection (e.g. OSHPD)
+| Seismic Installation Conditions: SDC D, E or F (Ip = 1.5)
+
+
+Suggested Block Size: 600 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.004b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.004b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.004b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.004b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.004c</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 1000 < A < 2500, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Special Inspection (e.g. OSHPD)
+| Seismic Installation Conditions: SDC D, E or F (Ip = 1.5)
+
+
+Suggested Block Size: 1800 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.004c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.004c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.004c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.004c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.30.32.004d</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A > 2500, Vert & Lat support</p> 
+   <div>
+
+| Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
+| Construction Quality: Special Inspection (e.g. OSHPD)
+| Seismic Installation Conditions: SDC D, E or F (Ip = 1.5)
+
+
+Suggested Block Size: 2500 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.30.32.004d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.30.32.004d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.30.32.004d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.30.32.004d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

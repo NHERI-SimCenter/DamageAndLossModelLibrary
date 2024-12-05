@@ -1,0 +1,29 @@
+
+
+****************************
+F.10.12 - Special Structures
+****************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>F.10.12.001</b> | Storage racks designed and installed before 2007, big box retail (12' to 15' tall)</p> 
+   <div>
+
+| Standard pallet back to back storage rack.  Three to five levels tall with total height from 15 to 20 ft.  Costing assumes one single side access rack.  Costing of rack and restocking based upon 50 LF of rack.  Costing of rack contents to be furnished by user.   
+| Construction Quality: Normal
+| Seismic Installation Conditions: Varies
+
+
+Suggested Block Size: 50 LF 
+
+
+
+.. raw:: html
+   :file: F.10.12.001.html
+
+.. raw:: html
+
+   <hr>

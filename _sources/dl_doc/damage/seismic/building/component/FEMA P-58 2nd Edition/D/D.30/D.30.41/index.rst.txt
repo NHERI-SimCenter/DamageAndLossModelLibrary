@@ -1,0 +1,847 @@
+
+
+**********************************
+D.30.41 - Air Distribution Systems
+**********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.001a</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC A or B</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.001b</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC C</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.001c</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.001c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.001d</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC installations
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC installations - SDC D, E or F (high seismic design)
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.001d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.002a</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC A or B</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.002a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.002b</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC C</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.002b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.002c</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.002c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.002d</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC installations
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC installations - SDC D, E or F (high seismic design)
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.002d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.011a</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.011b</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC C</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.011c</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.011c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.011d</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC ducting installation
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC ducting installation - SDC D, E or F (high seismic design)
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.011d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.012a</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.012b</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC C</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.012c</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.012c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.012d</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC ducting installation
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC ducting installation - SDC D, E or F (high seismic design)
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.012d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.021a</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.021b</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC C</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.021b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.021c</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.021c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.021d</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC ducting installation
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC ducting installation - SDC D, E or F (high seismic design)
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.021d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.022a</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.022b</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC C</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.022b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.022c</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.022c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.022d</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of duct
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC ducting installation
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC ducting installation - SDC D, E or F (high seismic design)
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.30.41.022d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.031a</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC A or B</p> 
+   <div>
+
+| Costing per 10 units, No independent safety wires
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.031a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.031b</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC C</p> 
+   <div>
+
+| Costing per 10 units, No independent safety wires
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.031b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.032a</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC A or B</p> 
+   <div>
+
+| Costing per 10 units, unit supported by ducting only, no independent safety wires
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.032a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.032b</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC C</p> 
+   <div>
+
+| Costing per 10 units, unit supported by ducting only, no independent safety wires
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.032b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.032c</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F</p> 
+   <div>
+
+| Costing per 10 units, unit supported by ducting only, no independent safety wires
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC D, E or F
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.032c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.032d</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 10 units, unit supported by ducting only, no independent safety wires
+| Construction Quality: Special Regulation (e.g. OSHPD) for HVAC Ducting Installation
+| Seismic Installation Conditions: Special Regulation (e.g. OSHPD) for HVAC Ducting Installation - SDC D, E or F (high seismic design)
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.032d.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.041a</b> | Variable Air Volume (VAV) box with in-line coil, SDC A or B</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC A or B
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.041a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.041b</b> | Variable Air Volume (VAV) box with in-line coil, SDC C</p> 
+   <div>
+
+| Costing per 10 units
+| Construction Quality: Normal
+| Seismic Installation Conditions: Normal - SDC C
+| Notes: One failure is expected per 10 units.
+
+
+Suggested Block Size: 10 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.041b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.101a</b> | HVAC Fan - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.101a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.102a</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.102a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.102b</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.102b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.102c</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.102c.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.103a</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.103a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.103b</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.103b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.41.103c</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: D.30.41.103c.html
+
+.. raw:: html
+
+   <hr>

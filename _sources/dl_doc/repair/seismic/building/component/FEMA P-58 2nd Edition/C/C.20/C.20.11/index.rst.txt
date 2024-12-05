@@ -1,0 +1,527 @@
+
+
+****************************
+C.20.11 - Stair Construction
+****************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.001a</b> | Prefabricated steel stair with steel treads and landings with seismic joints that accommodate drift.</p> 
+   <div>
+
+| Flexible stair with seismic interstory slip joint.  Steel prefab stringers, steel or concrete filled pan treads.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.001a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.001a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.001a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.001a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.001b</b> | Prefabricated steel stair with steel treads and landings with no seismic joint.</p> 
+   <div>
+
+| Flexible stair without seismic interstory slip joint.  Steel prefab stringers, steel or concrete filled pan treads.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Confirm median demand and dispersion values
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.001b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.001b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.001b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.001b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.011a</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with seismic joints that accommodate drift.</p> 
+   <div>
+
+| Rigid stair with seismic interstory drift joint.  Precast concrete stair.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.011b</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with no seismic joint.</p> 
+   <div>
+
+| Rigid stair without seismic interstory drift joint.  Precast concrete stair.
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: Confirm median demand and dispersion values.  Base document noted that there was insufficient data to establish median demand or dispersion values.  The median demand and dispersion values listed are from a best fit approximation of the data performed by MKA.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.021a</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace in kind if replacement is required.</p> 
+   <div>
+
+| Cast in place concrete stair, with seismic interstory drift joint
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.021b</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace in kind if replacement is required.</p> 
+   <div>
+
+| Cast in place concrete stair, no seismic interstory drift joint
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.021b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.021b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.021b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.021b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.021c</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace with prefabricated steel stair if replacement is required.</p> 
+   <div>
+
+| Cast in place concrete stair, with seismic interstory drift joint
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.021c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.021c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.021c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.021c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.021d</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace with prefabricated steel stair if replacement is required.</p> 
+   <div>
+
+| Cast in place concrete stair, no seismic interstory drift joint
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.021d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.021d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.021d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.021d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.031a</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with seismic joints that accommodate drift.</p> 
+   <div>
+
+| Stair consists of steel stringers with precast treads rigidly linked to stringer
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>C.20.11.031b</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with no seismic joints.</p> 
+   <div>
+
+| Stair consists of steel stringers with precast treads rigidly linked to stringer
+| Construction Quality: Normal
+| Seismic Installation Conditions: All
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: C.20.11.031b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: C.20.11.031b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: C.20.11.031b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: C.20.11.031b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

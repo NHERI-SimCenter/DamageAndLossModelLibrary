@@ -1,0 +1,408 @@
+
+
+******************************************
+B.10.52 - Special Reinforced Masonry Walls
+******************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.001</b> | Special reinforced masonry walls with fully grouted cells, 8" or 12" thick, shear dominated, up t o12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.001-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.001-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.001-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.001-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.002</b> | Special reinforced masonry walls with fully grouted cells, 8" or 12" thick, shear dominated, greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.002-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.002-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.002-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.002-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.003</b> | Special reinforced masonry walls with fully grouted cells, 8" to 12" thick, flexure dominated up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.003-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.003-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.003-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.003-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.004</b> | Special reinforced masonry walls with fully grouted cells, 8" to 12" thick, flexure dominated greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.004-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.004-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.004-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.004-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.011</b> | Special reinforced masonry walls with fully grouted cells, 16" thick, shear dominated, up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.011-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.011-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.011-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.011-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.012</b> | Special reinforced masonry walls with fully grouted cells, 16" thick, shear dominated, greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.012-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.012-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.012-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.012-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.013</b> | Special reinforced masonry walls with fully grouted cells, 16" thick, flexure dominated up to 12' tall</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 100 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.013-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.013-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.013-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.013-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.52.014</b> | Special reinforced masonry walls with fully grouted cells, 16" thick, flexure dominated greater than 12' tall</p> 
+   <div>
+
+| Costing for each 225 ft^2 Wall Panel
+| Author: Benson Shing
+
+
+Suggested Block Size: 225 SF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: B.10.52.014-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: B.10.52.014-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: B.10.52.014-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: B.10.52.014-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

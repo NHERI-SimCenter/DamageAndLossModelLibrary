@@ -1,0 +1,100 @@
+
+
+****************************************
+STR.PC1 - Precast Concrete Tilt-Up Walls
+****************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC1.HC</b> | Structural, Precast Concrete Tilt-Up Walls, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings have a wood or metal deck roof diaphragm, which often is very large, that distributes lateral forces to precast concrete shear walls. The walls are thin but relatively heavy, while the roofs are relatively light. Older or non-seismic-code buildings often have inadequate connections for anchorage of the walls to the roof for out-of-plane forces, and the panel connections are often brittle. Tilt-up buildings are usually one or two stories in height. Walls can have numerous openings for doors and windows of such size that the wall looks more like a frame than a shear wall.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC1.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC1.LC</b> | Structural, Precast Concrete Tilt-Up Walls, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings have a wood or metal deck roof diaphragm, which often is very large, that distributes lateral forces to precast concrete shear walls. The walls are thin but relatively heavy, while the roofs are relatively light. Older or non-seismic-code buildings often have inadequate connections for anchorage of the walls to the roof for out-of-plane forces, and the panel connections are often brittle. Tilt-up buildings are usually one or two stories in height. Walls can have numerous openings for doors and windows of such size that the wall looks more like a frame than a shear wall.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC1.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC1.MC</b> | Structural, Precast Concrete Tilt-Up Walls, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings have a wood or metal deck roof diaphragm, which often is very large, that distributes lateral forces to precast concrete shear walls. The walls are thin but relatively heavy, while the roofs are relatively light. Older or non-seismic-code buildings often have inadequate connections for anchorage of the walls to the roof for out-of-plane forces, and the panel connections are often brittle. Tilt-up buildings are usually one or two stories in height. Walls can have numerous openings for doors and windows of such size that the wall looks more like a frame than a shear wall.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC1.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.PC1.PC</b> | Structural, Precast Concrete Tilt-Up Walls, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These buildings have a wood or metal deck roof diaphragm, which often is very large, that distributes lateral forces to precast concrete shear walls. The walls are thin but relatively heavy, while the roofs are relatively light. Older or non-seismic-code buildings often have inadequate connections for anchorage of the walls to the roof for out-of-plane forces, and the panel connections are often brittle. Tilt-up buildings are usually one or two stories in height. Walls can have numerous openings for doors and windows of such size that the wall looks more like a frame than a shear wall.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.PC1.PC.html
+
+.. raw:: html
+
+   <hr>

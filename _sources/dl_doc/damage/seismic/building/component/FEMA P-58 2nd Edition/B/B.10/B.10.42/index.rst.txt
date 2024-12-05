@@ -1,0 +1,236 @@
+
+
+*******************************
+B.10.42 - RC or Composite Beams
+*******************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.001a</b> | Concrete link beam, diagonally reinforced, aspect ratio between 1.0 and 2.0, beam < 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.001a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.001b</b> | Concrete link beam, diagonally reinforced, aspect ratio between 2.0 and 4.0, beam < 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.001b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.002a</b> | Concrete link beam, conventionally reinforced, aspect ratio between 1.0 and 2.0, beam < 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.002a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.002b</b> | Concrete link beam, conventionally reinforced, aspect ratio between 2.0 and 4.0, beam < 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.002b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.011a</b> | Concrete link beam, diagonally reinforced, aspect ratio between 1.0 and 2.0, beam > 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.011b</b> | Concrete link beam, diagonally reinforced, aspect ratio between 2.0 and 4.0, beam > 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.012a</b> | Concrete link beam, conventionally reinforced, aspect ratio between 1.0 and 2.0, beam > 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.012b</b> | Concrete link beam, conventionally reinforced, aspect ratio between 2.0 and 4.0, beam > 16" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.021a</b> | Concrete link beam, diagonally reinforced, aspect ratio between 1.0 and 2.0, beam > 24" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.021b</b> | Concrete link beam, diagonally reinforced, aspect ratio between 2.0 and 4.0, beam > 24" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.021b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.022a</b> | Concrete link beam, conventionally reinforced, aspect ratio between 1.0 and 2.0, beam > 24" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.42.022b</b> | Concrete link beam, conventionally reinforced, aspect ratio between 2.0 and 4.0, beam > 24" wide and depth < 30"</p> 
+   <div>
+
+| Author: John Wallace
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: B.10.42.022b.html
+
+.. raw:: html
+
+   <hr>

@@ -1,0 +1,1016 @@
+
+
+****************
+STR - Structural
+****************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.AGR1</b> | Structural, Agriculture</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Agriculture
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.AGR1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.AGR1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM1</b> | Structural, Retail Trade</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Retail Trade such as stores
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM10</b> | Structural, Parking</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Parking
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM10-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM10-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM2</b> | Structural, Wholesale Trade</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Wholesale Trade such as warehouses
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM3</b> | Structural, Personal and Repair Services</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Personal and Repair Services such as service stations and repair shops
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM4</b> | Structural, Professional and Technical Services</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Professional and Technical Services such as Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM5</b> | Structural, Banks and Financial Institutions</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Banks and Financial Institutions
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM6</b> | Structural, Hospital</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Hospital
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM7</b> | Structural, Medical Office and Clinic</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Medical Office and Clinic
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM7-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM7-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM8</b> | Structural, Entertainment and Recreation</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Entertainment and Recreation including restaurants and bars
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM8-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM8-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.COM9</b> | Structural, Theaters</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy type: Theatres
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.COM9-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.COM9-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.EDU1</b> | Structural, Schools</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Schools
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.EDU1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.EDU1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.EDU2</b> | Structural, Colleges/Universities</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Colleges/Universities excluding group housing
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.EDU2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.EDU2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.GOV1</b> | Structural, General Government Services</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: General Government Services offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.GOV1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.GOV1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.GOV2</b> | Structural, Emergency Response</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Emergency Response such as Police and Fire Stations
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.GOV2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.GOV2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND1</b> | Structural, Heavy Industry</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Heavy Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND2</b> | Structural, Light Industry</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Light Industry factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND3</b> | Structural, Food/Drugs/Chemicals</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Food/Drug/Chemical plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND4</b> | Structural, Metals/Minerals Processing</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Metals/Minerals Processing plants
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND5</b> | Structural, High Technology</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: High Technology factories
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.IND6</b> | Structural, Construction</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Construction Offices
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.IND6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.IND6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.REL1</b> | Structural, Church</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Church
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.REL1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.REL1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES1</b> | Structural, Single-family Dwelling</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Single-family Dwelling, Detached House
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES1-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES1-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES2</b> | Structural, Mobile Home</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Mobile Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES2-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES2-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES3</b> | Structural, Multi-family Dwelling</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Multi-family Dwelling, Apartments, Condominiums
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES3-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES3-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES4</b> | Structural, Temporary Lodging</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Temporary Lodging such as Hotel, Motel
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES4-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES4-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES5</b> | Structural, Institutional Dormitory</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Institutional Dormitory, including group housing (military, college) as well as jails
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES5-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES5-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.RES6</b> | Structural, Nursing Home</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Occupancy Type: Nursing Home
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: STR.RES6-Cost.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: STR.RES6-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

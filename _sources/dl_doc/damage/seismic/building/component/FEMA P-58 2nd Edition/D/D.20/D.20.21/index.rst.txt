@@ -1,0 +1,316 @@
+
+
+**************************************************
+D.20.21 - Domestic Water Distribution - Cold Water
+**************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.011a</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.011b</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.012a</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.012b</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.013a</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.013a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.013b</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.013b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.014a</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.014a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.014b</b> | Cold or Hot Potable  - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.014b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.021a</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.022a</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.023a</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC D,E,F, PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.023a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.023b</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC D,E,F, BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.023b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.024a</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC D,E,F (OSPHD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.024a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.21.024b</b> | Cold or Hot Potable Water Piping (dia > 2.5 inches), SDC D,E,F (OSPHD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Potable water.  Costing based upon 1000 ft segments.
+| Construction Quality: Special Regulation (e.g. OSHPD) for piping installations
+| Seismic Installation Conditions: SDC D, E or F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.21.024b.html
+
+.. raw:: html
+
+   <hr>

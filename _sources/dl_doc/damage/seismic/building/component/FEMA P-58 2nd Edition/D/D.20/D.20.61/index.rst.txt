@@ -1,0 +1,316 @@
+
+
+****************************
+D.20.61 - Steam Distribution
+****************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.011a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.011a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.011b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.011b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.012a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.012a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.012b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.012b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.013a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.013a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.013b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.013b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.014a</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.014a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.014b</b> | Steam Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
+| Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.014b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.021a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.021a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.022a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.022a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.023a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.023a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.023b</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.023b.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.024a</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.024a.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.20.61.024b</b> | Steam Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, pipe greater than 2.5 inches in diameter
+| Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
+| Seismic Installation Conditions: SDC D, E, F (high seismic design)
+| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+.. raw:: html
+   :file: D.20.61.024b.html
+
+.. raw:: html
+
+   <hr>

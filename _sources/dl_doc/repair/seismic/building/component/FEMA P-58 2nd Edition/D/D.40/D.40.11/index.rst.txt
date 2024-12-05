@@ -1,0 +1,944 @@
+
+
+********************
+D.40.11 - Sprinklers
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.021a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC A or B, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, horizontal main and branches
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: One failure is expected per 1000 feet of pipe.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.021a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.021a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.021a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.021a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.022a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC C, PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, horizontal main and branches
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: One failure is expected per 1000 feet of pipe.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.022a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.022a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.022a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.022a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.023a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - Poorly designed bracing, SDC D, E, or F , PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, horizontal main and branches
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 1000 feet of pipe.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.023a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.023a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.023a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.023a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.024a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - with designed bracing, SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <div>
+
+| Costing based upon 1000 ft segments of pipe, horizontal main and branches
+| Construction Quality: Special Regulation (e.g. OSHPD) for sprinkler installations
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 1000 feet of pipe.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 1000 LF 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.024a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.024a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.024a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.024a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.031a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.031a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.031a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.031a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.031a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.032a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.032a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.032a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.032a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.032a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.033a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.033a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.033a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.033a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.033a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.034a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Special Regulation (e.g. OSHPD) for sprinkler installations
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.034a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.034a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.034a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.034a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.041a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A or B (no seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.041a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.041a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.041a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.041a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.042a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C (low seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.042a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.042a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.042a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.042a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.053a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.053a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.053a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.053a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.053a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.054a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Special Regulation (e.g. OSHPD) for sprinkler installations
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.054a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.054a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.054a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.054a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.063a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.063a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.063a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.063a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.063a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.064a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Special Regulation (e.g. OSHPD) for sprinkler installations
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.064a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.064a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.064a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.064a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.071a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC A, B ( no seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.071a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.071a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.071a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.071a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.072a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC C ( low seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.072a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.072a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.072a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.072a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.073a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Normal
+| Seismic Installation Conditions: SDC D,E,F (high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.073a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.073a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.073a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.073a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.40.11.074a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <div>
+
+| Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
+| Construction Quality: Special Regulation (e.g. OSHPD) for sprinkler installations
+| Seismic Installation Conditions: SDC D,E,F ( high seismic design)
+| Notes: One failure is expected per 100 units.  Allowance included for MEP modifications for repair.
+
+
+Suggested Block Size: 100 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.40.11.074a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.40.11.074a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.40.11.074a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.40.11.074a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+

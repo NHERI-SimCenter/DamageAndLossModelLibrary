@@ -1,0 +1,129 @@
+
+
+**************************
+B.10.71 - Wood Light Frame
+**************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.001</b> | Light framed wood walls with structural panel sheathing, gypsum wallboard no hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, no hold-downs. 
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.71.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.002</b> | Light framed wood walls with structural panel sheathing, gypsum wallboard and hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:   1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with hold-downs. 
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.71.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.011</b> | Light framed wood walls with structural panel sheathing, stucco no hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with no hold-downs. Three layer 7/8" stucco with 1/2-inch chop strand fibers applied over wire mesh fastened with 1.25 -inch long staples.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.71.011.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.012</b> | Light framed wood walls with structural panel sheathing, stucco,  hold-downs</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  1 SIDE: 3/8" OSB or 15/32 ply with 8d box nails at 4 to 6 inches along panel edges and 12 inches field nailing. DF #2, 2x4@16 studs. 1 SIDE: 1/2 gypsum board. Panel 8 feet tall, 8 or 16 feet long with or without door and window openings, double top plate, single bottom plate, with hold-downs. Three layer 7/8" stucco with 1/2-inch chop strand fibers applied over wire mesh fastened with 1.25 -inch long staples.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.71.012.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.031</b> | Wood walls with diagonal let-in bracing</p> 
+   <div>
+
+| Costing for each 100 ft^2 Wall Panel.   Assumed framing:  Stud wall framing consists of 2 x 4’s at 16 inches on center with double top plates and single sill plate. Diagonal bracing includes 2 forms. Block-bracing consists of diagonal blocking between studs that extends from the top of one edge of the panel to the bottom of the opposite edge. Diagonal bracing may also consist of let-in bracing for which a 1x or 2x brace (with same inclination as described for block-bracing) is recessed into studs. Walls may be sheathed with horizontal or vertical lumber siding.
+| Author: Andre Filiatrault
+
+
+Suggested Block Size: 100 SF 
+
+
+
+.. raw:: html
+   :file: B.10.71.031.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>B.10.71.041</b> | Exterior Wall - Type: Gypsum with wood studs, Full Height, Fixed Below, Fixed Above</p> 
+   <div>
+
+| Costing based upon 13'x100' Panels
+| Construction Quality: Normal
+| Notes: Copy of C1011.011a for use as an exterior wall.
+
+
+Suggested Block Size: 100 LF 
+
+
+
+.. raw:: html
+   :file: B.10.71.041.html
+
+.. raw:: html
+
+   <hr>

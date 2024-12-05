@@ -1,0 +1,100 @@
+
+
+********************
+LF.MH - Mobile Homes
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.MH.HC</b> | Lifeline Facilities, Mobile Homes, High-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.MH.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.MH.LC</b> | Lifeline Facilities, Mobile Homes, Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.MH.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.MH.MC</b> | Lifeline Facilities, Mobile Homes, Moderate-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.MH.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.MH.PC</b> | Lifeline Facilities, Mobile Homes, Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.MH.PC.html
+
+.. raw:: html
+
+   <hr>

@@ -1,0 +1,84 @@
+
+
+******************************
+RWC.TN.EPX - To nail and epoxy
+******************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.EPX.001</b> | Roof-Wall Connection with Toe nails and epoxy.</p> 
+   <div>
+
+| Epoxy set for one week, toe-nailed when epoxy is wet.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.EPX.001.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.EPX.002</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p> 
+   <div>
+
+| Epoxy set for one week.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.EPX.002.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.EPX.003</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p> 
+   <div>
+
+| Epoxy set for 24-48 hrs.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.EPX.003.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.TN.EPX.004</b> | Roof-Wall Connection with Toe nails and epoxy on large wood blocks.</p> 
+   <div>
+
+| Epoxy set for one week.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: RWC.TN.EPX.004.html
+
+.. raw:: html
+
+   <hr>

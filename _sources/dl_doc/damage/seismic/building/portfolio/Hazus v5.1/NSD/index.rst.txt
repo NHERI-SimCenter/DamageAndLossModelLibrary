@@ -1,0 +1,31 @@
+
+
+************************************
+NSD - Non-Structural Drift-Sensitive
+************************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 8
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>NSD</b> | Drift-Sensitive Nonstructural</p> 
+   <div>
+
+| Drift-Sensitive Nonstructural components primarily include architectural components, but drift demands shall also be considered as a secondary cause of damage for certain mechanical, and electrical components. Typical examples (based on Table 5.2 in the Hazus Earthquake Model Technical Manual): Nonbearing walls and partitions, Exterior wall panels, Veneer and finishes, Penthouses, Piping systems, HVAC systems, Elevators, and General electrical components. Anchorage/bracing of nonstructural components improves earthquake performance of most components although routine or typical anchorage/bracing provides only limited damage protection. It is assumed that typical nonstructural components and building contents have limited anchorage/bracing.
+| Damage to drift-sensitive nonstructural components (e.g., full-height drywall partitions) is primarily a function of inter-story drift. The damage functions estimated for each group are assumed to be “typical” of its sub-components. However, that damage depends on the anchorage/bracing provided to the nonstructural components.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: NSD.html
+
+.. raw:: html
+
+   <hr>

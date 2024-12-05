@@ -1,0 +1,100 @@
+
+
+*********************
+STR.MH - Mobile Homes
+*********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.MH.HC</b> | Structural, Mobile Homes, High-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.MH.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.MH.LC</b> | Structural, Mobile Homes, Low-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.MH.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.MH.MC</b> | Structural, Mobile Homes, Moderate-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.MH.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>STR.MH.PC</b> | Structural, Mobile Homes, Pre-Code</p> 
+   <div>
+
+| Structural components represent the structural system in the building.
+| Structural System: These are prefabricated housing units that are trucked to the site and then placed on isolated piers, jack stands, or masonry block foundations (usually without any positive anchorage). Floors and roofs of mobile homes are usually constructed with plywood and outside surfaces are covered with sheet metal.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: STR.MH.PC.html
+
+.. raw:: html
+
+   <hr>

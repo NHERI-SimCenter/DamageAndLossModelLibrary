@@ -1,0 +1,100 @@
+
+
+*************************************
+LF.W2 - Wood, Commercial & Industrial
+*************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W2.HC</b> | Lifeline Facilities, Wood, Greater than 5,000 Sq. Ft., High-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These buildings are typically commercial or industrial buildings, or multi-family residential buildings with a floor area greater than 5,000 square feet. These buildings include structural systems framed by beams or major horizontally spanning members over columns. These horizontal members may be glue- laminated (glu-lam) wood, solid-sawn wood beams, or wood trusses, or steel beams or trusses. Lateral loads usually are resisted by wood diaphragms and exterior walls sheathed with plywood, stucco, plaster, or other paneling. The walls may have diagonal rod bracing. Large openings for stores and garages often require post-and-beam framing. Lateral load resistance on those lines may be achieved with steel rigid frames (moment frames) or diagonal bracing.
+| Design Level Approximate Basis:
+| Post-1975 construction in UBC Seismic Zone 4, NEHRP Map Area 7.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W2.HC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W2.LC</b> | Lifeline Facilities, Wood, Greater than 5,000 Sq. Ft., Low-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These buildings are typically commercial or industrial buildings, or multi-family residential buildings with a floor area greater than 5,000 square feet. These buildings include structural systems framed by beams or major horizontally spanning members over columns. These horizontal members may be glue- laminated (glu-lam) wood, solid-sawn wood beams, or wood trusses, or steel beams or trusses. Lateral loads usually are resisted by wood diaphragms and exterior walls sheathed with plywood, stucco, plaster, or other paneling. The walls may have diagonal rod bracing. Large openings for stores and garages often require post-and-beam framing. Lateral load resistance on those lines may be achieved with steel rigid frames (moment frames) or diagonal bracing.
+| Design Level Approximate Basis:
+| 1941-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5
+| Post-1941 construction in UBC Seismic Zone 2A, NEHRP Map Area 4
+| Post-1975 construction in UBC Seismic Zone 1, NEHRP Map Area 2/3
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W2.LC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W2.MC</b> | Lifeline Facilities, Wood, Greater than 5,000 Sq. Ft., Moderate-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These buildings are typically commercial or industrial buildings, or multi-family residential buildings with a floor area greater than 5,000 square feet. These buildings include structural systems framed by beams or major horizontally spanning members over columns. These horizontal members may be glue- laminated (glu-lam) wood, solid-sawn wood beams, or wood trusses, or steel beams or trusses. Lateral loads usually are resisted by wood diaphragms and exterior walls sheathed with plywood, stucco, plaster, or other paneling. The walls may have diagonal rod bracing. Large openings for stores and garages often require post-and-beam framing. Lateral load resistance on those lines may be achieved with steel rigid frames (moment frames) or diagonal bracing.
+| Design Level Approximate Basis:
+| Post-1941 construction in UBC Seismic Zone 3, NEHRP Map Area 6
+| Post-1975 construction in UBC Seismic Zone 2B, NEHRP Map Area 5.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W2.MC.html
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>LF.W2.PC</b> | Lifeline Facilities, Wood, Greater than 5,000 Sq. Ft., Pre-Code</p> 
+   <div>
+
+| Lifeline Facility damage functions are expressed in terms of an equivalent value of PGA for efficient evaluation of buildings that are components of utility and transportation systems. Only structural damage functions are developed based on PGA, since structural damage is considered the most appropriate measure of damage for utility and transportation system facilities. Median values of equivalent-PGA fragility curves are based on median values of spectral displacement of the damage state of interest and an assumed demand spectrum shape that relates spectral response to PGA. As such, median values of equivalent PGA are very sensitive to the shape assumed for the demand spectrum. Spectrum shape is influenced by earthquake source (i.e., WUS vs. CEUS attenuation functions), earthquake magnitude (e.g., large vs. small magnitude events), distance from source to site, site conditions (e.g., soil vs. rock), and effective damping, which varies based on building properties and earthquake duration (e.g., short, moderate, or long duration). These fragility curves were developed for a single set of spectrum shape factors (a reference spectrum), and a formula is provided for modifying damage state medians to approximate other spectrum shapes. The reference spectrum represents ground shaking of a large magnitude (i.e., M7.0) western United States (WUS) earthquake for soil sites (e.g., Site Class D) at site-to-source distances of 15 km or greater. 
+| Structural System: These buildings are typically commercial or industrial buildings, or multi-family residential buildings with a floor area greater than 5,000 square feet. These buildings include structural systems framed by beams or major horizontally spanning members over columns. These horizontal members may be glue- laminated (glu-lam) wood, solid-sawn wood beams, or wood trusses, or steel beams or trusses. Lateral loads usually are resisted by wood diaphragms and exterior walls sheathed with plywood, stucco, plaster, or other paneling. The walls may have diagonal rod bracing. Large openings for stores and garages often require post-and-beam framing. Lateral load resistance on those lines may be achieved with steel rigid frames (moment frames) or diagonal bracing.
+| Design Level: Approximate Basis: UBC Seismic Zone 0, NEHRP Map Area 1.
+| Pre-1941 construction in all other UBC and NEHRP areas.
+| Pre-Code damage functions are appropriate for modeling older buildings that were not designed for earthquake load, regardless of where they are located in the United States.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: LF.W2.PC.html
+
+.. raw:: html
+
+   <hr>

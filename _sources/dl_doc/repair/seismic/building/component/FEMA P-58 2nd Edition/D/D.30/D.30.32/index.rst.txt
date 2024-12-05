@@ -1,0 +1,1452 @@
+
+
+*******************************************************
+D.30.32 - Cooling Generating Systems - Direct Expansion
+*******************************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.011a</b> | Compressor - Capacity: Small non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.011a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.011a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.011a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.011a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.011b</b> | Compressor - Capacity: Large non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.011b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.011b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.011b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.011b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.011c</b> | Compressor - Capacity: Small medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.011c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.011c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.011c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.011c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.011d</b> | Compressor - Capacity: Large medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.011d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.011d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.011d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.011d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012a</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012b</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012c</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012d</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012e</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012f</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012g</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012h</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012i</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012j</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012k</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.012l</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Not designed for seismic loads
+| Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.012l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.012l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.012l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.012l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013a</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013a-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013a-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013a-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013a-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013b</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013b-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013b-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013b-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013b-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013c</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013c-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013c-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013c-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013c-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013d</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013d-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013d-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013d-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013d-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013e</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013e-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013e-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013e-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013e-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013f</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013f-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013f-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013f-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013f-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013g</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013g-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013g-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013g-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013g-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013h</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013h-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013h-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013h-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013h-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013i</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013i-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013i-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013i-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013i-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013j</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013j-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013j-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013j-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013j-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013k</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013k-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013k-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013k-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013k-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>D.30.32.013l</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <div>
+
+| Costing is per unit.
+| Construction Quality: Normal - Designed for seismic loads but no special seismic certification
+| Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
+| Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+The following repair consequences are available for this model:
+
+
+
+**Carbon**
+
+.. raw:: html
+   :file: D.30.32.013l-Carbon.html
+
+
+
+**Cost**
+
+.. raw:: html
+   :file: D.30.32.013l-Cost.html
+
+
+
+**Energy**
+
+.. raw:: html
+   :file: D.30.32.013l-Energy.html
+
+
+
+**Time**
+
+.. raw:: html
+   :file: D.30.32.013l-Time.html
+
+
+
+.. raw:: html
+
+   <hr>
+
