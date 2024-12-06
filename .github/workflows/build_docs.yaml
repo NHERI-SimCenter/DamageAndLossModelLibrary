@@ -1,0 +1,47 @@
+name: Build and deploy documentation
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pandoc
+          python -m pip install -r requirements.txt
+
+      - name: Compute cache key
+        id: compute-cache-key
+        run: |
+          cd doc/source/_extensions
+          key=$(python compute_global_hash.py)
+          cd ../../../
+          echo "key=$key" >> $GITHUB_OUTPUT
+
+      - name: Restore cache
+        uses: actions/cache@v3
+        with:
+          path: doc/cache
+          key: ${{ steps.compute-cache-key.outputs.key }}
+
+      - name: Build docs
+        run: cd doc && make html
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc/build/html

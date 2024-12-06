@@ -820,12 +820,22 @@
     "LimitStates": {
       "LS1": {
         "DS1": {
-          "Description": "Extensive Damage: Incipient unseating of the bridge supersturcture"
+          "Description": "Slight damage is defined by minor cracking and spalling to the abutment, cracks in shear keys at abutments, minor spalling and cracks at hinges, minor spalling at the column (damage requires no more than cosmetic repair), or minor cracking to the deck."
         }
       },
       "LS2": {
         "DS2": {
-          "Description": "Complete Damage: Partial or total bridge collapse"
+          "Description": "Moderate damage is defined by any column experiencing moderate (shear cracks) cracking and spalling (column structurally still sound), moderate movement of the abutment (<2 inches), extensive cracking and spalling of shear keys, any connection having cracked shear keys or bent bolts, keeper bar failure without unseating, rocker bearing failure, or moderate settlement of the approach"
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by any column degrading without collapse: shear failure – (column structurally unsafe), significant residual movement at connections, major settlement approach, vertical offset of the abutment, differential settlement at connections, or shear key failure at abutments"
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by any column collapsing and connection losing all bearing support, which may lead to imminent deck collapse, or tilting of substructure due to foundation failure"
         }
       }
     }
