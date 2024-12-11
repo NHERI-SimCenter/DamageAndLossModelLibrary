@@ -89,7 +89,7 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
             The following models are available:
 
             .. toctree::
-               :maxdepth: 8
+               :maxdepth: 1
 
             """
             )
@@ -153,7 +153,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
     The following collections are available in our Damage and Loss Model Library:
 
     .. toctree::
-       :maxdepth: 8
+       :maxdepth: 1
 
     """
     )
@@ -222,7 +222,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                 dlml_index_contents += dedent(
                     """
                 .. toctree::
-                   :maxdepth: 8
+                   :maxdepth: 1
 
                 """
                 )
@@ -383,7 +383,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
     The following collections are available in our Damage and Loss Model Library:
 
     .. toctree::
-       :maxdepth: 8
+       :maxdepth: 1
 
     """
     )
@@ -452,7 +452,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                 dlml_index_contents += dedent(
                     """
                 .. toctree::
-                   :maxdepth: 8
+                   :maxdepth: 1
 
                 """
                 )
