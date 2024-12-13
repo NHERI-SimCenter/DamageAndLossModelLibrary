@@ -143,7 +143,7 @@ def create_Hazus_Flood_repair_db(
         description = row.Description
 
         # loss function information
-        ys = ', '.join([str(x) for x in row[ft_cols].to_list()])
+        ys = ', '.join([f'{x/100.00:.3f}' for x in row[ft_cols].to_list()])
         xs = ', '.join([str(x) for x in ft_values.tolist()])
         lf_str = f'{ys}|{xs}'
 
