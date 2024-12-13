@@ -8,7 +8,7 @@ This dataset is a collection of component-level damage models from the literatur
 
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    RWC/index
    WIN/index

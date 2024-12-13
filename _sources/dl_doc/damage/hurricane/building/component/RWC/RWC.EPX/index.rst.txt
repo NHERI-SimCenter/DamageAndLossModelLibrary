@@ -7,7 +7,7 @@ RWC.EPX - Epoxy only
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
 
 .. raw:: html

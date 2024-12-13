@@ -8,7 +8,7 @@ The models in this dataset are based on version 5.1 of the Hazus Earthquake Mode
 
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    HRD/index
    HWB/index

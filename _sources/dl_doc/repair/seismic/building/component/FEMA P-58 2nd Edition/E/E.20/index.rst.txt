@@ -7,6 +7,6 @@ E.20 - Furnishings
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    E.20.22/index

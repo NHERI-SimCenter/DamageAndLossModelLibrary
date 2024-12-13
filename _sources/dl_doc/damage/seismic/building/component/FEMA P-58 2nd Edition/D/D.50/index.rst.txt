@@ -7,7 +7,7 @@ D.50 - Electrical
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    D.50.11/index
    D.50.12/index

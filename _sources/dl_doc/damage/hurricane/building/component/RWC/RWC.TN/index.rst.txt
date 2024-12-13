@@ -7,7 +7,7 @@ RWC.TN - Toe nail
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    RWC.TN.STR/index
    RWC.TN.EPX/index

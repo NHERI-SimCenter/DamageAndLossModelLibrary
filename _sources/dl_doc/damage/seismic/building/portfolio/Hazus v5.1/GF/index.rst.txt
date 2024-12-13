@@ -7,7 +7,7 @@ GF - Geotechnical Failure
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    GF.H/index
    GF.V/index

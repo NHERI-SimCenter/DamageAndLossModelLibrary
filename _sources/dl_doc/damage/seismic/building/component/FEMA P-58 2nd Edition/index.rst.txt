@@ -8,7 +8,7 @@ The models in this dataset are based on the 2nd edition of FEMA P-58. Specifical
 
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    B/index
    C/index

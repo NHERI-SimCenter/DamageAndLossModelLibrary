@@ -7,7 +7,7 @@ STR - Structural
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    STR.W1/index
    STR.W2/index

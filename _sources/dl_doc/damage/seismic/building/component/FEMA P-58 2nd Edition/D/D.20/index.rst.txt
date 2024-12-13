@@ -7,7 +7,7 @@ D.20 - Plumbing
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    D.20.21/index
    D.20.22/index

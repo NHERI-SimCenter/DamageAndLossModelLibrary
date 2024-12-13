@@ -7,7 +7,7 @@ LF - Lifeline Facilities
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    LF.W1/index
    LF.W2/index

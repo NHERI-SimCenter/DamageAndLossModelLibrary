@@ -7,7 +7,7 @@ B.30 - Roofing
 The following models are available:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    B.30.11/index
    B.30.31/index

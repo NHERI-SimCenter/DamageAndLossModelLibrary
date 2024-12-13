@@ -6,7 +6,7 @@ Damage Models
 The following collections are available in our Damage and Loss Model Library:
 
 .. toctree::
-   :maxdepth: 8
+   :maxdepth: 1
 
    hurricane/building/component/index
    seismic/transportation_network/portfolio/Hazus v5.1/index
