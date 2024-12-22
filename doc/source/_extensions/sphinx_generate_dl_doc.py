@@ -20,7 +20,7 @@ def run_script(app: Sphinx):
     """
     script_path = str(Path(app.srcdir) / '_extensions' / 'generate_dl_doc.py')
 
-    result = subprocess.run(['python', script_path], check=True)
+    result = subprocess.run(['python', script_path], check=True)  # noqa: S603, S607
 
     if result.returncode != 0:
         msg = 'Script execution failed'

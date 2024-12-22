@@ -32,7 +32,7 @@ def generate_md5(file_path):
     str
         The MD5 hash of the file.
     """
-    md5 = hashlib.md5()
+    md5 = hashlib.md5()  # noqa: S324
     with Path(file_path).open('rb') as f:
         for chunk in iter(lambda: f.read(4096), b''):
             md5.update(chunk)
@@ -53,7 +53,7 @@ def combine_md5_hashes(md5_list):
     str
         A new MD5 hash based on the combination of the given hashes.
     """
-    combined_md5 = hashlib.md5()
+    combined_md5 = hashlib.md5()  # noqa: S324
     for md5_hash in md5_list:
         combined_md5.update(md5_hash.encode('utf-8'))
     return combined_md5.hexdigest()
