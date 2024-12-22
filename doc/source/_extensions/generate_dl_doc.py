@@ -267,7 +267,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
             for comp in sorted(zipObj.namelist()):
                 if comp == 'fragility':
                     continue
-                comp = Path(comp).stem.removesuffix('.html')
+                comp = Path(comp).stem.removesuffix('.html')  # noqa: PLW2901
 
                 # check where the component belongs
                 comp_labels = comp.split('.')
