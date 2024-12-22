@@ -1,3 +1,5 @@
+"""Generate the DLML documentation pages."""
+
 import hashlib
 import json
 import os
@@ -12,7 +14,6 @@ from zipfile import ZipFile
 
 import numpy as np
 from tqdm import tqdm
-
 from visuals import plot_fragility, plot_repair
 
 os.chdir('../')
@@ -32,8 +33,8 @@ def generate_md5(file_path):
     str
         The MD5 hash of the file.
     """
-    md5 = hashlib.md5()
-    with open(file_path, 'rb') as f:
+    md5 = hashlib.md5()  # noqa: S324
+    with Path(file_path).open('rb') as f:
         for chunk in iter(lambda: f.read(4096), b''):
             md5.update(chunk)
     return md5.hexdigest()
@@ -53,17 +54,19 @@ def combine_md5_hashes(md5_list):
     str
         A new MD5 hash based on the combination of the given hashes.
     """
-    combined_md5 = hashlib.md5()
+    combined_md5 = hashlib.md5()  # noqa: S324
     for md5_hash in md5_list:
         combined_md5.update(md5_hash.encode('utf-8'))
     return combined_md5.hexdigest()
 
 
 def get_dlml_tag(dlml):
+    """Get the damage and loss model tag."""
     return '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
 
 
 def create_component_group_directory(cmp_groups, root, dlml_tag):
+    """Create a component group directory."""
     member_ids = []
 
     if isinstance(cmp_groups, dict):
@@ -133,8 +136,8 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
     return member_ids
 
 
-def generate_damage_docs(doc_folder: Path, cache_folder: Path):
-
+def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
+    """Generate damage parameter documentation."""
     doc_folder = doc_folder / 'damage'
 
     resource_folder = Path()
@@ -175,7 +178,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
         zip_hash = generate_md5(dlml)
         zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
 
-        # if it doesn't exist in the cahce, craete it.
+        # if it doesn't exist in the cache, create it.
         # otherwise it exists, obviously.
         if not zip_filepath.is_file():
             plot_fragility(
@@ -239,7 +242,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                     dlml_index_contents += f'   {member_id}/index\n'
 
         else:
-            print(f'No metadata available for {dlml}')
+            print(f'No metadata available for {dlml}')  # noqa: T201
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(
@@ -259,12 +262,12 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(zip_filepath, 'r') as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:  # noqa: N806
             # for each component
             for comp in sorted(zipObj.namelist()):
                 if comp == 'fragility':
                     continue
-                comp = Path(comp).stem.removesuffix('.html')
+                comp = Path(comp).stem.removesuffix('.html')  # noqa: PLW2901
 
                 # check where the component belongs
                 comp_labels = comp.split('.')
@@ -313,7 +316,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p>
                            <div>
 
                         """
@@ -364,7 +367,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
         f.write(damage_index_contents)
 
 
-def generate_repair_docs(doc_folder: Path, cache_folder: Path):
+def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
+    """Generate repair parameter documentation."""
     resource_folder = Path()
 
     doc_folder = doc_folder / 'repair'
@@ -405,7 +409,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
         zip_hash = generate_md5(dlml)
         zip_filepath = ((cache_folder) / zip_hash).with_suffix('.zip')
 
-        # if it doesn't exist in the cahce, craete it.
+        # if it doesn't exist in the cache, create it.
         # otherwise it exists, obviously.
         if not zip_filepath.is_file():
             plot_repair(
@@ -469,7 +473,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                     dlml_index_contents += f'   {member_id}/index\n'
 
         else:
-            print(f'No metadata available for {dlml}')
+            print(f'No metadata available for {dlml}')  # noqa: T201
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(
@@ -489,7 +493,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(zip_filepath, 'r') as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:  # noqa: N806
             html_files = [
                 Path(filepath).stem for filepath in sorted(zipObj.namelist())
             ]
@@ -545,7 +549,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p>
                            <div>
 
                         """
@@ -618,19 +622,18 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
 
 def ignore_file(dlml):
     """Ignore certain paths due to lack of support. To remove."""
-    if str(dlml.parent) in {
+    return str(dlml.parent) in {
         'seismic/water_network/portfolio/Hazus v6.1',
         'flood/building/portfolio/Hazus v6.1',
-    }:
-        return True
-    return False
+    }
 
 
 def main():
+    """Run the code."""
     cache_folder = Path('doc/cache')
 
     doc_folder = Path('doc/source/dl_doc')
-    if os.path.exists(doc_folder):
+    if Path(doc_folder).exists():
         shutil.rmtree(doc_folder)
     doc_folder.mkdir(parents=True, exist_ok=True)
 

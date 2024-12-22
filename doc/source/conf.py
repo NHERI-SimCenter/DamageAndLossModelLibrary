@@ -12,16 +12,17 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-from datetime import datetime
 import os
 import sys
+from datetime import datetime
+from pathlib import Path
 
-sys.path.insert(0, os.path.abspath('./_extensions'))
+sys.path.insert(0, str(Path('./_extensions').resolve()))
 
 # -- Project information -----------------------------------------------------
 project = 'Damage and Loss Model Library'
-copyright = (
-    f'{datetime.now().year}, Leland Stanford Junior '
+copyright = (  # noqa: A001
+    f'{datetime.now().year}, Leland Stanford Junior '  # noqa: DTZ005
     f'University and The Regents of the University of California'
 )
 

@@ -1,18 +1,16 @@
-"""
-Generates FEMA P-58 2nd edition damage and loss library files.
-
-"""
+"""Generates FEMA P-58 2nd edition damage and loss library files."""
 
 from __future__ import annotations
-import re
+
 import json
+import re
 from pathlib import Path
+
 import numpy as np
-from scipy.stats import norm  # type: ignore
 import pandas as pd
 from pelicun import base
 from pelicun.uq import fit_distribution_to_percentiles
-
+from scipy.stats import norm  # type: ignore
 
 # pylint: disable=possibly-used-before-assignment
 # pylint: disable=too-many-locals
@@ -20,9 +18,9 @@ from pelicun.uq import fit_distribution_to_percentiles
 # pylint: disable=used-before-assignment
 
 
-def parse_DS_Hierarchy(DSH):
+def parse_DS_Hierarchy(DSH):  # noqa: N802, N803
     """
-    Parses the FEMA P58 DS hierarchy into a set of arrays.
+    Parse the FEMA P58 DS hierarchy into a set of arrays.
 
     Parameters
     ----------
@@ -35,32 +33,32 @@ def parse_DS_Hierarchy(DSH):
       Damage state setup
     """
     if DSH[:3] == 'Seq':
-        DSH = DSH[4:-1]
+        DSH = DSH[4:-1]  # noqa: N806
 
-    DS_setup = []
+    DS_setup = []  # noqa: N806
 
     while len(DSH) > 0:
         if DSH[:2] == 'DS':
             DS_setup.append(DSH[:3])
-            DSH = DSH[4:]
+            DSH = DSH[4:]  # noqa: N806
         elif DSH[:5] in {'MutEx', 'Simul'}:
             closing_pos = DSH.find(')')
-            subDSH = DSH[: closing_pos + 1]
-            DSH = DSH[closing_pos + 2 :]
+            subDSH = DSH[: closing_pos + 1]  # noqa: N806
+            DSH = DSH[closing_pos + 2 :]  # noqa: N806
 
-            DS_setup.append([subDSH[:5]] + subDSH[6:-1].split(','))
+            DS_setup.append([subDSH[:5], *subDSH[6:-1].split(',')])
 
     return DS_setup
 
 
-def create_FEMA_P58_fragility_files(
+def create_FEMA_P58_fragility_files(  # noqa: C901, N802
     source_file,
     meta_file,
     target_data_file,
     target_meta_file,
 ):
     """
-    Create a fragility parameter database based on the FEMA P58 data
+    Create a fragility parameter database based on the FEMA P58 data.
 
     The method was developed to process v3.1.2 of the FragilityDatabase xls
     that is provided with FEMA P58 2nd edition.
@@ -84,77 +82,76 @@ def create_FEMA_P58_fragility_files(
         If there are problems with the mutually exclusive damage state
         definition of some component.
     """
-
     # parse the source file
-    df = pd.read_excel(
+    df = pd.read_excel(  # noqa: PD901
         source_file,
         sheet_name='Summary',
         header=2,
         index_col=1,
-        true_values=["YES", "Yes", "yes"],
-        false_values=["NO", "No", "no"],
+        true_values=['YES', 'Yes', 'yes'],
+        false_values=['NO', 'No', 'no'],
     )
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
             frag_meta = json.load(f)
     else:
         frag_meta = {}
 
     # remove the empty rows and columns
-    df.dropna(axis=0, how='all', inplace=True)
-    df.dropna(axis=1, how='all', inplace=True)
+    df.dropna(axis=0, how='all', inplace=True)  # noqa: PD002
+    df.dropna(axis=1, how='all', inplace=True)  # noqa: PD002
 
     # filter the columns that we need for the fragility database
     cols_to_db = [
-        "Demand Parameter (value):",
-        "Demand Parameter (unit):",
-        "Demand Location (use floor above? Yes/No)",
-        "Directional?",
-        "DS Hierarchy",
-        "DS 1, Probability",
-        "DS 1, Median Demand",
-        "DS 1, Total Dispersion (Beta)",
-        "DS 2, Probability",
-        "DS 2, Median Demand",
-        "DS 2, Total Dispersion (Beta)",
-        "DS 3, Probability",
-        "DS 3, Median Demand",
-        "DS 3, Total Dispersion (Beta)",
-        "DS 4, Probability",
-        "DS 4, Median Demand",
-        "DS 4, Total Dispersion (Beta)",
-        "DS 5, Probability",
-        "DS 5, Median Demand",
-        "DS 5, Total Dispersion (Beta)",
+        'Demand Parameter (value):',
+        'Demand Parameter (unit):',
+        'Demand Location (use floor above? Yes/No)',
+        'Directional?',
+        'DS Hierarchy',
+        'DS 1, Probability',
+        'DS 1, Median Demand',
+        'DS 1, Total Dispersion (Beta)',
+        'DS 2, Probability',
+        'DS 2, Median Demand',
+        'DS 2, Total Dispersion (Beta)',
+        'DS 3, Probability',
+        'DS 3, Median Demand',
+        'DS 3, Total Dispersion (Beta)',
+        'DS 4, Probability',
+        'DS 4, Median Demand',
+        'DS 4, Total Dispersion (Beta)',
+        'DS 5, Probability',
+        'DS 5, Median Demand',
+        'DS 5, Total Dispersion (Beta)',
     ]
 
     # filter the columns that we need for the metadata
     cols_to_meta = [
-        "Component Name",
-        "Component Description",
-        "Construction Quality:",
-        "Seismic Installation Conditions:",
-        "Comments / Notes",
-        "Author",
-        "Fragility Unit of Measure",
-        "Round to Integer Unit?",
-        "DS 1, Description",
-        "DS 1, Repair Description",
-        "DS 2, Description",
-        "DS 2, Repair Description",
-        "DS 3, Description",
-        "DS 3, Repair Description",
-        "DS 4, Description",
-        "DS 4, Repair Description",
-        "DS 5, Description",
-        "DS 5, Repair Description",
+        'Component Name',
+        'Component Description',
+        'Construction Quality:',
+        'Seismic Installation Conditions:',
+        'Comments / Notes',
+        'Author',
+        'Fragility Unit of Measure',
+        'Round to Integer Unit?',
+        'DS 1, Description',
+        'DS 1, Repair Description',
+        'DS 2, Description',
+        'DS 2, Repair Description',
+        'DS 3, Description',
+        'DS 3, Repair Description',
+        'DS 4, Description',
+        'DS 4, Repair Description',
+        'DS 5, Description',
+        'DS 5, Repair Description',
     ]
 
     # remove special characters to make it easier to work with column names
     str_map = {
-        ord(' '): "_",
+        ord(' '): '_',
         ord(':'): None,
         ord('('): None,
         ord(')'): None,
@@ -165,40 +162,40 @@ def create_FEMA_P58_fragility_files(
 
     df_db_source = df.loc[:, cols_to_db]
     df_db_source.columns = [s.translate(str_map) for s in cols_to_db]
-    df_db_source.sort_index(inplace=True)
+    df_db_source.sort_index(inplace=True)  # noqa: PD002
 
     df_meta = df.loc[:, cols_to_meta]
     df_meta.columns = [s.translate(str_map) for s in cols_to_meta]
     # replace missing values with an empty string
-    df_meta.fillna('', inplace=True)
+    df_meta.fillna('', inplace=True)  # noqa: PD002
     # the metadata shall be stored in strings
     df_meta = df_meta.astype(str)
 
     # initialize the output fragility table
     df_db = pd.DataFrame(
         columns=[
-            "Index",
-            "Incomplete",
-            "Demand-Type",
-            "Demand-Unit",
-            "Demand-Offset",
-            "Demand-Directional",
-            "LS1-Family",
-            "LS1-Theta_0",
-            "LS1-Theta_1",
-            "LS1-DamageStateWeights",
-            "LS2-Family",
-            "LS2-Theta_0",
-            "LS2-Theta_1",
-            "LS2-DamageStateWeights",
-            "LS3-Family",
-            "LS3-Theta_0",
-            "LS3-Theta_1",
-            "LS3-DamageStateWeights",
-            "LS4-Family",
-            "LS4-Theta_0",
-            "LS4-Theta_1",
-            "LS4-DamageStateWeights",
+            'Index',
+            'Incomplete',
+            'Demand-Type',
+            'Demand-Unit',
+            'Demand-Offset',
+            'Demand-Directional',
+            'LS1-Family',
+            'LS1-Theta_0',
+            'LS1-Theta_1',
+            'LS1-DamageStateWeights',
+            'LS2-Family',
+            'LS2-Theta_0',
+            'LS2-Theta_1',
+            'LS2-DamageStateWeights',
+            'LS3-Family',
+            'LS3-Theta_0',
+            'LS3-Theta_1',
+            'LS3-DamageStateWeights',
+            'LS4-Family',
+            'LS4-Theta_0',
+            'LS4-Theta_1',
+            'LS4-DamageStateWeights',
         ],
         index=df_db_source.index,
         dtype=float,
@@ -208,22 +205,22 @@ def create_FEMA_P58_fragility_files(
     meta_dict = {}
 
     # add the general information to the meta dict
-    if "_GeneralInformation" in frag_meta.keys():
-        frag_meta = frag_meta["_GeneralInformation"]
+    if '_GeneralInformation' in frag_meta:
+        frag_meta = frag_meta['_GeneralInformation']
 
         # remove the decision variable part from the general info
-        frag_meta.pop("DecisionVariables", None)
+        frag_meta.pop('DecisionVariables', None)
 
-        meta_dict.update({"_GeneralInformation": frag_meta})
+        meta_dict.update({'_GeneralInformation': frag_meta})
 
     # conversion dictionary for demand types
     convert_demand_type = {
-        'Story Drift Ratio': "Peak Interstory Drift Ratio",
-        'Link Rotation Angle': "Peak Link Rotation Angle",
-        'Effective Drift': "Peak Effective Drift Ratio",
-        'Link Beam Chord Rotation': "Peak Link Beam Chord Rotation",
-        'Peak Floor Acceleration': "Peak Floor Acceleration",
-        'Peak Floor Velocity': "Peak Floor Velocity",
+        'Story Drift Ratio': 'Peak Interstory Drift Ratio',
+        'Link Rotation Angle': 'Peak Link Rotation Angle',
+        'Effective Drift': 'Peak Effective Drift Ratio',
+        'Link Beam Chord Rotation': 'Peak Link Beam Chord Rotation',
+        'Peak Floor Acceleration': 'Peak Floor Acceleration',
+        'Peak Floor Velocity': 'Peak Floor Velocity',
     }
 
     # conversion dictionary for demand unit names
@@ -239,8 +236,8 @@ def create_FEMA_P58_fragility_files(
     # more important than efficiency.)
     for cmp in df_db_source.itertuples():
         # create a dotted component index
-        ID = cmp.Index.split('.')
-        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'
+        ID = cmp.Index.split('.')  # noqa: N806
+        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'  # noqa: N806
 
         # store the new index
         df_db.loc[cmp.Index, 'Index'] = cmpID
@@ -261,7 +258,7 @@ def create_FEMA_P58_fragility_files(
         df_db.loc[cmp.Index, 'Demand-Directional'] = int(cmp.Directional)
 
         # parse the damage state hierarchy
-        DS_setup = parse_DS_Hierarchy(cmp.DS_Hierarchy)
+        DS_setup = parse_DS_Hierarchy(cmp.DS_Hierarchy)  # noqa: N806
 
         # get the raw metadata for the component
         cmp_meta = df_meta.loc[cmp.Index, :]
@@ -300,17 +297,17 @@ def create_FEMA_P58_fragility_files(
         block_size = cmp_meta['Fragility_Unit_of_Measure'].split(' ')[::-1]
 
         meta_data = {
-            "Description": cmp_meta['Component_Name'],
-            "Comments": comments,
-            "SuggestedComponentBlockSize": ' '.join(block_size),
-            "RoundUpToIntegerQuantity": cmp_meta['Round_to_Integer_Unit'],
-            "LimitStates": {},
+            'Description': cmp_meta['Component_Name'],
+            'Comments': comments,
+            'SuggestedComponentBlockSize': ' '.join(block_size),
+            'RoundUpToIntegerQuantity': cmp_meta['Round_to_Integer_Unit'],
+            'LimitStates': {},
         }
 
         # now look at each Limit State
-        for LS_i, LS_contents in enumerate(DS_setup):
-            LS_i = LS_i + 1
-            LS_contents = np.atleast_1d(LS_contents)
+        for LS_i, LS_contents in enumerate(DS_setup):  # noqa: N806
+            LS_i = LS_i + 1  # noqa: N806, PLW2901
+            LS_contents = np.atleast_1d(LS_contents)  # noqa: N806, PLW2901
 
             ls_meta = {}
 
@@ -321,23 +318,24 @@ def create_FEMA_P58_fragility_files(
                 dispersions = []
                 weights = []
                 for ds in LS_contents[1:]:
-                    median_demands.append(getattr(cmp, f"DS_{ds[2]}_Median_Demand"))
+                    median_demands.append(getattr(cmp, f'DS_{ds[2]}_Median_Demand'))
 
                     dispersions.append(
-                        getattr(cmp, f"DS_{ds[2]}_Total_Dispersion_Beta")
+                        getattr(cmp, f'DS_{ds[2]}_Total_Dispersion_Beta')
                     )
 
-                    weights.append(getattr(cmp, f"DS_{ds[2]}_Probability"))
+                    weights.append(getattr(cmp, f'DS_{ds[2]}_Probability'))
 
                 # make sure the specified distribution parameters are appropriate
                 if (np.unique(median_demands).size != 1) or (
                     np.unique(dispersions).size != 1
                 ):
-                    raise ValueError(
-                        f"Incorrect mutually exclusive DS "
-                        f"definition in component {cmp.Index} at "
-                        f"Limit State {LS_i}"
+                    msg = (
+                        f'Incorrect mutually exclusive DS '
+                        f'definition in component {cmp.Index} at '
+                        f'Limit State {LS_i}'
                     )
+                    raise ValueError(msg)
 
                 if LS_contents[0] == 'MutEx':
                     # in mutually exclusive cases, make sure the specified DS
@@ -345,26 +343,26 @@ def create_FEMA_P58_fragility_files(
                     np.testing.assert_allclose(
                         np.sum(np.array(weights, dtype=float)),
                         1.0,
-                        err_msg=f"Mutually exclusive Damage State weights do "
-                        f"not sum to 1.0 in component {cmp.Index} at "
-                        f"Limit State {LS_i}",
+                        err_msg=f'Mutually exclusive Damage State weights do '
+                        f'not sum to 1.0 in component {cmp.Index} at '
+                        f'Limit State {LS_i}',
                     )
 
                     # and save all DS metadata under this Limit State
                     for ds in LS_contents[1:]:
                         ds_id = ds[2]
 
-                        repair_action = cmp_meta[f"DS_{ds_id}_Repair_Description"]
+                        repair_action = cmp_meta[f'DS_{ds_id}_Repair_Description']
                         if pd.isna(repair_action):
-                            repair_action = "<missing data>"
+                            repair_action = '<missing data>'
 
                         ls_meta.update(
                             {
-                                f"DS{ds_id}": {
-                                    "Description": cmp_meta[
-                                        f"DS_{ds_id}_Description"
+                                f'DS{ds_id}': {
+                                    'Description': cmp_meta[
+                                        f'DS_{ds_id}_Description'
                                     ],
-                                    "RepairAction": repair_action,
+                                    'RepairAction': repair_action,
                                 }
                             }
                         )
@@ -381,7 +379,7 @@ def create_FEMA_P58_fragility_files(
                         ds_map = format(ds_id, f'0{sim_ds_count}b')
 
                         sim_weights.append(
-                            np.product(
+                            np.prod(
                                 [
                                     (
                                         weights[ds_i]
@@ -403,17 +401,17 @@ def create_FEMA_P58_fragility_files(
                             ds_pure_id = ds_map[::-1].find('1') + 1
 
                             repair_action = cmp_meta[
-                                f"DS_{ds_pure_id}_Repair_Description"
+                                f'DS_{ds_pure_id}_Repair_Description'
                             ]
                             if pd.isna(repair_action):
-                                repair_action = "<missing data>"
+                                repair_action = '<missing data>'
 
                             ls_meta.update(
                                 {
-                                    f"DS{ds_id}": {
-                                        "Description": f"Pure DS{ds_pure_id}. "
-                                        + cmp_meta[f"DS_{ds_pure_id}_Description"],
-                                        "RepairAction": repair_action,
+                                    f'DS{ds_id}': {
+                                        'Description': f'Pure DS{ds_pure_id}. '
+                                        + cmp_meta[f'DS_{ds_pure_id}_Description'],
+                                        'RepairAction': repair_action,
                                     }
                                 }
                             )
@@ -426,10 +424,10 @@ def create_FEMA_P58_fragility_files(
 
                             ls_meta.update(
                                 {
-                                    f"DS{ds_id}": {
-                                        "Description": 'Combination of '
+                                    f'DS{ds_id}': {
+                                        'Description': 'Combination of '
                                         + ' & '.join(ds_combo),
-                                        "RepairAction": (
+                                        'RepairAction': (
                                             'Combination of pure DS repair actions.'
                                         ),
                                     }
@@ -445,7 +443,7 @@ def create_FEMA_P58_fragility_files(
 
                 theta_0 = median_demands[0]
                 theta_1 = dispersions[0]
-                weights_str = ' | '.join([f"{w:.6f}" for w in weights])
+                weights_str = ' | '.join([f'{w:.6f}' for w in weights])
 
                 df_db.loc[cmp.Index, f'LS{LS_i}-DamageStateWeights'] = weights_str
 
@@ -454,18 +452,18 @@ def create_FEMA_P58_fragility_files(
                 # this is straightforward, store the data in the table and dict
                 ds_id = LS_contents[0][2]
 
-                theta_0 = getattr(cmp, f"DS_{ds_id}_Median_Demand")
-                theta_1 = getattr(cmp, f"DS_{ds_id}_Total_Dispersion_Beta")
+                theta_0 = getattr(cmp, f'DS_{ds_id}_Median_Demand')
+                theta_1 = getattr(cmp, f'DS_{ds_id}_Total_Dispersion_Beta')
 
-                repair_action = cmp_meta[f"DS_{ds_id}_Repair_Description"]
+                repair_action = cmp_meta[f'DS_{ds_id}_Repair_Description']
                 if pd.isna(repair_action):
-                    repair_action = "<missing data>"
+                    repair_action = '<missing data>'
 
                 ls_meta.update(
                     {
-                        f"DS{ds_id}": {
-                            "Description": cmp_meta[f"DS_{ds_id}_Description"],
-                            "RepairAction": repair_action,
+                        f'DS{ds_id}': {
+                            'Description': cmp_meta[f'DS_{ds_id}_Description'],
+                            'RepairAction': repair_action,
                         }
                     }
                 )
@@ -488,7 +486,7 @@ def create_FEMA_P58_fragility_files(
                 incomplete = True
 
             # store the collected metadata for this limit state
-            meta_data['LimitStates'].update({f"LS{LS_i}": ls_meta})
+            meta_data['LimitStates'].update({f'LS{LS_i}': ls_meta})
 
         # store the incomplete flag for this component
         df_db.loc[cmp.Index, 'Incomplete'] = int(incomplete)
@@ -497,10 +495,10 @@ def create_FEMA_P58_fragility_files(
         meta_dict.update({cmpID: meta_data})
 
     # assign the Index column as the new ID
-    df_db.set_index('Index', inplace=True)
+    df_db.set_index('Index', inplace=True)  # noqa: PD002
 
     # rename the index
-    df_db.index.name = "ID"
+    df_db.index.name = 'ID'
 
     # convert to optimal datatypes to reduce file size
     df_db = df_db.convert_dtypes()
@@ -509,20 +507,20 @@ def create_FEMA_P58_fragility_files(
     df_db.to_csv(target_data_file)
 
     # save the metadata
-    with open(target_meta_file, 'w+', encoding='utf-8') as f:
+    with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print("Successfully parsed and saved the fragility data from FEMA P58")
+    print('Successfully parsed and saved the fragility data from FEMA P58')  # noqa: T201
 
 
-def create_FEMA_P58_repair_files(
+def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
     source_file,
     meta_file,
     target_data_file,
     target_meta_file,
 ):
     """
-    Create a repair consequence parameter database based on the FEMA P58 data
+    Create a repair consequence parameter database based on the FEMA P58 data.
 
     The method was developed to process v3.1.2 of the FragilityDatabase xls
     that is provided with FEMA P58 2nd edition.
@@ -541,9 +539,8 @@ def create_FEMA_P58_repair_files(
         expected.
 
     """
-
     # parse the source file
-    df = pd.concat(
+    df = pd.concat(  # noqa: PD901
         [
             pd.read_excel(source_file, sheet_name=sheet, header=2, index_col=1)
             for sheet in ('Summary', 'Cost Summary', 'Env Summary')
@@ -553,40 +550,40 @@ def create_FEMA_P58_repair_files(
 
     # parse the extra metadata file
     if Path(meta_file).is_file():
-        with open(meta_file, 'r', encoding='utf-8') as f:
+        with open(meta_file, encoding='utf-8') as f:  # noqa: PTH123
             frag_meta = json.load(f)
     else:
         frag_meta = {}
 
     # remove duplicate columns
     # (there are such because we joined two tables that were read separately)
-    df = df.loc[:, ~df.columns.duplicated()]
+    df = df.loc[:, ~df.columns.duplicated()]  # noqa: PD901
 
     # remove empty rows and columns
-    df.dropna(axis=0, how='all', inplace=True)
-    df.dropna(axis=1, how='all', inplace=True)
+    df.dropna(axis=0, how='all', inplace=True)  # noqa: PD002
+    df.dropna(axis=1, how='all', inplace=True)  # noqa: PD002
 
     # filter the columns we need for the repair database
     cols_to_db = [
-        "Fragility Unit of Measure",
+        'Fragility Unit of Measure',
         'DS Hierarchy',
     ]
-    for DS_i in range(1, 6):
+    for DS_i in range(1, 6):  # noqa: N806
         cols_to_db += [
-            f"Best Fit, DS{DS_i}",
-            f"Lower Qty Mean, DS{DS_i}",
-            f"Upper Qty Mean, DS{DS_i}",
-            f"Lower Qty Cutoff, DS{DS_i}",
-            f"Upper Qty Cutoff, DS{DS_i}",
-            f"CV / Dispersion, DS{DS_i}",
+            f'Best Fit, DS{DS_i}',
+            f'Lower Qty Mean, DS{DS_i}',
+            f'Upper Qty Mean, DS{DS_i}',
+            f'Lower Qty Cutoff, DS{DS_i}',
+            f'Upper Qty Cutoff, DS{DS_i}',
+            f'CV / Dispersion, DS{DS_i}',
             # --------------------------
-            f"Best Fit, DS{DS_i}.1",
-            f"Lower Qty Mean, DS{DS_i}.1",
-            f"Upper Qty Mean, DS{DS_i}.1",
-            f"Lower Qty Cutoff, DS{DS_i}.1",
-            f"Upper Qty Cutoff, DS{DS_i}.1",
-            f"CV / Dispersion, DS{DS_i}.2",
-            f"DS {DS_i}, Long Lead Time",
+            f'Best Fit, DS{DS_i}.1',
+            f'Lower Qty Mean, DS{DS_i}.1',
+            f'Upper Qty Mean, DS{DS_i}.1',
+            f'Lower Qty Cutoff, DS{DS_i}.1',
+            f'Upper Qty Cutoff, DS{DS_i}.1',
+            f'CV / Dispersion, DS{DS_i}.2',
+            f'DS {DS_i}, Long Lead Time',
             # --------------------------
             f'Repair Cost, p10, DS{DS_i}',
             f'Repair Cost, p50, DS{DS_i}',
@@ -598,42 +595,42 @@ def create_FEMA_P58_repair_files(
             f'Mean Value, DS{DS_i}.1',
             # --------------------------
             # Columns added for the Environmental loss
-            f"DS{DS_i} Best Fit",
-            f"DS{DS_i} CV or Beta",
+            f'DS{DS_i} Best Fit',
+            f'DS{DS_i} CV or Beta',
             # --------------------------
-            f"DS{DS_i} Best Fit.1",
-            f"DS{DS_i} CV or Beta.1",
+            f'DS{DS_i} Best Fit.1',
+            f'DS{DS_i} CV or Beta.1',
             # --------------------------
-            f"DS{DS_i} Embodied Carbon (kg CO2eq)",
-            f"DS{DS_i} Embodied Energy (MJ)",
+            f'DS{DS_i} Embodied Carbon (kg CO2eq)',
+            f'DS{DS_i} Embodied Energy (MJ)',
         ]
 
     # filter the columns that we need for the metadata
     cols_to_meta = [
-        "Component Name",
-        "Component Description",
-        "Construction Quality:",
-        "Seismic Installation Conditions:",
-        "Comments / Notes",
-        "Author",
-        "Fragility Unit of Measure",
-        "Round to Integer Unit?",
-        "DS 1, Description",
-        "DS 1, Repair Description",
-        "DS 2, Description",
-        "DS 2, Repair Description",
-        "DS 3, Description",
-        "DS 3, Repair Description",
-        "DS 4, Description",
-        "DS 4, Repair Description",
-        "DS 5, Description",
-        "DS 5, Repair Description",
+        'Component Name',
+        'Component Description',
+        'Construction Quality:',
+        'Seismic Installation Conditions:',
+        'Comments / Notes',
+        'Author',
+        'Fragility Unit of Measure',
+        'Round to Integer Unit?',
+        'DS 1, Description',
+        'DS 1, Repair Description',
+        'DS 2, Description',
+        'DS 2, Repair Description',
+        'DS 3, Description',
+        'DS 3, Repair Description',
+        'DS 4, Description',
+        'DS 4, Repair Description',
+        'DS 5, Description',
+        'DS 5, Repair Description',
     ]
 
     # remove special characters to make it easier to work with column names
     str_map = {
-        ord(' '): "_",
-        ord('.'): "_",
+        ord(' '): '_',
+        ord('.'): '_',
         ord(':'): None,
         ord('('): None,
         ord(')'): None,
@@ -644,33 +641,33 @@ def create_FEMA_P58_repair_files(
 
     df_db_source = df.loc[:, cols_to_db]
     df_db_source.columns = [s.translate(str_map) for s in cols_to_db]
-    df_db_source.sort_index(inplace=True)
+    df_db_source.sort_index(inplace=True)  # noqa: PD002
 
     df_meta = df.loc[:, cols_to_meta]
     df_meta.columns = [s.translate(str_map) for s in cols_to_meta]
 
-    df_db_source.replace('BY USER', np.nan, inplace=True)
+    df_db_source.replace('BY USER', np.nan, inplace=True)  # noqa: PD002
 
     # initialize the output loss table
     # define the columns
     out_cols = [
-        "Index",
-        "Incomplete",
-        "Quantity-Unit",
-        "DV-Unit",
+        'Index',
+        'Incomplete',
+        'Quantity-Unit',
+        'DV-Unit',
     ]
-    for DS_i in range(1, 16):
+    for DS_i in range(1, 16):  # noqa: N806
         out_cols += [
-            f"DS{DS_i}-Family",
-            f"DS{DS_i}-Theta_0",
-            f"DS{DS_i}-Theta_1",
-            f"DS{DS_i}-LongLeadTime",
+            f'DS{DS_i}-Family',
+            f'DS{DS_i}-Theta_0',
+            f'DS{DS_i}-Theta_1',
+            f'DS{DS_i}-LongLeadTime',
         ]
 
     # create the MultiIndex
-    comps = df_db_source.index.values
-    DVs = ['Cost', 'Time', 'Carbon', 'Energy']
-    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])
+    comps = df_db_source.index.to_numpy()
+    DVs = ['Cost', 'Time', 'Carbon', 'Energy']  # noqa: N806
+    df_MI = pd.MultiIndex.from_product([comps, DVs], names=['ID', 'DV'])  # noqa: N806
 
     df_db = pd.DataFrame(columns=out_cols, index=df_MI, dtype=float)
 
@@ -678,10 +675,10 @@ def create_FEMA_P58_repair_files(
     meta_dict = {}
 
     # add the general information to the meta dict
-    if "_GeneralInformation" in frag_meta.keys():
-        frag_meta = frag_meta["_GeneralInformation"]
+    if '_GeneralInformation' in frag_meta:
+        frag_meta = frag_meta['_GeneralInformation']
 
-        meta_dict.update({"_GeneralInformation": frag_meta})
+        meta_dict.update({'_GeneralInformation': frag_meta})
 
     convert_family = {'LogNormal': 'lognormal', 'Normal': 'normal'}
 
@@ -689,8 +686,8 @@ def create_FEMA_P58_repair_files(
     # (this approach is not efficient, but easy to follow which was considered
     # more important than efficiency.)
     for cmp in df_db_source.itertuples():
-        ID = cmp.Index.split('.')
-        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'
+        ID = cmp.Index.split('.')  # noqa: N806
+        cmpID = f'{ID[0][0]}.{ID[0][1:3]}.{ID[0][3:5]}.{ID[1]}'  # noqa: N806
 
         # store the new index
         df_db.loc[cmp.Index, 'Index'] = cmpID
@@ -706,10 +703,10 @@ def create_FEMA_P58_repair_files(
         df_db.loc[cmp.Index, 'Quantity-Unit'] = ' '.join(
             cmp.Fragility_Unit_of_Measure.split(' ')[::-1]
         ).strip()
-        df_db.loc[(cmp.Index, 'Cost'), 'DV-Unit'] = "USD_2011"
-        df_db.loc[(cmp.Index, 'Time'), 'DV-Unit'] = "worker_day"
-        df_db.loc[(cmp.Index, 'Carbon'), 'DV-Unit'] = "kg"
-        df_db.loc[(cmp.Index, 'Energy'), 'DV-Unit'] = "MJ"
+        df_db.loc[(cmp.Index, 'Cost'), 'DV-Unit'] = 'USD_2011'
+        df_db.loc[(cmp.Index, 'Time'), 'DV-Unit'] = 'worker_day'
+        df_db.loc[(cmp.Index, 'Carbon'), 'DV-Unit'] = 'kg'
+        df_db.loc[(cmp.Index, 'Energy'), 'DV-Unit'] = 'MJ'
 
         # get the raw metadata for the component
         cmp_meta = df_meta.loc[cmp.Index, :]
@@ -749,12 +746,12 @@ def create_FEMA_P58_repair_files(
         block_size = cmp_meta['Fragility_Unit_of_Measure'].split(' ')[::-1]
 
         meta_data = {
-            "Description": cmp_meta['Component_Name'],
-            "Comments": comments,
-            "SuggestedComponentBlockSize": ' '.join(block_size),
-            "RoundUpToIntegerQuantity": cmp_meta['Round_to_Integer_Unit'],
-            "ControllingDemand": "Damage Quantity",
-            "DamageStates": {},
+            'Description': cmp_meta['Component_Name'],
+            'Comments': comments,
+            'SuggestedComponentBlockSize': ' '.join(block_size),
+            'RoundUpToIntegerQuantity': cmp_meta['Round_to_Integer_Unit'],
+            'ControllingDemand': 'Damage Quantity',
+            'DamageStates': {},
         }
 
         # Handle components with simultaneous damage states separately
@@ -770,7 +767,7 @@ def create_FEMA_P58_repair_files(
             energy_est = {}
 
             # get the p10, p50, and p90 estimates for all damage states
-            for DS_i in range(1, 6):
+            for DS_i in range(1, 6):  # noqa: N806
                 if not pd.isna(getattr(cmp, f'Repair_Cost_p10_DS{DS_i}')):
                     cost_est.update(
                         {
@@ -848,7 +845,7 @@ def create_FEMA_P58_repair_files(
             sim_ds_count = len(cost_est.keys())
             ds_count = 2 ** (sim_ds_count) - 1
 
-            for DS_i in range(1, ds_count + 1):
+            for DS_i in range(1, ds_count + 1):  # noqa: N806
                 ds_map = format(DS_i, f'0{sim_ds_count}b')
 
                 cost_vals = np.sum(
@@ -949,23 +946,23 @@ def create_FEMA_P58_repair_files(
                 df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Family'] = family_hat
 
                 df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Theta_0'] = (
-                    f"{cost_vals[3]:g},{cost_vals[4]:g}|"
-                    f"{cost_qnt_low:g},{cost_qnt_up:g}"
+                    f'{cost_vals[3]:g},{cost_vals[4]:g}|'
+                    f'{cost_qnt_low:g},{cost_qnt_up:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Theta_1'] = (
-                    f"{cost_theta[1]:g}"
+                    f'{cost_theta[1]:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-Family'] = family_hat
 
                 df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-Theta_0'] = (
-                    f"{time_vals[3]:g},{time_vals[4]:g}|"
-                    f"{time_qnt_low:g},{time_qnt_up:g}"
+                    f'{time_vals[3]:g},{time_vals[4]:g}|'
+                    f'{time_qnt_low:g},{time_qnt_up:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-Theta_1'] = (
-                    f"{time_theta[1]:g}"
+                    f'{time_theta[1]:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-LongLeadTime'] = int(
@@ -977,11 +974,11 @@ def create_FEMA_P58_repair_files(
                 )
 
                 df_db.loc[(cmp.Index, 'Carbon'), f'DS{DS_i}-Theta_0'] = (
-                    f"{carbon_theta[0]:g}"
+                    f'{carbon_theta[0]:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Carbon'), f'DS{DS_i}-Theta_1'] = (
-                    f"{carbon_theta[1]:g}"
+                    f'{carbon_theta[1]:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Energy'), f'DS{DS_i}-Family'] = (
@@ -989,26 +986,26 @@ def create_FEMA_P58_repair_files(
                 )
 
                 df_db.loc[(cmp.Index, 'Energy'), f'DS{DS_i}-Theta_0'] = (
-                    f"{energy_theta[0]:g}"
+                    f'{energy_theta[0]:g}'
                 )
 
                 df_db.loc[(cmp.Index, 'Energy'), f'DS{DS_i}-Theta_1'] = (
-                    f"{energy_theta[1]:g}"
+                    f'{energy_theta[1]:g}'
                 )
 
                 if ds_map.count('1') == 1:
                     ds_pure_id = ds_map[::-1].find('1') + 1
 
-                    repair_action = cmp_meta[f"DS_{ds_pure_id}_Repair_Description"]
+                    repair_action = cmp_meta[f'DS_{ds_pure_id}_Repair_Description']
                     if pd.isna(repair_action):
-                        repair_action = "<missing data>"
+                        repair_action = '<missing data>'
 
                     meta_data['DamageStates'].update(
                         {
-                            f"DS{DS_i}": {
-                                "Description": f"Pure DS{ds_pure_id}. "
-                                + cmp_meta[f"DS_{ds_pure_id}_Description"],
-                                "RepairAction": repair_action,
+                            f'DS{DS_i}': {
+                                'Description': f'Pure DS{ds_pure_id}. '
+                                + cmp_meta[f'DS_{ds_pure_id}_Description'],
+                                'RepairAction': repair_action,
                             }
                         }
                     )
@@ -1020,10 +1017,10 @@ def create_FEMA_P58_repair_files(
 
                     meta_data['DamageStates'].update(
                         {
-                            f"DS{DS_i}": {
-                                "Description": 'Combination of '
+                            f'DS{DS_i}': {
+                                'Description': 'Combination of '
                                 + ' & '.join(ds_combo),
-                                "RepairAction": 'Combination of pure DS repair '
+                                'RepairAction': 'Combination of pure DS repair '
                                 'actions.',
                             }
                         }
@@ -1032,7 +1029,7 @@ def create_FEMA_P58_repair_files(
         # for every other component...
         else:
             # now look at each Damage State
-            for DS_i in range(1, 6):
+            for DS_i in range(1, 6):  # noqa: N806
                 # cost
                 if not pd.isna(getattr(cmp, f'Best_Fit_DS{DS_i}')):
                     df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Family'] = (
@@ -1052,8 +1049,8 @@ def create_FEMA_P58_repair_files(
 
                         else:
                             df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Theta_0'] = (
-                                f"{theta_0_low:g},{theta_0_up:g}|"
-                                f"{qnt_low:g},{qnt_up:g}"
+                                f'{theta_0_low:g},{theta_0_up:g}|'
+                                f'{qnt_low:g},{qnt_up:g}'
                             )
 
                             df_db.loc[(cmp.Index, 'Cost'), f'DS{DS_i}-Theta_1'] = (
@@ -1063,15 +1060,15 @@ def create_FEMA_P58_repair_files(
                     else:
                         incomplete_cost = True
 
-                    repair_action = cmp_meta[f"DS_{DS_i}_Repair_Description"]
+                    repair_action = cmp_meta[f'DS_{DS_i}_Repair_Description']
                     if pd.isna(repair_action):
-                        repair_action = "<missing data>"
+                        repair_action = '<missing data>'
 
                     meta_data['DamageStates'].update(
                         {
-                            f"DS{DS_i}": {
-                                "Description": cmp_meta[f"DS_{DS_i}_Description"],
-                                "RepairAction": repair_action,
+                            f'DS{DS_i}': {
+                                'Description': cmp_meta[f'DS_{DS_i}_Description'],
+                                'RepairAction': repair_action,
                             }
                         }
                     )
@@ -1095,8 +1092,8 @@ def create_FEMA_P58_repair_files(
 
                         else:
                             df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-Theta_0'] = (
-                                f"{theta_0_low:g},{theta_0_up:g}|"
-                                f"{qnt_low:g},{qnt_up:g}"
+                                f'{theta_0_low:g},{theta_0_up:g}|'
+                                f'{qnt_low:g},{qnt_up:g}'
                             )
 
                             df_db.loc[(cmp.Index, 'Time'), f'DS{DS_i}-Theta_1'] = (
@@ -1147,17 +1144,17 @@ def create_FEMA_P58_repair_files(
 
     # assign the Index column as the new ID
     df_db.index = pd.MultiIndex.from_arrays(
-        [df_db['Index'].values, df_db.index.get_level_values(1)]
+        [df_db['Index'].to_numpy(), df_db.index.get_level_values(1)]
     )
 
-    df_db.drop('Index', axis=1, inplace=True)
+    df_db.drop('Index', axis=1, inplace=True)  # noqa: PD002
 
     # review the database and drop rows with no information
     cmp_to_drop = []
     for cmp in df_db.index:
         empty = True
 
-        for DS_i in range(1, 6):
+        for DS_i in range(1, 6):  # noqa: N806
             if not pd.isna(df_db.loc[cmp, f'DS{DS_i}-Family']):
                 empty = False
                 break
@@ -1165,7 +1162,7 @@ def create_FEMA_P58_repair_files(
         if empty:
             cmp_to_drop.append(cmp)
 
-    df_db.drop(cmp_to_drop, axis=0, inplace=True)
+    df_db.drop(cmp_to_drop, axis=0, inplace=True)  # noqa: PD002
     for cmp in cmp_to_drop:
         if cmp[0] in meta_dict:
             del meta_dict[cmp[0]]
@@ -1176,24 +1173,20 @@ def create_FEMA_P58_repair_files(
     df_db = base.convert_to_SimpleIndex(df_db, 0)
 
     # rename the index
-    df_db.index.name = "ID"
+    df_db.index.name = 'ID'
 
     # save the consequence data
     df_db.to_csv(target_data_file)
 
     # save the metadata
-    with open(target_meta_file, 'w+', encoding='utf-8') as f:
+    with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
         json.dump(meta_dict, f, indent=2)
 
-    print("Successfully parsed and saved the repair consequence data from FEMA P58")
+    print('Successfully parsed and saved the repair consequence data from FEMA P58')  # noqa: T201
 
 
 def main():
-    """
-    Generates FEMA P-58 2nd edition damage and loss library files.
-
-    """
-
+    """Generate FEMA P-58 2nd edition damage and loss library files."""
     create_FEMA_P58_fragility_files(
         source_file=(
             'seismic/building/component/FEMA P-58 2nd Edition/'

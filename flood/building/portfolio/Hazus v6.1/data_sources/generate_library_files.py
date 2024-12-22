@@ -1,12 +1,10 @@
-"""
-Generates Hazus Flood loss functions.
-
-"""
+"""Generates Hazus Flood loss functions."""
 
 from __future__ import annotations
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 from pelicun import base
 
 idx = base.idx
@@ -14,6 +12,8 @@ idx = base.idx
 
 def remove_repeated_chars(s):
     """
+    Remove repeated characters.
+
     Removes all repeated instances of a character in a string with a
     single instance of that character, unless it is [A-Za-z].
 
@@ -29,9 +29,8 @@ def remove_repeated_chars(s):
         by a single instance.
 
     """
-
     if not s:
-        return ""
+        return ''
 
     result = [s[0]]  # Initialize result with the first character
 
@@ -42,13 +41,15 @@ def remove_repeated_chars(s):
     return ''.join(result)
 
 
-def create_Hazus_Flood_repair_db(
+def create_Hazus_Flood_repair_db(  # noqa: N802
     source_file_dir: str = (
         'flood/building/portfolio/Hazus v6.1/data_sources/input_files'
     ),
     target_data_file: str = 'flood/building/portfolio/Hazus v6.1/loss_repair.csv',
 ):
     """
+    Create HAZUS Flood metadata.
+
     Create a database metadata file for the HAZUS Flood
     loss functions.
 
@@ -62,7 +63,6 @@ def create_Hazus_Flood_repair_db(
         is expected.
 
     """
-
     source_data = {}
     for subassembly_type in ('structural', 'inventory', 'contents'):
         source_file = (
@@ -84,14 +84,11 @@ def create_Hazus_Flood_repair_db(
     )
 
     # Merge the three subassembly datasets
-    df = pd.concat(source_data.values(), keys=source_data.keys(), axis=0)
+    df = pd.concat(source_data.values(), keys=source_data.keys(), axis=0)  # noqa: PD901
     df.index.names = ['subassembly', 'index']
 
     # Columns defining the loss for each inundation height
-    ft_cols = []
-    for col in df.columns:
-        if col.startswith('ft'):
-            ft_cols.append(col)
+    ft_cols = [col for col in df.columns if col.startswith('ft')]
     ft_values_list = []
     for x in ft_cols:
         if 'm' in x:
@@ -133,7 +130,6 @@ def create_Hazus_Flood_repair_db(
     lf_data['DV-Unit'] = 'loss_ratio'
 
     for index, row in df.iterrows():
-
         # Extract row data
         data_type = index[0]
         row_index = index[1]
@@ -150,7 +146,7 @@ def create_Hazus_Flood_repair_db(
         lf_data.loc[row_index, 'LossFunction-Theta_0'] = lf_str
 
         # assign an ID
-        lf_id = '.'.join([occupancy, source, data_type])
+        lf_id = f'{occupancy}.{source}.{data_type}'
 
         other_data = (
             description.lower()
@@ -165,7 +161,7 @@ def create_Hazus_Flood_repair_db(
             .split(',')
         )
         for other in other_data:
-            other = other.strip()
+            other = other.strip()  # noqa: PLW2901
             if not other:
                 continue
             elements = [

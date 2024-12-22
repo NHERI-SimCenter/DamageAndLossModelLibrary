@@ -128,18 +128,12 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         scale=comp_data.loc[(LS, 'Theta_1')]  # noqa: RUF031, RUF100
                         * comp_data.loc[(LS, 'Theta_0')],  # noqa: RUF031, RUF100
                     )
-                elif (
-                    comp_data.loc[(LS, 'Family')] == 'lognormal'
-                ):  # noqa: RUF031, RUF100
+                elif comp_data.loc[(LS, 'Family')] == 'lognormal':  # noqa: RUF031, RUF100
                     d_min_i, d_max_i = np.exp(
                         norm.ppf(
                             [p_min, p_max],
-                            loc=np.log(
-                                comp_data.loc[(LS, 'Theta_0')]
-                            ),  # noqa: RUF031, RUF100
-                            scale=comp_data.loc[
-                                (LS, 'Theta_1')
-                            ],  # noqa: RUF031, RUF100
+                            loc=np.log(comp_data.loc[(LS, 'Theta_0')]),  # noqa: RUF031, RUF100
+                            scale=comp_data.loc[(LS, 'Theta_1')],  # noqa: RUF031, RUF100
                         )
                     )
                 else:
@@ -160,14 +154,10 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         scale=comp_data.loc[(LS, 'Theta_1')]  # noqa: RUF031, RUF100
                         * comp_data.loc[(LS, 'Theta_0')],  # noqa: RUF031, RUF100
                     )
-                elif (
-                    comp_data.loc[(LS, 'Family')] == 'lognormal'
-                ):  # noqa: RUF031, RUF100
+                elif comp_data.loc[(LS, 'Family')] == 'lognormal':  # noqa: RUF031, RUF100
                     cdf_vals = norm.cdf(
                         np.log(demand_vals),
-                        loc=np.log(
-                            comp_data.loc[(LS, 'Theta_0')]
-                        ),  # noqa: RUF031, RUF100
+                        loc=np.log(comp_data.loc[(LS, 'Theta_0')]),  # noqa: RUF031, RUF100
                         scale=comp_data.loc[(LS, 'Theta_1')],  # noqa: RUF031, RUF100
                     )
                 else:
@@ -178,9 +168,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         x=demand_vals,
                         y=cdf_vals,
                         mode='lines',
-                        line=dict(
+                        line=dict(  # noqa: C408
                             width=3, color=colors[LS_count][i_ls]
-                        ),  # noqa: C408
+                        ),
                         name=LS,
                     ),
                     row=1,
@@ -308,18 +298,14 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                     for i_ds, ds_name in enumerate(ds_vals):  # noqa: B007
                         ds_id = list(ls_meta.keys())[i_ds]
 
-                        if (
-                            ls_meta[ds_id].get('Description', False) != False
-                        ):  # noqa: E712
+                        if ls_meta[ds_id].get('Description', False) is not False:
                             ds_description = '<br>'.join(
                                 wrap(ls_meta[ds_id]['Description'], width=70)
                             )
                         else:
                             ds_description = ''
 
-                        if (
-                            ls_meta[ds_id].get('RepairAction', False) != False
-                        ):  # noqa: E712
+                        if ls_meta[ds_id].get('RepairAction', False) is not False:
                             ds_repair = '<br>'.join(
                                 wrap(ls_meta[ds_id]['RepairAction'], width=70)
                             )
@@ -356,18 +342,14 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                     # assuming a single Damage State
                     ds_id = list(ls_meta.keys())[0]  # noqa: RUF015
 
-                    if (
-                        ls_meta[ds_id].get('Description', False) != False
-                    ):  # noqa: E712
+                    if ls_meta[ds_id].get('Description', False) is not False:
                         ds_description = '<br>'.join(
                             wrap(ls_meta[ds_id]['Description'], width=70)
                         )
                     else:
                         ds_description = ''
 
-                    if (
-                        ls_meta[ds_id].get('RepairAction', False) != False
-                    ):  # noqa: E712
+                    if ls_meta[ds_id].get('RepairAction', False) is not False:
                         ds_repair = '<br>'.join(
                             wrap(ls_meta[ds_id]['RepairAction'], width=70)
                         )
@@ -444,9 +426,10 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         shutil.rmtree(output_path)
 
 
-def plot_repair(
+def plot_repair(  # noqa: C901, PLR0912, PLR0915
     comp_db_path, output_path, create_zip='0'
-):  # noqa: C901, D103, PLR0912, PLR0915
+):
+    """Generate repair parameter plots."""
     # TODO:  # noqa: TD002
     # change limit_states names
 
@@ -531,9 +514,7 @@ def plot_repair(
                         comp_data_LS[optional_label] = None
 
                 # if any of the fields above is set
-                if (
-                    np.all(pd.isna(comp_data_LS[fields].values)) == False
-                ):  # noqa: E712
+                if np.all(pd.isna(comp_data_LS[fields].values)) is False:
                     # Then we assume that is valuable information that needs to be
                     # shown in the table while the other fields will show 'null'
                     table_vals.append(np.insert(comp_data_LS[fields].values, 0, LS))
@@ -669,9 +650,7 @@ def plot_repair(
                 # anchor locations for annotations providing DS information
                 x_loc = 0.533 if lots_of_ds == False else 0.535  # noqa: E712
                 y_space = 0.088 if lots_of_ds == False else 0.0543  # noqa: E712
-                y_loc = (
-                    0.784 + y_space if lots_of_ds == False else 0.786 + y_space
-                )  # noqa: E712
+                y_loc = 0.784 + y_space if lots_of_ds is False else 0.786 + y_space
                 info_font_size = 10 if lots_of_ds == False else 9  # noqa: E712
 
                 # x anchor for annotations providing median function data
@@ -733,9 +712,7 @@ def plot_repair(
 
                     # check if dispersion is prescribed for this consequence
                     dispersion = model_params[3][ds_i]
-                    if (pd.isna(dispersion) == False) and (
-                        dispersion != 'N/A'
-                    ):  # noqa: E712
+                    if (pd.isna(dispersion) is False) and (dispersion != 'N/A'):
                         dispersion = float(dispersion)
 
                         if model_params[2][ds_i] == 'normal':
@@ -976,8 +953,8 @@ def plot_repair(
                         **shared_ax_props,
                     )
                     if need_x_axis == True  # noqa: E712
-                    else dict(showgrid=False, showticklabels=False)
-                ),  # noqa: C408
+                    else dict(showgrid=False, showticklabels=False)  # noqa: C408
+                ),
                 yaxis1=dict(
                     title_text=f'{c_type} [{dv_unit}]',
                     rangemode='tozero',
@@ -1001,9 +978,7 @@ def plot_repair(
             )
 
             # save figure to html
-            with open(
-                f'{output_path}/{comp_id}-{c_type}.html', 'w'
-            ) as f:  # noqa: PTH123
+            with Path(f'{output_path}/{comp_id}-{c_type}.html').open('w') as f:
                 # Minimize size by not saving javascript libraries which means
                 # internet connection is required to view the figure.
                 f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
@@ -1107,7 +1082,8 @@ def main(args):  # noqa: D103
         if comp_db_path == 'default_db':
             print(pelicun_path)  # noqa: T201
 
-    raise ValueError(f'Invalid `viz_type`: {viz_type}')
+    msg = f'Invalid `viz_type`: {viz_type}'
+    raise ValueError(msg)
 
 
 if __name__ == '__main__':

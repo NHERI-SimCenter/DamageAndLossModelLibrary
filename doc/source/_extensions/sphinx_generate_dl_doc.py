@@ -1,11 +1,16 @@
+"""Configure Sphinx to run a custom script to generate files."""
+
 import os
 import subprocess
+from pathlib import Path
 
 from sphinx.application import Sphinx
 
 
 def run_script(app: Sphinx):
     """
+    Generate files before building docs.
+
     Run a custom Python script to generate files before Sphinx builds
     the documentation.
 
@@ -14,12 +19,13 @@ def run_script(app: Sphinx):
     app: Sphinx
         The Sphinx application instance.
     """
-    script_path = os.path.join(app.srcdir, '_extensions', 'generate_dl_doc.py')
+    script_path = str(Path(app.srcdir) / '_extensions' / 'generate_dl_doc.py')
 
-    result = subprocess.run(['python', script_path], check=True)
+    result = subprocess.run(['python', script_path], check=True)  # noqa: S603, S607
 
     if result.returncode != 0:
-        raise RuntimeError('Script execution failed')
+        msg = 'Script execution failed'
+        raise RuntimeError(msg)
 
 
 def setup(app: Sphinx):
