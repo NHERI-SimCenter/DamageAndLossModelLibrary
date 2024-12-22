@@ -14,9 +14,10 @@
 #
 import os
 import sys
+from pathlib import Path
 from datetime import datetime
 
-sys.path.insert(0, os.path.abspath('./_extensions'))
+sys.path.insert(0, str(Path('./_extensions').resolve()))
 
 # -- Project information -----------------------------------------------------
 project = 'Damage and Loss Model Library'

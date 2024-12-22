@@ -33,7 +33,7 @@ def generate_md5(file_path):
         The MD5 hash of the file.
     """
     md5 = hashlib.md5()
-    with open(file_path, 'rb') as f:
+    with Path(file_path).open('rb') as f:
         for chunk in iter(lambda: f.read(4096), b''):
             md5.update(chunk)
     return md5.hexdigest()
@@ -635,7 +635,7 @@ def main():
     cache_folder = Path('doc/cache')
 
     doc_folder = Path('doc/source/dl_doc')
-    if os.path.exists(doc_folder):
+    if Path(doc_folder).exists():
         shutil.rmtree(doc_folder)
     doc_folder.mkdir(parents=True, exist_ok=True)
 

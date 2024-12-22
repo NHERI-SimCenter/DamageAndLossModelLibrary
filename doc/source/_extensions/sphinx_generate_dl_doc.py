@@ -1,6 +1,7 @@
 """Configure Sphinx to run a custom script to generate files."""
 import os
 import subprocess
+from pathlib import Path
 
 from sphinx.application import Sphinx
 
@@ -17,7 +18,7 @@ def run_script(app: Sphinx):
     app: Sphinx
         The Sphinx application instance.
     """
-    script_path = os.path.join(app.srcdir, '_extensions', 'generate_dl_doc.py')
+    script_path = str(Path(app.srcdir) / '_extensions' / 'generate_dl_doc.py')
 
     result = subprocess.run(['python', script_path], check=True)
 
