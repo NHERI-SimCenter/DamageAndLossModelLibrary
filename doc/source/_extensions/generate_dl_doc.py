@@ -243,7 +243,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
                     dlml_index_contents += f'   {member_id}/index\n'
 
         else:
-            print(f'No metadata available for {dlml}') # noqa: T201
+            print(f'No metadata available for {dlml}')  # noqa: T201
 
             # create the top of the dlml index file
             dlml_index_contents = dedent(
@@ -317,7 +317,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p>
                            <div>
 
                         """
@@ -550,7 +550,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p>
                            <div>
 
                         """
