@@ -309,7 +309,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         ds_id = list(ls_meta.keys())[i_ds]
 
                         if (
-                            ls_meta[ds_id].get('Description', False) != False
+                            ls_meta[ds_id].get('Description', False) is not False
                         ):  # noqa: E712
                             ds_description = '<br>'.join(
                                 wrap(ls_meta[ds_id]['Description'], width=70)
@@ -318,7 +318,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                             ds_description = ''
 
                         if (
-                            ls_meta[ds_id].get('RepairAction', False) != False
+                            ls_meta[ds_id].get('RepairAction', False) is not False
                         ):  # noqa: E712
                             ds_repair = '<br>'.join(
                                 wrap(ls_meta[ds_id]['RepairAction'], width=70)
@@ -357,7 +357,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                     ds_id = list(ls_meta.keys())[0]  # noqa: RUF015
 
                     if (
-                        ls_meta[ds_id].get('Description', False) != False
+                        ls_meta[ds_id].get('Description', False) is not False
                     ):  # noqa: E712
                         ds_description = '<br>'.join(
                             wrap(ls_meta[ds_id]['Description'], width=70)
@@ -366,7 +366,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         ds_description = ''
 
                     if (
-                        ls_meta[ds_id].get('RepairAction', False) != False
+                        ls_meta[ds_id].get('RepairAction', False) is not False
                     ):  # noqa: E712
                         ds_repair = '<br>'.join(
                             wrap(ls_meta[ds_id]['RepairAction'], width=70)
@@ -533,7 +533,7 @@ def plot_repair(  # noqa: C901
 
                 # if any of the fields above is set
                 if (
-                    np.all(pd.isna(comp_data_LS[fields].values)) == False
+                    np.all(pd.isna(comp_data_LS[fields].values)) is False
                 ):  # noqa: E712
                     # Then we assume that is valuable information that needs to be
                     # shown in the table while the other fields will show 'null'
@@ -671,7 +671,7 @@ def plot_repair(  # noqa: C901
                 x_loc = 0.533 if lots_of_ds == False else 0.535  # noqa: E712
                 y_space = 0.088 if lots_of_ds == False else 0.0543  # noqa: E712
                 y_loc = (
-                    0.784 + y_space if lots_of_ds == False else 0.786 + y_space
+                    0.784 + y_space if lots_of_ds is False else 0.786 + y_space
                 )  # noqa: E712
                 info_font_size = 10 if lots_of_ds == False else 9  # noqa: E712
 
@@ -734,7 +734,7 @@ def plot_repair(  # noqa: C901
 
                     # check if dispersion is prescribed for this consequence
                     dispersion = model_params[3][ds_i]
-                    if (pd.isna(dispersion) == False) and (
+                    if (pd.isna(dispersion) is False) and (
                         dispersion != 'N/A'
                     ):  # noqa: E712
                         dispersion = float(dispersion)
