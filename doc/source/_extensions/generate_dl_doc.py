@@ -138,7 +138,6 @@ def create_component_group_directory(cmp_groups, root, dlml_tag):
 
 def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
     """Generate damage parameter documentation."""
-
     doc_folder = doc_folder / 'damage'
 
     resource_folder = Path()
