@@ -1108,7 +1108,8 @@ def main(args):  # noqa: D103
         if comp_db_path == 'default_db':
             print(pelicun_path)  # noqa: T201
 
-    raise ValueError(f'Invalid `viz_type`: {viz_type}')
+    msg = f'Invalid `viz_type`: {viz_type}'
+    raise ValueError(msg)
 
 
 if __name__ == '__main__':
