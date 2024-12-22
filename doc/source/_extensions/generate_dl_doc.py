@@ -262,7 +262,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(zip_filepath, 'r') as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:  # noqa: N806
             # for each component
             for comp in sorted(zipObj.namelist()):
                 if comp == 'fragility':
@@ -493,7 +493,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
             f.write(dlml_index_contents)
 
         # now open the zip file
-        with ZipFile(zip_filepath, 'r') as zipObj:
+        with ZipFile(zip_filepath, 'r') as zipObj:  # noqa: N806
             html_files = [
                 Path(filepath).stem for filepath in sorted(zipObj.namelist())
             ]
