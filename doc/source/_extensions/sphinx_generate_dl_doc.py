@@ -22,7 +22,8 @@ def run_script(app: Sphinx):
     result = subprocess.run(['python', script_path], check=True)
 
     if result.returncode != 0:
-        raise RuntimeError('Script execution failed')
+        msg = 'Script execution failed'
+        raise RuntimeError(msg)
 
 
 def setup(app: Sphinx):
