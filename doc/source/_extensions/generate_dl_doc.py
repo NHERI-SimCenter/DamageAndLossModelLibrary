@@ -13,7 +13,6 @@ from zipfile import ZipFile
 
 import numpy as np
 from tqdm import tqdm
-
 from visuals import plot_fragility, plot_repair
 
 os.chdir('../')

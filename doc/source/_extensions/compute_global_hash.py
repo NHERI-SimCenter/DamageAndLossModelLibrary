@@ -1,6 +1,7 @@
 """Compute a global hash considering all `.csv` files."""
-from generate_dl_doc import generate_md5, combine_md5_hashes
 from pathlib import Path
+
+from generate_dl_doc import combine_md5_hashes, generate_md5
 
 resource_folder = Path('../../../')
 dlmls = resource_folder.rglob('*.csv')
