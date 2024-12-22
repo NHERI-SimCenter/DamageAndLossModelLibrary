@@ -1,4 +1,5 @@
 """Generate the DLML documentation pages."""
+
 import hashlib
 import json
 import os
@@ -622,12 +623,10 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 
 def ignore_file(dlml):
     """Ignore certain paths due to lack of support. To remove."""
-    if str(dlml.parent) in {
+    return str(dlml.parent) in {
         'seismic/water_network/portfolio/Hazus v6.1',
         'flood/building/portfolio/Hazus v6.1',
-    }:
-        return True
-    return False
+    }
 
 
 def main():
