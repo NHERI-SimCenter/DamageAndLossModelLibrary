@@ -1,3 +1,4 @@
+"""Generate the DLML documentation pages."""
 import hashlib
 import json
 import os

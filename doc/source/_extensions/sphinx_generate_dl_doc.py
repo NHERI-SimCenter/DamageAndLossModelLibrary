@@ -1,3 +1,4 @@
+"""Configure Sphinx to run a custom script to generate files."""
 import os
 import subprocess
 
