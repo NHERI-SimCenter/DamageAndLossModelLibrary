@@ -444,7 +444,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         shutil.rmtree(output_path)
 
 
-def plot_repair(  # noqa: C901, PLR0912
+def plot_repair(  # noqa: C901, PLR0912, PLR0915
     comp_db_path, output_path, create_zip='0'
 ):  # noqa: C901, D103, PLR0912, PLR0915
     """Generate repair parameter plots."""
