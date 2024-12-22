@@ -1,4 +1,5 @@
 """Compute a global hash considering all `.csv` files."""
+
 from pathlib import Path
 
 from generate_dl_doc import combine_md5_hashes, generate_md5
