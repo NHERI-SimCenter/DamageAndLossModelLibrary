@@ -71,47 +71,6 @@ def create_Hazus_Flood_repair_db(
         )
         source_data[subassembly_type] = pd.read_csv(source_file)
 
-    # pylint: disable=unused-variable
-    def eda():
-        """
-        Exploratory data analysis code.
-        """
-
-        subassembly_type = 'contents'
-        df = source_data[subassembly_type]
-
-        # General sense
-        print(df.shape)
-        print(df.info())
-        print(df.head())
-        print(df.describe())
-
-        # Unique categorical values
-        categorical_columns = ('Default', 'Occupancy', 'Source')
-        for column in categorical_columns:
-            print(f"Unique values in {column}: {df[column].unique()}")
-
-        # Histograms for numerical columns
-        numerical_columns = df.select_dtypes(include=['float64', 'int64']).columns
-        df[numerical_columns].hist(figsize=(15, 10), bins=30)
-        plt.show()
-
-        # Bar charts of categorical data
-        for column in categorical_columns:
-            df[column].value_counts().plot(kind='bar')
-            plt.title(column)
-            plt.show()
-
-        # Some `contents` loss functions are on inventory, while there is
-        # a specific `inventory` subassembly.
-        print(
-            source_data['contents']['Description'][
-                source_data['contents']['Description'].str.contains('entory')
-            ]
-        )
-
-    # pylint: enable=unused-variable
-
     # We have a dedicated column for `subassembly`, so we don't need
     # special names for the function ID for each subassembly set.
     source_data['structural'] = source_data['structural'].rename(
@@ -184,7 +143,7 @@ def create_Hazus_Flood_repair_db(
         description = row.Description
 
         # loss function information
-        ys = ', '.join([str(x) for x in row[ft_cols].to_list()])
+        ys = ', '.join([f'{x/100.00:.3f}' for x in row[ft_cols].to_list()])
         xs = ', '.join([str(x) for x in ft_values.tolist()])
         lf_str = f'{ys}|{xs}'
 
@@ -220,4 +179,4 @@ def create_Hazus_Flood_repair_db(
 
     lf_data['ID'] = lf_data['ID'].apply(remove_repeated_chars)
 
-    lf_data.to_csv(target_data_file)
+    lf_data.to_csv(target_data_file, index=False)
