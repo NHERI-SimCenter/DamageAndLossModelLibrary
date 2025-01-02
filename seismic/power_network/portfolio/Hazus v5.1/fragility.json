@@ -4,10 +4,6 @@
     "Description": "The models in this dataset are based on version 5.1 of the HAZUS Earthquake Model Technical Manual",
     "Version": "1.0",
     "ComponentGroups": {
-      "GF - Geotechnical Failure": [
-        "GF.H - Horizontal Spreading",
-        "GF.V - Vertical Settlement"
-      ],
       "EP - Electrical Power": [
         "EP.S - Substation",
         "EP.C - Circuit",
