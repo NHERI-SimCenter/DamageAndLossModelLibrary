@@ -1,0 +1,350 @@
+{
+  "_GeneralInformation": {
+    "ShortName": "HAZUS Earthquake Methodology - Power",
+    "Description": "The models in this dataset are based on version 5.1 of the HAZUS Earthquake Model Technical Manual",
+    "Version": "1.0",
+    "ComponentGroups": {
+      "EP - Electrical Power": [
+        "EP.S - Substation",
+        "EP.C - Circuit",
+        "EP.G - Generation",
+      ]
+    }
+  },
+  "EP.S.L.A": {
+    "Description": "Electrical Power, Substation, Low Voltage, Anchored",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Low voltage is 34.5 kV to 150 kV. The sub components are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.S.L.U": {
+    "Description": "Electrical Power, Substation, Low Voltage, Unanchored/Standard",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Low voltage is 34.5 kV to 150 kV. The sub components are unanchored or standard.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.S.M.A": {
+    "Description": "Electrical Power, Substation, Medium Voltage, Anchored",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Medium voltage is 230 kV. The sub components are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.S.M.U": {
+    "Description": "Electrical Power, Substation, Low Voltage, Unanchored/Standard",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Medium voltage is 230 kV. The sub components are unanchored or standard.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.S.H.A": {
+    "Description": "Electrical Power, Substation, High Voltage, Anchored",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. High voltage is 500 kV. The sub components are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.S.H.U": {
+    "Description": "Electrical Power, Substation, High Voltage, Unanchored/Standard",
+    "Comments": "Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. High voltage is 500 kV. The sub components are unanchored or standard.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined as the failure of 5% of the disconnect switches (i.e., misalignment), or the failure of 5% of the circuit breakers (i.e., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined as the failure of 40% of disconnect switches (e.g., misalignment), 40% of circuit breakers (e.g., circuit breaker phase sliding off its pad, circuit breaker tipping over, or interrupter-head falling to the ground), failure of 40% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined as the failure of 70% of disconnect switches (e.g., misalignment), 70% of circuit breakers, 70% of current transformers (e.g., oil leaking from transformers, porcelain cracked), or by failure of 70% of transformers (e.g., leakage of transformer radiators), or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined as the failure of all disconnect switches, all circuit breakers, all transformers, or all current transformers, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.C.A": {
+    "Description": "Electrical Power, Distribution Circuit, Anchored",
+    "Comments": "The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by the failure of 4% of all circuits."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined by the failure of 12% of circuits."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by the failure of 50% of all circuits."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by the failure of 80% of all circuits."
+        }
+      }
+    }
+  },
+  "EP.C.U": {
+    "Description": "Electrical Power, Distribution Network, Unanchored/Standard",
+    "Comments": "The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are unanchored or standard."
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by the failure of 4% of all circuits."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined by the failure of 12% of circuits."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by the failure of 50% of all circuits."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by the failure of 80% of all circuits."
+        }
+      }
+    }
+  },
+  "EP.G.S.A": {
+    "Description": "Electrical Power, Generation, Small, Anchored",
+    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are anchored."
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by turbine tripping, light damage to the diesel generator, or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined some by the chattering of instrument panels and racks, considerable damage to boilers and pressure vessels, or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by considerable damage to motor driven pumps, or considerable damage to large vertical pumps, or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by extensive damage to large horizontal vessels beyond repair, extensive damage to large motor operated valves, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.G.S.U": {
+    "Description": "Electrical Power, Generation, Small, Unanchored/Standard",
+    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are unanchored or standard.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by turbine tripping, light damage to the diesel generator, or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined some by the chattering of instrument panels and racks, considerable damage to boilers and pressure vessels, or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by considerable damage to motor driven pumps, or considerable damage to large vertical pumps, or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by extensive damage to large horizontal vessels beyond repair, extensive damage to large motor operated valves, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.G.ML.A": {
+    "Description": "Electrical Power, Generation, Medium/Large, Anchored",
+    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Medium generation plants have a capacity between 200 and 500 MW, while large plants have a capacity greater than 500 MW. Generation plant subcomponents are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by turbine tripping, light damage to the diesel generator, or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined some by the chattering of instrument panels and racks, considerable damage to boilers and pressure vessels, or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by considerable damage to motor driven pumps, or considerable damage to large vertical pumps, or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by extensive damage to large horizontal vessels beyond repair, extensive damage to large motor operated valves, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  },
+  "EP.G.ML.U": {
+    "Description": "Electrical Power, Generation, Medium/Large, Unanchored/Standard",
+    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Medium generation plants have a capacity between 200 and 500 MW, while large plants have a capacity greater than 500 MW. Generation plant subcomponents are anchored.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+	"LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage is defined by turbine tripping, light damage to the diesel generator, or by the building being in the Slight damage state."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage is defined some by the chattering of instrument panels and racks, considerable damage to boilers and pressure vessels, or by the building being in the Moderate damage state."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage is defined by considerable damage to motor driven pumps, or considerable damage to large vertical pumps, or by the building being in the Extensive damage state."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage is defined by extensive damage to large horizontal vessels beyond repair, extensive damage to large motor operated valves, or by the building being in the Complete damage state."
+        }
+      }
+    }
+  }
+}

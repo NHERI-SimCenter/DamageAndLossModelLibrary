@@ -1,0 +1,13 @@
+ID,Incomplete,Demand-Type,Demand-Unit,Demand-Offset,Demand-Directional,LS1-Family,LS1-Theta_0,LS1-Theta_1,LS1-DamageStateWeights,LS2-Family,LS2-Theta_0,LS2-Theta_1,LS2-DamageStateWeights,LS3-Family,LS3-Theta_0,LS3-Theta_1,LS3-DamageStateWeights,LS4-Family,LS4-Theta_0,LS4-Theta_1
+EP.S.L.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.15,0.7,,lognormal,0.29,0.55,,lognormal,0.45,0.45,,lognormal,0.9,0.45
+EP.S.L.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.13,0.65,,lognormal,0.26,0.5,,lognormal,0.34,0.4,,lognormal,0.74,0.4
+EP.S.M.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.15,0.6,,lognormal,0.25,0.5,,lognormal,0.35,0.4,,lognormal,0.7,0.4
+EP.S.M.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.1,0.6,,lognormal,0.2,0.5,,lognormal,0.3,0.4,,lognormal,0.5,0.4
+EP.S.H.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.11,0.5,,lognormal,0.15,0.45,,lognormal,0.2,0.35,,lognormal,0.47,0.4
+EP.S.H.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.09,0.5,,lognormal,0.13,0.4,,lognormal,0.17,0.35,,lognormal,0.38,0.35
+EP.C.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.28,0.3,,lognormal,0.4,0.55,,lognormal,0.72,0.15,,lognormal,1.1,0.15
+EP.C.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.24,0.25,,lognormal,0.33,0.2,,lognormal,0.58,0.15,,lognormal,0.89,0.15
+EP.G.S.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.1,0.55,,lognormal,0.21,0.55,,lognormal,0.48,0.5,,lognormal,0.78,0.5
+EP.G.S.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.1,0.5,,lognormal,0.17,0.5,,lognormal,0.42,0.5,,lognormal,0.58,0.55
+EP.G.ML.A,0,Peak Ground Acceleration,g,0,0,lognormal,0.1,0.6,,lognormal,0.25,0.6,,lognormal,0.52,0.55,,lognormal,0.92,0.55
+EP.G.ML.U,0,Peak Ground Acceleration,g,0,0,lognormal,0.1,0.6,,lognormal,0.22,0.55,,lognormal,0.49,0.5,,lognormal,0.79,0.5
