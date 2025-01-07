@@ -227,10 +227,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                 )
 
                 # create the directory structure and index files
-                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(
-                    ' ',
-                    '_'
-                    )
+                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
                 grp_ids = create_component_group_directory(
                     dlml_cmp_groups,
                     root=(doc_folder / dlml.parent),
@@ -324,9 +321,7 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                         """
                         )
 
-                        comp_comments = comp_meta.get('Comments', '').split(
-                            '\n'
-                            )
+                        comp_comments = comp_meta.get('Comments', '').split('\n')
 
                         for comment_line in comp_comments:
                             if comment_line != '':
@@ -562,9 +557,7 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                         """
                         )
 
-                        comp_comments = comp_meta.get('Comments', '').split(
-                            '\n'
-                            )
+                        comp_comments = comp_meta.get('Comments', '').split('\n')
 
                         for comment_line in comp_comments:
                             if comment_line != '':
