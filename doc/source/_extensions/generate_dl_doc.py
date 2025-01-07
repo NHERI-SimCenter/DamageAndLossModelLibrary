@@ -2,9 +2,6 @@ import hashlib
 import json
 import os
 import shutil
-import subprocess
-import sys
-import time
 from copy import deepcopy
 from pathlib import Path
 from textwrap import dedent
@@ -150,7 +147,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
     Damage Models
     *************
 
-    The following collections are available in our Damage and Loss Model Library:
+    The following collections are available
+    in our Damage and Loss Model Library:
 
     .. toctree::
        :maxdepth: 1
@@ -217,7 +215,8 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
             # check if there are component groups defined
             dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
 
-            # if yes, create the corresponding directory structure and index files
+            # if yes, create the corresponding directory structure
+            # and index files
             if dlml_cmp_groups is not None:
                 dlml_index_contents += dedent(
                     """
@@ -228,7 +227,10 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                 )
 
                 # create the directory structure and index files
-                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(' ', '_')
+                dlml_tag = '-'.join(str(dlml.parent).split('/')).replace(
+                    ' ',
+                    '_'
+                    )
                 grp_ids = create_component_group_directory(
                     dlml_cmp_groups,
                     root=(doc_folder / dlml.parent),
@@ -309,17 +311,22 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                         )
 
                     else:
+                        des = comp_meta.get("Description", "")
                         comp_contents = dedent(
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name">
+                              <b>{comp}</b> | {des}
+                           </p>
                            <div>
 
                         """
                         )
 
-                        comp_comments = comp_meta.get('Comments', '').split('\n')
+                        comp_comments = comp_meta.get('Comments', '').split(
+                            '\n'
+                            )
 
                         for comment_line in comp_comments:
                             if comment_line != '':
@@ -334,10 +341,11 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):
                             else:
                                 roundup_text = ''
 
+                            cmm = comp_meta['SuggestedComponentBlockSize']
                             comp_contents += dedent(
                                 f"""
 
-                            Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
+                            Suggested Block Size: {cmm} {roundup_text}
 
                             """
                             )
@@ -380,7 +388,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
     Repair Consequence Models
     *************************
 
-    The following collections are available in our Damage and Loss Model Library:
+    The following collections are available
+    in our Damage and Loss Model Library:
 
     .. toctree::
        :maxdepth: 1
@@ -447,7 +456,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
             # check if there are component groups defined
             dlml_cmp_groups = dlml_general.get('ComponentGroups', None)
 
-            # if yes, create the corresponding directory structure and index files
+            # if yes, create the corresponding directory structure
+            # and index files
             if dlml_cmp_groups is not None:
                 dlml_index_contents += dedent(
                     """
@@ -541,17 +551,20 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                         )
 
                     else:
+                        des = comp_meta.get("Description", "")
                         comp_contents = dedent(
                             f"""
                         .. raw:: html
 
-                           <p class="dl_comp_name"><b>{comp}</b> | {comp_meta.get("Description", "")}</p> 
+                           <p class="dl_comp_name"><b>{comp}</b> | {des}</p>
                            <div>
 
                         """
                         )
 
-                        comp_comments = comp_meta.get('Comments', '').split('\n')
+                        comp_comments = comp_meta.get('Comments', '').split(
+                            '\n'
+                            )
 
                         for comment_line in comp_comments:
                             if comment_line != '':
@@ -566,10 +579,11 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                             else:
                                 roundup_text = ''
 
+                            cmm = comp_meta['SuggestedComponentBlockSize']
                             comp_contents += dedent(
                                 f"""
 
-                            Suggested Block Size: {comp_meta['SuggestedComponentBlockSize']} {roundup_text}
+                            Suggested Block Size: {cmm} {roundup_text}
 
                             """
                             )
@@ -577,7 +591,8 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):
                     comp_contents += dedent(
                         """
 
-                    The following repair consequences are available for this model:
+                    The following repair consequences
+                    are available for this model:
 
                     """
                     )

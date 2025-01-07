@@ -63,8 +63,14 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         shutil.rmtree(output_path)
 
     Path(output_path).mkdir(parents=True, exist_ok=True)
-    # frag_df = convert_to_MultiIndex(pd.read_csv(resource_dir + '/' + frag_DB_file, index_col=0), axis=1)
-    frag_df = convert_to_MultiIndex(pd.read_csv(comp_db_path, index_col=0), axis=1)
+    # frag_df = convert_to_MultiIndex(
+    # pd.read_csv(resource_dir + '/' + frag_DB_file, index_col=0),
+    # axis=1
+    # )
+    frag_df = convert_to_MultiIndex(
+        pd.read_csv(comp_db_path, index_col=0),
+        axis=1
+        )
 
     comp_db_meta = comp_db_path[:-3] + 'json'
 
@@ -211,7 +217,11 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                 np.all(  # noqa: E712
                     pd.isna(
                         comp_data[LS][
-                            ['Theta_0', 'Family', 'Theta_1', 'DamageStateWeights']
+                            ['Theta_0',
+                             'Family',
+                             'Theta_1',
+                             'DamageStateWeights'
+                             ]
                         ].values
                     )
                 )
@@ -220,7 +230,11 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                 table_vals.append(  # noqa: PERF401
                     np.insert(
                         comp_data[LS][
-                            ['Theta_0', 'Family', 'Theta_1', 'DamageStateWeights']
+                            ['Theta_0',
+                             'Family',
+                             'Theta_1',
+                             'DamageStateWeights'
+                             ]
                         ].values,
                         0,
                         LS,
@@ -327,7 +341,10 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                             ds_repair = ''
 
                         if ds_repair != '':
-                            ds_text = f'<b>{ds_id}</b><br>{ds_description}<br><br><b>Repair Action</b><br>{ds_repair}'
+                            ds_text = (
+                                f'<b>{ds_id}</b><br>{ds_description}<br>'
+                                f'<br><b>Repair Action</b><br>{ds_repair}'
+                                )
                         else:
                             ds_text = f'<b>{ds_id}</b><br>{ds_description}'
 
@@ -375,7 +392,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         ds_repair = ''
 
                     if ds_repair != '':
-                        ds_text = f'<b>{ds_id}</b><br>{ds_description}<br><br><b>Repair Action</b><br>{ds_repair}'
+                        ds_text = (f'<b>{ds_id}</b><br>{ds_description}<br>'
+                                   f'<br><b>Repair Action</b><br>{ds_repair}'
+                                   )
                     else:
                         ds_text = f'<b>{ds_id}</b><br>{ds_description}'
 
@@ -412,7 +431,8 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         )
 
         fig.update_yaxes(
-            title_text='P(LS≥ls<sub>i</sub>)', range=[0, 1.01], **shared_ax_props
+            title_text='P(LS≥ls<sub>i</sub>)',
+            range=[0, 1.01], **shared_ax_props
         )
 
         fig.update_layout(
@@ -428,11 +448,17 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         with open(f'{output_path}/{comp_id}.html', 'w') as f:  # noqa: PTH123
             f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
 
-    # rm: # store the source database file(s) in the output directory for future reference
-    # rm: shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
+    # rm: # store the source database file(s)
+    # in the output directory for future reference
+    # rm: shutil.copy(
+    # comp_db_path,
+    # Path(output_path) / Path(comp_db_path).name
+    # )
 
     # rm: if frag_meta is not None:
-    # rm:     shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
+    # rm:     shutil.copy(
+    # comp_db_meta, Path(output_path) / Path(comp_db_meta).name
+    # )
 
     if create_zip == '1':
         files = [f'{output_path}/{file}' for file in os.listdir(output_path)]
@@ -463,7 +489,8 @@ def plot_repair(
     Path(output_path).mkdir(parents=True, exist_ok=True)
     # open the input component database
     repair_df = convert_to_MultiIndex(
-        convert_to_MultiIndex(pd.read_csv(comp_db_path, index_col=0), axis=1), axis=0
+        convert_to_MultiIndex(pd.read_csv(comp_db_path, index_col=0), axis=1),
+        axis=0
     )
 
     # The metadata is assumed to be stored at the same location under the same
@@ -499,7 +526,8 @@ def plot_repair(
             # create a figure
             fig = go.Figure()
 
-            # create two subplots, one for the curve and one for the tabular data
+            # create two subplots, one for the curve
+            # and one for the tabular data
             fig = make_subplots(
                 rows=1,
                 cols=3,
@@ -531,12 +559,13 @@ def plot_repair(
                         comp_data_LS[optional_label] = None
 
                 # if any of the fields above is set
-                if (
-                    np.all(pd.isna(comp_data_LS[fields].values)) == False
-                ):  # noqa: E712
-                    # Then we assume that is valuable information that needs to be
-                    # shown in the table while the other fields will show 'null'
-                    table_vals.append(np.insert(comp_data_LS[fields].values, 0, LS))
+                if not np.all(pd.isna(comp_data_LS[fields].values)):
+                    # Then we assume that is valuable information
+                    # that needs to be shown in the table
+                    #  while the other fields will show 'null'
+                    table_vals.append(
+                        np.insert(comp_data_LS[fields].values, 0, LS)
+                        )
 
             # transpose the table to work well with plotly's API
             table_vals = np.array(table_vals).T
@@ -686,7 +715,8 @@ def plot_repair(
 
                         # get the consequence (Y) and quantity (X) values
                         c_vals, q_vals = np.array(
-                            [vals.split(',') for vals in mu_capacity.split('|')],
+                            [vals.split(',')
+                             for vals in mu_capacity.split('|')],
                             dtype=float,
                         )
 
@@ -718,12 +748,12 @@ def plot_repair(
                             x=q_vals,
                             y=c_vals,
                             mode='lines',
-                            line=dict(  # noqa: C408
-                                width=3,
-                                color=colors[np.min([len(model_params[1]), 7])][
-                                    ds_i % 7
-                                ],
-                            ),
+                            line={
+                                "width": 3,
+                                "color": colors[
+                                    np.min([len(model_params[1]), 7])
+                                    ][ds_i % 7],
+                            },
                             name=model_params[0][ds_i],
                             legendgroup=model_params[0][ds_i],
                         ),
@@ -759,14 +789,17 @@ def plot_repair(
                                 x=q_vals,
                                 y=std_plus,
                                 mode='lines',
-                                line=dict(  # noqa: C408
-                                    width=1,
-                                    color=colors[np.min([len(model_params[1]), 7])][
-                                        ds_i % 7
-                                    ],
-                                    dash='dash',
-                                ),
-                                name=model_params[0][ds_i] + ' ' + std_plus_label,
+                                line={  # noqa: C408
+                                    "width": 1,
+                                    "color": colors[
+                                        np.min([len(model_params[1]), 7])
+                                        ][ds_i % 7],
+                                    "dash": 'dash',
+                                },
+                                name=(
+                                    f"{model_params[0][ds_i]} "
+                                    f"{std_plus_label}"
+                                    ),
                                 legendgroup=model_params[0][ds_i],
                                 showlegend=False,
                             ),
@@ -779,14 +812,17 @@ def plot_repair(
                                 x=q_vals,
                                 y=std_minus,
                                 mode='lines',
-                                line=dict(  # noqa: C408
-                                    width=1,
-                                    color=colors[np.min([len(model_params[1]), 7])][
-                                        ds_i % 7
-                                    ],
-                                    dash='dash',
-                                ),
-                                name=model_params[0][ds_i] + ' ' + std_minus_label,
+                                line={
+                                    "width": 1,
+                                    "color": colors[
+                                        np.min([len(model_params[1]), 7])][
+                                        ds_i % 7],
+                                    "dash": 'dash'
+                                    },
+                                name=(
+                                    f"{model_params[0][ds_i]} "
+                                    f"{std_minus_label}"
+                                    ),
                                 legendgroup=model_params[0][ds_i],
                                 showlegend=False,
                             ),
@@ -797,10 +833,9 @@ def plot_repair(
                         # and plot distribution pdfs on top
                         if model_params[2][ds_i] == 'normal':
                             sig = c_vals[-1] * dispersion
+                            _ppf = norm.ppf(0.025, loc=c_vals[-1], scale=sig)
                             q_pdf = np.linspace(
-                                np.max(
-                                    [norm.ppf(0.025, loc=c_vals[-1], scale=sig), 0]
-                                ),
+                                np.max([_ppf, 0]),
                                 norm.ppf(0.975, loc=c_vals[-1], scale=sig),
                                 num=100,
                             )
@@ -839,9 +874,9 @@ def plot_repair(
                                 mode='lines',
                                 line=dict(  # noqa: C408
                                     width=1,
-                                    color=colors[np.min([len(model_params[1]), 7])][
-                                        ds_i % 7
-                                    ],
+                                    color=colors[
+                                        np.min([len(model_params[1]), 7])][
+                                        ds_i % 7],
                                 ),
                                 fill='tozeroy',
                                 name=model_params[0][ds_i] + ' pdf',
@@ -861,7 +896,11 @@ def plot_repair(
                             vals.split(',') for vals in mu_capacity.split('|')
                         )
 
-                        func_text = f'<b>Multilinear Function Breakpoints</b><br>Medians: {", ".join(c_vals)}<br>Quantities: {", ".join(q_vals)}'
+                        func_text = (
+                            f'<b>Multilinear Function Breakpoints</b>'
+                            f'<br>Medians: {", ".join(c_vals)}<br>'
+                            f'Quantities: {", ".join(q_vals)}'
+                            )
 
                         fig.add_annotation(
                             text='<b>*</b>',
@@ -899,10 +938,15 @@ def plot_repair(
                             ds_repair = ''
 
                         if ds_repair != '':
-                            ds_text = f'<b>{model_params[0][ds_i]}</b><br>{ds_description}<br><br><b>Repair Action</b><br>{ds_repair}'
+                            ds_text = (
+                                f'<b>{model_params[0][ds_i]}</b>'
+                                f'<br>{ds_description}<br><br>'
+                                f'<b>Repair Action</b><br>{ds_repair}'
+                                )
                         else:
                             ds_text = (
-                                f'<b>{model_params[0][ds_i]}</b><br>{ds_description}'
+                                f'<b>{model_params[0][ds_i]}</b>'
+                                f'<br>{ds_description}'
                             )
 
                         fig.add_annotation(
@@ -1008,11 +1052,16 @@ def plot_repair(
                 # internet connection is required to view the figure.
                 f.write(fig.to_html(full_html=False, include_plotlyjs='cdn'))
 
-    # rm: # store the source database file(s) in the output directory for future reference
-    # rm: shutil.copy(comp_db_path, Path(output_path) / Path(comp_db_path).name)
+    # rm: # store the source database file(s)
+    # rm: #  in the output directory for future reference
+    # rm: shutil.copy(
+    # rm: comp_db_path, Path(output_path) / Path(comp_db_path).name
+    # rm: )
 
     # rm: if repair_meta is not None:
-    # rm:     shutil.copy(comp_db_meta, Path(output_path) / Path(comp_db_meta).name)
+    # rm:     shutil.copy(
+    # rm: comp_db_meta, Path(output_path) / Path(comp_db_meta).name
+    # rm : )
 
     if create_zip == '1':
         files = [f'{output_path}/{file}' for file in os.listdir(output_path)]
@@ -1049,11 +1098,13 @@ def check_diff(comp_db_path, output_path):  # noqa: D103
                         old_file = f2.readlines()
 
                         # compare every line in the new file with the old file
-                        # if every line exists in the old file, continue with the next file
+                        # if every line exists in the old file,
+                        # continue with the next file
                         if new_file == old_file:
                             continue
 
-                        # if at least one line does not match, we need to generate
+                        # if at least one line does not match,
+                        # we need to generate
                         else:  # noqa: RET507
                             return True
 
@@ -1061,13 +1112,17 @@ def check_diff(comp_db_path, output_path):  # noqa: D103
                         new_file = json.load(f1)
                         old_file = json.load(f2)
 
-                        # if the two dicts are identical, continue with the next file
-                        if sorted(new_file.items()) == sorted(old_file.items()):
+                        # if the two dicts are identical,
+                        # continue with the next file
+                        if (sorted(new_file.items()) ==
+                            sorted(old_file.items())
+                            ):
+                            # end of condition
                             continue
 
                         # otherwise, we need to generate
-                        else:  # noqa: RET507
-                            return True
+                        # rm: else:  # to remove noqa: RET507
+                        return True
 
             # if there is no db file in the output dir, we need to generate
             else:
@@ -1077,8 +1132,8 @@ def check_diff(comp_db_path, output_path):  # noqa: D103
         return False
 
     # if the output path does not exist, we need to generate
-    else:  # noqa: RET505
-        return True
+    # rm else:  to remove noqa: RET505
+    return True
 
 
 def main(args):  # noqa: D103
