@@ -213,21 +213,20 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
         table_vals = []
 
         for LS in limit_states:  # noqa: N806
-            if (
-                np.all(  # noqa: E712
-                    pd.isna(
-                        comp_data[LS][
-                            ['Theta_0',
-                             'Family',
-                             'Theta_1',
-                             'DamageStateWeights'
-                             ]
-                        ].values
-                    )
-                )
-                == False
-            ):
-                table_vals.append(  # noqa: PERF401
+            if not (
+                    np.all(
+                           pd.isna(
+                               comp_data[LS][
+                                   ['Theta_0',
+                                    'Family',
+                                    'Theta_1',
+                                    'DamageStateWeights'
+                                    ]
+                                   ].values
+                               )
+                           )
+                    ):
+                table_vals.append(
                     np.insert(
                         comp_data[LS][
                             ['Theta_0',
@@ -311,7 +310,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
             info_font_size = 9
 
         for i_ls, ds_desc in enumerate(ds_list):
-            if comp_meta != None:  # noqa: E711
+            if comp_meta is not None:
                 ls_meta = comp_meta['LimitStates'][f'LS{i_ls + 1}']
 
                 y_loc = y_loc - 0.123
@@ -323,8 +322,10 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         ds_id = list(ls_meta.keys())[i_ds]
 
                         if (
-                            ls_meta[ds_id].get('Description', False) != False
-                        ):  # noqa: E712
+                            ls_meta[ds_id].get('Description', False)
+                            is not False
+                            ):
+                            # end of condition
                             ds_description = '<br>'.join(
                                 wrap(ls_meta[ds_id]['Description'], width=70)
                             )
@@ -332,8 +333,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                             ds_description = ''
 
                         if (
-                            ls_meta[ds_id].get('RepairAction', False) != False
-                        ):  # noqa: E712
+                            ls_meta[ds_id].get('RepairAction', False)
+                            is not False
+                            ):
                             ds_repair = '<br>'.join(
                                 wrap(ls_meta[ds_id]['RepairAction'], width=70)
                             )
@@ -374,8 +376,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                     ds_id = list(ls_meta.keys())[0]  # noqa: RUF015
 
                     if (
-                        ls_meta[ds_id].get('Description', False) != False
-                    ):  # noqa: E712
+                        ls_meta[ds_id].get('Description', False)
+                        is not False
+                        ):
                         ds_description = '<br>'.join(
                             wrap(ls_meta[ds_id]['Description'], width=70)
                         )
@@ -383,8 +386,9 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         ds_description = ''
 
                     if (
-                        ls_meta[ds_id].get('RepairAction', False) != False
-                    ):  # noqa: E712
+                        ls_meta[ds_id].get('RepairAction', False)
+                        is not False
+                        ):
                         ds_repair = '<br>'.join(
                             wrap(ls_meta[ds_id]['RepairAction'], width=70)
                         )
@@ -422,11 +426,11 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
             gridcolor='rgb(192,192,192)',
         )
 
-        demand_unit = comp_data.loc[('Demand', 'Unit')]  # noqa: RUF031, RUF100
+        demand_unit = comp_data.loc[('Demand', 'Unit')]
         if demand_unit == 'unitless':
             demand_unit = '-'
         fig.update_xaxes(
-            title_text=f"{comp_data.loc[('Demand', 'Type')]} [{demand_unit}]",  # noqa: RUF031, RUF100
+            title_text=f"{comp_data.loc[('Demand', 'Type')]} [{demand_unit}]",
             **shared_ax_props,
         )
 
@@ -696,15 +700,15 @@ def plot_repair(
                     q_max = 1.0
 
                 # anchor locations for annotations providing DS information
-                x_loc = 0.533 if lots_of_ds == False else 0.535  # noqa: E712
-                y_space = 0.088 if lots_of_ds == False else 0.0543  # noqa: E712
+                x_loc = 0.533 if not lots_of_ds else 0.535
+                y_space = 0.088 if not lots_of_ds else 0.0543
                 y_loc = (
-                    0.784 + y_space if lots_of_ds == False else 0.786 + y_space
+                    0.784 + y_space if not lots_of_ds else 0.786 + y_space
                 )  # noqa: E712
-                info_font_size = 10 if lots_of_ds == False else 9  # noqa: E712
+                info_font_size = 10 if not lots_of_ds  else 9
 
                 # x anchor for annotations providing median function data
-                x_loc_func = 0.697 if lots_of_ds == False else 0.689  # noqa: E712
+                x_loc_func = 0.697 if not lots_of_ds else 0.689
 
                 need_x_axis = False
 
