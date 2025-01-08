@@ -64,13 +64,15 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
 
     """
     source_data = {}
-    for type_i, subassembly_type in enumerate(('structural', 'inventory', 'contents')):
+    for type_i, subassembly_type in enumerate(
+        ('structural', 'inventory', 'contents')
+    ):
         source_file = (
             f'{source_file_dir}/HazusFloodDamageFunctions_'
             f'Hazus61_{subassembly_type}.csv'
         )
         source_data[subassembly_type] = pd.read_csv(source_file)
-        source_data[subassembly_type].index += type_i*1000
+        source_data[subassembly_type].index += type_i * 1000
 
     # We have a dedicated column for `subassembly`, so we don't need
     # special names for the function ID for each subassembly set.
@@ -135,7 +137,7 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
         data_type = index[0]
         row_index = index[1]
         occupancy = row.Occupancy.strip()
-        function_id = f"{row.FnID:03d}"
+        function_id = f'{row.FnID:03d}'
         lf_id = row.FnID
         source = source_map[row.Source]
         description = row.Description
@@ -158,7 +160,7 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
             .replace('(inventory)', 'inventory')
             .replace('(equipment/inventory)', 'equipment/inventory')
             .replace('(inventory/equipment)', 'equipment/inventory')
-            .replace('inventory','')
+            .replace('inventory', '')
             .replace(':', '')
             .replace('(', '')
             .replace(')', '')
