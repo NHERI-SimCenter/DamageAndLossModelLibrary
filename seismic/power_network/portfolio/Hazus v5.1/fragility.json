@@ -7,7 +7,7 @@
       "EP - Electrical Power": [
         "EP.S - Substation",
         "EP.C - Circuit",
-        "EP.G - Generation",
+        "EP.G - Generation"
       ]
     }
   },
@@ -209,7 +209,7 @@
   },
   "EP.C.U": {
     "Description": "Electrical Power, Distribution Network, Unanchored/Standard",
-    "Comments": "The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are unanchored or standard."
+    "Comments": "The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are unanchored or standard.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoundUpToIntegerQuantity": "True",
     "LimitStates": {
@@ -237,7 +237,7 @@
   },
   "EP.G.S.A": {
     "Description": "Electrical Power, Generation, Small, Anchored",
-    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are anchored."
+    "Comments": "Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are anchored.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoundUpToIntegerQuantity": "True",
     "LimitStates": {
