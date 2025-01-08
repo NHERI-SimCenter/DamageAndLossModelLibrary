@@ -15,7 +15,7 @@ def remove_repeated_chars(s):
     Remove repeated characters.
 
     Removes all repeated instances of a character in a string with a
-    single instance of that character, unless it is [A-Za-z].
+    single instance of that character, unless it is alphanumeric [A-Za-z0-9].
 
     Parameters
     ----------
@@ -35,7 +35,7 @@ def remove_repeated_chars(s):
     result = [s[0]]  # Initialize result with the first character
 
     for char in s[1:]:
-        if char.isalpha() or char != result[-1]:
+        if char.isalnum() or char != result[-1]:
             result.append(char)
 
     return ''.join(result)
@@ -64,12 +64,13 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
 
     """
     source_data = {}
-    for subassembly_type in ('structural', 'inventory', 'contents'):
+    for type_i, subassembly_type in enumerate(('structural', 'inventory', 'contents')):
         source_file = (
             f'{source_file_dir}/HazusFloodDamageFunctions_'
             f'Hazus61_{subassembly_type}.csv'
         )
         source_data[subassembly_type] = pd.read_csv(source_file)
+        source_data[subassembly_type].index += type_i*1000
 
     # We have a dedicated column for `subassembly`, so we don't need
     # special names for the function ID for each subassembly set.
@@ -134,6 +135,7 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
         data_type = index[0]
         row_index = index[1]
         occupancy = row.Occupancy.strip()
+        function_id = f"{row.FnID:03d}"
         lf_id = row.FnID
         source = source_map[row.Source]
         description = row.Description
@@ -146,15 +148,17 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
         lf_data.loc[row_index, 'LossFunction-Theta_0'] = lf_str
 
         # assign an ID
-        lf_id = f'{occupancy}.{source}.{data_type}'
+        lf_id = f'{data_type}.{function_id}.{occupancy}.{source}'
 
         other_data = (
             description.lower()
             .replace('contents', '')
+            .replace('structure', '')
             .replace('(equipment)', 'equipment')
             .replace('(inventory)', 'inventory')
             .replace('(equipment/inventory)', 'equipment/inventory')
             .replace('(inventory/equipment)', 'equipment/inventory')
+            .replace('inventory','')
             .replace(':', '')
             .replace('(', '')
             .replace(')', '')
@@ -175,4 +179,6 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
 
     lf_data['ID'] = lf_data['ID'].apply(remove_repeated_chars)
 
-    lf_data.to_csv(target_data_file, index=False)
+    lf_data = lf_data.set_index('ID').sort_index()
+
+    lf_data.to_csv(target_data_file, index=True)
