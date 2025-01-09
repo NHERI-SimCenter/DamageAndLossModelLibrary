@@ -434,7 +434,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
 
     # # this allows you to test it with a few archetypes before
     # # running the whole thing
-    #flt_bldg_df = bldg_df.iloc[:100]
+    # flt_bldg_df = bldg_df.iloc[:100]
 
     # labels for all features, damage state data, and loss data
     column_names = [
@@ -1201,7 +1201,9 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
 
         # store the COV for normal distributions (instead of the std)
         normal_mask = df_db_fit[f'LS{LS_i}-Family'] == 'normal'
-        df_db_fit.loc[normal_mask, f'LS{LS_i}-Theta_1'] /= df_db_fit.loc[normal_mask, f'LS{LS_i}-Theta_0']
+        df_db_fit.loc[normal_mask, f'LS{LS_i}-Theta_1'] /= df_db_fit.loc[
+            normal_mask, f'LS{LS_i}-Theta_0'
+        ]
         df_db_fit = df_db_fit.round({f'LS{LS_i}-Theta_1': 2})
 
     df_db_original, df_db_fit = [
