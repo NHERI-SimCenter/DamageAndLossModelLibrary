@@ -242,7 +242,7 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
     # Load RAW Hazus data
 
     raw_data_path = (
-        'hurricane/building/portfolio/Hazus v4.2/data_sources/input_files/'
+        'hurricane/building/portfolio/Hazus v5.1/data_sources/input_files/'
     )
 
     # read bldg data
@@ -1196,16 +1196,24 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
         df_db_original[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_original']
 
         df_db_fit[f'LS{LS_i}-Family'] = out_df[f'DS{LS_i}_dist']
-        df_db_fit[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_mu']
-        df_db_fit[f'LS{LS_i}-Theta_1'] = out_df[f'DS{LS_i}_sig']
+        df_db_fit[f'LS{LS_i}-Theta_0'] = out_df[f'DS{LS_i}_mu'].astype(float)
+        df_db_fit[f'LS{LS_i}-Theta_1'] = out_df[f'DS{LS_i}_sig'].astype(float)
 
-    for df_db in (df_db_original, df_db_fit):
-        df_db = df_db.loc[df_db['ID'] != '']  # noqa: PLW2901
-        df_db = df_db.set_index('ID').sort_index().convert_dtypes()  # noqa: PLW2901
+        # store the COV for normal distributions (instead of the std)
+        normal_mask = df_db_fit[f'LS{LS_i}-Family'] == 'normal'
+        df_db_fit.loc[normal_mask, f'LS{LS_i}-Theta_1'] /= df_db_fit.loc[
+            normal_mask, f'LS{LS_i}-Theta_0'
+        ]
+        df_db_fit = df_db_fit.round({f'LS{LS_i}-Theta_1': 2})
 
-    df_db_fit.to_csv('hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv')
+    df_db_original, df_db_fit = [
+        df_i.loc[df_i['ID'] != ''].set_index('ID').sort_index().convert_dtypes()
+        for df_i in (df_db_original, df_db_fit)
+    ]
+
+    df_db_fit.to_csv('hurricane/building/portfolio/Hazus v5.1/fragility_fitted.csv')
     df_db_original.to_csv(
-        'hurricane/building/portfolio/Hazus v4.2/fragility_unmodified.csv'
+        'hurricane/building/portfolio/Hazus v5.1/fragility_unmodified.csv'
     )
 
     # initialize the output loss table
@@ -1250,32 +1258,32 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
     df_db_fit = df_db_fit.set_index('ID').sort_index().convert_dtypes()
 
     df_db_fit.to_csv(
-        'hurricane/building/portfolio/Hazus v4.2/consequence_repair_fitted.csv'
+        'hurricane/building/portfolio/Hazus v5.1/consequence_repair_fitted.csv'
     )
     df_db_original.to_csv(
-        'hurricane/building/portfolio/Hazus v4.2/loss_repair_unmodified.csv'
+        'hurricane/building/portfolio/Hazus v5.1/loss_repair_unmodified.csv'
     )
 
 
 def create_Hazus_HU_metadata_files(  # noqa: C901, N802
     source_file: str = (
-        'hurricane/building/portfolio/Hazus v4.2/fragility_fitted.csv'
+        'hurricane/building/portfolio/Hazus v5.1/fragility_fitted.csv'
     ),
     meta_file: str = (
-        'hurricane/building/portfolio/Hazus v4.2/'
+        'hurricane/building/portfolio/Hazus v5.1/'
         'data_sources/input_files/metadata.json'
     ),
     target_meta_file_damage: str = (
-        'hurricane/building/portfolio/Hazus v4.2/fragility_fitted.json'
+        'hurricane/building/portfolio/Hazus v5.1/fragility_fitted.json'
     ),
     target_meta_file_loss: str = (
-        'hurricane/building/portfolio/Hazus v4.2/consequence_repair_fitted.json'
+        'hurricane/building/portfolio/Hazus v5.1/consequence_repair_fitted.json'
     ),
     target_meta_file_damage_original: str = (
-        'hurricane/building/portfolio/Hazus v4.2/fragility_unmodified.json'
+        'hurricane/building/portfolio/Hazus v5.1/fragility_unmodified.json'
     ),
     target_meta_file_loss_original: str = (
-        'hurricane/building/portfolio/Hazus v4.2/loss_repair_unmodified.json'
+        'hurricane/building/portfolio/Hazus v5.1/loss_repair_unmodified.json'
     ),
 ) -> None:
     """
