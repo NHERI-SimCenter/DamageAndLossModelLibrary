@@ -107,7 +107,7 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
             source.replace('(MOD.)', 'Modified')
             .replace(' - ', '_')
             .replace('.', '')
-            .replace(' ', '-')
+            .replace(' ', '_')
         )
         source_map[source] = source_value
 
@@ -127,7 +127,7 @@ def create_Hazus_Flood_repair_db(  # noqa: N802
     # assign common values
     lf_data['Incomplete'] = 0
     lf_data['Demand-Type'] = 'Peak Inundation Height'
-    lf_data['Demand-Unit'] = 'in'
+    lf_data['Demand-Unit'] = 'ft'
     lf_data['Demand-Offset'] = 0
     lf_data['Demand-Directional'] = 1
     lf_data['DV-Unit'] = 'loss_ratio'
