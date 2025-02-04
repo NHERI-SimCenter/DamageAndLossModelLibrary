@@ -1,0 +1,80 @@
+{
+  "_GeneralInformation": {
+    "ShortName": "SimCenter Hurricane Wind Component Library",
+    "Description": "This dataset is a collection of component-level damage models from the literature and public resources. Every entry has one or more corresponding publications identified that provide more information about its calibration and application limits.",
+    "Version": "0.1",
+    "ComponentGroups": {
+      "RWC - Roof-Wall Connection": {
+        "RWC.epoxy - Epoxy only": [],
+        "RWC.hurricane_clip - Hurricane Clip": [],
+        "RWC.straps - Straps only": [],
+        "RWC.toe_nail - Toe nail": [
+          "RWC.toe_nail.straps - Toe nail with straps",
+          "RWC.toe_nail.epoxy - Toe nail with epoxy",
+          "RWC.toe_nail.adhesive - Toe nail with adhesive"
+        ]
+      },
+      "WIN - Window": [
+        "WIN.regular - Regular",
+        "WIN.impact_resistant - Impact Resistant",
+        "WIN.shutters - Hurricane Shutters Installed"
+      ],
+      "DOOR - Door": [
+        "DOOR.regular - Regular",
+        "DOOR.glass - Glass",
+        "DOOR.impact_resistant - Impact Resistant",
+        "DOOR.shutters - Hurricane Shutters Installed",
+        "DOOR.garage - Garage"
+      ],
+      "WSH - Wall Sheathing": {
+        "WSH.nails - With Nails": [
+          "WSH.nails.6d - 6d size",
+          "WSH.nails.8d - 8d size"
+        ],
+        "WSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
+        "WSH.nails_ccspf - With Nails and ccSPF": [
+          "WSH.nails_ccsp.6d - 6d size",
+          "WSH.nails_ccsp.6d - 8d size"
+        ]
+      },
+      "WALL - Wall": [],
+      "WCOV - Wall Cover": [],
+      "RCOV - Roof Cover": [
+        "RCOV.tiles - Tiles",
+        "RCOV.shingles - Shingles"
+      ]
+    }
+  },
+  "References":{
+    "abdelhady2022": "Abdelhady, A. U., S. M. J. Spence, and J. McCormick. 2022. Risk and fragility assessment of residential wooden buildings subject to hurricane winds. Structural Safety, 94: 102137. https://doi.org/10.1016/j.strusafe.2021.102137.",
+    "angeles2021": "Angeles, K., D. Patsialis, A. A. Taflanidis, T. L. Kijewski-Correa, A. Buccellato, and C. Vardeman. 2021. Advancing the Design of Resilient and Sustainable Buildings: An Integrated Life-Cycle Analysis. J. Struct. Eng., 147 (3): 04020341. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002910.",
+    "barbato2013": "Barbato, M., F. Petrini, V. U. Unnikrishnan, and M. Ciampoli. 2013. Performance-Based Hurricane Engineering (PBHE) framework. Structural Safety, 45: 24–35. https://doi.org/10.1016/j.strusafe.2013.07.002.",
+    "canfield1991": "Canfield, L., S. Niu, and H. Liu. 1991. Uplift resistance of various rafter-wall connections. Forest Products Journal.",
+    "cheng2004": "Cheng, J. 2004. Testing and analysis of the toe-nailed connection in the residential roof-to-wall system. Forest Products Journal, 54: 58–65.",
+    "cope2004": "Cope, A. D. 2004. Predicting the vulnerability of typical residential buildings to hurricane damage. University of Florida.",
+    "datin2011": "Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.",
+    "dong2016": "Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1–2): 46–62. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.",
+    "grayson2013": "Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.",
+    "gurley2005": "Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.",
+    "jain2020": "Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.",
+    "kakareko2021": "Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.",
+    "lee2005": "Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.",
+    "li2006": "Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005",
+    "lin2019": "Lin, S.-Y., W.-C. Chuang, L. Xu, S. El-Tawil, S. M. J. Spence, V. R. Kamat, C. C. Menassa, and J. McCormick. 2019. Framework for Modeling Interdependent Effects in Natural Disasters: Application to Wind Engineering. Journal of Structural Engineering, 145 (5): 04019025. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002310.",
+    "minor1998": "Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77–78: 197–204. https://doi.org/10.1016/S0167-6105(98)00143-3.",
+    "norville1985": "Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467–1470.",
+    "park2014": "Park, S., J. W. Van De Lindt, and Y. Li. 2014. ABV Procedure Combined with Mechanistic Response Modeling for Roof- and Surge-Loss Estimation in Hurricanes. J. Perform. Constr. Facil., 28 (2): 206–215. https://doi.org/10.1061/(ASCE)CF.1943-5509.0000397.",
+    "peng2013": "Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.",
+    "puga2015": "Puga, H., B. A. Olmos, L. Olmos, J. M. Jara, and M. Jara. 2015. Damage assessment of curtain wall glass. J. Phys.: Conf. Ser., 628 (1): 012052. IOP Publishing. https://doi.org/10.1088/1742-6596/628/1/012052.",
+    "reed1996": "Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1996. Roof rafter to top-plate connections in coastal residential construction. 458–465.",
+    "reed1997": "Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).",
+    "rosowsky1996": "Rosowsky, D., and S. Schiff. 1996. Probabilistic Modeling of Roof Sheathing Uplift Capacity. Probabilistic Mechanics and Structural Reliability.",
+    "rosowsky1999": "Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).",
+    "shanmugam2009": "Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.",
+    "shdid2011": "Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121–129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.",
+    "shen2013": "Shen, Y. 2013. Assessing the wind resistance of sectional door systems for facilities in hurricane-prone areas through full- and component-scale experimental methods and finite element analysis. Ph.D. United States -- Florida: University of Florida.",    
+    "unnikrishnan2017": "Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.",
+    "vickery2006": "Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).",
+    "yau2011": "Yau, S. C. 2011. Wind Hazard Risk Assessment and Management for Structures. Ph.D. United States -- New Jersey: Princeton University."
+  }
+}

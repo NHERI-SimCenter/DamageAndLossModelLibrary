@@ -1,0 +1,124 @@
+﻿ID,Incomplete,Demand-Type,Demand-Unit,Demand-Offset,Demand-Directional,LS1-Family,LS1-Theta_0,LS1-Theta_1,Meta-Description,Meta-Comments,Meta-SuggestedComponentBlockSize,Meta-RoundUpToIntegerQuantity,Meta-Reference,Meta-LimitStates-LS1-DS1-Description
+RWC.001,0,Peak Internal Force,kN,0,1,normal,5.84,0.1,Roof-Wall Connection - General fragility,...,1 EA,1,dong2016,Tension from uplift
+RWC.straps.001,0,Peak Internal Force,kN,0,1,normal,5.338,0.3,Roof-Wall Connection with Straps,...,1 EA,1,vickery2006,Tension from uplift
+RWC.toe_nail.001a,0,Peak Internal Force,kN,0,1,normal,2.98,0.3,Roof-Wall Connection with Toe nails,...,1 EA,1,peng2013,Tension from uplift
+RWC.toe_nail.001b,0,Peak Internal Force,kN,0,1,normal,1.92,0.23,Roof-Wall Connection with Toe nails,...,1 EA,1,"reed1997, shanmugam2009",Tension from uplift
+RWC.toe_nail.001c,0,Peak Internal Force,kN,0,1,normal,1.846,0.25,Roof-Wall Connection with Toe nails,...,1 EA,1,vickery2006,Tension from uplift
+RWC.toe_nail.straps.001,0,Peak Internal Force,kN,0,1,normal,7.31,0.1,Roof-Wall Connection with Toe nails and a small strap inside,The small strap is located on the inside of the wall.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.002,0,Peak Internal Force,kN,0,1,normal,8.47,0.11,Roof-Wall Connection with Toe nails and a small strap outside,The small strap is located on the outside of the wall.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.003,0,Peak Internal Force,kN,0,1,normal,14.35,0.1,Roof-Wall Connection with Toe nails and small straps on both sides,"Two small straps are installed, one inside and one outside of the wall.",1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.004,0,Peak Internal Force,kN,0,1,normal,9.22,0.11,"Roof-Wall Connection with Toe nails, a small strap outside, and plywood nailed.",The small strap is located on the outside of the wall. A plywood is nailed to the plate on the wall as spacer.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.005,0,Peak Internal Force,kN,0,1,normal,8.56,0.11,"Roof-Wall Connection with Toe nails, a small strap outside, and plywood not nailed.",The small strap is located on the outside of the wall. A plywood is installed as spacer but not nailed to the plate on the wall.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.006,0,Peak Internal Force,kN,0,1,normal,13.41,0.09,Roof-Wall Connection with Toe nails and a large strap outside,The large strap is located on the outside of the wall.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.straps.007,0,Peak Internal Force,kN,0,1,normal,12.21,0.12,Roof-Wall Connection with Toe nails and a large strap inside,The large strap is located on the inside of the wall.,1 EA,1,reed1997,Tension from uplift
+RWC.epoxy.001,0,Peak Internal Force,kN,0,1,normal,7.53,0.37,Roof-Wall Connection with Epoxy.,"Epoxy set for one week, no toe nails used.",1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.epoxy.001,0,Peak Internal Force,kN,0,1,normal,7.98,0.29,Roof-Wall Connection with Toe nails and epoxy.,"Epoxy set for one week, toe-nailed when epoxy is wet.",1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.epoxy.002,0,Peak Internal Force,kN,0,1,normal,6.55,0.16,Roof-Wall Connection with Toe nails and epoxy on small wood blocks.,Epoxy set for one week.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.epoxy.003,0,Peak Internal Force,kN,0,1,normal,6.11,0.19,Roof-Wall Connection with Toe nails and epoxy on small wood blocks.,Epoxy set for 24-48 hrs.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.epoxy.004,0,Peak Internal Force,kN,0,1,normal,9.67,0.34,Roof-Wall Connection with Toe nails and epoxy on large wood blocks.,Epoxy set for one week.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.001,0,Peak Internal Force,kN,0,1,normal,6.6,0.19,Roof-Wall Connection with Toe nails and acrylic adhesive,"Adhesive set for one week, toe-nailed when adhesive is wet.",1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.002,0,Peak Internal Force,kN,0,1,normal,4.95,0.33,Roof-Wall Connection with Toe nails and soaked with acrylic adhesive.,"Wood first soaked for 24 hours, then toe-nailed when adhesive is wet.",1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.003,0,Peak Internal Force,kN,0,1,normal,5.21,0.21,Roof-Wall Connection with Toe nails and acrylic adhesive on small wood blocks.,Adhesive set for one week.,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.004,0,Peak Internal Force,kN,0,1,normal,2.81,0.17,Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead,...,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.005,0,Peak Internal Force,kN,0,1,normal,4.1,0.31,Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead,...,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.adhesive.006,0,Peak Internal Force,kN,0,1,normal,3.79,0.09,Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.,...,1 EA,1,reed1997,Tension from uplift
+RWC.toe_nail.002,0,Peak Internal Force,kN,0,1,normal,12.56,0.1,Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.,Simpson Strong-Tie H10 metal connector installed on every truss.,1 EA,1,peng2013,Tension from uplift
+RWC.hurricane_clip.001a,0,Peak Internal Force,kN,0,1,normal,5.836,0.1,Roof-Wall Connection with Hurricane Clip H2.5.,...,1 EA,1,"li2006,canfield1991",Tension from uplift
+RWC.hurricane_clip.001b,0,Peak Internal Force,kN,0,1,normal,5.391,0.15,Roof-Wall Connection with Hurricane Clip H2.5.,...,1 EA,1,"li2006,canfield1991",Tension from uplift
+RWC.toe_nail.003,0,Peak Internal Force,kN,0,1,normal,1.51,0.36,"Roof-Wall Connection with Toe nails, 2-16d layout.",...,1 EA,1,shanmugam2009,Tension from uplift
+RWC.toe_nail.004,0,Peak Internal Force,kN,0,1,normal,1.83,0.34,"Roof-Wall Connection with Toe nails, 3-8d layout.",...,1 EA,1,"li2006,reed1997",Tension from uplift
+RWC.toe_nail.005,0,Peak Internal Force,kN,0,1,normal,1.97,0.38,"Roof-Wall Connection with Toe nails, 3-16d layout.",...,1 EA,1,"jain2020,shanmugam2009",Tension from uplift
+RWC.toe_nail.006a,0,Peak Internal Force,kN,0,1,normal,1.56,0.164,"Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",...,1 EA,1,"shanmugam2009,cheng2004",Tension from uplift
+RWC.toe_nail.006b,0,Peak Internal Force,kN,0,1,normal,2.59,0.212,"Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",...,1 EA,1,"shanmugam2009,cheng2004",Tension from uplift
+RWC.toe_nail.006c,0,Peak Internal Force,kN,0,1,normal,2.69,0.155,"Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",...,1 EA,1,"shanmugam2009,cheng2004",Tension from uplift
+WIN.regular.001a,0,Peak Wind Pressure,kPa,0,1,normal,3.35,0.3,Regular Window - General fragility,...,1 EA,1,"peng2013,gurley2005",Glass breaking
+WIN.regular.001b,0,Peak Wind Pressure,kPa,0,1,normal,2.4,0.2,Regular Window - General fragility,...,1 EA,1,"gurley2005,unnikrishnan2017,jain2020",Glass breaking
+WIN.regular.001c,0,Peak Interstory Drift Ratio,unitless,0,1,lognormal,0.2,0.2,Regular Window - General fragility,...,1 EA,1,lin2019,Glass breaking
+WIN.regular.002a,0,Peak Wind Pressure,kPa,0,1,lognormal,1.8,0.2,Regular Window on windward wall,...,1 EA,1,lin2019,Glass breaking
+WIN.regular.002b,0,Peak Wind Pressure,kPa,0,1,lognormal,3.6,0.2,Regular Window on non-windward wall,...,1 EA,1,lin2019,Glass breaking
+WIN.regular.003a,0,Peak Wind Pressure,kPa,0,1,weibull,2.629,4.7,Window on a 1-story building,...,1 EA,1,vickery2006,Glass breaking
+WIN.regular.003b,0,Peak Wind Pressure,kPa,0,1,weibull,1.853,4.8,Window on a 2-story building with 2 large windows,...,1 EA,1,vickery2006,Glass breaking
+WIN.impact_resistant.001,0,Peak Wind Pressure,kPa,0,1,normal,6.7,0.3,Impact resistant laminated glass window,...,1 EA,1,"gurley2005,peng2013",Glass breaking
+WIN.shutters.001,0,Peak Wind Pressure,kPa,0,1,normal,5.03,0.3,Regular Window with Hurricane Shutters,...,1 EA,1,"gurley2005,peng2013",Glass breaking
+WIN.regular.004,0,Peak Wind Pressure,kPa,0,1,weibull,2.87,4.08,Regular Window 1/8 in 20 sq ft,...,1 EA,1,"norville1985,minor1998,li2006,dong2016",Glass breaking
+WIN.regular.005a,0,Peak Wind Pressure,kPa,0,1,weibull,1.69,4.08,Regular Window 3/16 in 40 sq ft,...,1 EA,1,"norville1985,minor1998,li2006",Glass breaking
+WIN.regular.005b,0,Peak Wind Pressure,kPa,0,1,weibull,2.704,4.08,Regular Window 3/16 in 40 sq ft,...,1 EA,1,"norville1985,minor1998,li2006",Glass breaking
+WIN.regular.006,0,Peak Wind Pressure,kPa,0,1,weibull,5.071,4.08,Regular Window 3/16 in 20 sq ft,...,1 EA,1,"norville1985,minor1998,li2006",Glass breaking
+WIN.regular.007,0,Peak Wind Pressure,kPa,0,1,normal,5,0.2,Regular Window small sized (3.5' x 3.5'),...,1 EA,1,"gurley2005,yau2011,barbato2013",Glass breaking
+WIN.regular.008,0,Peak Wind Pressure,kPa,0,1,normal,3.33,0.2,Regular Window medium sized (3.5' x 5.0'),...,1 EA,1,"gurley2005,grayson2013,kakareko2021",Glass breaking
+WIN.regular.009,0,Peak Wind Pressure,kPa,0,1,normal,2.5,0.2,Regular Window tall sized (3.5' x 6.5'),...,1 EA,1,"gurley2005,grayson2013",Glass breaking
+WIN.regular.010,0,Peak Wind Pressure,kPa,0,1,normal,1.78,0.2,Regular Window picture size (6.5' x 6.5'),...,1 EA,1,"gurley2005,grayson2013",Glass breaking
+DOOR.regular.001a,0,Peak Wind Pressure,kPa,0,1,normal,3.59,0.3,Regular Door - General fragility,...,1 EA,1,"peng2013,gurley2005",Door panel torn from hinges
+DOOR.regular.001b,0,Peak Wind Pressure,kPa,0,1,normal,3.6,0.2,Regular Door - General fragility,...,1 EA,1,"gurley2005,jain2020",Door panel torn from hinges
+DOOR.regular.001c,0,Peak Wind Pressure,kPa,0,1,normal,2.394,0.2,Regular Door - General fragility,...,1 EA,1,vickery2006,Door panel torn from hinges
+DOOR.impact_resistant.001,0,Peak Wind Pressure,kPa,0,1,normal,7.18,0.3,Impact resistant laminated glass door,...,1 EA,1,"gurley2005,peng2013",Door panel torn from hinges
+DOOR.shutters.001,0,Peak Wind Pressure,kPa,0,1,normal,5.41,0.3,Regular Door with Hurricane Shutters,...,1 EA,1,"gurley2005,peng2013",Door panel torn from hinges
+DOOR.glass.001a,0,Peak Wind Pressure,kPa,0,1,weibull,2.45,4.08,Glass Door,...,1 EA,1,dong2016,Glass breaking
+DOOR.glass.001b,0,Peak Wind Pressure,kPa,0,1,weibull,4.86,4.5,Glass Door,...,1 EA,1,vickery2006,Glass breaking
+DOOR.regular.002,0,Peak Wind Pressure,kPa,0,1,normal,4.79,0.2,"Regular Door 6'10"" x 3'2"" size",...,1 EA,1,"gurley2005,yau2011,grayson2013,kakareko2021",Door panel torn from hinges
+DOOR.garage.001a,0,Peak Wind Pressure,kPa,0,1,normal,2.39,0.3,Garage Door - General fragility,...,1 EA,1,"peng2013,gurley2005",Garage door torn from tracks
+DOOR.garage.001b,0,Peak Wind Pressure,kPa,0,1,normal,2.5,0.2,Garage Door - General fragility,...,1 EA,1,"shen2013,jain2020",Garage door torn from tracks
+DOOR.garage.001c,0,Peak Wind Pressure,kPa,0,1,normal,3.49,0.2,Garage Door - General fragility,...,1 EA,1,unnikrishnan2017,Garage door torn from tracks
+DOOR.garage.001d,0,Peak Wind Pressure,kPa,0,1,normal,1.436,0.2,Garage Door - General fragility,...,1 EA,1,vickery2006,Garage door torn from tracks
+DOOR.garage.002,0,Peak Wind Pressure,kPa,0,1,normal,3.59,0.3,Wind-reinforced Garage Door,...,1 EA,1,peng2013,Garage door torn from tracks
+DOOR.garage.003,0,Peak Wind Pressure,kPa,0,1,normal,2.49,0.2,"2-car Garage Door (6'10"" x 12"")",...,1 EA,1,"gurley2005,yau2011,grayson2013,kakareko2021",Garage door torn from tracks
+DOOR.garage.004a,0,Peak Wind Pressure,kPa,0,1,normal,0.479,0.2,Double garage door - weak,...,1 EA,1,vickery2006,Garage door torn from tracks
+DOOR.garage.004b,0,Peak Wind Pressure,kPa,0,1,normal,0.958,0.2,Double garage door - strong,...,1 EA,1,vickery2006,Garage door torn from tracks
+WSH.001a,0,Peak Wind Pressure,kPa,0,1,normal,4.92,0.11,Wall Sheathing - General fragility,...,1 EA,1,"vickery2006,kakareko2021",Sheathing torn off
+WSH.001b,0,Peak Wind Pressure,kPa,0,1,normal,6.03,0.4,Wall Sheathing - General fragility,...,1 EA,1,"cope2004,unnikrishnan2017",Sheathing torn off
+WSH.002a,0,Peak Wind Pressure,kPa,0,1,normal,1.2,0.15,"Wall Sheathing - 6d common nails (2"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,grayson2013",Sheathing torn off
+WSH.002b,0,Peak Wind Pressure,kPa,0,1,normal,1.53,0.15,"Wall Sheathing - 6d common nails (2"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,grayson2013",Sheathing torn off
+WSH.003a,0,Peak Wind Pressure,kPa,0,1,normal,2.76,0.2,"Wall Sheathing - 8d common nails (2.5"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,grayson2013",Sheathing torn off
+WSH.003b,0,Peak Wind Pressure,kPa,0,1,normal,3.51,0.2,"Wall Sheathing - 8d common nails (2.5"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,grayson2013",Sheathing torn off
+WALL.001a,0,Peak Line Force,kNpm,0,1,normal,15.834,0.2,Wood Wall - General fragility,...,1 EA,1,cope2004,Shear failure
+WALL.001b,0,Peak Internal Force,kN,0,1,normal,5.48,0.2,Wood Wall - General fragility,...,1 EA,1,cope2004,Lateral failure (connection)
+WALL.001c,0,Peak Internal Force,kN,0,1,normal,51.54,0.2,Wood Wall - General fragility,...,1 EA,1,cope2004,Lateral failure (additional)
+WALL.001d,0,Peak Line Force,kNpm,0,1,normal,8.99,0.25,Wood Wall - General fragility,...,1 EA,1,"cope2004,unnikrishnan2017",Uplift (connection)
+WALL.001e,0,Peak Line Force,kNpm,0,1,normal,5.794,0.25,Wood Wall - General fragility,...,1 EA,1,"cope2004,unnikrishnan2017",Uplift (additional)
+WALL.002a,0,Peak Line Force,kNpm,0,1,normal,16.05,0.2,Wall - Unreinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Shear failure
+WALL.002b,0,Peak Line Force,kNpm,0,1,normal,29.19,0.2,Wall - Unreinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Out of plane failure
+WALL.002c,0,Peak Line Force,kNpm,0,1,normal,14.59,0.2,Wall - Unreinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Uplift
+WALL.003a,0,Peak Line Force,kNpm,0,1,normal,16.05,0.2,Wall - Reinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Shear failure
+WALL.003b,0,Peak Line Force,kNpm,0,1,normal,43.78,0.2,Wall - Reinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Out of plane failure
+WALL.003c,0,Peak Line Force,kNpm,0,1,normal,14.59,0.2,Wall - Reinforced gable ends,...,1 EA,1,"gurley2005,peng2013",Uplift
+WALL.004a,0,Peak Wind Pressure,kPa,0,1,normal,1351.37,0.2,Concrete block,...,1 EA,1,cope2004,Shear failure
+WALL.004b,0,Peak Internal Force,kN,0,1,normal,17.79,0.2,Concrete block,...,1 EA,1,cope2004,Uplift
+RSH.nails.6d.6p12.001,0,Peak Wind Pressure,kPa,0,1,lognormal,2.598,0.11,Roof Sheathing with 6d nails @ 6/12 in,...,1 EA,1,vickery2006,Separation or pull off
+RSH.nails.8d.6p6.001,0,Peak Wind Pressure,kPa,0,1,lognormal,8.614,0.11,Roof Sheathing with 8d nails @ 6/6 in,...,1 EA,1,vickery2006,Separation or pull off
+RSH.nails.8d.6p12.001a,0,Peak Wind Pressure,kPa,0,1,normal,2.873,0.2,Roof Sheathing with 8d nails @ 6/12 in,...,1 EA,1,"rosowsky1996,li2006",Separation or pull off
+RSH.nails.8d.6p12.001b,0,Peak Wind Pressure,kPa,0,1,lognormal,6.156,0.12,Roof Sheathing with 8d nails @ 6/12 in,...,1 EA,1,unnikrishnan2017,Separation or pull off
+RSH.nails.8d.6p12.001c,0,Peak Wind Pressure,kPa,0,1,lognormal,4.902,0.11,Roof Sheathing with 8d nails @ 6/12 in,...,1 EA,1,vickery2006,Separation or pull off
+RSH.nails.6d.6p12.002,0,Peak Wind Pressure,kPa,0,1,lognormal,1.218,0.218,"Roof Sheathing with 6d common nails (2.375"" length) @ 6/12 in",...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.6d.6p12.003a,0,Peak Wind Pressure,kPa,0,1,normal,2.94,0.161,"Roof Sheathing with 6d common nails (2"" length) @ 6/12 in",...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.6d.6p12.003b,0,Peak Wind Pressure,kPa,0,1,normal,1.2,0.15,"Roof Sheathing with 6d common nails (2"" length) @ 6/12 in",...,1 EA,1,"rosowsky1996,rosowsky1999,lee2005,li2006,park2014",Separation or pull off
+RSH.nails.6d.6p12.003c,0,Peak Wind Pressure,kPa,0,1,normal,1.53,0.15,"Roof Sheathing with 6d common nails (2"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,park2014",Separation or pull off
+RSH.nails.6d.6p6.001,0,Peak Wind Pressure,kPa,0,1,normal,5.18,0.269,"Roof Sheathing with 6d common nails (2"" length) @ 6/6 in",...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p12.002a,0,Peak Wind Pressure,kPa,0,1,lognormal,1.817,0.114,"Roof Sheathing with 8d common nails (2.5"" length) @ 6/12 in",...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p12.002b,0,Peak Wind Pressure,kPa,0,1,normal,2.76,0.2,"Roof Sheathing with 8d common nails (2.5"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,park2014",Separation or pull off
+RSH.nails.8d.6p12.002c,0,Peak Wind Pressure,kPa,0,1,normal,3.51,0.2,"Roof Sheathing with 8d common nails (2.5"" length) @ 6/12 in",...,1 EA,1,"rosowsky1999,lee2005,park2014",Separation or pull off
+RSH.nails.8d.6p8.001,0,Peak Wind Pressure,kPa,0,1,lognormal,2.12,0.114,Roof Sheathing with 8d common nails (2.5 in length) @ 6/8 in,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p6.002,0,Peak Wind Pressure,kPa,0,1,lognormal,2.28,0.104,Roof Sheathing with 8d common nails (2.5 in length) @ 6/6 in,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p12.003,0,Peak Wind Pressure,kPa,0,1,weibull,4.43,3.28,Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/12 in,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p8.002,0,Peak Wind Pressure,kPa,0,1,lognormal,2.323,0.164,Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/8 in,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails.8d.6p6.003,0,Peak Wind Pressure,kPa,0,1,lognormal,2.489,0.073,Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/6 in,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails_ccspf.8d.6p12.001,0,Peak Wind Pressure,kPa,0,1,normal,7.42,0.166,Roof Sheathing with 8d ring shank nails @ 6/12 in and a fillet ccSPF application,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails_ccspf.6d.6p12.001,0,Peak Wind Pressure,kPa,0,1,normal,8.38,0.1,Roof Sheathing with 6d common nails @ 6/12 in and a fillet ccSPF application,...,1 EA,1,datin2011,Separation or pull off
+RSH.ccspf.001,0,Peak Wind Pressure,kPa,0,1,lognormal,2.193,0.175,Roof Sheathing with no nails and a fillet ccSPF application,...,1 EA,1,datin2011,Separation or pull off
+RSH.ccspf.002,0,Peak Wind Pressure,kPa,0,1,normal,8.54,0.209,Roof Sheathing with no nails and a fillet plus 0.5 in coverage ccSPF application,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails_ccspf.8d.6p12.002,0,Peak Wind Pressure,kPa,0,1,normal,11.72,0.163,Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 24-39 day cure time,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails_ccspf.6d.6p12.002,0,Peak Wind Pressure,kPa,0,1,normal,11.99,0.125,Roof Sheathing with 6d common nails @ 6/12 in and a 3 in full coverage ccSPF application with 19-20 day cure time,...,1 EA,1,datin2011,Separation or pull off
+RSH.nails_ccspf.8d.6p12.003,0,Peak Wind Pressure,kPa,0,1,normal,10.53,0.227,Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 129-130 day cure time,...,1 EA,1,datin2011,Separation or pull off
+RSH.ccspf.003,0,Peak Wind Pressure,kPa,0,1,lognormal,2.353,0.182,Roof Sheathing with no nails and a 3 in full coverage ccSPF application with 12-15 day cure time,...,1 EA,1,datin2011,Separation or pull off
+WCOV.001a,0,Peak Wind Pressure,kPa,0,1,normal,2.5,0.4,"Wall Cover - General fragility, lower end",...,1 EA,1,abdelhady2022,Separation or pull off
+WCOV.001b,0,Peak Wind Pressure,kPa,0,1,normal,5.5,0.4,"Wall Cover - General fragility, higher end",...,1 EA,1,abdelhady2022,Separation or pull off
+WCOV.002,0,Peak Wind Pressure,kPa,0,1,normal,3.2,0.2,Wall Cover with Vinyl Siding,...,1 EA,1,"gurley2005,jain2020",Separation or pull off
+WCOV.003,0,Peak Wind Pressure,kPa,0,1,lognormal,4,0.29,Wall Cover with Curtain Walls 30 sq ft size and 6:5 aspect ratio,...,30 ft2,1,"puga2015, angeles2021",Curtain wall torn off
+RCOV.tiles.clay.001,0,Peak Wind Force,kN,0,1,normal,1.766,0.228,Roof Cover - Clay Tiles with adhesive,...,1 EA,1,"shdid2011,dong2016",Debonding of foam from ridge board
+RCOV.tiles.concrete.001,0,Peak Wind Force,kN,0,1,normal,1.259,0.134,Roof Cover - Concrete Tiles with adhesive,...,1 EA,1,shdid2011,Debonding of ridge tile from foam
+RCOV.tiles.clay.002,0,Peak Wind Force,kN,0,1,normal,0.267,0.528,Roof Cover - Clay Tiles with mortar,...,1 EA,1,shdid2011,Debonding of field tile from mortar
+RCOV.tiles.concrete.002,0,Peak Wind Force,kN,0,1,normal,2.513,0.14,Roof Cover - Concrete Tiles with mortar,...,1 EA,1,shdid2011,Debonding of ridge tile from mortar
+RCOV.shingles.001a,0,Peak Wind Pressure,kPa,0,1,normal,2.39,0.4,Roof Cover - Asphalt Shingles with standard construction and nail pattern,...,1 EA,1,"gurley2005,peng2013",Separation or pull off
+RCOV.shingles.001b,0,Peak Wind Pressure,kPa,0,1,normal,2.9,0.2,Roof Cover - Asphalt Shingles with standard construction and nail pattern,...,1 EA,1,"gurley2005,jain2020",Separation or pull off
+RCOV.shingles.002a,0,Peak Wind Pressure,kPa,0,1,normal,3.35,0.4,Roof Cover - Shingles with high-wind construction and nail pattern,...,1 EA,1,"gurley2005,grayson2013",Separation or pull off
+RCOV.shingles.002b,0,Peak Wind Pressure,kPa,0,1,normal,3.35,0.3,Roof Cover - Shingles with high-wind construction and nail pattern,...,1 EA,1,"gurley2005,kakareko2021",Separation or pull off
+RCOV.shingles.002c,0,Peak Wind Pressure,kPa,0,1,normal,3.35,0.15,Roof Cover - Shingles with high-wind construction and nail pattern,...,1 EA,1,"gurley2005,peng2013",Separation or pull off

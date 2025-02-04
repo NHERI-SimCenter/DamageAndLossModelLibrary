@@ -1,0 +1,2125 @@
+{
+  "_GeneralInformation": {
+    "ShortName": "SimCenter Hurricane Wind Component Library",
+    "Description": "This dataset is a collection of component-level damage models from the literature and public resources. Every entry has one or more corresponding publications identified that provide more information about its calibration and application limits.",
+    "Version": "0.1",
+    "ComponentGroups": {
+      "RWC - Roof-Wall Connection": {
+        "RWC.epoxy - Epoxy only": [],
+        "RWC.hurricane_clip - Hurricane Clip": [],
+        "RWC.straps - Straps only": [],
+        "RWC.toe_nail - Toe nail": [
+          "RWC.toe_nail.straps - Toe nail with straps",
+          "RWC.toe_nail.epoxy - Toe nail with epoxy",
+          "RWC.toe_nail.adhesive - Toe nail with adhesive"
+        ]
+      },
+      "WIN - Window": [
+        "WIN.regular - Regular",
+        "WIN.impact_resistant - Impact Resistant",
+        "WIN.shutters - Hurricane Shutters Installed"
+      ],
+      "DOOR - Door": [
+        "DOOR.regular - Regular",
+        "DOOR.glass - Glass",
+        "DOOR.impact_resistant - Impact Resistant",
+        "DOOR.shutters - Hurricane Shutters Installed",
+        "DOOR.garage - Garage"
+      ],
+      "WSH - Wall Sheathing": {
+        "WSH.nails - With Nails": [
+          "WSH.nails.6d - 6d size",
+          "WSH.nails.8d - 8d size"
+        ],
+        "WSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
+        "WSH.nails_ccspf - With Nails and ccSPF": [
+          "WSH.nails_ccsp.6d - 6d size",
+          "WSH.nails_ccsp.6d - 8d size"
+        ]
+      },
+      "WALL - Wall": [],
+      "WCOV - Wall Cover": [],
+      "RCOV - Roof Cover": [
+        "RCOV.tiles - Tiles",
+        "RCOV.shingles - Shingles"
+      ]
+    }
+  },
+  "References": {
+    "abdelhady2022": "Abdelhady, A. U., S. M. J. Spence, and J. McCormick. 2022. Risk and fragility assessment of residential wooden buildings subject to hurricane winds. Structural Safety, 94: 102137. https://doi.org/10.1016/j.strusafe.2021.102137.",
+    "angeles2021": "Angeles, K., D. Patsialis, A. A. Taflanidis, T. L. Kijewski-Correa, A. Buccellato, and C. Vardeman. 2021. Advancing the Design of Resilient and Sustainable Buildings: An Integrated Life-Cycle Analysis. J. Struct. Eng., 147 (3): 04020341. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002910.",
+    "barbato2013": "Barbato, M., F. Petrini, V. U. Unnikrishnan, and M. Ciampoli. 2013. Performance-Based Hurricane Engineering (PBHE) framework. Structural Safety, 45: 24\u201335. https://doi.org/10.1016/j.strusafe.2013.07.002.",
+    "canfield1991": "Canfield, L., S. Niu, and H. Liu. 1991. Uplift resistance of various rafter-wall connections. Forest Products Journal.",
+    "cheng2004": "Cheng, J. 2004. Testing and analysis of the toe-nailed connection in the residential roof-to-wall system. Forest Products Journal, 54: 58\u201365.",
+    "cope2004": "Cope, A. D. 2004. Predicting the vulnerability of typical residential buildings to hurricane damage. University of Florida.",
+    "datin2011": "Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144\u2013154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.",
+    "dong2016": "Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1\u20132): 46\u201362. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.",
+    "grayson2013": "Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245\u2013258. https://doi.org/10.1016/j.engstruct.2013.01.027.",
+    "gurley2005": "Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.",
+    "jain2020": "Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.",
+    "kakareko2021": "Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638\u2013648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.",
+    "lee2005": "Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857\u2013868. https://doi.org/10.1016/j.engstruct.2004.12.017.",
+    "li2006": "Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009\u20131018. https://doi.org/10.1016/j.engstruct.2005.11.005",
+    "lin2019": "Lin, S.-Y., W.-C. Chuang, L. Xu, S. El-Tawil, S. M. J. Spence, V. R. Kamat, C. C. Menassa, and J. McCormick. 2019. Framework for Modeling Interdependent Effects in Natural Disasters: Application to Wind Engineering. Journal of Structural Engineering, 145 (5): 04019025. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002310.",
+    "minor1998": "Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77\u201378: 197\u2013204. https://doi.org/10.1016/S0167-6105(98)00143-3.",
+    "norville1985": "Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467\u20131470.",
+    "park2014": "Park, S., J. W. Van De Lindt, and Y. Li. 2014. ABV Procedure Combined with Mechanistic Response Modeling for Roof- and Surge-Loss Estimation in Hurricanes. J. Perform. Constr. Facil., 28 (2): 206\u2013215. https://doi.org/10.1061/(ASCE)CF.1943-5509.0000397.",
+    "peng2013": "Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.",
+    "puga2015": "Puga, H., B. A. Olmos, L. Olmos, J. M. Jara, and M. Jara. 2015. Damage assessment of curtain wall glass. J. Phys.: Conf. Ser., 628 (1): 012052. IOP Publishing. https://doi.org/10.1088/1742-6596/628/1/012052.",
+    "reed1996": "Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1996. Roof rafter to top-plate connections in coastal residential construction. 458\u2013465.",
+    "reed1997": "Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156\u2013163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).",
+    "rosowsky1996": "Rosowsky, D., and S. Schiff. 1996. Probabilistic Modeling of Roof Sheathing Uplift Capacity. Probabilistic Mechanics and Structural Reliability.",
+    "rosowsky1999": "Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725\u2013733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).",
+    "shanmugam2009": "Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607\u20132616. https://doi.org/10.1016/j.engstruct.2009.06.009.",
+    "shdid2011": "Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121\u2013129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.",
+    "shen2013": "Shen, Y. 2013. Assessing the wind resistance of sectional door systems for facilities in hurricane-prone areas through full- and component-scale experimental methods and finite element analysis. Ph.D. United States -- Florida: University of Florida.",
+    "unnikrishnan2017": "Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.",
+    "vickery2006": "Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94\u2013103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).",
+    "yau2011": "Yau, S. C. 2011. Wind Hazard Risk Assessment and Management for Structures. Ph.D. United States -- New Jersey: Princeton University."
+  },
+  "RWC.001": {
+    "Description": "Roof-Wall Connection - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "dong2016"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.straps.001": {
+    "Description": "Roof-Wall Connection with Straps",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.001a": {
+    "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.001b": {
+    "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997",
+      "shanmugam2009"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.001c": {
+    "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.001": {
+    "Description": "Roof-Wall Connection with Toe nails and a small strap inside",
+    "Comments": "The small strap is located on the inside of the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.002": {
+    "Description": "Roof-Wall Connection with Toe nails and a small strap outside",
+    "Comments": "The small strap is located on the outside of the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.003": {
+    "Description": "Roof-Wall Connection with Toe nails and small straps on both sides",
+    "Comments": "Two small straps are installed, one inside and one outside of the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.004": {
+    "Description": "Roof-Wall Connection with Toe nails, a small strap outside, and plywood nailed.",
+    "Comments": "The small strap is located on the outside of the wall. A plywood is nailed to the plate on the wall as spacer.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.005": {
+    "Description": "Roof-Wall Connection with Toe nails, a small strap outside, and plywood not nailed.",
+    "Comments": "The small strap is located on the outside of the wall. A plywood is installed as spacer but not nailed to the plate on the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.006": {
+    "Description": "Roof-Wall Connection with Toe nails and a large strap outside",
+    "Comments": "The large strap is located on the outside of the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.straps.007": {
+    "Description": "Roof-Wall Connection with Toe nails and a large strap inside",
+    "Comments": "The large strap is located on the inside of the wall.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.epoxy.001": {
+    "Description": "Roof-Wall Connection with Epoxy.",
+    "Comments": "Epoxy set for one week, no toe nails used.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.epoxy.001": {
+    "Description": "Roof-Wall Connection with Toe nails and epoxy.",
+    "Comments": "Epoxy set for one week, toe-nailed when epoxy is wet.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.epoxy.002": {
+    "Description": "Roof-Wall Connection with Toe nails and epoxy on small wood blocks.",
+    "Comments": "Epoxy set for one week.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.epoxy.003": {
+    "Description": "Roof-Wall Connection with Toe nails and epoxy on small wood blocks.",
+    "Comments": "Epoxy set for 24-48 hrs.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.epoxy.004": {
+    "Description": "Roof-Wall Connection with Toe nails and epoxy on large wood blocks.",
+    "Comments": "Epoxy set for one week.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.001": {
+    "Description": "Roof-Wall Connection with Toe nails and acrylic adhesive",
+    "Comments": "Adhesive set for one week, toe-nailed when adhesive is wet.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.002": {
+    "Description": "Roof-Wall Connection with Toe nails and soaked with acrylic adhesive.",
+    "Comments": "Wood first soaked for 24 hours, then toe-nailed when adhesive is wet.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.003": {
+    "Description": "Roof-Wall Connection with Toe nails and acrylic adhesive on small wood blocks.",
+    "Comments": "Adhesive set for one week.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.004": {
+    "Description": "Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.005": {
+    "Description": "Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.adhesive.006": {
+    "Description": "Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.002": {
+    "Description": "Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.",
+    "Comments": "Simpson Strong-Tie H10 metal connector installed on every truss.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.hurricane_clip.001a": {
+    "Description": "Roof-Wall Connection with Hurricane Clip H2.5.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "li2006",
+      "canfield1991"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.hurricane_clip.001b": {
+    "Description": "Roof-Wall Connection with Hurricane Clip H2.5.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "li2006",
+      "canfield1991"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.003": {
+    "Description": "Roof-Wall Connection with Toe nails, 2-16d layout.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shanmugam2009"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.004": {
+    "Description": "Roof-Wall Connection with Toe nails, 3-8d layout.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "li2006",
+      "reed1997"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.005": {
+    "Description": "Roof-Wall Connection with Toe nails, 3-16d layout.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "jain2020",
+      "shanmugam2009"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.006a": {
+    "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shanmugam2009",
+      "cheng2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.006b": {
+    "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shanmugam2009",
+      "cheng2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "RWC.toe_nail.006c": {
+    "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shanmugam2009",
+      "cheng2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Tension from uplift"
+        }
+      }
+    }
+  },
+  "WIN.regular.001a": {
+    "Description": "Regular Window - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013",
+      "gurley2005"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.001b": {
+    "Description": "Regular Window - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "unnikrishnan2017",
+      "jain2020"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.001c": {
+    "Description": "Regular Window - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "lin2019"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.002a": {
+    "Description": "Regular Window on windward wall",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "lin2019"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.002b": {
+    "Description": "Regular Window on non-windward wall",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "lin2019"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.003a": {
+    "Description": "Window on a 1-story building",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.003b": {
+    "Description": "Window on a 2-story building with 2 large windows",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.impact_resistant.001": {
+    "Description": "Impact resistant laminated glass window",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.shutters.001": {
+    "Description": "Regular Window with Hurricane Shutters",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.004": {
+    "Description": "Regular Window 1/8 in 20 sq ft",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "norville1985",
+      "minor1998",
+      "li2006",
+      "dong2016"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.005a": {
+    "Description": "Regular Window 3/16 in 40 sq ft",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "norville1985",
+      "minor1998",
+      "li2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.005b": {
+    "Description": "Regular Window 3/16 in 40 sq ft",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "norville1985",
+      "minor1998",
+      "li2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.006": {
+    "Description": "Regular Window 3/16 in 20 sq ft",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "norville1985",
+      "minor1998",
+      "li2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.007": {
+    "Description": "Regular Window small sized (3.5' x 3.5')",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "yau2011",
+      "barbato2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.008": {
+    "Description": "Regular Window medium sized (3.5' x 5.0')",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "grayson2013",
+      "kakareko2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.009": {
+    "Description": "Regular Window tall sized (3.5' x 6.5')",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "WIN.regular.010": {
+    "Description": "Regular Window picture size (6.5' x 6.5')",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "DOOR.regular.001a": {
+    "Description": "Regular Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013",
+      "gurley2005"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.regular.001b": {
+    "Description": "Regular Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "jain2020"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.regular.001c": {
+    "Description": "Regular Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.impact_resistant.001": {
+    "Description": "Impact resistant laminated glass door",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.shutters.001": {
+    "Description": "Regular Door with Hurricane Shutters",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.glass.001a": {
+    "Description": "Glass Door",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "dong2016"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "DOOR.glass.001b": {
+    "Description": "Glass Door",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Glass breaking"
+        }
+      }
+    }
+  },
+  "DOOR.regular.002": {
+    "Description": "Regular Door 6'10\" x 3'2\" size",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "yau2011",
+      "grayson2013",
+      "kakareko2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Door panel torn from hinges"
+        }
+      }
+    }
+  },
+  "DOOR.garage.001a": {
+    "Description": "Garage Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013",
+      "gurley2005"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.001b": {
+    "Description": "Garage Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shen2013",
+      "jain2020"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.001c": {
+    "Description": "Garage Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "unnikrishnan2017"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.001d": {
+    "Description": "Garage Door - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.002": {
+    "Description": "Wind-reinforced Garage Door",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.003": {
+    "Description": "2-car Garage Door (6'10\" x 12\")",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "yau2011",
+      "grayson2013",
+      "kakareko2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.004a": {
+    "Description": "Double garage door - weak",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "DOOR.garage.004b": {
+    "Description": "Double garage door - strong",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Garage door torn from tracks"
+        }
+      }
+    }
+  },
+  "WSH.001a": {
+    "Description": "Wall Sheathing - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006",
+      "kakareko2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WSH.001b": {
+    "Description": "Wall Sheathing - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004",
+      "unnikrishnan2017"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WSH.002a": {
+    "Description": "Wall Sheathing - 6d common nails (2\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WSH.002b": {
+    "Description": "Wall Sheathing - 6d common nails (2\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WSH.003a": {
+    "Description": "Wall Sheathing - 8d common nails (2.5\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WSH.003b": {
+    "Description": "Wall Sheathing - 8d common nails (2.5\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Sheathing torn off"
+        }
+      }
+    }
+  },
+  "WALL.001a": {
+    "Description": "Wood Wall - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Shear failure"
+        }
+      }
+    }
+  },
+  "WALL.001b": {
+    "Description": "Wood Wall - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Lateral failure (connection)"
+        }
+      }
+    }
+  },
+  "WALL.001c": {
+    "Description": "Wood Wall - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Lateral failure (additional)"
+        }
+      }
+    }
+  },
+  "WALL.001d": {
+    "Description": "Wood Wall - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004",
+      "unnikrishnan2017"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Uplift (connection)"
+        }
+      }
+    }
+  },
+  "WALL.001e": {
+    "Description": "Wood Wall - General fragility",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004",
+      "unnikrishnan2017"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Uplift (additional)"
+        }
+      }
+    }
+  },
+  "WALL.002a": {
+    "Description": "Wall - Unreinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Shear failure"
+        }
+      }
+    }
+  },
+  "WALL.002b": {
+    "Description": "Wall - Unreinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Out of plane failure"
+        }
+      }
+    }
+  },
+  "WALL.002c": {
+    "Description": "Wall - Unreinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Uplift"
+        }
+      }
+    }
+  },
+  "WALL.003a": {
+    "Description": "Wall - Reinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Shear failure"
+        }
+      }
+    }
+  },
+  "WALL.003b": {
+    "Description": "Wall - Reinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Out of plane failure"
+        }
+      }
+    }
+  },
+  "WALL.003c": {
+    "Description": "Wall - Reinforced gable ends",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Uplift"
+        }
+      }
+    }
+  },
+  "WALL.004a": {
+    "Description": "Concrete block",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Shear failure"
+        }
+      }
+    }
+  },
+  "WALL.004b": {
+    "Description": "Concrete block",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "cope2004"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Uplift"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p12.001": {
+    "Description": "Roof Sheathing with 6d nails @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p6.001": {
+    "Description": "Roof Sheathing with 8d nails @ 6/6 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.001a": {
+    "Description": "Roof Sheathing with 8d nails @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1996",
+      "li2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.001b": {
+    "Description": "Roof Sheathing with 8d nails @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "unnikrishnan2017"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.001c": {
+    "Description": "Roof Sheathing with 8d nails @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "vickery2006"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p12.002": {
+    "Description": "Roof Sheathing with 6d common nails (2.375\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p12.003a": {
+    "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p12.003b": {
+    "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1996",
+      "rosowsky1999",
+      "lee2005",
+      "li2006",
+      "park2014"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p12.003c": {
+    "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "park2014"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.6d.6p6.001": {
+    "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/6 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.002a": {
+    "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.002b": {
+    "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "park2014"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.002c": {
+    "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "rosowsky1999",
+      "lee2005",
+      "park2014"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p8.001": {
+    "Description": "Roof Sheathing with 8d common nails (2.5 in length) @ 6/8 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p6.002": {
+    "Description": "Roof Sheathing with 8d common nails (2.5 in length) @ 6/6 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p12.003": {
+    "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/12 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p8.002": {
+    "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/8 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails.8d.6p6.003": {
+    "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/6 in",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails_ccspf.8d.6p12.001": {
+    "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a fillet ccSPF application",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails_ccspf.6d.6p12.001": {
+    "Description": "Roof Sheathing with 6d common nails @ 6/12 in and a fillet ccSPF application",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.ccspf.001": {
+    "Description": "Roof Sheathing with no nails and a fillet ccSPF application",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.ccspf.002": {
+    "Description": "Roof Sheathing with no nails and a fillet plus 0.5 in coverage ccSPF application",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails_ccspf.8d.6p12.002": {
+    "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 24-39 day cure time",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails_ccspf.6d.6p12.002": {
+    "Description": "Roof Sheathing with 6d common nails @ 6/12 in and a 3 in full coverage ccSPF application with 19-20 day cure time",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.nails_ccspf.8d.6p12.003": {
+    "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 129-130 day cure time",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RSH.ccspf.003": {
+    "Description": "Roof Sheathing with no nails and a 3 in full coverage ccSPF application with 12-15 day cure time",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "datin2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "WCOV.001a": {
+    "Description": "Wall Cover - General fragility, lower end",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "abdelhady2022"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "WCOV.001b": {
+    "Description": "Wall Cover - General fragility, higher end",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "abdelhady2022"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "WCOV.002": {
+    "Description": "Wall Cover with Vinyl Siding",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "jain2020"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "WCOV.003": {
+    "Description": "Wall Cover with Curtain Walls 30 sq ft size and 6:5 aspect ratio",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "30 ft2",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "puga2015",
+      "angeles2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Curtain wall torn off"
+        }
+      }
+    }
+  },
+  "RCOV.tiles.clay.001": {
+    "Description": "Roof Cover - Clay Tiles with adhesive",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shdid2011",
+      "dong2016"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Debonding of foam from ridge board"
+        }
+      }
+    }
+  },
+  "RCOV.tiles.concrete.001": {
+    "Description": "Roof Cover - Concrete Tiles with adhesive",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shdid2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Debonding of ridge tile from foam"
+        }
+      }
+    }
+  },
+  "RCOV.tiles.clay.002": {
+    "Description": "Roof Cover - Clay Tiles with mortar",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shdid2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Debonding of field tile from mortar"
+        }
+      }
+    }
+  },
+  "RCOV.tiles.concrete.002": {
+    "Description": "Roof Cover - Concrete Tiles with mortar",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "shdid2011"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Debonding of ridge tile from mortar"
+        }
+      }
+    }
+  },
+  "RCOV.shingles.001a": {
+    "Description": "Roof Cover - Asphalt Shingles with standard construction and nail pattern",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RCOV.shingles.001b": {
+    "Description": "Roof Cover - Asphalt Shingles with standard construction and nail pattern",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "jain2020"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RCOV.shingles.002a": {
+    "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "grayson2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RCOV.shingles.002b": {
+    "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "kakareko2021"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  },
+  "RCOV.shingles.002c": {
+    "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
+    "Comments": "...",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoudUpToIntegerQuantity": 1,
+    "Reference": [
+      "gurley2005",
+      "peng2013"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Separation or pull off"
+        }
+      }
+    }
+  }
+}
