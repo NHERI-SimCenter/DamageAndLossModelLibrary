@@ -140,10 +140,13 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
     """Generate damage parameter documentation."""
     doc_folder = doc_folder / 'damage'
 
-    resource_folder = Path()
+    damage_dlmls = []
 
-    # get all the available damage dlmls
-    damage_dlmls = list(resource_folder.rglob('fragility.csv'))
+    for hazard_name in ['seismic', 'hurricane', 'flood']:
+        resource_folder = Path(f'./{hazard_name}')
+
+        # get all the available damage dlmls
+        damage_dlmls.extend(list(resource_folder.rglob('fragility.csv')))
 
     # create the main index file
     damage_index_contents = dedent(
@@ -351,6 +354,24 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
                         .. raw:: html
                            :file: {comp}.html
 
+                        """
+                        )
+
+                        if 'Reference' in comp_meta:
+                            comp_refs = [
+                                dlml_meta['References'][ref]
+                                for ref in comp_meta['Reference']
+                            ]
+                            comp_refs_str = '|\n'
+
+                            for ref in comp_refs:
+                                comp_refs_str += f'| {ref}\n'
+
+                            comp_contents += comp_refs_str
+
+                        comp_contents += dedent(
+                            """
+
                         .. raw:: html
 
                            <hr>
@@ -373,8 +394,13 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 
     doc_folder = doc_folder / 'repair'
 
-    # get all the available repair dlmls
-    repair_dlmls = list(resource_folder.rglob('consequence_repair.csv'))
+    repair_dlmls = []
+
+    for hazard_name in ['seismic', 'hurricane', 'flood']:
+        resource_folder = Path(f'./{hazard_name}')
+
+        # get all the available consequence repair dlmls
+        repair_dlmls.extend(list(resource_folder.rglob('consequence_repair.csv')))
 
     # create the main index file
     repair_index_contents = dedent(
@@ -623,7 +649,10 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 def ignore_file(dlml):
     """Ignore certain paths due to lack of support. To remove."""
     return str(dlml.parent) in {
+        'hurricane/building/portfolio/Hazus v5.1 original',
+        'hurricane/building/portfolio/Hazus v5.1 coupled',
         'seismic/water_network/portfolio/Hazus v6.1',
+        'seismic/building/subassembly/Hazus v5.1',
         'flood/building/portfolio/Hazus v6.1',
     }
 
