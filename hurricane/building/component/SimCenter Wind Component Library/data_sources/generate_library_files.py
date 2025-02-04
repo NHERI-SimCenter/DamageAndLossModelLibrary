@@ -38,7 +38,7 @@ def create_fragility_files():
     for __, row in input_data.iterrows():
         component_meta = {
             'Description': row['Meta-Description'],
-            'Comments': row['Meta-Comments'],
+            'Comments': row.get('Meta-Comments'),
             'SuggestedComponentBlockSize': row['Meta-SuggestedComponentBlockSize'],
             'RoudUpToIntegerQuantity': row['Meta-RoundUpToIntegerQuantity'],
             'Reference': [ref.strip() for ref in row['Meta-Reference'].split(',')],
@@ -50,6 +50,9 @@ def create_fragility_files():
                 }
             },
         }
+
+        if pd.isna(row['Meta-Comments']):
+            del component_meta['Comments']
 
         # make sure the references are included in the header
         for ref in component_meta['Reference']:
