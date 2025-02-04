@@ -238,10 +238,13 @@ def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912, PLR0915
-    # Load RAW Hazus data
+def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D103, N802, PLR0912, PLR0915
+    
+    if fit_parameters:
+    
+        # Load RAW Hazus data
 
-    raw_data_path = (
+        raw_data_path = (
         'hurricane/building/portfolio/Hazus v5.1/data_sources/input_files/'
     )
 
@@ -821,7 +824,14 @@ def create_Hazus_HU_damage_and_loss_files():  # noqa: C901, D103, N802, PLR0912,
 
             rows.append(new_row_terrain.to_frame().T)
 
-    main_df = pd.concat(rows, axis=0, ignore_index=True)
+        main_df = pd.concat(rows, axis=0, ignore_index=True)
+
+        main_df.to_csv('hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv')
+
+    main_df = pd.read_csv(
+        'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv', 
+        index_col=0,
+        low_memory=False)
 
     # Prepare the Damage and Loss Model Data Files
     #
