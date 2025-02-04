@@ -1,0 +1,1 @@
+This file is identical to the `Wind_Flood.csv` from the `Hazus v5.1 coupled` method. It is copied here to facilitate automated import and usage. If the two files are not identical, the one in the `Hazus v5.1 coupled` folder should be considered the reference.
