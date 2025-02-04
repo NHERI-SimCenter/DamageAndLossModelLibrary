@@ -26,17 +26,18 @@
         "DOOR.shutters - Hurricane Shutters Installed",
         "DOOR.garage - Garage"
       ],
-      "WSH - Wall Sheathing": {
-        "WSH.nails - With Nails": [
-          "WSH.nails.6d - 6d size",
-          "WSH.nails.8d - 8d size"
+      "RSH - Roof Sheathing": {
+        "RSH.nails - With Nails": [
+          "RSH.nails.6d - 6d size",
+          "RSH.nails.8d - 8d size"
         ],
-        "WSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
-        "WSH.nails_ccspf - With Nails and ccSPF": [
-          "WSH.nails_ccsp.6d - 6d size",
-          "WSH.nails_ccsp.6d - 8d size"
+        "RSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
+        "RSH.nails_ccspf - With Nails and ccSPF": [
+          "RSH.nails_ccsp.6d - 6d size",
+          "RSH.nails_ccsp.8d - 8d size"
         ]
       },
+      "WSH - Wall Sheathing": [],
       "WALL - Wall": [],
       "WCOV - Wall Cover": [],
       "RCOV - Roof Cover": [

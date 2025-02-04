@@ -26,17 +26,18 @@
         "DOOR.shutters - Hurricane Shutters Installed",
         "DOOR.garage - Garage"
       ],
-      "WSH - Wall Sheathing": {
-        "WSH.nails - With Nails": [
-          "WSH.nails.6d - 6d size",
-          "WSH.nails.8d - 8d size"
+      "RSH - Roof Sheathing": {
+        "RSH.nails - With Nails": [
+          "RSH.nails.6d - 6d size",
+          "RSH.nails.8d - 8d size"
         ],
-        "WSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
-        "WSH.nails_ccspf - With Nails and ccSPF": [
-          "WSH.nails_ccsp.6d - 6d size",
-          "WSH.nails_ccsp.6d - 8d size"
+        "RSH.ccspf - With closed-cell Sprayed Polyurethane Foam": [],
+        "RSH.nails_ccspf - With Nails and ccSPF": [
+          "RSH.nails_ccsp.6d - 6d size",
+          "RSH.nails_ccsp.8d - 8d size"
         ]
       },
+      "WSH - Wall Sheathing": [],
       "WALL - Wall": [],
       "WCOV - Wall Cover": [],
       "RCOV - Roof Cover": [
@@ -79,7 +80,6 @@
   },
   "RWC.001": {
     "Description": "Roof-Wall Connection - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -95,7 +95,6 @@
   },
   "RWC.straps.001": {
     "Description": "Roof-Wall Connection with Straps",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -111,7 +110,6 @@
   },
   "RWC.toe_nail.001a": {
     "Description": "Roof-Wall Connection with Toe nails",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -127,7 +125,6 @@
   },
   "RWC.toe_nail.001b": {
     "Description": "Roof-Wall Connection with Toe nails",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -144,7 +141,6 @@
   },
   "RWC.toe_nail.001c": {
     "Description": "Roof-Wall Connection with Toe nails",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -400,7 +396,6 @@
   },
   "RWC.toe_nail.adhesive.004": {
     "Description": "Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -416,7 +411,6 @@
   },
   "RWC.toe_nail.adhesive.005": {
     "Description": "Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -432,7 +426,6 @@
   },
   "RWC.toe_nail.adhesive.006": {
     "Description": "Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -464,7 +457,6 @@
   },
   "RWC.hurricane_clip.001a": {
     "Description": "Roof-Wall Connection with Hurricane Clip H2.5.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -481,7 +473,6 @@
   },
   "RWC.hurricane_clip.001b": {
     "Description": "Roof-Wall Connection with Hurricane Clip H2.5.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -498,7 +489,6 @@
   },
   "RWC.toe_nail.003": {
     "Description": "Roof-Wall Connection with Toe nails, 2-16d layout.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -514,7 +504,6 @@
   },
   "RWC.toe_nail.004": {
     "Description": "Roof-Wall Connection with Toe nails, 3-8d layout.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -531,7 +520,6 @@
   },
   "RWC.toe_nail.005": {
     "Description": "Roof-Wall Connection with Toe nails, 3-16d layout.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -548,7 +536,6 @@
   },
   "RWC.toe_nail.006a": {
     "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -565,7 +552,6 @@
   },
   "RWC.toe_nail.006b": {
     "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -582,7 +568,6 @@
   },
   "RWC.toe_nail.006c": {
     "Description": "Roof-Wall Connection with Toe nails, 2-16d layout, box nails.",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -599,7 +584,6 @@
   },
   "WIN.regular.001a": {
     "Description": "Regular Window - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -616,7 +600,6 @@
   },
   "WIN.regular.001b": {
     "Description": "Regular Window - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -634,7 +617,6 @@
   },
   "WIN.regular.001c": {
     "Description": "Regular Window - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -650,7 +632,6 @@
   },
   "WIN.regular.002a": {
     "Description": "Regular Window on windward wall",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -666,7 +647,6 @@
   },
   "WIN.regular.002b": {
     "Description": "Regular Window on non-windward wall",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -682,7 +662,6 @@
   },
   "WIN.regular.003a": {
     "Description": "Window on a 1-story building",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -698,7 +677,6 @@
   },
   "WIN.regular.003b": {
     "Description": "Window on a 2-story building with 2 large windows",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -714,7 +692,6 @@
   },
   "WIN.impact_resistant.001": {
     "Description": "Impact resistant laminated glass window",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -731,7 +708,6 @@
   },
   "WIN.shutters.001": {
     "Description": "Regular Window with Hurricane Shutters",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -748,7 +724,6 @@
   },
   "WIN.regular.004": {
     "Description": "Regular Window 1/8 in 20 sq ft",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -767,7 +742,6 @@
   },
   "WIN.regular.005a": {
     "Description": "Regular Window 3/16 in 40 sq ft",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -785,7 +759,6 @@
   },
   "WIN.regular.005b": {
     "Description": "Regular Window 3/16 in 40 sq ft",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -803,7 +776,6 @@
   },
   "WIN.regular.006": {
     "Description": "Regular Window 3/16 in 20 sq ft",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -821,7 +793,6 @@
   },
   "WIN.regular.007": {
     "Description": "Regular Window small sized (3.5' x 3.5')",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -839,7 +810,6 @@
   },
   "WIN.regular.008": {
     "Description": "Regular Window medium sized (3.5' x 5.0')",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -857,7 +827,6 @@
   },
   "WIN.regular.009": {
     "Description": "Regular Window tall sized (3.5' x 6.5')",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -874,7 +843,6 @@
   },
   "WIN.regular.010": {
     "Description": "Regular Window picture size (6.5' x 6.5')",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -891,7 +859,6 @@
   },
   "DOOR.regular.001a": {
     "Description": "Regular Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -908,7 +875,6 @@
   },
   "DOOR.regular.001b": {
     "Description": "Regular Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -925,7 +891,6 @@
   },
   "DOOR.regular.001c": {
     "Description": "Regular Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -941,7 +906,6 @@
   },
   "DOOR.impact_resistant.001": {
     "Description": "Impact resistant laminated glass door",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -958,7 +922,6 @@
   },
   "DOOR.shutters.001": {
     "Description": "Regular Door with Hurricane Shutters",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -975,7 +938,6 @@
   },
   "DOOR.glass.001a": {
     "Description": "Glass Door",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -991,7 +953,6 @@
   },
   "DOOR.glass.001b": {
     "Description": "Glass Door",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1007,7 +968,6 @@
   },
   "DOOR.regular.002": {
     "Description": "Regular Door 6'10\" x 3'2\" size",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1026,7 +986,6 @@
   },
   "DOOR.garage.001a": {
     "Description": "Garage Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1043,7 +1002,6 @@
   },
   "DOOR.garage.001b": {
     "Description": "Garage Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1060,7 +1018,6 @@
   },
   "DOOR.garage.001c": {
     "Description": "Garage Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1076,7 +1033,6 @@
   },
   "DOOR.garage.001d": {
     "Description": "Garage Door - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1092,7 +1048,6 @@
   },
   "DOOR.garage.002": {
     "Description": "Wind-reinforced Garage Door",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1108,7 +1063,6 @@
   },
   "DOOR.garage.003": {
     "Description": "2-car Garage Door (6'10\" x 12\")",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1127,7 +1081,6 @@
   },
   "DOOR.garage.004a": {
     "Description": "Double garage door - weak",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1143,7 +1096,6 @@
   },
   "DOOR.garage.004b": {
     "Description": "Double garage door - strong",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1159,7 +1111,6 @@
   },
   "WSH.001a": {
     "Description": "Wall Sheathing - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1176,7 +1127,6 @@
   },
   "WSH.001b": {
     "Description": "Wall Sheathing - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1193,7 +1143,6 @@
   },
   "WSH.002a": {
     "Description": "Wall Sheathing - 6d common nails (2\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1211,7 +1160,6 @@
   },
   "WSH.002b": {
     "Description": "Wall Sheathing - 6d common nails (2\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1229,7 +1177,6 @@
   },
   "WSH.003a": {
     "Description": "Wall Sheathing - 8d common nails (2.5\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1247,7 +1194,6 @@
   },
   "WSH.003b": {
     "Description": "Wall Sheathing - 8d common nails (2.5\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1265,7 +1211,6 @@
   },
   "WALL.001a": {
     "Description": "Wood Wall - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1281,7 +1226,6 @@
   },
   "WALL.001b": {
     "Description": "Wood Wall - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1297,7 +1241,6 @@
   },
   "WALL.001c": {
     "Description": "Wood Wall - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1313,7 +1256,6 @@
   },
   "WALL.001d": {
     "Description": "Wood Wall - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1330,7 +1272,6 @@
   },
   "WALL.001e": {
     "Description": "Wood Wall - General fragility",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1347,7 +1288,6 @@
   },
   "WALL.002a": {
     "Description": "Wall - Unreinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1364,7 +1304,6 @@
   },
   "WALL.002b": {
     "Description": "Wall - Unreinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1381,7 +1320,6 @@
   },
   "WALL.002c": {
     "Description": "Wall - Unreinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1398,7 +1336,6 @@
   },
   "WALL.003a": {
     "Description": "Wall - Reinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1415,7 +1352,6 @@
   },
   "WALL.003b": {
     "Description": "Wall - Reinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1432,7 +1368,6 @@
   },
   "WALL.003c": {
     "Description": "Wall - Reinforced gable ends",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1449,7 +1384,6 @@
   },
   "WALL.004a": {
     "Description": "Concrete block",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1465,7 +1399,6 @@
   },
   "WALL.004b": {
     "Description": "Concrete block",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1481,7 +1414,6 @@
   },
   "RSH.nails.6d.6p12.001": {
     "Description": "Roof Sheathing with 6d nails @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1497,7 +1429,6 @@
   },
   "RSH.nails.8d.6p6.001": {
     "Description": "Roof Sheathing with 8d nails @ 6/6 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1513,7 +1444,6 @@
   },
   "RSH.nails.8d.6p12.001a": {
     "Description": "Roof Sheathing with 8d nails @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1530,7 +1460,6 @@
   },
   "RSH.nails.8d.6p12.001b": {
     "Description": "Roof Sheathing with 8d nails @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1546,7 +1475,6 @@
   },
   "RSH.nails.8d.6p12.001c": {
     "Description": "Roof Sheathing with 8d nails @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1562,7 +1490,6 @@
   },
   "RSH.nails.6d.6p12.002": {
     "Description": "Roof Sheathing with 6d common nails (2.375\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1578,7 +1505,6 @@
   },
   "RSH.nails.6d.6p12.003a": {
     "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1594,7 +1520,6 @@
   },
   "RSH.nails.6d.6p12.003b": {
     "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1614,7 +1539,6 @@
   },
   "RSH.nails.6d.6p12.003c": {
     "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1632,7 +1556,6 @@
   },
   "RSH.nails.6d.6p6.001": {
     "Description": "Roof Sheathing with 6d common nails (2\" length) @ 6/6 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1648,7 +1571,6 @@
   },
   "RSH.nails.8d.6p12.002a": {
     "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1664,7 +1586,6 @@
   },
   "RSH.nails.8d.6p12.002b": {
     "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1682,7 +1603,6 @@
   },
   "RSH.nails.8d.6p12.002c": {
     "Description": "Roof Sheathing with 8d common nails (2.5\" length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1700,7 +1620,6 @@
   },
   "RSH.nails.8d.6p8.001": {
     "Description": "Roof Sheathing with 8d common nails (2.5 in length) @ 6/8 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1716,7 +1635,6 @@
   },
   "RSH.nails.8d.6p6.002": {
     "Description": "Roof Sheathing with 8d common nails (2.5 in length) @ 6/6 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1732,7 +1650,6 @@
   },
   "RSH.nails.8d.6p12.003": {
     "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/12 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1748,7 +1665,6 @@
   },
   "RSH.nails.8d.6p8.002": {
     "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/8 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1764,7 +1680,6 @@
   },
   "RSH.nails.8d.6p6.003": {
     "Description": "Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/6 in",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1780,7 +1695,6 @@
   },
   "RSH.nails_ccspf.8d.6p12.001": {
     "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a fillet ccSPF application",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1796,7 +1710,6 @@
   },
   "RSH.nails_ccspf.6d.6p12.001": {
     "Description": "Roof Sheathing with 6d common nails @ 6/12 in and a fillet ccSPF application",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1812,7 +1725,6 @@
   },
   "RSH.ccspf.001": {
     "Description": "Roof Sheathing with no nails and a fillet ccSPF application",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1828,7 +1740,6 @@
   },
   "RSH.ccspf.002": {
     "Description": "Roof Sheathing with no nails and a fillet plus 0.5 in coverage ccSPF application",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1844,7 +1755,6 @@
   },
   "RSH.nails_ccspf.8d.6p12.002": {
     "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 24-39 day cure time",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1860,7 +1770,6 @@
   },
   "RSH.nails_ccspf.6d.6p12.002": {
     "Description": "Roof Sheathing with 6d common nails @ 6/12 in and a 3 in full coverage ccSPF application with 19-20 day cure time",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1876,7 +1785,6 @@
   },
   "RSH.nails_ccspf.8d.6p12.003": {
     "Description": "Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 129-130 day cure time",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1892,7 +1800,6 @@
   },
   "RSH.ccspf.003": {
     "Description": "Roof Sheathing with no nails and a 3 in full coverage ccSPF application with 12-15 day cure time",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1908,7 +1815,6 @@
   },
   "WCOV.001a": {
     "Description": "Wall Cover - General fragility, lower end",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1924,7 +1830,6 @@
   },
   "WCOV.001b": {
     "Description": "Wall Cover - General fragility, higher end",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1940,7 +1845,6 @@
   },
   "WCOV.002": {
     "Description": "Wall Cover with Vinyl Siding",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1957,7 +1861,6 @@
   },
   "WCOV.003": {
     "Description": "Wall Cover with Curtain Walls 30 sq ft size and 6:5 aspect ratio",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "30 ft2",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1974,7 +1877,6 @@
   },
   "RCOV.tiles.clay.001": {
     "Description": "Roof Cover - Clay Tiles with adhesive",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1991,7 +1893,6 @@
   },
   "RCOV.tiles.concrete.001": {
     "Description": "Roof Cover - Concrete Tiles with adhesive",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2007,7 +1908,6 @@
   },
   "RCOV.tiles.clay.002": {
     "Description": "Roof Cover - Clay Tiles with mortar",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2023,7 +1923,6 @@
   },
   "RCOV.tiles.concrete.002": {
     "Description": "Roof Cover - Concrete Tiles with mortar",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2039,7 +1938,6 @@
   },
   "RCOV.shingles.001a": {
     "Description": "Roof Cover - Asphalt Shingles with standard construction and nail pattern",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2056,7 +1954,6 @@
   },
   "RCOV.shingles.001b": {
     "Description": "Roof Cover - Asphalt Shingles with standard construction and nail pattern",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2073,7 +1970,6 @@
   },
   "RCOV.shingles.002a": {
     "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2090,7 +1986,6 @@
   },
   "RCOV.shingles.002b": {
     "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2107,7 +2002,6 @@
   },
   "RCOV.shingles.002c": {
     "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
-    "Comments": "...",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
