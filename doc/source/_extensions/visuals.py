@@ -216,30 +216,44 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                 col=1,
             )
 
-        table_vals = []
+        generate_table = True
 
         for LS in limit_states:  # noqa: N806
-            if (
-                np.all(  # noqa: E712
-                    pd.isna(
-                        comp_data[LS][
-                            ['Theta_0', 'Family', 'Theta_1', 'DamageStateWeights']
-                        ].values
-                    )
-                )
-                == False
-            ):
-                table_vals.append(  # noqa: PERF401
-                    np.insert(
-                        comp_data[LS][
-                            ['Theta_0', 'Family', 'Theta_1', 'DamageStateWeights']
-                        ].values,
-                        0,
-                        LS,
-                    )
-                )
+            if comp_data.loc[(LS, 'Family')] == 'multilinear_CDF':
+                generate_table = False
 
-        table_vals = np.array(table_vals).T
+        if generate_table:
+            table_vals = []
+
+            for LS in limit_states:  # noqa: N806
+                comp_data_dict = comp_data[LS].to_dict()
+
+                if pd.isna(comp_data_dict.get('Family')):
+                    continue
+
+                comp_data_vals = [
+                    LS,
+                    comp_data_dict.get('Theta_0'),
+                    comp_data_dict.get('Family'),
+                    comp_data_dict.get('Theta_1', 'N/A'),
+                    comp_data_dict.get('DemageStateWeights', None),
+                ]
+
+                # For weibull, replace parameters with median and dispersion stats
+                if comp_data_vals[2] == 'weibull':
+                    lambda_, kappa = comp_data_vals[1], comp_data_vals[3]
+                    comp_data_vals[1] = round(
+                        weibull_min.median(kappa, scale=lambda_), 2
+                    )
+                    comp_data_vals[3] = round(
+                        weibull_min.std(kappa, scale=lambda_)
+                        / weibull_min.mean(kappa, scale=lambda_),
+                        2,
+                    )
+
+                table_vals.append(comp_data_vals)
+
+            table_vals = np.array(table_vals).T
 
         ds_list = []
         ds_i = 1
