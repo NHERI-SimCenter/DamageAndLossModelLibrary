@@ -238,10 +238,8 @@ def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D103, N802, PLR0912, PLR0915
-    
+def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D103, N802, PLR0912, PLR0915, FBT002
     if fit_parameters:
-    
         # Load RAW Hazus data
 
         raw_data_path = (
@@ -339,7 +337,9 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
             # through simple interpolation
             median_capacities = [
                 np.interp(
-                    0.5, frag_df_arch[wind_speeds_str].iloc[ds].to_numpy(), wind_speeds
+                    0.5,
+                    frag_df_arch[wind_speeds_str].iloc[ds].to_numpy(),
+                    wind_speeds,
                 )
                 for ds in range(4)
             ]
@@ -415,7 +415,8 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
                 ].to_numpy():
                     # get the fragility data for each archetype
                     frag_df_arch = frag_df.loc[
-                        (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
+                        (frag_df['wbID'] == wbID)
+                        & (frag_df['TERRAINID'] == terrain_id)
                     ]
 
                     # extract the DS3 information
@@ -546,7 +547,8 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
                     # archetype
                     P_exc = np.asarray(  # noqa: N806
                         frag_df_arch_terrain.loc[
-                            frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
+                            frag_df_arch_terrain['DamLossDescID'] == DS,
+                            wind_speeds_str,
                         ].to_numpy()[0]
                     )
                     multilinear_CDF_parameters = (  # noqa: N806
@@ -826,12 +828,15 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
 
         main_df = pd.concat(rows, axis=0, ignore_index=True)
 
-        main_df.to_csv('hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv')
+        main_df.to_csv(
+            'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv'
+        )
 
     main_df = pd.read_csv(
-        'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv', 
+        'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv',
         index_col=0,
-        low_memory=False)
+        low_memory=False,
+    )
 
     # Prepare the Damage and Loss Model Data Files
     #
@@ -1142,51 +1147,55 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
         # and convert them to the format used in Pelicun
 
         for LS_i in range(1, 5):  # noqa: N806
+            cdf_y, cdf_x = [
+                np.array(vals.split(','), dtype=float)
+                for vals in row[f'DS{LS_i}_original'].split('|')
+            ]
 
-            cdf_y, cdf_x = [np.array(vals.split(','), dtype=float) 
-                            for vals in row[f'DS{LS_i}_original'].split('|')]
-
-            exclude_bottom = np.where(cdf_y<0.0)[0]
+            exclude_bottom = np.where(cdf_y < 0.0)[0]
             if len(exclude_bottom) > 0:
-                cdf_y = cdf_y[exclude_bottom[-1]+1:]
-                cdf_x = cdf_x[exclude_bottom[-1]+1:]
+                cdf_y = cdf_y[exclude_bottom[-1] + 1 :]
+                cdf_x = cdf_x[exclude_bottom[-1] + 1 :]
 
-                print('Invalid values trimmed from bottom')
+                print('Invalid values trimmed from bottom')  # noqa: T201
 
-            exclude_top = np.where(cdf_y>1.0)[0]
+            exclude_top = np.where(cdf_y > 1.0)[0]
             if len(exclude_top) > 0:
-                cdf_y = cdf_y[:exclude_top[-1]]
-                cdf_x = cdf_x[:exclude_top[-1]]
+                cdf_y = cdf_y[: exclude_top[-1]]
+                cdf_x = cdf_x[: exclude_top[-1]]
 
-                print('Invalid values trimmed from top')
+                print('Invalid values trimmed from top')  # noqa: T201
 
-            bottom_list = np.where(cdf_y<=np.nextafter(0.0,1))[0] 
+            bottom_list = np.where(cdf_y <= np.nextafter(0.0, 1))[0]
             if len(bottom_list) > 0:
-                cdf_y = cdf_y[bottom_list[-1]:]
-                cdf_x = cdf_x[bottom_list[-1]:]
+                cdf_y = cdf_y[bottom_list[-1] :]
+                cdf_x = cdf_x[bottom_list[-1] :]
             else:
-                cdf_y = np.insert(cdf_y,0,0.0)
-                cdf_x = np.insert(cdf_x,0,cdf_x[0]-5.0)
+                cdf_y = np.insert(cdf_y, 0, 0.0)
+                cdf_x = np.insert(cdf_x, 0, cdf_x[0] - 5.0)
                 # This assumes wind speeds are provided at 5 mph increments
 
-            top_list = np.where(cdf_y>=np.nextafter(1.0,-1))[0]
+            top_list = np.where(cdf_y >= np.nextafter(1.0, -1))[0]
             if len(top_list) > 0:
-                cdf_y = cdf_y[:top_list[0]+1]
-                cdf_x = cdf_x[:top_list[0]+1]
+                cdf_y = cdf_y[: top_list[0] + 1]
+                cdf_x = cdf_x[: top_list[0] + 1]
             else:
-                cdf_y = np.append(cdf_y,1.0)
-                cdf_x = np.append(cdf_x,cdf_x[-1]+5.0)
+                cdf_y = np.append(cdf_y, 1.0)
+                cdf_x = np.append(cdf_x, cdf_x[-1] + 5.0)
                 # This assumes wind speeds are provided at 5 mph increments
 
             if not np.array_equal(np.sort(cdf_x), cdf_x):
-                print("Invalid CDF_x values")
+                print('Invalid CDF_x values')  # noqa: T201
 
             if not np.array_equal(np.sort(cdf_y), cdf_y):
-                print("Invalid CDF_y values")
+                print('Invalid CDF_y values')  # noqa: T201
 
-            out_df.loc[index, f'DS{LS_i}_original'] = '|'.join([
-                ','.join(cdf_x.astype(int).astype(str)),','.join(cdf_y.astype(str))
-                ])
+            out_df.loc[index, f'DS{LS_i}_original'] = '|'.join(
+                [
+                    ','.join(cdf_x.astype(int).astype(str)),
+                    ','.join(cdf_y.astype(str)),
+                ]
+            )
 
     # ## Export to CSV file
 
@@ -1919,7 +1928,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
         limit_states = {}
         for damage_state, description in damage_state_description.items():
             limit_state = damage_state.replace('DS', 'LS')
-            limit_states[limit_state] = {damage_state: {"Description": description}}
+            limit_states[limit_state] = {damage_state: {'Description': description}}
 
         record = {
             'Description': human_description_str,
