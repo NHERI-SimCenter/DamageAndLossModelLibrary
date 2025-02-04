@@ -1,0 +1,13 @@
+
+
+************************************
+HAZUS Earthquake Methodology - Power
+************************************
+
+The models in this dataset are based on version 5.1 of the HAZUS Earthquake Model Technical Manual
+
+
+.. toctree::
+   :maxdepth: 1
+
+   EP/index

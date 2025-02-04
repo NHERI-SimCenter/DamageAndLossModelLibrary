@@ -1,0 +1,77 @@
+
+
+******************************************************
+RSH.ccspf - With closed-cell Sprayed Polyurethane Foam
+******************************************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.ccspf.001</b> | Roof Sheathing with no nails and a fillet ccSPF application</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.ccspf.001.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.ccspf.002</b> | Roof Sheathing with no nails and a fillet plus 0.5 in coverage ccSPF application</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.ccspf.002.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.ccspf.003</b> | Roof Sheathing with no nails and a 3 in full coverage ccSPF application with 12-15 day cure time</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.ccspf.003.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>

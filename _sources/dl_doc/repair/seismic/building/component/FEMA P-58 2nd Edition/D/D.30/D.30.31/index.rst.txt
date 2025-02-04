@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.011a</b> | Chiller - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.011a</b> | Chiller - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.011b</b> | Chiller - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.011b</b> | Chiller - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -111,7 +111,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.011c</b> | Chiller - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.011c</b> | Chiller - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.011d</b> | Chiller - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.011d</b> | Chiller - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -213,7 +213,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012a</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012a</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -265,7 +265,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012b</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012b</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -316,7 +316,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012c</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.012c</b> | Chiller - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -368,7 +368,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012d</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012d</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -420,7 +420,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012e</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012e</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -471,7 +471,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012f</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.012f</b> | Chiller - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -523,7 +523,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012g</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012g</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -575,7 +575,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012h</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012h</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -626,7 +626,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012i</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.012i</b> | Chiller - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -678,7 +678,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012j</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012j</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -730,7 +730,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012k</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.012k</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -781,7 +781,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.012l</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.012l</b> | Chiller - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -833,7 +833,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013a</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013a</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -885,7 +885,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013b</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013b</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -936,7 +936,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013c</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.013c</b> | Chiller - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -988,7 +988,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013d</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013d</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1040,7 +1040,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013e</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013e</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1091,7 +1091,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013f</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.013f</b> | Chiller - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1143,7 +1143,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013g</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013g</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -1195,7 +1195,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013h</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013h</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -1246,7 +1246,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013i</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.013i</b> | Chiller - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -1298,7 +1298,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013j</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013j</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -1350,7 +1350,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013k</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.013k</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -1401,7 +1401,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.013l</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.013l</b> | Chiller - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -1453,7 +1453,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.021a</b> | Cooling Tower - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.021a</b> | Cooling Tower - Capacity: < 100 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -1504,7 +1504,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.021b</b> | Cooling Tower - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.021b</b> | Cooling Tower - Capacity: 100 to <350 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1555,7 +1555,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.021c</b> | Cooling Tower - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.021c</b> | Cooling Tower - Capacity: 350 to <750 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -1606,7 +1606,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.021d</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.021d</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -1657,7 +1657,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022a</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022a</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -1709,7 +1709,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022b</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022b</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -1760,7 +1760,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022c</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.022c</b> | Cooling Tower - Capacity: < 100 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -1812,7 +1812,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1864,7 +1864,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1915,7 +1915,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.022f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -1967,7 +1967,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2019,7 +2019,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2070,7 +2070,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.022i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2122,7 +2122,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -2174,7 +2174,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.022k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -2225,7 +2225,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.022l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.022l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -2277,7 +2277,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023a</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023a</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -2329,7 +2329,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023b</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023b</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -2380,7 +2380,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023c</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.023c</b> | Cooling Tower - Capacity: < 100 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 75 Ton.
@@ -2432,7 +2432,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023d</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -2484,7 +2484,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023e</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -2535,7 +2535,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.023f</b> | Cooling Tower - Capacity: 100 to <350 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 Ton.
@@ -2587,7 +2587,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023g</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2639,7 +2639,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023h</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2690,7 +2690,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.023i</b> | Cooling Tower - Capacity: 350 to <750 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 Ton.
@@ -2742,7 +2742,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023j</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -2794,7 +2794,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.31.023k</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.
@@ -2845,7 +2845,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.31.023l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.31.023l</b> | Cooling Tower - Capacity: 750 to <1000 Ton - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 850 Ton.

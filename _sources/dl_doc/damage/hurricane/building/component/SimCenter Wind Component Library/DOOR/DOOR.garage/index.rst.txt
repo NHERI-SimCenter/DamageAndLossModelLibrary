@@ -1,0 +1,189 @@
+
+
+********************
+DOOR.garage - Garage
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.001a</b> | Garage Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.001a.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.001b</b> | Garage Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.001b.html
+
+|
+| Shen, Y. 2013. Assessing the wind resistance of sectional door systems for facilities in hurricane-prone areas through full- and component-scale experimental methods and finite element analysis. Ph.D. United States -- Florida: University of Florida.
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.001c</b> | Garage Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.001c.html
+
+|
+| Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.001d</b> | Garage Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.001d.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.002</b> | Wind-reinforced Garage Door</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.002.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.003</b> | 2-car Garage Door (6'10" x 12")</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.003.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Yau, S. C. 2011. Wind Hazard Risk Assessment and Management for Structures. Ph.D. United States -- New Jersey: Princeton University.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+| Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.004a</b> | Double garage door - weak</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.004a.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.garage.004b</b> | Double garage door - strong</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.garage.004b.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>

@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>HTU.GF</b> | Any tunnel subjected to ground failure effects</p> 
+   <p class="dl_comp_name"><b>HTU.GF</b> | Any tunnel subjected to ground failure effects</p>
    <div>
 
 
@@ -21,13 +21,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: HTU.GF.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>HTU.GS.1</b> | Any bored/drilled tunnel subjected to ground shaking effects</p> 
+   <p class="dl_comp_name"><b>HTU.GS.1</b> | Any bored/drilled tunnel subjected to ground shaking effects</p>
    <div>
 
 
@@ -39,13 +41,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: HTU.GS.1.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>HTU.GS.2</b> | Any cut & cover tunnel subjected to ground shaking effects</p> 
+   <p class="dl_comp_name"><b>HTU.GS.2</b> | Any cut & cover tunnel subjected to ground shaking effects</p>
    <div>
 
 
@@ -56,6 +60,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: HTU.GS.2.html
+
+
 
 .. raw:: html
 

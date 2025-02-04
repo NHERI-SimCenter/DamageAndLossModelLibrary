@@ -1,0 +1,92 @@
+
+
+*****************
+EP.G - Generation
+*****************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.G.ML.A</b> | Electrical Power, Generation, Medium/Large, Anchored</p>
+   <div>
+
+| Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Medium generation plants have a capacity between 200 and 500 MW, while large plants have a capacity greater than 500 MW. Generation plant subcomponents are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.G.ML.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.G.ML.U</b> | Electrical Power, Generation, Medium/Large, Unanchored/Standard</p>
+   <div>
+
+| Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Medium generation plants have a capacity between 200 and 500 MW, while large plants have a capacity greater than 500 MW. Generation plant subcomponents are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.G.ML.U.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.G.S.A</b> | Electrical Power, Generation, Small, Anchored</p>
+   <div>
+
+| Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.G.S.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.G.S.U</b> | Electrical Power, Generation, Small, Unanchored/Standard</p>
+   <div>
+
+| Generation plant subcomponents include diesel generators, turbines, racks and panels, boilers and pressure vessels, and the building in which these are housed. Small generation plants have a generation capacity of less than 100 MW. Generation plant subcomponents are unanchored or standard.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.G.S.U.html
+
+
+
+.. raw:: html
+
+   <hr>

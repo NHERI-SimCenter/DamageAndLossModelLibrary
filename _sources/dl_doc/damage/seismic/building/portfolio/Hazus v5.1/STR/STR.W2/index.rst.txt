@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W2.HC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., High-Code</p> 
+   <p class="dl_comp_name"><b>STR.W2.HC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -25,13 +25,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W2.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W2.LC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.W2.LC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -49,13 +51,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W2.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W2.MC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.W2.MC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -72,13 +76,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W2.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W2.PC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.W2.PC</b> | Structural, Wood, Greater than 5,000 Sq. Ft., Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -94,6 +100,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.W2.PC.html
+
+
 
 .. raw:: html
 

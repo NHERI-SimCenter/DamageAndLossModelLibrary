@@ -1,0 +1,52 @@
+
+
+******************
+DOOR.glass - Glass
+******************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.glass.001a</b> | Glass Door</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.glass.001a.html
+
+|
+| Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1–2): 46–62. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.glass.001b</b> | Glass Door</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.glass.001b.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>

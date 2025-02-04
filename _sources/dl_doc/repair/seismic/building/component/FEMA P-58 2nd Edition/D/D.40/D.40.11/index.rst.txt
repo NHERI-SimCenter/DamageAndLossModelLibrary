@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.021a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC A or B, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.40.11.021a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC A or B, PIPING FRAGILITY</p>
    <div>
 
 | Costing based upon 1000 ft segments of pipe, horizontal main and branches
@@ -61,7 +61,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.022a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC C, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.40.11.022a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - No bracing, SDC C, PIPING FRAGILITY</p>
    <div>
 
 | Costing based upon 1000 ft segments of pipe, horizontal main and branches
@@ -113,7 +113,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.023a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - Poorly designed bracing, SDC D, E, or F , PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.40.11.023a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - Poorly designed bracing, SDC D, E, or F , PIPING FRAGILITY</p>
    <div>
 
 | Costing based upon 1000 ft segments of pipe, horizontal main and branches
@@ -165,7 +165,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.024a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - with designed bracing, SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.40.11.024a</b> | Fire Sprinkler Water Piping - Horizontal Mains and Branches - Old Style Victaulic - Thin Wall Steel - with designed bracing, SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p>
    <div>
 
 | Costing based upon 1000 ft segments of pipe, horizontal main and branches
@@ -217,7 +217,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.031a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.40.11.031a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC A or B</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -269,7 +269,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.032a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <p class="dl_comp_name"><b>D.40.11.032a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC C</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -321,7 +321,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.033a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.40.11.033a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -373,7 +373,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.034a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.40.11.034a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -425,7 +425,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.041a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.40.11.041a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC A or B</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -477,7 +477,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.042a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <p class="dl_comp_name"><b>D.40.11.042a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into unbraced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC C</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -529,7 +529,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.053a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.40.11.053a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -581,7 +581,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.054a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.40.11.054a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile SOFT ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -633,7 +633,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.063a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.40.11.063a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -685,7 +685,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.064a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.40.11.064a</b> | Fire Sprinkler Drop Standard Threaded Steel - Dropping into braced lay-in tile HARD ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -737,7 +737,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.071a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.40.11.071a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC A or B</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -789,7 +789,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.072a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC C</p> 
+   <p class="dl_comp_name"><b>D.40.11.072a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC C</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -841,7 +841,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.073a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.40.11.073a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum
@@ -893,7 +893,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.40.11.074a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.40.11.074a</b> | Fire Sprinkler Drop Standard Threaded Steel - No Ceiling - 6 ft. long drop maximum, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing per 100 units, Standard threaded steel drop, 6 ft. long drop maximum

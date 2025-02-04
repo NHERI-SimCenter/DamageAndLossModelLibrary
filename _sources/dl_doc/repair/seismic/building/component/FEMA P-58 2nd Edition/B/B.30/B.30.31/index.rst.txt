@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.001a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with masonry</p> 
+   <p class="dl_comp_name"><b>B.30.31.001a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with masonry</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
@@ -62,7 +62,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.001b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with masonry</p> 
+   <p class="dl_comp_name"><b>B.30.31.001b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with masonry</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
@@ -115,7 +115,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.001c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with masonry</p> 
+   <p class="dl_comp_name"><b>B.30.31.001c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with masonry</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
@@ -168,7 +168,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.002a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with framing</p> 
+   <p class="dl_comp_name"><b>B.30.31.002a</b> | Masonry Chimney - unreinforced, non industrial, above roof 5 ft, replace with framing</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
@@ -221,7 +221,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.002b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with framing</p> 
+   <p class="dl_comp_name"><b>B.30.31.002b</b> | Masonry Chimney - unreinforced, non industrial, above roof 10 ft, replace with framing</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.
@@ -274,7 +274,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.31.002c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with framing</p> 
+   <p class="dl_comp_name"><b>B.30.31.002c</b> | Masonry Chimney - unreinforced, non industrial, above roof 15 ft, replace with framing</p>
    <div>
 
 | Demand parameter shall be defined as the first floor peak floor acceleration.  Unreinforced masonry chimney as a component of wood frame buildings.  Includes firebox and chimney, excludes exterior veneer or ornamentation.  May include chimneys where the quality of reinforcing is unknown.  For multiple story buildings enter the chimney fragility once at the first floor, do not specify this fragility at subsequent elevated floors.

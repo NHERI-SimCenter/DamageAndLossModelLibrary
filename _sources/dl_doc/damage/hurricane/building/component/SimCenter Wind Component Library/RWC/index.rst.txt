@@ -1,0 +1,37 @@
+
+
+**************************
+RWC - Roof-Wall Connection
+**************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+   RWC.epoxy/index
+   RWC.hurricane_clip/index
+   RWC.straps/index
+   RWC.toe_nail/index
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.001</b> | Roof-Wall Connection - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.001.html
+
+|
+| Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1–2): 46–62. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.
+
+
+.. raw:: html
+
+   <hr>

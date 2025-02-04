@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.011a</b> | Transformer/primary service - Capacity: <100 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.011a</b> | Transformer/primary service - Capacity: <100 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 kVa.
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.011b</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.011b</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -111,7 +111,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.011c</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.011c</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.011d</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.011d</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -213,7 +213,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013a</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013a</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 kVa.
@@ -265,7 +265,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013b</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013b</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 75 kVa.
@@ -316,7 +316,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013c</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.11.013c</b> | Transformer/primary service - Capacity: <100 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 75 kVa.
@@ -368,7 +368,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013d</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013d</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -420,7 +420,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013e</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013e</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -471,7 +471,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013f</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.11.013f</b> | Transformer/primary service - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -523,7 +523,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013g</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013g</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -575,7 +575,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013h</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013h</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -626,7 +626,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013i</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.11.013i</b> | Transformer/primary service - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -678,7 +678,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013j</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013j</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -730,7 +730,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013k</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.11.013k</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -781,7 +781,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.11.013l</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.11.013l</b> | Transformer/primary service - Capacity: 750 to 1500 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.

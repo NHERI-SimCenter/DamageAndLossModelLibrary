@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.URM.L.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.URM.L.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -28,13 +28,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.URM.L.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.URM.L.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.URM.L.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Low-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -52,13 +54,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.URM.L.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.URM.M.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.URM.M.LC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -77,13 +81,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.URM.M.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.URM.M.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.URM.M.PC</b> | Structural, Unreinforced Masonry Bearing Walls, Mid-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -100,6 +106,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.URM.M.PC.html
+
+
 
 .. raw:: html
 

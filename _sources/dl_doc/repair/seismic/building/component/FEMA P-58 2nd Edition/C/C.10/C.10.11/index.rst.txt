@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.10.11.001a</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Fixed Above</p> 
+   <p class="dl_comp_name"><b>C.10.11.001a</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Fixed Above</p>
    <div>
 
 | Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
@@ -59,7 +59,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.10.11.001b</b> | Wall Partition, Type: Gypsum with metal studs, Partial Height, Fixed Below, Lateral Braced Above</p> 
+   <p class="dl_comp_name"><b>C.10.11.001b</b> | Wall Partition, Type: Gypsum with metal studs, Partial Height, Fixed Below, Lateral Braced Above</p>
    <div>
 
 | Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
@@ -109,7 +109,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.10.11.001c</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above with returns</p> 
+   <p class="dl_comp_name"><b>C.10.11.001c</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above with returns</p>
    <div>
 
 | Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
@@ -159,7 +159,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.10.11.001d</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above w/o returns (friction connections)</p> 
+   <p class="dl_comp_name"><b>C.10.11.001d</b> | Wall Partition, Type: Gypsum with metal studs, Full Height, Fixed Below, Slip Track Above w/o returns (friction connections)</p>
    <div>
 
 | Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.
@@ -209,7 +209,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.10.11.011a</b> | Wall Partition, Type: Gypsum with wood studs, Full Height, Fixed Below, Fixed Above</p> 
+   <p class="dl_comp_name"><b>C.10.11.011a</b> | Wall Partition, Type: Gypsum with wood studs, Full Height, Fixed Below, Fixed Above</p>
    <div>
 
 | Quantity is based upon 13'x100' Panels.  Quantity of wall damaged varies by damage state.

@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.001a</b> | Suspended Ceiling, SDC A,B,C, Area (A): A < 250, Vert support only</p> 
+   <p class="dl_comp_name"><b>C.30.32.001a</b> | Suspended Ceiling, SDC A,B,C, Area (A): A < 250, Vert support only</p>
    <div>
 
 | Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.001b</b> | Suspended Ceiling, SDC A,B,C, Area (A): 250 < A < 1000, Vert support only</p> 
+   <p class="dl_comp_name"><b>C.30.32.001b</b> | Suspended Ceiling, SDC A,B,C, Area (A): 250 < A < 1000, Vert support only</p>
    <div>
 
 | Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.    Includes lighting fixtures in suspended ceiling.
@@ -111,7 +111,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.001c</b> | Suspended Ceiling, SDC A,B,C, Area (A): 1000 < A < 2500, Vert support only</p> 
+   <p class="dl_comp_name"><b>C.30.32.001c</b> | Suspended Ceiling, SDC A,B,C, Area (A): 1000 < A < 2500, Vert support only</p>
    <div>
 
 | Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.001d</b> | Suspended Ceiling, SDC A,B,C, Area (A): A > 2500, Vert support only</p> 
+   <p class="dl_comp_name"><b>C.30.32.001d</b> | Suspended Ceiling, SDC A,B,C, Area (A): A > 2500, Vert support only</p>
    <div>
 
 | Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wires only.  Includes lighting fixtures in suspended ceiling.
@@ -213,7 +213,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.003a</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A < 250, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.003a</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A < 250, Vert & Lat support</p>
    <div>
 
 | Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.   Includes lighting fixtures in suspended ceiling.
@@ -264,7 +264,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.003b</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 250 < A < 1000, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.003b</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 250 < A < 1000, Vert & Lat support</p>
    <div>
 
 | Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.    Includes lighting fixtures in suspended ceiling.
@@ -315,7 +315,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.003c</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 1000 < A < 2500, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.003c</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): 1000 < A < 2500, Vert & Lat support</p>
    <div>
 
 | Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
@@ -366,7 +366,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.003d</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A > 2500, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.003d</b> | Suspended Ceiling, SDC D,E (Ip=1.0), Area (A): A > 2500, Vert & Lat support</p>
    <div>
 
 | Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
@@ -417,7 +417,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.004a</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A < 250, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.004a</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A < 250, Vert & Lat support</p>
    <div>
 
 | Costing for each 250 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
@@ -468,7 +468,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.004b</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 250 < A < 1000, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.004b</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 250 < A < 1000, Vert & Lat support</p>
    <div>
 
 | Costing for each 600 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
@@ -519,7 +519,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.004c</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 1000 < A < 2500, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.004c</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): 1000 < A < 2500, Vert & Lat support</p>
    <div>
 
 | Costing for each 1800 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.
@@ -570,7 +570,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.32.004d</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A > 2500, Vert & Lat support</p> 
+   <p class="dl_comp_name"><b>C.30.32.004d</b> | Suspended Ceiling, SDC D,E,F (Ip=1.5), Area (A): A > 2500, Vert & Lat support</p>
    <div>
 
 | Costing for each 2500 SF Unit, Suspended Lay-in Acoustic Tile Ceiling, Support:  Vertical hanging wire, diagonal wires, and compression posts, 2 inch wide ledger support angles at wall and oversize holes around tile openings.  Includes lighting fixtures in suspended ceiling.

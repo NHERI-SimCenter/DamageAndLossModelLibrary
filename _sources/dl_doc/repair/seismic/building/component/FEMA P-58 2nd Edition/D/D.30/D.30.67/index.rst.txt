@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.67.011a</b> | Control Panel - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.67.011a</b> | Control Panel - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.67.012a</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.67.012a</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -112,7 +112,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.67.012b</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.67.012b</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -163,7 +163,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.67.012c</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.67.012c</b> | Control Panel - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.

@@ -1,0 +1,241 @@
+
+
+***********************
+RWC.toe_nail - Toe nail
+***********************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+   RWC.toe_nail.straps/index
+   RWC.toe_nail.epoxy/index
+   RWC.toe_nail.adhesive/index
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.001a</b> | Roof-Wall Connection with Toe nails</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.001a.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.001b</b> | Roof-Wall Connection with Toe nails</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.001b.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.001c</b> | Roof-Wall Connection with Toe nails</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.001c.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.002</b> | Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.</p>
+   <div>
+
+| Simpson Strong-Tie H10 metal connector installed on every truss.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.002.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.003</b> | Roof-Wall Connection with Toe nails, 2-16d layout.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.003.html
+
+|
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.004</b> | Roof-Wall Connection with Toe nails, 3-8d layout.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.004.html
+
+|
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.005</b> | Roof-Wall Connection with Toe nails, 3-16d layout.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.005.html
+
+|
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.006a</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.006a.html
+
+|
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+| Cheng, J. 2004. Testing and analysis of the toe-nailed connection in the residential roof-to-wall system. Forest Products Journal, 54: 58–65.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.006b</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.006b.html
+
+|
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+| Cheng, J. 2004. Testing and analysis of the toe-nailed connection in the residential roof-to-wall system. Forest Products Journal, 54: 58–65.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.006c</b> | Roof-Wall Connection with Toe nails, 2-16d layout, box nails.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.006c.html
+
+|
+| Shanmugam, B., B. G. Nielson, and D. O. Prevatt. 2009. Statistical and analytical models for roof components in existing light-framed wood structures. Engineering Structures, 31 (11): 2607–2616. https://doi.org/10.1016/j.engstruct.2009.06.009.
+| Cheng, J. 2004. Testing and analysis of the toe-nailed connection in the residential roof-to-wall system. Forest Products Journal, 54: 58–65.
+
+
+.. raw:: html
+
+   <hr>

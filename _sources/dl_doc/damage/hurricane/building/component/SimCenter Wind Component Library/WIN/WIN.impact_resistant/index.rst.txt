@@ -1,0 +1,31 @@
+
+
+***************************************
+WIN.impact_resistant - Impact Resistant
+***************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.impact_resistant.001</b> | Impact resistant laminated glass window</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.impact_resistant.001.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>

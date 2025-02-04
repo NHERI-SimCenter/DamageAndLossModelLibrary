@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.001a</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.001a</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC A or B</p>
    <div>
 
 | Costing per 10 units
@@ -61,7 +61,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.001b</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.001b</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC C</p>
    <div>
 
 | Costing per 10 units
@@ -113,7 +113,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.001c</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F</p> 
+   <p class="dl_comp_name"><b>D.30.41.001c</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F</p>
    <div>
 
 | Costing per 10 units
@@ -165,7 +165,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.001d</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.001d</b> | HVAC Fan In Line Fan, Fan independently supported and vibration isolators, SDC D, E, F (OSHPD or sim)</p>
    <div>
 
 | Costing per 10 units
@@ -217,7 +217,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.002a</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.002a</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC A or B</p>
    <div>
 
 | Costing per 10 units
@@ -269,7 +269,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.002b</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.002b</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC C</p>
    <div>
 
 | Costing per 10 units
@@ -321,7 +321,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.002c</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F</p> 
+   <p class="dl_comp_name"><b>D.30.41.002c</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F</p>
    <div>
 
 | Costing per 10 units
@@ -373,7 +373,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.002d</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.002d</b> | HVAC Fan In Line Fan, Fan independently supported but not on vibration isolators, SDC D, E, F (OSHPD or sim)</p>
    <div>
 
 | Costing per 10 units
@@ -425,7 +425,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.011a</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.011a</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -476,7 +476,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.011b</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.011b</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC C</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -527,7 +527,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.011c</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.30.41.011c</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -578,7 +578,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.011d</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.011d</b> | HVAC Galvanized Sheet Metal Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -629,7 +629,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.012a</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.012a</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -680,7 +680,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.012b</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.012b</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC C</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -731,7 +731,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.012c</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.30.41.012c</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -782,7 +782,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.012d</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.012d</b> | HVAC Galvanized Sheet Metal Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -833,7 +833,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.021a</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.021a</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC A or B</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -884,7 +884,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.021b</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.021b</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC C</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -935,7 +935,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.021c</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.30.41.021c</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -986,7 +986,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.021d</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.021d</b> | HVAC Stainless Steel Ducting less than 6 sq. ft in cross sectional area, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -1037,7 +1037,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.022a</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.022a</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC A or B</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -1088,7 +1088,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.022b</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.022b</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC C</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -1139,7 +1139,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.022c</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.30.41.022c</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -1190,7 +1190,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.022d</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.022d</b> | HVAC Stainless Steel Ducting -  6 sq. ft cross sectional area or greater, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing based upon 1000 ft segments of duct
@@ -1241,7 +1241,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.031a</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.031a</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC A or B</p>
    <div>
 
 | Costing per 10 units, No independent safety wires
@@ -1293,7 +1293,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.031b</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.031b</b> | HVAC Drops / Diffusers in suspended ceilings - No independent safety wires, SDC C</p>
    <div>
 
 | Costing per 10 units, No independent safety wires
@@ -1345,7 +1345,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.032a</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.032a</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC A or B</p>
    <div>
 
 | Costing per 10 units, unit supported by ducting only, no independent safety wires
@@ -1397,7 +1397,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.032b</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.032b</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC C</p>
    <div>
 
 | Costing per 10 units, unit supported by ducting only, no independent safety wires
@@ -1449,7 +1449,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.032c</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F</p> 
+   <p class="dl_comp_name"><b>D.30.41.032c</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F</p>
    <div>
 
 | Costing per 10 units, unit supported by ducting only, no independent safety wires
@@ -1501,7 +1501,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.032d</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F (OSHPD or sim)</p> 
+   <p class="dl_comp_name"><b>D.30.41.032d</b> | HVAC Drops / Diffusers without ceilings - supported by ducting only - No independent safety wires, SDC D, E, or F (OSHPD or sim)</p>
    <div>
 
 | Costing per 10 units, unit supported by ducting only, no independent safety wires
@@ -1553,7 +1553,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.041a</b> | Variable Air Volume (VAV) box with in-line coil, SDC A or B</p> 
+   <p class="dl_comp_name"><b>D.30.41.041a</b> | Variable Air Volume (VAV) box with in-line coil, SDC A or B</p>
    <div>
 
 | Costing per 10 units
@@ -1605,7 +1605,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.041b</b> | Variable Air Volume (VAV) box with in-line coil, SDC C</p> 
+   <p class="dl_comp_name"><b>D.30.41.041b</b> | Variable Air Volume (VAV) box with in-line coil, SDC C</p>
    <div>
 
 | Costing per 10 units
@@ -1657,7 +1657,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.101a</b> | HVAC Fan - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.41.101a</b> | HVAC Fan - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1708,7 +1708,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.102a</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.41.102a</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1760,7 +1760,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.102b</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.41.102b</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1811,7 +1811,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.102c</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.41.102c</b> | HVAC Fan - Capacity: all - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -1863,7 +1863,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.103a</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.41.103a</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1915,7 +1915,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.103b</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.41.103b</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1966,7 +1966,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.41.103c</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.41.103c</b> | HVAC Fan - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.

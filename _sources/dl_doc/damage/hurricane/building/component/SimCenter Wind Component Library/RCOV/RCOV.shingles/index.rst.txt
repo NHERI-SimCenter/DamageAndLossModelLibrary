@@ -1,0 +1,123 @@
+
+
+************************
+RCOV.shingles - Shingles
+************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.shingles.001a</b> | Roof Cover - Asphalt Shingles with standard construction and nail pattern</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.shingles.001a.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.shingles.001b</b> | Roof Cover - Asphalt Shingles with standard construction and nail pattern</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.shingles.001b.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.shingles.002a</b> | Roof Cover - Shingles with high-wind construction and nail pattern</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.shingles.002a.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.shingles.002b</b> | Roof Cover - Shingles with high-wind construction and nail pattern</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.shingles.002b.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.shingles.002c</b> | Roof Cover - Shingles with high-wind construction and nail pattern</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.shingles.002c.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+
+
+.. raw:: html
+
+   <hr>

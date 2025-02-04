@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.011a</b> | Compressor - Capacity: Small non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.011a</b> | Compressor - Capacity: Small non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.011b</b> | Compressor - Capacity: Large non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.011b</b> | Compressor - Capacity: Large non medical air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -111,7 +111,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.011c</b> | Compressor - Capacity: Small medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.011c</b> | Compressor - Capacity: Small medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.011d</b> | Compressor - Capacity: Large medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.011d</b> | Compressor - Capacity: Large medical quality air supply - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -213,7 +213,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012a</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012a</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -265,7 +265,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012b</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012b</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -316,7 +316,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012c</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.012c</b> | Compressor - Capacity: Small non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -368,7 +368,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012d</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012d</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -420,7 +420,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012e</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012e</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -471,7 +471,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012f</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.012f</b> | Compressor - Capacity: Large non medical air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -523,7 +523,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012g</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012g</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -575,7 +575,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012h</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012h</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -626,7 +626,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012i</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.012i</b> | Compressor - Capacity: Small medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -678,7 +678,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012j</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012j</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -730,7 +730,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012k</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.012k</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -781,7 +781,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.012l</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.012l</b> | Compressor - Capacity: Large medical quality air supply - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -833,7 +833,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013a</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013a</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -885,7 +885,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013b</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013b</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -936,7 +936,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013c</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.013c</b> | Compressor - Capacity: Small non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -988,7 +988,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013d</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013d</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1040,7 +1040,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013e</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013e</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1091,7 +1091,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013f</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.013f</b> | Compressor - Capacity: Large non medical air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -1143,7 +1143,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013g</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013g</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1195,7 +1195,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013h</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013h</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1246,7 +1246,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013i</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.013i</b> | Compressor - Capacity: Small medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -1298,7 +1298,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013j</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013j</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1350,7 +1350,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013k</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.30.32.013k</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -1401,7 +1401,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.30.32.013l</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.30.32.013l</b> | Compressor - Capacity: Large medical quality air supply - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.

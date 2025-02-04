@@ -1,0 +1,356 @@
+
+
+*********************
+WIN.regular - Regular
+*********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.001a</b> | Regular Window - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.001a.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.001b</b> | Regular Window - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.001b.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.001c</b> | Regular Window - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.001c.html
+
+|
+| Lin, S.-Y., W.-C. Chuang, L. Xu, S. El-Tawil, S. M. J. Spence, V. R. Kamat, C. C. Menassa, and J. McCormick. 2019. Framework for Modeling Interdependent Effects in Natural Disasters: Application to Wind Engineering. Journal of Structural Engineering, 145 (5): 04019025. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002310.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.002a</b> | Regular Window on windward wall</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.002a.html
+
+|
+| Lin, S.-Y., W.-C. Chuang, L. Xu, S. El-Tawil, S. M. J. Spence, V. R. Kamat, C. C. Menassa, and J. McCormick. 2019. Framework for Modeling Interdependent Effects in Natural Disasters: Application to Wind Engineering. Journal of Structural Engineering, 145 (5): 04019025. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002310.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.002b</b> | Regular Window on non-windward wall</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.002b.html
+
+|
+| Lin, S.-Y., W.-C. Chuang, L. Xu, S. El-Tawil, S. M. J. Spence, V. R. Kamat, C. C. Menassa, and J. McCormick. 2019. Framework for Modeling Interdependent Effects in Natural Disasters: Application to Wind Engineering. Journal of Structural Engineering, 145 (5): 04019025. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002310.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.003a</b> | Window on a 1-story building</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.003a.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.003b</b> | Window on a 2-story building with 2 large windows</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.003b.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.004</b> | Regular Window 1/8 in 20 sq ft</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.004.html
+
+|
+| Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467–1470.
+| Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77–78: 197–204. https://doi.org/10.1016/S0167-6105(98)00143-3.
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+| Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1–2): 46–62. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.005a</b> | Regular Window 3/16 in 40 sq ft</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.005a.html
+
+|
+| Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467–1470.
+| Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77–78: 197–204. https://doi.org/10.1016/S0167-6105(98)00143-3.
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.005b</b> | Regular Window 3/16 in 40 sq ft</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.005b.html
+
+|
+| Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467–1470.
+| Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77–78: 197–204. https://doi.org/10.1016/S0167-6105(98)00143-3.
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.006</b> | Regular Window 3/16 in 20 sq ft</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.006.html
+
+|
+| Norville, H. S., and J. E. Minor. 1985. STRENGTH OF WEATHERED WINDOW GLASS. American Ceramic Society Bulletin, 64: 1467–1470.
+| Minor, J. E., and H. S. Norville. 1998. A simple window glass design chart. Journal of Wind Engineering and Industrial Aerodynamics, 77–78: 197–204. https://doi.org/10.1016/S0167-6105(98)00143-3.
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.007</b> | Regular Window small sized (3.5' x 3.5')</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.007.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Yau, S. C. 2011. Wind Hazard Risk Assessment and Management for Structures. Ph.D. United States -- New Jersey: Princeton University.
+| Barbato, M., F. Petrini, V. U. Unnikrishnan, and M. Ciampoli. 2013. Performance-Based Hurricane Engineering (PBHE) framework. Structural Safety, 45: 24–35. https://doi.org/10.1016/j.strusafe.2013.07.002.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.008</b> | Regular Window medium sized (3.5' x 5.0')</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.008.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+| Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.009</b> | Regular Window tall sized (3.5' x 6.5')</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.009.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WIN.regular.010</b> | Regular Window picture size (6.5' x 6.5')</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WIN.regular.010.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>

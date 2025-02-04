@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.001a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.001a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, no continuity reinf</p>
    <div>
 
 | Costing per joint, minimum of 6" thick slab, maximum of 12" thick slab.
@@ -23,13 +23,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.001a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.001b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.001b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  0<Vg/Vo<.2, with continuity reinf</p>
    <div>
 
 | Costing per joint, minimum of 6" thick slab, maximum of 12" thick slab.
@@ -43,13 +45,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.001b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.002a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.002a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -64,13 +68,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.002a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.002b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.002b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .2<Vg/Vo<.4, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -85,13 +91,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.002b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.003a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.003a</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -106,13 +114,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.003a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.003b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.003b</b> | Reinforced concrete flat slabs- columns without shear reinforcing  .4<Vg/Vo<.6, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -127,13 +137,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.003b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.011</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.2<Vg/Vo<0.4</p> 
+   <p class="dl_comp_name"><b>B.10.49.011</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.2<Vg/Vo<0.4</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -148,13 +160,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.011.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.012</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.6</p> 
+   <p class="dl_comp_name"><b>B.10.49.012</b> | Reinforced concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.6</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -169,13 +183,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.012.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.021a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.021a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -190,13 +206,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.021a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.021b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.021b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.2<Vg/Vo<.0.4, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -211,13 +229,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.021b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.022a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.022a</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -232,13 +252,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.022a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.022b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.022b</b> | Post-tensioned concrete flat slabs- columns without shear reinforcing  0.4<Vg/Vo<.0.6, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -253,13 +275,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.022b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.031</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0<Vg/Vo<.0.4</p> 
+   <p class="dl_comp_name"><b>B.10.49.031</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0<Vg/Vo<.0.4</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -274,13 +298,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.031.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.032</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.0.6</p> 
+   <p class="dl_comp_name"><b>B.10.49.032</b> | Post-tensioned concrete flat slabs- columns with shear reinforcing  0.4<Vg/Vo<.0.6</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -295,13 +321,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.032.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.041a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.041a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -316,13 +344,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.041a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.041b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.041b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0<Vg/Vo<0.4, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -337,13 +367,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.041b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.042a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, no continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.042a</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, no continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -358,13 +390,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: B.10.49.042a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.49.042b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, with continuity reinf</p> 
+   <p class="dl_comp_name"><b>B.10.49.042b</b> | Reinforced concrete flat slabs drop panel or drop capital- columns without shear reinforcing  0.4<Vg/Vo<0.6, with continuity reinf</p>
    <div>
 
 | Costing is on a per joint basis.
@@ -378,6 +412,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: B.10.49.042b.html
+
+
 
 .. raw:: html
 

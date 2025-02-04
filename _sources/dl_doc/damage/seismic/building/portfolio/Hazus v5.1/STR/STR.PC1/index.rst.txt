@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.PC1.HC</b> | Structural, Precast Concrete Tilt-Up Walls, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.PC1.HC</b> | Structural, Precast Concrete Tilt-Up Walls, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -25,13 +25,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.PC1.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.PC1.LC</b> | Structural, Precast Concrete Tilt-Up Walls, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.PC1.LC</b> | Structural, Precast Concrete Tilt-Up Walls, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -49,13 +51,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.PC1.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.PC1.MC</b> | Structural, Precast Concrete Tilt-Up Walls, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.PC1.MC</b> | Structural, Precast Concrete Tilt-Up Walls, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -72,13 +76,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.PC1.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.PC1.PC</b> | Structural, Precast Concrete Tilt-Up Walls, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.PC1.PC</b> | Structural, Precast Concrete Tilt-Up Walls, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -94,6 +100,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.PC1.PC.html
+
+
 
 .. raw:: html
 

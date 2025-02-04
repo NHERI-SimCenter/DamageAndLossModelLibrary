@@ -1,0 +1,34 @@
+
+
+**********************
+RWC.epoxy - Epoxy only
+**********************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.epoxy.001</b> | Roof-Wall Connection with Epoxy.</p>
+   <div>
+
+| Epoxy set for one week, no toe nails used.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.epoxy.001.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>

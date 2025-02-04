@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.11.011</b> | Concrete tile roof, tiles secured and compliant with UBC94</p> 
+   <p class="dl_comp_name"><b>B.30.11.011</b> | Concrete tile roof, tiles secured and compliant with UBC94</p>
    <div>
 
 | Costing per roofing square (100 SF)
@@ -60,7 +60,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.11.012</b> | Clay tile roof, tiles secured and compliant with UBC94</p> 
+   <p class="dl_comp_name"><b>B.30.11.012</b> | Clay tile roof, tiles secured and compliant with UBC94</p>
    <div>
 
 | Costing per roofing square (100 SF)
@@ -111,7 +111,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.11.013</b> | Concrete tile roof, unsecured tiles</p> 
+   <p class="dl_comp_name"><b>B.30.11.013</b> | Concrete tile roof, unsecured tiles</p>
    <div>
 
 | Costing per roofing square (100 SF)
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.30.11.014</b> | Clay tile roof, unsecured tiles</p> 
+   <p class="dl_comp_name"><b>B.30.11.014</b> | Clay tile roof, unsecured tiles</p>
    <div>
 
 | Costing per roofing square (100 SF)

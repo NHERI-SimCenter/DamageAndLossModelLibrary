@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S3.HC</b> | Structural, Steel Light Frame, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.S3.HC</b> | Structural, Steel Light Frame, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -26,13 +26,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S3.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S3.LC</b> | Structural, Steel Light Frame, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S3.LC</b> | Structural, Steel Light Frame, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -51,13 +53,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S3.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S3.MC</b> | Structural, Steel Light Frame, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.S3.MC</b> | Structural, Steel Light Frame, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -75,13 +79,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S3.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S3.PC</b> | Structural, Steel Light Frame, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S3.PC</b> | Structural, Steel Light Frame, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -98,6 +104,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.S3.PC.html
+
+
 
 .. raw:: html
 

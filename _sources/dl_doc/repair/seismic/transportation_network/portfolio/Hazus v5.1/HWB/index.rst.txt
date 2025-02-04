@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>HWB</b> | Highway/railway bridge structures</p> 
+   <p class="dl_comp_name"><b>HWB</b> | Highway/railway bridge structures</p>
    <div>
 
 

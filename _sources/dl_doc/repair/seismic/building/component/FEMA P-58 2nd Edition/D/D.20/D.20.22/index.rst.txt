@@ -9,13 +9,13 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.011a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.011a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC A or B (no seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -61,13 +61,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.011b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.011b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC A or B, BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC A or B (no seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -113,13 +113,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.012a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.012a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC C (low seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -165,13 +165,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.012b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.012b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC C, BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC C (low seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -217,13 +217,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.013a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.013a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -269,13 +269,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.013b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.013b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F, BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -321,13 +321,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.014a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.014a</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -373,13 +373,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.014b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.014b</b> | Heating hot Water Piping - Small Diameter Threaded Steel - (2.5 inches in diameter or less), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Special Regulations (e.g. OSHPD) for Piping Installations
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -425,13 +425,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.021a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC A or B, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.021a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC A or B, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC A or B (no seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -477,13 +477,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.022a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC C, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.022a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC C, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC C (low seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -529,13 +529,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.023a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.023a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC D, E, F (high seismic design
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -581,13 +581,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.023b</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.023b</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F, BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Normal
 | Seismic Installation Conditions: SDC D, E, F (high seismic design
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -633,13 +633,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.024a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.024a</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), PIPING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 
@@ -685,13 +685,13 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.20.22.024b</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p> 
+   <p class="dl_comp_name"><b>D.20.22.024b</b> | Heating hot Water Piping - Large Diameter Welded Steel - (greater than 2.5 inches in diameter), SDC D, E, or F (OSHPD or sim), BRACING FRAGILITY</p>
    <div>
 
 | Heating water.  Costing based upon 1000 ft segments of pipe, pipe 2.5 inches in diameter or less
 | Construction Quality: Special Regulation (e.g. OSHPD) for Piping Installations
 | Seismic Installation Conditions: SDC D, E, F (high seismic design)
-| Notes: Consequence is for piping only.  Enter floor wetting consequence seperately.  Cost includes allowance for MEP relocation to perform work.
+| Notes: Consequence is for piping only.  Enter floor wetting consequence separately.  Cost includes allowance for MEP relocation to perform work.
 
 
 Suggested Block Size: 1000 LF 

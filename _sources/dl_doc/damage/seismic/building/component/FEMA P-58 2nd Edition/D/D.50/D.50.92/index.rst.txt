@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.011a</b> | Battery Rack - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.011a</b> | Battery Rack - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -24,13 +24,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.011a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.013a</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.013a</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -46,13 +48,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.013a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.013b</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.013b</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -67,13 +71,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.013b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.013c</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.013c</b> | Battery Rack - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -89,13 +95,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.013c.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.021a</b> | Battery Charger - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.021a</b> | Battery Charger - Capacity: all - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -110,13 +118,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.021a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.023a</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.023a</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -132,13 +142,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.023a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.023b</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.023b</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit.
@@ -153,13 +165,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.023b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.023c</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.023c</b> | Battery Charger - Capacity: all - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit.
@@ -175,13 +189,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.023c.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.031a</b> | Diesel generator - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.031a</b> | Diesel generator - Capacity: 100 to <350 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -196,13 +212,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.031a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.031b</b> | Diesel generator - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.031b</b> | Diesel generator - Capacity: 350 to <750 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -217,13 +235,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.031b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.031c</b> | Diesel generator - Capacity: 750 to 1200 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.031c</b> | Diesel generator - Capacity: 750 to 1200 kVA - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -238,13 +258,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.031c.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.031d</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Unanchored equipment that is not vibration isolated - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.031d</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Unanchored equipment that is not vibration isolated - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -259,13 +281,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.031d.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032a</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032a</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -281,13 +305,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032b</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032b</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -302,13 +328,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032c</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.032c</b> | Diesel generator - Capacity: 100 to <350 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -324,13 +352,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032c.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032d</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032d</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -346,13 +376,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032d.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032e</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032e</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -367,13 +399,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032e.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032f</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.032f</b> | Diesel generator - Capacity: 350 to <750 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -389,13 +423,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032f.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -411,13 +447,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032g.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -432,13 +470,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032h.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.032i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -454,13 +494,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032i.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -476,13 +518,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032j.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.032k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -497,13 +541,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032k.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.032l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.032l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Vibration isolated equipment that is not snubbed or restrained - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -519,13 +565,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.032l.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033a</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033a</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -541,13 +589,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033a.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033b</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033b</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -562,13 +612,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033b.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033c</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.033c</b> | Diesel generator - Capacity: 100 to <350 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 250 kVa.
@@ -584,13 +636,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033c.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033d</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033d</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -606,13 +660,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033d.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033e</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033e</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -627,13 +683,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033e.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033f</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.033f</b> | Diesel generator - Capacity: 350 to <750 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 500 kVa.
@@ -649,13 +707,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033f.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033g</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -671,13 +731,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033g.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033h</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -692,13 +754,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033h.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.033i</b> | Diesel generator - Capacity: 750 to 1200 kVA - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 1000 kVa.
@@ -714,13 +778,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033i.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033j</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Anchorage fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -736,13 +802,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033j.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p> 
+   <p class="dl_comp_name"><b>D.50.92.033k</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Equipment fragility only</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -757,13 +825,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: D.50.92.033k.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>D.50.92.033l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p> 
+   <p class="dl_comp_name"><b>D.50.92.033l</b> | Diesel generator - Capacity: 1200 to 2000 kVa - Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints - Combined anchorage/isolator & equipment fragility</p>
    <div>
 
 | Costing is per unit and is based upon 1500 kVa.
@@ -778,6 +848,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: D.50.92.033l.html
+
+
 
 .. raw:: html
 

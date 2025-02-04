@@ -1,0 +1,134 @@
+
+
+*****************
+EP.S - Substation
+*****************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.H.A</b> | Electrical Power, Substation, High Voltage, Anchored</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. High voltage is 500 kV. The sub components are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.H.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.H.U</b> | Electrical Power, Substation, High Voltage, Unanchored/Standard</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. High voltage is 500 kV. The sub components are unanchored or standard.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.H.U.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.L.A</b> | Electrical Power, Substation, Low Voltage, Anchored</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Low voltage is 34.5 kV to 150 kV. The sub components are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.L.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.L.U</b> | Electrical Power, Substation, Low Voltage, Unanchored/Standard</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Low voltage is 34.5 kV to 150 kV. The sub components are unanchored or standard.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.L.U.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.M.A</b> | Electrical Power, Substation, Medium Voltage, Anchored</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Medium voltage is 230 kV. The sub components are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.M.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.S.M.U</b> | Electrical Power, Substation, Low Voltage, Unanchored/Standard</p>
+   <div>
+
+| Substations can be entirely enclosed in buildings, where all the equipment is assembled into one metal clad unit. Other substations have step-down transformers, high voltage switches, oil circuit breakers, and lightning arrestors located outside the substation building. Medium voltage is 230 kV. The sub components are unanchored or standard.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.S.M.U.html
+
+
+
+.. raw:: html
+
+   <hr>

@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.MH.HC</b> | Structural, Mobile Homes, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.MH.HC</b> | Structural, Mobile Homes, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -25,13 +25,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.MH.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.MH.LC</b> | Structural, Mobile Homes, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.MH.LC</b> | Structural, Mobile Homes, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -49,13 +51,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.MH.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.MH.MC</b> | Structural, Mobile Homes, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.MH.MC</b> | Structural, Mobile Homes, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -72,13 +76,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.MH.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.MH.PC</b> | Structural, Mobile Homes, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.MH.PC</b> | Structural, Mobile Homes, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -94,6 +100,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.MH.PC.html
+
+
 
 .. raw:: html
 

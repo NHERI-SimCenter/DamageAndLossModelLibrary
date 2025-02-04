@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>GF.H.D</b> | Ground Failure, Horizontal Direction, Deep Foundation</p> 
+   <p class="dl_comp_name"><b>GF.H.D</b> | Ground Failure, Horizontal Direction, Deep Foundation</p>
    <div>
 
 | Under Ground Failure, separate fragility curves distinguish between damages due to lateral spreading and ground settlement. Only Extensive and Complete damage states are considered. In essence, buildings are assumed to be either undamaged or severely damaged due to ground failure. In fact, Slight or Moderate damage can occur due to ground failure, but the likelihood of this damage is considered to be small (relative to ground shaking damage) and tacitly included in predictions of Slight or Moderate damage due to ground shaking by STR or LF components. There is no available relationship between the likelihood of Extensive/Complete damage to buildings and PGD. Engineering judgment has been used to develop a set of assumptions which define building fragility.
@@ -23,13 +23,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: GF.H.D.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>GF.H.S</b> | Ground Failure, Horizontal Direction, Shallow Foundation</p> 
+   <p class="dl_comp_name"><b>GF.H.S</b> | Ground Failure, Horizontal Direction, Shallow Foundation</p>
    <div>
 
 | Under Ground Failure, separate fragility curves distinguish between damages due to lateral spreading and ground settlement. Only Extensive and Complete damage states are considered. In essence, buildings are assumed to be either undamaged or severely damaged due to ground failure. In fact, Slight or Moderate damage can occur due to ground failure, but the likelihood of this damage is considered to be small (relative to ground shaking damage) and tacitly included in predictions of Slight or Moderate damage due to ground shaking by STR or LF components. There is no available relationship between the likelihood of Extensive/Complete damage to buildings and PGD. Engineering judgment has been used to develop a set of assumptions which define building fragility.
@@ -42,6 +44,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: GF.H.S.html
+
+
 
 .. raw:: html
 

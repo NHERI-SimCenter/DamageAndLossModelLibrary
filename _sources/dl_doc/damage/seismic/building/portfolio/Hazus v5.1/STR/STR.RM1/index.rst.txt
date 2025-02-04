@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.L.HC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.L.HC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -26,13 +26,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.L.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.L.LC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.L.LC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -51,13 +53,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.L.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.L.MC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.L.MC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -75,13 +79,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.L.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.L.PC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.L.PC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Low-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -99,13 +105,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.L.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.M.HC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.M.HC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -122,13 +130,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.M.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.M.LC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.M.LC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -147,13 +157,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.M.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.M.MC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.M.MC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -171,13 +183,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.RM1.M.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.RM1.M.PC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.RM1.M.PC</b> | Structural, Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms, Mid-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -194,6 +208,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.RM1.M.PC.html
+
+
 
 .. raw:: html
 

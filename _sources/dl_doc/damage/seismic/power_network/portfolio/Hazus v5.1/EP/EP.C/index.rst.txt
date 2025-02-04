@@ -1,0 +1,50 @@
+
+
+**************
+EP.C - Circuit
+**************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.C.A</b> | Electrical Power, Distribution Circuit, Anchored</p>
+   <div>
+
+| The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are anchored.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.C.A.html
+
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>EP.C.U</b> | Electrical Power, Distribution Network, Unanchored/Standard</p>
+   <div>
+
+| The distribution system is divided into a number of circuits. A distribution circuit includes poles, wires, in-line equipment and utility-owned equipment at customer sites. A distribution circuit also include above ground and underground conductors. Distribution circuit components are unanchored or standard.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: EP.C.U.html
+
+
+
+.. raw:: html
+
+   <hr>

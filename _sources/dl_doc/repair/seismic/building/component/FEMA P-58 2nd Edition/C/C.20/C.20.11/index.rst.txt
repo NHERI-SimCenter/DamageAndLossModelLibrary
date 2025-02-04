@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.001a</b> | Prefabricated steel stair with steel treads and landings with seismic joints that accommodate drift.</p> 
+   <p class="dl_comp_name"><b>C.20.11.001a</b> | Prefabricated steel stair with steel treads and landings with seismic joints that accommodate drift.</p>
    <div>
 
 | Flexible stair with seismic interstory slip joint.  Steel prefab stringers, steel or concrete filled pan treads.
@@ -61,7 +61,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.001b</b> | Prefabricated steel stair with steel treads and landings with no seismic joint.</p> 
+   <p class="dl_comp_name"><b>C.20.11.001b</b> | Prefabricated steel stair with steel treads and landings with no seismic joint.</p>
    <div>
 
 | Flexible stair without seismic interstory slip joint.  Steel prefab stringers, steel or concrete filled pan treads.
@@ -113,7 +113,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.011a</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with seismic joints that accommodate drift.</p> 
+   <p class="dl_comp_name"><b>C.20.11.011a</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with seismic joints that accommodate drift.</p>
    <div>
 
 | Rigid stair with seismic interstory drift joint.  Precast concrete stair.
@@ -165,7 +165,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.011b</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with no seismic joint.</p> 
+   <p class="dl_comp_name"><b>C.20.11.011b</b> | Non-monolithic precast concrete stair assembly with concrete stringers and treads with no seismic joint.</p>
    <div>
 
 | Rigid stair without seismic interstory drift joint.  Precast concrete stair.
@@ -217,7 +217,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.021a</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace in kind if replacement is required.</p> 
+   <p class="dl_comp_name"><b>C.20.11.021a</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace in kind if replacement is required.</p>
    <div>
 
 | Cast in place concrete stair, with seismic interstory drift joint
@@ -269,7 +269,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.021b</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace in kind if replacement is required.</p> 
+   <p class="dl_comp_name"><b>C.20.11.021b</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace in kind if replacement is required.</p>
    <div>
 
 | Cast in place concrete stair, no seismic interstory drift joint
@@ -321,7 +321,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.021c</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace with prefabricated steel stair if replacement is required.</p> 
+   <p class="dl_comp_name"><b>C.20.11.021c</b> | Monolithic cast-in-place and precast concrete stairs with seismic joints that accommodate drift - replace with prefabricated steel stair if replacement is required.</p>
    <div>
 
 | Cast in place concrete stair, with seismic interstory drift joint
@@ -373,7 +373,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.021d</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace with prefabricated steel stair if replacement is required.</p> 
+   <p class="dl_comp_name"><b>C.20.11.021d</b> | Monolithic cast-in-place and precast concrete stairs with no seismic joints - replace with prefabricated steel stair if replacement is required.</p>
    <div>
 
 | Cast in place concrete stair, no seismic interstory drift joint
@@ -425,7 +425,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.031a</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with seismic joints that accommodate drift.</p> 
+   <p class="dl_comp_name"><b>C.20.11.031a</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with seismic joints that accommodate drift.</p>
    <div>
 
 | Stair consists of steel stringers with precast treads rigidly linked to stringer
@@ -477,7 +477,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.20.11.031b</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with no seismic joints.</p> 
+   <p class="dl_comp_name"><b>C.20.11.031b</b> | Hybrid stair assembly with steel stringers and concrete treads and landings with no seismic joints.</p>
    <div>
 
 | Stair consists of steel stringers with precast treads rigidly linked to stringer

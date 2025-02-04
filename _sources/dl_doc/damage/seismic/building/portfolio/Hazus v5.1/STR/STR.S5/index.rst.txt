@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.H.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.H.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -29,13 +29,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S5.H.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.H.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.H.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, High-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -54,13 +56,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S5.H.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.L.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.L.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -80,13 +84,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S5.L.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.L.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.L.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Low-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -105,13 +111,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S5.L.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.M.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.M.LC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -131,13 +139,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S5.M.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S5.M.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S5.M.PC</b> | Structural, Steel Frame with Unreinforced Masonry Infill Walls, Mid-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -155,6 +165,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.S5.M.PC.html
+
+
 
 .. raw:: html
 

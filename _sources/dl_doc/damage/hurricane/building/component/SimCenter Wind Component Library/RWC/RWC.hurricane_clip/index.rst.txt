@@ -1,0 +1,57 @@
+
+
+***********************************
+RWC.hurricane_clip - Hurricane Clip
+***********************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.hurricane_clip.001a</b> | Roof-Wall Connection with Hurricane Clip H2.5.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.hurricane_clip.001a.html
+
+|
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+| Canfield, L., S. Niu, and H. Liu. 1991. Uplift resistance of various rafter-wall connections. Forest Products Journal.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.hurricane_clip.001b</b> | Roof-Wall Connection with Hurricane Clip H2.5.</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.hurricane_clip.001b.html
+
+|
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+| Canfield, L., S. Niu, and H. Liu. 1991. Uplift resistance of various rafter-wall connections. Forest Products Journal.
+
+
+.. raw:: html
+
+   <hr>

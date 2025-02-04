@@ -1,0 +1,101 @@
+
+
+**********************
+DOOR.regular - Regular
+**********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.regular.001a</b> | Regular Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.regular.001a.html
+
+|
+| Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.regular.001b</b> | Regular Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.regular.001b.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.regular.001c</b> | Regular Door - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.regular.001c.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>DOOR.regular.002</b> | Regular Door 6'10" x 3'2" size</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: DOOR.regular.002.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Yau, S. C. 2011. Wind Hazard Risk Assessment and Management for Structures. Ph.D. United States -- New Jersey: Princeton University.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+| Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.
+
+
+.. raw:: html
+
+   <hr>

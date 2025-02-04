@@ -1,0 +1,100 @@
+
+
+****************************************
+RWC.toe_nail.epoxy - Toe nail with epoxy
+****************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.001</b> | Roof-Wall Connection with Toe nails and epoxy.</p>
+   <div>
+
+| Epoxy set for one week, toe-nailed when epoxy is wet.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.epoxy.001.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.002</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p>
+   <div>
+
+| Epoxy set for one week.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.epoxy.002.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.003</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p>
+   <div>
+
+| Epoxy set for 24-48 hrs.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.epoxy.003.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.004</b> | Roof-Wall Connection with Toe nails and epoxy on large wood blocks.</p>
+   <div>
+
+| Epoxy set for one week.
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RWC.toe_nail.epoxy.004.html
+
+|
+| Reed, T. D., D. V. Rosowsky, and S. D. Schiff. 1997. Uplift Capacity of Light-Frame Rafter to Top Plate Connections. Journal of Architectural Engineering, 3 (4): 156–163. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)1076-0431(1997)3:4(156).
+
+
+.. raw:: html
+
+   <hr>

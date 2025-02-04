@@ -1,0 +1,153 @@
+
+
+********************
+WSH - Wall Sheathing
+********************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.001a</b> | Wall Sheathing - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.001a.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+| Kakareko, G., S. Jung, S. Mishra, and O. A. Vanli. 2021. Bayesian capacity model for hurricane vulnerability estimation. Structure and Infrastructure Engineering, 17 (5): 638–648. Taylor & Francis. https://doi.org/10.1080/15732479.2020.1760318.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.001b</b> | Wall Sheathing - General fragility</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.001b.html
+
+|
+| Cope, A. D. 2004. Predicting the vulnerability of typical residential buildings to hurricane damage. University of Florida.
+| Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.002a</b> | Wall Sheathing - 6d common nails (2" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.002a.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.002b</b> | Wall Sheathing - 6d common nails (2" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.002b.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.003a</b> | Wall Sheathing - 8d common nails (2.5" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.003a.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WSH.003b</b> | Wall Sheathing - 8d common nails (2.5" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WSH.003b.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Grayson, J. M., W. Pang, and S. Schiff. 2013. Building envelope failure assessment framework for residential communities subjected to hurricanes. Engineering Structures, 51: 245–258. https://doi.org/10.1016/j.engstruct.2013.01.027.
+
+
+.. raw:: html
+
+   <hr>

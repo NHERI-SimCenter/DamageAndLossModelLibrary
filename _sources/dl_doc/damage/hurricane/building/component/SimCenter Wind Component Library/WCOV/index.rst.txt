@@ -1,0 +1,101 @@
+
+
+*****************
+WCOV - Wall Cover
+*****************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WCOV.001a</b> | Wall Cover - General fragility, lower end</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WCOV.001a.html
+
+|
+| Abdelhady, A. U., S. M. J. Spence, and J. McCormick. 2022. Risk and fragility assessment of residential wooden buildings subject to hurricane winds. Structural Safety, 94: 102137. https://doi.org/10.1016/j.strusafe.2021.102137.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WCOV.001b</b> | Wall Cover - General fragility, higher end</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WCOV.001b.html
+
+|
+| Abdelhady, A. U., S. M. J. Spence, and J. McCormick. 2022. Risk and fragility assessment of residential wooden buildings subject to hurricane winds. Structural Safety, 94: 102137. https://doi.org/10.1016/j.strusafe.2021.102137.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WCOV.002</b> | Wall Cover with Vinyl Siding</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: WCOV.002.html
+
+|
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
+| Jain, A., A. A. Bhusar, D. B. Roueche, and D. O. Prevatt. 2020. Engineering-Based Tornado Damage Assessment: Numerical Tool for Assessing Tornado Vulnerability of Residential Structures. Front. Built Environ., 6. Frontiers. https://doi.org/10.3389/fbuil.2020.00089.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>WCOV.003</b> | Wall Cover with Curtain Walls 30 sq ft size and 6:5 aspect ratio</p>
+   <div>
+
+
+
+Suggested Block Size: 30 ft2 
+
+
+
+.. raw:: html
+   :file: WCOV.003.html
+
+|
+| Puga, H., B. A. Olmos, L. Olmos, J. M. Jara, and M. Jara. 2015. Damage assessment of curtain wall glass. J. Phys.: Conf. Ser., 628 (1): 012052. IOP Publishing. https://doi.org/10.1088/1742-6596/628/1/012052.
+| Angeles, K., D. Patsialis, A. A. Taflanidis, T. L. Kijewski-Correa, A. Buccellato, and C. Vardeman. 2021. Advancing the Design of Resilient and Sustainable Buildings: An Integrated Life-Cycle Analysis. J. Struct. Eng., 147 (3): 04020341. https://doi.org/10.1061/(ASCE)ST.1943-541X.0002910.
+
+
+.. raw:: html
+
+   <hr>

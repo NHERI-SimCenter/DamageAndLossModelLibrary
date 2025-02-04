@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.27.001</b> | Raised Access Floor, non seismically rated.</p> 
+   <p class="dl_comp_name"><b>C.30.27.001</b> | Raised Access Floor, non seismically rated.</p>
    <div>
 
 | Access floor unanchored or anchored with adhesive.  Costing is based upon a xxx SF floor area.
@@ -61,7 +61,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.27.002</b> | Raised Access Floor, seismically rated.</p> 
+   <p class="dl_comp_name"><b>C.30.27.002</b> | Raised Access Floor, seismically rated.</p>
    <div>
 
 | Access floor is designed to meet code requirements and mechanically anchored and braced as necessary to resist anchor loads.  Equipment is anchored to floor systems and heavier equipment is anchored directly to the structural floor.  Costing is based upon a xxx SF floor area.

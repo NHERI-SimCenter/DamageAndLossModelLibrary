@@ -1,0 +1,97 @@
+
+
+******************
+RCOV.tiles - Tiles
+******************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.tiles.clay.001</b> | Roof Cover - Clay Tiles with adhesive</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.tiles.clay.001.html
+
+|
+| Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121–129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.
+| Dong, Y., and Y. Li. 2016. Risk-based assessment of wood residential construction subjected to hurricane events considering indirect and environmental loss. Sustainable and Resilient Infrastructure, 1 (1–2): 46–62. Taylor & Francis. https://doi.org/10.1080/23789689.2016.1179051.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.tiles.clay.002</b> | Roof Cover - Clay Tiles with mortar</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.tiles.clay.002.html
+
+|
+| Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121–129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.tiles.concrete.001</b> | Roof Cover - Concrete Tiles with adhesive</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.tiles.concrete.001.html
+
+|
+| Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121–129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RCOV.tiles.concrete.002</b> | Roof Cover - Concrete Tiles with mortar</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RCOV.tiles.concrete.002.html
+
+|
+| Shdid, C. A., A. Mirmiran, T.-L. Wang, D. Jimenez, and P. Huang. 2011. Uplift Capacity and Impact Resistance of Roof Tiles. Pract. Period. Struct. Des. Constr., 16 (3): 121–129. https://doi.org/10.1061/(ASCE)SC.1943-5576.0000081.
+
+
+.. raw:: html
+
+   <hr>

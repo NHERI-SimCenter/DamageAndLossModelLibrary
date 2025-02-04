@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.34.001</b> | Independent Pendant Lighting - non seismic</p> 
+   <p class="dl_comp_name"><b>C.30.34.001</b> | Independent Pendant Lighting - non seismic</p>
    <div>
 
 | Horizontal light fixtures 4 to 16 ft long suspended 12 to 24 inches from ceiling.  No seismic design or bracing.  Hung from ceiling above by two or more rods or cables.  
@@ -25,13 +25,15 @@ Suggested Block Size: 1 EA
 .. raw:: html
    :file: C.30.34.001.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>C.30.34.002</b> | Independent Pendant Lighting - seismically rated</p> 
+   <p class="dl_comp_name"><b>C.30.34.002</b> | Independent Pendant Lighting - seismically rated</p>
    <div>
 
 | Horizontal light fixtures 4 to 16 ft long suspended 12 to 24 inches from ceiling.  Hung from ceiling above by two or more rods or cables.  Fixture and rods or cables are either designed for seismic movements or are laterally braced to prevent sway.
@@ -46,6 +48,8 @@ Suggested Block Size:  1 EA
 
 .. raw:: html
    :file: C.30.34.002.html
+
+
 
 .. raw:: html
 

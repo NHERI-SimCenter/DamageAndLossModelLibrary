@@ -1,0 +1,277 @@
+
+
+**********************
+RSH.nails.8d - 8d size
+**********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.001a</b> | Roof Sheathing with 8d nails @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.001a.html
+
+|
+| Rosowsky, D., and S. Schiff. 1996. Probabilistic Modeling of Roof Sheathing Uplift Capacity. Probabilistic Mechanics and Structural Reliability.
+| Li, Y., and B. R. Ellingwood. 2006. Hurricane damage to residential construction in the US: Importance of uncertainty modeling in risk assessment. Engineering Structures, 28 (7): 1009–1018. https://doi.org/10.1016/j.engstruct.2005.11.005
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.001b</b> | Roof Sheathing with 8d nails @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.001b.html
+
+|
+| Unnikrishnan, V. U., and M. Barbato. 2017. Multihazard Interaction Effects on the Performance of Low-Rise Wood-Frame Housing in Hurricane-Prone Regions. Journal of Structural Engineering, 143 (8): 04017076. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)ST.1943-541X.0001797.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.001c</b> | Roof Sheathing with 8d nails @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.001c.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.002a</b> | Roof Sheathing with 8d common nails (2.5" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.002a.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.002b</b> | Roof Sheathing with 8d common nails (2.5" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.002b.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Park, S., J. W. Van De Lindt, and Y. Li. 2014. ABV Procedure Combined with Mechanistic Response Modeling for Roof- and Surge-Loss Estimation in Hurricanes. J. Perform. Constr. Facil., 28 (2): 206–215. https://doi.org/10.1061/(ASCE)CF.1943-5509.0000397.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.002c</b> | Roof Sheathing with 8d common nails (2.5" length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.002c.html
+
+|
+| Rosowsky, D. V., and N. Cheng. 1999. Reliability of Light-Frame Roofs in High-Wind Regions. I: Wind Loads. Journal of Structural Engineering, 125 (7): 725–733. American Society of Civil Engineers. https://doi.org/10.1061/(ASCE)0733-9445(1999)125:7(725).
+| Lee, K. H., and D. V. Rosowsky. 2005. Fragility assessment for roof sheathing failure in high wind regions. Engineering Structures, 27 (6): 857–868. https://doi.org/10.1016/j.engstruct.2004.12.017.
+| Park, S., J. W. Van De Lindt, and Y. Li. 2014. ABV Procedure Combined with Mechanistic Response Modeling for Roof- and Surge-Loss Estimation in Hurricanes. J. Perform. Constr. Facil., 28 (2): 206–215. https://doi.org/10.1061/(ASCE)CF.1943-5509.0000397.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p12.003</b> | Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/12 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p12.003.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p6.001</b> | Roof Sheathing with 8d nails @ 6/6 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p6.001.html
+
+|
+| Vickery, P. J., P. F. Skerlj, J. Lin, L. A. Twisdale, M. A. Young, and F. M. Lavelle. 2006. HAZUS-MH Hurricane Model Methodology. II: Damage and Loss Estimation. Nat. Hazards Rev., 7 (2): 94–103. https://doi.org/10.1061/(ASCE)1527-6988(2006)7:2(94).
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p6.002</b> | Roof Sheathing with 8d common nails (2.5 in length) @ 6/6 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p6.002.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p6.003</b> | Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/6 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p6.003.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p8.001</b> | Roof Sheathing with 8d common nails (2.5 in length) @ 6/8 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p8.001.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails.8d.6p8.002</b> | Roof Sheathing with 8d ring shank nails (2.5 in length) @ 6/8 in</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails.8d.6p8.002.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>

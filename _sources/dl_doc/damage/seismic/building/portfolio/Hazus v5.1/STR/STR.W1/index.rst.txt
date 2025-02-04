@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W1.HC</b> | Structural, Wood, Light Frame, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.W1.HC</b> | Structural, Wood, Light Frame, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -25,13 +25,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W1.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W1.LC</b> | Structural, Wood, Light Frame, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.W1.LC</b> | Structural, Wood, Light Frame, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -49,13 +51,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W1.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W1.MC</b> | Structural, Wood, Light Frame, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.W1.MC</b> | Structural, Wood, Light Frame, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -72,13 +76,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.W1.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.W1.PC</b> | Structural, Wood, Light Frame, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.W1.PC</b> | Structural, Wood, Light Frame, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -94,6 +100,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.W1.PC.html
+
+
 
 .. raw:: html
 

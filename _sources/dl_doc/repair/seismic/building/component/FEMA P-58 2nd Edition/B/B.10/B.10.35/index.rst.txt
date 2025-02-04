@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.001</b> | Post-Northridge RBS connection with welded web, beam one side of column only, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.001</b> | Post-Northridge RBS connection with welded web, beam one side of column only, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -59,7 +59,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.002</b> | Post-Northridge RBS connection with welded web, beam one side of column only, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.002</b> | Post-Northridge RBS connection with welded web, beam one side of column only, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -109,7 +109,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.011</b> | Post-Northridge RBS connection with welded web, beams both sides of column, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.011</b> | Post-Northridge RBS connection with welded web, beams both sides of column, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -159,7 +159,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.012</b> | Post-Northridge RBS connection with welded web, beams both sides of column, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.012</b> | Post-Northridge RBS connection with welded web, beams both sides of column, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -209,7 +209,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.021</b> | Post-Northridge welded steel moment connection other than RBS, beam one side, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.021</b> | Post-Northridge welded steel moment connection other than RBS, beam one side, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -259,7 +259,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.022</b> | Post-Northridge welded steel moment connection other than RBS, beam one side, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.022</b> | Post-Northridge welded steel moment connection other than RBS, beam one side, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -309,7 +309,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.031</b> | Post-Northridge welded steel moment connection other than RBS, beams both sides, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.031</b> | Post-Northridge welded steel moment connection other than RBS, beams both sides, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -359,7 +359,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.032</b> | Post-Northridge welded steel moment connection other than RBS, beams both sides, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.032</b> | Post-Northridge welded steel moment connection other than RBS, beams both sides, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -409,7 +409,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.041</b> | Pre-Northridge WUF-B beam-column joint, beam one side of column, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.041</b> | Pre-Northridge WUF-B beam-column joint, beam one side of column, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -459,7 +459,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.042</b> | Pre-Northridge WUF-B beam-column joint, beam one side of column, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.042</b> | Pre-Northridge WUF-B beam-column joint, beam one side of column, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -509,7 +509,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.051</b> | Pre-Northridge WUF-B beam-column joint, beam both sides of column, beam depth <= W27</p> 
+   <p class="dl_comp_name"><b>B.10.35.051</b> | Pre-Northridge WUF-B beam-column joint, beam both sides of column, beam depth <= W27</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -559,7 +559,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.052</b> | Pre-Northridge WUF-B beam-column joint, beam both sides of column, beam depth >= W30</p> 
+   <p class="dl_comp_name"><b>B.10.35.052</b> | Pre-Northridge WUF-B beam-column joint, beam both sides of column, beam depth >= W30</p>
    <div>
 
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -609,7 +609,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.061a</b> | EBF Shear Link, no floor beams, link w < 100 PLF</p> 
+   <p class="dl_comp_name"><b>B.10.35.061a</b> | EBF Shear Link, no floor beams, link w < 100 PLF</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -658,7 +658,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.061b</b> | EBF Shear Link, no floor beams, link w < 200 PLF</p> 
+   <p class="dl_comp_name"><b>B.10.35.061b</b> | EBF Shear Link, no floor beams, link w < 200 PLF</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -707,7 +707,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.062a</b> | EBF Shear Link, with floor beams, link w < 100 PLF</p> 
+   <p class="dl_comp_name"><b>B.10.35.062a</b> | EBF Shear Link, with floor beams, link w < 100 PLF</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -756,7 +756,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.35.062b</b> | EBF Shear Link, with floor beams, link w < 200 PLF</p> 
+   <p class="dl_comp_name"><b>B.10.35.062b</b> | EBF Shear Link, with floor beams, link w < 200 PLF</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.

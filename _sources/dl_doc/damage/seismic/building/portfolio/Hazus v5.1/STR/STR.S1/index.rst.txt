@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.H.HC</b> | Structural, Steel Moment Frame, High-Rise, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.H.HC</b> | Structural, Steel Moment Frame, High-Rise, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -26,13 +26,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.H.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.H.LC</b> | Structural, Steel Moment Frame, High-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.H.LC</b> | Structural, Steel Moment Frame, High-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -51,13 +53,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.H.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.H.MC</b> | Structural, Steel Moment Frame, High-Rise, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.H.MC</b> | Structural, Steel Moment Frame, High-Rise, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -75,13 +79,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.H.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.H.PC</b> | Structural, Steel Moment Frame, High-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.H.PC</b> | Structural, Steel Moment Frame, High-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -99,13 +105,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.H.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.L.HC</b> | Structural, Steel Moment Frame, Low-Rise, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.L.HC</b> | Structural, Steel Moment Frame, Low-Rise, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -122,13 +130,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.L.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.L.LC</b> | Structural, Steel Moment Frame, Low-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.L.LC</b> | Structural, Steel Moment Frame, Low-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -147,13 +157,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.L.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.L.MC</b> | Structural, Steel Moment Frame, Low-Rise, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.L.MC</b> | Structural, Steel Moment Frame, Low-Rise, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -171,13 +183,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.L.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.L.PC</b> | Structural, Steel Moment Frame, Low-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.L.PC</b> | Structural, Steel Moment Frame, Low-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -195,13 +209,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.L.PC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.M.HC</b> | Structural, Steel Moment Frame, Mid-Rise, High-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.M.HC</b> | Structural, Steel Moment Frame, Mid-Rise, High-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -218,13 +234,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.M.HC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.M.LC</b> | Structural, Steel Moment Frame, Mid-Rise, Low-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.M.LC</b> | Structural, Steel Moment Frame, Mid-Rise, Low-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -243,13 +261,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.M.LC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.M.MC</b> | Structural, Steel Moment Frame, Mid-Rise, Moderate-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.M.MC</b> | Structural, Steel Moment Frame, Mid-Rise, Moderate-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -267,13 +287,15 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 .. raw:: html
    :file: STR.S1.M.MC.html
 
+
+
 .. raw:: html
 
    <hr>
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>STR.S1.M.PC</b> | Structural, Steel Moment Frame, Mid-Rise, Pre-Code</p> 
+   <p class="dl_comp_name"><b>STR.S1.M.PC</b> | Structural, Steel Moment Frame, Mid-Rise, Pre-Code</p>
    <div>
 
 | Structural components represent the structural system in the building.
@@ -290,6 +312,8 @@ Suggested Block Size: 1 EA (round up to integer quantity)
 
 .. raw:: html
    :file: STR.S1.M.PC.html
+
+
 
 .. raw:: html
 

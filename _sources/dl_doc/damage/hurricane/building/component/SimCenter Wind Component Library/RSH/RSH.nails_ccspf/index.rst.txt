@@ -1,0 +1,123 @@
+
+
+**************************************
+RSH.nails_ccspf - With Nails and ccSPF
+**************************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+   RSH.nails_ccsp.6d/index
+   RSH.nails_ccsp.8d/index
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails_ccspf.6d.6p12.001</b> | Roof Sheathing with 6d common nails @ 6/12 in and a fillet ccSPF application</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails_ccspf.6d.6p12.001.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails_ccspf.6d.6p12.002</b> | Roof Sheathing with 6d common nails @ 6/12 in and a 3 in full coverage ccSPF application with 19-20 day cure time</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails_ccspf.6d.6p12.002.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails_ccspf.8d.6p12.001</b> | Roof Sheathing with 8d ring shank nails @ 6/12 in and a fillet ccSPF application</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails_ccspf.8d.6p12.001.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails_ccspf.8d.6p12.002</b> | Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 24-39 day cure time</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails_ccspf.8d.6p12.002.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>RSH.nails_ccspf.8d.6p12.003</b> | Roof Sheathing with 8d ring shank nails @ 6/12 in and a 3 in full coverage ccSPF application with 129-130 day cure time</p>
+   <div>
+
+
+
+Suggested Block Size: 1 EA 
+
+
+
+.. raw:: html
+   :file: RSH.nails_ccspf.8d.6p12.003.html
+
+|
+| Datin, P. L., D. O. Prevatt, and W. Pang. 2011. Wind-Uplift Capacity of Residential Wood Roof-Sheathing Panels Retrofitted with Insulating Foam Adhesive. J. Archit. Eng., 17 (4): 144–154. https://doi.org/10.1061/(ASCE)AE.1943-5568.0000034.
+
+
+.. raw:: html
+
+   <hr>

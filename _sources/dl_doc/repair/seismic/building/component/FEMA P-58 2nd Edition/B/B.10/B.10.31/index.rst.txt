@@ -9,7 +9,7 @@ The following models are available:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.001</b> | Bolted shear tab gravity connections</p> 
+   <p class="dl_comp_name"><b>B.10.31.001</b> | Bolted shear tab gravity connections</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -59,7 +59,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.011a</b> | Steel Column Base Plates, Column W < 150 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.011a</b> | Steel Column Base Plates, Column W < 150 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -109,7 +109,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.011b</b> | Steel Column Base Plates, Column 150 plf < W < 300 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.011b</b> | Steel Column Base Plates, Column 150 plf < W < 300 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -159,7 +159,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.011c</b> | Steel Column Base Plates, Column W > 300 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.011c</b> | Steel Column Base Plates, Column W > 300 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -209,7 +209,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.021a</b> | Welded column splices, Column W < 150 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.021a</b> | Welded column splices, Column W < 150 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -260,7 +260,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.021b</b> | Welded column splices, Column 150 plf < W < 300 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.021b</b> | Welded column splices, Column 150 plf < W < 300 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
@@ -311,7 +311,7 @@ The following repair consequences are available for this model:
 
 .. raw:: html
 
-   <p class="dl_comp_name"><b>B.10.31.021c</b> | Welded column splices, Column W > 300 plf</p> 
+   <p class="dl_comp_name"><b>B.10.31.021c</b> | Welded column splices, Column W > 300 plf</p>
    <div>
 
 | Costing is on a per connection basis.  Costing does not include fireproofing removal or reapplication cost.
