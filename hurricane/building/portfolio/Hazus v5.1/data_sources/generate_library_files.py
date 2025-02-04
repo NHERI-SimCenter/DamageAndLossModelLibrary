@@ -1,4 +1,4 @@
-"""nerates Hazus Hurricane damage and loss database files."""
+"""Generates Hazus Hurricane damage and loss database files."""
 
 # This code was written before we began enforcing more strict linting
 # standards. pylint warnings are ignored for this file.
@@ -1865,7 +1865,7 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
         limit_states = {}
         for damage_state, description in damage_state_description.items():
             limit_state = damage_state.replace('DS', 'LS')
-            limit_states[limit_state] = {damage_state: description}
+            limit_states[limit_state] = {damage_state: {"Description": description}}
 
         record = {
             'Description': human_description_str,
