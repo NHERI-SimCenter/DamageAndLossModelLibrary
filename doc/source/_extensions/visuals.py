@@ -52,10 +52,10 @@ import pandas as pd
 from pelicun.base import convert_to_MultiIndex, pelicun_path
 from plotly import graph_objects as go
 from plotly.subplots import make_subplots
-from scipy.stats import norm
+from scipy.stats import norm, weibull_min
 
 
-def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103
+def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103, PLR0912
     if create_zip == '1':
         output_path = output_path[:-4]
 
@@ -136,6 +136,16 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                             scale=comp_data.loc[(LS, 'Theta_1')],  # noqa: RUF031, RUF100
                         )
                     )
+                elif comp_data.loc[(LS, 'Family')] == 'multilinear_CDF':
+                    cdf_x = comp_data.loc[(LS, 'Theta_0')].split('|')[0].split(',')
+                    d_min_i = float(cdf_x[0])
+                    d_max_i = float(cdf_x[-1])
+                elif comp_data.loc[(LS, 'Family')] == 'weibull':
+                    d_min_i, d_max_i = weibull_min.ppf(
+                        [p_min, p_max],
+                        comp_data.loc[(LS, 'Theta_1')],
+                        scale=comp_data.loc[(LS, 'Theta_0')],
+                    )
                 else:
                     continue
 
@@ -159,6 +169,18 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                         np.log(demand_vals),
                         loc=np.log(comp_data.loc[(LS, 'Theta_0')]),  # noqa: RUF031, RUF100
                         scale=comp_data.loc[(LS, 'Theta_1')],  # noqa: RUF031, RUF100
+                    )
+                elif comp_data.loc[(LS, 'Family')] == 'multilinear_CDF':
+                    cdf_x, cdf_y = [
+                        np.array(vals.split(','), dtype=float)
+                        for vals in comp_data.loc[(LS, 'Theta_0')].split('|')
+                    ]
+                    cdf_vals = np.interp(x=demand_vals, xp=cdf_x, fp=cdf_y)
+                elif comp_data.loc[(LS, 'Family')] == 'weibull':
+                    cdf_vals = weibull_min.cdf(
+                        demand_vals,
+                        comp_data.loc[(LS, 'Theta_1')],
+                        scale=comp_data.loc[(LS, 'Theta_0')],
                     )
                 else:
                     continue
