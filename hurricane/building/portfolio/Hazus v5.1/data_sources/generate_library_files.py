@@ -245,584 +245,584 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
         # Load RAW Hazus data
 
         raw_data_path = (
-        'hurricane/building/portfolio/Hazus v5.1/data_sources/input_files/'
-    )
+            'hurricane/building/portfolio/Hazus v5.1/data_sources/input_files/'
+        )
 
-    # read bldg data
+        # read bldg data
 
-    bldg_df_ST = pd.read_excel(  # noqa: N806
-        raw_data_path + 'huListOfWindBldgTypes.xlsx', index_col=0
-    )
-    bldg_df_EF = pd.read_excel(  # noqa: N806
-        raw_data_path + 'huListOfWindBldgTypesEF.xlsx', index_col=0
-    )
+        bldg_df_ST = pd.read_excel(  # noqa: N806
+            raw_data_path + 'huListOfWindBldgTypes.xlsx', index_col=0
+        )
+        bldg_df_EF = pd.read_excel(  # noqa: N806
+            raw_data_path + 'huListOfWindBldgTypesEF.xlsx', index_col=0
+        )
 
-    # make sure the column headers are in sync
-    bldg_df_EF.columns = ['sbtName', *bldg_df_EF.columns[1:]]
+        # make sure the column headers are in sync
+        bldg_df_EF.columns = ['sbtName', *bldg_df_EF.columns[1:]]
 
-    # offset the EF building IDs to ensure each archetype has a unique ID
-    bldg_df_EF.index = max(bldg_df_ST.index) + bldg_df_EF.index
-    bldg_df_EF.sort_index(inplace=True)  # noqa: PD002
+        # offset the EF building IDs to ensure each archetype has a unique ID
+        bldg_df_EF.index = max(bldg_df_ST.index) + bldg_df_EF.index
+        bldg_df_EF.sort_index(inplace=True)  # noqa: PD002
 
-    bldg_df = pd.concat([bldg_df_ST, bldg_df_EF], axis=0)
+        bldg_df = pd.concat([bldg_df_ST, bldg_df_EF], axis=0)
 
-    # read fragility data
+        # read fragility data
 
-    frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')  # noqa: N806
+        frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')  # noqa: N806
 
-    frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')  # noqa: N806
-    frag_df_EF['wbID'] += max(bldg_df_ST.index)
+        frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')  # noqa: N806
+        frag_df_EF['wbID'] += max(bldg_df_ST.index)
 
-    frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
+        frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
 
-    frag_df.sort_values(['wbID', 'TERRAINID', 'DamLossDescID'], inplace=True)  # noqa: PD002
+        frag_df.sort_values(['wbID', 'TERRAINID', 'DamLossDescID'], inplace=True)  # noqa: PD002
 
-    frag_df.reset_index(drop=True, inplace=True)  # noqa: PD002
+        frag_df.reset_index(drop=True, inplace=True)  # noqa: PD002
 
-    # Fix errors and fill missing data in the raw fragility database
+        # Fix errors and fill missing data in the raw fragility database
 
-    # ## Incorrect Damage State labels
-    #
-    # **Problem**
-    # Fragility curve data is stored with the wrong Damage State label
-    # for some archetypes. This leads to a lower damage state having
-    # higher corresponding capacity than a higher damage state.
-    #
-    # **Scope**
-    # The problem only affects 40 archetypes. In all cases, the data
-    # under Damage State 4 seems to belong to Damage State 1.
-    #
-    # **Fix**
-    # We offset the Damage State 1-3 data by one DS and move what is
-    # under Damage State 4 to DS1. This yields a plausible set of
-    # fragility curves.
-    #
-    # Note: When identifying which archetypes are affected, we compare
-    # the probabilities of exceeding each damage state at every
-    # discrete wind speed in the database. We look for instances where
-    # a lower damage state has lower probability of exceedance than a
-    # higher damage state. When comparing probabilities of exceedance,
-    # we recognize that the data in the Hazus database is noisy and
-    # consider an absolute 2% tolerance to accommodate this noise and
-    # avoid false positives.
-    #
+        # ## Incorrect Damage State labels
+        #
+        # **Problem**
+        # Fragility curve data is stored with the wrong Damage State label
+        # for some archetypes. This leads to a lower damage state having
+        # higher corresponding capacity than a higher damage state.
+        #
+        # **Scope**
+        # The problem only affects 40 archetypes. In all cases, the data
+        # under Damage State 4 seems to belong to Damage State 1.
+        #
+        # **Fix**
+        # We offset the Damage State 1-3 data by one DS and move what is
+        # under Damage State 4 to DS1. This yields a plausible set of
+        # fragility curves.
+        #
+        # Note: When identifying which archetypes are affected, we compare
+        # the probabilities of exceeding each damage state at every
+        # discrete wind speed in the database. We look for instances where
+        # a lower damage state has lower probability of exceedance than a
+        # higher damage state. When comparing probabilities of exceedance,
+        # we recognize that the data in the Hazus database is noisy and
+        # consider an absolute 2% tolerance to accommodate this noise and
+        # avoid false positives.
+        #
 
-    # get labels of columns in frag_df with damage and loss data
-    wind_speeds_str = [c for c in frag_df.columns if 'WS' in c]
+        # get labels of columns in frag_df with damage and loss data
+        wind_speeds_str = [c for c in frag_df.columns if 'WS' in c]
 
-    # also get a list of floats based on the above labels
-    wind_speeds = np.array([float(ws[2:]) for ws in wind_speeds_str])
+        # also get a list of floats based on the above labels
+        wind_speeds = np.array([float(ws[2:]) for ws in wind_speeds_str])
 
-    # set the max wind speed of interest
-    max_speed = 200
-    max_speed_id = max(np.where(wind_speeds <= max_speed)[0]) + 1
+        # set the max wind speed of interest
+        max_speed = 200
+        max_speed_id = max(np.where(wind_speeds <= max_speed)[0]) + 1
 
-    DS_data = [  # noqa: N806
-        frag_df[frag_df['DamLossDescID'] == ds].loc[:, wind_speeds_str]
-        for ds in range(1, 5)
-    ]
-
-    # the problem affects DS4 probabilities
-    archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)  # noqa: PLR2004
-    # go through each affected archetype and fix the problem
-    for frag_id in archetypes[archetypes == True].index:  # noqa: E712
-        # get the wbID and terrain_id
-        wbID, terrain_id = frag_df.loc[frag_id, ['wbID', 'TERRAINID']]  # noqa: N806
-
-        # load the fragility info for the archetype
-        frag_df_arch = frag_df.loc[
-            (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
+        DS_data = [  # noqa: N806
+            frag_df[frag_df['DamLossDescID'] == ds].loc[:, wind_speeds_str]
+            for ds in range(1, 5)
         ]
 
-        # check which DS is stored as DS4
-        # we do this by looking at the median capacities at each DS
-        # through simple interpolation
-        median_capacities = [
-            np.interp(
-                0.5, frag_df_arch[wind_speeds_str].iloc[ds].to_numpy(), wind_speeds
-            )
-            for ds in range(4)
-        ]
+        # the problem affects DS4 probabilities
+        archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)  # noqa: PLR2004
+        # go through each affected archetype and fix the problem
+        for frag_id in archetypes[archetypes == True].index:  # noqa: E712
+            # get the wbID and terrain_id
+            wbID, terrain_id = frag_df.loc[frag_id, ['wbID', 'TERRAINID']]  # noqa: N806
 
-        # then check where to store the values at DS4 to maintain
-        # ascending exceedance probabilities
-        target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806, PLR2004
-
-        # since this is always DS1 in the current database,
-        # the script below works with that assumption and checks for exceptions
-        if target_DS == 0:
-            # first, extract the probabilities stored at DS4
-            DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].to_numpy()  # noqa: N806
-
-            # then offset the probabilities of DS1-3 by one level
-            for ds in [3, 2, 1]:
-                source_DS_index = frag_df_arch.index[ds - 1]  # noqa: N806
-                target_DS_index = frag_df_arch.index[ds]  # noqa: N806
-
-                frag_df.loc[target_DS_index, wind_speeds_str] = frag_df.loc[
-                    source_DS_index, wind_speeds_str
-                ].to_numpy()
-
-            # finally store the DS4 probs at the DS1 cells
-            target_DS_index = frag_df_arch.index[0]  # noqa: N806
-
-            frag_df.loc[target_DS_index, wind_speeds_str] = DS4_probs
-
-    # ## Missing Damage State probabilities
-    #
-    # **Problem**
-    # Some archetypes have only zeros in the cells that store Damage State
-    # 4 exceedance probabilities at various wind speeds.
-    #
-    # **Scope**
-    # This problem affects **346** building types in at least one but
-    # typically all five terrain types. Altogether 1453 archetypes miss
-    # their DS4 information in the raw data. As shown below, only DS4 is
-    # affected, other damage states have some information for all
-    # archetypes.
-    #
-    # **Fix**
-    # We overwrite the zeros in the DS4 cells by copying the DS3
-    # probabilities there. This leads to assuming zero probability of
-    # exceeding DS4, which is still almost surely wrong. The **Hazus team
-    # has been contacted** to provide the missing data or guidance on how
-    # to improve this fix.
-
-    # start by checking which archetypes have no damage data for at least
-    # one Damage State
-
-    # get the damage data for all archetypes
-    DS_data = frag_df[frag_df['DamLossDescID'].isin([1, 2, 3, 4])].loc[  # noqa: N806
-        :, wind_speeds_str
-    ]
-
-    # # check for invalid values
-    # print(f'Global minimum value: {np.min(DS_data.to_numpy())}')
-    # print(f'Global maximum value: {np.max(DS_data.to_numpy())}')
-
-    # sum up the probabilities of exceeding each DS at various wind speeds
-    DS_zero = DS_data.sum(axis=1)  # noqa: N806
-
-    # and look for the lines where the sum is zero - i.e., all values are zero
-    no_DS_info = frag_df.loc[DS_zero[DS_zero == 0].index]  # noqa: N806
-
-    def overwrite_ds4_data():
-        # now go through the building types in no_DS_info
-        for wbID in no_DS_info['wbID'].unique():  # noqa: N806
-            # and each terrain type that is affected
-            for terrain_id in no_DS_info.loc[
-                no_DS_info['wbID'] == wbID, 'TERRAINID'
-            ].to_numpy():
-                # get the fragility data for each archetype
-                frag_df_arch = frag_df.loc[
-                    (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
-                ]
-
-                # extract the DS3 information
-                DS3_data = frag_df_arch.loc[  # noqa: N806
-                    frag_df['DamLossDescID'] == 3, wind_speeds_str  # noqa: PLR2004
-                ].to_numpy()
-
-                # and overwrite the DS4 values in the original dataset
-                DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806, PLR2004
-                frag_df.loc[DS4_index, wind_speeds_str] = DS3_data
-
-    overwrite_ds4_data()
-
-    # Fit fragility curves to discrete points
-
-    # pre_calc
-
-    flt_bldg_df = bldg_df.copy()
-
-    # # this allows you to test it with a few archetypes before
-    # # running the whole thing
-    # flt_bldg_df = bldg_df.iloc[:100]
-
-    # labels for all features, damage state data, and loss data
-    column_names = [
-        'bldg_type',
-        'roof_shape',
-        'roof_cover',
-        'roof_quality',
-        'sec_water_res',
-        'roof_deck_attch',
-        'roof_wall_conn',
-        'garage',
-        'shutters',
-        'terr_rough',
-        'upgrade_??',
-        'wall_cover_??',
-        'tspa_??',
-        'masonry_reinforcing',
-        'roof_frame_type',
-        'wind_debris',
-        'roof_deck_age',
-        'metal_rda',
-        'num_of_units',
-        'joist_spacing',
-        'window_area',
-        'tie_downs',
-        'DS1_dist',
-        'DS1_mu',
-        'DS1_sig',
-        'DS1_fit',
-        'DS1_meps',
-        'DS2_dist',
-        'DS2_mu',
-        'DS2_sig',
-        'DS2_fit',
-        'DS2_meps',
-        'DS3_dist',
-        'DS3_mu',
-        'DS3_sig',
-        'DS3_fit',
-        'DS3_meps',
-        'DS4_dist',
-        'DS4_mu',
-        'DS4_sig',
-        'DS4_fit',
-        'DS4_meps',
-        'L1',
-        'L2',
-        'L3',
-        'L4',
-        'L_fit',
-        'L_meps',
-        'DS1_original',
-        'DS2_original',
-        'DS3_original',
-        'DS4_original',
-        'L_original',
-    ]
-
-    # resulting dataframe
-    new_df = pd.DataFrame(
-        None, columns=column_names, index=np.arange(len(flt_bldg_df.index) * 5)
-    )
-
-    rows = []
-
-    # calculation
-    for index, row in tqdm(list(flt_bldg_df.iterrows())):
-        # initialize the row for the archetype
-        new_row = pd.Series(index=new_df.columns, dtype=np.float64)
-
-        # store building type
-        new_row['bldg_type'] = row['sbtName']
-
-        # then parse the description and store the recognized parameter values
-        descr = parse_description(row['charDescription'].strip(), new_row)
-
-        # check if any part of the description remained unparsed
-        if descr != '':
-            print('WARNING', index, descr)  # noqa: T201
-
-        # filter only those parts of the frag_df that correspond to
-        # this archetype
-        frag_df_arch = frag_df[frag_df['wbID'] == index]
-
-        # cycle through the five terrain types in Hazus
-        for terrain_id, roughness in enumerate([0.03, 0.15, 0.35, 0.7, 1.0]):
-            # Hazus array indexing is 1-based
-            terrain_id += 1  # noqa: PLW2901
-
-            new_row_terrain = new_row.copy()
-
-            # store the roughness length
-            new_row_terrain['terr_rough'] = roughness
-
-            # filter only those parts of the frag_df_arch that correspond
-            # to this terrain type
-            frag_df_arch_terrain = frag_df_arch[
-                frag_df_arch['TERRAINID'] == terrain_id
+            # load the fragility info for the archetype
+            frag_df_arch = frag_df.loc[
+                (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
             ]
 
-            mu_min = 0
+            # check which DS is stored as DS4
+            # we do this by looking at the median capacities at each DS
+            # through simple interpolation
+            median_capacities = [
+                np.interp(
+                    0.5, frag_df_arch[wind_speeds_str].iloc[ds].to_numpy(), wind_speeds
+                )
+                for ds in range(4)
+            ]
 
-            # for each damage state
-            for DS in [1, 2, 3, 4]:  # noqa: N806
-                # get the exceedence probabilities for this DS of this
-                # archetype
-                P_exc = np.asarray(  # noqa: N806
+            # then check where to store the values at DS4 to maintain
+            # ascending exceedance probabilities
+            target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806, PLR2004
+
+            # since this is always DS1 in the current database,
+            # the script below works with that assumption and checks for exceptions
+            if target_DS == 0:
+                # first, extract the probabilities stored at DS4
+                DS4_probs = frag_df_arch[wind_speeds_str].iloc[3].to_numpy()  # noqa: N806
+
+                # then offset the probabilities of DS1-3 by one level
+                for ds in [3, 2, 1]:
+                    source_DS_index = frag_df_arch.index[ds - 1]  # noqa: N806
+                    target_DS_index = frag_df_arch.index[ds]  # noqa: N806
+
+                    frag_df.loc[target_DS_index, wind_speeds_str] = frag_df.loc[
+                        source_DS_index, wind_speeds_str
+                    ].to_numpy()
+
+                # finally store the DS4 probs at the DS1 cells
+                target_DS_index = frag_df_arch.index[0]  # noqa: N806
+
+                frag_df.loc[target_DS_index, wind_speeds_str] = DS4_probs
+
+        # ## Missing Damage State probabilities
+        #
+        # **Problem**
+        # Some archetypes have only zeros in the cells that store Damage State
+        # 4 exceedance probabilities at various wind speeds.
+        #
+        # **Scope**
+        # This problem affects **346** building types in at least one but
+        # typically all five terrain types. Altogether 1453 archetypes miss
+        # their DS4 information in the raw data. As shown below, only DS4 is
+        # affected, other damage states have some information for all
+        # archetypes.
+        #
+        # **Fix**
+        # We overwrite the zeros in the DS4 cells by copying the DS3
+        # probabilities there. This leads to assuming zero probability of
+        # exceeding DS4, which is still almost surely wrong. The **Hazus team
+        # has been contacted** to provide the missing data or guidance on how
+        # to improve this fix.
+
+        # start by checking which archetypes have no damage data for at least
+        # one Damage State
+
+        # get the damage data for all archetypes
+        DS_data = frag_df[frag_df['DamLossDescID'].isin([1, 2, 3, 4])].loc[  # noqa: N806
+            :, wind_speeds_str
+        ]
+
+        # # check for invalid values
+        # print(f'Global minimum value: {np.min(DS_data.to_numpy())}')
+        # print(f'Global maximum value: {np.max(DS_data.to_numpy())}')
+
+        # sum up the probabilities of exceeding each DS at various wind speeds
+        DS_zero = DS_data.sum(axis=1)  # noqa: N806
+
+        # and look for the lines where the sum is zero - i.e., all values are zero
+        no_DS_info = frag_df.loc[DS_zero[DS_zero == 0].index]  # noqa: N806
+
+        def overwrite_ds4_data():
+            # now go through the building types in no_DS_info
+            for wbID in no_DS_info['wbID'].unique():  # noqa: N806
+                # and each terrain type that is affected
+                for terrain_id in no_DS_info.loc[
+                    no_DS_info['wbID'] == wbID, 'TERRAINID'
+                ].to_numpy():
+                    # get the fragility data for each archetype
+                    frag_df_arch = frag_df.loc[
+                        (frag_df['wbID'] == wbID) & (frag_df['TERRAINID'] == terrain_id)
+                    ]
+
+                    # extract the DS3 information
+                    DS3_data = frag_df_arch.loc[  # noqa: N806
+                        frag_df['DamLossDescID'] == 3, wind_speeds_str  # noqa: PLR2004
+                    ].to_numpy()
+
+                    # and overwrite the DS4 values in the original dataset
+                    DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806, PLR2004
+                    frag_df.loc[DS4_index, wind_speeds_str] = DS3_data
+
+        overwrite_ds4_data()
+
+        # Fit fragility curves to discrete points
+
+        # pre_calc
+
+        flt_bldg_df = bldg_df.copy()
+
+        # # this allows you to test it with a few archetypes before
+        # # running the whole thing
+        # flt_bldg_df = bldg_df.iloc[:100]
+
+        # labels for all features, damage state data, and loss data
+        column_names = [
+            'bldg_type',
+            'roof_shape',
+            'roof_cover',
+            'roof_quality',
+            'sec_water_res',
+            'roof_deck_attch',
+            'roof_wall_conn',
+            'garage',
+            'shutters',
+            'terr_rough',
+            'upgrade_??',
+            'wall_cover_??',
+            'tspa_??',
+            'masonry_reinforcing',
+            'roof_frame_type',
+            'wind_debris',
+            'roof_deck_age',
+            'metal_rda',
+            'num_of_units',
+            'joist_spacing',
+            'window_area',
+            'tie_downs',
+            'DS1_dist',
+            'DS1_mu',
+            'DS1_sig',
+            'DS1_fit',
+            'DS1_meps',
+            'DS2_dist',
+            'DS2_mu',
+            'DS2_sig',
+            'DS2_fit',
+            'DS2_meps',
+            'DS3_dist',
+            'DS3_mu',
+            'DS3_sig',
+            'DS3_fit',
+            'DS3_meps',
+            'DS4_dist',
+            'DS4_mu',
+            'DS4_sig',
+            'DS4_fit',
+            'DS4_meps',
+            'L1',
+            'L2',
+            'L3',
+            'L4',
+            'L_fit',
+            'L_meps',
+            'DS1_original',
+            'DS2_original',
+            'DS3_original',
+            'DS4_original',
+            'L_original',
+        ]
+
+        # resulting dataframe
+        new_df = pd.DataFrame(
+            None, columns=column_names, index=np.arange(len(flt_bldg_df.index) * 5)
+        )
+
+        rows = []
+
+        # calculation
+        for index, row in tqdm(list(flt_bldg_df.iterrows())):
+            # initialize the row for the archetype
+            new_row = pd.Series(index=new_df.columns, dtype=np.float64)
+
+            # store building type
+            new_row['bldg_type'] = row['sbtName']
+
+            # then parse the description and store the recognized parameter values
+            descr = parse_description(row['charDescription'].strip(), new_row)
+
+            # check if any part of the description remained unparsed
+            if descr != '':
+                print('WARNING', index, descr)  # noqa: T201
+
+            # filter only those parts of the frag_df that correspond to
+            # this archetype
+            frag_df_arch = frag_df[frag_df['wbID'] == index]
+
+            # cycle through the five terrain types in Hazus
+            for terrain_id, roughness in enumerate([0.03, 0.15, 0.35, 0.7, 1.0]):
+                # Hazus array indexing is 1-based
+                terrain_id += 1  # noqa: PLW2901
+
+                new_row_terrain = new_row.copy()
+
+                # store the roughness length
+                new_row_terrain['terr_rough'] = roughness
+
+                # filter only those parts of the frag_df_arch that correspond
+                # to this terrain type
+                frag_df_arch_terrain = frag_df_arch[
+                    frag_df_arch['TERRAINID'] == terrain_id
+                ]
+
+                mu_min = 0
+
+                # for each damage state
+                for DS in [1, 2, 3, 4]:  # noqa: N806
+                    # get the exceedence probabilities for this DS of this
+                    # archetype
+                    P_exc = np.asarray(  # noqa: N806
+                        frag_df_arch_terrain.loc[
+                            frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
+                        ].to_numpy()[0]
+                    )
+                    multilinear_CDF_parameters = (  # noqa: N806
+                        ','.join([str(x) for x in P_exc])
+                        + '|'
+                        + ','.join([str(x) for x in wind_speeds])
+                    )
+
+                    mu_0 = max(
+                        [wind_speeds[np.argsort(abs(P_exc - 0.5))[0]], mu_min * 1.01]
+                    )
+                    sig_0 = 20
+                    beta_0 = 0.2
+
+                    median_id = max(np.where(wind_speeds <= mu_0)[0]) + 1
+                    min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1  # noqa: PLR2004
+                    max_speed_id_mod = max(
+                        [min([median_id, max_speed_id]), min_speed_id]
+                    )
+
+                    # define the two error measures to be minimized
+
+                    # assuming Normal distribution for building capacity
+                    def MSE_normal(params, mu_min, res_type='MSE'):  # noqa: N802
+                        # unpack the parameters
+                        mu, sig = params
+
+                        # penalize invalid params
+                        if (np.round(mu, decimals=1) <= mu_min) or (sig <= 0):
+                            return 1e10
+
+                        eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[  # noqa: B023
+                            :max_speed_id_mod  # noqa: B023
+                        ]
+
+                        if res_type == 'MSE':
+                            return sum(eps**2.0)
+
+                        if res_type == 'max abs eps':
+                            return max(abs(eps))
+
+                        if res_type == 'eps':  # noqa: RET503
+                            return eps
+
+                    # assuming Lognormal distribution for building capacity
+                    def MSE_lognormal(params, mu_min, res_type='MSE'):  # noqa: N802
+                        # unpack the parameters
+                        mu, beta = params
+
+                        # penalize invalid params
+                        if (np.round(mu, decimals=1) <= mu_min) or (beta <= 0):
+                            return 1e10
+
+                        eps = (
+                            norm.cdf(np.log(wind_speeds), loc=np.log(mu), scale=beta)
+                            - P_exc  # noqa: B023
+                        )[
+                            :max_speed_id_mod  # noqa: B023
+                        ]
+
+                        if res_type == 'MSE':
+                            return sum(eps**2.0)
+
+                        if res_type == 'max abs eps':
+                            return max(abs(eps))
+
+                        if res_type == 'eps':  # noqa: RET503
+                            return eps
+
+                    # minimize MSE assuming Normal distribution
+                    res_normal = minimize(
+                        MSE_normal,
+                        [mu_0, sig_0],
+                        args=(mu_min),
+                        method='BFGS',
+                        options={'maxiter': 50},
+                    )
+
+                    res_normal.x = np.array(
+                        [
+                            np.round(res_normal.x[0], decimals=1),
+                            np.round(res_normal.x[1], decimals=1),
+                        ]
+                    )
+
+                    # store MSE @ optimized location in fun
+                    res_normal.fun = np.sqrt(
+                        MSE_normal(res_normal.x, mu_min) / max_speed_id_mod
+                    )
+                    # and hijack maxcv to store max eps within res object
+                    res_normal.maxcv = MSE_normal(
+                        res_normal.x, mu_min, res_type='max abs eps'
+                    )
+
+                    # minimize MSE assuming Lognormal distribution
+                    res_lognormal = minimize(
+                        MSE_lognormal,
+                        [mu_0, beta_0],
+                        args=(mu_min),
+                        method='BFGS',
+                        options={'maxiter': 50},
+                    )
+
+                    res_lognormal.x = np.array(
+                        [
+                            np.round(res_lognormal.x[0], decimals=1),
+                            np.round(res_lognormal.x[1], decimals=2),
+                        ]
+                    )
+
+                    # store the MSE @ optimized location in fun
+                    res_lognormal.fun = np.sqrt(
+                        MSE_lognormal(res_lognormal.x, mu_min) / max_speed_id_mod
+                    )
+                    # and hijack maxcv to store max eps within res object
+                    res_lognormal.maxcv = MSE_lognormal(
+                        res_lognormal.x, mu_min, res_type='max abs eps'
+                    )
+
+                    # show a warning if either model could not be fit
+                    if (res_normal.status != 0) and (res_lognormal.status != 0):
+                        if (res_normal.fun < 1) or (res_lognormal.fun < 1):
+                            pass
+
+                        else:
+                            print(  # noqa: T201
+                                f'WARNING: Error in CDF fitting '
+                                f'for {index}, {terrain_id}, {DS}'
+                            )
+                            # display(res_normal)
+                            # display(res_lognormal)
+
+                    # keep the better fit:
+                    # first, check the mean absolute error
+                    if res_normal.fun < res_lognormal.fun:
+                        # If the mean absolute errors in the two models
+                        # are very close AND one model has substantially
+                        # smaller maximum error than the other, then
+                        # choose the model with the smaller maximum error
+                        if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (  # noqa: PLR2004
+                            np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1  # noqa: PLR2004
+                        ):
+                            dist_type = 'lognormal'
+                            res = res_lognormal
+
+                        else:
+                            dist_type = 'normal'
+                            res = res_normal
+
+                    elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (  # noqa: PLR2004
+                        np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1  # noqa: PLR2004
+                    ):
+                        dist_type = 'normal'
+                        res = res_normal
+
+                    else:
+                        dist_type = 'lognormal'
+                        res = res_lognormal
+
+                    # store the parameters
+                    new_row_terrain[f'DS{DS}_dist'] = dist_type
+                    new_row_terrain[f'DS{DS}_mu'] = res.x[0]
+                    new_row_terrain[f'DS{DS}_sig'] = res.x[1]
+                    new_row_terrain[f'DS{DS}_fit'] = res.fun
+                    new_row_terrain[f'DS{DS}_meps'] = res.maxcv
+                    new_row_terrain[f'DS{DS}_original'] = multilinear_CDF_parameters
+
+                    # consecutive damage states should have increasing capacities
+                    mu_min = res.x[0]
+
+                # Now we have the damages, continue with Losses
+
+                # Focus on "Building losses" first
+                L_ref = np.asarray(  # noqa: N806
                     frag_df_arch_terrain.loc[
-                        frag_df_arch_terrain['DamLossDescID'] == DS, wind_speeds_str
+                        frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str  # noqa: PLR2004
                     ].to_numpy()[0]
                 )
+
                 multilinear_CDF_parameters = (  # noqa: N806
-                    ','.join([str(x) for x in P_exc])
+                    ','.join([str(x) for x in L_ref])
                     + '|'
                     + ','.join([str(x) for x in wind_speeds])
                 )
 
-                mu_0 = max(
-                    [wind_speeds[np.argsort(abs(P_exc - 0.5))[0]], mu_min * 1.01]
-                )
-                sig_0 = 20
-                beta_0 = 0.2
+                # We'll need the probability of each Damage State across the
+                # pre-defined wind speeds
+                DS_probs = np.zeros((4, len(wind_speeds)))  # noqa: N806
 
-                median_id = max(np.where(wind_speeds <= mu_0)[0]) + 1
-                min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1  # noqa: PLR2004
-                max_speed_id_mod = max(
-                    [min([median_id, max_speed_id]), min_speed_id]
-                )
+                for DS_id, DS in enumerate([1, 2, 3, 4]):  # noqa: N806
+                    if new_row_terrain[f'DS{DS}_dist'] == 'normal':
+                        DS_probs[DS_id] = norm.cdf(
+                            wind_speeds,
+                            loc=new_row_terrain[f'DS{DS}_mu'],
+                            scale=new_row_terrain[f'DS{DS}_sig'],
+                        )
+                    else:
+                        DS_probs[DS_id] = norm.cdf(
+                            np.log(wind_speeds),
+                            loc=np.log(new_row_terrain[f'DS{DS}_mu']),
+                            scale=new_row_terrain[f'DS{DS}_sig'],
+                        )
 
-                # define the two error measures to be minimized
+                # The losses for DS4 are calculated based on outcomes at the
+                # highest wind speeds
+                L_max = frag_df_arch_terrain.loc[  # noqa: N806
+                    frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'  # noqa: PLR2004
+                ].to_numpy()[0]
+                DS4_max = DS_probs[3][-1]  # noqa: N806
 
-                # assuming Normal distribution for building capacity
-                def MSE_normal(params, mu_min, res_type='MSE'):  # noqa: N802
-                    # unpack the parameters
-                    mu, sig = params
+                L4 = np.round(min(L_max / DS4_max, 1.0), decimals=3)  # noqa: N806
 
-                    # penalize invalid params
-                    if (np.round(mu, decimals=1) <= mu_min) or (sig <= 0):
-                        return 1e10
+                # if L4 < 0.75:
+                #    print(index, terrain_id, L_max, DS4_max, L4)
 
-                    eps = (norm.cdf(wind_speeds, loc=mu, scale=sig) - P_exc)[  # noqa: B023
-                        :max_speed_id_mod  # noqa: B023
-                    ]
+                for i in range(3):
+                    DS_probs[i] = DS_probs[i] - DS_probs[i + 1]
 
-                    if res_type == 'MSE':
-                        return sum(eps**2.0)
+                # define the loss error measures to be minimized
 
-                    if res_type == 'max abs eps':
+                def SSE_loss(params, res_type='SSE'):  # noqa: N802
+                    loss_ratios = params.copy()
+
+                    # assume 1.0 for DS4
+                    loss_ratios = np.append(loss_ratios, L4)  # noqa: B023
+
+                    L_est = np.sum(loss_ratios * DS_probs.T, axis=1)  # noqa: B023, N806
+
+                    # the error is the difference between reference and estimated losses
+                    eps = (L_est - L_ref)[:max_speed_id]  # noqa: B023
+
+                    if res_type == 'SSE':
+                        # calculate the sum of squared errors across wind speeds
+                        SSE = sum(eps**2.0)  # noqa: N806
+
+                    elif res_type == 'max abs eps':
                         return max(abs(eps))
 
-                    if res_type == 'eps':  # noqa: RET503
-                        return eps
+                    return SSE
 
-                # assuming Lognormal distribution for building capacity
-                def MSE_lognormal(params, mu_min, res_type='MSE'):  # noqa: N802
-                    # unpack the parameters
-                    mu, beta = params
-
-                    # penalize invalid params
-                    if (np.round(mu, decimals=1) <= mu_min) or (beta <= 0):
-                        return 1e10
-
-                    eps = (
-                        norm.cdf(np.log(wind_speeds), loc=np.log(mu), scale=beta)
-                        - P_exc  # noqa: B023
-                    )[
-                        :max_speed_id_mod  # noqa: B023
-                    ]
-
-                    if res_type == 'MSE':
-                        return sum(eps**2.0)
-
-                    if res_type == 'max abs eps':
-                        return max(abs(eps))
-
-                    if res_type == 'eps':  # noqa: RET503
-                        return eps
-
-                # minimize MSE assuming Normal distribution
-                res_normal = minimize(
-                    MSE_normal,
-                    [mu_0, sig_0],
-                    args=(mu_min),
-                    method='BFGS',
-                    options={'maxiter': 50},
+                cons = (
+                    {'type': 'ineq', 'fun': lambda x: x[1] - x[0] - 0.002},
+                    {'type': 'ineq', 'fun': lambda x: x[2] - x[1] - 0.002},
+                    {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},  # noqa: B023
                 )
 
-                res_normal.x = np.array(
-                    [
-                        np.round(res_normal.x[0], decimals=1),
-                        np.round(res_normal.x[1], decimals=1),
-                    ]
+                res = minimize(
+                    SSE_loss,
+                    [0.02, 0.1, 0.44],
+                    bounds=((0.001, 1.0), (0.001, 1.0), (0.001, 1.0)),
+                    constraints=cons,
                 )
+
+                res.x = np.round(res.x, decimals=3)
 
                 # store MSE @ optimized location in fun
-                res_normal.fun = np.sqrt(
-                    MSE_normal(res_normal.x, mu_min) / max_speed_id_mod
-                )
+                res.fun = np.sqrt(SSE_loss(res.x) / len(L_ref))
                 # and hijack maxcv to store max eps within res object
-                res_normal.maxcv = MSE_normal(
-                    res_normal.x, mu_min, res_type='max abs eps'
-                )
+                res.maxcv = SSE_loss(res.x, res_type='max abs eps')
 
-                # minimize MSE assuming Lognormal distribution
-                res_lognormal = minimize(
-                    MSE_lognormal,
-                    [mu_0, beta_0],
-                    args=(mu_min),
-                    method='BFGS',
-                    options={'maxiter': 50},
-                )
-
-                res_lognormal.x = np.array(
-                    [
-                        np.round(res_lognormal.x[0], decimals=1),
-                        np.round(res_lognormal.x[1], decimals=2),
-                    ]
-                )
-
-                # store the MSE @ optimized location in fun
-                res_lognormal.fun = np.sqrt(
-                    MSE_lognormal(res_lognormal.x, mu_min) / max_speed_id_mod
-                )
-                # and hijack maxcv to store max eps within res object
-                res_lognormal.maxcv = MSE_lognormal(
-                    res_lognormal.x, mu_min, res_type='max abs eps'
-                )
-
-                # show a warning if either model could not be fit
-                if (res_normal.status != 0) and (res_lognormal.status != 0):
-                    if (res_normal.fun < 1) or (res_lognormal.fun < 1):
-                        pass
-
-                    else:
-                        print(  # noqa: T201
-                            f'WARNING: Error in CDF fitting '
-                            f'for {index}, {terrain_id}, {DS}'
-                        )
-                        # display(res_normal)
-                        # display(res_lognormal)
-
-                # keep the better fit:
-                # first, check the mean absolute error
-                if res_normal.fun < res_lognormal.fun:
-                    # If the mean absolute errors in the two models
-                    # are very close AND one model has substantially
-                    # smaller maximum error than the other, then
-                    # choose the model with the smaller maximum error
-                    if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (  # noqa: PLR2004
-                        np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1  # noqa: PLR2004
-                    ):
-                        dist_type = 'lognormal'
-                        res = res_lognormal
-
-                    else:
-                        dist_type = 'normal'
-                        res = res_normal
-
-                elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (  # noqa: PLR2004
-                    np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1  # noqa: PLR2004
-                ):
-                    dist_type = 'normal'
-                    res = res_normal
-
-                else:
-                    dist_type = 'lognormal'
-                    res = res_lognormal
+                # if (res.fun > 0.1) or (res.maxcv > 0.2):
+                #    print(index, terrain_id, max_speed_id_mod)
+                #    print(res.x, res.fun, res.maxcv)
 
                 # store the parameters
-                new_row_terrain[f'DS{DS}_dist'] = dist_type
-                new_row_terrain[f'DS{DS}_mu'] = res.x[0]
-                new_row_terrain[f'DS{DS}_sig'] = res.x[1]
-                new_row_terrain[f'DS{DS}_fit'] = res.fun
-                new_row_terrain[f'DS{DS}_meps'] = res.maxcv
-                new_row_terrain[f'DS{DS}_original'] = multilinear_CDF_parameters
+                new_row_terrain['L1'] = res.x[0]
+                new_row_terrain['L2'] = res.x[1]
+                new_row_terrain['L3'] = res.x[2]
+                new_row_terrain['L4'] = L4
+                new_row_terrain['L_original'] = multilinear_CDF_parameters
+                new_row_terrain['L_fit'] = res.fun
+                new_row_terrain['L_meps'] = res.maxcv
 
-                # consecutive damage states should have increasing capacities
-                mu_min = res.x[0]
+                # display(new_row.to_frame().T)
 
-            # Now we have the damages, continue with Losses
-
-            # Focus on "Building losses" first
-            L_ref = np.asarray(  # noqa: N806
-                frag_df_arch_terrain.loc[
-                    frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str  # noqa: PLR2004
-                ].to_numpy()[0]
-            )
-
-            multilinear_CDF_parameters = (  # noqa: N806
-                ','.join([str(x) for x in L_ref])
-                + '|'
-                + ','.join([str(x) for x in wind_speeds])
-            )
-
-            # We'll need the probability of each Damage State across the
-            # pre-defined wind speeds
-            DS_probs = np.zeros((4, len(wind_speeds)))  # noqa: N806
-
-            for DS_id, DS in enumerate([1, 2, 3, 4]):  # noqa: N806
-                if new_row_terrain[f'DS{DS}_dist'] == 'normal':
-                    DS_probs[DS_id] = norm.cdf(
-                        wind_speeds,
-                        loc=new_row_terrain[f'DS{DS}_mu'],
-                        scale=new_row_terrain[f'DS{DS}_sig'],
-                    )
-                else:
-                    DS_probs[DS_id] = norm.cdf(
-                        np.log(wind_speeds),
-                        loc=np.log(new_row_terrain[f'DS{DS}_mu']),
-                        scale=new_row_terrain[f'DS{DS}_sig'],
-                    )
-
-            # The losses for DS4 are calculated based on outcomes at the
-            # highest wind speeds
-            L_max = frag_df_arch_terrain.loc[  # noqa: N806
-                frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'  # noqa: PLR2004
-            ].to_numpy()[0]
-            DS4_max = DS_probs[3][-1]  # noqa: N806
-
-            L4 = np.round(min(L_max / DS4_max, 1.0), decimals=3)  # noqa: N806
-
-            # if L4 < 0.75:
-            #    print(index, terrain_id, L_max, DS4_max, L4)
-
-            for i in range(3):
-                DS_probs[i] = DS_probs[i] - DS_probs[i + 1]
-
-            # define the loss error measures to be minimized
-
-            def SSE_loss(params, res_type='SSE'):  # noqa: N802
-                loss_ratios = params.copy()
-
-                # assume 1.0 for DS4
-                loss_ratios = np.append(loss_ratios, L4)  # noqa: B023
-
-                L_est = np.sum(loss_ratios * DS_probs.T, axis=1)  # noqa: B023, N806
-
-                # the error is the difference between reference and estimated losses
-                eps = (L_est - L_ref)[:max_speed_id]  # noqa: B023
-
-                if res_type == 'SSE':
-                    # calculate the sum of squared errors across wind speeds
-                    SSE = sum(eps**2.0)  # noqa: N806
-
-                elif res_type == 'max abs eps':
-                    return max(abs(eps))
-
-                return SSE
-
-            cons = (
-                {'type': 'ineq', 'fun': lambda x: x[1] - x[0] - 0.002},
-                {'type': 'ineq', 'fun': lambda x: x[2] - x[1] - 0.002},
-                {'type': 'ineq', 'fun': lambda x: L4 - x[2] - 0.002},  # noqa: B023
-            )
-
-            res = minimize(
-                SSE_loss,
-                [0.02, 0.1, 0.44],
-                bounds=((0.001, 1.0), (0.001, 1.0), (0.001, 1.0)),
-                constraints=cons,
-            )
-
-            res.x = np.round(res.x, decimals=3)
-
-            # store MSE @ optimized location in fun
-            res.fun = np.sqrt(SSE_loss(res.x) / len(L_ref))
-            # and hijack maxcv to store max eps within res object
-            res.maxcv = SSE_loss(res.x, res_type='max abs eps')
-
-            # if (res.fun > 0.1) or (res.maxcv > 0.2):
-            #    print(index, terrain_id, max_speed_id_mod)
-            #    print(res.x, res.fun, res.maxcv)
-
-            # store the parameters
-            new_row_terrain['L1'] = res.x[0]
-            new_row_terrain['L2'] = res.x[1]
-            new_row_terrain['L3'] = res.x[2]
-            new_row_terrain['L4'] = L4
-            new_row_terrain['L_original'] = multilinear_CDF_parameters
-            new_row_terrain['L_fit'] = res.fun
-            new_row_terrain['L_meps'] = res.maxcv
-
-            # display(new_row.to_frame().T)
-
-            rows.append(new_row_terrain.to_frame().T)
+                rows.append(new_row_terrain.to_frame().T)
 
         main_df = pd.concat(rows, axis=0, ignore_index=True)
 
@@ -1138,11 +1138,55 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
 
         out_df.loc[index, 'ID'] = '.'.join(bldg_chars.astype(str))
 
-    # the out_df we have in the end is the direct input to generate the
-    # damage and loss data
-    # -> so that we don't have to go through fitting everything every time
-    # -> we need to re-generate the data for some reason
-    out_df.head(10)
+        # We also need to make sure the raw multilinear CDF parameters are valid
+        # and convert them to the format used in Pelicun
+
+        for LS_i in range(1, 5):  # noqa: N806
+
+            cdf_y, cdf_x = [np.array(vals.split(','), dtype=float) 
+                            for vals in row[f'DS{LS_i}_original'].split('|')]
+
+            exclude_bottom = np.where(cdf_y<0.0)[0]
+            if len(exclude_bottom) > 0:
+                cdf_y = cdf_y[exclude_bottom[-1]+1:]
+                cdf_x = cdf_x[exclude_bottom[-1]+1:]
+
+                print('Invalid values trimmed from bottom')
+
+            exclude_top = np.where(cdf_y>1.0)[0]
+            if len(exclude_top) > 0:
+                cdf_y = cdf_y[:exclude_top[-1]]
+                cdf_x = cdf_x[:exclude_top[-1]]
+
+                print('Invalid values trimmed from top')
+
+            bottom_list = np.where(cdf_y<=np.nextafter(0.0,1))[0] 
+            if len(bottom_list) > 0:
+                cdf_y = cdf_y[bottom_list[-1]:]
+                cdf_x = cdf_x[bottom_list[-1]:]
+            else:
+                cdf_y = np.insert(cdf_y,0,0.0)
+                cdf_x = np.insert(cdf_x,0,cdf_x[0]-5.0)
+                # This assumes wind speeds are provided at 5 mph increments
+
+            top_list = np.where(cdf_y>=np.nextafter(1.0,-1))[0]
+            if len(top_list) > 0:
+                cdf_y = cdf_y[:top_list[0]+1]
+                cdf_x = cdf_x[:top_list[0]+1]
+            else:
+                cdf_y = np.append(cdf_y,1.0)
+                cdf_x = np.append(cdf_x,cdf_x[-1]+5.0)
+                # This assumes wind speeds are provided at 5 mph increments
+
+            if not np.array_equal(np.sort(cdf_x), cdf_x):
+                print("Invalid CDF_x values")
+
+            if not np.array_equal(np.sort(cdf_y), cdf_y):
+                print("Invalid CDF_y values")
+
+            out_df.loc[index, f'DS{LS_i}_original'] = '|'.join([
+                ','.join(cdf_x.astype(int).astype(str)),','.join(cdf_y.astype(str))
+                ])
 
     # ## Export to CSV file
 
