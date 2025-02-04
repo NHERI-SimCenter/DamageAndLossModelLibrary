@@ -351,6 +351,24 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
                         .. raw:: html
                            :file: {comp}.html
 
+                        """
+                        )
+
+                        if 'Reference' in comp_meta:
+                            comp_refs = [
+                                dlml_meta['References'][ref]
+                                for ref in comp_meta['Reference']
+                            ]
+                            comp_refs_str = '|\n'
+
+                            for ref in comp_refs:
+                                comp_refs_str += f'| {ref}\n'
+
+                            comp_contents += comp_refs_str
+
+                        comp_contents += dedent(
+                            """
+
                         .. raw:: html
 
                            <hr>
