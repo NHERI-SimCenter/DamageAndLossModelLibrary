@@ -140,10 +140,13 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
     """Generate damage parameter documentation."""
     doc_folder = doc_folder / 'damage'
 
-    resource_folder = Path()
+    damage_dlmls = []
 
-    # get all the available damage dlmls
-    damage_dlmls = list(resource_folder.rglob('fragility.csv'))
+    for hazard_name in ['seismic', 'hurricane', 'flood']:
+        resource_folder = Path(f'./{hazard_name}')
+
+        # get all the available damage dlmls
+        damage_dlmls.extend(list(resource_folder.rglob('fragility.csv')))
 
     # create the main index file
     damage_index_contents = dedent(
@@ -391,8 +394,13 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
 
     doc_folder = doc_folder / 'repair'
 
-    # get all the available repair dlmls
-    repair_dlmls = list(resource_folder.rglob('consequence_repair.csv'))
+    repair_dlmls = []
+
+    for hazard_name in ['seismic', 'hurricane', 'flood']:
+        resource_folder = Path(f'./{hazard_name}')
+
+        # get all the available consequence repair dlmls
+        repair_dlmls.extend(list(resource_folder.rglob('consequence_repair.csv')))
 
     # create the main index file
     repair_index_contents = dedent(
