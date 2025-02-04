@@ -8,7 +8,7 @@ import pandas as pd
 def create_fragility_files():
     """Create the standard CSV and JSON files for the library."""
     # open the raw input data file
-    input_data = pd.read_csv('fragility_source.csv')
+    input_data = pd.read_csv('source_fragility.csv')
 
     # start by creating the fragility CSV
     fragility_cols = [
