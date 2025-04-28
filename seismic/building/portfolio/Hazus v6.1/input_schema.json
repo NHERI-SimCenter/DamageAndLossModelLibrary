@@ -1,0 +1,146 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"type": "object",
+	"properties": {
+		"StructureType":{
+			"type": "string",
+			"enum": [
+				"W1", "W2", 
+				"S1", "S2", "S3", "S4", "S5", 
+				"C1", "C2", "C3", 
+				"PC1", "PC2", 
+				"RM1", "RM2", "URM", 
+				"MH"
+			]
+		},
+		"DesignLevel":{
+			"type": "string",
+			"enum": [
+				"Pre-Code",
+				"Low-Code",
+				"Moderate-Code",
+				"High-Code",
+				"Very High-Code",
+				"Severe-Code"
+			]
+		},
+		"HeightClass":{
+			"type": ["string","null"],
+			"enum": [
+				"Low-Rise",
+				"Mid-Rise",
+				"High-Rise",
+				null
+			]
+		},
+		"GroundFailure": {
+			"type": "boolean"
+		},
+		"FoundationType":{
+			"type": "string",
+			"enum": [
+				"Shallow",
+				"Deep"
+			]
+		},
+		"OccupancyClass": {
+			"type": "string",
+			"enum": [
+				"RES1","RES2","RES3","RES4","RES5","RES6",
+				"COM1","COM2","COM3","COM4","COM5","COM6","COM7","COM8","COM9","COM10",
+				"IND1","IND2","IND3","IND4","IND5","IND6",
+				"AGR1",
+				"REL1",
+				"GOV1","GOV2",
+				"EDU1","EDU2"
+			]
+		}
+	},
+	"required": ["StructureType","DesignLevel"],
+	"allOf": [
+		{
+			"if": {
+				"properties": {
+					"StructureType": {
+						"enum": [
+							"S1", "S2", "S4", "S5", 
+							"C1", "C2", "C3", 
+							"PC2", 
+							"RM1", "RM2", "URM"
+						]
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"HeightClass": {
+						"type": "string"						
+					}
+				},
+				"required": ["HeightClass"]
+			},
+			"else": {
+				"properties": {
+					"HeightClass": {
+						"type": "null"
+					}
+				},
+				"required": []
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"StructureType": {
+						"enum": [
+							"RM1", "URM"
+						]
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"HeightClass": {
+						"enum": [
+							"Low-Rise",
+							"Mid-Rise"
+						]
+					}
+				}
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"StructureType": {
+						"enum": [
+							"S5", "C3", "URM"
+						]
+					}
+				}
+			},
+			"then": {
+				"properties": {
+					"DesignLevel": {
+						"enum": [
+							"Pre-Code",
+							"Low-Code"
+						]
+					}
+				}
+			}
+		},
+		{
+			"if": {
+				"properties": {
+					"GroundFailure":{
+						"const": true
+					}
+				}
+			},
+			"then": {
+				"required": ["FoundationType"]
+			}
+		}
+	]
+}
