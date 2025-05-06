@@ -11,6 +11,7 @@ import json
 import shutil
 import warnings
 from copy import deepcopy
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -238,21 +239,28 @@ def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D103, N802, PLR0912, PLR0915, FBT002
+def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurricane/building/portfolio/Hazus v5.1 coupled/'):  # noqa: C901, D103, N802, PLR0912, PLR0915, FBT002
+    
+    root_path = Path(root_path)
+
+    # The original path points to the folder where the original parameters are
+    # stored.
+    original_path = root_path.parent / "Hazus v5.1 original/"
+
     if fit_parameters:
         # Load RAW Hazus data
 
         raw_data_path = (
-            'hurricane/building/portfolio/Hazus v5.1/data_sources/input_files/'
+            root_path / 'data_sources/input_files/'
         )
 
         # read bldg data
 
         bldg_df_ST = pd.read_excel(  # noqa: N806
-            raw_data_path + 'huListOfWindBldgTypes.xlsx', index_col=0
+            raw_data_path / 'huListOfWindBldgTypes.xlsx', index_col=0
         )
         bldg_df_EF = pd.read_excel(  # noqa: N806
-            raw_data_path + 'huListOfWindBldgTypesEF.xlsx', index_col=0
+            raw_data_path / 'huListOfWindBldgTypesEF.xlsx', index_col=0
         )
 
         # make sure the column headers are in sync
@@ -266,9 +274,9 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
 
         # read fragility data
 
-        frag_df_ST = pd.read_excel(raw_data_path + 'huDamLossFun.xlsx')  # noqa: N806
+        frag_df_ST = pd.read_excel(raw_data_path / 'huDamLossFun.xlsx')  # noqa: N806
 
-        frag_df_EF = pd.read_excel(raw_data_path + 'huDamLossFunEF.xlsx')  # noqa: N806
+        frag_df_EF = pd.read_excel(raw_data_path / 'huDamLossFunEF.xlsx')  # noqa: N806
         frag_df_EF['wbID'] += max(bldg_df_ST.index)
 
         frag_df = pd.concat([frag_df_ST, frag_df_EF], axis=0, ignore_index=True)
@@ -829,11 +837,11 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
         main_df = pd.concat(rows, axis=0, ignore_index=True)
 
         main_df.to_csv(
-            'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv'
+            root_path+'data_sources/fitted_parameters.csv'
         )
 
     main_df = pd.read_csv(
-        'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv',
+        root_path / 'data_sources/fitted_parameters.csv',
         index_col=0,
         low_memory=False,
         dtype = {
@@ -1277,9 +1285,9 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
         for df_i in (df_db_original, df_db_fit)
     ]
 
-    df_db_fit.to_csv('hurricane/building/portfolio/Hazus v5.1/fragility_fitted.csv')
+    df_db_fit.to_csv(root_path / 'fragility.csv')
     df_db_original.to_csv(
-        'hurricane/building/portfolio/Hazus v5.1/fragility_unmodified.csv'
+        original_path / 'fragility.csv'
     )
 
     # initialize the output loss table
@@ -1324,33 +1332,21 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
     df_db_fit = df_db_fit.set_index('ID').sort_index().convert_dtypes()
 
     df_db_fit.to_csv(
-        'hurricane/building/portfolio/Hazus v5.1/consequence_repair_fitted.csv'
+        root_path / 'consequence_repair.csv'
     )
     df_db_original.to_csv(
-        'hurricane/building/portfolio/Hazus v5.1/loss_repair_unmodified.csv'
+        original_path / 'loss_repair.csv'
     )
 
 
 def create_Hazus_HU_metadata_files(  # noqa: C901, N802
-    source_file: str = (
-        'hurricane/building/portfolio/Hazus v5.1/fragility_fitted.csv'
-    ),
-    meta_file: str = (
-        'hurricane/building/portfolio/Hazus v5.1/'
-        'data_sources/input_files/metadata.json'
-    ),
-    target_meta_file_damage: str = (
-        'hurricane/building/portfolio/Hazus v5.1/fragility_fitted.json'
-    ),
-    target_meta_file_loss: str = (
-        'hurricane/building/portfolio/Hazus v5.1/consequence_repair_fitted.json'
-    ),
-    target_meta_file_damage_original: str = (
-        'hurricane/building/portfolio/Hazus v5.1/fragility_unmodified.json'
-    ),
-    target_meta_file_loss_original: str = (
-        'hurricane/building/portfolio/Hazus v5.1/loss_repair_unmodified.json'
-    ),
+    source_file: str = 'fragility.csv',
+    meta_file: str = 'data_sources/input_files/metadata.json',
+    target_meta_file_damage: str = 'fragility.json',
+    target_meta_file_loss: str = 'consequence_repair.json',
+    target_meta_file_damage_original: str = 'fragility.json',
+    target_meta_file_loss_original: str = 'loss_repair.json',
+    root_path = 'hurricane/building/portfolio/Hazus v5.1 coupled/'
 ) -> None:
     """
     Create a database metadata file for the HAZUS Hurricane fragilities.
@@ -1378,6 +1374,8 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
     target_meta_file_loss_original: string
         Path where the unmodified loss function metadata should be
         saved. A json file is expected.
+    root_path: string
+        Path to the root folder - everything above is relative to this.
 
     """
     # Procedure Overview:
@@ -1395,6 +1393,20 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
     # -> ID turns to -h text by combining the description of the asset class
     # from the `primary chunks` and the decoded description of the
     # following chunks using the dictionaries.
+
+    root_path = Path(root_path)
+
+    # The original path points to the folder where the original parameters are
+    # stored.
+    original_path = Path(root_path).parent / "Hazus v5.1 original/"
+
+    # Combine paths:
+    source_file = root_path / source_file
+    meta_file = root_path / meta_file
+    target_meta_file_damage = root_path / target_meta_file_damage
+    target_meta_file_loss = root_path / target_meta_file_loss
+    target_meta_file_damage_original = original_path / target_meta_file_damage_original
+    target_meta_file_loss_original = original_path / target_meta_file_loss_original
 
     #
     # (1) Dictionaries
