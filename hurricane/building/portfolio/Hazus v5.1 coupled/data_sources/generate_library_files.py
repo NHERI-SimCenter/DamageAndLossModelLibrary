@@ -836,6 +836,9 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True):  # noqa: C901, D
         'hurricane/building/portfolio/Hazus v5.1/data_sources/fitted_parameters.csv',
         index_col=0,
         low_memory=False,
+        dtype = {
+            "joist_spacing": str
+        }
     )
 
     # Prepare the Damage and Loss Model Data Files
