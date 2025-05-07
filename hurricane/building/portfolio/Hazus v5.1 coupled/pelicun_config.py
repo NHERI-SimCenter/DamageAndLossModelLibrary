@@ -224,9 +224,9 @@ def get_feature(feature, building_info):
         number_of_units = building_info.get("NumberOfUnits")
 
         if number_of_units == 1:
-            return "Single"
+            return "sgl"
         else:
-            return "Multi"
+            return "mlt"
 
     elif feature == 'joist_spacing':
         return building_info.get("JoistSpacing")
