@@ -8,7 +8,7 @@ The following collections are available in our Damage and Loss Model Library:
 .. toctree::
    :maxdepth: 1
 
-   seismic/transportation_network/portfolio/Hazus v5.1/index
-   seismic/building/portfolio/Hazus v5.1/index
    seismic/building/portfolio/Hazus v6.1/index
+   seismic/building/portfolio/Hazus v5.1/index
    seismic/building/component/FEMA P-58 2nd Edition/index
+   seismic/transportation_network/portfolio/Hazus v5.1/index
