@@ -70,10 +70,10 @@ def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
 
     # Roof Deck Attachment - Alternative Description
     if 'rdast' in descr:
-        parsed_data['roof_deck_attch'] = 'st'  # standard
+        parsed_data['roof_deck_attch'] = 'std'  # standard
         descr = descr.replace('rdast', '')
     elif 'rdasu' in descr:
-        parsed_data['roof_deck_attch'] = 'su'  # superior
+        parsed_data['roof_deck_attch'] = 'sup'  # superior
         descr = descr.replace('rdasu', '')
 
     # Roof-Wall Connection
@@ -837,7 +837,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
         main_df = pd.concat(rows, axis=0, ignore_index=True)
 
         main_df.to_csv(
-            root_path+'data_sources/fitted_parameters.csv'
+            root_path/'data_sources/fitted_parameters.csv'
         )
 
     main_df = pd.read_csv(
@@ -1429,8 +1429,8 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
         '6s': '6s roof deck nails.',
         '8d': '8d roof deck nails.',
         '8s': '8s roof deck nails.',
-        'st': 'Standard roof deck attachment.',
-        'su': 'Superior roof deck attachment.',
+        'std': 'Standard roof deck attachment.',
+        'sup': 'Superior roof deck attachment.',
         'null': 'Missing roof deck attachment information.',
     }
 
