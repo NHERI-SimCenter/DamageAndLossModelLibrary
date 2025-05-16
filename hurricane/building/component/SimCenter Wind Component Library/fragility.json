@@ -80,6 +80,7 @@
   },
   "RWC.001": {
     "Description": "Roof-Wall Connection - General fragility",
+    "Comments": "The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft) and a roof type of 6:12 slope gable roof without overhang. Roof sheathing panels are nailed at a spacing of 150mm at the edges. The steel fasteners used are assumed to be hot-dip galvanized to ASTM A153, Class D, with a zinc coating thickness of 43 mm. Panels are nailed to structural trusses or rafters made of spruce-pine-fir (SPF) lumber, spaced 0.6m on center with a specific gravity of 0.36. \n\nLIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -95,6 +96,7 @@
   },
   "RWC.straps.001": {
     "Description": "Roof-Wall Connection with Straps",
+    "Comments": "The modeled failure mode related to this component would be the failure of the roof-to-wall connection under wind-induced uplift loads, potentially leading to roof deck or even complete roof failure, which are defined within the damage state descriptions. The installation of roof-to-wall straps is considered a mitigation option within the HAZUS-MH model, specifically for single-family residential buildings that currently have toe-nailed roof-wall connections. \n\nLIMITATIONS: A limitation of this capacity function, as with other component resistances in the model, lies in the fact that these are statistical representations based on laboratory data, engineering analyses, and sometimes engineering judgment. Additionally, they do not give a detailed physical description of the straps themselves, such as their dimensions, material, or specific installation methods. The focus is on the functional capacity of the connection rather than a precise engineering specification of the strap itself. The underlying details of what constitutes a \"strap\" in the model's calculations are likely based on engineering standards and typical construction practices, but these specifics are not elaborated upon in the provided excerpts.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -110,10 +112,12 @@
   },
   "RWC.toe_nail.001a": {
     "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "This roof-to-wall connection configuration with toenails, specifically represents a connections with old lumber. The modeled failure mode for this connection type would be exceedance of its uplift resistance by wind-induced forces, potentially leading to roof sheathing failure or even roof detachment, which can compromise the building envelope.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to acknowledge that this is a simplified representation of a complex structural element, and its actual performance in a hurricane can be influenced by factors such as the age and condition of the lumber, the quality and installation of the nails, and the specific geometry of the connection, none of which are detailed in relation to a specific test series within these sources.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
-      "peng2013"
+      "peng2013",
+      "gurley2005"
     ],
     "LimitStates": {
       "LS1": {
@@ -125,6 +129,7 @@
   },
   "RWC.toe_nail.001b": {
     "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "This configuration, consisting of three 8d common toenails connecting a rafter (38x140 mm, #2 grade Southern yellow pine or spruce-pine-fir) to a double top plate (two 38x89 mm, #2 grade Southern yellow pine) at a 3:12 pitch, was investigated in individual connection Test Series 1 and System Tests 1 and 2. In individual tests, the predominant failure mode observed was nail pullout from the top plate. In system tests, where multiple rafters were toe-nailed to a continuous top plate, load-sharing behavior was observed, with the equivalent rafter load exceeding the capacity of the individual toe-nailed connection. However, the ultimate capacities remained low compared to connections with straps or adhesives. \n\nLIMITATIONS: The high variability observed in individual tests suggests a limitation in the predictability of these connections. Results are specific to the tested materials and setup.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -141,6 +146,7 @@
   },
   "RWC.toe_nail.001c": {
     "Description": "Roof-Wall Connection with Toe nails",
+    "Comments": "For configurations with toe-nailed roof-to-wall connections, the model would consider the uplift resistance provided by this type of connection. The failure mode modeled would be the failure of the toe-nailed connection under wind-induced uplift forces, which could lead to subsequent damage such as roof cover loss, roof deck failure, or even more severe structural damage. The model implicitly recognizes the relative weakness of toe-nailed connections compared to strapped connections by considering the installation of straps as a mitigation measure for buildings with existing toe-nailed connections.\n\nLIMITATIONS: The provided sources do not explicitly detail specific test series for roof-to-wall connections using toe nails. The capacity function for toe-nailed connections is a statistical representation of their resistance, derived from laboratory test data, engineering analyses, and potentially engineering judgment, as mentioned for other building components. A key limitation of this capacity function is that it represents a simplified model of a complex failure mechanism and relies on statistical data which may not fully capture the variability in actual construction practices and the performance of toe-nailed connections under diverse hurricane conditions.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -156,7 +162,7 @@
   },
   "RWC.toe_nail.straps.001": {
     "Description": "Roof-Wall Connection with Toe nails and a small strap inside",
-    "Comments": "The small strap is located on the inside of the wall.",
+    "Comments": "This connection (Test Series 2) was constructed with three 8d common toenails between the rafter and top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the inside face of the wall. Materials used included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were strap tear, rafter split, and nail pullout of the rafter. \n\nLIMITATIONS: Placing the strap on the inside reduces uplift capacity compared to an outside installation due to the resulting eccentric load path and rotation of the top plate. High variability was also noted for this configuration",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -172,7 +178,7 @@
   },
   "RWC.toe_nail.straps.002": {
     "Description": "Roof-Wall Connection with Toe nails and a small strap outside",
-    "Comments": "The small strap is located on the outside of the wall.",
+    "Comments": "This connection (Test Series 3) involved three 8d common toenails between the rafter and top plate, combined with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside face of the wall. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were strap tear and nail pullout of the rafter. \n\nLIMITATIONS: While showing higher uplift capacity than when the strap was installed on the inside, the capacity data is specific to the idealized test setup. Manufacturers' published values may differ due to their reliance on ASTM testing procedures and safety factors",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -188,7 +194,7 @@
   },
   "RWC.toe_nail.straps.003": {
     "Description": "Roof-Wall Connection with Toe nails and small straps on both sides",
-    "Comments": "Two small straps are installed, one inside and one outside of the wall.",
+    "Comments": "This setup (Test Series 4) consisted of three 8d common toenails between the rafter and top plate, supplemented by two small 18-gauge galvanized steel straps, each secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, with one strap installed on the inside and the other on the outside. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes reported for this configuration were strap tear and nail pullout of the top plate. \n\nLIMITATIONS: While this configuration significantly increased the uplift capacity compared to a single strap, the capacity was not doubled, suggesting potential interaction or non-linear behavior. System tests (9 and 11) using this configuration did not reach rafter-to-top plate connection failure, as failure occurred in the crib wall. This limits the ultimate capacity data specifically for the connection itself in those system tests.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -204,7 +210,7 @@
   },
   "RWC.toe_nail.straps.004": {
     "Description": "Roof-Wall Connection with Toe nails, a small strap outside, and plywood nailed.",
-    "Comments": "The small strap is located on the outside of the wall. A plywood is nailed to the plate on the wall as spacer.",
+    "Comments": "This connection (Test Series 5) consisted of three 8d common toenails between the rafter and a double top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside. Additionally, a plywood spacer was placed between the strap and the top plate and was nailed to the top plate. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was strap tear. \n\nLIMITATIONS: While this test aimed to simulate the presence of wall sheathing, the plywood spacer implementation might not fully replicate a full wall sheathing system. Results are from individual tests and may not directly translate to behavior in a continuous roof system.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -220,7 +226,7 @@
   },
   "RWC.toe_nail.straps.005": {
     "Description": "Roof-Wall Connection with Toe nails, a small strap outside, and plywood not nailed.",
-    "Comments": "The small strap is located on the outside of the wall. A plywood is installed as spacer but not nailed to the plate on the wall.",
+    "Comments": "This connection (Test Series 6) involved three 8d common toenails between the rafter and a double top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside face. A plywood spacer was placed between the strap and the top plate but was not nailed. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was nail pullout. \n\nLIMITATIONS: The un-nailed plywood spacer's effect might differ from a fully integrated wall sheathing system. Results are specific to individual connection tests and may not fully represent performance in a continuous roof system where load-sharing occurs",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -236,7 +242,7 @@
   },
   "RWC.toe_nail.straps.006": {
     "Description": "Roof-Wall Connection with Toe nails and a large strap outside",
-    "Comments": "The large strap is located on the outside of the wall.",
+    "Comments": "This connection (Test Series 7) consisted of three 8d common toenails between the rafter and top plate, combined with a large 18-gauge galvanized steel strap secured with eight short 8d common nails into the rafter and eight 8d common nails into the top plate. Importantly, the rafter was sandwiched between two small flanges bent from the metal plate. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed for this configuration was nail pullout of the top plate. \n\nLIMITATIONS: These results are derived from individual connection tests, and the behavior and capacity might differ in a full roof system due to potential load-sharing effects and the presence of sheathing and other structural elements",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -252,7 +258,7 @@
   },
   "RWC.toe_nail.straps.007": {
     "Description": "Roof-Wall Connection with Toe nails and a large strap inside",
-    "Comments": "The large strap is located on the inside of the wall.",
+    "Comments": "This connection (Test Series 8) was constructed with three 8d common toenails between the rafter and top plate, along with a new large 16-gauge galvanized steel strap secured with eight short 8d common nails into the rafter and eight short 8d common nails into the wall stud (spruce-pine-fir). The strap was located on the inside of the wall. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed for this configuration was block shear in wood. \n\nLIMITATIONS: A key limitation is that this 'new large strap' provided a direct connection from the rafter to the wall stud, bypassing the top plate for the strap's nailed connection, which is different from typical large straps. As with individual tests, results may not fully reflect the behavior in a complete roof system",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -268,7 +274,7 @@
   },
   "RWC.epoxy.001": {
     "Description": "Roof-Wall Connection with Epoxy.",
-    "Comments": "Epoxy set for one week, no toe nails used.",
+    "Comments": "This connection (Test Series 9), using no toe nails, was formed by applying a two-part, hand-mixed epoxy paste between the rafter and top plate, allowed to cure for one week. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split and top-plate fibers pulling apart. \n\nLIMITATIONS: High variability was observed, suggesting that the capacity of such connections may be less predictable compared to mechanically fastened connections. Performance of adhesive connections can be sensitive to factors such as surface preparation, application technique, and environmental conditions during curing.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -284,7 +290,7 @@
   },
   "RWC.toe_nail.epoxy.001": {
     "Description": "Roof-Wall Connection with Toe nails and epoxy.",
-    "Comments": "Epoxy set for one week, toe-nailed when epoxy is wet.",
+    "Comments": "This connection (Test Series 10) was created by applying a two-part, hand-mixed epoxy paste between the rafter and top plate, with three 8d common toenails installed while the epoxy was still wet. The epoxy cured for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was top-plate fibers pulling apart. \n\nLIMITATIONS: A key limitation is the relatively high variability in the capacity data. The specific interaction between the wet epoxy and the toenails and reliance on this particular epoxy product and application method are factors to consider.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -300,7 +306,7 @@
   },
   "RWC.toe_nail.epoxy.002": {
     "Description": "Roof-Wall Connection with Toe nails and epoxy on small wood blocks.",
-    "Comments": "Epoxy set for one week.",
+    "Comments": "This connection (Test Series 11, exploring retrofit) involved three 8d common toenails along with epoxy applied to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The epoxy was allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split, tearing of top-plate and rafter fibers, failure of wood block fibers, and epoxy failure. \n\nLIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with shorter or longer cure times or different epoxy products.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -316,7 +322,7 @@
   },
   "RWC.toe_nail.epoxy.003": {
     "Description": "Roof-Wall Connection with Toe nails and epoxy on small wood blocks.",
-    "Comments": "Epoxy set for 24-48 hrs.",
+    "Comments": "This connection (Test Series 12, exploring retrofit) included three 8d common toenails along with epoxy applied to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The epoxy was allowed to set for only 24 to 48 hours before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split, tearing of top-plate and rafter fibers, failure of wood block fibers, and epoxy failure. \n\nLIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. The short 24-48 hour epoxy set time is specific; performance might vary with different products or cure durations. As with other individual tests, results might not entirely reflect the behavior within a complete roof system",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -332,7 +338,7 @@
   },
   "RWC.toe_nail.epoxy.004": {
     "Description": "Roof-Wall Connection with Toe nails and epoxy on large wood blocks.",
-    "Comments": "Epoxy set for one week.",
+    "Comments": "This connection (Test Series 13, exploring retrofit) consisted of three 8d common toenails in addition to epoxy applied to large wood blocks (approximately 89 x 89 mm, made of pressure-treated Southern pine) installed between the rafter and top plate. The epoxy was allowed to cure for one week before the connections were tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were top-plate and rafter fiber tear, and wood block split. \n\nLIMITATIONS: Use of standardized large wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with various epoxy products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system. Note that larger blocks were shown to provide greater capacity than small blocks",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -348,7 +354,7 @@
   },
   "RWC.toe_nail.adhesive.001": {
     "Description": "Roof-Wall Connection with Toe nails and acrylic adhesive",
-    "Comments": "Adhesive set for one week, toe-nailed when adhesive is wet.",
+    "Comments": "This connection (Test Series 14) involved the application of a two-part acrylic adhesive through a diffuser nozzle between the rafter and top plate, immediately followed by the installation of three 8d common toenails while the adhesive was wet. The adhesive was allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were toe-nail pullout and top-plate fiber tear. \n\nLIMITATIONS: Results are based on individual connection tests and may not reflect behavior in a complete roof system where load-sharing and sheathing presence influence performance. Performance is specific to the type of acrylic adhesive, application method (wet toenails), and cure time.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -364,7 +370,7 @@
   },
   "RWC.toe_nail.adhesive.002": {
     "Description": "Roof-Wall Connection with Toe nails and soaked with acrylic adhesive.",
-    "Comments": "Wood first soaked for 24 hours, then toe-nailed when adhesive is wet.",
+    "Comments": "In this setup (Test Series 15), the wood members (rafter and top plate) were first soaked for 24 hours prior to the application of a two-part acrylic adhesive through a diffuser nozzle between them, followed immediately by the installation of three 8d common toenails while the adhesive was wet. The adhesive was then allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were toe-nail pullout and top-plate fiber tear. \n\nLIMITATIONS: A significant limitation is the high coefficient of variation, indicating considerable variability in the uplift capacity achieved. Soaking the wood makes these results specific to this pre-treatment. Results may not fully capture the behavior within a complete roof system.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -380,7 +386,7 @@
   },
   "RWC.toe_nail.adhesive.003": {
     "Description": "Roof-Wall Connection with Toe nails and acrylic adhesive on small wood blocks.",
-    "Comments": "Adhesive set for one week.",
+    "Comments": "This connection (Test Series 16, exploring retrofit) was created using three 8d common toenails along with a two-part acrylic adhesive applied through a diffuser nozzle to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The acrylic adhesive was allowed to set for one week before the connections were tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were rafter split and top-plate fiber tear. \n\nLIMITATIONS: Use of standardized small wood blocks as a retrofit method might not fully represent actual applications. One-week adhesive set time is specific; performance might differ with various acrylic adhesive products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -396,6 +402,7 @@
   },
   "RWC.toe_nail.adhesive.004": {
     "Description": "Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead",
+    "Comments": "This connection (Test Series 17) consisted of three 8d common toenails along with a 1/4 inch bead of acrylic adhesive applied on either side of the rafter along the top plate. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was wood fiber failure. \n\nLIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity. Performance is specific to the application of a 1/4 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system.\"",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -411,6 +418,7 @@
   },
   "RWC.toe_nail.adhesive.005": {
     "Description": "Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead",
+    "Comments": "This connection (Test Series 18 in reed1997) was created using three 8d common toenails along with a 1/2 inch bead of acrylic adhesive applied on either side of the rafter along the top plate. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was wood fiber failure. \n\nLIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity, and the relatively high coefficient of variation indicates considerable variability. Performance is specific to the application of a 1/2 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -426,6 +434,7 @@
   },
   "RWC.toe_nail.adhesive.006": {
     "Description": "Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.",
+    "Comments": "This connection (Test Series 19) consisted of three 8d common toenails along with a foaming polyurethane adhesive product generously applied using an air pressure gun to form large fillets. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was adhesive shear. \n\nLIMITATIONS: The small sample size of only three specimens might not provide a comprehensive understanding of the connection's behavior and could affect the statistical significance of the results. Performance is specific to the foaming polyurethane adhesive product and application method. As with individual tests, results may not entirely reflect the behavior within a complete roof system",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -441,11 +450,12 @@
   },
   "RWC.toe_nail.002": {
     "Description": "Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.",
-    "Comments": "Simpson Strong-Tie H10 metal connector installed on every truss.",
+    "Comments": "The roof-to-wall connection using toenails and a Simpson Strong-Tie H10 metal connector on every truss. The capacity function for this connection type is based on tests conducted at Clemson University. The primary modeled failure mode for this reinforced connection is the exceedance of this higher uplift resistance by wind-induced forces, which, if it occurs, could still lead to roof uplift or detachment and compromise the building envelope. The Simpson Strong-Tie H10 metal connector is identified as a component used to enhance roof-to-wall connections, thereby increasing their resistance to uplift forces. The use of the Simpson Strong-Tie H10 connector is also associated with the \"Reinforce roof-to-wall connections (IBHS Gold)\" retrofit strategy. This strategy aims to provide an uplift connection for each roof support member to the bearing wall by adding metal connectors, described generally as \"hurricane straps\".\n\nLIMITATIONS: Limitations of this capacity function are not explicitly detailed in the provided text, but it is important to note that as it is based on unpublished tests at a specific university and assumes the use of Simpson Strong-Tie H10 connectors on every truss, its accuracy in representing the full spectrum of real-world installations and conditions might be limited by variations in construction quality, specific connector installation details, and the age and condition of the underlying structural members, none of which are addressed within these sources. They also do not offer a detailed description of the connector's physical characteristics or design.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
-      "peng2013"
+      "peng2013",
+      "gurley2005"
     ],
     "LimitStates": {
       "LS1": {
@@ -584,6 +594,7 @@
   },
   "WIN.regular.001a": {
     "Description": "Regular Window - General fragility",
+    "Comments": "This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this window configuration is implicitly defined as the exceedance of its pressure resistance by wind loads calculated for a given hurricane scenario.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to recognize that the model likely uses a simplified representation of window performance, and the actual failure of standard windows in a hurricane can be influenced by a variety of factors not detailed in these excerpts, such as the size and type of the window, the quality of installation, and the impact of wind-borne debris (though debris damage is modeled separately in the study).",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -662,6 +673,7 @@
   },
   "WIN.regular.003a": {
     "Description": "Window on a 1-story building",
+    "Comments": "This capacity function is used for all windows on a 1-story home. Modeled failure modes for windows on a 1-story building include pressure-induced breakage when the wind load exceeds the window's pressure resistance.\n\nLIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 1-story structure. The specific size of the window described in the capacity function is not mentioned.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -677,6 +689,7 @@
   },
   "WIN.regular.003b": {
     "Description": "Window on a 2-story building with 2 large windows",
+    "Comments": "This capacity function is used for all windows on a 2-story home. Modeled failure modes for windows on a 2-story building include pressure-induced breakage when the wind load exceeds the window's pressure resistance.\n\nLIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 2-story structure. The specific size of the window described in the capacity function is not mentioned.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -692,6 +705,7 @@
   },
   "WIN.impact_resistant.001": {
     "Description": "Impact resistant laminated glass window",
+    "Comments": "This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this window configuration is implicitly defined as the exceedance of its pressure resistance by wind loads calculated for a given hurricane scenario. This configuration aims to increase window and door pressure capacity (resistance). Furthermore, for homes with this type of opening protection, the probability of debris damage is reduced. \n\nLIMITATIONS: Limitations of this capacity function are not explicitly detailed within these excerpts, but it's reasonable to assume that the FPHLM likely relies on standardized testing procedures and that real-world performance could still vary based on factors such as the specific manufacturer and installation quality of the impact-resistant windows, which are not elaborated upon in this dissertation.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -708,6 +722,7 @@
   },
   "WIN.shutters.001": {
     "Description": "Regular Window with Hurricane Shutters",
+    "Comments": "This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). Implementing engineered shutters on all windows is also identified as a key component of the \"Protect openings (shutters) (IBHS Silver)\" retrofit strategy, which aims to increase the window and door pressure capacity (resistance). Additionally, for this configuration, the probability of debris damage is modeled as zero. The modeled failure mode for this window protection type would be the wind load exceeding the pressure resistance of the shutters, leading to potential failure of the window. \n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed within the provided text, but it is important to acknowledge that real-world performance can vary based on the specific type and quality of the shutters, the installation methods, and the condition of the underlying window frame, details of which are not elaborated upon.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -724,6 +739,7 @@
   },
   "WIN.regular.004": {
     "Description": "Regular Window 1/8 in 20 sq ft",
+    "Comments": "The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft). A window size of 3.72 square meters with 3.175 mm thick glass was considered. The authors used the American Society of Testing and Materials (ASTM) Standard E-1300 (2003) to specify the strength of annealed glass under uniform wind pressure with a 60-second load duration and a probability of failure of 0.0081. The 60-second resistance value of annealed glass was converted to a 3-second strength by multiplying it by a factor of 1.21. This conversion was done to be consistent with the 3-second gust wind used in ASCE-7. A Weibull cumulative distribution was used to model the probability of failure of the brittle material (glass) under uniform wind load. This is stated as a common model for defining the failure probability of brittle materials like glass. The coefficient of variation of glass strength was noted to be in the range of 0.22\u20130.27.\n\nLIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Finally, the fragility analysis mentions a specific window size (3.175 mm in 3.72 sq. m window) for calibration. Glass strength is known to be dependent on size and boundary conditions, so the fragility derived for this specific size might not be directly applicable to windows of different dimensions or mounting.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -859,6 +875,7 @@
   },
   "DOOR.regular.001a": {
     "Description": "Regular Door - General fragility",
+    "Comments": "This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this door configuration is implicitly defined as the wind load exceeding its pressure resistance during a simulated hurricane event.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to understand that the model likely uses a simplified representation of door performance, and the actual failure of standard doors can be influenced by factors such as the door material, the quality of the doorframe and its attachment to the wall, the locking mechanisms, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -891,6 +908,7 @@
   },
   "DOOR.regular.001c": {
     "Description": "Regular Door - General fragility",
+    "Comments": "This is the general representation of an entry door's resistance to pressure. The primary failure mode considered for the entry door under pressure is pressure-induced failure, where the wind load acting on the door exceeds its resistance capacity, leading to a breach in the building envelope. This breach can then affect internal pressure and potentially lead to further damage.\n\nLIMITATIONS: The sources do not explicitly specify the precise type of entry door that this capacity function considers. Resistances assigned to building components are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. The model might not fully capture the wide variety of entry door constructions, installation methods, the condition of the door and its frame, or the complexities of failure mechanisms that can occur during a hurricane. Further, the lack of specific details about the test series or engineering analyses used to derive these fragility parameters for entry doors, makes it difficult to fully understand the empirical or analytical basis for this specific capacity function.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -906,6 +924,7 @@
   },
   "DOOR.impact_resistant.001": {
     "Description": "Impact resistant laminated glass door",
+    "Comments": "This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). This configuration aims to increase the pressure capacity of entry doors. The modeled failure mode is implicitly the exceedance of this higher pressure resistance by wind loads during a hurricane. \n\nLIMITATIONS: Limitations of this capacity function are not explicitly detailed in these excerpts, but it's reasonable to infer that the FPHLM likely uses standardized testing procedures, and the actual performance of impact-resistant doors in a hurricane could still be influenced by factors not fully captured in the model, such as the specifics of the door construction, the quality of frame installation, and the performance under prolonged or cyclic loading, which are not elaborated upon.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -922,6 +941,7 @@
   },
   "DOOR.shutters.001": {
     "Description": "Regular Door with Hurricane Shutters",
+    "Comments": "This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). This configuration aims to increase the pressure capacity of entry doors. The modeled failure mode is implicitly the exceedance of this higher pressure resistance by wind loads during a hurricane. Furthermore, the model assumes that with hurricane shutters on doors, the probability of debris damage is zero.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed within the provided text, but it is important to acknowledge that real-world performance can vary based on the specific type and quality of the shutters, the installation methods used for doors, and the condition of the underlying door frame, details of which are not elaborated upon in these excerpts.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -938,6 +958,7 @@
   },
   "DOOR.glass.001a": {
     "Description": "Glass Door",
+    "Comments": "The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft). The authors used the American Society of Testing and Materials (ASTM) Standard E-1300 (2003) to specify the strength of annealed glass under uniform wind pressure with a 60-second load duration and a probability of failure of 0.0081. The 60-second resistance value of annealed glass was converted to a 3-second strength by multiplying it by a factor of 1.21. This conversion was done to be consistent with the 3-second gust wind used in ASCE-7. A Weibull cumulative distribution was used to model the probability of failure of the brittle material (glass) under uniform wind load. This is stated as a common model for defining the failure probability of brittle materials like glass. The coefficient of variation of glass strength was noted to be in the range of 0.22\u20130.27.\n\nLIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. ASTM E-1300 specifies strength under uniform wind pressure. However, wind loads on buildings, especially during hurricanes, can be complex and non-uniform, with varying pressures at different locations on a window. Additionally, while the study converts the 60-second resistance to a 3-second strength, this conversion factor is an approximation. The actual behavior of glass under different load durations might be more complex. Additionally, the strength of weathered or previously damaged glass might be lower than that of new, undamaged glass, which is likely what ASTM standards address. This time-dependent degradation of glass strength is not explicitly considered.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -953,6 +974,7 @@
   },
   "DOOR.glass.001b": {
     "Description": "Glass Door",
+    "Comments": "This is the general representation of single-glazed (SG) doors as a specific type of door component, which would include sliding glass doors with single panes of glass. The primary failure mode considered for the SG door under pressure is pressure-induced failure, where the wind load acting on the door exceeds its resistance capacity, leading to a breach in the building envelope. This breach can then affect internal pressure and potentially lead to further damage.\n\nLIMITATIONS: The sources do not explicitly specify the precise type of entry door that this capacity function considers. Resistances assigned to building components are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. The model might not fully capture the wide variety of SG door constructions, installation methods, the condition of the door and its frame, or the complexities of failure mechanisms that can occur during a hurricane. Further, the lack of specific details about the test series or engineering analyses used to derive these fragility parameters for SG doors, makes it difficult to fully understand the empirical or analytical basis for this specific capacity function.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -986,6 +1008,7 @@
   },
   "DOOR.garage.001a": {
     "Description": "Garage Door - General fragility",
+    "Comments": "This garage door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The primary modeled failure mode is the garage door being torn from its tracks when wind load exceeds its resistance capacity.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The failure can be influenced by factors such as the material and construction of the door, the strength and attachment of the supporting tracks and hardware, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1033,6 +1056,7 @@
   },
   "DOOR.garage.001d": {
     "Description": "Garage Door - General fragility",
+    "Comments": "This fragility describes the interior garage door. It is treated as a general category of a door located within the building, separating the garage space from the interior living space.\n\nLIMITATIONS: The capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door. The model also does not explicitly account for potential vulnerabilities related to the door's connection to the surrounding wall or the operation of the garage door mechanism itself under pressure loads.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1048,6 +1072,7 @@
   },
   "DOOR.garage.002": {
     "Description": "Wind-reinforced Garage Door",
+    "Comments": "This enhanced garage door capacity is assumed 1.5 times the standard capacity. The modeled failure mode for this garage door configuration is implicitly defined as the wind load exceeding its pressure resistance during a simulated hurricane event. \n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is reasonable to assume that this is a simplified representation. The actual performance of reinforced garage doors can be influenced by the specifics of the reinforcement, the quality of installation of tracks and hardware, and potential impact from debris (though debris impact is modeled separately for openings), details of which are not elaborated upon in these excerpts.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1081,6 +1106,7 @@
   },
   "DOOR.garage.004a": {
     "Description": "Double garage door - weak",
+    "Comments": "The primary modeled failure mode for this component is pressure-induced failure, occurring when the wind load exceeds this resistance, leading to a breach in the building envelope. The distinction between \"weak\" and \"strong\" double garage doors within the model implies different construction or reinforcement levels, resulting in varying resistance to pressure, although the sources do not provide specific details on the structural characteristics that differentiate them. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. \n\nLIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1096,6 +1122,7 @@
   },
   "DOOR.garage.004b": {
     "Description": "Double garage door - strong",
+    "Comments": "The primary modeled failure mode for this component is pressure-induced failure, occurring when the wind load exceeds this resistance, leading to a breach in the building envelope. The distinction between \"weak\" and \"strong\" double garage doors within the model implies different construction or reinforcement levels, resulting in varying resistance to pressure, although the sources do not provide specific details on the structural characteristics that differentiate them. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. \n\nLIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1111,6 +1138,7 @@
   },
   "WSH.001a": {
     "Description": "Wall Sheathing - General fragility",
+    "Comments": "This is a general representation of wall sheathing resistance. Wall sheathing is included as a modeled structural component in the HAZUS-MH hurricane model. The primary failure mode modeled for this component is sheathing being torn off. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. \n\nLIMITATIONs: This capacity function represents a simplification of real-world wall sheathing behavior under wind loads. ",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1288,6 +1316,7 @@
   },
   "WALL.002a": {
     "Description": "Wall - Unreinforced gable ends",
+    "Comments": "This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The specific failure mode for this component is Shear failure. \n\nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1304,6 +1333,7 @@
   },
   "WALL.002b": {
     "Description": "Wall - Unreinforced gable ends",
+    "Comments": "This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Out of plane failure. \n\nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1320,6 +1350,7 @@
   },
   "WALL.002c": {
     "Description": "Wall - Unreinforced gable ends",
+    "Comments": "This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Uplift.\n \nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1336,6 +1367,7 @@
   },
   "WALL.003a": {
     "Description": "Wall - Reinforced gable ends",
+    "Comments": "This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Shear failure. This type is categorized as \"Reinforced\", implying an enhanced resistance compared to \"Unreinforced\" walls, and potentially corresponding to a retrofit strategy. \n\nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the \"Reinforcement\", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1352,6 +1384,7 @@
   },
   "WALL.003b": {
     "Description": "Wall - Reinforced gable ends",
+    "Comments": "This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Out of plane failure. This type is categorized as \"Reinforced\", implying an enhanced resistance compared to \"Unreinforced\" walls, and potentially corresponding to a retrofit strategy. \n\nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the \"Reinforcement\", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1368,6 +1401,7 @@
   },
   "WALL.003c": {
     "Description": "Wall - Reinforced gable ends",
+    "Comments": "This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Uplift. This type is categorized as \"Reinforced\", implying an enhanced resistance compared to \"Unreinforced\" walls, and potentially corresponding to a retrofit strategy. \n\nLIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the \"Reinforcement\", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1414,6 +1448,7 @@
   },
   "RSH.nails.6d.6p12.001": {
     "Description": "Roof Sheathing with 6d nails @ 6/12 in",
+    "Comments": "The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, a \"6d\" nail is a common size, typically referring to a nail that is approximately 2 inches (51 mm) long. The diameter will also be standardized for this penny size. While the HAZUS model uses \"6d\" to differentiate between different roof sheathing connection strengths. 6/12 in nail pattern for roof sheathing with 6d nails most likely means that the 6d nails are spaced 6 inches apart along one axis of the sheathing panel and 12 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure.\n\nLIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1429,6 +1464,7 @@
   },
   "RSH.nails.8d.6p6.001": {
     "Description": "Roof Sheathing with 8d nails @ 6/6 in",
+    "Comments": "The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, an \"8d\" nail is a common size, typically referring to a nail that is approximately 2 1/2 inches (64 mm) long, and it will have a standardized diameter for this penny size. While the HAZUS model uses \"8d\" to differentiate between different roof sheathing connection strengths. 6/6 in nail pattern for roof sheathing with 8d nails most likely means that the 8d nails are spaced 6 inches apart along one axis of the sheathing panel and 6 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure.\n\nLIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1475,6 +1511,7 @@
   },
   "RSH.nails.8d.6p12.001c": {
     "Description": "Roof Sheathing with 8d nails @ 6/12 in",
+    "Comments": "The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, an \"8d\" nail is a common size, typically referring to a nail that is approximately 2 1/2 inches (64 mm) long, and it will have a standardized diameter for this penny size. While the HAZUS model uses \"8d\" to differentiate between different roof sheathing connection strengths. 6/12 in nail pattern for roof sheathing with 6d nails most likely means that the 8d nails are spaced 6 inches apart along one axis of the sheathing panel and 12 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure. \n\nLIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1877,6 +1914,7 @@
   },
   "RCOV.tiles.clay.001": {
     "Description": "Roof Cover - Clay Tiles with adhesive",
+    "Comments": "The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft) and a roof type of 6:12 slope gable roof without overhang. The roof covering is adhesive-set clay tiles with parameters determined from published experimental studies.\n\nLIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Though the tiles' fragilities are taken from experimental data, the authors acknowledge this is among the first to analyze the fragility of clay tiles, implying there's a lack of established comparison data.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -1938,6 +1976,7 @@
   },
   "RCOV.shingles.001a": {
     "Description": "Roof Cover - Asphalt Shingles with standard construction and nail pattern",
+    "Comments": "This asphalt shingle capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this roof cover configuration is implicitly defined as the wind load exceeding its resistance capacity during a simulated hurricane event. \n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and age of shingles, the quality and spacing of nails, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
@@ -2002,6 +2041,7 @@
   },
   "RCOV.shingles.002c": {
     "Description": "Roof Cover - Shingles with high-wind construction and nail pattern",
+    "Comments": "In the context of this study, high wind shingles refer to a specific type of roof covering that is designed and installed to offer enhanced resistance to wind damage compared to standard asphalt shingles. Their installation involves a \"high wind nail pattern\" with 6 nails per shingle, which contributes to their increased resistance. This asphalt shingle capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this roof cover configuration is implicitly defined as the wind load exceeding its resistance capacity during a simulated hurricane event.\n\nLIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and quality of high wind shingles, the precise application of the 6-nail pattern, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.",
     "SuggestedComponentBlockSize": "1 EA",
     "RoudUpToIntegerQuantity": 1,
     "Reference": [
