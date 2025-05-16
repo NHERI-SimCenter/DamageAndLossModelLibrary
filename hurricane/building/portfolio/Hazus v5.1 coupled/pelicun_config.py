@@ -641,10 +641,10 @@ def auto_populate(aim):
     
     model_id += "." + ".".join([f"{get_feature(feature, gi)}" for feature in model_features])
 
-    print("- - - - - - - MODEL ID - - - - - - -")
-    print("current: ", model_id)
-    print("original:", gi['Wind_Config'])
-    print("- - - - - - - MODEL ID - - - - - - -")
+    #print("- - - - - - - MODEL ID - - - - - - -")
+    #print("current: ", model_id)
+    #print("original:", gi.get('Wind_Config',''))
+    #print("- - - - - - - MODEL ID - - - - - - -")
 
     comp = pd.DataFrame(
         {f"{model_id}": ["ea", 1, 1, 1, "N/A"]},  # noqa: E241
@@ -654,14 +654,14 @@ def auto_populate(aim):
     dl_ap = {
         "Asset": {
             "ComponentAssignmentFile": "CMP_QNT.csv",
-            "ComponentDatabase": "Hazus Hurricane",
+            "ComponentDatabase": "Hazus Hurricane Wind - Buildings",
             "NumberOfStories": 1,  # there is only one component in a building-level resolution
         },
         "Damage": {"DamageProcess": "Hazus Hurricane"},
         "Demands": {},
         "Losses": {
             "Repair": {
-                "ConsequenceDatabase": "Hazus Hurricane",
+                "ConsequenceDatabase": "Hazus Hurricane Wind - Buildings",
                 "MapApproach": "Automatic",
                 "DecisionVariables": {
                     "Cost": True,
