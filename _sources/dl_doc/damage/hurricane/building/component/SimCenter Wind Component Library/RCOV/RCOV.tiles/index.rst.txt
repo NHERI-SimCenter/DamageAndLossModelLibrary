@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RCOV.tiles.clay.001</b> | Roof Cover - Clay Tiles with adhesive</p>
    <div>
 
+| The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft) and a roof type of 6:12 slope gable roof without overhang. The roof covering is adhesive-set clay tiles with parameters determined from published experimental studies.
+| LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Though the tiles' fragilities are taken from experimental data, the authors acknowledge this is among the first to analyze the fragility of clay tiles, implying there's a lack of established comparison data.
 
 
 Suggested Block Size: 1 EA 

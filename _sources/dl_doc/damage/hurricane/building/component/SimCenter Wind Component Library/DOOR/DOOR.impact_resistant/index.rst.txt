@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>DOOR.impact_resistant.001</b> | Impact resistant laminated glass door</p>
    <div>
 
+| This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). This configuration aims to increase the pressure capacity of entry doors. The modeled failure mode is implicitly the exceedance of this higher pressure resistance by wind loads during a hurricane. 
+| LIMITATIONS: Limitations of this capacity function are not explicitly detailed in these excerpts, but it's reasonable to infer that the FPHLM likely uses standardized testing procedures, and the actual performance of impact-resistant doors in a hurricane could still be influenced by factors not fully captured in the model, such as the specifics of the door construction, the quality of frame installation, and the performance under prolonged or cyclic loading, which are not elaborated upon.
 
 
 Suggested Block Size: 1 EA 

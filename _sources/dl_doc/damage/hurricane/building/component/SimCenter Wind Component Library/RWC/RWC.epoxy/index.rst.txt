@@ -15,7 +15,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.epoxy.001</b> | Roof-Wall Connection with Epoxy.</p>
    <div>
 
-| Epoxy set for one week, no toe nails used.
+| This connection (Test Series 9), using no toe nails, was formed by applying a two-part, hand-mixed epoxy paste between the rafter and top plate, allowed to cure for one week. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split and top-plate fibers pulling apart. 
+| LIMITATIONS: High variability was observed, suggesting that the capacity of such connections may be less predictable compared to mechanically fastened connections. Performance of adhesive connections can be sensitive to factors such as surface preparation, application technique, and environmental conditions during curing.
 
 
 Suggested Block Size: 1 EA 

@@ -19,6 +19,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.001</b> | Roof-Wall Connection - General fragility</p>
    <div>
 
+| The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft) and a roof type of 6:12 slope gable roof without overhang. Roof sheathing panels are nailed at a spacing of 150mm at the edges. The steel fasteners used are assumed to be hot-dip galvanized to ASTM A153, Class D, with a zinc coating thickness of 43 mm. Panels are nailed to structural trusses or rafters made of spruce-pine-fir (SPF) lumber, spaced 0.6m on center with a specific gravity of 0.36. 
+| LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios.
 
 
 Suggested Block Size: 1 EA 

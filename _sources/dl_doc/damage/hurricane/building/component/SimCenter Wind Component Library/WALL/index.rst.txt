@@ -127,6 +127,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.002a</b> | Wall - Unreinforced gable ends</p>
    <div>
 
+| This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The specific failure mode for this component is Shear failure. 
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data.
 
 
 Suggested Block Size: 1 EA 
@@ -150,6 +152,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.002b</b> | Wall - Unreinforced gable ends</p>
    <div>
 
+| This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Out of plane failure. 
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
 Suggested Block Size: 1 EA 
@@ -173,6 +177,9 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.002c</b> | Wall - Unreinforced gable ends</p>
    <div>
 
+| This component represents an unreinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Uplift.
+|  
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
 Suggested Block Size: 1 EA 
@@ -196,6 +203,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.003a</b> | Wall - Reinforced gable ends</p>
    <div>
 
+| This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Shear failure. This type is categorized as "Reinforced", implying an enhanced resistance compared to "Unreinforced" walls, and potentially corresponding to a retrofit strategy. 
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
 Suggested Block Size: 1 EA 
@@ -219,6 +228,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.003b</b> | Wall - Reinforced gable ends</p>
    <div>
 
+| This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Out of plane failure. This type is categorized as "Reinforced", implying an enhanced resistance compared to "Unreinforced" walls, and potentially corresponding to a retrofit strategy. 
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
 Suggested Block Size: 1 EA 
@@ -242,6 +253,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WALL.003c</b> | Wall - Reinforced gable ends</p>
    <div>
 
+| This component represents a reinforced gable end wall within the structural damage simulation model developed for the Florida Public Hurricane Loss Model (FPHLM). Gable end walls are modeled as part of the overall wall damage framework, which uses unity checks to determine potential failure. The model predicts failure based on wind-induced loads exceeding the component's capacity, with the specific failure mode for this component being Uplift. This type is categorized as "Reinforced", implying an enhanced resistance compared to "Unreinforced" walls, and potentially corresponding to a retrofit strategy. 
+| LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
 Suggested Block Size: 1 EA 

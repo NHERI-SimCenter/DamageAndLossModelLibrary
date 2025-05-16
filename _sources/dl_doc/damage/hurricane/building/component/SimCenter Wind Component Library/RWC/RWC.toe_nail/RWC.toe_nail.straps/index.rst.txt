@@ -12,7 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.001</b> | Roof-Wall Connection with Toe nails and a small strap inside</p>
    <div>
 
-| The small strap is located on the inside of the wall.
+| This connection (Test Series 2) was constructed with three 8d common toenails between the rafter and top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the inside face of the wall. Materials used included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were strap tear, rafter split, and nail pullout of the rafter. 
+| LIMITATIONS: Placing the strap on the inside reduces uplift capacity compared to an outside installation due to the resulting eccentric load path and rotation of the top plate. High variability was also noted for this configuration
 
 
 Suggested Block Size: 1 EA 
@@ -35,7 +36,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.002</b> | Roof-Wall Connection with Toe nails and a small strap outside</p>
    <div>
 
-| The small strap is located on the outside of the wall.
+| This connection (Test Series 3) involved three 8d common toenails between the rafter and top plate, combined with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside face of the wall. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were strap tear and nail pullout of the rafter. 
+| LIMITATIONS: While showing higher uplift capacity than when the strap was installed on the inside, the capacity data is specific to the idealized test setup. Manufacturers' published values may differ due to their reliance on ASTM testing procedures and safety factors
 
 
 Suggested Block Size: 1 EA 
@@ -58,7 +60,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.003</b> | Roof-Wall Connection with Toe nails and small straps on both sides</p>
    <div>
 
-| Two small straps are installed, one inside and one outside of the wall.
+| This setup (Test Series 4) consisted of three 8d common toenails between the rafter and top plate, supplemented by two small 18-gauge galvanized steel straps, each secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, with one strap installed on the inside and the other on the outside. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes reported for this configuration were strap tear and nail pullout of the top plate. 
+| LIMITATIONS: While this configuration significantly increased the uplift capacity compared to a single strap, the capacity was not doubled, suggesting potential interaction or non-linear behavior. System tests (9 and 11) using this configuration did not reach rafter-to-top plate connection failure, as failure occurred in the crib wall. This limits the ultimate capacity data specifically for the connection itself in those system tests.
 
 
 Suggested Block Size: 1 EA 
@@ -81,7 +84,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.004</b> | Roof-Wall Connection with Toe nails, a small strap outside, and plywood nailed.</p>
    <div>
 
-| The small strap is located on the outside of the wall. A plywood is nailed to the plate on the wall as spacer.
+| This connection (Test Series 5) consisted of three 8d common toenails between the rafter and a double top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside. Additionally, a plywood spacer was placed between the strap and the top plate and was nailed to the top plate. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was strap tear. 
+| LIMITATIONS: While this test aimed to simulate the presence of wall sheathing, the plywood spacer implementation might not fully replicate a full wall sheathing system. Results are from individual tests and may not directly translate to behavior in a continuous roof system.
 
 
 Suggested Block Size: 1 EA 
@@ -104,7 +108,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.005</b> | Roof-Wall Connection with Toe nails, a small strap outside, and plywood not nailed.</p>
    <div>
 
-| The small strap is located on the outside of the wall. A plywood is installed as spacer but not nailed to the plate on the wall.
+| This connection (Test Series 6) involved three 8d common toenails between the rafter and a double top plate, along with a small 18-gauge galvanized steel strap secured with five short 8d common nails into the rafter and five 8d common nails into the top plate, installed on the outside face. A plywood spacer was placed between the strap and the top plate but was not nailed. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was nail pullout. 
+| LIMITATIONS: The un-nailed plywood spacer's effect might differ from a fully integrated wall sheathing system. Results are specific to individual connection tests and may not fully represent performance in a continuous roof system where load-sharing occurs
 
 
 Suggested Block Size: 1 EA 
@@ -127,7 +132,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.006</b> | Roof-Wall Connection with Toe nails and a large strap outside</p>
    <div>
 
-| The large strap is located on the outside of the wall.
+| This connection (Test Series 7) consisted of three 8d common toenails between the rafter and top plate, combined with a large 18-gauge galvanized steel strap secured with eight short 8d common nails into the rafter and eight 8d common nails into the top plate. Importantly, the rafter was sandwiched between two small flanges bent from the metal plate. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed for this configuration was nail pullout of the top plate. 
+| LIMITATIONS: These results are derived from individual connection tests, and the behavior and capacity might differ in a full roof system due to potential load-sharing effects and the presence of sheathing and other structural elements
 
 
 Suggested Block Size: 1 EA 
@@ -150,7 +156,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.straps.007</b> | Roof-Wall Connection with Toe nails and a large strap inside</p>
    <div>
 
-| The large strap is located on the inside of the wall.
+| This connection (Test Series 8) was constructed with three 8d common toenails between the rafter and top plate, along with a new large 16-gauge galvanized steel strap secured with eight short 8d common nails into the rafter and eight short 8d common nails into the wall stud (spruce-pine-fir). The strap was located on the inside of the wall. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed for this configuration was block shear in wood. 
+| LIMITATIONS: A key limitation is that this 'new large strap' provided a direct connection from the rafter to the wall stud, bypassing the top plate for the strap's nailed connection, which is different from typical large straps. As with individual tests, results may not fully reflect the behavior in a complete roof system
 
 
 Suggested Block Size: 1 EA 

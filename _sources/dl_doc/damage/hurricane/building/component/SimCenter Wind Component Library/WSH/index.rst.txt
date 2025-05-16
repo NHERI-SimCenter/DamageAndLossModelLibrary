@@ -15,6 +15,8 @@ The following models are available:
    <p class="dl_comp_name"><b>WSH.001a</b> | Wall Sheathing - General fragility</p>
    <div>
 
+| This is a general representation of wall sheathing resistance. Wall sheathing is included as a modeled structural component in the HAZUS-MH hurricane model. The primary failure mode modeled for this component is sheathing being torn off. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. 
+| LIMITATIONs: This capacity function represents a simplification of real-world wall sheathing behavior under wind loads. 
 
 
 Suggested Block Size: 1 EA 

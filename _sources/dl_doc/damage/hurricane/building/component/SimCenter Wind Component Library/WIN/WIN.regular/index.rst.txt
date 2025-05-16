@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>WIN.regular.001a</b> | Regular Window - General fragility</p>
    <div>
 
+| This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this window configuration is implicitly defined as the exceedance of its pressure resistance by wind loads calculated for a given hurricane scenario.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to recognize that the model likely uses a simplified representation of window performance, and the actual failure of standard windows in a hurricane can be influenced by a variety of factors not detailed in these excerpts, such as the size and type of the window, the quality of installation, and the impact of wind-borne debris (though debris damage is modeled separately in the study).
 
 
 Suggested Block Size: 1 EA 
@@ -125,6 +127,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WIN.regular.003a</b> | Window on a 1-story building</p>
    <div>
 
+| This capacity function is used for all windows on a 1-story home. Modeled failure modes for windows on a 1-story building include pressure-induced breakage when the wind load exceeds the window's pressure resistance.
+| LIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 1-story structure. The specific size of the window described in the capacity function is not mentioned.
 
 
 Suggested Block Size: 1 EA 
@@ -147,6 +151,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WIN.regular.003b</b> | Window on a 2-story building with 2 large windows</p>
    <div>
 
+| This capacity function is used for all windows on a 2-story home. Modeled failure modes for windows on a 2-story building include pressure-induced breakage when the wind load exceeds the window's pressure resistance.
+| LIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 2-story structure. The specific size of the window described in the capacity function is not mentioned.
 
 
 Suggested Block Size: 1 EA 
@@ -169,6 +175,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>WIN.regular.004</b> | Regular Window 1/8 in 20 sq ft</p>
    <div>
 
+| The study uses a light-frame residential building archetype to assess hurricane damage in Port St. Lucie, FL. Damage analysis described in this study does not explicitly model or account for the effects of wind-borne debris. The archetype building is 8.5m (28 ft) by 12.2m (40 ft), one story, with a mean roof height of 3.8m (12.5 ft). A window size of 3.72 square meters with 3.175 mm thick glass was considered. The authors used the American Society of Testing and Materials (ASTM) Standard E-1300 (2003) to specify the strength of annealed glass under uniform wind pressure with a 60-second load duration and a probability of failure of 0.0081. The 60-second resistance value of annealed glass was converted to a 3-second strength by multiplying it by a factor of 1.21. This conversion was done to be consistent with the 3-second gust wind used in ASCE-7. A Weibull cumulative distribution was used to model the probability of failure of the brittle material (glass) under uniform wind load. This is stated as a common model for defining the failure probability of brittle materials like glass. The coefficient of variation of glass strength was noted to be in the range of 0.22–0.27.
+| LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Finally, the fragility analysis mentions a specific window size (3.175 mm in 3.72 sq. m window) for calibration. Glass strength is known to be dependent on size and boundary conditions, so the fragility derived for this specific size might not be directly applicable to windows of different dimensions or mounting.
 
 
 Suggested Block Size: 1 EA 

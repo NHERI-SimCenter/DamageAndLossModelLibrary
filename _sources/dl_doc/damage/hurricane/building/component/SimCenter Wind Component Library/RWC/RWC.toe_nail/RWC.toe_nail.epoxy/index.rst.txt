@@ -12,7 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.001</b> | Roof-Wall Connection with Toe nails and epoxy.</p>
    <div>
 
-| Epoxy set for one week, toe-nailed when epoxy is wet.
+| This connection (Test Series 10) was created by applying a two-part, hand-mixed epoxy paste between the rafter and top plate, with three 8d common toenails installed while the epoxy was still wet. The epoxy cured for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was top-plate fibers pulling apart. 
+| LIMITATIONS: A key limitation is the relatively high variability in the capacity data. The specific interaction between the wet epoxy and the toenails and reliance on this particular epoxy product and application method are factors to consider.
 
 
 Suggested Block Size: 1 EA 
@@ -35,7 +36,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.002</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p>
    <div>
 
-| Epoxy set for one week.
+| This connection (Test Series 11, exploring retrofit) involved three 8d common toenails along with epoxy applied to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The epoxy was allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split, tearing of top-plate and rafter fibers, failure of wood block fibers, and epoxy failure. 
+| LIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with shorter or longer cure times or different epoxy products.
 
 
 Suggested Block Size: 1 EA 
@@ -58,7 +60,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.003</b> | Roof-Wall Connection with Toe nails and epoxy on small wood blocks.</p>
    <div>
 
-| Epoxy set for 24-48 hrs.
+| This connection (Test Series 12, exploring retrofit) included three 8d common toenails along with epoxy applied to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The epoxy was allowed to set for only 24 to 48 hours before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed were rafter split, tearing of top-plate and rafter fibers, failure of wood block fibers, and epoxy failure. 
+| LIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. The short 24-48 hour epoxy set time is specific; performance might vary with different products or cure durations. As with other individual tests, results might not entirely reflect the behavior within a complete roof system
 
 
 Suggested Block Size: 1 EA 
@@ -81,7 +84,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.epoxy.004</b> | Roof-Wall Connection with Toe nails and epoxy on large wood blocks.</p>
    <div>
 
-| Epoxy set for one week.
+| This connection (Test Series 13, exploring retrofit) consisted of three 8d common toenails in addition to epoxy applied to large wood blocks (approximately 89 x 89 mm, made of pressure-treated Southern pine) installed between the rafter and top plate. The epoxy was allowed to cure for one week before the connections were tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were top-plate and rafter fiber tear, and wood block split. 
+| LIMITATIONS: Use of standardized large wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with various epoxy products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system. Note that larger blocks were shown to provide greater capacity than small blocks
 
 
 Suggested Block Size: 1 EA 

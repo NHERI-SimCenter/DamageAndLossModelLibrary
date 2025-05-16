@@ -18,6 +18,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.toe_nail.001a</b> | Roof-Wall Connection with Toe nails</p>
    <div>
 
+| This roof-to-wall connection configuration with toenails, specifically represents a connections with old lumber. The modeled failure mode for this connection type would be exceedance of its uplift resistance by wind-induced forces, potentially leading to roof sheathing failure or even roof detachment, which can compromise the building envelope.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to acknowledge that this is a simplified representation of a complex structural element, and its actual performance in a hurricane can be influenced by factors such as the age and condition of the lumber, the quality and installation of the nails, and the specific geometry of the connection, none of which are detailed in relation to a specific test series within these sources.
 
 
 Suggested Block Size: 1 EA 
@@ -29,6 +31,7 @@ Suggested Block Size: 1 EA
 
 |
 | Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
 
 
 .. raw:: html
@@ -40,6 +43,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.001b</b> | Roof-Wall Connection with Toe nails</p>
    <div>
 
+| This configuration, consisting of three 8d common toenails connecting a rafter (38x140 mm, #2 grade Southern yellow pine or spruce-pine-fir) to a double top plate (two 38x89 mm, #2 grade Southern yellow pine) at a 3:12 pitch, was investigated in individual connection Test Series 1 and System Tests 1 and 2. In individual tests, the predominant failure mode observed was nail pullout from the top plate. In system tests, where multiple rafters were toe-nailed to a continuous top plate, load-sharing behavior was observed, with the equivalent rafter load exceeding the capacity of the individual toe-nailed connection. However, the ultimate capacities remained low compared to connections with straps or adhesives. 
+| LIMITATIONS: The high variability observed in individual tests suggests a limitation in the predictability of these connections. Results are specific to the tested materials and setup.
 
 
 Suggested Block Size: 1 EA 
@@ -63,6 +68,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.001c</b> | Roof-Wall Connection with Toe nails</p>
    <div>
 
+| For configurations with toe-nailed roof-to-wall connections, the model would consider the uplift resistance provided by this type of connection. The failure mode modeled would be the failure of the toe-nailed connection under wind-induced uplift forces, which could lead to subsequent damage such as roof cover loss, roof deck failure, or even more severe structural damage. The model implicitly recognizes the relative weakness of toe-nailed connections compared to strapped connections by considering the installation of straps as a mitigation measure for buildings with existing toe-nailed connections.
+| LIMITATIONS: The provided sources do not explicitly detail specific test series for roof-to-wall connections using toe nails. The capacity function for toe-nailed connections is a statistical representation of their resistance, derived from laboratory test data, engineering analyses, and potentially engineering judgment, as mentioned for other building components. A key limitation of this capacity function is that it represents a simplified model of a complex failure mechanism and relies on statistical data which may not fully capture the variability in actual construction practices and the performance of toe-nailed connections under diverse hurricane conditions.
 
 
 Suggested Block Size: 1 EA 
@@ -85,7 +92,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.002</b> | Roof-Wall Connection with Toe nails and Simpson Strong-Tie H10.</p>
    <div>
 
-| Simpson Strong-Tie H10 metal connector installed on every truss.
+| The roof-to-wall connection using toenails and a Simpson Strong-Tie H10 metal connector on every truss. The capacity function for this connection type is based on tests conducted at Clemson University. The primary modeled failure mode for this reinforced connection is the exceedance of this higher uplift resistance by wind-induced forces, which, if it occurs, could still lead to roof uplift or detachment and compromise the building envelope. The Simpson Strong-Tie H10 metal connector is identified as a component used to enhance roof-to-wall connections, thereby increasing their resistance to uplift forces. The use of the Simpson Strong-Tie H10 connector is also associated with the "Reinforce roof-to-wall connections (IBHS Gold)" retrofit strategy. This strategy aims to provide an uplift connection for each roof support member to the bearing wall by adding metal connectors, described generally as "hurricane straps".
+| LIMITATIONS: Limitations of this capacity function are not explicitly detailed in the provided text, but it is important to note that as it is based on unpublished tests at a specific university and assumes the use of Simpson Strong-Tie H10 connectors on every truss, its accuracy in representing the full spectrum of real-world installations and conditions might be limited by variations in construction quality, specific connector installation details, and the age and condition of the underlying structural members, none of which are addressed within these sources. They also do not offer a detailed description of the connector's physical characteristics or design.
 
 
 Suggested Block Size: 1 EA 
@@ -97,6 +105,7 @@ Suggested Block Size: 1 EA
 
 |
 | Peng, J. 2013. Modeling natural disaster risk management: Integrating the roles of insurance and retrofit and multiple stakeholder perspectives. Ph.D. United States -- Delaware: University of Delaware.
+| Gurley, K., J. P. Pinelli, C. Subramanian, A. Cope, L. Zhang, J. Murphree, A. Artiles, P. Misra, S. Gulati, and E. Simiu. 2005. Florida Public Hurricane Loss Projection Model engineering team final report volume II: Predicting the vulnerability of typical residential buildings to hurricane damage. Technical report. Florida International University: International Hurricane Research Center.
 
 
 .. raw:: html

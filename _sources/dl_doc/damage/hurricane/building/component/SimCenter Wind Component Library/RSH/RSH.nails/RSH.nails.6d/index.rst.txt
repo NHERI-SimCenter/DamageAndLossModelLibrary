@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RSH.nails.6d.6p12.001</b> | Roof Sheathing with 6d nails @ 6/12 in</p>
    <div>
 
+| The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, a "6d" nail is a common size, typically referring to a nail that is approximately 2 inches (51 mm) long. The diameter will also be standardized for this penny size. While the HAZUS model uses "6d" to differentiate between different roof sheathing connection strengths. 6/12 in nail pattern for roof sheathing with 6d nails most likely means that the 6d nails are spaced 6 inches apart along one axis of the sheathing panel and 12 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure.
+| LIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.
 
 
 Suggested Block Size: 1 EA 

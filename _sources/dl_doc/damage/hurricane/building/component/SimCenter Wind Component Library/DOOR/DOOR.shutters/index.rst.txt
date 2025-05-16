@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>DOOR.shutters.001</b> | Regular Door with Hurricane Shutters</p>
    <div>
 
+| This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). This configuration aims to increase the pressure capacity of entry doors. The modeled failure mode is implicitly the exceedance of this higher pressure resistance by wind loads during a hurricane. Furthermore, the model assumes that with hurricane shutters on doors, the probability of debris damage is zero.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed within the provided text, but it is important to acknowledge that real-world performance can vary based on the specific type and quality of the shutters, the installation methods used for doors, and the condition of the underlying door frame, details of which are not elaborated upon in these excerpts.
 
 
 Suggested Block Size: 1 EA 

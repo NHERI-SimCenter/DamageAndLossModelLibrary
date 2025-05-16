@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RCOV.shingles.001a</b> | Roof Cover - Asphalt Shingles with standard construction and nail pattern</p>
    <div>
 
+| This asphalt shingle capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this roof cover configuration is implicitly defined as the wind load exceeding its resistance capacity during a simulated hurricane event. 
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and age of shingles, the quality and spacing of nails, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
 Suggested Block Size: 1 EA 
@@ -104,6 +106,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RCOV.shingles.002c</b> | Roof Cover - Shingles with high-wind construction and nail pattern</p>
    <div>
 
+| In the context of this study, high wind shingles refer to a specific type of roof covering that is designed and installed to offer enhanced resistance to wind damage compared to standard asphalt shingles. Their installation involves a "high wind nail pattern" with 6 nails per shingle, which contributes to their increased resistance. This asphalt shingle capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this roof cover configuration is implicitly defined as the wind load exceeding its resistance capacity during a simulated hurricane event.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and quality of high wind shingles, the precise application of the 6-nail pattern, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
 Suggested Block Size: 1 EA 

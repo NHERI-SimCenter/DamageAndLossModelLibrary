@@ -12,7 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.001</b> | Roof-Wall Connection with Toe nails and acrylic adhesive</p>
    <div>
 
-| Adhesive set for one week, toe-nailed when adhesive is wet.
+| This connection (Test Series 14) involved the application of a two-part acrylic adhesive through a diffuser nozzle between the rafter and top plate, immediately followed by the installation of three 8d common toenails while the adhesive was wet. The adhesive was allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were toe-nail pullout and top-plate fiber tear. 
+| LIMITATIONS: Results are based on individual connection tests and may not reflect behavior in a complete roof system where load-sharing and sheathing presence influence performance. Performance is specific to the type of acrylic adhesive, application method (wet toenails), and cure time.
 
 
 Suggested Block Size: 1 EA 
@@ -35,7 +36,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.002</b> | Roof-Wall Connection with Toe nails and soaked with acrylic adhesive.</p>
    <div>
 
-| Wood first soaked for 24 hours, then toe-nailed when adhesive is wet.
+| In this setup (Test Series 15), the wood members (rafter and top plate) were first soaked for 24 hours prior to the application of a two-part acrylic adhesive through a diffuser nozzle between them, followed immediately by the installation of three 8d common toenails while the adhesive was wet. The adhesive was then allowed to set for one week before testing. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were toe-nail pullout and top-plate fiber tear. 
+| LIMITATIONS: A significant limitation is the high coefficient of variation, indicating considerable variability in the uplift capacity achieved. Soaking the wood makes these results specific to this pre-treatment. Results may not fully capture the behavior within a complete roof system.
 
 
 Suggested Block Size: 1 EA 
@@ -58,7 +60,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.003</b> | Roof-Wall Connection with Toe nails and acrylic adhesive on small wood blocks.</p>
    <div>
 
-| Adhesive set for one week.
+| This connection (Test Series 16, exploring retrofit) was created using three 8d common toenails along with a two-part acrylic adhesive applied through a diffuser nozzle to small wood blocks (approximately 38 x 89 mm, made of either spruce-pine-fir or Southern pine) placed between the rafter and top plate. The acrylic adhesive was allowed to set for one week before the connections were tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure modes observed in this test series were rafter split and top-plate fiber tear. 
+| LIMITATIONS: Use of standardized small wood blocks as a retrofit method might not fully represent actual applications. One-week adhesive set time is specific; performance might differ with various acrylic adhesive products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system.
 
 
 Suggested Block Size: 1 EA 
@@ -81,6 +84,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.004</b> | Roof-Wall Connection with Toe nails and 1/4 inch acrylic adhesive bead</p>
    <div>
 
+| This connection (Test Series 17) consisted of three 8d common toenails along with a 1/4 inch bead of acrylic adhesive applied on either side of the rafter along the top plate. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was wood fiber failure. 
+| LIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity. Performance is specific to the application of a 1/4 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system."
 
 
 Suggested Block Size: 1 EA 
@@ -103,6 +108,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.005</b> | Roof-Wall Connection with Toe nails and 1/2 inch acrylic adhesive bead</p>
    <div>
 
+| This connection (Test Series 18 in reed1997) was created using three 8d common toenails along with a 1/2 inch bead of acrylic adhesive applied on either side of the rafter along the top plate. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was wood fiber failure. 
+| LIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity, and the relatively high coefficient of variation indicates considerable variability. Performance is specific to the application of a 1/2 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system.
 
 
 Suggested Block Size: 1 EA 
@@ -125,6 +132,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RWC.toe_nail.adhesive.006</b> | Roof-Wall Connection with Toe nails and foaming polyurethane adhesive.</p>
    <div>
 
+| This connection (Test Series 19) consisted of three 8d common toenails along with a foaming polyurethane adhesive product generously applied using an air pressure gun to form large fillets. The adhesive was allowed to set for one week before the uplift capacity was tested. Materials included Southern yellow pine double top plates and Southern yellow pine or spruce-pine-fir rafters (#2 grade) at a 3:12 pitch. The predominant failure mode observed in this test series was adhesive shear. 
+| LIMITATIONS: The small sample size of only three specimens might not provide a comprehensive understanding of the connection's behavior and could affect the statistical significance of the results. Performance is specific to the foaming polyurethane adhesive product and application method. As with individual tests, results may not entirely reflect the behavior within a complete roof system
 
 
 Suggested Block Size: 1 EA 

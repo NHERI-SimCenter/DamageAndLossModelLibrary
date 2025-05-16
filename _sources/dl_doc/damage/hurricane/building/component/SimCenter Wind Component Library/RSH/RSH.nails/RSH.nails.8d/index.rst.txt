@@ -57,6 +57,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RSH.nails.8d.6p12.001c</b> | Roof Sheathing with 8d nails @ 6/12 in</p>
    <div>
 
+| The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, an "8d" nail is a common size, typically referring to a nail that is approximately 2 1/2 inches (64 mm) long, and it will have a standardized diameter for this penny size. While the HAZUS model uses "8d" to differentiate between different roof sheathing connection strengths. 6/12 in nail pattern for roof sheathing with 6d nails most likely means that the 8d nails are spaced 6 inches apart along one axis of the sheathing panel and 12 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure. 
+| LIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.
 
 
 Suggested Block Size: 1 EA 
@@ -171,6 +173,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>RSH.nails.8d.6p6.001</b> | Roof Sheathing with 8d nails @ 6/6 in</p>
    <div>
 
+| The HAZUS model considers plywood and oriented strand board (OSB) as typical materials for roof sheathing panels. In the American wire gauge (AWG) system, an "8d" nail is a common size, typically referring to a nail that is approximately 2 1/2 inches (64 mm) long, and it will have a standardized diameter for this penny size. While the HAZUS model uses "8d" to differentiate between different roof sheathing connection strengths. 6/6 in nail pattern for roof sheathing with 8d nails most likely means that the 8d nails are spaced 6 inches apart along one axis of the sheathing panel and 6 inches apart along the perpendicular axis. This creates a grid pattern of nail fasteners securing the sheathing to the underlying roof structure.
+| LIMITATIONS: The capacity function represents a simplification of real-world roof sheathing behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of roof sheathing.
 
 
 Suggested Block Size: 1 EA 

@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>WIN.impact_resistant.001</b> | Impact resistant laminated glass window</p>
    <div>
 
+| This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this window configuration is implicitly defined as the exceedance of its pressure resistance by wind loads calculated for a given hurricane scenario. This configuration aims to increase window and door pressure capacity (resistance). Furthermore, for homes with this type of opening protection, the probability of debris damage is reduced. 
+| LIMITATIONS: Limitations of this capacity function are not explicitly detailed within these excerpts, but it's reasonable to assume that the FPHLM likely relies on standardized testing procedures and that real-world performance could still vary based on factors such as the specific manufacturer and installation quality of the impact-resistant windows, which are not elaborated upon in this dissertation.
 
 
 Suggested Block Size: 1 EA 

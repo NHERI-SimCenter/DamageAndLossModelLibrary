@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>DOOR.garage.001a</b> | Garage Door - General fragility</p>
    <div>
 
+| This garage door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The primary modeled failure mode is the garage door being torn from its tracks when wind load exceeds its resistance capacity.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The failure can be influenced by factors such as the material and construction of the door, the strength and attachment of the supporting tracks and hardware, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
 Suggested Block Size: 1 EA 
@@ -80,6 +82,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>DOOR.garage.001d</b> | Garage Door - General fragility</p>
    <div>
 
+| This fragility describes the interior garage door. It is treated as a general category of a door located within the building, separating the garage space from the interior living space.
+| LIMITATIONS: The capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door. The model also does not explicitly account for potential vulnerabilities related to the door's connection to the surrounding wall or the operation of the garage door mechanism itself under pressure loads.
 
 
 Suggested Block Size: 1 EA 
@@ -102,6 +106,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>DOOR.garage.002</b> | Wind-reinforced Garage Door</p>
    <div>
 
+| This enhanced garage door capacity is assumed 1.5 times the standard capacity. The modeled failure mode for this garage door configuration is implicitly defined as the wind load exceeding its pressure resistance during a simulated hurricane event. 
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is reasonable to assume that this is a simplified representation. The actual performance of reinforced garage doors can be influenced by the specifics of the reinforcement, the quality of installation of tracks and hardware, and potential impact from debris (though debris impact is modeled separately for openings), details of which are not elaborated upon in these excerpts.
 
 
 Suggested Block Size: 1 EA 
@@ -149,6 +155,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>DOOR.garage.004a</b> | Double garage door - weak</p>
    <div>
 
+| The primary modeled failure mode for this component is pressure-induced failure, occurring when the wind load exceeds this resistance, leading to a breach in the building envelope. The distinction between "weak" and "strong" double garage doors within the model implies different construction or reinforcement levels, resulting in varying resistance to pressure, although the sources do not provide specific details on the structural characteristics that differentiate them. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. 
+| LIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.
 
 
 Suggested Block Size: 1 EA 
@@ -171,6 +179,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>DOOR.garage.004b</b> | Double garage door - strong</p>
    <div>
 
+| The primary modeled failure mode for this component is pressure-induced failure, occurring when the wind load exceeds this resistance, leading to a breach in the building envelope. The distinction between "weak" and "strong" double garage doors within the model implies different construction or reinforcement levels, resulting in varying resistance to pressure, although the sources do not provide specific details on the structural characteristics that differentiate them. Resistances assigned to building components in the HAZUS model are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. 
+| LIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.
 
 
 Suggested Block Size: 1 EA 

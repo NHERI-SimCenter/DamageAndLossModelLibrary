@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>WIN.shutters.001</b> | Regular Window with Hurricane Shutters</p>
    <div>
 
+| This window capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). Implementing engineered shutters on all windows is also identified as a key component of the "Protect openings (shutters) (IBHS Silver)" retrofit strategy, which aims to increase the window and door pressure capacity (resistance). Additionally, for this configuration, the probability of debris damage is modeled as zero. The modeled failure mode for this window protection type would be the wind load exceeding the pressure resistance of the shutters, leading to potential failure of the window. 
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed within the provided text, but it is important to acknowledge that real-world performance can vary based on the specific type and quality of the shutters, the installation methods, and the condition of the underlying window frame, details of which are not elaborated upon.
 
 
 Suggested Block Size: 1 EA 

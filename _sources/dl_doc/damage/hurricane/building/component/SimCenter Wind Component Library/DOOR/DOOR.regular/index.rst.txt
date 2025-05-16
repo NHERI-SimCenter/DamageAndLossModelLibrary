@@ -12,6 +12,8 @@ The following models are available:
    <p class="dl_comp_name"><b>DOOR.regular.001a</b> | Regular Door - General fragility</p>
    <div>
 
+| This door capacity is taken from the 2005 version of the Florida Public Hurricane Loss Model (FPHLM). The modeled failure mode for this door configuration is implicitly defined as the wind load exceeding its pressure resistance during a simulated hurricane event.
+| LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to understand that the model likely uses a simplified representation of door performance, and the actual failure of standard doors can be influenced by factors such as the door material, the quality of the doorframe and its attachment to the wall, the locking mechanisms, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
 Suggested Block Size: 1 EA 
@@ -58,6 +60,8 @@ Suggested Block Size: 1 EA
    <p class="dl_comp_name"><b>DOOR.regular.001c</b> | Regular Door - General fragility</p>
    <div>
 
+| This is the general representation of an entry door's resistance to pressure. The primary failure mode considered for the entry door under pressure is pressure-induced failure, where the wind load acting on the door exceeds its resistance capacity, leading to a breach in the building envelope. This breach can then affect internal pressure and potentially lead to further damage.
+| LIMITATIONS: The sources do not explicitly specify the precise type of entry door that this capacity function considers. Resistances assigned to building components are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. The model might not fully capture the wide variety of entry door constructions, installation methods, the condition of the door and its frame, or the complexities of failure mechanisms that can occur during a hurricane. Further, the lack of specific details about the test series or engineering analyses used to derive these fragility parameters for entry doors, makes it difficult to fully understand the empirical or analytical basis for this specific capacity function.
 
 
 Suggested Block Size: 1 EA 
