@@ -288,7 +288,7 @@ def auto_populate(aim):
 
     # make sure missing data is properly represented as null in the JSON
     for key, item in gi.items():
-        if pd.isna(item):
+        if pd.isna(item) or item=="":
             gi[key] = None
 
     # load the schema assuming it is called "input_schema.json" and it is

@@ -74,7 +74,7 @@ def auto_populate(aim):
 
     # make sure missing data is properly represented as null in the JSON
     for key, item in gi.items():
-        if pd.isna(item):
+        if pd.isna(item) or item == "":
             gi[key] = None
 
     # add configuration data to the gi if it is not already there
