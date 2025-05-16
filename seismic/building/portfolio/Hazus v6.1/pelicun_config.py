@@ -44,7 +44,6 @@ import jsonschema
 from jsonschema import validate
 import pandas as pd
 
-
 def auto_populate(aim):
     """
     Automatically creates a performance model for PGA-based Hazus EQ analysis.
@@ -82,6 +81,13 @@ def auto_populate(aim):
     dl_app_data = aim['Applications']['DL']['ApplicationData']
     if gi.get("GroundFailure", None) == None:
         gi["GroundFailure"] = dl_app_data.get('ground_failure',None)
+    if gi.get("LifelineFacility", None) == None:
+        gi["LifelineFacility"] = dl_app_data.get('lifeline_facility', None)
+    if gi.get("StoryResolution", None) == None:
+        gi["StoryResolution"] = dl_app_data.get('story_resolution', None)
+
+    if gi.get("StoryResolution"):
+        return auto_populate_story(aim)
 
     # load the schema assuming it is called "input_schema.json" and it is
     # stored next to the mapping script
@@ -118,16 +124,38 @@ def auto_populate(aim):
     height_class_map = {"Low-Rise": "L", "Mid-Rise": "M", "High-Rise": "H"}
     height_class_data = gi.get("HeightClass")
 
-    if height_class_data is not None:
-        height_class = height_class_map[height_class_data]
-        model_id = f"LF.{structure_type}.{height_class}.{design_level}"
-    else:
-        model_id = f"LF.{structure_type}.{design_level}"
+    if gi.get("LifelineFacility"):
 
-    comp = pd.DataFrame(
-        {f"{model_id}": ["ea", 1, 1, 1, "N/A"]},  # noqa: E241
-        index=["Units", "Location", "Direction", "Theta_0", "Family"],  # noqa: E231, E251
-    ).T
+        if height_class_data is not None:
+            height_class = height_class_map[height_class_data]
+            model_id = f"LF.{structure_type}.{height_class}.{design_level}"
+        else:
+            model_id = f"LF.{structure_type}.{design_level}"
+
+        comp = pd.DataFrame(
+            {f"{model_id}": ["ea", 1, 1, 1, "N/A"]},  # noqa: E241
+            index=["Units", "Location", "Direction", "Theta_0", "Family"],  # noqa: E231, E251
+        ).T
+
+    else:
+
+        if height_class_data is not None:
+            height_class = height_class_map[height_class_data]
+            str_model_id = f"STR.{structure_type}.{height_class}.{design_level}"
+        else:
+            str_model_id = f"STR.{structure_type}.{design_level}"
+
+        nsd_model_id = 'NSD'
+        nsa_model_id = f'NSA.{design_level}'
+
+        comp = pd.DataFrame(
+            {
+                f"{str_model_id}": ["ea", 1, 1, 1, "N/A"],
+                f"{nsd_model_id}": ["ea", 1, 0, 1, "N/A"],
+                f"{nsa_model_id}": ["ea", 1, 1, 1, "N/A"],
+            },  # noqa: E241
+            index=["Units", "Location", "Direction", "Theta_0", "Family"],  # noqa: E231, E251
+        ).T
 
     # if needed, add components to simulate damage from ground failure
     if gi.get("GroundFailure"):
@@ -154,21 +182,32 @@ def auto_populate(aim):
         "Asset": {
             "ComponentAssignmentFile": "CMP_QNT.csv",
             "ComponentDatabase": "Hazus Earthquake - Buildings",
-            "NumberOfStories": 1,  # there is only one component in a building-level resolution
+            "NumberOfStories": 1,
             "OccupancyType": f"{occupancy_type}",
             "PlanArea": "1",  # TODO(adamzs): check if this is even needed
         },
-        "Damage": {"DamageProcess": "Hazus Earthquake"},
+        "Damage": {"DamageProcess": "Hazus Earthquake - Buildings"},
         "Demands": {},
         "Losses": {
             "Repair": {
                 "ConsequenceDatabase": "Hazus Earthquake - Buildings",
                 "MapApproach": "Automatic",
+                "DecisionVariables": {
+                    "Cost": True,
+                    "Carbon": False,
+                    "Energy": False,
+                    "Time": True
+                }
             }
         },
         "Options": {
             "NonDirectionalMultipliers": {"ALL": 1.0},
         },
     }
+
+    if gi.get("LifelineFacility"):
+        dl_ap['Damage'].update({
+            'DamageProcess': 'Hazus Earthquake - Lifeline Facilities'
+        })
 
     return gi, dl_ap, comp
