@@ -256,7 +256,7 @@ def auto_populate(aim):  # noqa: C901
         dl_ap = {
             'Asset': {
                 'ComponentAssignmentFile': 'CMP_QNT.csv',
-                'ComponentDatabase': 'Hazus Earthquake - Water',
+                'ComponentDatabase': 'Hazus Earthquake - Potable Water',
                 'Material Flexibility': pipe_flexibility,
                 'PlanArea': '1',  # Sina: does not make sense for water.
                 # Kept it here since it was also
@@ -376,7 +376,7 @@ def auto_populate(aim):  # noqa: C901
         dl_ap = {
             'Asset': {
                 'ComponentAssignmentFile': 'CMP_QNT.csv',
-                'ComponentDatabase': 'Hazus Earthquake - Water',
+                'ComponentDatabase': 'Hazus Earthquake - Potable Water',
                 'Material': tank_material,
                 'Location': tank_location,
                 'Anchored': tank_anchored,
@@ -384,14 +384,13 @@ def auto_populate(aim):  # noqa: C901
                 # Kept it here since it was also kept here for
                 # Transportation
             },
-            'Damage': {'DamageProcess': 'Hazus Earthquake'},
             'Demands': {},
         }
 
     else:
         print(
             f'Water Distribution network element type {wdn_element_type} '
-            f'is not supported in Hazus Earthquake IM DL method'
+            f'is not supported in Hazus Earthquake - Potable Water'
         )
         dl_ap = 'N/A'
         comp = None

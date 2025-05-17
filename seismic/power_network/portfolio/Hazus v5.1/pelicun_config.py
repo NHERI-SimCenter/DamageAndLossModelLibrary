@@ -231,7 +231,7 @@ def auto_populate(aim):  # noqa: C901
         dl_ap = {
             "Asset": {
                 "ComponentAssignmentFile": "CMP_QNT.csv",
-                "ComponentDatabase": "Hazus Earthquake - Power",
+                "ComponentDatabase": "Hazus Earthquake - Electric Power",
                 "Substation Voltage": ep_s_size,
                 "Substation Anchored": ep_s_anchored,
             },
@@ -307,7 +307,7 @@ def auto_populate(aim):  # noqa: C901
         dl_ap = {
             "Asset": {
                 "ComponentAssignmentFile": "CMP_QNT.csv",
-                "ComponentDatabase": "Hazus Earthquake - Power",
+                "ComponentDatabase": "Hazus Earthquake - Electric Power",
                 "Circuit Anchored": ep_c_anchored,
             },
             "Damage": {"DamageProcess": "Hazus Earthquake"},
@@ -475,7 +475,7 @@ def auto_populate(aim):  # noqa: C901
         dl_ap = {
             "Asset": {
                 "ComponentAssignmentFile": "CMP_QNT.csv",
-                "ComponentDatabase": "Hazus Earthquake - Power",
+                "ComponentDatabase": "Hazus Earthquake - Electric Power",
                 "Generation Size": ep_g_size,
                 "Generation Anchored": ep_g_anchored,
             },
