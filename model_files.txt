@@ -40,7 +40,6 @@ seismic/building/subassembly/Hazus v5.1/fragility.csv
 seismic/building/subassembly/Hazus v5.1/fragility.json
 seismic/building/subassembly/Hazus v5.1/consequence_repair.csv
 seismic/building/subassembly/Hazus v5.1/consequence_repair.json
-seismic/building/subassembly/Hazus v5.1/input_schema.json
 seismic/building/subassembly/Hazus v5.1/pelicun_config.py
 
 seismic/power_network/portfolio/Hazus v5.1/fragility.csv
