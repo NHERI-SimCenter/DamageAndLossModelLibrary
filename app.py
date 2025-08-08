@@ -12,10 +12,16 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 from pelicun.base import convert_to_MultiIndex, pelicun_path
+from st_search.fuzzy_visuals import create_search_interface
 
 from visuals_core import build_fragility_figure
 
 df = pd.read_csv(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
+
+search_ui = create_search_interface()
+search_ui.render_complete_ui()
+
+st.write(st.session_state)
 
 st.write(df)
 sf = df.iloc[0]
