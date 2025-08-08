@@ -11,3 +11,4 @@ sphinx-rtd-theme
 sphinxcontrib-bibtex
 numpydoc
 tqdm
+streamlit >= 1.48.0
