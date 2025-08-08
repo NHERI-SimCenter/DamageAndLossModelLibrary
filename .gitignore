@@ -5,5 +5,5 @@
 /.ropeproject/
 /doc/cache/
 /doc/source/dl_doc/
-.venv/
-.vscode/
+/.venv/
+/.vscode/
