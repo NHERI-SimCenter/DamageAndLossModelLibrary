@@ -7,4 +7,4 @@
 /doc/source/dl_doc/
 /.venv/
 /.vscode/
-.cache/fuzzy_index.pkl
+/.cache/
