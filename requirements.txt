@@ -12,3 +12,4 @@ sphinxcontrib-bibtex
 numpydoc
 tqdm
 streamlit >= 1.48.0
+streamlit-keyup == 0.3.0
