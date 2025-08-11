@@ -30,7 +30,7 @@ def extract_search_metadata(json_path: str) -> dict:
 @dataclass
 class SearchObject:
     combined_dict: dict                 # required on init
-    file_path: str = field(default='')  # store the source file path
+    file_path: str = field(default='')  # Hazard type filter is parsed from json path for filters
 
     short_name: str = field(init=False)
     description: str = field(init=False)
