@@ -2,9 +2,9 @@
 
 from textwrap import wrap
 from typing import Any, Dict, Sequence
+from pathlib import Path
 
 import streamlit as st
-
 import colorlover as cl
 import numpy as np
 import pandas as pd
@@ -16,7 +16,10 @@ from st_search.fuzzy_visuals import render_fuzzy_search
 
 from visuals_core import build_fragility_figure
 
-df = pd.read_csv(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
+DATA_PATH = (
+    Path(__file__).parent / 'seismic' / 'building' / 'component' / 'FEMA P-58 2nd Edition' / 'fragility.csv'
+)
+df = pd.read_csv(DATA_PATH) #(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
 
 search_ui = render_fuzzy_search()
 
