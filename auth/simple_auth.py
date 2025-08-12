@@ -1,6 +1,6 @@
 """
-Simple authentication for Streamlit using Auth0.
-Just works. No complexity.
+Simple authentication using Auth0 with link buttons.
+Alternative approach for Streamlit Cloud.
 """
 
 import streamlit as st
@@ -12,85 +12,74 @@ import base64
 
 
 def init_auth():
-    """Initialize authentication. Call this once at the start of your app."""
+    """Initialize authentication."""
     if 'authenticated' not in st.session_state:
         st.session_state.authenticated = False
         st.session_state.user = None
 
 
 def login_page():
-    """
-    Display login page. Returns True if authenticated, False otherwise.
-    
-    Usage:
-        if not login_page():
-            st.stop()
-    """
+    """Display login page with link buttons."""
     # Check if already authenticated
     if st.session_state.authenticated:
         return True
     
-    # Get Auth0 config from Streamlit secrets
+    # Get Auth0 config
     auth_config = st.secrets["auth0"]
     
-    # Check for callback (user returning from Auth0)
+    # Check for callback
     query_params = st.query_params
     if 'code' in query_params:
         if _handle_callback(query_params['code'], auth_config):
             st.rerun()
     
-    # Show login UI
+    # Generate and store PKCE parameters
+    if 'auth_urls_generated' not in st.session_state:
+        _generate_auth_urls(auth_config)
+    
+    # Show login UI with link buttons
     st.markdown("# 🔐 Welcome")
     st.markdown("Please sign in to continue")
     
     col1, col2, _ = st.columns([1, 1, 2])
     
     with col1:
-        if st.button("Sign In", type="primary", use_container_width=True):
-            _redirect_to_auth0(auth_config)
+        # Use link_button for sign in
+        st.link_button(
+            "🔑 Sign In",
+            st.session_state.signin_url,
+            type="primary",
+            use_container_width=True
+        )
     
     with col2:
-        if st.button("Sign Up", use_container_width=True):
-            _redirect_to_auth0(auth_config, signup=True)
+        # Use link_button for sign up
+        st.link_button(
+            "📝 Sign Up",
+            st.session_state.signup_url,
+            use_container_width=True
+        )
+    
+    st.info("👆 Click a button above to authenticate with Auth0")
     
     return False
 
 
-def require_auth():
-    """
-    Simple decorator to require authentication.
-    
-    Usage:
-        @require_auth()
-        def my_protected_function():
-            return "Secret data"
-    """
-    def decorator(func):
-        def wrapper(*args, **kwargs):
-            if not st.session_state.get('authenticated', False):
-                st.error("🔒 Please sign in to access this feature")
-                st.stop()
-            return func(*args, **kwargs)
-        return wrapper
-    return decorator
-
-
 def logout():
+    """Sign out the current user."""
     st.session_state.authenticated = False
     st.session_state.user = None
-
-    cfg = st.secrets["auth0"]
-    logout_url = "https://{}/v2/logout?{}".format(
-        cfg['domain'],
-        urlencode({'returnTo': cfg['logout_url'], 'client_id': cfg['client_id']})
-    )
-
-    st.markdown(f"""
-    <script>
-    // Open in a new tab to escape the Streamlit iframe sandbox
-    window.open("{auth_url}", "_blank", "noopener");
-    </script>
-    """, unsafe_allow_html=True)
+    st.session_state.pop('auth_urls_generated', None)
+    
+    # Create logout URL
+    auth_config = st.secrets["auth0"]
+    logout_url = f"https://{auth_config['domain']}/v2/logout?" + urlencode({
+        'returnTo': auth_config['logout_url'],
+        'client_id': auth_config['client_id']
+    })
+    
+    # Show logout link
+    st.link_button("Click here to complete logout", logout_url)
 
 
 def get_user():
@@ -110,21 +99,36 @@ def show_user_info():
         st.sidebar.markdown("---")
 
 
-# --- Private helper functions ---
+def require_auth():
+    """Decorator to require authentication."""
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if not st.session_state.get('authenticated', False):
+                st.error("🔒 Please sign in to access this feature")
+                st.stop()
+            return func(*args, **kwargs)
+        return wrapper
+    return decorator
 
-def _redirect_to_auth0(config, signup=False):
-    import secrets, base64, hashlib
+
+# --- Helper functions ---
+
+def _generate_auth_urls(config):
+    """Generate Auth0 URLs with PKCE parameters."""
+    # Generate state
     state = secrets.token_urlsafe(32)
     st.session_state.auth_state = state
-
-    verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).decode().rstrip('=')
+    
+    # Generate PKCE verifier and challenge
+    verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).decode('utf-8').rstrip('=')
     st.session_state.code_verifier = verifier
-
+    
     challenge = base64.urlsafe_b64encode(
         hashlib.sha256(verifier.encode()).digest()
-    ).decode().rstrip('=')
-
-    params = {
+    ).decode('utf-8').rstrip('=')
+    
+    # Base parameters
+    base_params = {
         'response_type': 'code',
         'client_id': config['client_id'],
         'redirect_uri': config['callback_url'],
@@ -133,33 +137,21 @@ def _redirect_to_auth0(config, signup=False):
         'code_challenge': challenge,
         'code_challenge_method': 'S256',
     }
-    if signup:
-        params['screen_hint'] = 'signup'
-
-    auth_url = f"https://{config['domain']}/authorize?{urlencode(params)}"
-
-    # Force top-level navigation (works even if the app is iframed)
-    st.markdown(f"""
-    <script>
-    // Open in a new tab to escape the Streamlit iframe sandbox
-    window.open("{auth_url}", "_blank", "noopener");
-    </script>
-    """, unsafe_allow_html=True)
-
     
-    if signup:
-        params['screen_hint'] = 'signup'
+    # Sign in URL
+    signin_params = base_params.copy()
+    st.session_state.signin_url = f"https://{config['domain']}/authorize?" + urlencode(signin_params)
     
-    auth_url = f"https://{config['domain']}/authorize?" + urlencode(params)
+    # Sign up URL
+    signup_params = base_params.copy()
+    signup_params['screen_hint'] = 'signup'
+    st.session_state.signup_url = f"https://{config['domain']}/authorize?" + urlencode(signup_params)
     
-    # Redirect using meta tag
-    st.markdown(f'<meta http-equiv="refresh" content="0;url={auth_url}">', 
-                unsafe_allow_html=True)
+    st.session_state.auth_urls_generated = True
 
 
 def _handle_callback(code, config):
     """Handle Auth0 callback."""
-    # Exchange code for token
     token_url = f"https://{config['domain']}/oauth/token"
     token_data = {
         'grant_type': 'authorization_code',
@@ -186,6 +178,7 @@ def _handle_callback(code, config):
         # Store in session
         st.session_state.authenticated = True
         st.session_state.user = user_response.json()
+        st.session_state.pop('auth_urls_generated', None)
         
         # Clear URL parameters
         st.query_params.clear()
