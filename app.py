@@ -13,8 +13,23 @@ from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 from pelicun.base import convert_to_MultiIndex, pelicun_path
 from st_search.fuzzy_visuals import render_fuzzy_search
+from auth.simple_auth import init_auth, login_page, show_user_info, get_user
 
 from visuals_core import build_fragility_figure
+
+# Page config
+st.set_page_config(
+    page_title="Damage and Loss Model Library",
+    page_icon="📊",
+    layout="wide"
+)
+
+# Initialize authentication
+init_auth()
+
+# Require login (this is all you need!)
+if not login_page():
+    st.stop()
 
 DATA_PATH = (
     Path(__file__).parent / 'seismic' / 'building' / 'component' / 'FEMA P-58 2nd Edition' / 'fragility.csv'
