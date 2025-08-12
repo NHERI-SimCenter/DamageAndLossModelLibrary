@@ -76,19 +76,27 @@ def require_auth():
 
 
 def logout():
-    """Sign out the current user."""
     st.session_state.authenticated = False
     st.session_state.user = None
-    
-    # Redirect to Auth0 logout
-    auth_config = st.secrets["auth0"]
-    logout_url = f"https://{auth_config['domain']}/v2/logout?" + urlencode({
-        'returnTo': auth_config['logout_url'],
-        'client_id': auth_config['client_id']
-    })
-    
-    st.markdown(f'<meta http-equiv="refresh" content="0;url={logout_url}">', 
-                unsafe_allow_html=True)
+
+    cfg = st.secrets["auth0"]
+    logout_url = "https://{}/v2/logout?{}".format(
+        cfg['domain'],
+        urlencode({'returnTo': cfg['logout_url'], 'client_id': cfg['client_id']})
+    )
+
+    st.markdown(
+        f"""
+        <script>
+          if (window.top) {{
+            window.top.location.href = "{logout_url}";
+          }} else {{
+            window.location.href = "{logout_url}";
+          }}
+        </script>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def get_user():
@@ -111,21 +119,17 @@ def show_user_info():
 # --- Private helper functions ---
 
 def _redirect_to_auth0(config, signup=False):
-    """Redirect to Auth0 for authentication."""
-    # Generate state for security
+    import secrets, base64, hashlib
     state = secrets.token_urlsafe(32)
     st.session_state.auth_state = state
-    
-    # Simple code verifier for PKCE
-    verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).decode('utf-8').rstrip('=')
+
+    verifier = base64.urlsafe_b64encode(secrets.token_bytes(32)).decode().rstrip('=')
     st.session_state.code_verifier = verifier
-    
-    # Create challenge
+
     challenge = base64.urlsafe_b64encode(
         hashlib.sha256(verifier.encode()).digest()
-    ).decode('utf-8').rstrip('=')
-    
-    # Build Auth0 URL
+    ).decode().rstrip('=')
+
     params = {
         'response_type': 'code',
         'client_id': config['client_id'],
@@ -135,6 +139,25 @@ def _redirect_to_auth0(config, signup=False):
         'code_challenge': challenge,
         'code_challenge_method': 'S256',
     }
+    if signup:
+        params['screen_hint'] = 'signup'
+
+    auth_url = f"https://{config['domain']}/authorize?{urlencode(params)}"
+
+    # Force top-level navigation (works even if the app is iframed)
+    st.markdown(
+        f"""
+        <script>
+          if (window.top) {{
+            window.top.location.href = "{auth_url}";
+          }} else {{
+            window.location.href = "{auth_url}";
+          }}
+        </script>
+        """,
+        unsafe_allow_html=True,
+    )
+
     
     if signup:
         params['screen_hint'] = 'signup'
