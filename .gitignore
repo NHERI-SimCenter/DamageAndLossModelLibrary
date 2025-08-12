@@ -5,6 +5,17 @@
 /.ropeproject/
 /doc/cache/
 /doc/source/dl_doc/
-/.venv/
+
+
+#Dev Enviornment
 /.vscode/
+/.venv/
+
+# Auth0 secrets
+.streamlit/secrets.toml
+.env
+
+# Session data
+*.session
+session_store/
 /.cache/
