@@ -85,18 +85,12 @@ def logout():
         urlencode({'returnTo': cfg['logout_url'], 'client_id': cfg['client_id']})
     )
 
-    st.markdown(
-        f"""
-        <script>
-          if (window.top) {{
-            window.top.location.href = "{logout_url}";
-          }} else {{
-            window.location.href = "{logout_url}";
-          }}
-        </script>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown(f"""
+    <script>
+    // Open in a new tab to escape the Streamlit iframe sandbox
+    window.open("{auth_url}", "_blank", "noopener");
+    </script>
+    """, unsafe_allow_html=True)
 
 
 def get_user():
@@ -145,18 +139,12 @@ def _redirect_to_auth0(config, signup=False):
     auth_url = f"https://{config['domain']}/authorize?{urlencode(params)}"
 
     # Force top-level navigation (works even if the app is iframed)
-    st.markdown(
-        f"""
-        <script>
-          if (window.top) {{
-            window.top.location.href = "{auth_url}";
-          }} else {{
-            window.location.href = "{auth_url}";
-          }}
-        </script>
-        """,
-        unsafe_allow_html=True,
-    )
+    st.markdown(f"""
+    <script>
+    // Open in a new tab to escape the Streamlit iframe sandbox
+    window.open("{auth_url}", "_blank", "noopener");
+    </script>
+    """, unsafe_allow_html=True)
 
     
     if signup:
