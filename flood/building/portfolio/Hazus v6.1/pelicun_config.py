@@ -190,7 +190,7 @@ def auto_populate(aim):
     DL_ap = {
         "Asset": {
             "ComponentAssignmentFile": "CMP_QNT.csv",
-            "ComponentDatabase": "Hazus Hurricane Storm Surge - Buildings",
+            "ComponentDatabase": "None",
             "NumberOfStories": 1
         },
         "Demands": {        
@@ -199,6 +199,7 @@ def auto_populate(aim):
             "Repair": {
                 "ConsequenceDatabase": "Hazus Hurricane Storm Surge - Buildings",
                 "MapApproach": "Automatic",
+                #"MapFilePath": "loss_map.csv",
                 "DecisionVariables": {
                     "Cost": True,
                     "Carbon": False,
