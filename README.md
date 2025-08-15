@@ -1,32 +1,71 @@
-# DB Damage and Loss
 
-### SimCenter Damage and Loss DataBase
+# Damage and Loss Model Library (DLML)
 
-This database provides damage and loss model parameters intended for a broad range of applications in Natural Hazards Engineering. In this initial release, it is seeded with collections of models for earthquake damage and loss assessment. Future updates will add models to support studies focused on hurricane wind, storm surge, flood, and tsunami impacts.
+[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-The model parameters are stored using the damage and loss model schema introduced in SimCenter's Pelicun framework. Models are grouped into collections; each collection is stored in a pair of CSV and JSON files. The CSV files contain model parameters that are required for the calculations, while the JSON files contain corresponding metadata that describe the components and their damage states. The `DB` folder stores the available collections; and, for the sake of transparency and reproducibility, the `data_sources` folder provides the raw data that was used to generate the data in `DB`.
+A curated, open-source repository of standardized model parameters and metadata for quantifying the impact of natural hazard events on the built environment.
 
-Researchers and practitioners are encouraged to comment on the available data and provide feedback on what additional data they would like to see in the database. Those who have relevant data available are encouraged to contact us and contribute to the database.
+---
 
+### About This Library
 
-### ChangeLog
+The Damage and Loss Model Library (DLML) is a project from the NHERI SimCenter designed to address a critical gap in natural hazards engineering: the lack of a centralized, standardized, and easy-to-use repository for damage and loss models. This library provides the essential data—model parameters, descriptive metadata, and configuration files—that power natural hazard risk assessment simulations.
 
-#### v1.0
+This `v2.0.0` release represents a significant evolution of the project, featuring an improved data schema, a host of new and updated models, and a documentation system.
 
-- Initial release, includes the following collections:
-	+ FEMA P-58 2nd edition
-	+ Hazus Earthquake Model for Buildings
-	+ Hazus Earthquake Model for Transportation
+**Key Features:**
+* **Standardized Data Schema:** A robust yet flexible schema for organizing models by hazard, asset type, and resolution, making it easy to use data and supporting new contributions.
+* **Rich Metadata & Clear Citations:** Every model is paired with detailed metadata and a clear citation to the original source.
+* **A Broad & Inclusive Collection:** We feature a growing collection of models, from large-scale industry standards like **FEMA P-58** and **FEMA Hazus** to peer-reviewed models from the broader research community. Our goal is to provide a home for all high-quality damage and loss models.
+* **Automated Documentation:** The metadata and parameters are used to automatically generate a user-friendly documentation website, complete with model descriptions, parameter tables, and plots of fragility and consequence functions.
 
+---
 
-### Documentation
+### Three Ways to Use This Library
 
-Every model available in the database is documented under Damage and Loss DB in: https://nheri-simcenter.github.io/PBE-Documentation/
+There are three primary ways to interact with the DLML, depending on your needs.
 
-### Acknowledgement
+#### 1. Discover and Explore Models
 
-This material is based upon work supported by the National Science Foundation under Grants No. 1621843 and No. 2131111. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
+The best way to get started is by exploring our documentation website. It provides a searchable, lightweight interface to discover all available models, view their parameters, and understand their assumptions.
+
+[**➡️ Visit the Documentation Website**](https://nheri-simcenter.github.io/DamageAndLossModelLibrary/)
+
+#### 2. Perform Calculations with Pelicun
+
+For performing damage and loss calculations, we recommend using **Pelicun**, the SimCenter's open-source simulation engine or SimCenter's **PBE** and **R2D** desktop applications that utilize Pelicun in the background. Pelicun is designed to seamlessly use the models from this library as its inputs. This library is bundled with Pelicun, so all models are available automatically after installation.
+
+[**➡️ Learn More About Pelicun**](https://github.com/NHERI-SimCenter/Pelicun)
+
+#### 3. Work with the Raw Data
+
+You can also work directly with the raw data files in this repository. The library is structured in a clear hierarchy of `hazard/asset_type/resolution/methodology`. Within each methodology, **model parameters are stored in standardized CSV files** (e.g., for fragility, loss, or consequences) and metadata in corresponding JSON files.
+
+To get a local copy, clone the repository:
+```bash
+git clone [https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git](https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git)
+````
+
+-----
+
+### Contributing
+
+We welcome contributions of new and improved models from the researchers and practitioners. While we are in the process of creating a formal contributor's guide, the best way to start is by opening a GitHub Issue to discuss the model data you would like to add.
+
+Our vision is to enable a simple workflow where contributors can submit pull requests with data that conforms to our schema. We appreciate your patience and collaboration as we work towards this goal.
+
+-----
+
+### License & Acknowledgments
+
+This library is distributed under the BSD 3-Clause license. See `LICENSE` for more information.
+
+This material is based upon work supported by the National Science Foundation under Grants No. 1612843 2131111. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
+
+-----
 
 ### Contact
 
-NHERI-SimCenter nheri-simcenter@berkeley.edu
+For questions or support, please open an issue on the GitHub repository.
+
+Adam Zsarnóczay, NHERI SimCenter, Stanford University, adamzs@stanford.edu

@@ -1,0 +1,65 @@
+.. _changes_v2_0:
+
+=============================
+Version 2.0.0 (August 15, 2025)
+=============================
+
+This release marks a major milestone for the Damage and Loss Model Library and the beginning of a more frequent and structured release schedule. After more than two years of continuous development, ``v2.0.0`` introduces a significantly improved data schema, a host of new models, and a documentation system for model discovery.
+
+For a comprehensive overview of the library in its current state, please see our completely revamped README.md.
+
+Changed
+-------
+
+- **BREAKING:** The core data schema for models has been updated and rationalized to better support a wider range of hazards and asset types. Older custom tools that relied on the ``v1.0.0`` schema will need to be updated.
+
+  - Renamed ``loss_repair.csv`` files to ``consequence_repair.csv`` for consistency
+  - Updated loss measure units to use ratios instead of percentages for Hazus models
+  - Improved data validation and multilinear CDF handling in model generation scripts
+
+- **Code Quality:** Comprehensive code formatting and linting improvements using Ruff, enhancing maintainability and consistency across the entire codebase.
+
+Added
+-----
+
+- **Model Library Expansion:**
+
+  - **Hurricane Models:**
+
+    - Added complete building models for **Hazus Hurricane v5.1** (both original and coupled versions)
+    - Added **SimCenter Hurricane Wind Component Library** with comprehensive wind pressure components from peer-reviewed research
+
+  - **Flood Models:**
+
+    - Added complete building models for **Hazus Flood v6.1**
+
+  - **Seismic Infrastructure Models:**
+
+    - Added **Hazus Seismic Power Network** models (v5.1)
+    - Added **Hazus Seismic Water Network** models (v6.1) 
+    - Added **Hazus Seismic Transportation Network** models (v5.1)
+    - Updated **Hazus Seismic Building** models to v6.1 (in addition to existing v5.1)
+    - Added **Hazus Seismic Building Subassembly** models (v5.1)
+
+- **Documentation System:**
+
+  - Added an automated documentation website built with Sphinx that allows for easy discovery and exploration of all models in the library
+  - Implemented custom Sphinx extensions for automatic generation of model documentation with fragility and consequence curves
+  - Added caching system for efficient documentation builds
+
+- **Metadata Enhancements:**
+
+  - Added rich metadata, including clear citations, for every model to ensure proper credit and academic integrity
+  - Enhanced model descriptions and parameter documentation
+
+- **Configuration Files:**
+
+  - Added Pelicun configuration files for all model libraries to facilitate integration with the Pelicun damage and loss assessment framework
+
+Fixed
+-----
+
+- Multiple bug fixes in Hazus model generation scripts and data processing
+- Corrected fragility parameters and damage state definitions across various model libraries
+- Fixed issues with multilinear CDF data validation and processing
+- Resolved metadata formatting and JSON structure issues
