@@ -45,12 +45,26 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">About</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">About</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-features">Key Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#model-coverage">Model Coverage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-organization">Data Organization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license-acknowledgments">License &amp; Acknowledgments</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../release_notes/index.html">Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../release_notes/index.html#version-1">Version 1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../release_notes/v1.0.html">Version 1.0 (May 19, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_notes/v2.0.0.html">Version 2.0.0 (August 15, 2025)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../release_notes/v2.0.0.html#changed">Changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../release_notes/v2.0.0.html#added">Added</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../release_notes/v2.0.0.html#fixed">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../release_notes/v1.0.0.html">Version 1.0.0 (May 19, 2023)</a></li>
 </ul>
 </li>
 </ul>
@@ -486,13 +500,71 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="admonition-coming-soon admonition" id="about">
-<p class="admonition-title">Coming soon</p>
-<p>This section is under construction.</p>
-</div>
-<section id="id1">
-<h1>About<a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
-<p>About the damage and loss model library.</p>
+  <section id="about">
+<span id="id1"></span><h1>About<a class="headerlink" href="#about" title="Link to this heading"></a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h2>
+<p>The Damage and Loss Model Library (DLML) is a project from the NHERI SimCenter designed to address a critical gap in natural hazards engineering: the lack of a centralized, standardized, and easy-to-use repository for damage and loss models. This library provides the essential data—model parameters, descriptive metadata, and configuration files—that power natural hazard risk assessment simulations.</p>
+<p>This curated, open-source repository contains standardized model parameters and metadata for quantifying the impact of natural hazard events on the built environment. The library serves as a comprehensive resource for researchers, practitioners, and engineers working in natural hazards risk assessment.</p>
+</section>
+<section id="key-features">
+<h2>Key Features<a class="headerlink" href="#key-features" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt><strong>Standardized Data Schema</strong></dt><dd><p>A robust yet flexible schema for organizing models by hazard, asset type, and resolution, making it easy to use data and supporting new contributions.</p>
+</dd>
+<dt><strong>Rich Metadata &amp; Clear Citations</strong></dt><dd><p>Every model is paired with detailed metadata and a clear citation to the original source, ensuring proper academic integrity and traceability.</p>
+</dd>
+<dt><strong>Broad &amp; Inclusive Collection</strong></dt><dd><p>A growing collection of models, from large-scale industry standards like <strong>FEMA P-58</strong> and <strong>FEMA Hazus</strong> to peer-reviewed models from the broader research community. The goal is to provide a home for all high-quality damage and loss models.</p>
+</dd>
+<dt><strong>Automated Documentation</strong></dt><dd><p>The metadata and parameters are used to automatically generate a user-friendly documentation website, complete with model descriptions, parameter tables, and plots of fragility and consequence functions.</p>
+</dd>
+</dl>
+</section>
+<section id="model-coverage">
+<h2>Model Coverage<a class="headerlink" href="#model-coverage" title="Link to this heading"></a></h2>
+<p>The library includes comprehensive model collections across multiple hazards:</p>
+<dl class="simple">
+<dt><strong>Seismic Models</strong></dt><dd><ul class="simple">
+<li><p>FEMA P-58 2nd Edition building components</p></li>
+<li><p>Hazus Seismic Building models (v5.1 and v6.1)</p></li>
+<li><p>Hazus Seismic Infrastructure models (Power, Water, Transportation Networks)</p></li>
+<li><p>Hazus Seismic Building Subassembly models</p></li>
+</ul>
+</dd>
+<dt><strong>Hurricane Models</strong></dt><dd><ul class="simple">
+<li><p>Hazus Hurricane building models (v5.1)</p></li>
+<li><p>SimCenter Hurricane Wind Component Library with peer-reviewed research components</p></li>
+</ul>
+</dd>
+<dt><strong>Flood Models</strong></dt><dd><ul class="simple">
+<li><p>Hazus Flood building models (v6.1)</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>There are three primary ways to interact with the DLML:</p>
+<ol class="arabic simple">
+<li><p><strong>Discover and Explore Models</strong>: Use the documentation website to browse and understand available models</p></li>
+<li><p><strong>Perform Calculations with Pelicun</strong>: Integrate with the SimCenter’s Pelicun simulation engine for damage and loss calculations</p></li>
+<li><p><strong>Work with Raw Data</strong>: Access the standardized CSV and JSON files directly from the repository</p></li>
+</ol>
+</section>
+<section id="data-organization">
+<h2>Data Organization<a class="headerlink" href="#data-organization" title="Link to this heading"></a></h2>
+<p>The library is structured in a clear hierarchy of <code class="docutils literal notranslate"><span class="pre">hazard/asset_type/resolution/methodology</span></code>. Within each methodology:</p>
+<ul class="simple">
+<li><p><strong>Model parameters</strong> are stored in standardized CSV files (e.g., for fragility, loss, or consequences)</p></li>
+<li><p><strong>Metadata</strong> is provided in corresponding JSON files</p></li>
+<li><p><strong>Configuration files</strong> are included for integration with the Pelicun framework</p></li>
+</ul>
+</section>
+<section id="license-acknowledgments">
+<h2>License &amp; Acknowledgments<a class="headerlink" href="#license-acknowledgments" title="Link to this heading"></a></h2>
+<p>This library is distributed under the BSD 3-Clause license.</p>
+<p>This material is based upon work supported by the National Science Foundation under Grants No. 1612843 and 2131111. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.</p>
+</section>
 </section>
 
 
