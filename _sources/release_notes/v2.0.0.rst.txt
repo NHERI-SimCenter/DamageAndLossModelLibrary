@@ -1,8 +1,8 @@
 .. _changes_v2_0:
 
-=============================
+===============================
 Version 2.0.0 (August 15, 2025)
-=============================
+===============================
 
 This release marks a major milestone for the Damage and Loss Model Library and the beginning of a more frequent and structured release schedule. After more than two years of continuous development, ``v2.0.0`` introduces a significantly improved data schema, a host of new models, and a documentation system for model discovery.
 
