@@ -9,6 +9,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2025-09-11
+
+This release focuses on improving code quality and enhancing usability of Hazus assessments. The changes maintain backward compatibility while providing users with more flexibility in input specification and ensuring the codebase adheres to modern Python best practices.
+
+### Changed
+- **Input Validation:** Relaxed validation constraints for seismic and flood assessments to improve usability:
+    - Allow HeightClass attribute for seismic structural systems (W1, W2, S3, PC1, MH) that don't require it in Hazus methodology
+    - Remove PlanArea field from auto-populated seismic configuration as it's no longer needed
+    - Allow RES1 occupancy buildings to have more than 3 stories in flood assessments, aligning with FEMA technical manual interpretation
+- **Code Quality:** Comprehensive code formatting and linting improvements using Ruff across the entire codebase:
+    - Applied consistent code formatting across 15 Python files
+    - Fixed docstring formatting and missing docstring issues
+    - Cleaned up import statements and unused code
+    - Standardized quote usage and line spacing
+
+### Fixed
+- Resolved spelling issues in comments
+
+---
+
 ## [2.0.0] - 2025-08-15
 
 This release marks a major milestone for the Damage and Loss Model Library and the beginning of a more frequent and structured release schedule. After more than two years of continuous development, `v2.0.0` introduces a significantly improved data schema, a host of new models, and a documentation system for model discovery.

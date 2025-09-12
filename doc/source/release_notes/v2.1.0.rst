@@ -1,0 +1,28 @@
+.. _changes_v2_1:
+
+==================================
+Version 2.1.0 (September 11, 2025)
+==================================
+
+This release focuses on improving code quality and enhancing usability of Hazus assessments. The changes maintain backward compatibility while providing users with more flexibility in input specification and ensuring the codebase adheres to modern Python best practices.
+
+Changed
+-------
+
+- **Input Validation:** Relaxed validation constraints for seismic and flood assessments to improve usability:
+
+  - Allow HeightClass attribute for seismic structural systems (W1, W2, S3, PC1, MH) that don't require it in Hazus methodology
+  - Remove PlanArea field from auto-populated seismic configuration as it's no longer needed
+  - Allow RES1 occupancy buildings to have more than 3 stories in flood assessments, aligning with FEMA technical manual interpretation
+
+- **Code Quality:** Comprehensive code formatting and linting improvements using Ruff across the entire codebase:
+
+  - Applied consistent code formatting across 15 Python files
+  - Fixed docstring formatting and missing docstring issues
+  - Cleaned up import statements and unused code
+  - Standardized quote usage and line spacing
+
+Fixed
+-----
+
+- Resolved spelling issues in comments

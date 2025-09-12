@@ -124,7 +124,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
         for dl in design_levels:
             if bt in S_data['EDP_limits'][dl]:
                 # add a dot in bt between structure and height labels, if needed
-                if (len(bt) > 2) and (bt[-1] in {'L', 'M', 'H'}):  # noqa: PLR2004
+                if (len(bt) > 2) and (bt[-1] in {'L', 'M', 'H'}):
                     bt_exp = f'{bt[:-1]}.{bt[-1]}'
                     st = bt[:-1]
                     hc = bt[-1]
@@ -212,7 +212,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
                         'Fragility_beta'
                     ][dl]
 
-                    if LS_i == 4:  # noqa: PLR2004
+                    if LS_i == 4:
                         p_coll = S_data['P_collapse'][bt]
                         df_db.loc[counter, f'LS{LS_i}-DamageStateWeights'] = (
                             f'{1.0 - p_coll} | {p_coll}'
@@ -341,7 +341,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
         for dl in design_levels:
             if bt in LF_data['EDP_limits'][dl]:
                 # add a dot in bt between structure and height labels, if needed
-                if (len(bt) > 2) and (bt[-1] in {'L', 'M', 'H'}):  # noqa: PLR2004
+                if (len(bt) > 2) and (bt[-1] in {'L', 'M', 'H'}):
                     bt_exp = f'{bt[:-1]}.{bt[-1]}'
                     st = bt[:-1]
                     hc = bt[-1]
@@ -428,7 +428,7 @@ def create_Hazus_EQ_fragility_db(  # noqa: C901, N802
                         'Fragility_beta'
                     ][dl]
 
-                    if LS_i == 4:  # noqa: PLR2004
+                    if LS_i == 4:
                         p_coll = LF_data['P_collapse'][bt]
                         df_db.loc[counter, f'LS{LS_i}-DamageStateWeights'] = (
                             f'{1.0 - p_coll} | {p_coll}'
@@ -652,7 +652,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
             )
 
             # DS4 and DS5 have identical repair consequences
-            if DS_i == 5:  # noqa: PLR2004
+            if DS_i == 5:
                 ds_i = 4
             else:
                 ds_i = DS_i
@@ -772,7 +772,7 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
         ds_meta = frag_meta['Meta']['Collections']['LF']['DamageStates']
         for DS_i in range(1, 6):  # noqa: N806
             # DS4 and DS5 have identical repair consequences
-            if DS_i == 5:  # noqa: PLR2004
+            if DS_i == 5:
                 ds_i = 4
             else:
                 ds_i = DS_i

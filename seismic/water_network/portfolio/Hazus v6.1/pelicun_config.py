@@ -44,8 +44,8 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
 import pelicun
+
 
 def auto_populate(aim):  # noqa: C901
     """
@@ -72,20 +72,17 @@ def auto_populate(aim):  # noqa: C901
         Component assignment - Defines the components (in rows) and their
         location, direction, and quantity (in columns).
     """
-
     # extract the General Information
     gi = aim.get('GeneralInformation', None)
 
     if gi is None:
-        # TODO: show an error message
+        # TODO: show an error message  # noqa: TD002
         pass
 
     # initialize the auto-populated GI
     gi_ap = gi.copy()
 
     asset_type = aim['assetType']
-    dl_app_data = aim['Applications']['DL']['ApplicationData']
-    ground_failure = dl_app_data['ground_failure']
 
     pipe_material_map = {
         'CI': 'B',
@@ -146,13 +143,15 @@ def auto_populate(aim):  # noqa: C901
         """
         if pipe_material is None:
             if pipe_diameter > 20 * 0.0254:  # 20 inches in meter
-                print(
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(  # noqa: T201
                     f'Asset {asset_name} is missing material. '
                     'Material is assumed to be Cast Iron'
                 )
                 pipe_material = 'CI'
             else:
-                print(
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(  # noqa: T201
                     f'Asset {asset_name} is missing material. Material is '
                     f'assumed to be Steel (ST)'
                 )
@@ -167,7 +166,8 @@ def auto_populate(aim):  # noqa: C901
                     'is assumed to be Ductile Steel.'
                 )
 
-                print(msg)
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(msg)  # noqa: T201
                 pipe_material = 'DS'
 
             else:
@@ -176,7 +176,8 @@ def auto_populate(aim):  # noqa: C901
                     'is assumed to be Brittle Steel.'
                 )
 
-                print(msg)
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(msg)  # noqa: T201
                 pipe_material = 'BS'
 
         pipe_flexibility = pipe_material_map.get(pipe_material, 'missing')
@@ -233,7 +234,7 @@ def auto_populate(aim):  # noqa: C901
                 )
             demand_cloning_config = {}
             for edp in response_data.columns:
-                tag, location, direction = edp  # noqa: F841
+                tag, location, direction = edp
 
                 demand_cloning_config['-'.join(edp)] = [
                     f'{tag}-{x}-{direction}'
@@ -249,7 +250,7 @@ def auto_populate(aim):  # noqa: C901
             f'4_PWP.{pipe_flexibility}.GF-LOC': {'DS2': 'aggregate_DS2'},
         }
         dmg_process_filename = 'dmg_process.json'
-        with open(dmg_process_filename, 'w', encoding='utf-8') as f:
+        with Path(dmg_process_filename).open('w', encoding='utf-8') as f:
             json.dump(dmg_process, f, indent=2)
 
         # Define the auto-populated config
@@ -323,7 +324,8 @@ def auto_populate(aim):  # noqa: C901
                 'The tank is assumed to be Steel ("S").'
             )
 
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             tank_material = 'S'
 
         if tank_location == 'AG' and tank_material == 'W':
@@ -334,7 +336,8 @@ def auto_populate(aim):  # noqa: C901
                 'The tank is assumed to be Steel ("S").'
             )
 
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             tank_material = 'S'
 
         if tank_location == 'B' and tank_material == 'S':
@@ -345,7 +348,8 @@ def auto_populate(aim):  # noqa: C901
                 'The tank is assumed to be Concrete ("C").'
             )
 
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             tank_material = 'C'
 
         if tank_location == 'B' and tank_material == 'W':
@@ -356,7 +360,8 @@ def auto_populate(aim):  # noqa: C901
                 'to be Concrete ("C")'
             )
 
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             tank_material = 'C'
 
         if tank_anchored == 1:
@@ -388,12 +393,12 @@ def auto_populate(aim):  # noqa: C901
         }
 
     else:
-        print(
+        # TODO (azs): implement a logging system instead of printing these messages
+        print(  # noqa: T201
             f'Water Distribution network element type {wdn_element_type} '
             f'is not supported in Hazus Earthquake - Potable Water'
         )
         dl_ap = 'N/A'
         comp = None
-
 
     return gi_ap, dl_ap, comp

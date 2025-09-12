@@ -44,15 +44,13 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
 import pelicun
 from pelicun.assessment import DLCalculationAssessment
 
+
 # Convert common length units
-def convertUnits(value, unit_in, unit_out):
-    """
-    Convert units.
-    """
+def convert_length_units(value, unit_in, unit_out):
+    """Convert units."""
     aval_types = ['m', 'mm', 'cm', 'km', 'inch', 'ft', 'mile']
     m = 1.0
     mm = 0.001 * m
@@ -71,7 +69,8 @@ def convertUnits(value, unit_in, unit_out):
         'mile': mile,
     }
     if (unit_in not in aval_types) or (unit_out not in aval_types):
-        print(
+        # TODO (azs): implement a logging system instead of printing these messages
+        print(  # noqa: T201
             f'The unit {unit_in} or {unit_out} '
             f'are used in auto_population but not supported'
         )
@@ -79,7 +78,28 @@ def convertUnits(value, unit_in, unit_out):
     return value * scale_map[unit_in] / scale_map[unit_out]
 
 
-def getHAZUSBridgeK3DModifier(hazus_class, aim):
+def get_hazus_bridge_k3d_modifier(hazus_class, aim):
+    """
+    Calculate K_3D modifier for Hazus bridge seismic analysis.
+
+    This function computes the K_3D factor based on the bridge class and
+    number of spans according to Hazus methodology. The K_3D factor modifies
+    the piers' 2-dimensional capacity to allow for the 3-dimensional arch
+    action in the deck.
+
+    Parameters
+    ----------
+    hazus_class : str
+        Hazus bridge classification (e.g., 'HWB1', 'HWB2', etc.).
+    aim : dict
+        Asset Information Model containing bridge characteristics,
+        specifically 'NumOfSpans'.
+
+    Returns
+    -------
+    float
+        K_3D modifier value for the given bridge class and span configuration.
+    """
     # In HAZUS, the K_3D for HWB28 is undefined, so we return 1, i.e., no scaling
     # The K-3D factors for HWB3 and HWB4 are defined as EQ1, which leads to division by zero
     # This is an error in the HAZUS documentation, and we assume that the factors are 1 for these classes
@@ -124,19 +144,38 @@ def getHAZUSBridgeK3DModifier(hazus_class, aim):
     }
     if hazus_class in ['HWB3', 'HWB4', 'HWB28']:
         return 1
-    else:
-        n = aim['NumOfSpans']
-        if n < 2:
-            return 1
-        a = factors[mapping[hazus_class]][0]
-        b = factors[mapping[hazus_class]][1]
-        return 1 + a / (
-            n - b
-        )  # This is the original form in Mander and Basoz (1999)
+    n = aim['NumOfSpans']
+    if n < 2:
+        return 1
+    a = factors[mapping[hazus_class]][0]
+    b = factors[mapping[hazus_class]][1]
+    return 1 + a / (n - b)  # This is the original form in Mander and Basoz (1999)
 
 
-def convertBridgeToHAZUSclass(aim):  # noqa: C901
-    # TODO: replace labels in AIM with standard CamelCase versions
+def classify_bridge_for_hazus(aim):  # noqa: C901
+    """
+    Classify bridge into Hazus bridge categories.
+
+    This function determines the appropriate Hazus bridge classification
+    (HWB1-HWB28) based on bridge characteristics including structure type,
+    state code, year built, number of spans, and maximum span length.
+
+    Parameters
+    ----------
+    aim : dict
+        Asset Information Model containing bridge characteristics:
+        - BridgeClass: Structure type code
+        - StateCode: State where bridge is located
+        - YearBuilt: Year of construction
+        - NumOfSpans: Number of spans
+        - MaxSpanLength: Length of maximum span
+        - units: Dictionary containing length units
+
+    Returns
+    -------
+    str
+        Hazus bridge classification code (e.g., 'HWB1', 'HWB2', etc.).
+    """
     structure_type = aim['BridgeClass']
     # if (
     #     type(structure_type) == str
@@ -151,7 +190,7 @@ def convertBridgeToHAZUSclass(aim):  # noqa: C901
     num_span = aim['NumOfSpans']
     len_max_span = aim['MaxSpanLength']
     len_unit = aim['units']['length']
-    len_max_span = convertUnits(len_max_span, len_unit, 'm')
+    len_max_span = convert_length_units(len_max_span, len_unit, 'm')
 
     seismic = (int(state) == 6 and int(yr_built) >= 1975) or (
         int(state) != 6 and int(yr_built) >= 1990
@@ -199,11 +238,10 @@ def convertBridgeToHAZUSclass(aim):  # noqa: C901
                     bridge_class = 'HWB12'
                 else:
                     bridge_class = 'HWB13'
+            elif state != 6:
+                bridge_class = 'HWB24'
             else:
-                if state != 6:
-                    bridge_class = 'HWB24'
-                else:
-                    bridge_class = 'HWB25'
+                bridge_class = 'HWB25'
         else:
             bridge_class = 'HWB14'
 
@@ -239,13 +277,38 @@ def convertBridgeToHAZUSclass(aim):  # noqa: C901
         else:
             bridge_class = 'HWB23'
 
-    # TODO: review and add HWB24-27 rules
-    # TODO: also double check rules for HWB10-11 and HWB22-23
+    # TODO: review and add HWB24-27 rules  # noqa: TD002
+    # TODO: also double check rules for HWB10-11 and HWB22-23  # noqa: TD002
 
     return bridge_class
 
 
-def getHAZUSBridgePGDModifier(hazus_class, aim):
+def get_hazus_bridge_pgd_modifier(hazus_class, aim):
+    """
+    Calculate PGD modifier for Hazus bridge seismic analysis.
+
+    This function computes the f1 and f2 factors that scale the Permanent
+    Ground Deformation (PGD) capacity of bridges in damage states 2-4. The
+    factors are based on bridge geometry and skew angle according to Hazus
+    methodology.
+
+    Parameters
+    ----------
+    hazus_class : str
+        Hazus bridge classification (e.g., 'HWB1', 'HWB2', etc.).
+    aim : dict
+        Asset Information Model containing bridge characteristics:
+        - DeckWidth: Width of bridge deck
+        - NumOfSpans: Number of spans
+        - Skew: Skew angle of bridge
+        - StructureLength: Total length of structure
+
+    Returns
+    -------
+    tuple of float
+        The f1 and f2 factors to modify PGD capacity for the given bridge class
+        and geometry.
+    """
     # This is the original modifier in HAZUS, which gives inf if Skew is 0
     # modifier1 = 0.5*AIM['StructureLength']/(AIM['DeckWidth']*AIM['NumOfSpans']*np.sin(AIM['Skew']/180.0*np.pi))
     # Use the modifier that is corrected from HAZUS manual to achieve the asymptotic behavior
@@ -290,28 +353,85 @@ def getHAZUSBridgePGDModifier(hazus_class, aim):
     return mapping[hazus_class][0], mapping[hazus_class][1]
 
 
-def convertTunnelToHAZUSclass(aim) -> str:
+def classify_tunnel_for_hazus(aim) -> str:
+    """
+    Classify tunnel into Hazus tunnel categories.
+
+    This function determines the appropriate Hazus tunnel classification
+    based on construction type.
+
+    Parameters
+    ----------
+    aim : dict
+        Asset Information Model containing tunnel characteristics,
+        specifically 'ConstructType'.
+
+    Returns
+    -------
+    str
+        Hazus tunnel classification code ('HTU1' or 'HTU2').
+    """
     if 'Bored' in aim['ConstructType'] or 'Drilled' in aim['ConstructType']:
         return 'HTU1'
-    elif 'Cut' in aim['ConstructType'] or 'Cover' in aim['ConstructType']:
+    if 'Cut' in aim['ConstructType'] or 'Cover' in aim['ConstructType']:
         return 'HTU2'
-    else:
-        # Select HTU2 for unclassified tunnels because it is more conservative.
-        return 'HTU2'
+    # Select HTU2 for unclassified tunnels because it is more conservative.
+    return 'HTU2'
 
 
-def convertRoadToHAZUSclass(aim) -> str:
+def classify_road_for_hazus(aim) -> str:
+    """
+    Classify road into Hazus road categories.
+
+    This function determines the appropriate Hazus road classification
+    based on road type.
+
+    Parameters
+    ----------
+    aim : dict
+        Asset Information Model containing road characteristics,
+        specifically 'RoadType'.
+
+    Returns
+    -------
+    str
+        Hazus road classification code ('HRD1' or 'HRD2').
+    """
     if aim['RoadType'] in ['Primary', 'Secondary']:
         return 'HRD1'
 
-    elif aim['RoadType'] == 'Residential':
+    if aim['RoadType'] == 'Residential':
         return 'HRD2'
 
-    else:
-        # many unclassified roads are urban roads
-        return 'HRD2'
+    # many unclassified roads are urban roads
+    return 'HRD2'
 
-def getHAZUSBridgeSlightDamageModifier(hazus_class, aim):
+
+def get_hazus_bridge_slight_damage_modifier(hazus_class, aim):
+    """
+    Calculate slight damage modifier for Hazus bridge seismic analysis.
+
+    This function computes slight damage modifiers for specific Hazus bridge
+    classes based on spectral acceleration ratios. The modifier converts short
+    periods to an equivalent spectral amplitude at T=1.0 second. Since this
+    modifier is a function of the spectral shape of the ground motion demand,
+    its value is specific to each demand realization. This function returns
+    a specific factor for each realization in the form of an operation string
+    the Pelicun can apply to modify the demand sample during the analysis.
+
+    Parameters
+    ----------
+    hazus_class : str
+        Hazus bridge classification (e.g., 'HWB1', 'HWB2', etc.).
+    aim : dict
+        Asset Information Model containing demand and configuration data.
+
+    Returns
+    -------
+    list of str or None
+        List of operation strings for sample-wise modification, or None
+        if the bridge class doesn't require modification.
+    """
     if hazus_class in [
         'HWB1',
         'HWB2',
@@ -379,7 +499,7 @@ def getHAZUSBridgeSlightDamageModifier(hazus_class, aim):
     return operation
 
 
-def auto_populate(aim):  # noqa: C901
+def auto_populate(aim):
     """
     Automatically creates a performance model for PGA-based Hazus EQ analysis.
 
@@ -404,18 +524,16 @@ def auto_populate(aim):  # noqa: C901
         Component assignment - Defines the components (in rows) and their
         location, direction, and quantity (in columns).
     """
-
     # extract the General Information
     gi = aim.get('GeneralInformation', None)
 
     if gi is None:
-        # TODO: show an error message
+        # TODO: show an error message  # noqa: TD002
         pass
 
     # initialize the auto-populated GI
     gi_ap = gi.copy()
 
-    asset_type = aim['assetType']
     dl_app_data = aim['Applications']['DL']['ApplicationData']
     ground_failure = dl_app_data['ground_failure']
 
@@ -428,20 +546,20 @@ def auto_populate(aim):  # noqa: C901
             gi['Skew'] = 45
 
         # get the bridge class
-        bt = convertBridgeToHAZUSclass(gi)
+        bt = classify_bridge_for_hazus(gi)
         gi_ap['BridgeHazusClass'] = bt
 
         # fmt: off
         comp = pd.DataFrame(
-            {f'HWB.GS.{bt[3:]}': [  'ea',         1,          1,        1,   'N/A']},  # noqa: E201, E241
-            index = [            'Units', 'Location', 'Direction', 'Theta_0', 'Family']   # noqa: E201, E251
+            {f'HWB.GS.{bt[3:]}': [  'ea',         1,          1,        1,   'N/A']},
+            index = [            'Units', 'Location', 'Direction', 'Theta_0', 'Family']
         ).T
         # fmt: on
 
         # scaling_specification
         k_skew = np.sqrt(np.sin((90 - gi['Skew']) * np.pi / 180.0))
-        k_3d = getHAZUSBridgeK3DModifier(bt, gi)
-        k_shape = getHAZUSBridgeSlightDamageModifier(bt, aim)
+        k_3d = get_hazus_bridge_k3d_modifier(bt, gi)
+        k_shape = get_hazus_bridge_slight_damage_modifier(bt, aim)
         scaling_specification = {
             f'HWB.GS.{bt[3:]}-1-1': {
                 'LS2': f'*{k_skew * k_3d}',
@@ -455,14 +573,14 @@ def auto_populate(aim):  # noqa: C901
         if ground_failure:
             # fmt: off
             comp_gf = pd.DataFrame(
-                {f'HWB.GF':          [  'ea',         1,          1,        1,   'N/A']},  # noqa: E201, E241, F541
-                index = [     'Units', 'Location', 'Direction', 'Theta_0', 'Family']   # noqa: E201, E251
+                {f'HWB.GF':          [  'ea',         1,          1,        1,   'N/A']},  # noqa: F541
+                index = [     'Units', 'Location', 'Direction', 'Theta_0', 'Family']
             ).T
             # fmt: on
 
             comp = pd.concat([comp, comp_gf], axis=0)
 
-            f1, f2 = getHAZUSBridgePGDModifier(bt, gi)
+            f1, f2 = get_hazus_bridge_pgd_modifier(bt, gi)
 
             scaling_specification.update(
                 {
@@ -499,21 +617,21 @@ def auto_populate(aim):  # noqa: C901
 
     elif inf_type == 'HwyTunnel':
         # get the tunnel class
-        tt = convertTunnelToHAZUSclass(gi)
+        tt = classify_tunnel_for_hazus(gi)
         gi_ap['TunnelHazusClass'] = tt
 
         # fmt: off
         comp = pd.DataFrame(
-            {f'HTU.GS.{tt[3:]}': [  'ea',         1,          1,        1,   'N/A']},  # noqa: E201, E241
-            index = [            'Units','Location','Direction','Theta_0','Family']   # noqa: E201, E231, E251
+            {f'HTU.GS.{tt[3:]}': [  'ea',         1,          1,        1,   'N/A']},
+            index = [            'Units','Location','Direction','Theta_0','Family']
         ).T
         # fmt: on
         # if needed, add components to simulate damage from ground failure
         if ground_failure:
             # fmt: off
             comp_gf = pd.DataFrame(
-                {f'HTU.GF':          [  'ea',         1,          1,        1,   'N/A']},  # noqa: E201, E241, F541
-                index = [     'Units','Location','Direction','Theta_0','Family']   # noqa: E201, E231, E251
+                {f'HTU.GF':          [  'ea',         1,          1,        1,   'N/A']},  # noqa: F541
+                index = [     'Units','Location','Direction','Theta_0','Family']
             ).T
             # fmt: on
 
@@ -540,21 +658,21 @@ def auto_populate(aim):  # noqa: C901
         }
     elif inf_type == 'Roadway':
         # get the road class
-        rt = convertRoadToHAZUSclass(gi)
+        rt = classify_road_for_hazus(gi)
         gi_ap['RoadHazusClass'] = rt
 
         # fmt: off
         comp = pd.DataFrame(
             {},
-            index = [           'Units','Location','Direction','Theta_0','Family']     # noqa: E201, E231, E251
+            index = [           'Units','Location','Direction','Theta_0','Family']
         ).T
         # fmt: on
 
         if ground_failure:
             # fmt: off
             comp_gf = pd.DataFrame(
-                {f'HRD.GF.{rt[3:]}':[  'ea',         1,          1,        1,   'N/A']},  # noqa: E201, E231, E241
-                index = [     'Units','Location','Direction','Theta_0','Family']   # noqa: E201, E231, E251
+                {f'HRD.GF.{rt[3:]}':[  'ea',         1,          1,        1,   'N/A']},
+                index = [     'Units','Location','Direction','Theta_0','Family']
             ).T
             # fmt: on
 
@@ -580,6 +698,7 @@ def auto_populate(aim):  # noqa: C901
             },
         }
     else:
-        print('subtype not supported in HWY')
+        # TODO (azs): implement a logging system instead of printing these messages
+        print('subtype not supported in HWY')  # noqa: T201
 
     return gi_ap, dl_ap, comp

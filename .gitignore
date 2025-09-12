@@ -2,6 +2,7 @@
 /data_sources/HAZUS_MH_4.2_HU/session.dill
 /doc/build/
 *.pyc
+*.ipynb
 /.ropeproject/
 /doc/cache/
 /doc/source/dl_doc/

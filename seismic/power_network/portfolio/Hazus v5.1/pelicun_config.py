@@ -44,10 +44,10 @@ from pathlib import Path
 
 import numpy as np
 import pandas as pd
-
 import pelicun
 
-def auto_populate(aim):  # noqa: C901
+
+def auto_populate(aim):  # noqa: C901, PLR0912, PLR0915
     """
     Automatically creates a performance model for PGA-based Hazus EQ analysis.
 
@@ -72,20 +72,15 @@ def auto_populate(aim):  # noqa: C901
         Component assignment - Defines the components (in rows) and their
         location, direction, and quantity (in columns).
     """
-
     # extract the General Information
     gi = aim.get('GeneralInformation', None)
 
     if gi is None:
-        # TODO: show an error message
+        # TODO: show an error message  # noqa: TD002
         pass
 
     # initialize the auto-populated GI
     gi_ap = gi.copy()
-
-    asset_type = aim['assetType']
-    dl_app_data = aim['Applications']['DL']['ApplicationData']
-    ground_failure = dl_app_data['ground_failure']
 
     # initialize the auto-populated GI
     power_asset_type = gi_ap.get('type', 'MISSING')
@@ -101,7 +96,8 @@ def auto_populate(aim):  # noqa: C901
                 f' substation "{asset_name}" assumed to be '
                 '"  Low Voltage".'
             )
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             substation_voltage = 'low'
 
         if isinstance(substation_voltage, str):
@@ -169,7 +165,8 @@ def auto_populate(aim):  # noqa: C901
         substation_anchored = gi_ap.get('Anchored', None)
 
         if substation_anchored is None:
-            print(
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(  # noqa: T201
                 'Substation feature "Anchored" is missing. '
                 f' substation "{asset_name}" assumed to be '
                 '"  Unanchored".'
@@ -245,7 +242,8 @@ def auto_populate(aim):  # noqa: C901
 
         ep_c_anchored = None
         if circuit_anchored is None:
-            print(
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(  # noqa: T201
                 'Circuit feature "Anchored" is missing. '
                 f' Circuit "{asset_name}" assumed to be '
                 '"  Unanchored".'
@@ -324,7 +322,8 @@ def auto_populate(aim):  # noqa: C901
                 f' Generation "{asset_name}" assumed to be '
                 '"Small".'
             )
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
             # if the power feature is missing, the generation is assumed
             # to be small
             ep_g_size = 'small'
@@ -352,7 +351,8 @@ def auto_populate(aim):  # noqa: C901
                     '"Output" value. The unit for Generation '
                     f'"{asset_name}"  is assumed to be "MW".'
                 )
-                print(msg)
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(msg)  # noqa: T201
 
                 power_unit = 'mw'
 
@@ -390,7 +390,8 @@ def auto_populate(aim):  # noqa: C901
                     'value. So the size of the Generation is assumed '
                     'to be "Small".'
                 )
-                print(msg)
+                # TODO (azs): implement a logging system instead of printing these messages
+                print(msg)  # noqa: T201
 
                 ep_g_size = 'small'
 
@@ -416,7 +417,8 @@ def auto_populate(aim):  # noqa: C901
                 f' Circuit "{asset_name}" assumed to be '
                 '"  Unanchored".'
             )
-            print(msg)
+            # TODO (azs): implement a logging system instead of printing these messages
+            print(msg)  # noqa: T201
 
             generation_anchored = False
 

@@ -41,8 +41,8 @@ import json
 from pathlib import Path
 
 import jsonschema
-from jsonschema import validate
 import pandas as pd
+from jsonschema import validate
 
 ap_design_level = {1940: 'LC', 1975: 'MC', 2100: 'HC'}
 # ap_DesignLevel = {1940: 'PC', 1940: 'LC', 1975: 'MC', 2100: 'HC'}
@@ -74,55 +74,73 @@ convert_design_level = {
 }
 
 
-def story_scale(stories, comp_type):  # noqa: C901
+def story_scale(stories, comp_type):  # noqa: C901, PLR0911
+    """
+    Calculate story scaling factors for Hazus seismic components.
+
+    This function returns scaling factors based on the number of stories
+    and component type.
+
+    Parameters
+    ----------
+    stories : int
+        Number of stories in the building.
+    comp_type : str
+        Component type ('NSA', 'S', or 'NSD').
+
+    Returns
+    -------
+    float or None
+        Scaling factor for the given number of stories and component type.
+        Returns None if component type is not recognized.
+    """
     if comp_type == 'NSA':
         if stories == 1:
             return 1.00
-        elif stories == 2:
+        if stories == 2:
             return 1.22
-        elif stories == 3:
+        if stories == 3:
             return 1.40
-        elif stories == 4:
+        if stories == 4:
             return 1.45
-        elif stories == 5:
+        if stories == 5:
             return 1.50
-        elif stories == 6:
+        if stories == 6:
             return 1.90
-        elif stories == 7:
+        if stories == 7:
             return 2.05
-        elif stories == 8:
+        if stories == 8:
             return 2.15
-        elif stories == 9:
+        if stories == 9:
             return 2.20
-        elif (stories >= 10) and (stories < 30):
+        if (stories >= 10) and (stories < 30):
             return 2.30 + (stories - 10) * 0.04
-        elif stories >= 30:
+        if stories >= 30:
             return 3.10
-        else:
-            return 1.0
+        return 1.0
 
-    elif comp_type in ['S', 'NSD']:
+    if comp_type in ['S', 'NSD']:
         if stories == 1:
             return 1.45
-        elif stories == 2:
+        if stories == 2:
             return 1.90
-        elif stories == 3:
+        if stories == 3:
             return 2.50
-        elif stories == 4:
+        if stories == 4:
             return 2.75
-        elif stories == 5:
+        if stories == 5:
             return 3.00
-        elif stories in (6, 7, 8):
+        if stories in (6, 7, 8):
             return 3.50
-        elif stories == 9:
+        if stories == 9:
             return 4.50
-        elif (stories >= 10) and (stories < 50):
+        if (stories >= 10) and (stories < 50):
             return 4.50 + (stories - 10) * 0.07
-        elif stories >= 50:
+        if stories >= 50:
             return 7.30
-        else:
-            return 1.0
+        return 1.0
     return None
+
 
 def auto_populate(aim):
     """
@@ -154,13 +172,12 @@ def auto_populate(aim):
     gi = aim.get('GeneralInformation', None)
 
     if gi is None:
-        # TODO: show an error message
+        # TODO: show an error message  # noqa: TD002
         pass
 
     # initialize the auto-populated GI
     gi_ap = gi.copy()
 
-    asset_type = aim['assetType']
     ground_failure = aim['Applications']['DL']['ApplicationData']['ground_failure']
 
     # get the building parameters
@@ -221,17 +238,17 @@ def auto_populate(aim):
     if ground_failure:
         foundation_type = 'S'
 
-        FG_GF_H = f'GF.H.{foundation_type}'
-        FG_GF_V = f'GF.V.{foundation_type}'
-        CMP_GF = pd.DataFrame(
+        horizontal_ground_failure_model_id = f'GF.H.{foundation_type}'
+        vertical_ground_failure_model_id = f'GF.V.{foundation_type}'
+        ground_failure_component = pd.DataFrame(
             {
-                f'{FG_GF_H}': ['ea', 1, 1, 1, 'N/A'],
-                f'{FG_GF_V}': ['ea', 1, 3, 1, 'N/A'],
+                f'{horizontal_ground_failure_model_id}': ['ea', 1, 1, 1, 'N/A'],
+                f'{vertical_ground_failure_model_id}': ['ea', 1, 3, 1, 'N/A'],
             },
             index=['Units', 'Location', 'Direction', 'Theta_0', 'Family'],
         ).T
 
-        comp = pd.concat([comp, CMP_GF], axis=0)
+        comp = pd.concat([comp, ground_failure_component], axis=0)
 
     # get the occupancy class
     if gi['OccupancyClass'] in ap_occupancy:

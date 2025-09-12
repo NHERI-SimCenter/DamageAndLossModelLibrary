@@ -40,14 +40,13 @@ import json
 from pathlib import Path
 
 import jsonschema
-from jsonschema import validate
 import pandas as pd
-
+from FloodRulesets import configure_flood_vulnerability
+from jsonschema import validate
 from pelicun import base
 
-from FloodRulesets import FL_config
 
-def auto_populate(aim):
+def auto_populate(aim):  # noqa: C901
     """
     Automatically creates a performance model for Hazus Hurricane analysis.
 
@@ -71,9 +70,8 @@ def auto_populate(aim):
         Component assignment - Defines the components (in rows) and their
         location, direction, and quantity (in columns).
     """
-
     # extract the General Information
-    GI_in = aim.get('GeneralInformation', None)
+    general_information_input = aim.get('GeneralInformation', None)
 
     # parse the GI data
 
@@ -81,11 +79,11 @@ def auto_populate(aim):
     alname_yearbuilt = ['YearBuiltNJDEP', 'yearBuilt', 'YearBuiltMODIV']
     yearbuilt = None
     try:
-        yearbuilt = GI_in['YearBuilt']
-    except:
+        yearbuilt = general_information_input['YearBuilt']
+    except KeyError:
         for i in alname_yearbuilt:
-            if i in GI_in.keys():
-                yearbuilt = GI_in[i]
+            if i in general_information_input:
+                yearbuilt = general_information_input[i]
                 break
 
     # if none of the above works, set a default
@@ -93,34 +91,24 @@ def auto_populate(aim):
         yearbuilt = 1985
 
     # maps for split level
-    ap_SplitLevel = {
-        'NO': 0,
-        'YES': 1,
-        False: 0,
-        True: 1
-    }
+    auto_populated_split_level = {'NO': 0, 'YES': 1, False: 0, True: 1}
 
     # maps for design level (Marginal Engineered is mapped to Engineered as default)
-    ap_DesignLevel = {
-        'E': 'E',
-        'NE': 'NE',
-        'PE': 'PE',
-        'ME': 'E'
-    }
-    design_level = GI_in.get('DesignLevel','E')
+    auto_populated_design_level = {'E': 'E', 'NE': 'NE', 'PE': 'PE', 'ME': 'E'}
+    design_level = general_information_input.get('DesignLevel', 'E')
     if pd.isna(design_level):
         design_level = 'E'
 
-    foundation = GI_in.get('FoundationType',3501)
+    foundation = general_information_input.get('FoundationType', 3501)
     if pd.isna(foundation):
         foundation = 3501
 
-    nunits = GI_in.get('NoUnits',1)
+    nunits = general_information_input.get('NoUnits', 1)
     if pd.isna(nunits):
         nunits = 1
 
     # maps for flood zone
-    ap_FloodZone = {
+    auto_populated_flood_zone_mapping = {
         # Coastal areas with a 1% or greater chance of flooding and an
         # additional hazard associated with storm waves.
         6101: 'VE',
@@ -138,78 +126,92 @@ def auto_populate(aim):
         6113: 'OW',
         6114: 'D',
         6115: 'NA',
-        6119: 'NA'
+        6119: 'NA',
     }
-    if type(GI_in['FloodZone']) == int:
+    if isinstance(general_information_input['FloodZone'], int):
         # NJDEP code for flood zone (conversion to the FEMA designations)
-        floodzone_fema = ap_FloodZone[GI_in['FloodZone']]
+        floodzone_fema = auto_populated_flood_zone_mapping[
+            general_information_input['FloodZone']
+        ]
     else:
         # standard input should follow the FEMA flood zone designations
-        floodzone_fema = GI_in['FloodZone']
+        floodzone_fema = general_information_input['FloodZone']
 
     # add the parsed data to the BIM dict
-    GI_ap = GI_in.copy()
-    GI_ap.update(dict(
-        YearBuilt=int(yearbuilt),
-        DesignLevel=str(ap_DesignLevel[design_level]), # default engineered
-        NumberOfUnits=int(nunits),
-        FirstFloorElevation=float(GI_in.get('FirstFloorHt1',10.0)),
-        SplitLevel=bool(ap_SplitLevel[GI_in.get('SplitLevel','NO')]), # default: no
-        FoundationType=int(foundation), # default: pile
-        City=GI_in.get('City','NA'),
-        FloodZone =str(floodzone_fema)
-    ))
+    general_information_auto_populated = general_information_input.copy()
+    general_information_auto_populated.update(
+        {
+            'YearBuilt': int(yearbuilt),
+            'DesignLevel': str(
+                auto_populated_design_level[design_level]
+            ),  # default engineered
+            'NumberOfUnits': int(nunits),
+            'FirstFloorElevation': float(
+                general_information_input.get('FirstFloorHt1', 10.0)
+            ),
+            'SplitLevel': bool(
+                auto_populated_split_level[
+                    general_information_input.get('SplitLevel', 'NO')
+                ]
+            ),  # default: no
+            'FoundationType': int(foundation),  # default: pile
+            'City': general_information_input.get('City', 'NA'),
+            'FloodZone': str(floodzone_fema),
+        }
+    )
 
     # prepare the flood rulesets
-    fld_config = FL_config(GI_ap)
+    fld_config = configure_flood_vulnerability(general_information_auto_populated)
 
     if fld_config is None:
-        info_dict = {key: GI_ap.get(key, "") 
-                for key in [
-                    "OccupancyClass",
-                    "NumberOfStories",
-                    "FloodType",
-                    "BasementType",
-                    "PostFIRM"
-                ]}
+        info_dict = {
+            key: general_information_auto_populated.get(key, '')
+            for key in [
+                'OccupancyClass',
+                'NumberOfStories',
+                'FloodType',
+                'BasementType',
+                'PostFIRM',
+            ]
+        }
 
-        #TODO(AZS): Once we have a proper inference engine in place, replace this 
-        # print statement and raise an error instead
-        msg = (f'No matching flood archetype configuration available for the '
-               f'following attributes:\n'
-               f'{info_dict}')
-        print(msg)
-        #raise ValueError(msg)
+        # TODO (azs): implement a logging system instead of printing these messages
+        msg = (
+            f'No matching flood archetype configuration available for the '
+            f'following attributes:\n'
+            f'{info_dict}'
+        )
+        print(msg)  # noqa: T201
+        # raise ValueError(msg)
 
     # prepare the component assignment
     comp = pd.DataFrame(
-            {f'{fld_config}':  [  'ea',         1,          1,        1,   'N/A']},
-            index = [          'Units','Location','Direction','Theta_0','Family']
-        ).T
+        {f'{fld_config}': ['ea', 1, 1, 1, 'N/A']},
+        index=['Units', 'Location', 'Direction', 'Theta_0', 'Family'],
+    ).T
 
-    DL_ap = {
-        "Asset": {
-            "ComponentAssignmentFile": "CMP_QNT.csv",
-            "ComponentDatabase": "None",
-            "NumberOfStories": 1
+    damage_loss_config_auto_populated = {
+        'Asset': {
+            'ComponentAssignmentFile': 'CMP_QNT.csv',
+            'ComponentDatabase': 'None',
+            'NumberOfStories': 1,
         },
-        "Demands": {        
-        },
-        "Losses": {
-            "Repair": {
-                "ConsequenceDatabase": "Hazus Hurricane Storm Surge - Buildings",
-                "MapApproach": "Automatic",
-                #"MapFilePath": "loss_map.csv",
-                "DecisionVariables": {
-                    "Cost": True,
-                    "Carbon": False,
-                    "Energy": False,
-                    "Time": False
-                }
+        'Demands': {},
+        'Losses': {
+            'Repair': {
+                'ConsequenceDatabase': 'Hazus Hurricane Storm Surge - Buildings',
+                'MapApproach': 'Automatic',
+                # "MapFilePath": "loss_map.csv",
+                'DecisionVariables': {
+                    'Cost': True,
+                    'Carbon': False,
+                    'Energy': False,
+                    'Time': False,
+                },
             }
         },
-        "Options": {
-            "NonDirectionalMultipliers": {"ALL": 1.0},
+        'Options': {
+            'NonDirectionalMultipliers': {'ALL': 1.0},
         },
     }
 
@@ -218,33 +220,38 @@ def auto_populate(aim):
     # get the length unit
     ft_to_demand_unit = base.convert_units(
         1.0,
-        unit = 'ft',
-        to_unit = GI_ap['units']['length'],
-        category = 'length'
+        unit='ft',
+        to_unit=general_information_auto_populated['units']['length'],
+        category='length',
     )
 
     demand_file = Path(aim['DL']['Demands']['DemandFilePath']).resolve()
     original_demands = pd.read_csv(demand_file, index_col=0)
     for col in original_demands.columns:
-        if "PIH" in col:
+        if 'PIH' in col:
             extension = original_demands[col]
-            break  
-    col_original = col 
-    
+            break
+    col_original = col
+
     col_parts = col_original.split('-')
-    if "PIH"==col_parts[1]:
+    if col_parts[1] == 'PIH':
         col_parts[2] = '0'
     else:
         col_parts[1] = '0'
     col_mod = '-'.join(col_parts)
 
     # move the original demands to location 0
-    original_demands[col_mod] = extension.values.copy()
+    original_demands[col_mod] = extension.to_numpy().copy()
     original_demands[col_original] = (
-        extension.values - 
-        GI_ap['FirstFloorElevation']*ft_to_demand_unit
+        extension.to_numpy()
+        - general_information_auto_populated['FirstFloorElevation']
+        * ft_to_demand_unit
     )
 
     original_demands.to_csv(demand_file)
 
-    return GI_ap, DL_ap, comp
+    return (
+        general_information_auto_populated,
+        damage_loss_config_auto_populated,
+        comp,
+    )

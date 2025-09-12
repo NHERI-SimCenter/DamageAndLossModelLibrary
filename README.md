@@ -11,7 +11,7 @@ A curated, open-source repository of standardized model parameters and metadata 
 
 The Damage and Loss Model Library (DLML) is a project from the NHERI SimCenter designed to address a critical gap in natural hazards engineering: the lack of a centralized, standardized, and easy-to-use repository for damage and loss models. This library provides the essential data—model parameters, descriptive metadata, and configuration files—that power natural hazard risk assessment simulations.
 
-This `v2.0.0` release represents a significant evolution of the project, featuring an improved data schema, a host of new and updated models, and a documentation system.
+This `v2.1.0` release continues the evolution of the project, building on the improved data schema, extensive model collection, and documentation system introduced in v2.0.0, with enhanced code quality and improved usability for Hazus assessments.
 
 **Key Features:**
 * **Standardized Data Schema:** A robust yet flexible schema for organizing models by hazard, asset type, and resolution, making it easy to use data and supporting new contributions.

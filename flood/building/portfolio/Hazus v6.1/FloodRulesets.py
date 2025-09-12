@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #
 # Copyright (c) 2018 Leland Stanford Junior University
 # Copyright (c) 2018 The Regents of the University of California
@@ -45,50 +44,51 @@
 
 import numpy as np
 
-def FL_config(BIM):
+
+def configure_flood_vulnerability(bim):  # noqa: C901, PLR0912, PLR0915
     """
-    Rules to identify the flood vunerability category
+    Rules to identify the flood vulnerability category.
 
     Parameters
     ----------
-    BIM: dictionary
+    bim: dictionary
         Information about the building characteristics.
 
     Returns
     -------
     config: str
-        A string that identifies a specific configration within this buidling
+        A string that identifies a specific configuration within this building
         class.
     """
-    year = BIM['YearBuilt'] # just for the sake of brevity
+    year = bim['YearBuilt']  # just for the sake of brevity
 
     # Flood Type
-    if BIM['FloodZone'] == 'AO':
-        flood_type = 'raz' # Riverine/A-Zone
-    elif BIM['FloodZone'] in ['A', 'AE', 'AH']:
-        flood_type = 'caz' # Costal-Zone A
-    elif BIM['FloodZone'].startswith('V'):
-        flood_type = 'cvz' # Costal-Zone V
+    if bim['FloodZone'] == 'AO':
+        flood_type = 'raz'  # Riverine/A-Zone
+    elif bim['FloodZone'] in ['A', 'AE', 'AH']:
+        flood_type = 'caz'  # Costal-Zone A
+    elif bim['FloodZone'].startswith('V'):
+        flood_type = 'cvz'  # Costal-Zone V
     else:
-        flood_type = 'caz' # Default
+        flood_type = 'caz'  # Default
 
     # First Floor Elevation (FFE)
-    # For A Zone, top of finished floor; 
-    # for V Zone, bottom of floor beam of lowest floor; 
-    # define X based on typical depth of girders assuming bottom of door is used to 
-    # estimate first floor ht 
-    # (https://www.apawood.org/Data/Sites/1/documents/raised-wood-floor-foundations-guide.pdf) 
+    # For A Zone, top of finished floor;
+    # for V Zone, bottom of floor beam of lowest floor;
+    # define X based on typical depth of girders assuming bottom of door is used to
+    # estimate first floor ht
+    # (https://www.apawood.org/Data/Sites/1/documents/raised-wood-floor-foundations-guide.pdf)
     # -- take X=1 ft as average value of different options (depths)
     if flood_type in ['raz', 'caz']:
-        FFE = BIM['FirstFloorElevation']
+        first_floor_elevation = bim['FirstFloorElevation']
     else:
-        FFE = BIM['FirstFloorElevation'] - 1.0
+        first_floor_elevation = bim['FirstFloorElevation'] - 1.0  # noqa: F841
 
     # PostFIRM
-    #Based on FEMA FLOOD INSURANCE STUDY NUMBER 34001CV000A (Atlantic County, NJ )
+    # Based on FEMA FLOOD INSURANCE STUDY NUMBER 34001CV000A (Atlantic County, NJ )
     # Version Number 2.1.1.1 (See Table 9)
     # Yes=Post-FIRM, No=Pre-FIRM
-    PostFIRM_year_by_city = {
+    post_firm_year_by_city = {
         'Absecon': 1976,
         'Atlantic': 1971,
         'Brigantine': 1971,
@@ -111,23 +111,23 @@ def FL_config(BIM):
         'Port Republic': 1983,
         'Somers Point': 1982,
         'Ventnor City': 1971,
-        'Weymouth':1979 
+        'Weymouth': 1979,
     }
-    if BIM['City'] in PostFIRM_year_by_city:
-        PostFIRM_year = PostFIRM_year_by_city[BIM['City']]
-        PostFIRM = year > PostFIRM_year
+    if bim['City'] in post_firm_year_by_city:
+        post_firm_construction_year = post_firm_year_by_city[bim['City']]
+        is_post_firm_construction = year > post_firm_construction_year
     else:
-        PostFIRM = False
+        is_post_firm_construction = False
 
     # Basement Type
-    if BIM['SplitLevel'] and (BIM['FoundationType'] == 3504):
-        basement_type = 'spt' # Split-Level Basement
-    elif BIM['FoundationType'] in [3501, 3502, 3503, 3505, 3506, 3507]:
-        basement_type = 'bn' # No Basement
-    elif (not BIM['SplitLevel']) and (BIM['FoundationType'] == 3504):
-        basement_type = 'bw' # Basement
+    if bim['SplitLevel'] and (bim['FoundationType'] == 3504):
+        basement_type = 'spt'  # Split-Level Basement
+    elif bim['FoundationType'] in [3501, 3502, 3503, 3505, 3506, 3507]:
+        basement_type = 'bn'  # No Basement
+    elif (not bim['SplitLevel']) and (bim['FoundationType'] == 3504):
+        basement_type = 'bw'  # Basement
     else:
-        basement_type = 'bw' # Default
+        basement_type = 'bw'  # Default
 
     # Duration
     # The New Orleans District has developed expert opinion damage functions for
@@ -138,32 +138,31 @@ def FL_config(BIM):
     # • Hurricane flooding, long duration (one week), salt water
     # • Hurricane flooding, short duration (one day), salt water
     # So everything we do in NJ is short duration according to the damage curves.
-    dur = 'short'
+    dur = 'short'  # noqa: F841
 
     # Occupancy Type
-    if BIM['OccupancyClass'] == 'RES1':
-        if BIM['NumberOfStories'] == 1:
+    if bim['OccupancyClass'] == 'RES1':
+        if bim['NumberOfStories'] == 1:
             if flood_type == 'raz':
                 occupancy_type = 'SF1XA'
             elif flood_type == 'cvz':
                 occupancy_type = 'SF1XV'
-        else:
-            if basement_type == 'nav':
-                if flood_type == 'raz':
-                    occupancy_type = 'SF2XA'
-                elif flood_type == 'cvz':
-                    occupancy_type = 'SF2XV'
-            elif basement_type == 'bmt':
-                if flood_type == 'raz':
-                    occupancy_type = 'SF2BA'
-                elif flood_type == 'cvz':
-                    occupancy_type = 'SF2BV'
-            elif basement_type == 'spt':
-                if flood_type == 'raz':
-                    occupancy_type = 'SF2SA'
-                elif flood_type == 'cvz':
-                    occupancy_type = 'SF2SV'
-    elif 'RES3' in BIM['OccupancyClass']:
+        elif basement_type == 'nav':
+            if flood_type == 'raz':
+                occupancy_type = 'SF2XA'
+            elif flood_type == 'cvz':
+                occupancy_type = 'SF2XV'
+        elif basement_type == 'bmt':
+            if flood_type == 'raz':
+                occupancy_type = 'SF2BA'
+            elif flood_type == 'cvz':
+                occupancy_type = 'SF2BV'
+        elif basement_type == 'spt':
+            if flood_type == 'raz':
+                occupancy_type = 'SF2SA'
+            elif flood_type == 'cvz':
+                occupancy_type = 'SF2SV'
+    elif 'RES3' in bim['OccupancyClass']:
         occupancy_type = 'APT'
     else:
         ap_ot = {
@@ -192,72 +191,77 @@ def FL_config(BIM):
             'GOV1': 'CITY',
             'GOV2': 'EMERG',
             'EDU1': 'SCHOOL',
-            'EDU2': 'SCHOOL'
+            'EDU2': 'SCHOOL',
         }
-        occupancy_type = ap_ot[BIM['OccupancyClass']]
-
+        occupancy_type = ap_ot[bim['OccupancyClass']]  # noqa: F841
 
     fl_config = None
-    if BIM['OccupancyClass'] == 'RES1':
+    if bim['OccupancyClass'] == 'RES1':
         if flood_type == 'raz':
-            if BIM['SplitLevel']:
+            if bim['SplitLevel']:
                 if basement_type == 'bn':
-                    fl_config = 'structural.111.RES1.FIA.split_level.no_basement.a_zone'
+                    fl_config = (
+                        'structural.111.RES1.FIA.split_level.no_basement.a_zone'
+                    )
                 else:
                     fl_config = 'structural.112.RES1.FIA_Modified.split_level.with_basement.a_zone'
 
-            elif BIM['NumberOfStories'] == 1:
+            elif bim['NumberOfStories'] == 1:
                 if basement_type == 'bn':
                     fl_config = 'structural.129.RES1.USACE_IWR.one_story.no_basement'
                 else:
                     fl_config = 'structural.704.RES1.BCAR_Jan_2011.one_story.with_basement.b14'
 
-            elif BIM['NumberOfStories'] == 2:
+            elif bim['NumberOfStories'] == 2:
                 if basement_type == 'bn':
-                    fl_config = 'structural.107.RES1.FIA.two_floors.no_basement.a_zone'
+                    fl_config = (
+                        'structural.107.RES1.FIA.two_floors.no_basement.a_zone'
+                    )
                 else:
                     fl_config = 'structural.108.RES1.FIA_Modified.two_floors.with_basement.a_zone'
 
-            elif BIM['NumberOfStories'] == 3:
+            elif bim['NumberOfStories'] >= 3:
                 if basement_type == 'bn':
                     fl_config = 'structural.109.RES1.FIA.three_or_more_floors.no_basement.a_zone'
                 else:
                     fl_config = 'structural.110.RES1.FIA_Modified.three_or_more_floors.with_basement.a_zone'
 
         elif flood_type == 'cvz':
-            if BIM['SplitLevel']:
+            if bim['SplitLevel']:
                 if basement_type == 'bn':
                     fl_config = 'structural.658.RES1.BCAR_Jan_2011.all_floors.slab_no_basement.coastal_a_or_v_zone'
                 else:
                     fl_config = 'structural.120.RES1.FIA_Modified.split_level.with_basement.v_zone'
 
-            elif BIM['NumberOfStories'] == 1:
+            elif bim['NumberOfStories'] == 1:
                 if basement_type == 'bn':
                     fl_config = 'structural.658.RES1.BCAR_Jan_2011.all_floors.slab_no_basement.coastal_a_or_v_zone'
                 else:
                     fl_config = 'structural.114.RES1.FIA_Modified.one_floor.with_basement.v_zone'
 
-            elif BIM['NumberOfStories'] == 2:
+            elif bim['NumberOfStories'] == 2:
                 if basement_type == 'bn':
-                    fl_config = 'structural.115.RES1.FIA.two_floors.no_basement.v_zone'
+                    fl_config = (
+                        'structural.115.RES1.FIA.two_floors.no_basement.v_zone'
+                    )
                 else:
                     fl_config = 'structural.116.RES1.FIA_Modified.two_floors.with_basement.v_zone'
 
-            elif BIM['NumberOfStories'] == 3:
+            elif bim['NumberOfStories'] >= 3:
                 if basement_type == 'bn':
                     fl_config = 'structural.117.RES1.FIA.three_or_more_floors.no_basement.v_zone'
                 else:
                     fl_config = 'structural.118.RES1.FIA_Modified.three_or_more_floors.with_basement.v_zone'
 
         elif flood_type == 'caz':
-            if BIM['SplitLevel']:
+            if bim['SplitLevel']:
                 if basement_type == 'bn':
                     # copied from Coastal V zone as per Hazus guidelines
                     fl_config = 'structural.658.RES1.BCAR_Jan_2011.all_floors.slab_no_basement.coastal_a_or_v_zone'
                 else:
                     fl_config = 'structural.112.RES1.FIA_Modified.split_level.with_basement.a_zone'
 
-            elif BIM['NumberOfStories'] == 1:
+            elif bim['NumberOfStories'] == 1:
                 if basement_type == 'bn':
                     # copied from Coastal V zone as per Hazus guidelines
                     fl_config = 'structural.658.RES1.BCAR_Jan_2011.all_floors.slab_no_basement.coastal_a_or_v_zone'
@@ -265,21 +269,22 @@ def FL_config(BIM):
                     # copied from Coastal V zone as per Hazus guidelines
                     fl_config = 'structural.114.RES1.FIA_Modified.one_floor.with_basement.v_zone'
 
-            elif BIM['NumberOfStories'] == 2:
+            elif bim['NumberOfStories'] == 2:
                 if basement_type == 'bn':
-                    fl_config = 'structural.107.RES1.FIA.two_floors.no_basement.a_zone'
+                    fl_config = (
+                        'structural.107.RES1.FIA.two_floors.no_basement.a_zone'
+                    )
                 else:
                     fl_config = 'structural.108.RES1.FIA_Modified.two_floors.with_basement.a_zone'
 
-            elif BIM['NumberOfStories'] == 3:
+            elif bim['NumberOfStories'] >= 3:
                 if basement_type == 'bn':
                     fl_config = 'structural.109.RES1.FIA.three_or_more_floors.no_basement.a_zone'
                 else:
                     fl_config = 'structural.110.RES1.FIA_Modified.three_or_more_floors.with_basement.a_zone'
 
-
-    elif BIM['OccupancyClass'] == 'RES2':
-        if BIM['NumberOfStories'] == 1:
+    elif bim['OccupancyClass'] == 'RES2':
+        if bim['NumberOfStories'] == 1:
             if flood_type == 'rvz':
                 fl_config = 'structural.189.RES2.FIA.mobile_home.a_zone'
 
@@ -292,105 +297,113 @@ def FL_config(BIM):
             elif flood_type == 'caz':
                 fl_config = 'structural.189.RES2.FIA.mobile_home.a_zone'
 
-    elif 'RES3' in BIM['OccupancyClass']:
-
+    elif 'RES3' in bim['OccupancyClass']:
         # the following rules are used for all flood-types as a default and replaced with a
         # more appropriate one if possible
-        if basement_type =='bn':
+        if basement_type == 'bn':
             fl_config = 'structural.204.RES3.USACE_Chicago.apartment_unit_grade'
         else:
             fl_config = 'structural.205.RES3.USACE_Chicago.apartment_unit_sub_grade'
 
         if flood_type == 'cvz':
-            if BIM['NumberOfStories'] in [1, 2]:
+            if bim['NumberOfStories'] in [1, 2]:
                 if basement_type == 'bn':
-                    if BIM['OccupancyClass'] == 'RES3A':
+                    if bim['OccupancyClass'] == 'RES3A':
                         fl_config = 'structural.659.RES3A.BCAR_Jan_2011.1to2_stories.slab_no_basement.coastal_a_or_v_zone'
-                    elif BIM['OccupancyClass'] == 'RES3B':
+                    elif bim['OccupancyClass'] == 'RES3B':
                         fl_config = 'structural.660.RES3B.BCAR_Jan_2011.1to2_stories.slab_no_basement.coastal_a_or_v_zone'
 
     # the following rules are used for all flood-types as a default
-    elif BIM['OccupancyClass'] == 'RES4':
+    elif bim['OccupancyClass'] == 'RES4':
         fl_config = 'structural.209.RES4.USACE_Galveston.average_hotel_&_motel'
 
-    elif BIM['OccupancyClass'] == 'RES5':
-        fl_config = 'structural.214.RES5.USACE_Galveston.average_institutional_dormitory'
+    elif bim['OccupancyClass'] == 'RES5':
+        fl_config = (
+            'structural.214.RES5.USACE_Galveston.average_institutional_dormitory'
+        )
 
-    elif BIM['OccupancyClass'] == 'RES6':
+    elif bim['OccupancyClass'] == 'RES6':
         fl_config = 'structural.215.RES6.USACE_Galveston.nursing_home'
 
-    elif BIM['OccupancyClass'] == 'COM1':
+    elif bim['OccupancyClass'] == 'COM1':
         fl_config = 'structural.217.COM1.USACE_Galveston.average_retail'
 
-    elif BIM['OccupancyClass'] == 'COM2':
+    elif bim['OccupancyClass'] == 'COM2':
         fl_config = 'structural.341.COM2.USACE_Galveston.average_wholesale'
 
-    elif BIM['OccupancyClass'] == 'COM3':
-        fl_config = 'structural.375.COM3.USACE_Galveston.average_personal_&_repair_services'
+    elif bim['OccupancyClass'] == 'COM3':
+        fl_config = (
+            'structural.375.COM3.USACE_Galveston.average_personal_&_repair_services'
+        )
 
-    elif BIM['OccupancyClass'] == 'COM4':
+    elif bim['OccupancyClass'] == 'COM4':
         fl_config = 'structural.431.COM4.USACE_Galveston.average_prof/tech_services'
 
-    elif BIM['OccupancyClass'] == 'COM5':
+    elif bim['OccupancyClass'] == 'COM5':
         fl_config = 'structural.467.COM5.USACE_Galveston.bank'
 
-    elif BIM['OccupancyClass'] == 'COM6':
+    elif bim['OccupancyClass'] == 'COM6':
         fl_config = 'structural.474.COM6.USACE_Galveston.hospital'
 
-    elif BIM['OccupancyClass'] == 'COM7':
+    elif bim['OccupancyClass'] == 'COM7':
         fl_config = 'structural.475.COM7.USACE_Galveston.average_medical_office'
 
-    elif BIM['OccupancyClass'] == 'COM8':
-        fl_config = 'structural.493.COM8.USACE_Galveston.average_entertainment/recreation'
+    elif bim['OccupancyClass'] == 'COM8':
+        fl_config = (
+            'structural.493.COM8.USACE_Galveston.average_entertainment/recreation'
+        )
 
-    elif BIM['OccupancyClass'] == 'COM9':
+    elif bim['OccupancyClass'] == 'COM9':
         fl_config = 'structural.532.COM9.USACE_Galveston.average_theatre'
 
-    elif BIM['OccupancyClass'] == 'COM10':
+    elif bim['OccupancyClass'] == 'COM10':
         fl_config = 'structural.543.COM10.USACE_Galveston.garage'
 
-    elif BIM['OccupancyClass'] == 'IND1':
+    elif bim['OccupancyClass'] == 'IND1':
         fl_config = 'structural.545.IND1.USACE_Galveston.average_heavy_industrial'
 
-    elif BIM['OccupancyClass'] == 'IND2':
+    elif bim['OccupancyClass'] == 'IND2':
         fl_config = 'structural.559.IND2.USACE_Galveston.average_light_industrial'
 
-    elif BIM['OccupancyClass'] == 'IND3':
+    elif bim['OccupancyClass'] == 'IND3':
         fl_config = 'structural.575.IND3.USACE_Galveston.average_food/drug/chem'
 
-    elif BIM['OccupancyClass'] == 'IND4':
-        fl_config = 'structural.586.IND4.USACE_Galveston.average_metals/minerals_processing'
+    elif bim['OccupancyClass'] == 'IND4':
+        fl_config = (
+            'structural.586.IND4.USACE_Galveston.average_metals/minerals_processing'
+        )
 
-    elif BIM['OccupancyClass'] == 'IND5':
+    elif bim['OccupancyClass'] == 'IND5':
         fl_config = 'structural.591.IND5.USACE_Galveston.average_high_technology'
 
-    elif BIM['OccupancyClass'] == 'IND6':
+    elif bim['OccupancyClass'] == 'IND6':
         fl_config = 'structural.592.IND6.USACE_Galveston.average_construction'
 
-    elif BIM['OccupancyClass'] == 'AGR1':
+    elif bim['OccupancyClass'] == 'AGR1':
         fl_config = 'structural.616.AGR1.USACE_Galveston.average_agriculture'
 
-    elif BIM['OccupancyClass'] == 'REL1':
+    elif bim['OccupancyClass'] == 'REL1':
         fl_config = 'structural.624.REL1.USACE_Galveston.church'
 
-    elif BIM['OccupancyClass'] == 'GOV1':
+    elif bim['OccupancyClass'] == 'GOV1':
         fl_config = 'structural.631.GOV1.USACE_Galveston.average_government_services'
 
-    elif BIM['OccupancyClass'] == 'GOV2':
+    elif bim['OccupancyClass'] == 'GOV2':
         fl_config = 'structural.640.GOV2.USACE_Galveston.average_emergency_response'
 
-    elif BIM['OccupancyClass'] == 'EDU1':
+    elif bim['OccupancyClass'] == 'EDU1':
         fl_config = 'structural.643.EDU1.USACE_Galveston.average_school'
 
-    elif BIM['OccupancyClass'] == 'EDU2':
+    elif bim['OccupancyClass'] == 'EDU2':
         fl_config = 'structural.652.EDU2.USACE_Galveston.average_college/university'
 
     # extend the BIM dictionary
-    BIM.update(dict(
-        FloodType = flood_type,
-        BasementType=basement_type,
-        PostFIRM=PostFIRM,
-        ))
+    bim.update(
+        {
+            'FloodType': flood_type,
+            'BasementType': basement_type,
+            'PostFIRM': is_post_firm_construction,
+        }
+    )
 
     return fl_config
-
