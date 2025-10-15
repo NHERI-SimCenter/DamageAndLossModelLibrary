@@ -3,7 +3,10 @@ import streamlit as st
 def is_authenticated() -> bool:
     """True if the user is logged in via Streamlit auth."""
     # st.user is always available; use its is_logged_in flag per docs.
-    return bool(getattr(st.user, "is_logged_in", False))
+    if st.user.is_logged_in:
+        return True
+    else:
+        return False
 
 def current_user() -> dict:
     """
@@ -19,16 +22,31 @@ def current_user() -> dict:
         "raw": u,                              # full object for advanced use
     }
 
-def ensure_login(provider: str = "auth0") -> None:
+def ensure_login() -> None:
     """
     If user isn’t logged in, render a 'Log in' button that calls st.login(provider).
     Call this near the top of your page. If the user is logged in, returns immediately.
     """
     if not is_authenticated():
+        st.header("🔐 Welcome")
+        st.caption("Sign in to continue")
+
         if st.button("Log in", type="primary", use_container_width=True):
-            st.login(provider)  # redirects to Auth0
-        # Stop further execution until user logs in
+            st.login()
         st.stop()
+    else:
+        u = current_user()
+        with st.container(border=True):
+            left, right = st.columns([1, 1])
+            with left:
+                avatar = u.get("picture")
+                if avatar:
+                    st.image(avatar, width=48)
+                st.markdown(f"**{u.get('name') or 'User'}**")
+                if u.get("email"):
+                    st.caption(u["email"])
+            with right:
+                logout_button("Log out")
 
 def logout_button(label: str = "Log out") -> None:
     """

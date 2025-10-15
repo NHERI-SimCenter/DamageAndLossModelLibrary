@@ -15,42 +15,38 @@ from pelicun.base import convert_to_MultiIndex, pelicun_path
 from st_search.fuzzy_visuals import render_fuzzy_search
 from auth.simple_auth import ensure_login, current_user
 from auth.login_ui import render_login_panel
+from st_ui.auth_ui import render_login_panel
+from st_ui.sidebar import render_sidebar
+from st_ui.main_page import render_main_page
 
 
 from visuals_core import build_fragility_figure
 
-# Page config
-st.set_page_config(
-    page_title="Damage and Loss Model Library",
-    page_icon="📊",
-    layout="wide"
-)
+# st.write(st.session_state)
 
-render_login_panel()
+render_sidebar()
+render_main_page()
 
-DATA_PATH = (
-    Path(__file__).parent / 'seismic' / 'building' / 'component' / 'FEMA P-58 2nd Edition' / 'fragility.csv'
-)
-df = pd.read_csv(DATA_PATH) #(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
+# st.write(st.session_state)
 
-search_ui = render_fuzzy_search()
 
-st.write(st.session_state)
 
-st.write(df)
-sf = df.iloc[0]
+# DATA_PATH = (
+#     Path(__file__).parent / 'seismic' / 'building' / 'component' / 'FEMA P-58 2nd Edition' / 'fragility.csv'
+# )
+# df = pd.read_csv(DATA_PATH) #(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
 
-st.title("SF")
-st.write(sf)
+# search_ui = render_fuzzy_search()
 
-mi_sf = convert_to_MultiIndex(sf, axis = 0)
-st.write(mi_sf)
+# st.write(st.session_state)
 
-st.write(build_fragility_figure(mi_sf))
+# st.write(df)
+# sf = df.iloc[0]
 
-st.set_page_config(layout = "wide")
+# st.title("SF")
+# st.write(sf)
 
-st.title("Damage and Loss Model Library")
+# mi_sf = convert_to_MultiIndex(sf, axis = 0)
+# st.write(mi_sf)
 
-with st.sidebar:
-    st.header("Sidebar")
+# st.write(build_fragility_figure(mi_sf))

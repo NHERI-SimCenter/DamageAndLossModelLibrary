@@ -9,7 +9,7 @@ from typing import List, Dict, Optional, Tuple, Set
 from dataclasses import dataclass, field
 import pandas as pd
 from pathlib import Path
-from st_search.fuzzy_search_prep import FuzzyIndex, SearchObject
+from st_search.component_search import FuzzyIndex, SearchObject
 from st_keyup import st_keyup
 
 @st.cache_resource
@@ -21,7 +21,7 @@ def _get_cached_index() -> FuzzyIndex:
     -------
     FuzzyIndex
         Cached index of all fragility.json files
-    """
+    """[]
     return FuzzyIndex()
 
 
