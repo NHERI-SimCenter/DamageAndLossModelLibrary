@@ -32,7 +32,7 @@ def ensure_login() -> None:
         st.caption("Sign in to continue")
 
         if st.button("Log in", type="primary", use_container_width=True):
-            st.login()
+            st.login('auth0')
         st.stop()
     else:
         u = current_user()
