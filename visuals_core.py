@@ -195,6 +195,7 @@ def build_fragility_figure(
                             '<b>Capacity<br>Distribution</b>',
                             '<b>Capacity<br>Dispersion</b>'],
                     align=['center', 'left', 'center', 'center', 'center'],
+                    fill_color="#1B1B1B",
                     fill={'color': 'rgb(200,200,200)'},
                     font={'size': 16},
                 ),

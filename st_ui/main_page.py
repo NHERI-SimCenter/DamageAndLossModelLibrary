@@ -1,6 +1,7 @@
 import streamlit as st
 from auth.login_ui import render_login_panel
 from st_search.fuzzy_visuals import render_fuzzy_search
+from figures import render_selected_fragility_figures
 
 
 def render_main_page() -> None:
@@ -13,4 +14,4 @@ def render_main_page() -> None:
         layout="wide"
         )
     render_fuzzy_search()
-
+    render_selected_fragility_figures()

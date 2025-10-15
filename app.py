@@ -31,9 +31,7 @@ render_main_page()
 
 
 
-# DATA_PATH = (
-#     Path(__file__).parent / 'seismic' / 'building' / 'component' / 'FEMA P-58 2nd Edition' / 'fragility.csv'
-# )
+
 # df = pd.read_csv(DATA_PATH) #(r"seismic\building\component\FEMA P-58 2nd Edition\fragility.csv")
 
 # search_ui = render_fuzzy_search()
