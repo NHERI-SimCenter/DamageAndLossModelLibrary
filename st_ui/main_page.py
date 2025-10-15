@@ -13,5 +13,6 @@ def render_main_page() -> None:
         page_icon="📊",
         layout="wide"
         )
+    st.title("Damage and Loss Model Library")
     render_fuzzy_search()
     render_selected_fragility_figures()
