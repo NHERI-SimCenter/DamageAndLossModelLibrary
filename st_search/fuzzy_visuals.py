@@ -21,7 +21,7 @@ def _get_cached_index() -> FuzzyIndex:
     -------
     FuzzyIndex
         Cached index of all fragility.json files
-    """[]
+    """
     return FuzzyIndex()
 
 
