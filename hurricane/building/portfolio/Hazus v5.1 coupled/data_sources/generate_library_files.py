@@ -239,20 +239,42 @@ def parse_description(descr, parsed_data):  # noqa: C901, PLR0912, PLR0915
     return descr
 
 
-def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurricane/building/portfolio/Hazus v5.1 coupled/'):  # noqa: C901, D103, N802, PLR0912, PLR0915, FBT002
-    
+def create_hazus_hurricane_damage_loss_files(  # noqa: C901, PLR0912, PLR0915
+    fit_parameters=True,  # noqa: FBT002
+    root_path='hurricane/building/portfolio/Hazus v5.1 coupled/',
+):
+    """
+    Create Hazus hurricane damage and loss library files.
+
+    This function processes raw Hazus hurricane data to generate damage and loss
+    library files. It can either fit new normal or lognormal functions to the
+    raw data or load existing fitted parameters from a fitted_parameters.csv
+    file.
+
+    Parameters
+    ----------
+    fit_parameters : bool, optional
+        If True, fits new parameters to raw data. If False, loads existing
+        fitted parameters from fitted_parameters.csv. Default is True.
+    root_path : str, optional
+        Path to the directory containing the Hazus data files.
+        Default is 'hurricane/building/portfolio/Hazus v5.1 coupled/'.
+
+    Returns
+    -------
+    None
+        The function generates library files in the specified directory structure.
+    """
     root_path = Path(root_path)
 
     # The original path points to the folder where the original parameters are
     # stored.
-    original_path = root_path.parent / "Hazus v5.1 original/"
+    original_path = root_path.parent / 'Hazus v5.1 original/'
 
     if fit_parameters:
         # Load RAW Hazus data
 
-        raw_data_path = (
-            root_path / 'data_sources/input_files/'
-        )
+        raw_data_path = root_path / 'data_sources/input_files/'
 
         # read bldg data
 
@@ -329,7 +351,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
         ]
 
         # the problem affects DS4 probabilities
-        archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)  # noqa: PLR2004
+        archetypes = (DS_data[2] - DS_data[3].to_numpy() < -0.02).max(axis=1)
         # go through each affected archetype and fix the problem
         for frag_id in archetypes[archetypes == True].index:  # noqa: E712
             # get the wbID and terrain_id
@@ -354,7 +376,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
 
             # then check where to store the values at DS4 to maintain
             # ascending exceedance probabilities
-            target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806, PLR2004
+            target_DS = np.where(np.argsort(median_capacities) == 3)[0][0]  # noqa: N806
 
             # since this is always DS1 in the current database,
             # the script below works with that assumption and checks for exceptions
@@ -429,11 +451,11 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
 
                     # extract the DS3 information
                     DS3_data = frag_df_arch.loc[  # noqa: N806
-                        frag_df['DamLossDescID'] == 3, wind_speeds_str  # noqa: PLR2004
+                        frag_df['DamLossDescID'] == 3, wind_speeds_str
                     ].to_numpy()
 
                     # and overwrite the DS4 values in the original dataset
-                    DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806, PLR2004
+                    DS4_index = frag_df_arch.loc[frag_df['DamLossDescID'] == 4].index  # noqa: N806
                     frag_df.loc[DS4_index, wind_speeds_str] = DS3_data
 
         overwrite_ds4_data()
@@ -572,7 +594,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
                     beta_0 = 0.2
 
                     median_id = max(np.where(wind_speeds <= mu_0)[0]) + 1
-                    min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1  # noqa: PLR2004
+                    min_speed_id = max(np.where(wind_speeds <= 100)[0]) + 1
                     max_speed_id_mod = max(
                         [min([median_id, max_speed_id]), min_speed_id]
                     )
@@ -696,8 +718,8 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
                         # are very close AND one model has substantially
                         # smaller maximum error than the other, then
                         # choose the model with the smaller maximum error
-                        if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (  # noqa: PLR2004
-                            np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1  # noqa: PLR2004
+                        if (np.log(res_lognormal.fun / res_normal.fun) < 0.1) and (
+                            np.log(res_normal.maxcv / res_lognormal.maxcv) > 0.1
                         ):
                             dist_type = 'lognormal'
                             res = res_lognormal
@@ -706,8 +728,8 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
                             dist_type = 'normal'
                             res = res_normal
 
-                    elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (  # noqa: PLR2004
-                        np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1  # noqa: PLR2004
+                    elif (np.log(res_normal.fun / res_lognormal.fun) < 0.1) and (
+                        np.log(res_lognormal.maxcv / res_normal.maxcv) > 0.1
                     ):
                         dist_type = 'normal'
                         res = res_normal
@@ -732,7 +754,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
                 # Focus on "Building losses" first
                 L_ref = np.asarray(  # noqa: N806
                     frag_df_arch_terrain.loc[
-                        frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str  # noqa: PLR2004
+                        frag_df_arch_terrain['DamLossDescID'] == 5, wind_speeds_str
                     ].to_numpy()[0]
                 )
 
@@ -763,7 +785,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
                 # The losses for DS4 are calculated based on outcomes at the
                 # highest wind speeds
                 L_max = frag_df_arch_terrain.loc[  # noqa: N806
-                    frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'  # noqa: PLR2004
+                    frag_df_arch_terrain['DamLossDescID'] == 5, 'WS250'
                 ].to_numpy()[0]
                 DS4_max = DS_probs[3][-1]  # noqa: N806
 
@@ -836,17 +858,13 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
 
         main_df = pd.concat(rows, axis=0, ignore_index=True)
 
-        main_df.to_csv(
-            root_path/'data_sources/fitted_parameters.csv'
-        )
+        main_df.to_csv(root_path / 'data_sources/fitted_parameters.csv')
 
     main_df = pd.read_csv(
         root_path / 'data_sources/fitted_parameters.csv',
         index_col=0,
         low_memory=False,
-        dtype = {
-            "joist_spacing": str
-        }
+        dtype={'joist_spacing': str},
     )
 
     # Prepare the Damage and Loss Model Data Files
@@ -1286,9 +1304,7 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
     ]
 
     df_db_fit.to_csv(root_path / 'fragility.csv')
-    df_db_original.to_csv(
-        original_path / 'fragility.csv'
-    )
+    df_db_original.to_csv(original_path / 'fragility.csv')
 
     # initialize the output loss table
     # define the columns
@@ -1331,22 +1347,18 @@ def create_Hazus_HU_damage_and_loss_files(fit_parameters=True, root_path='hurric
     df_db_fit = df_db_fit.loc[df_db_fit['ID'] != '-Cost']
     df_db_fit = df_db_fit.set_index('ID').sort_index().convert_dtypes()
 
-    df_db_fit.to_csv(
-        root_path / 'consequence_repair.csv'
-    )
-    df_db_original.to_csv(
-        original_path / 'loss_repair.csv'
-    )
+    df_db_fit.to_csv(root_path / 'consequence_repair.csv')
+    df_db_original.to_csv(original_path / 'loss_repair.csv')
 
 
-def create_Hazus_HU_metadata_files(  # noqa: C901, N802
+def create_hazus_hurricane_metadata_files(  # noqa: C901
     source_file: str = 'fragility.csv',
     meta_file: str = 'data_sources/input_files/metadata.json',
     target_meta_file_damage: str = 'fragility.json',
     target_meta_file_loss: str = 'consequence_repair.json',
     target_meta_file_damage_original: str = 'fragility.json',
     target_meta_file_loss_original: str = 'loss_repair.json',
-    root_path = 'hurricane/building/portfolio/Hazus v5.1 coupled/'
+    root_path='hurricane/building/portfolio/Hazus v5.1 coupled/',
 ) -> None:
     """
     Create a database metadata file for the HAZUS Hurricane fragilities.
@@ -1398,14 +1410,16 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
     # The original path points to the folder where the original parameters are
     # stored.
-    original_path = Path(root_path).parent / "Hazus v5.1 original/"
+    original_path = Path(root_path).parent / 'Hazus v5.1 original/'
 
     # Combine paths:
     source_file = root_path / source_file
     meta_file = root_path / meta_file
     target_meta_file_damage = root_path / target_meta_file_damage
     target_meta_file_loss = root_path / target_meta_file_loss
-    target_meta_file_damage_original = original_path / target_meta_file_damage_original
+    target_meta_file_damage_original = (
+        original_path / target_meta_file_damage_original
+    )
     target_meta_file_loss_original = original_path / target_meta_file_loss_original
 
     #
@@ -2029,8 +2043,8 @@ def create_Hazus_HU_metadata_files(  # noqa: C901, N802
 
 def main():
     """Generate Hazus Hurricane damage and loss database files."""
-    create_Hazus_HU_damage_and_loss_files()
-    create_Hazus_HU_metadata_files()
+    create_hazus_hurricane_damage_loss_files()
+    create_hazus_hurricane_metadata_files()
 
 
 if __name__ == '__main__':

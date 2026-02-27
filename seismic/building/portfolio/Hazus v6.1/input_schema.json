@@ -78,14 +78,6 @@
 					}
 				},
 				"required": ["HeightClass"]
-			},
-			"else": {
-				"properties": {
-					"HeightClass": {
-						"type": "null"
-					}
-				},
-				"required": []
 			}
 		},
 		{

@@ -1,4 +1,4 @@
-#  # noqa: D100
+#
 # Copyright (c) 2023 Leland Stanford Junior University
 # Copyright (c) 2023 The Regents of the University of California
 #
@@ -280,7 +280,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
             table_vals[1] = np.array(ds_list)
 
             font_size = 16
-            if ds_i > 8:  # noqa: PLR2004
+            if ds_i > 8:
                 font_size = 8.5
 
             fig.add_trace(
@@ -317,7 +317,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
             ds_offset = 0.086
             info_font_size = 10
 
-            if ds_i > 8:  # noqa: PLR2004
+            if ds_i > 8:
                 x_loc = 0.4928
                 y_loc = 0.705 + 0.123
                 ds_offset = 0.0455
@@ -575,9 +575,9 @@ def plot_repair(  # noqa: C901, PLR0912, PLR0915
                     conseq_val = float(val)
                     if conseq_val < 1:
                         table_vals[1][ds_i] = f'{conseq_val:.4g}'
-                    elif conseq_val < 10:  # noqa: PLR2004
+                    elif conseq_val < 10:
                         table_vals[1][ds_i] = f'{conseq_val:.3g}'
-                    elif conseq_val < 1e6:  # noqa: PLR2004
+                    elif conseq_val < 1e6:
                         table_vals[1][ds_i] = f'{conseq_val:.0f}'
                     else:
                         table_vals[1][ds_i] = f'{conseq_val:.3g}'
@@ -594,7 +594,7 @@ def plot_repair(  # noqa: C901, PLR0912, PLR0915
             ]
 
             # converted simultaneous damage models might have a lot of DSs
-            if table_vals.shape[1] > 8:  # noqa: PLR2004
+            if table_vals.shape[1] > 8:
                 lots_of_ds = True
             else:
                 lots_of_ds = False
