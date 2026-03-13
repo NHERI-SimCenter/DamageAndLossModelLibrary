@@ -58,6 +58,8 @@ class FuzzySearchUI:
         """Initialize session state variables for tracking selections."""
         if 'selected_component_ids' not in st.session_state:
             st.session_state.selected_component_ids = []
+        if 'selected_component_metadata' not in st.session_state:
+            st.session_state.selected_component_metadata = {}
         if 'search_history' not in st.session_state:
             st.session_state.search_history = []
         if 'current_search_results' not in st.session_state:
@@ -65,15 +67,60 @@ class FuzzySearchUI:
         if 'show_suggestions' not in st.session_state:
             st.session_state.show_suggestions = False
     
+    def _store_component_metadata(self, comp_id: str, search_result: SearchResult):
+        """
+        Store full metadata for a selected component in session state.
+
+        Extracts the description, comments, and limit-state info from the
+        source SearchObject's underlying JSON data.
+
+        Parameters
+        ----------
+        comp_id : str
+            The component ID being added.
+        search_result : SearchResult
+            The SearchResult containing the source object with full JSON data.
+        """
+        source_obj = search_result.source_object
+
+        # The source object's combined_dict has _GeneralInformation removed
+        # into general_info_dict; the remaining keys are component entries.
+        # Each component entry in the original JSON may be a dict with
+        # Description, Comments, LimitStates, etc., or just a description string.
+        raw_component_data = source_obj.combined_dict.get(comp_id, {})
+
+        if isinstance(raw_component_data, dict):
+            description = raw_component_data.get('Description', search_result.description)
+            comments = raw_component_data.get('Comments', '')
+            limit_states = raw_component_data.get('LimitStates', {})
+            block_size = raw_component_data.get('SuggestedComponentBlockSize', '')
+        else:
+            # Fallback: the search_dict value is just the description string
+            description = search_result.description
+            comments = ''
+            limit_states = {}
+            block_size = ''
+
+        st.session_state.selected_component_metadata[comp_id] = {
+            'description': description,
+            'comments': comments,
+            'limit_states': limit_states,
+            'block_size': block_size,
+            'hazard_type': search_result.hazard_type,
+            'source_file': source_obj.file_path,
+            'short_name': source_obj.short_name,
+        }
+
     def _fuzzy_search_components(
         self, 
         query: str, 
         limit: int = 10,
         score_cutoff: int = 60,
-        filtered_objects: Optional[List[SearchObject]] = None
+        filtered_objects: Optional[List[SearchObject]] = None,
+        search_mode: str = "Description",
     ) -> List[SearchResult]:
         """
-        Perform fuzzy search on component descriptions.
+        Perform fuzzy search on component descriptions, IDs, or titles.
         
         Parameters
         ----------
@@ -85,6 +132,9 @@ class FuzzySearchUI:
             Minimum score threshold (0-100)
         filtered_objects : Optional[List[SearchObject]]
             Pre-filtered list of SearchObjects to search within
+        search_mode : str
+            One of ``"ID"``, ``"Title"``, or ``"Description"`` (default).
+            Controls which field the fuzzy matcher runs against.
         
         Returns
         -------
@@ -101,24 +151,36 @@ class FuzzySearchUI:
             # Create a list of tuples (component_id, description) for this object
             component_items: list[tuple[str, str]] = list(search_obj.search_dict.items())
 
-            # Search through descriptions using rapidfuzz
-            descriptions = [temp_descsciption for temp_component_id, temp_descsciption in component_items]
+            # ── Build the list of choices based on search_mode ──
+            if search_mode == "ID":
+                # Match against the component ID strings
+                choices = [comp_id for comp_id, _ in component_items]
+            elif search_mode == "Title":
+                # Match against the parent SearchObject's short name.
+                # Every component under the same JSON file shares the same
+                # title, so we repeat it per-item to keep index alignment.
+                choices = [search_obj.short_name] * len(component_items)
+            else:
+                # Default: match against the component description text
+                choices = [desc for _, desc in component_items]
+
             matches = process.extract(
                 query = query,
-                choices = descriptions,
+                choices = choices,
                 scorer = fuzz.WRatio,
-                limit = limit, #min(limit, len(descriptions)),
+                limit = limit,
                 processor=str.casefold
             )
 
             # Create SearchResult objects for matches above threshold
-            for match_desc, score, idx in matches:
+            for match_text, score, idx in matches:
                 if score >= score_cutoff:
                     component_id = component_items[idx][0]
+                    description = component_items[idx][1]
                     results.append(
                         SearchResult(
                             component_id=component_id,
-                            description=match_desc,
+                            description=description,
                             score=score,
                             source_object=search_obj
                         )
@@ -141,6 +203,20 @@ class FuzzySearchUI:
             col1, col2 = st.columns(2)
             
             with col1:
+                # ── Assessment methodology filter (UI only — filtering logic TBD) ──
+                methodology_options = ['All', 'FEMA P-58', 'Hazus v5.1', 'Other']
+                st.selectbox(
+                    "Assessment Methodology",
+                    methodology_options,
+                    index=0,
+                    key="methodology_filter",
+                    help=(
+                        "Filter components by their source assessment methodology. "
+                        "Filtering logic is not yet implemented — selecting a value "
+                        "here currently has no effect on search results."
+                    ),
+                )
+
                 # Hazard type filter
                 hazard_options = ['All', 'Seismic', 'Hurricane', 'Flood']
                 selected_hazard = st.selectbox(
@@ -268,9 +344,10 @@ class FuzzySearchUI:
                         key=f"suggestion_{i}",
                         use_container_width=True
                     ):
-                        # Add to selected components
+                        # Add to selected components and store metadata
                         if result.component_id not in st.session_state.selected_component_ids:
                             st.session_state.selected_component_ids.append(result.component_id)
+                            self._store_component_metadata(result.component_id, result)
                             st.rerun()
                 
                 with col2:
@@ -288,31 +365,47 @@ class FuzzySearchUI:
                     st.write(f"{hazard_emoji.get(result.hazard_type, '❓')} {result.hazard_type.title()}")
     
     def _render_selected_components(self):
-        """Render the list of selected components with remove options."""
+        """Render the list of selected components with remove options and full descriptions."""
         if st.session_state.selected_component_ids:
             st.markdown("### 📌 Selected Components")
             
-            # Create a DataFrame for better display
-            selected_df = pd.DataFrame(
-                st.session_state.selected_component_ids,
-                columns=['Component ID']
-            )
-            
-            # Add remove buttons for each component
+            # Add remove buttons for each component, with full description
             for idx, comp_id in enumerate(st.session_state.selected_component_ids):
                 col1, col2 = st.columns([4, 1])
                 
                 with col1:
                     st.write(f"**{idx + 1}.** {comp_id}")
+
+                    # ── Display full component description ──────────────────
+                    meta = st.session_state.selected_component_metadata.get(comp_id)
+                    if meta:
+                        desc = meta.get('description', '')
+                        comments = meta.get('comments', '')
+                        block_size = meta.get('block_size', '')
+
+                        if desc:
+                            st.caption(f"**Description:** {desc}")
+                        if comments:
+                            st.caption(f"**Comments:** {comments}")
+                        if block_size:
+                            st.caption(f"**Block Size:** {block_size}")
+                    else:
+                        st.caption(
+                            "_No description available — component was "
+                            "added before metadata tracking was enabled._"
+                        )
+                    # ────────────────────────────────────────────────────────
                 
                 with col2:
                     if st.button("Remove", key=f"remove_{comp_id}"):
                         st.session_state.selected_component_ids.remove(comp_id)
+                        st.session_state.selected_component_metadata.pop(comp_id, None)
                         st.rerun()
             
             # Clear all button
             if st.button("🗑️ Clear All Selections", type="secondary"):
                 st.session_state.selected_component_ids.clear()
+                st.session_state.selected_component_metadata.clear()
                 st.rerun()
         else:
             st.info("No components selected yet. Use the search bar to find and select components.")
@@ -335,12 +428,26 @@ class FuzzySearchUI:
         filtered_objects = self._apply_filters(hazard_filter, group_filter, additional_filters)
         
         # Search bar
+        search_mode = st.radio(
+            "Search by",
+            options=["Description", "ID", "Title"],
+            index=0,
+            horizontal=True,
+            key="search_mode",
+        )
+
+        placeholder_map = {
+            "Description": "Enter component description or keywords...",
+            "ID": "Enter component ID (e.g. B.10.31.001)...",
+            "Title": "Enter model library title or short name...",
+        }
+
         col1, col2 = st.columns([5, 1])
         
         with col1:
             search_query = st_keyup(
                 label="Search for components",
-                placeholder="Enter component description, ID, or keywords...",
+                placeholder=placeholder_map.get(search_mode, "Search..."),
                 key="search_input",
                 label_visibility="collapsed",
             )
@@ -358,7 +465,8 @@ class FuzzySearchUI:
                 search_query,
                 limit=50,
                 score_cutoff=score_threshold,
-                filtered_objects=filtered_objects
+                filtered_objects=filtered_objects,
+                search_mode=search_mode,
             )
             
             st.session_state.current_search_results = results
@@ -393,9 +501,11 @@ class FuzzySearchUI:
             if selected_indices:
                 if st.button("➕ Add Selected Components", type="primary"):
                     for idx in selected_indices:
-                        comp_id = st.session_state.current_search_results[idx].component_id
+                        result = st.session_state.current_search_results[idx]
+                        comp_id = result.component_id
                         if comp_id not in st.session_state.selected_component_ids:
                             st.session_state.selected_component_ids.append(comp_id)
+                            self._store_component_metadata(comp_id, result)
                     st.rerun()
             
             # Display results table
