@@ -34,6 +34,7 @@ class SearchObject:
 
     short_name: str = field(init=False)
     description: str = field(init=False)
+    category: str = field(init=False)   # 'FEMA' or 'HAZUS', parsed from file path
     search_dict: dict = field(init=False)
     general_info_dict: dict = field(init=False)
 
@@ -43,6 +44,13 @@ class SearchObject:
         
         self.short_name = self.general_info_dict.get('ShortName', 'Unknown')
         self.description = self.general_info_dict.get('Description', '')
+
+        if 'FEMA' in self.file_path:
+            self.category = 'FEMA'
+        elif 'Hazus' in self.file_path:
+            self.category = 'HAZUS'
+        else:
+            self.category = ''
 
         self.search_dict = temp_dict
 
