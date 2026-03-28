@@ -313,6 +313,39 @@ class FuzzySearchUI:
         
         return filtered
     
+    def _get_result_type(self, result: SearchResult) -> str:
+        """
+        Determine whether a search result represents a Damage or Consequence model.
+
+        Checks the source object's general_info_dict for an explicit 'Type' field
+        first, then falls back to keyword detection in the short name and description.
+
+        Parameters
+        ----------
+        result : SearchResult
+            The search result to classify.
+
+        Returns
+        -------
+        str
+            ``'Consequence'`` or ``'Damage'``.
+        """
+        gen_info = result.source_object.general_info_dict
+
+        # Prefer an explicit Type field in the JSON metadata
+        explicit_type = str(gen_info.get('Type', '')).lower()
+        if 'consequence' in explicit_type:
+            return 'Consequence'
+        if 'damage' in explicit_type:
+            return 'Damage'
+
+        # Fall back to keyword search in short name + component description
+        text = (result.source_object.short_name + ' ' + result.description).lower()
+        if 'consequence' in text:
+            return 'Consequence'
+
+        return 'Damage'
+
     def _render_search_suggestions(self, query: str, results: List[SearchResult]):
         """
         Render dynamic search suggestions dropdown.
@@ -407,8 +440,8 @@ class FuzzySearchUI:
                 st.session_state.selected_component_ids.clear()
                 st.session_state.selected_component_metadata.clear()
                 st.rerun()
-        else:
-            st.info("No components selected yet. Use the search bar to find and select components.")
+        # else:
+        #     st.info("No components selected yet. Use the search bar to find and select components.")
     
     def render_search_interface(self):
         """
@@ -478,38 +511,131 @@ class FuzzySearchUI:
     
         # Display search results
         if st.session_state.current_search_results:
+            all_results: List[SearchResult] = st.session_state.current_search_results[:50]
+
             st.markdown("### 🎯 Search Results")
-            
-            results_df = pd.DataFrame([
-                {
-                    'Component ID': r.component_id,
-                    'Description': r.description[:100] + '...' if len(r.description) > 100 else r.description,
-                    'Match Score': f"{r.score:.1f}%",
-                    'Hazard Type': r.hazard_type.title()
-                }
-                for r in st.session_state.current_search_results[:50]
-            ])
-            
-            # Make results selectable
+
+            # ── Bucket results by category then by Damage / Consequence ──────────
+            grouped: Dict[str, Dict[str, List[SearchResult]]] = {
+                'FEMA': {'Damage': [], 'Consequence': []},
+                'HAZUS': {'Damage': [], 'Consequence': []},
+                'Other': {'Damage': [], 'Consequence': []},
+            }
+
+            for r in all_results:
+                cat = r.source_object.category if r.source_object.category else 'Other'
+                if cat not in grouped:
+                    grouped[cat] = {'Damage': [], 'Consequence': []}
+                result_type = self._get_result_type(r)
+                grouped[cat][result_type].append(r)
+
+            # Only show tabs that actually have results
+            active_categories = [c for c in grouped if any(grouped[c].values())]
+
+            # ── Collect all visible indices for the "Add Selected" widget ────────
+            # We need a flat index that maps multiselect option → SearchResult.
+            # Build it once so the multiselect key is stable.
+            flat_results: List[SearchResult] = []
+            for cat in active_categories:
+                for rtype in ('Damage', 'Consequence'):
+                    flat_results.extend(grouped[cat][rtype])
+
             selected_indices = st.multiselect(
                 "Select components to add:",
-                options=list(range(len(results_df))),
-                format_func=lambda x: f"{results_df.iloc[x]['Component ID']}: {results_df.iloc[x]['Description'][:50]}...",
-                key="result_selector"
+                options=list(range(len(flat_results))),
+                format_func=lambda x: (
+                    f"[{flat_results[x].source_object.category}] "
+                    f"{flat_results[x].component_id}: "
+                    f"{flat_results[x].description[:60]}..."
+                ),
+                key="result_selector",
             )
-            
+
             if selected_indices:
                 if st.button("➕ Add Selected Components", type="primary"):
                     for idx in selected_indices:
-                        result = st.session_state.current_search_results[idx]
+                        result = flat_results[idx]
                         comp_id = result.component_id
                         if comp_id not in st.session_state.selected_component_ids:
                             st.session_state.selected_component_ids.append(comp_id)
                             self._store_component_metadata(comp_id, result)
                     st.rerun()
-            
-            # Display results table
-            st.dataframe(results_df, use_container_width=True, hide_index=True)
+
+            # ── Two-level accordion: tabs (FEMA / HAZUS) → expanders (Damage / Consequence) ──
+            tabs = st.tabs(active_categories)
+
+            for tab, cat in zip(tabs, active_categories):
+                with tab:
+                    cat_total = sum(len(grouped[cat][rt]) for rt in ('Damage', 'Consequence'))
+                    if cat_total == 0:
+                        st.info(f"No {cat} results found for this query.")
+                        continue
+
+                    for result_type in ('Damage', 'Consequence'):
+                        bucket = grouped[cat][result_type]
+                        if not bucket:
+                            continue
+
+                        type_emoji = '💥' if result_type == 'Damage' else '📊'
+                        with st.expander(
+                            f"{type_emoji} {result_type}  —  {len(bucket)} result{'s' if len(bucket) != 1 else ''}",
+                            expanded=(result_type == 'Damage'),  # Damage open by default
+                        ):
+                            for r in bucket:
+                                # Use the position in flat_results as a tie-breaker so
+                                # the key is unique even when the same component ID
+                                # appears in multiple source files.
+                                flat_idx = flat_results.index(r)
+                                col_id, col_score, col_hazard, col_add = st.columns([3, 1, 1, 1])
+
+                                with col_id:
+                                    desc_preview = (
+                                        r.description[:80] + '…'
+                                        if len(r.description) > 80
+                                        else r.description
+                                    )
+                                    st.markdown(f"**{r.component_id}**")
+                                    st.caption(desc_preview)
+
+                                with col_score:
+                                    st.metric(
+                                        "Score",
+                                        f"{r.score:.0f}%",
+                                        label_visibility="collapsed",
+                                    )
+
+                                with col_hazard:
+                                    hazard_emoji = {
+                                        'seismic': '🏢',
+                                        'hurricane': '🌀',
+                                        'flood': '💧',
+                                        'unknown': '❓',
+                                    }
+                                    st.write(
+                                        f"{hazard_emoji.get(r.hazard_type, '❓')} "
+                                        f"{r.hazard_type.title()}"
+                                    )
+
+                                with col_add:
+                                    btn_label = (
+                                        "✅ Added"
+                                        if r.component_id in st.session_state.selected_component_ids
+                                        else "➕ Add"
+                                    )
+                                    btn_disabled = (
+                                        r.component_id in st.session_state.selected_component_ids
+                                    )
+                                    if st.button(
+                                        btn_label,
+                                        key=f"add_{flat_idx}_{r.component_id}",
+                                        disabled=btn_disabled,
+                                        use_container_width=True,
+                                    ):
+                                        st.session_state.selected_component_ids.append(r.component_id)
+                                        self._store_component_metadata(r.component_id, r)
+                                        st.rerun()
+
+                                st.divider()
         
         # Display selected components
         st.divider()

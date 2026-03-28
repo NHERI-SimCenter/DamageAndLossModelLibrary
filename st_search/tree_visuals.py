@@ -31,12 +31,17 @@ Performance notes
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from pathlib import Path
 from typing import Dict, List, Optional
 
+import colorlover as cl
 import numpy as np
+import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+from pelicun.base import convert_to_MultiIndex
+from plotly.subplots import make_subplots
 from scipy.stats import norm
 
 from st_search.component_search import FuzzyIndex, SearchObject
@@ -49,6 +54,20 @@ _CATEGORY_BADGE: Dict[str, str] = {"FEMA": "🔵 FEMA P-58", "HAZUS": "🟠 Hazu
 
 # Session-state key that holds the set of expanded component IDs
 _EXPANDED_KEY = "tree_expanded_components"
+
+# Consequence type options shown in the selectbox
+_C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
+
+# PuBu sequential palette keyed by number of damage states — mirrors plot_repair
+_PUBU_COLORS: Dict[int, List[str]] = {
+    1: [cl.scales["3"]["seq"]["PuBu"][2]],
+    2: cl.scales["3"]["seq"]["PuBu"][1:],
+    3: cl.scales["4"]["seq"]["PuBu"][1:],
+    4: cl.scales["6"]["seq"]["PuBu"][2:],
+    5: cl.scales["7"]["seq"]["PuBu"][2:],
+    6: cl.scales["7"]["seq"]["PuBu"][1:],
+    7: cl.scales["7"]["seq"]["PuBu"],
+}
 
 
 # ─── Data helpers ──────────────────────────────────────────────────────────────
@@ -73,6 +92,44 @@ def _load_full_json(json_path: str) -> dict:
 
 
 @st.cache_data(show_spinner=False)
+def _load_consequence_df(json_path: str) -> Optional[pd.DataFrame]:
+    """
+    Load and cache the consequence_repair.csv located alongside fragility.json.
+
+    Applies pelicun's double convert_to_MultiIndex so rows are indexed by
+    (comp_id, consequence_type) and columns by (DS label, parameter).
+
+    Returns None if the file does not exist or cannot be parsed.
+    """
+    cons_csv = Path(json_path).parent / "consequence_repair.csv"
+    if not cons_csv.exists():
+        return None
+    try:
+        return convert_to_MultiIndex(
+            convert_to_MultiIndex(pd.read_csv(cons_csv, index_col=0), axis=1), axis=0
+        )
+    except Exception:
+        return None
+
+
+@st.cache_data(show_spinner=False)
+def _load_consequence_meta(json_path: str) -> Optional[dict]:
+    """
+    Load and cache consequence_repair.json metadata from the same directory.
+
+    Returns None if the file is missing or unreadable.
+    """
+    cons_json = Path(json_path).parent / "consequence_repair.json"
+    if not cons_json.exists():
+        return None
+    try:
+        with open(cons_json, "r", encoding="utf-8") as fh:
+            return json.load(fh)
+    except Exception:
+        return None
+
+
+@st.cache_data(show_spinner=False)
 def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
     """
     Build the nested source → group → sub-group → component tree.
@@ -86,10 +143,7 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
         {
           short_name: {
             "file_path": str,
-            "meta": dict,
-            "category": str,
-            "short_name": str,
-            "search_dict": {comp_id: description},
+            "meta": dict,           # _GeneralInformation
             "groups": {
               group_name: {
                 "subgroups": {
@@ -101,117 +155,96 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
             }
           }
         }
-    """
-    # Load each JSON and build SearchObject-like info without holding the
-    # non-hashable SearchObject itself in the cached return value.
-    from st_search.component_search import extract_search_metadata, SearchObject
 
+    Routing logic
+    ~~~~~~~~~~~~~
+    Each component ID is matched to a sub-group by longest common prefix.
+    Example: "GF.H.S" → prefix "GF.H" → "GF.H - Horizontal Spreading".
+    Components that match no defined prefix fall into an (Unclassified) bucket.
+    """
     tree: Dict[str, dict] = {}
 
     for fp in file_paths:
         try:
-            combined = extract_search_metadata(fp)
+            data = _load_full_json(fp)
         except Exception:
             continue
 
-        obj = SearchObject(combined_dict=combined, file_path=fp)
-        short_name = obj.short_name
+        meta: dict = data.get("_GeneralInformation", {})
+        short_name: str = meta.get("ShortName", Path(fp).parent.name)
 
-        # Read ComponentGroups directly from the raw JSON via json.load so the
-        # original dict[str, list[str]] structure is always preserved.
-        # extract_search_metadata routes _GeneralInformation through pandas
-        # (.to_dict() on a Series), which can silently convert a dict-of-lists
-        # into a plain list of keys — making subgroup_by_prefix empty and
-        # routing every component into the Unclassified fallback bucket.
-        try:
-            with open(fp, "r", encoding="utf-8") as fh:
-                _raw = json.load(fh)
-            _raw_groups = _raw.get("_GeneralInformation", {}).get("ComponentGroups", {})
-        except Exception:
-            _raw_groups = {}
+        # Build prefix → label maps from ComponentGroups.
+        #
+        # ComponentGroups is a dict[str, list[str]]:
+        #   { "GF": ["GF.H", "GF.V", "GF.L"],
+        #     "STR": ["STR.W1", "STR.S1", ...], ... }
+        #
+        # Keys are top-level group prefixes; values are lists of subgroup
+        # prefixes.  We build two independent maps:
+        #   group_map:    top-prefix  → group display label  (e.g. "GF")
+        #   subgroup_map: sub-prefix  → subgroup display label (e.g. "GF.H")
+        # Both maps store just the prefix as the label because the JSON does
+        # not separately provide human-readable group names here.
+        raw_cg = meta.get("ComponentGroups", {})
+        if not isinstance(raw_cg, dict):
+            raw_cg = {}
 
-        component_groups: Dict[str, List[str]] = {
-            k: (v if isinstance(v, list) else [])
-            for k, v in _raw_groups.items()
-        } if isinstance(_raw_groups, dict) else {}
+        group_map: Dict[str, str] = {grp: grp for grp in raw_cg}
+        subgroup_map: Dict[str, str] = {
+            sg: sg
+            for sg_list in raw_cg.values()
+            if isinstance(sg_list, list)
+            for sg in sg_list
+        }
 
-        # ── Enrich component_groups with auto-derived sub-groups ──────────
-        # Some sources (e.g. FEMA P-58) store ComponentGroups with empty
-        # sub-group lists: {"B - Shell": [], "C - Interiors": []}.
-        # Classification is instead encoded in the component ID itself:
-        #   B.10.31.001a  →  group "B", sub-group "B.10.31"
-        # When sg_list is empty we derive sub-groups by grouping all
-        # matching component IDs on their first 3 dot-separated segments.
-        enriched_groups: Dict[str, List[str]] = {}
-        for group_name, sg_list in component_groups.items():
-            if sg_list:
-                # Explicit sub-groups present (Hazus style) — use as-is
-                enriched_groups[group_name] = sg_list
-            else:
-                # Derive sub-groups from component IDs (FEMA P-58 style)
-                gpfx = group_name.split(" - ")[0].strip()
-                derived: Dict[str, None] = {}  # ordered set
-                for comp_id in obj.search_dict:
-                    if comp_id.startswith(gpfx):
-                        parts = comp_id.split(".")
-                        # Take first 3 segments: B.10.31 (skip leaf variant)
-                        sg_pfx = ".".join(parts[:3]) if len(parts) >= 3 else comp_id
-                        derived[sg_pfx] = None
-                enriched_groups[group_name] = list(derived.keys())
+        # Collect all real component IDs (skip keys starting with "_")
+        comp_ids = [k for k in data if not k.startswith("_")]
 
-        # Build prefix look-ups (longest prefix wins during routing)
-        subgroup_by_prefix: Dict[str, str] = {}
-        subgroup_parent: Dict[str, str] = {}
-        for group_name, sg_list in enriched_groups.items():
-            for sg in sg_list:
-                # For explicit sub-groups the prefix is before " - ";
-                # for derived ones the entry IS already the prefix string.
-                pfx = sg.split(" - ")[0].strip() if " - " in sg else sg
-                subgroup_by_prefix[pfx] = sg
-                subgroup_parent[sg] = group_name
-
+        # Route each component into group -> subgroup buckets.
+        # Top-level group: first dot-segment of comp_id (e.g. "GF", "STR").
+        # Sub-group: first two dot-segments joined (e.g. "GF.H", "STR.W1").
+        # When a prefix has no match in the maps (happens for FEMA P-58 IDs
+        # whose sub-groups may not be listed), fall back to the bare segment.
         groups: Dict[str, dict] = {}
-        for group_name, sg_list in enriched_groups.items():
-            groups[group_name] = {
-                "subgroups": {sg: {"components": []} for sg in sg_list}
-            }
+        for comp_id in comp_ids:
+            parts = comp_id.split(".")
+            top_segment = parts[0]
+            sub_segment = ".".join(parts[:2]) if len(parts) >= 2 else top_segment
 
-        # Route every component to its deepest matching sub-group
-        for comp_id in obj.search_dict:
-            placed = False
-            for pfx in sorted(subgroup_by_prefix, key=len, reverse=True):
-                if comp_id.startswith(pfx):
-                    sg = subgroup_by_prefix[pfx]
-                    g = subgroup_parent[sg]
-                    groups[g]["subgroups"][sg]["components"].append(comp_id)
-                    placed = True
-                    break
+            group_label = group_map.get(top_segment, top_segment)
+            subgroup_label = subgroup_map.get(sub_segment, sub_segment)
 
-            if not placed:
-                # True fallback — component prefix matched no group at all
-                for group_name in enriched_groups:
-                    gpfx = group_name.split(" - ")[0].strip()
-                    if comp_id.startswith(gpfx):
-                        bucket = f"{gpfx} - (Unclassified)"
-                        if bucket not in groups[group_name]["subgroups"]:
-                            groups[group_name]["subgroups"][bucket] = {"components": []}
-                        groups[group_name]["subgroups"][bucket]["components"].append(comp_id)
-                        placed = True
-                        break
+            groups.setdefault(group_label, {"subgroups": {}})
+            groups[group_label]["subgroups"].setdefault(
+                subgroup_label, {"components": []}
+            )
+            groups[group_label]["subgroups"][subgroup_label]["components"].append(
+                comp_id
+            )
+
+        # Pre-sort component lists and cache per-group counts so the render
+        # loop never has to sort or count on re-runs.
+        total_count = 0
+        for g_data in groups.values():
+            g_count = 0
+            for sg_data in g_data["subgroups"].values():
+                sg_data["components"].sort()
+                g_count += len(sg_data["components"])
+            g_data["count"] = g_count
+            total_count += g_count
 
         tree[short_name] = {
             "file_path": fp,
-            "meta": obj.general_info_dict,
-            "category": obj.category,
-            "short_name": short_name,
-            "search_dict": obj.search_dict,
+            "meta": meta,
             "groups": groups,
+            "count": total_count,
         }
 
     return tree
 
 
 def _count_components(groups: Dict[str, dict]) -> int:
+    """Return the total component count across all groups and sub-groups."""
     return sum(
         len(sg["components"])
         for g in groups.values()
@@ -219,15 +252,15 @@ def _count_components(groups: Dict[str, dict]) -> int:
     )
 
 
-# ─── Plotly helpers (cached per component ID) ─────────────────────────────────
+# ─── Plotly helpers ────────────────────────────────────────────────────────────
 
 @st.cache_data(show_spinner=False)
 def _make_fragility_figure(comp_id: str, limit_states_json: str) -> go.Figure:
     """
-    Build and cache a lognormal fragility figure.
+    Build a lognormal fragility figure for a single component.
 
-    limit_states_json is the JSON-serialised LimitStates dict so the result
-    is hashable for st.cache_data.
+    ``limit_states_json`` is the JSON-serialised LimitStates dict so the
+    result is hashable for st.cache_data.
     """
     limit_states: dict = json.loads(limit_states_json)
     x = np.linspace(1e-4, 2.0, 300)
@@ -240,19 +273,24 @@ def _make_fragility_figure(comp_id: str, limit_states_json: str) -> go.Figure:
             beta = 0.60
             with np.errstate(divide="ignore", invalid="ignore"):
                 y = norm.cdf(np.log(np.maximum(x, 1e-9) / median) / beta)
-            ds_label = (ds_data.get("Description", "") if isinstance(ds_data, dict) else str(ds_data))[:50]
+            ds_label = (
+                ds_data.get("Description", "") if isinstance(ds_data, dict) else str(ds_data)
+            )[:50]
 
-            fig.add_trace(go.Scatter(
-                x=x, y=y,
-                name=f"{ds_key}: {ds_label}…",
-                mode="lines",
-                line=dict(color=_DS_COLORS[i % len(_DS_COLORS)], width=2.5),
-                hovertemplate=(
-                    f"<b>{ds_key}</b><br>"
-                    "PGA: %{x:.3f} g<br>"
-                    f"P(DS ≥ {ds_key}): %{{y:.1%}}<extra></extra>"
-                ),
-            ))
+            fig.add_trace(
+                go.Scatter(
+                    x=x,
+                    y=y,
+                    name=f"{ds_key}: {ds_label}…",
+                    mode="lines",
+                    line=dict(color=_DS_COLORS[i % len(_DS_COLORS)], width=2.5),
+                    hovertemplate=(
+                        f"<b>{ds_key}</b><br>"
+                        "PGA: %{x:.3f} g<br>"
+                        f"P(DS ≥ {ds_key}): %{{y:.1%}}<extra></extra>"
+                    ),
+                )
+            )
             i += 1
 
     fig.update_layout(
@@ -262,39 +300,310 @@ def _make_fragility_figure(comp_id: str, limit_states_json: str) -> go.Figure:
         height=340,
         margin=dict(l=60, r=20, t=36, b=130),
         template="plotly_white",
-        annotations=[dict(
-            text="Illustrative lognormal curves — θ / β parameters pending integration",
-            xref="paper", yref="paper", x=0.5, y=1.06,
-            showarrow=False, font=dict(size=9, color="#9ca3af"), xanchor="center",
-        )],
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        annotations=[
+            dict(
+                text="Illustrative lognormal curves — θ / β parameters pending data integration",
+                xref="paper",
+                yref="paper",
+                x=0.5,
+                y=1.06,
+                showarrow=False,
+                font=dict(size=9, color="#9ca3af"),
+                xanchor="center",
+            )
+        ],
     )
     return fig
 
 
 @st.cache_data(show_spinner=False)
-def _make_consequence_placeholder() -> go.Figure:
-    fig = go.Figure()
-    fig.add_annotation(
-        text="Consequence model parameters pending integration",
-        xref="paper", yref="paper", x=0.5, y=0.5,
-        showarrow=False, font=dict(size=13, color="#9ca3af"), xanchor="center",
+def _make_consequence_figure(
+    comp_id: str,
+    c_type: str,
+    json_path: str,
+) -> go.Figure:
+    """
+    Build a Plotly consequence figure for a single component + consequence type.
+
+    Mirrors the curve panel of pelicun's ``plot_repair()`` for inline rendering
+    inside the tree_visuals detail panel: plots the median consequence function
+    per damage state, dashed uncertainty bands (±1σ), and a normalised PDF at
+    the maximum quantity value.
+
+    Parameters
+    ----------
+    comp_id : str
+        Component ID (e.g. ``"B.10.31.001a"``).
+    c_type : str
+        Consequence type: one of ``"Cost"``, ``"Time"``, ``"Carbon"``,
+        ``"Energy"``.
+    json_path : str
+        Path to the source ``fragility.json``.  Used to locate
+        ``consequence_repair.csv`` (and its metadata JSON) in the same
+        directory.
+
+    Returns
+    -------
+    go.Figure
+        Two-column subplot: [consequence curve | end-point PDF].
+    """
+    # ── Load data ──────────────────────────────────────────────────────────
+    repair_df = _load_consequence_df(json_path)
+
+    def _empty_fig(message: str) -> go.Figure:
+        fig = go.Figure()
+        fig.add_annotation(
+            text=message,
+            xref="paper", yref="paper",
+            x=0.5, y=0.5,
+            showarrow=False,
+            font=dict(size=13, color="#9ca3af"),
+            xanchor="center",
+        )
+        fig.update_layout(
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            height=300,
+            template="plotly_white",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            margin=dict(l=20, r=20, t=30, b=20),
+        )
+        return fig
+
+    if repair_df is None:
+        return _empty_fig("consequence_repair.csv not found in this source directory")
+
+    lvl0 = repair_df.index.get_level_values(0)
+    if comp_id not in lvl0:
+        return _empty_fig(f"No consequence data for {comp_id}")
+
+    comp_rows = repair_df.loc[comp_id]
+    if c_type not in comp_rows.index:
+        return _empty_fig(f"No {c_type} consequence data for {comp_id}")
+
+    comp_data = comp_rows.loc[c_type]
+
+    # ── Guard against incomplete data ─────────────────────────────────────
+    if comp_data.loc[("Incomplete", "")] == 1:
+        return _empty_fig(f"Incomplete {c_type} consequence data for {comp_id}")
+
+    # ── Damage state model parameters ─────────────────────────────────────
+    limit_states = [v for v in comp_data.index.unique(level=0) if "DS" in v]
+
+    table_vals: list = []
+    for ls in limit_states:
+        fields = ["Theta_0", "Family", "Theta_1"]
+        ds_row = comp_data[ls].copy()
+        for opt in ["Family", "Theta_1"]:
+            if opt not in ds_row.index:
+                ds_row[opt] = None
+        if not np.all(pd.isna(ds_row[fields].values)):
+            table_vals.append(np.insert(ds_row[fields].values, 0, ls))
+
+    if not table_vals:
+        return _empty_fig(f"No {c_type} model parameters available for {comp_id}")
+
+    # model_params rows: [0] DS label, [1] Theta_0, [2] Family, [3] Theta_1
+    model_params = np.array(table_vals).T
+    n_ds = model_params.shape[1]
+
+    # ── Quantity axis limits ───────────────────────────────────────────────
+    q_min, q_max = 0.0, -np.inf
+    for mu in model_params[1]:
+        if "|" in str(mu):
+            q_lims = np.array(mu.split("|")[1].split(","), dtype=float)
+            q_max = np.max([np.sum(q_lims), q_max])
+    if q_max == -np.inf:
+        q_max = 1.0
+
+    need_x_axis = any("|" in str(mu) for mu in model_params[1])
+
+    # ── Figure layout ─────────────────────────────────────────────────────
+    fig = make_subplots(
+        rows=1, cols=2,
+        shared_yaxes=True,
+        column_widths=[0.85, 0.15],
+        horizontal_spacing=0.02,
     )
+
+    color_key = min(n_ds, 7)
+    palette = _PUBU_COLORS[color_key]
+
+    # ── Per-DS plotting (mirrors plot_repair curve logic) ─────────────────
+    for ds_i, mu_capacity in enumerate(model_params[1]):
+        ds_label = model_params[0][ds_i]
+        ds_color = palette[ds_i % color_key]
+
+        # Median consequence function ──────────────────────────────────────
+        if "|" in str(mu_capacity):
+            c_vals, q_vals = np.array(
+                [v.split(",") for v in mu_capacity.split("|")], dtype=float
+            )
+        else:
+            c_vals = np.array([mu_capacity], dtype=float)
+            q_vals = np.array([0.0], dtype=float)
+
+        # Extend both ends to cover the full quantity axis
+        q_vals = np.insert(q_vals, 0, q_min)
+        c_vals = np.insert(c_vals, 0, c_vals[0])
+        q_vals = np.append(q_vals, q_max)
+        c_vals = np.append(c_vals, c_vals[-1])
+
+        fig.add_trace(
+            go.Scatter(
+                x=q_vals, y=c_vals,
+                mode="lines",
+                line=dict(width=3, color=ds_color),
+                name=ds_label,
+                legendgroup=ds_label,
+            ),
+            row=1, col=1,
+        )
+
+        # Uncertainty bands ────────────────────────────────────────────────
+        dispersion = model_params[3][ds_i]
+        if pd.isna(dispersion) or dispersion == "N/A":
+            continue
+
+        dispersion = float(dispersion)
+        dist = model_params[2][ds_i]
+
+        if dist == "normal":
+            std_plus = c_vals * (1.0 + dispersion)
+            std_minus = np.maximum(c_vals * (1.0 - dispersion), 0.0)
+            lbl_plus, lbl_minus = "mu + std", "mu - std"
+        elif dist == "lognormal":
+            std_plus = np.exp(np.log(c_vals) + dispersion)
+            std_minus = np.exp(np.log(c_vals) - dispersion)
+            lbl_plus, lbl_minus = "mu + lnstd", "mu - lnstd"
+        else:
+            continue
+
+        for y_band, band_label in [(std_plus, lbl_plus), (std_minus, lbl_minus)]:
+            fig.add_trace(
+                go.Scatter(
+                    x=q_vals, y=y_band,
+                    mode="lines",
+                    line=dict(width=1, color=ds_color, dash="dash"),
+                    name=f"{ds_label} {band_label}",
+                    legendgroup=ds_label,
+                    showlegend=False,
+                ),
+                row=1, col=1,
+            )
+
+        # End-point PDF ────────────────────────────────────────────────────
+        c_end = float(c_vals[-1])
+        if c_end <= 0:
+            continue
+
+        if dist == "normal":
+            sig = c_end * dispersion
+            q_pdf = np.linspace(
+                np.max([norm.ppf(0.025, loc=c_end, scale=sig), 0.0]),
+                norm.ppf(0.975, loc=c_end, scale=sig),
+                num=100,
+            )
+            c_pdf = norm.pdf(q_pdf, loc=c_end, scale=sig)
+
+        elif dist == "lognormal":
+            q_pdf = np.linspace(
+                np.exp(norm.ppf(0.025, loc=np.log(c_end), scale=dispersion)),
+                np.exp(norm.ppf(0.975, loc=np.log(c_end), scale=dispersion)),
+                num=100,
+            )
+            c_pdf = norm.pdf(np.log(q_pdf), loc=np.log(c_end), scale=dispersion)
+
+        c_pdf = c_pdf / np.max(c_pdf)
+
+        fig.add_trace(
+            go.Scatter(
+                x=c_pdf, y=q_pdf,
+                mode="lines",
+                line=dict(width=1, color=ds_color),
+                fill="tozeroy",
+                name=f"{ds_label} pdf",
+                legendgroup=ds_label,
+                showlegend=False,
+            ),
+            row=1, col=2,
+        )
+
+    # ── Axis labels from DB units ─────────────────────────────────────────
+    quantity_unit: str = comp_data.loc[("Quantity", "Unit")]
+    if quantity_unit in ("unitless", "1 EA", "1 ea"):
+        quantity_unit = "-"
+    elif quantity_unit.split()[0] == "1":
+        quantity_unit = quantity_unit.split()[1]
+
+    dv_unit: str = comp_data.loc[("DV", "Unit")]
+    if dv_unit == "unitless":
+        dv_unit = "-"
+
+    shared_ax = dict(
+        showgrid=True,
+        linecolor="black",
+        gridwidth=0.05,
+        gridcolor="rgb(220,220,220)",
+    )
+
     fig.update_layout(
-        xaxis=dict(visible=False), yaxis=dict(visible=False),
-        height=300, template="plotly_white",
-        margin=dict(l=20, r=20, t=20, b=20),
+        margin=dict(b=50, r=5, l=5, t=30),
+        height=380,
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        showlegend=True,
+        xaxis1=(
+            dict(title_text=f"Damage Quantity [{quantity_unit}]", **shared_ax)
+            if need_x_axis
+            else dict(showgrid=False, showticklabels=False)
+        ),
+        yaxis1=dict(
+            title_text=f"{c_type} [{dv_unit}]",
+            rangemode="tozero",
+            **shared_ax,
+        ),
+        xaxis2=dict(showgrid=False, showticklabels=False, title_text=""),
+        yaxis2=dict(showgrid=False, showticklabels=False),
+        legend=dict(
+            yanchor="top",
+            xanchor="right",
+            font=dict(size=11),
+            orientation="v",
+            y=1.0,
+            x=-0.08,
+        ),
+        template="plotly_white",
     )
     return fig
 
 
 # ─── Component detail panel ────────────────────────────────────────────────────
 
-def _render_component_detail(comp_id: str, comp_data: dict) -> None:
+def _render_component_detail(
+    comp_id: str,
+    comp_data: dict,
+    json_path: str,
+) -> None:
     """
     Render the inline detail panel for a leaf component node.
 
     Only called when the user has explicitly opened the component — never
     rendered unconditionally inside a collapsed expander.
+
+    Parameters
+    ----------
+    comp_id : str
+        Component identifier, e.g. ``"B.10.31.001a"``.
+    comp_data : dict
+        Full component record loaded from fragility.json.
+    json_path : str
+        Path to the source fragility.json.  Passed through to consequence
+        helpers so they can locate ``consequence_repair.csv`` in the same
+        directory.
     """
     description = comp_data.get("Description", "")
     comments = comp_data.get("Comments", "")
@@ -304,8 +613,10 @@ def _render_component_detail(comp_id: str, comp_data: dict) -> None:
 
     col_left, col_right = st.columns([1, 2], gap="large")
 
+    # ── Left: metadata + damage states ────────────────────────────────────
     with col_left:
         st.markdown("**Component metadata**")
+
         for label, value in [
             ("ID", f"`{comp_id}`"),
             ("Block size", f"`{block_size}`" if block_size else "—"),
@@ -327,13 +638,17 @@ def _render_component_detail(comp_id: str, comp_data: dict) -> None:
                 for ds_key, ds_data in ls_data.items():
                     desc_text = (
                         ds_data.get("Description", "No description.")
-                        if isinstance(ds_data, dict) else str(ds_data)
+                        if isinstance(ds_data, dict)
+                        else str(ds_data)
                     )
                     with st.expander(f"{ls_key} / {ds_key}", expanded=False):
                         st.caption(desc_text)
+                        if isinstance(ds_data, dict) and ds_data.get("RepairAction"):
+                            st.caption(f"**Repair action:** {ds_data['RepairAction']}")
         else:
             st.caption("No limit-state data found.")
 
+    # ── Right: comments + charts ───────────────────────────────────────────
     with col_right:
         if comments:
             with st.expander("Technical notes / comments", expanded=False):
@@ -352,11 +667,75 @@ def _render_component_detail(comp_id: str, comp_data: dict) -> None:
                 st.info("No limit-state data available to generate curves.", icon="ℹ️")
 
         with tab_cons:
-            st.plotly_chart(
-                _make_consequence_placeholder(),
-                use_container_width=True,
-                key=f"cons_{comp_id}",
-            )
+            _render_consequence_tab(comp_id, json_path)
+
+
+def _render_consequence_tab(comp_id: str, json_path: str) -> None:
+    """
+    Render the consequence curves tab content.
+
+    Checks which consequence types are available for the component and
+    lets the user select one via a radio widget before plotting.  Falls
+    back to an informational message when no data is found.
+    """
+    repair_df = _load_consequence_df(json_path)
+
+    if repair_df is None:
+        st.info(
+            "No consequence data file found for this source directory.",
+            icon="ℹ️",
+        )
+        return
+
+    lvl0 = repair_df.index.get_level_values(0)
+    if comp_id not in lvl0:
+        st.info(
+            f"No consequence records found for `{comp_id}` in the repair database.",
+            icon="ℹ️",
+        )
+        return
+
+    # Discover which consequence types are present for this component
+    available_types = [
+        t for t in _C_TYPES if t in repair_df.loc[comp_id].index
+    ]
+
+    if not available_types:
+        st.info("No consequence types available for this component.", icon="ℹ️")
+        return
+
+    # Consequence type selector
+    c_type = st.radio(
+        "Consequence type",
+        options=available_types,
+        horizontal=True,
+        key=f"cons_type_{comp_id}",
+    )
+
+    st.plotly_chart(
+        _make_consequence_figure(comp_id, c_type, json_path),
+        use_container_width=True,
+        key=f"cons_{comp_id}_{c_type}",
+    )
+
+    # Metadata annotations (description / repair action per DS)
+    # cons_meta = _load_consequence_meta(json_path)
+    # if cons_meta and comp_id in cons_meta:
+    #     ds_meta: dict = cons_meta[comp_id].get("DamageStates", {})
+    #     if ds_meta:
+    #         with st.expander("Damage state descriptions", expanded=False):
+    #             for ds_key, ds_info in ds_meta.items():
+    #                 if not isinstance(ds_info, dict):
+    #                     continue
+    #                 ds_desc = ds_info.get("Description", "")
+    #                 ds_repair = ds_info.get("RepairAction", "")
+    #                 lines = [f"**{ds_key}**"]
+    #                 if ds_desc:
+    #                     lines.append(ds_desc)
+    #                 if ds_repair:
+    #                     lines.append(f"*Repair action:* {ds_repair}")
+    #                 st.caption("  \n".join(lines))
+    #                 st.divider()
 
 
 # ─── Tree renderer ─────────────────────────────────────────────────────────────
@@ -393,7 +772,10 @@ def render_seismic_tree(
             seismic_objects = _get_cached_index().filter_by_hazard("seismic")
 
     if not seismic_objects:
-        st.warning("No seismic fragility data found. Check directory structure.", icon="⚠️")
+        st.warning(
+            "No seismic fragility data found. Check directory structure.",
+            icon="⚠️",
+        )
         return
 
     # Deduplicate file paths and pass a hashable tuple to the cached builder
@@ -402,117 +784,109 @@ def render_seismic_tree(
     )
     tree = _build_tree(file_paths)
 
-    # Pre-load full JSON for detail panels (also cached)
-    full_json_cache: Dict[str, dict] = {}
-    load_errors: List[str] = []
-    for fp in file_paths:
-        try:
-            full_json_cache[fp] = _load_full_json(fp)
-        except Exception as exc:
-            load_errors.append(f"`{fp}`: {exc}")
+    # Build a file_path → SearchObject lookup to avoid O(N) scans per source.
+    obj_by_path: Dict[str, SearchObject] = {
+        o.file_path: o for o in seismic_objects if o.file_path
+    }
 
-    if load_errors:
-        with st.expander("⚠️ Data load warnings", expanded=False):
-            for err in load_errors:
-                st.warning(err)
-
-    total = sum(_count_components(src["groups"]) for src in tree.values())
+    # Counts are stored in the tree dict by _build_tree — no re-computation needed.
+    total = sum(src["count"] for src in tree.values())
 
     # ══ Root header ══════════════════════════════════════════════════════════
     st.markdown("## 🌍 Seismic")
-    st.caption(f"{len(tree)} source{'s' if len(tree) != 1 else ''} · {total:,} components")
+    st.caption(
+        f"{len(tree)} source{'s' if len(tree) != 1 else ''} · {total:,} components"
+    )
     st.divider()
 
     for short_name, source_data in tree.items():
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
         groups: Dict[str, dict] = source_data["groups"]
-        category: str = source_data["category"]
-        full_json: dict = full_json_cache.get(fp, {})
-        fname = Path(fp).name if fp else "unknown"
 
-        badge = _CATEGORY_BADGE.get(category, f"📁 {category or 'Other'}")
-        n_comp = _count_components(groups)
+        obj = obj_by_path.get(fp)
+        badge = _CATEGORY_BADGE.get(getattr(obj, "category", ""), "")
+        n_comp = source_data["count"]
 
-        # ══ Level 2: Source ═════════════════════════════════════════════════
+        # ══ Level 2: Source ══════════════════════════════════════════════════
         with st.expander(
             f"**{short_name}**  ·  {badge}  ·  `{n_comp:,}` components",
             expanded=False,
         ):
             if meta.get("Description"):
                 st.caption(meta["Description"])
-            st.caption(f"Version: {meta.get('Version', '—')}  ·  File: `{fname}`")
+
+            version = meta.get("Version", "")
+            fname = Path(fp).name if fp else "unknown"
+            st.caption(f"Version: {version}  ·  File: `{fname}`")
             st.divider()
 
             for group_name, group_data in groups.items():
-                group_total = sum(
-                    len(sg["components"]) for sg in group_data["subgroups"].values()
-                )
+                group_total = group_data["count"]
                 if group_total == 0:
                     continue
 
-                # ══ Level 3: Component group ════════════════════════════════
+                # ══ Level 3: Component group ══════════════════════════════════
                 with st.expander(
-                    f"📂  **{group_name}**  ·  `{group_total}` components",
+                    f"**{group_name}**  ·  `{group_total}` components",
                     expanded=False,
                 ):
                     for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[str] = sorted(sg_data["components"])
+                        comps: List[str] = sg_data["components"]  # pre-sorted in _build_tree
                         if not comps:
                             continue
 
                         n_sg = len(comps)
+                        sg_label = (
+                            f"**{sg_name}**  ·  "
+                            f"`{n_sg}` component{'s' if n_sg != 1 else ''}"
+                        )
 
-                        # ══ Level 4: Sub-group ══════════════════════════════
-                        with st.expander(
-                            f"📄  {sg_name}  ·  `{n_sg}` component{'s' if n_sg != 1 else ''}",
-                            expanded=False,
-                        ):
+                        # ══ Level 4: Sub-group ════════════════════════════════
+                        with st.expander(sg_label, expanded=False):
                             for comp_id in comps:
+                                # comps is pre-sorted by _build_tree; no sort needed.
+                                # _load_full_json is cached — O(1) after first call.
+                                full_json: dict = _load_full_json(fp)
                                 comp_data: dict = full_json.get(comp_id, {})
                                 raw_desc: str = comp_data.get(
                                     "Description",
-                                    source_data["search_dict"].get(comp_id, ""),
+                                    obj.search_dict.get(comp_id, "") if obj else "",
                                 )
-                                preview = raw_desc[:90] + "…" if len(raw_desc) > 90 else raw_desc
+                                preview = (
+                                    raw_desc[:90] + "…"
+                                    if len(raw_desc) > 90
+                                    else raw_desc
+                                )
 
-                                # ══ Level 5: Component leaf ════════════════
-                                # The expander label is cheap — just text.
-                                # Detail content is guarded by session state
-                                # so it only renders when actually opened.
-                                is_open = comp_id in st.session_state[_EXPANDED_KEY]
-
+                                # ══ Level 5: Component leaf ════════════════════
+                                # Session-state guard: detail content is only
+                                # rendered after an explicit "Load" click.
+                                # Without this guard, Streamlit executes every
+                                # expander's body on every re-run (open or not),
+                                # so st.tabs / st.plotly_chart / _render_consequence_tab
+                                # would fire for ALL components on every interaction.
+                                load_key = f"loaded_{comp_id}"
                                 with st.expander(
                                     f"🔩  **{comp_id}**  ·  {preview}",
-                                    expanded=is_open,
+                                    expanded=False,
                                 ):
-                                    # Toggle open state on each re-run where
-                                    # the expander is visible — Streamlit has
-                                    # no direct on_change for expanders, so we
-                                    # use a button to explicitly load detail.
-                                    if not is_open:
+                                    if load_key not in st.session_state:
                                         if st.button(
-                                            "Load component detail",
-                                            key=f"load_{comp_id}",
+                                            "Load details",
+                                            key=f"btn_{comp_id}",
                                             type="secondary",
                                         ):
-                                            st.session_state[_EXPANDED_KEY].add(comp_id)
+                                            st.session_state[load_key] = True
                                             st.rerun()
+                                    elif comp_data:
+                                        _render_component_detail(
+                                            comp_id, comp_data, fp
+                                        )
                                     else:
-                                        # Close button to free the widget tree
-                                        if st.button(
-                                            "Close",
-                                            key=f"close_{comp_id}",
-                                            type="secondary",
-                                        ):
-                                            st.session_state[_EXPANDED_KEY].discard(comp_id)
-                                            st.rerun()
-
-                                        if comp_data:
-                                            _render_component_detail(comp_id, comp_data)
-                                        else:
-                                            st.warning(
-                                                f"Full data for `{comp_id}` was not found "
-                                                f"in `{fname}`.",
-                                                icon="⚠️",
-                                            )
+                                        st.warning(
+                                            f"Full data for `{comp_id}` was not found "
+                                            f"in `{fname}`. The component description "
+                                            "is available but detailed fields are missing.",
+                                            icon="⚠️",
+                                        )
