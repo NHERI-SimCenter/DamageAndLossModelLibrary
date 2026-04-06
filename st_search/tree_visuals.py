@@ -42,7 +42,7 @@ import plotly.graph_objects as go
 import streamlit as st
 from pelicun.base import convert_to_MultiIndex
 from plotly.subplots import make_subplots
-from scipy.stats import norm
+from scipy.stats import norm, weibull_min
 
 from st_search.component_search import FuzzyIndex, SearchObject
 
@@ -125,6 +125,27 @@ def _load_consequence_meta(json_path: str) -> Optional[dict]:
     try:
         with open(cons_json, "r", encoding="utf-8") as fh:
             return json.load(fh)
+    except Exception:
+        return None
+
+
+@st.cache_data(show_spinner=False)
+def _load_fragility_df(json_path: str) -> Optional[pd.DataFrame]:
+    """
+    Load and cache the fragility.csv located alongside fragility.json.
+
+    Applies pelicun's convert_to_MultiIndex so columns are indexed by
+    (level, parameter) — e.g. ('Demand', 'Type'), ('LS1', 'Theta_0').
+
+    Returns None if the file does not exist or cannot be parsed.
+    """
+    csv_path = Path(json_path).parent / "fragility.csv"
+    if not csv_path.exists():
+        return None
+    try:
+        return convert_to_MultiIndex(
+            pd.read_csv(csv_path, index_col=0), axis=1
+        )
     except Exception:
         return None
 
@@ -255,46 +276,173 @@ def _count_components(groups: Dict[str, dict]) -> int:
 # ─── Plotly helpers ────────────────────────────────────────────────────────────
 
 @st.cache_data(show_spinner=False)
-def _make_fragility_figure(comp_id: str, limit_states_json: str) -> go.Figure:
+def _make_fragility_figure(
+    comp_id: str,
+    limit_states_json: str,
+    csv_row_json: str,
+) -> go.Figure:
     """
-    Build a lognormal fragility figure for a single component.
+    Build a fragility figure for a single component.
 
-    ``limit_states_json`` is the JSON-serialised LimitStates dict so the
-    result is hashable for st.cache_data.
+    Parameters
+    ----------
+    comp_id : str
+        Component identifier.
+    limit_states_json : str
+        JSON-serialised LimitStates dict from fragility.json (used for
+        damage-state descriptions in trace names).
+    csv_row_json : str
+        JSON-serialised pandas Series (from fragility.csv with MultiIndex
+        columns) containing the distribution parameters and demand info.
     """
     limit_states: dict = json.loads(limit_states_json)
-    x = np.linspace(1e-4, 2.0, 300)
-    fig = go.Figure()
-    i = 0
+    csv_row: dict = json.loads(csv_row_json)
 
-    for ls_key, ls_data in limit_states.items():
+    def _isna(v) -> bool:
+        """Check for NaN in both float and string forms (JSON roundtrip)."""
+        if v is None:
+            return True
+        if isinstance(v, str) and v.lower() == "nan":
+            return True
+        try:
+            return pd.isna(v)
+        except (TypeError, ValueError):
+            return False
+
+    # ── Extract demand type and unit ──────────────────────────────────────
+    demand_type = csv_row.get("Demand-Type", "Peak Ground Acceleration")
+    demand_unit = csv_row.get("Demand-Unit", "g")
+    if demand_unit == "unitless":
+        demand_unit = "-"
+
+    # ── Build DS description lookup from JSON LimitStates ─────────────────
+    ds_descriptions: Dict[str, str] = {}
+    for ls_data in limit_states.values():
         for ds_key, ds_data in ls_data.items():
-            median = 0.15 * (i + 1)
-            beta = 0.60
-            with np.errstate(divide="ignore", invalid="ignore"):
-                y = norm.cdf(np.log(np.maximum(x, 1e-9) / median) / beta)
-            ds_label = (
-                ds_data.get("Description", "") if isinstance(ds_data, dict) else str(ds_data)
-            )[:50]
-
-            fig.add_trace(
-                go.Scatter(
-                    x=x,
-                    y=y,
-                    name=f"{ds_key}: {ds_label}…",
-                    mode="lines",
-                    line=dict(color=_DS_COLORS[i % len(_DS_COLORS)], width=2.5),
-                    hovertemplate=(
-                        f"<b>{ds_key}</b><br>"
-                        "PGA: %{x:.3f} g<br>"
-                        f"P(DS ≥ {ds_key}): %{{y:.1%}}<extra></extra>"
-                    ),
-                )
+            desc = (
+                ds_data.get("Description", "")
+                if isinstance(ds_data, dict)
+                else str(ds_data)
             )
-            i += 1
+            ds_descriptions[ds_key] = desc[:50]
+
+    # ── Collect limit states from CSV row ─────────────────────────────────
+    ls_keys = sorted(
+        {k.split("-")[0] for k in csv_row if k.startswith("LS") and "-" in k}
+    )
+
+    # ── Determine demand range ────────────────────────────────────────────
+    p_min, p_max = 0.01, 0.9
+    d_min, d_max = np.inf, -np.inf
+    for ls in ls_keys:
+        fam = csv_row.get(f"{ls}-Family")
+        theta0 = csv_row.get(f"{ls}-Theta_0")
+        theta1 = csv_row.get(f"{ls}-Theta_1")
+        if _isna(fam) or _isna(theta0):
+            continue
+        try:
+            theta0_f = float(theta0) if not isinstance(theta0, str) or "|" not in str(theta0) else None
+            theta1_f = float(theta1) if theta1 is not None and not _isna(theta1) else None
+        except (ValueError, TypeError):
+            theta0_f = theta1_f = None
+
+        if fam == "lognormal" and theta0_f and theta1_f:
+            d_min_i, d_max_i = np.exp(
+                norm.ppf([p_min, p_max], loc=np.log(theta0_f), scale=theta1_f)
+            )
+        elif fam == "normal" and theta0_f and theta1_f:
+            d_min_i, d_max_i = norm.ppf(
+                [p_min, p_max], loc=theta0_f, scale=theta1_f * theta0_f
+            )
+        elif fam == "weibull" and theta0_f and theta1_f:
+            d_min_i, d_max_i = weibull_min.ppf(
+                [p_min, p_max], theta1_f, scale=theta0_f
+            )
+        elif fam == "multilinear_CDF" and isinstance(theta0, str):
+            xs = list(map(float, theta0.split("|")[0].split(",")))
+            d_min_i, d_max_i = xs[0], xs[-1]
+        else:
+            continue
+        d_min, d_max = min(d_min, d_min_i), max(d_max, d_max_i)
+
+    if d_min >= d_max:
+        d_min, d_max = 0.0, 1.0
+    demand_vals = np.linspace(d_min, d_max, 300)
+
+    # ── Build curves ──────────────────────────────────────────────────────
+    fig = go.Figure()
+    trace_i = 0
+    ds_index = 1
+
+    for ls in ls_keys:
+        fam = csv_row.get(f"{ls}-Family")
+        theta0 = csv_row.get(f"{ls}-Theta_0")
+        theta1 = csv_row.get(f"{ls}-Theta_1")
+        weights_str = csv_row.get(f"{ls}-DamageStateWeights")
+
+        if _isna(fam) or _isna(theta0):
+            continue
+
+        # Compute CDF
+        try:
+            if fam == "lognormal":
+                cdf = norm.cdf(
+                    np.log(demand_vals),
+                    loc=np.log(float(theta0)),
+                    scale=float(theta1),
+                )
+            elif fam == "normal":
+                t0, t1 = float(theta0), float(theta1)
+                cdf = norm.cdf(demand_vals, loc=t0, scale=t1 * t0)
+            elif fam == "weibull":
+                cdf = weibull_min.cdf(
+                    demand_vals, float(theta1), scale=float(theta0)
+                )
+            elif fam == "multilinear_CDF" and isinstance(theta0, str):
+                xs, ys = (
+                    np.asarray(p.split(","), dtype=float)
+                    for p in theta0.split("|")
+                )
+                cdf = np.interp(demand_vals, xs, ys)
+            else:
+                continue
+        except (ValueError, TypeError):
+            continue
+
+        # Determine DS labels for this limit state
+        n_ds = 1
+        if weights_str is not None and not _isna(weights_str):
+            n_ds = len(str(weights_str).split("|"))
+
+        ds_label_parts = []
+        for j in range(n_ds):
+            ds_key = f"DS{ds_index + j}"
+            desc = ds_descriptions.get(ds_key, "")
+            ds_label_parts.append(f"{ds_key}: {desc}" if desc else ds_key)
+
+        trace_name = "; ".join(ds_label_parts)
+
+        fig.add_trace(
+            go.Scatter(
+                x=demand_vals,
+                y=cdf,
+                name=trace_name,
+                mode="lines",
+                line=dict(
+                    color=_DS_COLORS[trace_i % len(_DS_COLORS)], width=2.5
+                ),
+                hovertemplate=(
+                    f"<b>{ls}</b><br>"
+                    f"{demand_type}: %{{x:.3f}} {demand_unit}<br>"
+                    f"P(DS ≥ ds): %{{y:.1%}}<extra></extra>"
+                ),
+            )
+        )
+        trace_i += 1
+        ds_index += n_ds
 
     fig.update_layout(
-        xaxis_title="Peak Ground Acceleration (g)",
+        xaxis_title=f"{demand_type} [{demand_unit}]",
         yaxis=dict(title="P(DS ≥ ds | IM)", tickformat=".0%", range=[0, 1]),
         legend=dict(orientation="h", y=-0.38, font=dict(size=10)),
         height=340,
@@ -302,18 +450,6 @@ def _make_fragility_figure(comp_id: str, limit_states_json: str) -> go.Figure:
         template="plotly_white",
         paper_bgcolor="rgba(0,0,0,0)",
         plot_bgcolor="rgba(0,0,0,0)",
-        annotations=[
-            dict(
-                text="Illustrative lognormal curves — θ / β parameters pending data integration",
-                xref="paper",
-                yref="paper",
-                x=0.5,
-                y=1.06,
-                showarrow=False,
-                font=dict(size=9, color="#9ca3af"),
-                xanchor="center",
-            )
-        ],
     )
     return fig
 
@@ -657,14 +793,25 @@ def _render_component_detail(
         tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
 
         with tab_frag:
-            if limit_states:
+            frag_df = _load_fragility_df(json_path)
+            if frag_df is not None and comp_id in frag_df.index:
+                csv_row = frag_df.loc[comp_id]
+                # Flatten MultiIndex columns to "Level-Param" keys for JSON
+                csv_row_flat = {
+                    f"{a}-{b}" if b else str(a): v
+                    for (a, b), v in csv_row.items()
+                }
                 st.plotly_chart(
-                    _make_fragility_figure(comp_id, json.dumps(limit_states)),
+                    _make_fragility_figure(
+                        comp_id,
+                        json.dumps(limit_states),
+                        json.dumps(csv_row_flat, default=str),
+                    ),
                     use_container_width=True,
                     key=f"frag_{comp_id}",
                 )
             else:
-                st.info("No limit-state data available to generate curves.", icon="ℹ️")
+                st.info("No fragility data available to generate curves.", icon="ℹ️")
 
         with tab_cons:
             _render_consequence_tab(comp_id, json_path)
