@@ -1037,3 +1037,254 @@ def render_seismic_tree(
                                             "is available but detailed fields are missing.",
                                             icon="⚠️",
                                         )
+
+# ─── Wind component detail panel ──────────────────────────────────────────────
+
+def _render_wind_component_detail(
+    comp_id: str,
+    comp_data: dict,
+    json_path: str,
+) -> None:
+    """
+    Render the inline detail panel for a wind library component leaf node.
+
+    Mirrors ``_render_component_detail`` but omits the consequence tab
+    because the SimCenter Wind Component Library has no consequence data.
+
+    Parameters
+    ----------
+    comp_id : str
+        Component identifier, e.g. ``"DOOR.garage.001a"``.
+    comp_data : dict
+        Full component record from fragility.json.
+    json_path : str
+        Path to the source fragility.json.
+    """
+    description: str = comp_data.get("Description", "")
+    comments: str = comp_data.get("Comments", "")
+    references: list = comp_data.get("Reference", [])
+    block_size: str = comp_data.get("SuggestedComponentBlockSize", "")
+    limit_states: dict = comp_data.get("LimitStates", {})
+
+    col_left, col_right = st.columns([1, 2])
+
+    # ── Left: metadata ─────────────────────────────────────────────────────
+    with col_left:
+        if description:
+            st.markdown(f"**Description:** {description}")
+
+        if block_size:
+            st.caption(f"Block size: `{block_size}`")
+
+        if references:
+            st.caption("References: " + ", ".join(f"`{r}`" for r in references))
+
+        if limit_states:
+            st.markdown("**Limit states / damage states**")
+            for ls_key, ls_data in limit_states.items():
+                if not isinstance(ls_data, dict):
+                    continue
+                for ds_key, ds_data in ls_data.items():
+                    desc_text = (
+                        ds_data.get("Description", "")
+                        if isinstance(ds_data, dict)
+                        else str(ds_data)
+                    )
+                    with st.expander(f"{ls_key} / {ds_key}", expanded=False):
+                        st.caption(desc_text)
+        else:
+            st.caption("No limit-state data found.")
+
+    # ── Right: comments + fragility chart ─────────────────────────────────
+    with col_right:
+        if comments:
+            with st.expander("Technical notes / comments", expanded=False):
+                st.caption(comments)
+
+        frag_df = _load_fragility_df(json_path)
+        if frag_df is not None and comp_id in frag_df.index:
+            csv_row = frag_df.loc[comp_id]
+            csv_row_flat = {
+                f"{a}-{b}" if b else str(a): v
+                for (a, b), v in csv_row.items()
+            }
+            st.plotly_chart(
+                _make_fragility_figure(
+                    comp_id,
+                    json.dumps(limit_states),
+                    json.dumps(csv_row_flat, default=str),
+                ),
+                use_container_width=True,
+                key=f"wind_frag_{comp_id}",
+            )
+        else:
+            st.info("No fragility data available to generate curves.", icon="ℹ️")
+
+
+# ─── Wind tree renderer ────────────────────────────────────────────────────────
+
+# Map top-level component prefixes to human-readable group labels.
+# Derived from the IDs present in the SimCenter Wind Component Library.
+_WIND_GROUP_LABELS: Dict[str, str] = {
+    "DOOR":  "DOOR — Doors",
+    "RCOV":  "RCOV — Roof Cover",
+    "RSH":   "RSH — Roof Sheathing",
+    "RWC":   "RWC — Roof-Wall Connections",
+    "WALL":  "WALL — Walls",
+    "WCOV":  "WCOV — Wall Cover",
+    "WIN":   "WIN — Windows",
+    "WSH":   "WSH — Wall Sheathing",
+}
+
+
+def render_wind_tree(
+    wind_objects: Optional[List[SearchObject]] = None,
+) -> None:
+    """
+    Render the SimCenter Wind Component Library as a collapsible tree.
+
+    The tree has the same four-level structure used by ``render_seismic_tree``:
+
+      Wind (Hurricane)
+      └── Source  (SimCenter Wind Component Library)
+          └── Component Group  (DOOR / WIN / RSH …)
+              └── Sub-Group  (DOOR.garage / WIN.regular …)
+                  └── Component  [detail panel + fragility chart]
+
+    Parameters
+    ----------
+    wind_objects : list of SearchObject, optional
+        Pre-filtered list of wind/hurricane component SearchObjects.
+        When ``None``, all hurricane component objects are loaded from
+        the cached FuzzyIndex, filtered to the
+        ``hurricane/building/component`` path prefix so that Hazus
+        *portfolio* sources are excluded.
+
+    Performance strategy
+    --------------------
+    Identical to ``render_seismic_tree``: FuzzyIndex and _build_tree are
+    cached at the process level; component detail panels are guarded by
+    session-state flags so they are only rendered after an explicit
+    "Load details" click.
+    """
+    # ── Session state ──────────────────────────────────────────────────────
+    if _EXPANDED_KEY not in st.session_state:
+        st.session_state[_EXPANDED_KEY] = set()
+
+    # ── Load data ──────────────────────────────────────────────────────────
+    if wind_objects is None:
+        with st.spinner("Loading wind fragility index…"):
+            all_hurricane = _get_cached_index().filter_by_hazard("hurricane")
+            # Restrict to component-level sources only (exclude portfolio models
+            # such as Hazus v5.1 which live under hurricane/building/portfolio).
+            wind_objects = [
+                o for o in all_hurricane
+                if "/building/component/" in o.file_path
+            ]
+
+    if not wind_objects:
+        st.warning(
+            "No wind component fragility data found. "
+            "Check that hurricane/building/component/ exists in the directory structure.",
+            icon="⚠️",
+        )
+        return
+
+    file_paths: tuple[str, ...] = tuple(
+        dict.fromkeys(obj.file_path for obj in wind_objects if obj.file_path)
+    )
+    tree = _build_tree(file_paths)
+
+    obj_by_path: Dict[str, SearchObject] = {
+        o.file_path: o for o in wind_objects if o.file_path
+    }
+
+    total = sum(src["count"] for src in tree.values())
+
+    # ══ Root header ══════════════════════════════════════════════════════════
+    st.markdown("## 🌀 Wind (Hurricane)")
+    st.caption(
+        f"{len(tree)} source{'s' if len(tree) != 1 else ''} · {total:,} components"
+    )
+    st.divider()
+
+    for short_name, source_data in tree.items():
+        fp: str = source_data["file_path"]
+        meta: dict = source_data["meta"]
+        groups: Dict[str, dict] = source_data["groups"]
+
+        n_comp = source_data["count"]
+        fname = Path(fp).name if fp else "unknown"
+
+        # ══ Level 2: Source ══════════════════════════════════════════════════
+        with st.expander(
+            f"**{short_name}**  ·  🌐 SimCenter  ·  `{n_comp:,}` components",
+            expanded=False,
+        ):
+            if meta.get("Description"):
+                st.caption(meta["Description"])
+
+            version = meta.get("Version", "")
+            st.caption(f"Version: {version}  ·  File: `{fname}`")
+            st.divider()
+
+            for group_prefix, group_data in groups.items():
+                group_total = group_data["count"]
+                if group_total == 0:
+                    continue
+
+                # Apply human-readable label if available.
+                group_label = _WIND_GROUP_LABELS.get(group_prefix, group_prefix)
+
+                # ══ Level 3: Component group ══════════════════════════════════
+                with st.expander(
+                    f"**{group_label}**  ·  `{group_total}` components",
+                    expanded=False,
+                ):
+                    for sg_name, sg_data in group_data["subgroups"].items():
+                        comps: List[str] = sg_data["components"]
+                        if not comps:
+                            continue
+
+                        n_sg = len(comps)
+                        sg_label = (
+                            f"**{sg_name}**  ·  "
+                            f"`{n_sg}` component{'s' if n_sg != 1 else ''}"
+                        )
+
+                        # ══ Level 4: Sub-group ════════════════════════════════
+                        with st.expander(sg_label, expanded=False):
+                            for comp_id in comps:
+                                full_json: dict = _load_full_json(fp)
+                                comp_data_entry: dict = full_json.get(comp_id, {})
+                                raw_desc: str = comp_data_entry.get("Description", "")
+                                preview = (
+                                    raw_desc[:90] + "…"
+                                    if len(raw_desc) > 90
+                                    else raw_desc
+                                )
+
+                                # ══ Level 5: Component leaf ════════════════════
+                                load_key = f"wind_loaded_{comp_id}"
+                                with st.expander(
+                                    f"🔩  **{comp_id}**  ·  {preview}",
+                                    expanded=False,
+                                ):
+                                    if load_key not in st.session_state:
+                                        if st.button(
+                                            "Load details",
+                                            key=f"wind_btn_{comp_id}",
+                                            type="secondary",
+                                        ):
+                                            st.session_state[load_key] = True
+                                            st.rerun()
+                                    elif comp_data_entry:
+                                        _render_wind_component_detail(
+                                            comp_id, comp_data_entry, fp
+                                        )
+                                    else:
+                                        st.warning(
+                                            f"Full data for `{comp_id}` was not found "
+                                            f"in `{fname}`.",
+                                            icon="⚠️",
+                                        )
