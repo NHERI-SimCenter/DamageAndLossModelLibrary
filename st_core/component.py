@@ -62,6 +62,33 @@ from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
 # Consequence type options shown in the selectbox
 _C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
 
+# Session-state key for the added-components list
+_ADDED_KEY = "added_components"
+
+# ─── Session-state helpers ─────────────────────────────────────────────────────
+
+def _initialize_added_components_state() -> None:
+    """
+    Ensure the added-components list exists in ``st.session_state``.
+
+    Each entry is a dict with keys:
+        ``comp_id``   – component identifier string
+        ``comp_data`` – full component record dict
+        ``json_path`` – path to the source fragility.json
+        ``hazard``    – ``"seismic"`` or ``"wind"``
+    """
+    if _ADDED_KEY not in st.session_state:
+        st.session_state[_ADDED_KEY] = []
+
+
+def _is_component_added(comp_id: str) -> bool:
+    """Return True if *comp_id* is already in the added-components list."""
+    _initialize_added_components_state()
+    return any(
+        entry["comp_id"] == comp_id
+        for entry in st.session_state[_ADDED_KEY]
+    )
+
 # ─── Internal: consequence tab ─────────────────────────────────────────────────
 
 def _render_consequence_tab(comp_id: str, json_path: str) -> None:
@@ -115,7 +142,41 @@ def _render_consequence_tab(comp_id: str, json_path: str) -> None:
         use_container_width=True,
         key=f"cons_{comp_id}_{c_type}",
     )
+# ─── Internal: add-component button ───────────────────────────────────────────
 
+def _render_add_button(
+    comp_id: str,
+    comp_data: dict,
+    json_path: str,
+    hazard: str,
+) -> None:
+    """
+    Render the "Add component" button at the bottom of a detail panel.
+
+    If the component is already in the added list the button is replaced by
+    a muted caption so the user has clear feedback without a disabled widget.
+    """
+    _initialize_added_components_state()
+    st.divider()
+
+    if _is_component_added(comp_id):
+        st.caption(f"✅ `{comp_id}` is already in your component list.")
+    else:
+        if st.button(
+            "➕ Add component",
+            key=f"add_btn_{comp_id}",
+            type="primary",
+            help="Add this component to the page list for side-by-side review.",
+        ):
+            st.session_state[_ADDED_KEY].append(
+                {
+                    "comp_id": comp_id,
+                    "comp_data": comp_data,
+                    "json_path": json_path,
+                    "hazard": hazard,
+                }
+            )
+            st.rerun()
 
 # ─── Internal: seismic detail panel ───────────────────────────────────────────
 
@@ -195,6 +256,9 @@ def _render_component_detail(
                 st.caption(comments)
 
         tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
+        
+        _render_add_button(comp_id, comp_data, json_path, hazard="seismic")
+
 
         with tab_frag:
             frag_df = load_fragility_df(json_path)
@@ -416,3 +480,74 @@ def render_component_leaf_button(
             f"Full data for `{comp_id}` was not found in the source file.",
             icon="⚠️",
         )
+    
+def render_added_components_list() -> None:
+    """
+    Render the list of components added via the "Add component" button.
+
+    Each component is shown in a collapsible expander whose header contains
+    the component ID and a short description preview.  The appropriate detail
+    renderer is called depending on the stored hazard type.
+
+    A **🗑️ Remove** button appears at the top of each expanded panel, and a
+    **🗑️ Clear all** button sits below the list.  If the list is empty, an
+    info message is shown instead.
+
+    Usage
+    -----
+        from st_core.component import render_added_components_list
+        render_added_components_list()
+    """
+    _initialize_added_components_state()
+    entries: list = st.session_state[_ADDED_KEY]
+
+    if not entries:
+        st.info(
+            "No components added yet. Use the **➕ Add component** button "
+            "inside any component detail panel.",
+            icon="📋",
+        )
+        return
+
+    st.markdown(f"### 📋 Added Components  `{len(entries)}`")
+
+    for idx, entry in enumerate(entries):
+        comp_id: str = entry["comp_id"]
+        comp_data: dict = entry["comp_data"]
+        json_path: str = entry["json_path"]
+        hazard: str = entry["hazard"]
+
+        raw_desc: str = comp_data.get("Description", "")
+        preview = raw_desc[:80] + "…" if len(raw_desc) > 80 else raw_desc
+        hazard_badge = "🌊" if hazard == "wind" else "🌍"
+
+        with st.expander(
+            f"{hazard_badge}  **{comp_id}**  ·  {preview}",
+            expanded=False,
+        ):
+            # Remove button at the top of the expanded panel
+            _, btn_col = st.columns([5, 1])
+            with btn_col:
+                if st.button(
+                    "🗑️ Remove",
+                    key=f"list_remove_{comp_id}_{idx}",
+                    type="secondary",
+                    help=f"Remove {comp_id} from the list",
+                ):
+                    st.session_state[_ADDED_KEY].pop(idx)
+                    st.rerun()
+
+            # Full detail panel (add button suppressed — already in the list)
+            if hazard == "wind":
+                _render_wind_component_detail(comp_id, comp_data, json_path)
+            else:
+                _render_component_detail(comp_id, comp_data, json_path)
+
+    st.divider()
+    if st.button(
+        "🗑️ Clear all",
+        key="added_components_clear_all",
+        type="secondary",
+    ):
+        st.session_state[_ADDED_KEY].clear()
+        st.rerun()
