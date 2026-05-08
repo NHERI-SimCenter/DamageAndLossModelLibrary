@@ -16,3 +16,4 @@ streamlit-keyup == 0.3.0
 rapidfuzz >= 3.13.0
 requests >= 2.31.0
 Authlib >= 1.6.1
+httpx
