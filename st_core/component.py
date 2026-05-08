@@ -61,6 +61,7 @@ import streamlit as st
 
 from st_visuals.figures import make_consequence_figure, make_fragility_figure
 from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
+from st_core.downloads import render_download_buttons
 
 # Consequence type options shown in the selectbox
 _C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
@@ -610,3 +611,5 @@ def render_added_components_list() -> None:
     ):
         st.session_state[_ADDED_KEY].clear()
         st.rerun()
+    
+    render_download_buttons()
