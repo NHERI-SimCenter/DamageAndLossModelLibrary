@@ -19,25 +19,25 @@ component records outside (or inside) the collapsible tree:
         used inside the tree, so the same lazy-loading pattern can be applied
         when embedding a leaf anywhere in the app.
 
+    render_added_components_list()
+        Render the list of all components the user has added via the
+        "Add component" button.  Each entry is shown in a collapsible
+        expander using the appropriate detail renderer (seismic or wind),
+        with a "Remove" button to delete it from the list.
+
 Leaf detail renderers
 ---------------------
-    _render_component_detail(comp_id, comp_data, json_path)
+    _render_component_detail(comp_id, comp_data, json_path, *, key_prefix="")
         Internal seismic detail panel — called by render_component_leaf.
 
-    _render_wind_component_detail(comp_id, comp_data, json_path)
+    _render_wind_component_detail(comp_id, comp_data, json_path, *, key_prefix="")
         Internal wind detail panel — called by render_wind_component_leaf.
-
-Data helpers (re-exported from tree_visuals for convenience)
-------------------------------------------------------------
-    _load_fragility_df, _load_consequence_df, _make_fragility_figure,
-    _make_consequence_figure, _render_consequence_tab
-    — imported directly so callers that already import tree_visuals are not
-      forced to change their import paths.
 
 Usage
 -----
-    from component import render_component_leaf, render_wind_component_leaf
-    from component import render_component_leaf_button
+    from st_core.component import render_component_leaf, render_wind_component_leaf
+    from st_core.component import render_component_leaf_button
+    from st_core.component import render_added_components_list
 
     # Render a seismic component directly (no lazy-load gate):
     render_component_leaf("B.10.31.001a", comp_data_dict, "/path/to/fragility.json")
@@ -47,12 +47,15 @@ Usage
         "B.10.31.001a", comp_data_dict, "/path/to/fragility.json",
         key_prefix="my_page_", hazard="seismic",
     )
+
+    # Render the running list of added components (place anywhere on the page):
+    render_added_components_list()
 """
 
 from __future__ import annotations
 
 import json
-from typing import Dict, List
+from typing import List
 
 import streamlit as st
 
@@ -64,6 +67,7 @@ _C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
 
 # Session-state key for the added-components list
 _ADDED_KEY = "added_components"
+
 
 # ─── Session-state helpers ─────────────────────────────────────────────────────
 
@@ -89,9 +93,15 @@ def _is_component_added(comp_id: str) -> bool:
         for entry in st.session_state[_ADDED_KEY]
     )
 
+
 # ─── Internal: consequence tab ─────────────────────────────────────────────────
 
-def _render_consequence_tab(comp_id: str, json_path: str) -> None:
+def _render_consequence_tab(
+    comp_id: str,
+    json_path: str,
+    *,
+    key_prefix: str = "",
+) -> None:
     """
     Render the consequence-curves tab for a single seismic component.
 
@@ -106,6 +116,9 @@ def _render_consequence_tab(comp_id: str, json_path: str) -> None:
     json_path : str
         Path to the source ``fragility.json``; used to locate
         ``consequence_repair.csv`` in the same directory.
+    key_prefix : str, optional
+        Prepended to all widget keys to prevent collisions when the same
+        component is rendered more than once on the page.
     """
     repair_df = load_consequence_df(json_path)
 
@@ -134,14 +147,16 @@ def _render_consequence_tab(comp_id: str, json_path: str) -> None:
         "Consequence type",
         options=available_types,
         horizontal=True,
-        key=f"cons_type_{comp_id}",
+        key=f"{key_prefix}cons_type_{comp_id}",
     )
 
     st.plotly_chart(
         make_consequence_figure(comp_id, c_type, json_path),
         use_container_width=True,
-        key=f"cons_{comp_id}_{c_type}",
+        key=f"{key_prefix}cons_{comp_id}_{c_type}",
     )
+
+
 # ─── Internal: add-component button ───────────────────────────────────────────
 
 def _render_add_button(
@@ -149,12 +164,27 @@ def _render_add_button(
     comp_data: dict,
     json_path: str,
     hazard: str,
+    *,
+    key_prefix: str = "",
 ) -> None:
     """
     Render the "Add component" button at the bottom of a detail panel.
 
     If the component is already in the added list the button is replaced by
     a muted caption so the user has clear feedback without a disabled widget.
+
+    Parameters
+    ----------
+    comp_id : str
+        Component identifier.
+    comp_data : dict
+        Full component record from ``fragility.json``.
+    json_path : str
+        Path to the source ``fragility.json``.
+    hazard : {"seismic", "wind"}
+        Which hazard type this component belongs to.
+    key_prefix : str, optional
+        Prepended to the button widget key to prevent collisions.
     """
     _initialize_added_components_state()
     st.divider()
@@ -164,7 +194,7 @@ def _render_add_button(
     else:
         if st.button(
             "➕ Add component",
-            key=f"add_btn_{comp_id}",
+            key=f"{key_prefix}add_btn_{comp_id}",
             type="primary",
             help="Add this component to the page list for side-by-side review.",
         ):
@@ -178,12 +208,15 @@ def _render_add_button(
             )
             st.rerun()
 
+
 # ─── Internal: seismic detail panel ───────────────────────────────────────────
 
 def _render_component_detail(
     comp_id: str,
     comp_data: dict,
     json_path: str,
+    *,
+    key_prefix: str = "",
 ) -> None:
     """
     Render the full inline detail panel for a seismic component leaf.
@@ -191,8 +224,8 @@ def _render_component_detail(
     Displays a two-column layout:
     * Left  — component metadata (ID, block size, integer-qty flag) and an
               expandable list of damage states with repair actions.
-    * Right — optional technical-notes expander, then tabbed charts:
-              *Fragility curves* and *Consequence curves*.
+    * Right — "Add component" button, optional technical-notes expander,
+              then tabbed charts: *Fragility curves* and *Consequence curves*.
 
     Parameters
     ----------
@@ -201,8 +234,11 @@ def _render_component_detail(
     comp_data : dict
         Full component record loaded from ``fragility.json``.
     json_path : str
-        Path to the source ``fragility.json``.  Passed to consequence helpers
-        so they can locate ``consequence_repair.csv`` in the same directory.
+        Path to the source ``fragility.json``.
+    key_prefix : str, optional
+        Prepended to all widget keys and expander labels to prevent collisions
+        when the same component is rendered more than once on the page (e.g.
+        simultaneously in the tree and in the added-components list).
     """
     description = comp_data.get("Description", "")
     comments = comp_data.get("Comments", "")
@@ -240,7 +276,11 @@ def _render_component_detail(
                         if isinstance(ds_data, dict)
                         else str(ds_data)
                     )
-                    with st.expander(f"{ls_key} / {ds_key}", expanded=False):
+                    # key_prefix in the label prevents duplicate-label warnings
+                    # when this component is rendered in two places at once.
+                    with st.expander(
+                        f"{key_prefix}{ls_key} / {ds_key}", expanded=False
+                    ):
                         st.caption(desc_text)
                         if isinstance(ds_data, dict) and ds_data.get("RepairAction"):
                             st.caption(
@@ -249,16 +289,19 @@ def _render_component_detail(
         else:
             st.caption("No limit-state data found.")
 
-    # ── Right: comments + charts ───────────────────────────────────────────
+    # ── Right: add button + comments + charts ─────────────────────────────
     with col_right:
+        _render_add_button(
+            comp_id, comp_data, json_path, hazard="seismic", key_prefix=key_prefix
+        )
+
         if comments:
-            with st.expander("Technical notes / comments", expanded=False):
+            with st.expander(
+                f"{key_prefix}Technical notes / comments", expanded=False
+            ):
                 st.caption(comments)
 
         tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
-        
-        _render_add_button(comp_id, comp_data, json_path, hazard="seismic")
-
 
         with tab_frag:
             frag_df = load_fragility_df(json_path)
@@ -275,7 +318,7 @@ def _render_component_detail(
                         json.dumps(csv_row_flat, default=str),
                     ),
                     use_container_width=True,
-                    key=f"frag_{comp_id}",
+                    key=f"{key_prefix}frag_{comp_id}",
                 )
             else:
                 st.info(
@@ -283,7 +326,7 @@ def _render_component_detail(
                 )
 
         with tab_cons:
-            _render_consequence_tab(comp_id, json_path)
+            _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
 
 
 # ─── Internal: wind detail panel ──────────────────────────────────────────────
@@ -292,6 +335,8 @@ def _render_wind_component_detail(
     comp_id: str,
     comp_data: dict,
     json_path: str,
+    *,
+    key_prefix: str = "",
 ) -> None:
     """
     Render the inline detail panel for a wind library component leaf.
@@ -307,6 +352,9 @@ def _render_wind_component_detail(
         Full component record from ``fragility.json``.
     json_path : str
         Path to the source ``fragility.json``.
+    key_prefix : str, optional
+        Prepended to all widget keys and expander labels to prevent collisions
+        when the same component is rendered more than once on the page.
     """
     description: str = comp_data.get("Description", "")
     comments: str = comp_data.get("Comments", "")
@@ -340,15 +388,23 @@ def _render_wind_component_detail(
                         if isinstance(ds_data, dict)
                         else str(ds_data)
                     )
-                    with st.expander(f"{ls_key} / {ds_key}", expanded=False):
+                    with st.expander(
+                        f"{key_prefix}{ls_key} / {ds_key}", expanded=False
+                    ):
                         st.caption(desc_text)
         else:
             st.caption("No limit-state data found.")
 
-    # ── Right: comments + fragility chart ─────────────────────────────────
+    # ── Right: add button + comments + fragility chart ─────────────────────
     with col_right:
+        _render_add_button(
+            comp_id, comp_data, json_path, hazard="wind", key_prefix=key_prefix
+        )
+
         if comments:
-            with st.expander("Technical notes / comments", expanded=False):
+            with st.expander(
+                f"{key_prefix}Technical notes / comments", expanded=False
+            ):
                 st.caption(comments)
 
         frag_df = load_fragility_df(json_path)
@@ -365,7 +421,7 @@ def _render_wind_component_detail(
                     json.dumps(csv_row_flat, default=str),
                 ),
                 use_container_width=True,
-                key=f"wind_frag_{comp_id}",
+                key=f"{key_prefix}wind_frag_{comp_id}",
             )
         else:
             st.info(
@@ -385,11 +441,6 @@ def render_component_leaf(
     """
     Render the full detail panel for a seismic component leaf node.
 
-    This is the standalone version of the Level 5 leaf content — no
-    ``st.expander`` wrapper, no session-state load gate.  Use this when you
-    want to embed a component panel directly on a page or inside your own
-    container.
-
     Parameters
     ----------
     comp_id : str
@@ -402,7 +453,7 @@ def render_component_leaf(
         Prepended to all Streamlit widget keys to prevent key collisions when
         multiple leaves are rendered on the same page.
     """
-    _render_component_detail(comp_id, comp_data, json_path)
+    _render_component_detail(comp_id, comp_data, json_path, key_prefix=key_prefix)
 
 
 def render_wind_component_leaf(
@@ -415,10 +466,6 @@ def render_wind_component_leaf(
     """
     Render the detail panel for a wind / hurricane component leaf node.
 
-    Displays description, block size, references, limit states, and a
-    fragility curve.  Consequence curves are omitted because the SimCenter
-    Wind Component Library does not include consequence data.
-
     Parameters
     ----------
     comp_id : str
@@ -430,7 +477,7 @@ def render_wind_component_leaf(
     key_prefix : str, optional
         Prepended to all Streamlit widget keys to prevent key collisions.
     """
-    _render_wind_component_detail(comp_id, comp_data, json_path)
+    _render_wind_component_detail(comp_id, comp_data, json_path, key_prefix=key_prefix)
 
 
 def render_component_leaf_button(
@@ -443,11 +490,6 @@ def render_component_leaf_button(
 ) -> None:
     """
     Render a component leaf with the lazy-load button guard from the tree.
-
-    Replicates the session-state pattern used inside the collapsible tree:
-    a "Load details" button is shown on first render; once clicked the detail
-    panel appears and is retained across re-runs.  This keeps the Streamlit
-    widget tree small until the user explicitly requests the content.
 
     Parameters
     ----------
@@ -472,22 +514,29 @@ def render_component_leaf_button(
             st.rerun()
     elif comp_data:
         if hazard == "wind":
-            _render_wind_component_detail(comp_id, comp_data, json_path)
+            _render_wind_component_detail(
+                comp_id, comp_data, json_path, key_prefix=key_prefix
+            )
         else:
-            _render_component_detail(comp_id, comp_data, json_path)
+            _render_component_detail(
+                comp_id, comp_data, json_path, key_prefix=key_prefix
+            )
     else:
         st.warning(
             f"Full data for `{comp_id}` was not found in the source file.",
             icon="⚠️",
         )
-    
+
+
 def render_added_components_list() -> None:
     """
     Render the list of components added via the "Add component" button.
 
     Each component is shown in a collapsible expander whose header contains
     the component ID and a short description preview.  The appropriate detail
-    renderer is called depending on the stored hazard type.
+    renderer is called with a unique ``key_prefix`` derived from the slot
+    index so that widget keys never collide — even if the same component
+    appears in both the tree and this list simultaneously.
 
     A **🗑️ Remove** button appears at the top of each expanded panel, and a
     **🗑️ Clear all** button sits below the list.  If the list is empty, an
@@ -517,6 +566,10 @@ def render_added_components_list() -> None:
         json_path: str = entry["json_path"]
         hazard: str = entry["hazard"]
 
+        # Unique prefix per list slot — prevents any key collision with the
+        # tree or with other slots that happen to share the same comp_id.
+        slot_prefix = f"list{idx}_"
+
         raw_desc: str = comp_data.get("Description", "")
         preview = raw_desc[:80] + "…" if len(raw_desc) > 80 else raw_desc
         hazard_badge = "🌊" if hazard == "wind" else "🌍"
@@ -537,11 +590,17 @@ def render_added_components_list() -> None:
                     st.session_state[_ADDED_KEY].pop(idx)
                     st.rerun()
 
-            # Full detail panel (add button suppressed — already in the list)
+            # Full detail panel rendered with a unique key_prefix.
+            # The add button inside will show "✅ already added" since the
+            # component is already present in the list.
             if hazard == "wind":
-                _render_wind_component_detail(comp_id, comp_data, json_path)
+                _render_wind_component_detail(
+                    comp_id, comp_data, json_path, key_prefix=slot_prefix
+                )
             else:
-                _render_component_detail(comp_id, comp_data, json_path)
+                _render_component_detail(
+                    comp_id, comp_data, json_path, key_prefix=slot_prefix
+                )
 
     st.divider()
     if st.button(
