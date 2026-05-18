@@ -305,7 +305,7 @@ def render_seismic_tree(
 
     # ── Load data ──────────────────────────────────────────────────────────
     if seismic_objects is None:
-        with st.spinner("Loading seismic fragility index…"):
+        with st.spinner("Loading seismic fragility index…", show_time=True):
             seismic_objects = _get_cached_index().filter_by_hazard("seismic")
 
     if not seismic_objects:
@@ -443,7 +443,6 @@ _WIND_GROUP_LABELS: Dict[str, str] = {
     "WIN":   "WIN — Windows",
     "WSH":   "WSH — Wall Sheathing",
 }
-
 
 def render_wind_tree(
     wind_objects: Optional[List[SearchObject]] = None,
