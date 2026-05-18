@@ -492,6 +492,11 @@ def render_component_leaf_button(
     """
     Render a component leaf with the lazy-load button guard from the tree.
 
+    Uses the same single-rerun pattern as the tree's leaf fragments: a
+    "Load details" click sets the session-state flag and falls through to
+    render the detail in the same script execution, avoiding the extra
+    ``st.rerun()`` bounce that previously caused visible stutter.
+
     Parameters
     ----------
     comp_id : str
@@ -509,24 +514,28 @@ def render_component_leaf_button(
     load_key = f"{key_prefix}loaded_{comp_id}"
     btn_key = f"{key_prefix}btn_{comp_id}"
 
-    if load_key not in st.session_state:
+    loaded = st.session_state.get(load_key, False)
+
+    if not loaded:
         if st.button("Load details", key=btn_key, type="secondary"):
             st.session_state[load_key] = True
-            st.rerun()
-    elif comp_data:
-        if hazard == "wind":
-            _render_wind_component_detail(
-                comp_id, comp_data, json_path, key_prefix=key_prefix
-            )
+            loaded = True
+
+    if loaded:
+        if comp_data:
+            if hazard == "wind":
+                _render_wind_component_detail(
+                    comp_id, comp_data, json_path, key_prefix=key_prefix
+                )
+            else:
+                _render_component_detail(
+                    comp_id, comp_data, json_path, key_prefix=key_prefix
+                )
         else:
-            _render_component_detail(
-                comp_id, comp_data, json_path, key_prefix=key_prefix
+            st.warning(
+                f"Full data for `{comp_id}` was not found in the source file.",
+                icon="⚠️",
             )
-    else:
-        st.warning(
-            f"Full data for `{comp_id}` was not found in the source file.",
-            icon="⚠️",
-        )
 
 
 def render_added_components_list() -> None:

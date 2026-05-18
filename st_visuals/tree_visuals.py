@@ -275,6 +275,93 @@ def _count_components(groups: Dict[str, dict]) -> int:
     )
 
 
+# ─── Leaf fragments ────────────────────────────────────────────────────────────
+#
+# Why fragments?
+# ~~~~~~~~~~~~~~
+# Previously the "Load details" button used the pattern:
+#
+#     if st.button(...):
+#         st.session_state[load_key] = True
+#         st.rerun()
+#
+# That click triggered two full script re-runs (one for the button event,
+# one for the explicit st.rerun) and each re-run re-evaluated every open
+# expander in the tree, producing a visible 1–2 s stutter.
+#
+# The fragment-based pattern below:
+#   * sets the load flag and falls through to render the detail in the
+#     SAME script execution (no explicit st.rerun), and
+#   * scopes any subsequent reruns triggered from inside the leaf to the
+#     fragment itself, so the rest of the tree is not re-evaluated.
+#
+# Requires Streamlit ≥ 1.37 for st.fragment. If you're pinned to an older
+# version, drop the decorator — the single-rerun improvement still applies.
+
+@st.fragment
+def _render_seismic_leaf_fragment(
+    *,
+    comp_id: str,
+    comp_data: dict,
+    fp: str,
+    fname: str,
+    load_key: str,
+    btn_key: str,
+) -> None:
+    """
+    Render a seismic component leaf inside an isolated fragment.
+
+    A "Load details" click sets the session-state flag and immediately
+    falls through to render the detail panel in the same script
+    execution, avoiding the double-rerun stutter of the previous pattern.
+    """
+    loaded = st.session_state.get(load_key, False)
+
+    if not loaded:
+        if st.button("Load details", key=btn_key, type="secondary"):
+            st.session_state[load_key] = True
+            loaded = True
+
+    if loaded:
+        if comp_data:
+            render_component_leaf(comp_id, comp_data, fp)
+        else:
+            st.warning(
+                f"Full data for `{comp_id}` was not found in `{fname}`. "
+                "The component description is available but detailed fields "
+                "are missing.",
+                icon="⚠️",
+            )
+
+
+@st.fragment
+def _render_wind_leaf_fragment(
+    *,
+    comp_id: str,
+    comp_data: dict,
+    fp: str,
+    fname: str,
+    load_key: str,
+    btn_key: str,
+) -> None:
+    """Wind counterpart to ``_render_seismic_leaf_fragment``."""
+    loaded = st.session_state.get(load_key, False)
+
+    if not loaded:
+        if st.button("Load details", key=btn_key, type="secondary"):
+            st.session_state[load_key] = True
+            loaded = True
+
+    if loaded:
+        if comp_data:
+            render_wind_component_leaf(comp_id, comp_data, fp)
+        else:
+            st.warning(
+                f"Full data for `{comp_id}` was not found in `{fname}`.",
+                icon="⚠️",
+            )
+
+
 # ─── Tree renderer ─────────────────────────────────────────────────────────────
 
 def render_seismic_tree(
@@ -397,36 +484,26 @@ def render_seismic_tree(
                                 )
 
                                 # ══ Level 5: Component leaf ════════════════════
-                                # Session-state guard: detail content is only
-                                # rendered after an explicit "Load" click.
-                                # Without this guard, Streamlit executes every
-                                # expander's body on every re-run (open or not),
-                                # so st.tabs / st.plotly_chart / _render_consequence_tab
-                                # would fire for ALL components on every interaction.
+                                # Detail content is gated by a session-state
+                                # flag so closed expanders don't build Plotly
+                                # figures on every re-run. The leaf body lives
+                                # inside an st.fragment so a click only reruns
+                                # the leaf — not the entire tree.
                                 load_key = f"loaded_{comp_id}"
+                                btn_key = f"btn_{comp_id}"
+
                                 with st.expander(
                                     f"🔩  **{comp_id}**  ·  {preview}",
                                     expanded=False,
                                 ):
-                                    if load_key not in st.session_state:
-                                        if st.button(
-                                            "Load details",
-                                            key=f"btn_{comp_id}",
-                                            type="secondary",
-                                        ):
-                                            st.session_state[load_key] = True
-                                            st.rerun()
-                                    elif comp_data:
-                                        render_component_leaf(
-                                            comp_id, comp_data, fp
-                                        )
-                                    else:
-                                        st.warning(
-                                            f"Full data for `{comp_id}` was not found "
-                                            f"in `{fname}`. The component description "
-                                            "is available but detailed fields are missing.",
-                                            icon="⚠️",
-                                        )
+                                    _render_seismic_leaf_fragment(
+                                        comp_id=comp_id,
+                                        comp_data=comp_data,
+                                        fp=fp,
+                                        fname=fname,
+                                        load_key=load_key,
+                                        btn_key=btn_key,
+                                    )
 
 
 # ─── Wind tree renderer ────────────────────────────────────────────────────────
@@ -573,25 +650,17 @@ def render_wind_tree(
 
                                 # ══ Level 5: Component leaf ════════════════════
                                 load_key = f"wind_loaded_{comp_id}"
+                                btn_key = f"wind_btn_{comp_id}"
+
                                 with st.expander(
                                     f"🔩  **{comp_id}**  ·  {preview}",
                                     expanded=False,
                                 ):
-                                    if load_key not in st.session_state:
-                                        if st.button(
-                                            "Load details",
-                                            key=f"wind_btn_{comp_id}",
-                                            type="secondary",
-                                        ):
-                                            st.session_state[load_key] = True
-                                            st.rerun()
-                                    elif comp_data_entry:
-                                        render_wind_component_leaf(
-                                            comp_id, comp_data_entry, fp
-                                        )
-                                    else:
-                                        st.warning(
-                                            f"Full data for `{comp_id}` was not found "
-                                            f"in `{fname}`.",
-                                            icon="⚠️",
-                                        )
+                                    _render_wind_leaf_fragment(
+                                        comp_id=comp_id,
+                                        comp_data=comp_data_entry,
+                                        fp=fp,
+                                        fname=fname,
+                                        load_key=load_key,
+                                        btn_key=btn_key,
+                                    )
