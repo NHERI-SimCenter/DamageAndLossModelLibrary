@@ -7,5 +7,5 @@ def render_sidebar() -> None:
     Render the sidebar
     """
     with st.sidebar:
-        render_login_panel()
+        # render_login_panel()
         render_added_components_list()
