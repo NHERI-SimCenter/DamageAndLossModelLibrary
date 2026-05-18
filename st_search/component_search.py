@@ -6,26 +6,21 @@ from dataclasses import dataclass, field
 from typing import List, Dict, Optional
 
 def extract_search_metadata(json_path: str) -> dict:
-    general_info: pd.Series
-    general_dict: dict
-    general_dict_wrapper: str = '_GeneralInformation'
-    processed_dict: dict 
+    with open(json_path, "r", encoding="utf-8") as fh:
+        raw = json.load(fh)
 
-    processign_df = pd.read_json(json_path)
+    general = raw.pop("_GeneralInformation", {}) or {}
+    # drop nulls the way dropna() did
+    general = {k: v for k, v in general.items() if v is not None}
 
-    #Popped _GeneralInfo will be re-added to final dict for fuzzy search filtering
-    general_info: pd.Series = processign_df.pop('_GeneralInformation')
-    general_info = general_info.dropna()
-    general_dict = general_info.to_dict()
-    general_dict = {general_dict_wrapper: general_dict}
+    # original code took df.loc['Description'] — i.e. the "Description"
+    # field of every remaining component entry
+    processed = {
+        comp_id: entry.get("Description", "") if isinstance(entry, dict) else entry
+        for comp_id, entry in raw.items()
+    }
 
-    #json description will be target of fuzzy search
-    processign_df = processign_df.loc['Description']
-    processed_dict = processign_df.to_dict()
-
-    combined_dict = general_dict | processed_dict
-
-    return combined_dict
+    return {"_GeneralInformation": general} | processed
 
 @dataclass
 class SearchObject:
