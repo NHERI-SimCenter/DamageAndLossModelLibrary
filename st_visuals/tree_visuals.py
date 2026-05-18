@@ -58,6 +58,12 @@ _CATEGORY_BADGE: Dict[str, str] = {"FEMA": "FEMA P-58", "HAZUS": "Hazus"}
 # Session-state key that holds the set of expanded component IDs
 _EXPANDED_KEY = "tree_expanded_components"
 
+# Session-state key prefix for "this sub-group has been opened at least once".
+# Used to gate the inner per-component render loop so that closed sub-groups
+# never iterate their (often hundreds of) components or instantiate Level-5
+# expanders + fragments on every Streamlit re-run.
+_OPENED_SUBGROUPS_KEY = "tree_opened_subgroups"
+
 
 
 
@@ -123,13 +129,18 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
               group_name: {
                 "subgroups": {
                   subgroup_name: {
-                    "components": [comp_id, ...]
+                    "components": [(comp_id, preview), ...]
                   }
                 }
               }
             }
           }
         }
+
+        ``preview`` is the truncated component description used as the
+        Level-5 expander header label.  It is computed here, once, so that
+        the render loop never has to touch ``fragility.json`` to display
+        a collapsed leaf header.
 
     Routing logic
     ~~~~~~~~~~~~~
@@ -228,6 +239,12 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
         # Sub-group: first two dot-segments joined (e.g. "GF.H", "STR.W1").
         # When a prefix has no match in the maps (happens for FEMA P-58 IDs
         # whose sub-groups may not be listed), fall back to the bare segment.
+        #
+        # The description preview used for the Level-5 expander header is
+        # computed here, once, while we already have ``data`` loaded.  This
+        # removes the per-component _load_full_json() / dict.get() /
+        # string-slice work that previously ran on every Streamlit re-run.
+        # Components are stored as ``(comp_id, preview)`` tuples.
         groups: Dict[str, dict] = {}
         for comp_id in comp_ids:
             parts = comp_id.split(".")
@@ -237,21 +254,25 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
             group_label = group_map.get(top_segment, top_segment)
             subgroup_label = subgroup_map.get(sub_segment, sub_segment)
 
+            raw_desc = data.get(comp_id, {}).get("Description", "") or ""
+            preview = raw_desc[:90] + "…" if len(raw_desc) > 90 else raw_desc
+
             groups.setdefault(group_label, {"subgroups": {}})
             groups[group_label]["subgroups"].setdefault(
                 subgroup_label, {"components": []}
             )
             groups[group_label]["subgroups"][subgroup_label]["components"].append(
-                comp_id
+                (comp_id, preview)
             )
 
         # Pre-sort component lists and cache per-group counts so the render
-        # loop never has to sort or count on re-runs.
+        # loop never has to sort or count on re-runs.  Sort by comp_id (the
+        # first tuple element) so the ordering matches the previous behaviour.
         total_count = 0
         for g_data in groups.values():
             g_count = 0
             for sg_data in g_data["subgroups"].values():
-                sg_data["components"].sort()
+                sg_data["components"].sort(key=lambda t: t[0])
                 g_count += len(sg_data["components"])
             g_data["count"] = g_count
             total_count += g_count
@@ -389,6 +410,8 @@ def render_seismic_tree(
     # ── Session state for tracking which components are open ───────────────
     if _EXPANDED_KEY not in st.session_state:
         st.session_state[_EXPANDED_KEY] = set()
+    if _OPENED_SUBGROUPS_KEY not in st.session_state:
+        st.session_state[_OPENED_SUBGROUPS_KEY] = set()
 
     # ── Load data ──────────────────────────────────────────────────────────
     if seismic_objects is None:
@@ -456,7 +479,7 @@ def render_seismic_tree(
                     expanded=False,
                 ):
                     for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[str] = sg_data["components"]  # pre-sorted in _build_tree
+                        comps: List[tuple[str, str]] = sg_data["components"]  # pre-sorted (id, preview)
                         if not comps:
                             continue
 
@@ -467,43 +490,65 @@ def render_seismic_tree(
                         )
 
                         # ══ Level 4: Sub-group ════════════════════════════════
+                        # Streamlit re-runs all expander children regardless of
+                        # open/closed state.  Without a gate at this level, a
+                        # re-run would iterate every component in every sub-group
+                        # on the page and instantiate a Level-5 st.expander +
+                        # st.fragment + st.button for each one — thousands of
+                        # widgets even when nothing visible is expanded.
+                        #
+                        # The "Show components" button below records that the
+                        # user has opened this sub-group at least once.  After
+                        # that, the inner loop runs (the user's collapsing the
+                        # outer expander doesn't reset the flag — but the leaf
+                        # widgets only do real work after their own "Load
+                        # details" click, so the only residual cost is creating
+                        # the Level-5 expander shells, which is cheap).
+                        sg_key = f"seismic::{short_name}::{group_name}::{sg_name}"
+
                         with st.expander(sg_label, expanded=False):
-                            for comp_id in comps:
-                                # comps is pre-sorted by _build_tree; no sort needed.
-                                # _load_full_json is cached — O(1) after first call.
-                                full_json: dict = _load_full_json(fp)
-                                comp_data: dict = full_json.get(comp_id, {})
-                                raw_desc: str = comp_data.get(
-                                    "Description",
-                                    obj.search_dict.get(comp_id, "") if obj else "",
-                                )
-                                preview = (
-                                    raw_desc[:90] + "…"
-                                    if len(raw_desc) > 90
-                                    else raw_desc
-                                )
+                            opened = sg_key in st.session_state[_OPENED_SUBGROUPS_KEY]
 
-                                # ══ Level 5: Component leaf ════════════════════
-                                # Detail content is gated by a session-state
-                                # flag so closed expanders don't build Plotly
-                                # figures on every re-run. The leaf body lives
-                                # inside an st.fragment so a click only reruns
-                                # the leaf — not the entire tree.
-                                load_key = f"loaded_{comp_id}"
-                                btn_key = f"btn_{comp_id}"
-
-                                with st.expander(
-                                    f"🔩  **{comp_id}**  ·  {preview}",
-                                    expanded=False,
+                            if not opened:
+                                if st.button(
+                                    f"Show {n_sg} component{'s' if n_sg != 1 else ''}",
+                                    key=f"sg_btn_{sg_key}",
+                                    type="secondary",
                                 ):
-                                    _render_seismic_leaf_fragment(
-                                        comp_id=comp_id,
-                                        comp_data=comp_data,
-                                        fp=fp,
-                                        fname=fname,
-                                        load_key=load_key,
-                                        btn_key=btn_key,
-                                    )
+                                    st.session_state[_OPENED_SUBGROUPS_KEY].add(sg_key)
+                                    opened = True
+
+                            if opened:
+                                # Hoist the source JSON load out of the inner
+                                # loop — it is invariant across all components
+                                # in this sub-group.  Cached, so this is also
+                                # O(1) after the first call per process.
+                                full_json: dict = _load_full_json(fp)
+
+                                for comp_id, preview in comps:
+                                    comp_data: dict = full_json.get(comp_id, {})
+
+                                    # ══ Level 5: Component leaf ════════════════
+                                    # Detail content is gated by a session-state
+                                    # flag so closed expanders don't build Plotly
+                                    # figures on every re-run.  The leaf body
+                                    # lives inside an st.fragment so a click only
+                                    # reruns the leaf — not the entire tree.
+                                    load_key = f"loaded_{comp_id}"
+                                    btn_key = f"btn_{comp_id}"
+
+                                    with st.expander(
+                                        f"🔩  **{comp_id}**  ·  {preview}",
+                                        expanded=False,
+                                    ):
+                                        _render_seismic_leaf_fragment(
+                                            comp_id=comp_id,
+                                            comp_data=comp_data,
+                                            fp=fp,
+                                            fname=fname,
+                                            load_key=load_key,
+                                            btn_key=btn_key,
+                                        )
 
 
 # ─── Wind tree renderer ────────────────────────────────────────────────────────
@@ -554,6 +599,8 @@ def render_wind_tree(
     # ── Session state ──────────────────────────────────────────────────────
     if _EXPANDED_KEY not in st.session_state:
         st.session_state[_EXPANDED_KEY] = set()
+    if _OPENED_SUBGROUPS_KEY not in st.session_state:
+        st.session_state[_OPENED_SUBGROUPS_KEY] = set()
 
     # ── Load data ──────────────────────────────────────────────────────────
     if wind_objects is None:
@@ -626,7 +673,7 @@ def render_wind_tree(
                     expanded=False,
                 ):
                     for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[str] = sg_data["components"]
+                        comps: List[tuple[str, str]] = sg_data["components"]  # (id, preview)
                         if not comps:
                             continue
 
@@ -637,30 +684,40 @@ def render_wind_tree(
                         )
 
                         # ══ Level 4: Sub-group ════════════════════════════════
+                        # See render_seismic_tree for the rationale — same gate.
+                        sg_key = f"wind::{short_name}::{group_prefix}::{sg_name}"
+
                         with st.expander(sg_label, expanded=False):
-                            for comp_id in comps:
-                                full_json: dict = _load_full_json(fp)
-                                comp_data_entry: dict = full_json.get(comp_id, {})
-                                raw_desc: str = comp_data_entry.get("Description", "")
-                                preview = (
-                                    raw_desc[:90] + "…"
-                                    if len(raw_desc) > 90
-                                    else raw_desc
-                                )
+                            opened = sg_key in st.session_state[_OPENED_SUBGROUPS_KEY]
 
-                                # ══ Level 5: Component leaf ════════════════════
-                                load_key = f"wind_loaded_{comp_id}"
-                                btn_key = f"wind_btn_{comp_id}"
-
-                                with st.expander(
-                                    f"🔩  **{comp_id}**  ·  {preview}",
-                                    expanded=False,
+                            if not opened:
+                                if st.button(
+                                    f"Show {n_sg} component{'s' if n_sg != 1 else ''}",
+                                    key=f"sg_btn_{sg_key}",
+                                    type="secondary",
                                 ):
-                                    _render_wind_leaf_fragment(
-                                        comp_id=comp_id,
-                                        comp_data=comp_data_entry,
-                                        fp=fp,
-                                        fname=fname,
-                                        load_key=load_key,
-                                        btn_key=btn_key,
-                                    )
+                                    st.session_state[_OPENED_SUBGROUPS_KEY].add(sg_key)
+                                    opened = True
+
+                            if opened:
+                                full_json: dict = _load_full_json(fp)
+
+                                for comp_id, preview in comps:
+                                    comp_data_entry: dict = full_json.get(comp_id, {})
+
+                                    # ══ Level 5: Component leaf ════════════════
+                                    load_key = f"wind_loaded_{comp_id}"
+                                    btn_key = f"wind_btn_{comp_id}"
+
+                                    with st.expander(
+                                        f"🔩  **{comp_id}**  ·  {preview}",
+                                        expanded=False,
+                                    ):
+                                        _render_wind_leaf_fragment(
+                                            comp_id=comp_id,
+                                            comp_data=comp_data_entry,
+                                            fp=fp,
+                                            fname=fname,
+                                            load_key=load_key,
+                                            btn_key=btn_key,
+                                        )
