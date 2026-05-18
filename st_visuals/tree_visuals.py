@@ -53,7 +53,7 @@ from st_visuals.helpers_visual import load_consequence_df
 
 # ─── Palette & constants ───────────────────────────────────────────────────────
 
-_CATEGORY_BADGE: Dict[str, str] = {"FEMA": "🔵 FEMA P-58", "HAZUS": "🟠 Hazus"}
+_CATEGORY_BADGE: Dict[str, str] = {"FEMA": "FEMA P-58", "HAZUS": "Hazus"}
 
 # Session-state key that holds the set of expanded component IDs
 _EXPANDED_KEY = "tree_expanded_components"
@@ -148,29 +148,77 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
         meta: dict = data.get("_GeneralInformation", {})
         short_name: str = meta.get("ShortName", Path(fp).parent.name)
 
-        # Build prefix → label maps from ComponentGroups.
+        # Build prefix → descriptive-label maps from ComponentGroups.
         #
-        # ComponentGroups is a dict[str, list[str]]:
-        #   { "GF": ["GF.H", "GF.V", "GF.L"],
-        #     "STR": ["STR.W1", "STR.S1", ...], ... }
+        # ComponentGroups appears in one of two shapes across the fragility
+        # corpus:
         #
-        # Keys are top-level group prefixes; values are lists of subgroup
-        # prefixes.  We build two independent maps:
-        #   group_map:    top-prefix  → group display label  (e.g. "GF")
-        #   subgroup_map: sub-prefix  → subgroup display label (e.g. "GF.H")
-        # Both maps store just the prefix as the label because the JSON does
-        # not separately provide human-readable group names here.
+        #   (a) dict[str, list[str]] — nested groups with sub-groups. Used by
+        #       most Hazus seismic JSONs (e.g. power, water, building).
+        #         {
+        #           "EP - Electrical Power": [
+        #             "EP.S - Substation",
+        #             "EP.C - Circuit",
+        #             ...
+        #           ]
+        #         }
+        #
+        #   (b) list[str] — a flat list of top-level group entries only, with
+        #       no sub-group information. Used by the Hazus seismic
+        #       Transportation JSON, for example:
+        #         ["HRD - Road segments", "HWB - Bridges", "HTU - Tunnels"]
+        #
+        # Entries in either shape may be bare prefixes (e.g. "DOOR", "STR" —
+        # used by the SimCenter Wind library) or descriptive
+        # "PREFIX - Description" strings.
+        #
+        # The render code matches component-ID segments (e.g. "EP", "EP.S")
+        # against these maps, so the maps must be keyed by the *bare prefix*.
+        # The map values carry the full descriptive string for display in the
+        # Level-3 and Level-4 expander headers, matching the pattern the wind
+        # tree achieves via _WIND_GROUP_LABELS.
         raw_cg = meta.get("ComponentGroups", {})
-        if not isinstance(raw_cg, dict):
-            raw_cg = {}
 
-        group_map: Dict[str, str] = {grp: grp for grp in raw_cg}
-        subgroup_map: Dict[str, str] = {
-            sg: sg
-            for sg_list in raw_cg.values()
-            if isinstance(sg_list, list)
-            for sg in sg_list
-        }
+        def _split_prefix_label(s: str) -> tuple[str, str]:
+            """
+            Split a ComponentGroups entry into (prefix, full_label).
+
+            Recognizes both " - " (ASCII hyphen) and " — " (em dash) as the
+            separator between the routing prefix and its description. For
+            bare-prefix entries with no separator, prefix == label, which
+            preserves existing behavior for the wind tree.
+            """
+            for sep in (" — ", " - "):
+                if sep in s:
+                    prefix = s.split(sep, 1)[0].strip()
+                    return prefix, s
+            return s.strip(), s
+
+        group_map: Dict[str, str] = {}
+        subgroup_map: Dict[str, str] = {}
+
+        if isinstance(raw_cg, dict):
+            # Shape (a): keys are top-level groups, values are sub-group lists.
+            for grp_entry, sg_list in raw_cg.items():
+                if isinstance(grp_entry, str):
+                    prefix, label = _split_prefix_label(grp_entry)
+                    group_map[prefix] = label
+                if not isinstance(sg_list, list):
+                    continue
+                for sg_entry in sg_list:
+                    if not isinstance(sg_entry, str):
+                        continue
+                    prefix, label = _split_prefix_label(sg_entry)
+                    subgroup_map[prefix] = label
+        elif isinstance(raw_cg, list):
+            # Shape (b): flat list of top-level group entries only.
+            for grp_entry in raw_cg:
+                if not isinstance(grp_entry, str):
+                    continue
+                prefix, label = _split_prefix_label(grp_entry)
+                group_map[prefix] = label
+            # No sub-group metadata available; sub-group labels will fall back
+            # to the bare two-segment prefix in the routing loop below.
 
         # Collect all real component IDs (skip keys starting with "_")
         comp_ids = [k for k in data if not k.startswith("_")]
