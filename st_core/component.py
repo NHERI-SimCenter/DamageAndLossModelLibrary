@@ -153,7 +153,7 @@ def _render_consequence_tab(
 
     st.plotly_chart(
         make_consequence_figure(comp_id, c_type, json_path),
-        use_container_width=True,
+        width='stretch',
         key=f"{key_prefix}cons_{comp_id}_{c_type}",
     )
 
@@ -318,7 +318,7 @@ def _render_component_detail(
                         json.dumps(limit_states),
                         json.dumps(csv_row_flat, default=str),
                     ),
-                    use_container_width=True,
+                    width='stretch',
                     key=f"{key_prefix}frag_{comp_id}",
                 )
             else:
@@ -421,7 +421,7 @@ def _render_wind_component_detail(
                     json.dumps(limit_states),
                     json.dumps(csv_row_flat, default=str),
                 ),
-                use_container_width=True,
+                width='stretch',
                 key=f"{key_prefix}wind_frag_{comp_id}",
             )
         else:

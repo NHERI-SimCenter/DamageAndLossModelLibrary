@@ -250,7 +250,7 @@ def render_download_buttons() -> None:
             data=get_component_quantity_csv(),
             file_name="component_quantity.csv",
             mime="text/csv",
-            use_container_width=True,
+            width='stretch',
             help=(
                 "One row per added component. "
                 "ID column is populated; remaining columns are blank."
@@ -263,7 +263,7 @@ def render_download_buttons() -> None:
             data=get_fragility_csv(),
             file_name="fragility.csv",
             mime="text/csv",
-            use_container_width=True,
+            width='stretch',
             help=(
                 "Fragility data for the selected components, "
                 "in the original source format."
@@ -276,7 +276,7 @@ def render_download_buttons() -> None:
             data=get_consequence_csv(),
             file_name="consequence_repair.csv",
             mime="text/csv",
-            use_container_width=True,
+            width='stretch',
             help=(
                 "Consequence repair data (Cost, Time, Carbon, Energy) "
                 "for the selected components, in the original source format."

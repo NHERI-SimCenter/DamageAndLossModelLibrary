@@ -120,6 +120,6 @@ def render_selected_fragility_figures(
                 # Optional: show which dataset this came from
                 src = row.get("dataset_dir", "unknown")
                 st.caption(f"Source dataset: {src}")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width='stretch')
             except Exception as ex:
                 st.error(f"Failed to build figure for {comp_id}: {ex}")

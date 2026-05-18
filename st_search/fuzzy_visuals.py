@@ -375,7 +375,7 @@ class FuzzySearchUI:
                     if st.button(
                         f"{result.component_id}: {result.description[:50]}...",
                         key=f"suggestion_{i}",
-                        use_container_width=True
+                        width='stretch'
                     ):
                         # Add to selected components and store metadata
                         if result.component_id not in st.session_state.selected_component_ids:
@@ -486,7 +486,7 @@ class FuzzySearchUI:
             )
 
         with col2:
-            search_button = st.button("🔍 Search", type="primary", use_container_width=True, key='search_button')
+            search_button = st.button("🔍 Search", type="primary", width='stretch', key='search_button')
         
         # Perform search when query changes or button is clicked
 
@@ -629,7 +629,7 @@ class FuzzySearchUI:
                                         btn_label,
                                         key=f"add_{flat_idx}_{r.component_id}",
                                         disabled=btn_disabled,
-                                        use_container_width=True,
+                                        width='stretch',
                                     ):
                                         st.session_state.selected_component_ids.append(r.component_id)
                                         self._store_component_metadata(r.component_id, r)
@@ -645,7 +645,7 @@ class FuzzySearchUI:
         if st.session_state.search_history:
             with st.expander("📜 Recent Searches"):
                 for query in st.session_state.search_history:
-                    if st.button(query, key=f"history_{query}", use_container_width=True):
+                    if st.button(query, key=f"history_{query}", width='stretch'):
                         st.session_state.search_input = query
                         st.rerun()
         
