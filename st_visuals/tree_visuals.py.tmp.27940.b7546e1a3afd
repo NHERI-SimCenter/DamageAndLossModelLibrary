@@ -425,10 +425,8 @@ def _render_tree(
     tree = _build_tree(file_paths)
 
     # Stable per-source key prefix (independent of filtering) so widget keys
-    # stay unique even when two sources share a component ID — and across trees
-    # (dataset + hazard), since fragility and consequence trees can render on the
-    # same page ("All" browse) and share component IDs (e.g. FEMA B.10.31).
-    src_prefix = {fp: f"{dataset}_{hazard}_{i}_" for i, fp in enumerate(tree)}
+    # stay unique even when two sources share a component ID.
+    src_prefix = {fp: f"s{i}_" for i, fp in enumerate(tree)}
 
     # Prune to allowed_ids (no-op when None). A filtered view auto-expands so
     # matches are visible without clicking through every level.

@@ -97,6 +97,7 @@ class ComponentRecord:
     group_label: str         # human label,      e.g. "B - Shell"
     subgroup: str            # 2-segment prefix, e.g. "B.10"     (tree level 4)
     subgroup_label: str      # human label,      e.g. "B.10 - Super Structure"
+    dataset: str = "fragility"  # "fragility" | "consequence" — which file it came from
     type: str = "Damage"     # "Damage" | "Consequence"
     #: Extra label names (deepest group chain) used only to enrich the embedding.
     _name_chain: List[str] = field(default_factory=list, repr=False)
@@ -128,6 +129,7 @@ class ComponentRecord:
             "group_label": self.group_label,
             "subgroup": self.subgroup,
             "subgroup_label": self.subgroup_label,
+            "dataset": self.dataset,
             "type": self.type,
         }
 
@@ -141,12 +143,13 @@ class SearchFilters:
     source: Optional[str] = None       # matches short_name
     group: Optional[str] = None        # 1-segment prefix
     subgroup: Optional[str] = None     # 2-segment prefix
+    dataset: Optional[str] = None      # "fragility" | "consequence"
     type: Optional[str] = None
 
     def is_empty(self) -> bool:
         return all(
             getattr(self, f) is None
-            for f in ("hazard", "category", "source", "group", "subgroup", "type")
+            for f in ("hazard", "category", "source", "group", "subgroup", "dataset", "type")
         )
 
     def matches(self, payload: dict) -> bool:
@@ -157,6 +160,7 @@ class SearchFilters:
             "short_name": self.source,
             "group": self.group,
             "subgroup": self.subgroup,
+            "dataset": self.dataset,
             "type": self.type,
         }
         return all(want is None or payload.get(key) == want for key, want in checks.items())
@@ -240,6 +244,7 @@ def _record_from_component(
     category: str,
     label_map: Dict[str, str],
     source_type: str,
+    dataset: str,
 ) -> Optional[ComponentRecord]:
     """Build one ComponentRecord, or None if it has no usable description."""
     description = (comp_data.get("Description") or "").strip()
@@ -283,12 +288,13 @@ def _record_from_component(
         group_label=group_label,
         subgroup=subgroup,
         subgroup_label=subgroup_label,
+        dataset=dataset,
         type=comp_type,
         _name_chain=name_chain,
     )
 
 
-def _records_from_file(file_path: str) -> List[ComponentRecord]:
+def _records_from_file(file_path: str, dataset: str = "fragility") -> List[ComponentRecord]:
     try:
         with open(file_path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
@@ -319,39 +325,60 @@ def _records_from_file(file_path: str) -> List[ComponentRecord]:
             category=category,
             label_map=label_map,
             source_type=source_type,
+            dataset=dataset,
         )
         if rec is not None:
             records.append(rec)
     return records
 
 
-def tree_corpus_files(base_path: str = ".") -> List[str]:
+#: Filename per browsable dataset (mirrors tree_visuals._DATASET_FILENAME).
+_DATASET_FILENAME = {
+    "fragility": "fragility.json",
+    "consequence": "consequence_repair.json",
+}
+
+
+def tree_corpus_files(base_path: str = ".", dataset: str = "fragility") -> List[str]:
     """
-    Return the fragility.json paths the tree renders, in a stable order.
+    Return the tree-visible data files for *dataset*, in a stable order.
 
     Mirrors the loaders in tree_visuals:
-      * seismic — every ``fragility.json`` under ``seismic/``
+      * seismic — every file under ``seismic/``
       * wind    — only ``hurricane/building/component/`` libraries
+
+    ``dataset="consequence"`` globs ``consequence_repair.json`` instead, so
+    sources lacking one (the SimCenter wind library, the power network) simply
+    don't appear.
     """
+    filename = _DATASET_FILENAME[dataset]
     base = Path(base_path)
     files: List[str] = []
 
     seismic_root = base / "seismic"
     if seismic_root.exists():
-        files.extend(sorted(str(p) for p in seismic_root.rglob("fragility.json")))
+        files.extend(sorted(str(p) for p in seismic_root.rglob(filename)))
 
     wind_root = base / "hurricane" / "building" / "component"
     if wind_root.exists():
-        files.extend(sorted(str(p) for p in wind_root.rglob("fragility.json")))
+        files.extend(sorted(str(p) for p in wind_root.rglob(filename)))
 
     return files
 
 
 def build_tree_corpus(base_path: str = ".") -> List[ComponentRecord]:
-    """Parse every tree-visible component into a flat list of ComponentRecords."""
+    """
+    Parse every tree-visible record into a flat list of ComponentRecords.
+
+    Includes both the fragility (damage) models and the consequence (repair)
+    models, each tagged via ``ComponentRecord.dataset`` so search can filter by
+    one or span both. A component that exists in both files (e.g. FEMA
+    ``B.10.31.001``) yields two distinct records.
+    """
     records: List[ComponentRecord] = []
-    for fp in tree_corpus_files(base_path):
-        records.extend(_records_from_file(fp))
+    for dataset in ("fragility", "consequence"):
+        for fp in tree_corpus_files(base_path, dataset):
+            records.extend(_records_from_file(fp, dataset))
     return records
 
 
@@ -440,6 +467,7 @@ class SemanticIndex:
             "short_name": filters.source,
             "group": filters.group,
             "subgroup": filters.subgroup,
+            "dataset": filters.dataset,
             "type": filters.type,
         }
         for key, value in field_map.items():

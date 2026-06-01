@@ -425,10 +425,8 @@ def _render_tree(
     tree = _build_tree(file_paths)
 
     # Stable per-source key prefix (independent of filtering) so widget keys
-    # stay unique even when two sources share a component ID — and across trees
-    # (dataset + hazard), since fragility and consequence trees can render on the
-    # same page ("All" browse) and share component IDs (e.g. FEMA B.10.31).
-    src_prefix = {fp: f"{dataset}_{hazard}_{i}_" for i, fp in enumerate(tree)}
+    # stay unique even when two sources share a component ID.
+    src_prefix = {fp: f"s{i}_" for i, fp in enumerate(tree)}
 
     # Prune to allowed_ids (no-op when None). A filtered view auto-expands so
     # matches are visible without clicking through every level.
@@ -552,41 +550,11 @@ def render_wind_tree(
     _render_tree(
         file_paths,
         hazard="hurricane",
-        dataset="fragility",
         header="## 🌀 Wind (Hurricane)",
         no_data_warning=(
             "No wind component fragility data found. "
             "Check that hurricane/building/component/ exists in the directory structure."
         ),
         no_match_info="No wind components match the current filters.",
-        allowed_ids=allowed_ids,
-    )
-
-
-def render_consequence_tree(allowed_ids: Optional[set] = None) -> None:
-    """
-    Render the repair-consequence library as a collapsible tree.
-
-    Browsed via the dataset toggle. Unlike fragility, consequence records are
-    keyed by component (FEMA P-58) or by occupancy class (Hazus — e.g.
-    ``STR - Structural → STR.RES1 Single-family Dwelling``), so this is a
-    separate tree: it surfaces consequence records that have no fragility
-    component and therefore never appear in the fragility tree. The SimCenter
-    wind library carries no consequence data, so only seismic sources appear.
-
-    Parameters
-    ----------
-    allowed_ids : set of str, optional
-        When provided, only consequence records whose ID is in this set are
-        shown, and empty branches are hidden. When None, the full tree renders.
-    """
-    file_paths = _hazard_files("seismic", "consequence")
-    _render_tree(
-        file_paths,
-        hazard="seismic",
-        dataset="consequence",
-        header="## 🧾 Repair Consequences",
-        no_data_warning="No consequence data found.",
-        no_match_info="No consequence records match the current filters.",
         allowed_ids=allowed_ids,
     )

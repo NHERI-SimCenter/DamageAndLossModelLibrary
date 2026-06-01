@@ -39,7 +39,11 @@ from st_search.semantic_index import (
 )
 from st_core.component import add_component, is_component_added
 from st_visuals.helpers_visual import load_full_json
-from st_visuals.tree_visuals import render_seismic_tree, render_wind_tree
+from st_visuals.tree_visuals import (
+    render_consequence_tree,
+    render_seismic_tree,
+    render_wind_tree,
+)
 
 # Map UI hazard labels to the values stored on records / used by the trees.
 _HAZARD_LABELS = ["All", "Seismic", "Hurricane"]
@@ -48,6 +52,11 @@ _HAZARD_TO_VALUE = {"Seismic": "seismic", "Hurricane": "hurricane"}
 # Search modes shown to the user → engine mode strings.
 _MODE_LABELS = ["Description", "ID"]
 _MODE_TO_ENGINE = {"Description": "description", "ID": "id"}
+
+# Dataset selector — scopes both search and browse. "All" spans both datasets.
+_DATASET_LABELS = ["Fragility", "Consequence", "All"]
+_DATASET_TO_VALUE = {"Fragility": "fragility", "Consequence": "consequence", "All": None}
+_DATASET_BADGE = {"fragility": "🔧", "consequence": "🧾"}
 
 _RESULT_LIMIT = 30
 
@@ -60,9 +69,10 @@ def get_index() -> SemanticIndex:
     """
     Build the semantic index once per process.
 
-    Embeds the ~1.6k tree-visible components with fastembed (dense + BM25). The
-    first cold start also downloads the embedding models; subsequent re-runs
-    reuse this cached resource.
+    Embeds the ~2.6k tree-visible records — both fragility (damage) and
+    consequence (repair) models — with fastembed (dense + BM25). The first cold
+    start also downloads the embedding models; subsequent re-runs reuse this
+    cached resource.
     """
     return SemanticIndex(build_tree_corpus("."))
 
@@ -74,28 +84,36 @@ def _hazard_value(label: str) -> Optional[str]:
     return _HAZARD_TO_VALUE.get(label)
 
 
-def _source_options(index: SemanticIndex, hazard: Optional[str]) -> List[str]:
-    """Distinct source library names, optionally scoped to a hazard."""
+def _source_options(
+    index: SemanticIndex, hazard: Optional[str], dataset: Optional[str]
+) -> List[str]:
+    """Distinct source library names, scoped to the hazard + dataset selection."""
     names = {
         r.short_name
         for r in index.records
-        if hazard is None or r.hazard == hazard
+        if (hazard is None or r.hazard == hazard)
+        and (dataset is None or r.dataset == dataset)
     }
     return sorted(names)
 
 
 def _group_options(
-    index: SemanticIndex, hazard: Optional[str], source: Optional[str]
+    index: SemanticIndex,
+    hazard: Optional[str],
+    source: Optional[str],
+    dataset: Optional[str],
 ) -> Dict[str, str]:
     """
     ``{display label -> group prefix}`` for the group selector, scoped to the
-    current hazard / source selection so the choices stay relevant.
+    current hazard / source / dataset selection so the choices stay relevant.
     """
     labels: Dict[str, str] = {}
     for r in index.records:
         if hazard is not None and r.hazard != hazard:
             continue
         if source is not None and r.short_name != source:
+            continue
+        if dataset is not None and r.dataset != dataset:
             continue
         labels[r.group_label] = r.group
     return dict(sorted(labels.items()))
@@ -106,9 +124,13 @@ def _group_options(
 
 def render_search_controls(
     index: SemanticIndex,
+    dataset: Optional[str],
 ) -> Tuple[str, str, SearchFilters, str]:
     """
     Render the query box, mode selector, and facet filters.
+
+    ``dataset`` (from the dataset selector) scopes the source/group options and
+    is baked into the returned filters so search and browse stay in sync.
 
     Returns
     -------
@@ -118,7 +140,7 @@ def render_search_controls(
     with col_query:
         query = st.text_input(
             "Search components",
-            placeholder="Describe a component, e.g. “roof-to-wall connection” or a code like B.10.31",
+            placeholder="Describe a model, e.g. “roof-to-wall connection” or a code like B.10.31",
             key="search_query",
             label_visibility="collapsed",
         )
@@ -138,20 +160,22 @@ def render_search_controls(
         hazard = _hazard_value(hazard_label)
 
         with c2:
-            sources = _source_options(index, hazard)
+            sources = _source_options(index, hazard, dataset)
             source_label = st.selectbox(
                 "Source", ["All"] + sources, key="filter_source"
             )
         source = None if source_label == "All" else source_label
 
         with c3:
-            group_map = _group_options(index, hazard, source)
+            group_map = _group_options(index, hazard, source, dataset)
             group_label = st.selectbox(
                 "Component group", ["All"] + list(group_map), key="filter_group"
             )
         group = None if group_label == "All" else group_map.get(group_label)
 
-    filters = SearchFilters(hazard=hazard, source=source, group=group)
+    filters = SearchFilters(
+        hazard=hazard, source=source, group=group, dataset=dataset
+    )
     return query, _MODE_TO_ENGINE[mode_label], filters, hazard_label
 
 
@@ -204,7 +228,8 @@ def render_results(
         with col_main:
             desc = payload.get("description", "")
             preview = desc[:160] + "…" if len(desc) > 160 else desc
-            st.markdown(f"**`{hit.component_id}`** — {preview}")
+            badge = _DATASET_BADGE.get(payload.get("dataset", ""), "")
+            st.markdown(f"{badge} **`{hit.component_id}`** — {preview}")
             st.caption(_breadcrumb(payload))
 
         with col_score:
@@ -212,7 +237,7 @@ def render_results(
             st.progress(min(hit.score / max_score, 1.0))
 
         with col_add:
-            if is_component_added(hit.component_id):
+            if is_component_added(hit.component_id, payload.get("file_path")):
                 st.button(
                     "✅ Added",
                     key=f"sr_added_{rank}_{hit.component_id}",
@@ -231,6 +256,7 @@ def render_results(
                     comp_data,
                     fp,
                     _hazard_for_added(payload.get("hazard", "")),
+                    kind=payload.get("dataset", "fragility"),
                 )
                 st.rerun()
 
@@ -245,13 +271,29 @@ def render_results(
 
 def _render_result_details(rank: int, hit) -> None:
     # Imported lazily to keep the module import graph shallow.
-    from st_core.component import render_component_leaf_button
+    from st_core.component import render_component_leaf_button, render_consequence_leaf
 
     payload = hit.payload
     fp = payload["file_path"]
-    comp_data = load_full_json(fp).get(hit.component_id, {})
+    cid = hit.component_id
+
+    if payload.get("dataset") == "consequence":
+        # Same lazy "Load details" guard render_component_leaf_button uses, so
+        # consequence charts aren't built for every result on every re-run.
+        load_key = f"sr{rank}_loaded_{cid}"
+        if load_key not in st.session_state:
+            if st.button("Load details", key=f"sr{rank}_btn_{cid}", type="secondary"):
+                st.session_state[load_key] = True
+                st.rerun()
+        else:
+            comp_data = load_full_json(fp).get(cid, {})
+            if comp_data:
+                render_consequence_leaf(cid, comp_data, fp, key_prefix=f"sr{rank}_")
+        return
+
+    comp_data = load_full_json(fp).get(cid, {})
     render_component_leaf_button(
-        hit.component_id,
+        cid,
         comp_data,
         fp,
         key_prefix=f"sr{rank}_",
@@ -274,19 +316,32 @@ def render_library(
     index: SemanticIndex,
     hazard_label: str,
     filters: SearchFilters,
+    dataset: Optional[str],
 ) -> None:
-    """Render the browse tree(s), pruned to the active facets."""
+    """
+    Render the browse tree(s), pruned to the active facets.
+
+    The dataset selector chooses which trees show: fragility (seismic/wind),
+    consequence (seismic only), or both when "All". ``filter_only`` already
+    respects ``filters.dataset``, so the shared ``allowed_ids`` set prunes each
+    tree to just its own members.
+    """
     allowed_ids: Optional[set] = None
     if _has_component_filter(filters):
         allowed_ids = set(index.filter_only(filters))
 
-    show_seismic = hazard_label in ("All", "Seismic")
-    show_wind = hazard_label in ("All", "Hurricane")
+    show_fragility = dataset in ("fragility", None)
+    show_consequence = dataset in ("consequence", None)
 
-    if show_seismic:
-        render_seismic_tree(allowed_ids=allowed_ids)
-    if show_wind:
-        render_wind_tree(allowed_ids=allowed_ids)
+    if show_fragility:
+        if hazard_label in ("All", "Seismic"):
+            render_seismic_tree(allowed_ids=allowed_ids)
+        if hazard_label in ("All", "Hurricane"):
+            render_wind_tree(allowed_ids=allowed_ids)
+
+    # Consequence data is seismic-only, so it's gated by the seismic hazard.
+    if show_consequence and hazard_label in ("All", "Seismic"):
+        render_consequence_tree(allowed_ids=allowed_ids)
 
 
 # ─── Orchestrator ────────────────────────────────────────────────────────────
@@ -294,14 +349,32 @@ def render_library(
 
 def render_search_and_library() -> None:
     """
-    Top-level entry: search controls, then either ranked results (query) or the
-    facet-pruned browse tree (no query).
+    Top-level entry.
+
+    A **Dataset** selector (Fragility / Consequence / All) scopes both search and
+    browse. Both datasets are indexed, so a query searches whichever the selector
+    allows; with no query, the matching browse tree(s) render. "All" spans both —
+    useful for finding a model without knowing which dataset it lives in.
     """
     index = get_index()
-    query, mode, filters, hazard_label = render_search_controls(index)
+
+    dataset_label = st.radio(
+        "Dataset",
+        _DATASET_LABELS,
+        horizontal=True,
+        key="dataset_filter",
+        help=(
+            "Fragility = damage models. Consequence = repair cost/time models "
+            "(some keyed by occupancy class, with no fragility component). "
+            "Both are searchable; 'All' spans both."
+        ),
+    )
+    dataset = _DATASET_TO_VALUE[dataset_label]
+
+    query, mode, filters, hazard_label = render_search_controls(index, dataset)
     st.divider()
 
     if query.strip():
         render_results(index, query, mode, filters)
     else:
-        render_library(index, hazard_label, filters)
+        render_library(index, hazard_label, filters, dataset)
