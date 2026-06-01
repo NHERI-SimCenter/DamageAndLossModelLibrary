@@ -56,7 +56,7 @@ sample = pd.DataFrame({
     "Year": list(range(min_year, max_year, 3)),
     "Authors": ["Doe et al."]*len(range(min_year, max_year, 3)),
 })
-st.dataframe(sample, use_container_width=True, hide_index=True)
+st.dataframe(sample, width='stretch', hide_index=True)
 
 # ---------------- Tiny viz demo ----------------
 with st.expander("📊 Library growth over time (placeholder)"):
@@ -71,7 +71,7 @@ with st.expander("📊 Library growth over time (placeholder)"):
         .encode(x="Year:O", y="Models:Q", tooltip=["Year","Models"])
         .properties(height=220)
     )
-    st.altair_chart(chart, use_container_width=True)
+    st.altair_chart(chart, width='stretch')
 
 # ---------------- Collapsible details ----------------
 with st.expander("ℹ️ What is a Damage & Loss Model?"):

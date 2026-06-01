@@ -31,7 +31,7 @@ def ensure_login() -> None:
         st.header("🔐 Welcome")
         st.caption("Sign in to continue")
 
-        if st.button("Log in", type="primary", use_container_width=True):
+        if st.button("Log in", type="primary", width='stretch'):
             st.login('auth0')
         st.stop()
     else:
@@ -53,7 +53,7 @@ def logout_button(label: str = "Log out") -> None:
     Renders a logout button if the user is logged in.
     """
     if is_authenticated():
-        if st.button(label, use_container_width=True):
+        if st.button(label, width='stretch'):
             st.logout()
 
 def require_auth(provider: str = "auth0"):
