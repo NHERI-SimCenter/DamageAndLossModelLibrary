@@ -1,17 +1,14 @@
 import streamlit as st
-from st_search.fuzzy_visuals import render_fuzzy_search
-from st_visuals.tree_visuals import render_seismic_tree, render_wind_tree
+from st_search.search_ui import render_search_and_library
 
 
 def render_main_page() -> None:
     """
-    Render the main page
+    Render the main page: the component search panel and the browse tree.
+
+    ``st.set_page_config`` is intentionally NOT called here — it must be the
+    first Streamlit command of the run and is set in ``app.py`` before the
+    sidebar renders.
     """
-    st.set_page_config(
-        page_title="Damage and Loss Model Library",
-        page_icon="📊",
-        layout="wide"
-        )
     st.title("Damage and Loss Model Library")
-    render_seismic_tree()
-    render_wind_tree()
+    render_search_and_library()

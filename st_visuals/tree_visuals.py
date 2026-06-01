@@ -44,7 +44,7 @@ from pelicun.base import convert_to_MultiIndex
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 
-from st_search.component_search import FuzzyIndex, SearchObject
+from st_search.semantic_index import tree_corpus_files
 from st_core.component import _render_wind_component_detail, render_component_leaf, render_wind_component_leaf
 
 from st_visuals.helpers_visual import load_consequence_df
@@ -65,10 +65,25 @@ _EXPANDED_KEY = "tree_expanded_components"
 
 # ─── Data helpers ──────────────────────────────────────────────────────────────
 
-@st.cache_resource(show_spinner=False)
-def _get_cached_index() -> FuzzyIndex:
-    """Cache the FuzzyIndex so JSON parsing only runs once per process."""
-    return FuzzyIndex()
+@st.cache_data(show_spinner=False)
+def _hazard_files(hazard: str) -> tuple[str, ...]:
+    """
+    Tree-visible fragility.json paths for a hazard, in stable order.
+
+    Sourced from the same corpus the search index uses (``tree_corpus_files``),
+    so the tree and search never disagree — and matched by ``Path.parts`` so it
+    works regardless of OS path separators.
+    """
+    return tuple(fp for fp in tree_corpus_files(".") if hazard in Path(fp).parts)
+
+
+def _category_of(file_path: str) -> str:
+    """FEMA / HAZUS badge category parsed from the source path."""
+    if "FEMA" in file_path:
+        return "FEMA"
+    if "Hazus" in file_path:
+        return "HAZUS"
+    return ""
 
 
 @st.cache_data(show_spinner=False)
@@ -227,23 +242,80 @@ def _count_components(groups: Dict[str, dict]) -> int:
     )
 
 
+def _build_render_plan(
+    tree: Dict[str, dict],
+    allowed_ids: Optional[set],
+) -> tuple[list, int]:
+    """
+    Flatten a built tree into a render plan, pruned to ``allowed_ids``.
+
+    When ``allowed_ids`` is None the full tree is returned. Otherwise only
+    components in the set survive, and any sub-group / group / source that ends
+    up empty is dropped — so a filtered tree shows just the matching branches
+    with correct counts.
+
+    Returns
+    -------
+    (plan, grand_total)
+        ``plan`` is a list of per-source tuples::
+
+            (short_name, source_data, [(group_name, [(sg_name, [comp_id, …])], group_total)], source_total)
+    """
+    plan: list = []
+    grand_total = 0
+
+    for short_name, source_data in tree.items():
+        groups_plan: list = []
+        source_total = 0
+
+        for group_name, group_data in source_data["groups"].items():
+            sg_plan: list = []
+            group_total = 0
+
+            for sg_name, sg_data in group_data["subgroups"].items():
+                comps: List[str] = sg_data["components"]
+                visible = (
+                    comps
+                    if allowed_ids is None
+                    else [c for c in comps if c in allowed_ids]
+                )
+                if visible:
+                    sg_plan.append((sg_name, visible))
+                    group_total += len(visible)
+
+            if sg_plan:
+                groups_plan.append((group_name, sg_plan, group_total))
+                source_total += group_total
+
+        if source_total:
+            plan.append((short_name, source_data, groups_plan, source_total))
+            grand_total += source_total
+
+    return plan, grand_total
+
+
 # ─── Tree renderer ─────────────────────────────────────────────────────────────
 
 def render_seismic_tree(
-    seismic_objects: Optional[List[SearchObject]] = None,
+    seismic_objects: Optional[list] = None,
+    allowed_ids: Optional[set] = None,
 ) -> None:
     """
     Render the seismic component library as a four-level collapsible tree.
 
     Parameters
     ----------
-    seismic_objects : list of SearchObject, optional
-        Pre-filtered list of seismic SearchObjects.  When None, all seismic
-        objects are loaded from the cached FuzzyIndex.
+    seismic_objects : list, optional
+        Pre-filtered list of objects exposing a ``file_path`` attribute. When
+        None, the seismic corpus is loaded from the shared tree-file list.
+    allowed_ids : set of str, optional
+        When provided, only components whose ID is in this set are shown, and
+        empty sub-groups / groups / sources are hidden. Used by the search panel
+        to prune the tree to a facet selection. When None, the full tree renders.
 
     Performance strategy
     --------------------
-    * The FuzzyIndex, _build_tree result, and all Plotly figures are cached
+    * The file list, _build_tree result, and all Plotly figures are cached
       at the process level — they survive re-runs without re-computation.
     * Streamlit executes expander child code on every re-run even when
       collapsed, so component detail panels (_render_component_detail) are
@@ -257,50 +329,49 @@ def render_seismic_tree(
 
     # ── Load data ──────────────────────────────────────────────────────────
     if seismic_objects is None:
-        with st.spinner("Loading seismic fragility index…"):
-            seismic_objects = _get_cached_index().filter_by_hazard("seismic")
+        file_paths = _hazard_files("seismic")
+    else:
+        file_paths = tuple(
+            dict.fromkeys(
+                o.file_path for o in seismic_objects if getattr(o, "file_path", "")
+            )
+        )
 
-    if not seismic_objects:
+    if not file_paths:
         st.warning(
             "No seismic fragility data found. Check directory structure.",
             icon="⚠️",
         )
         return
 
-    # Deduplicate file paths and pass a hashable tuple to the cached builder
-    file_paths: tuple[str, ...] = tuple(
-        dict.fromkeys(obj.file_path for obj in seismic_objects if obj.file_path)
-    )
     tree = _build_tree(file_paths)
 
-    # Build a file_path → SearchObject lookup to avoid O(N) scans per source.
-    obj_by_path: Dict[str, SearchObject] = {
-        o.file_path: o for o in seismic_objects if o.file_path
-    }
-
-    # Counts are stored in the tree dict by _build_tree — no re-computation needed.
-    total = sum(src["count"] for src in tree.values())
+    # Prune to allowed_ids (no-op when None). A filtered view auto-expands so
+    # matches are visible without clicking through every level.
+    plan, total = _build_render_plan(tree, allowed_ids)
+    filtering = allowed_ids is not None
 
     # ══ Root header ══════════════════════════════════════════════════════════
     st.markdown("## 🌍 Seismic")
     st.caption(
-        f"{len(tree)} source{'s' if len(tree) != 1 else ''} · {total:,} components"
+        f"{len(plan)} source{'s' if len(plan) != 1 else ''} · {total:,} components"
     )
     st.divider()
 
-    for short_name, source_data in tree.items():
+    if not plan:
+        st.info("No seismic components match the current filters.", icon="🔍")
+        return
+
+    for short_name, source_data, groups_plan, n_comp in plan:
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
-        groups: Dict[str, dict] = source_data["groups"]
 
-        obj = obj_by_path.get(fp)
-        badge = _CATEGORY_BADGE.get(getattr(obj, "category", ""), "")
-        n_comp = source_data["count"]
+        badge = _CATEGORY_BADGE.get(_category_of(fp), "")
 
         # ══ Level 2: Source ══════════════════════════════════════════════════
         with st.expander(
             f"**{short_name}**  ·  {badge}  ·  `{n_comp:,}` components",
-            expanded=False,
+            expanded=filtering,
         ):
             if meta.get("Description"):
                 st.caption(meta["Description"])
@@ -310,21 +381,13 @@ def render_seismic_tree(
             st.caption(f"Version: {version}  ·  File: `{fname}`")
             st.divider()
 
-            for group_name, group_data in groups.items():
-                group_total = group_data["count"]
-                if group_total == 0:
-                    continue
-
+            for group_name, sg_plan, group_total in groups_plan:
                 # ══ Level 3: Component group ══════════════════════════════════
                 with st.expander(
                     f"**{group_name}**  ·  `{group_total}` components",
-                    expanded=False,
+                    expanded=filtering,
                 ):
-                    for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[str] = sg_data["components"]  # pre-sorted in _build_tree
-                        if not comps:
-                            continue
-
+                    for sg_name, comps in sg_plan:
                         n_sg = len(comps)
                         sg_label = (
                             f"**{sg_name}**  ·  "
@@ -332,16 +395,12 @@ def render_seismic_tree(
                         )
 
                         # ══ Level 4: Sub-group ════════════════════════════════
-                        with st.expander(sg_label, expanded=False):
+                        with st.expander(sg_label, expanded=filtering):
                             for comp_id in comps:
-                                # comps is pre-sorted by _build_tree; no sort needed.
                                 # _load_full_json is cached — O(1) after first call.
                                 full_json: dict = _load_full_json(fp)
                                 comp_data: dict = full_json.get(comp_id, {})
-                                raw_desc: str = comp_data.get(
-                                    "Description",
-                                    obj.search_dict.get(comp_id, "") if obj else "",
-                                )
+                                raw_desc: str = comp_data.get("Description", "")
                                 preview = (
                                     raw_desc[:90] + "…"
                                     if len(raw_desc) > 90
@@ -398,7 +457,8 @@ _WIND_GROUP_LABELS: Dict[str, str] = {
 
 
 def render_wind_tree(
-    wind_objects: Optional[List[SearchObject]] = None,
+    wind_objects: Optional[list] = None,
+    allowed_ids: Optional[set] = None,
 ) -> None:
     """
     Render the SimCenter Wind Component Library as a collapsible tree.
@@ -413,16 +473,18 @@ def render_wind_tree(
 
     Parameters
     ----------
-    wind_objects : list of SearchObject, optional
-        Pre-filtered list of wind/hurricane component SearchObjects.
-        When ``None``, all hurricane component objects are loaded from
-        the cached FuzzyIndex, filtered to the
-        ``hurricane/building/component`` path prefix so that Hazus
-        *portfolio* sources are excluded.
+    wind_objects : list, optional
+        Pre-filtered list of objects exposing a ``file_path`` attribute. When
+        ``None``, the shared tree-file list supplies the hurricane component
+        libraries (``hurricane/building/component/``); Hazus *portfolio* sources
+        are excluded by construction.
+    allowed_ids : set of str, optional
+        When provided, only components whose ID is in this set are shown, and
+        empty branches are hidden (see ``render_seismic_tree``).
 
     Performance strategy
     --------------------
-    Identical to ``render_seismic_tree``: FuzzyIndex and _build_tree are
+    Identical to ``render_seismic_tree``: the file list and _build_tree are
     cached at the process level; component detail panels are guarded by
     session-state flags so they are only rendered after an explicit
     "Load details" click.
@@ -432,17 +494,18 @@ def render_wind_tree(
         st.session_state[_EXPANDED_KEY] = set()
 
     # ── Load data ──────────────────────────────────────────────────────────
+    # The shared corpus already restricts hurricane to hurricane/building/component/
+    # so portfolio models (Hazus v5.1) are excluded.
     if wind_objects is None:
-        with st.spinner("Loading wind fragility index…"):
-            all_hurricane = _get_cached_index().filter_by_hazard("hurricane")
-            # Restrict to component-level sources only (exclude portfolio models
-            # such as Hazus v5.1 which live under hurricane/building/portfolio).
-            wind_objects = [
-                o for o in all_hurricane
-                if "/building/component/" in o.file_path
-            ]
+        file_paths = _hazard_files("hurricane")
+    else:
+        file_paths = tuple(
+            dict.fromkeys(
+                o.file_path for o in wind_objects if getattr(o, "file_path", "")
+            )
+        )
 
-    if not wind_objects:
+    if not file_paths:
         st.warning(
             "No wind component fragility data found. "
             "Check that hurricane/building/component/ exists in the directory structure.",
@@ -450,36 +513,31 @@ def render_wind_tree(
         )
         return
 
-    file_paths: tuple[str, ...] = tuple(
-        dict.fromkeys(obj.file_path for obj in wind_objects if obj.file_path)
-    )
     tree = _build_tree(file_paths)
 
-    obj_by_path: Dict[str, SearchObject] = {
-        o.file_path: o for o in wind_objects if o.file_path
-    }
-
-    total = sum(src["count"] for src in tree.values())
+    plan, total = _build_render_plan(tree, allowed_ids)
+    filtering = allowed_ids is not None
 
     # ══ Root header ══════════════════════════════════════════════════════════
     st.markdown("## 🌀 Wind (Hurricane)")
     st.caption(
-        f"{len(tree)} source{'s' if len(tree) != 1 else ''} · {total:,} components"
+        f"{len(plan)} source{'s' if len(plan) != 1 else ''} · {total:,} components"
     )
     st.divider()
 
-    for short_name, source_data in tree.items():
+    if not plan:
+        st.info("No wind components match the current filters.", icon="🔍")
+        return
+
+    for short_name, source_data, groups_plan, n_comp in plan:
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
-        groups: Dict[str, dict] = source_data["groups"]
-
-        n_comp = source_data["count"]
         fname = Path(fp).name if fp else "unknown"
 
         # ══ Level 2: Source ══════════════════════════════════════════════════
         with st.expander(
             f"**{short_name}**  ·  🌐 SimCenter  ·  `{n_comp:,}` components",
-            expanded=False,
+            expanded=filtering,
         ):
             if meta.get("Description"):
                 st.caption(meta["Description"])
@@ -488,24 +546,16 @@ def render_wind_tree(
             st.caption(f"Version: {version}  ·  File: `{fname}`")
             st.divider()
 
-            for group_prefix, group_data in groups.items():
-                group_total = group_data["count"]
-                if group_total == 0:
-                    continue
-
+            for group_prefix, sg_plan, group_total in groups_plan:
                 # Apply human-readable label if available.
                 group_label = _WIND_GROUP_LABELS.get(group_prefix, group_prefix)
 
                 # ══ Level 3: Component group ══════════════════════════════════
                 with st.expander(
                     f"**{group_label}**  ·  `{group_total}` components",
-                    expanded=False,
+                    expanded=filtering,
                 ):
-                    for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[str] = sg_data["components"]
-                        if not comps:
-                            continue
-
+                    for sg_name, comps in sg_plan:
                         n_sg = len(comps)
                         sg_label = (
                             f"**{sg_name}**  ·  "
@@ -513,7 +563,7 @@ def render_wind_tree(
                         )
 
                         # ══ Level 4: Sub-group ════════════════════════════════
-                        with st.expander(sg_label, expanded=False):
+                        with st.expander(sg_label, expanded=filtering):
                             for comp_id in comps:
                                 full_json: dict = _load_full_json(fp)
                                 comp_data_entry: dict = full_json.get(comp_id, {})

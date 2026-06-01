@@ -95,6 +95,50 @@ def _is_component_added(comp_id: str) -> bool:
     )
 
 
+# ─── Public selection API ──────────────────────────────────────────────────────
+# Shared so any surface (tree, search results, …) adds to the SAME session-state
+# list the sidebar and downloads read from.
+
+def is_component_added(comp_id: str) -> bool:
+    """Public: True if *comp_id* is already in the added-components list."""
+    return _is_component_added(comp_id)
+
+
+def add_component(
+    comp_id: str,
+    comp_data: dict,
+    json_path: str,
+    hazard: str,
+) -> bool:
+    """
+    Add a component to the shared added-components list.
+
+    Parameters
+    ----------
+    comp_id, comp_data, json_path : see :func:`render_component_leaf`.
+    hazard : {"seismic", "wind"}
+        Detail renderer to use later. Note this is ``"wind"`` (not
+        ``"hurricane"``) to match the existing list contract.
+
+    Returns
+    -------
+    bool
+        True if the component was added, False if it was already present.
+    """
+    _initialize_added_components_state()
+    if _is_component_added(comp_id):
+        return False
+    st.session_state[_ADDED_KEY].append(
+        {
+            "comp_id": comp_id,
+            "comp_data": comp_data,
+            "json_path": json_path,
+            "hazard": hazard,
+        }
+    )
+    return True
+
+
 # ─── Internal: consequence tab ─────────────────────────────────────────────────
 
 def _render_consequence_tab(
@@ -199,14 +243,7 @@ def _render_add_button(
             type="primary",
             help="Add this component to the page list for side-by-side review.",
         ):
-            st.session_state[_ADDED_KEY].append(
-                {
-                    "comp_id": comp_id,
-                    "comp_data": comp_data,
-                    "json_path": json_path,
-                    "hazard": hazard,
-                }
-            )
+            add_component(comp_id, comp_data, json_path, hazard)
             st.rerun()
 
 

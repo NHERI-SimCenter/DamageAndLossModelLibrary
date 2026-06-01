@@ -1,3 +1,6 @@
+# Deploy on Python 3.12. pelicun requires numpy<2, and numpy<2 has no working
+# CPython 3.13 wheel; fastembed/qdrant only force numpy>=2.1 on 3.13. On 3.12
+# the whole set resolves cleanly with official wheels.
 numpy
 scipy
 pandas
@@ -12,8 +15,8 @@ sphinxcontrib-bibtex
 numpydoc
 tqdm
 streamlit >= 1.48.0
-streamlit-keyup == 0.3.0
 rapidfuzz >= 3.13.0
+qdrant-client[fastembed] >= 1.14.0
 requests >= 2.31.0
 Authlib >= 1.6.1
 httpx
