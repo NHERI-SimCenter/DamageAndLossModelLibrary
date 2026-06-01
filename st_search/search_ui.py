@@ -119,6 +119,17 @@ def _group_options(
     return dict(sorted(labels.items()))
 
 
+def _clear_search_query() -> None:
+    """
+    Empty the search box (used as a button ``on_click`` callback).
+
+    Callbacks run before widgets are instantiated on the next rerun, so
+    resetting the ``search_query`` state here is allowed — and with an empty
+    query the page falls back to the browse tree.
+    """
+    st.session_state["search_query"] = ""
+
+
 # ─── Controls ────────────────────────────────────────────────────────────────
 
 
@@ -136,13 +147,22 @@ def render_search_controls(
     -------
     (query, engine_mode, filters, hazard_label)
     """
-    col_query, col_mode = st.columns([4, 2])
+    col_query, col_clear, col_mode = st.columns([5, 1, 2])
     with col_query:
         query = st.text_input(
             "Search components",
             placeholder="Describe a model, e.g. “roof-to-wall connection” or a code like B.10.31",
             key="search_query",
             label_visibility="collapsed",
+        )
+    with col_clear:
+        st.button(
+            "✕ Clear",
+            key="clear_search",
+            on_click=_clear_search_query,
+            disabled=not query.strip(),
+            width="stretch",
+            help="Clear the search and return to the browse tree",
         )
     with col_mode:
         mode_label = st.radio(
