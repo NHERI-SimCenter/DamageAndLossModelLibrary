@@ -211,7 +211,7 @@ def _render_consequence_tab(
 
     st.plotly_chart(
         make_consequence_figure(comp_id, c_type, json_path),
-        width='stretch',
+        width="stretch",
         key=f"{key_prefix}cons_{comp_id}_{c_type}",
     )
 
@@ -302,7 +302,7 @@ def _render_fragility_chart(
                 json.dumps(limit_states),
                 json.dumps(csv_row_flat, default=str),
             ),
-            use_container_width=True,
+            width="stretch",
             key=f"{key_prefix}frag_{comp_id}",
         )
     else:
@@ -401,24 +401,15 @@ def _render_component_detail(
             ):
                 st.caption(comments)
 
-        tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
-
-        with tab_frag:
-            frag_df = load_fragility_df(json_path)
-            if frag_df is not None and comp_id in frag_df.index:
-                csv_row = frag_df.loc[comp_id]
-                csv_row_flat = {
-                    f"{a}-{b}" if b else str(a): v
-                    for (a, b), v in csv_row.items()
-                }
-                st.plotly_chart(
-                    make_fragility_figure(
-                        comp_id,
-                        json.dumps(limit_states),
-                        json.dumps(csv_row_flat, default=str),
-                    ),
-                    width='stretch',
-                    key=f"{key_prefix}frag_{comp_id}",
+        # Only show the Consequence tab when this component actually has
+        # consequence records. Hazus sources key consequences by occupancy
+        # class, not by component, so the tab is omitted there (rather than
+        # showing a confusing "no records found" message).
+        if _has_consequence_data(comp_id, json_path):
+            tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
+            with tab_frag:
+                _render_fragility_chart(
+                    comp_id, json_path, limit_states, key_prefix=key_prefix
                 )
             with tab_cons:
                 _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
@@ -524,7 +515,7 @@ def _render_wind_component_detail(
                     json.dumps(limit_states),
                     json.dumps(csv_row_flat, default=str),
                 ),
-                width='stretch',
+                width="stretch",
                 key=f"{key_prefix}wind_frag_{comp_id}",
             )
         else:
@@ -676,11 +667,6 @@ def render_component_leaf_button(
     """
     Render a component leaf with the lazy-load button guard from the tree.
 
-    Uses the same single-rerun pattern as the tree's leaf fragments: a
-    "Load details" click sets the session-state flag and falls through to
-    render the detail in the same script execution, avoiding the extra
-    ``st.rerun()`` bounce that previously caused visible stutter.
-
     Parameters
     ----------
     comp_id : str
@@ -698,28 +684,24 @@ def render_component_leaf_button(
     load_key = f"{key_prefix}loaded_{comp_id}"
     btn_key = f"{key_prefix}btn_{comp_id}"
 
-    loaded = st.session_state.get(load_key, False)
-
-    if not loaded:
+    if load_key not in st.session_state:
         if st.button("Load details", key=btn_key, type="secondary"):
             st.session_state[load_key] = True
-            loaded = True
-
-    if loaded:
-        if comp_data:
-            if hazard == "wind":
-                _render_wind_component_detail(
-                    comp_id, comp_data, json_path, key_prefix=key_prefix
-                )
-            else:
-                _render_component_detail(
-                    comp_id, comp_data, json_path, key_prefix=key_prefix
-                )
-        else:
-            st.warning(
-                f"Full data for `{comp_id}` was not found in the source file.",
-                icon="⚠️",
+            st.rerun()
+    elif comp_data:
+        if hazard == "wind":
+            _render_wind_component_detail(
+                comp_id, comp_data, json_path, key_prefix=key_prefix
             )
+        else:
+            _render_component_detail(
+                comp_id, comp_data, json_path, key_prefix=key_prefix
+            )
+    else:
+        st.warning(
+            f"Full data for `{comp_id}` was not found in the source file.",
+            icon="⚠️",
+        )
 
 
 def render_added_components_list() -> None:

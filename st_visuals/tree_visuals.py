@@ -60,16 +60,10 @@ from st_visuals.helpers_visual import load_consequence_df
 
 # ─── Palette & constants ───────────────────────────────────────────────────────
 
-_CATEGORY_BADGE: Dict[str, str] = {"FEMA": "FEMA P-58", "HAZUS": "Hazus"}
+_CATEGORY_BADGE: Dict[str, str] = {"FEMA": "🔵 FEMA P-58", "HAZUS": "🟠 Hazus"}
 
 # Top-level keys in a fragility.json that are not components.
 _NON_COMPONENT_KEYS = {"References"}
-
-# Session-state key prefix for "this sub-group has been opened at least once".
-# Used to gate the inner per-component render loop so that closed sub-groups
-# never iterate their (often hundreds of) components or instantiate Level-5
-# expanders + fragments on every Streamlit re-run.
-_OPENED_SUBGROUPS_KEY = "tree_opened_subgroups"
 
 
 
@@ -158,35 +152,33 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
     Accepts a tuple of file paths (hashable for cache_data) so the result
     survives across re-runs without re-routing all component IDs.
 
-    Returns
-    -------
-    dict
-        {
-          short_name: {
+    Tree shape
+    ~~~~~~~~~~
+    Keyed by *file path* (not ShortName — several Hazus files share a name and
+    must stay distinct)::
+
+        { file_path: {
             "file_path": str,
-            "meta": dict,           # _GeneralInformation
-            "groups": {
-              group_name: {
-                "subgroups": {
-                  subgroup_name: {
-                    "components": [(comp_id, preview), ...]
-                  }
-                }
-              }
-            }
-          }
-        }
+            "short_name": str,
+            "meta": dict,                 # _GeneralInformation
+            "root": <node>,               # synthetic root; its children are the groups
+        } }
 
-        ``preview`` is the truncated component description used as the
-        Level-5 expander header label.  It is computed here, once, so that
-        the render loop never has to touch ``fragility.json`` to display
-        a collapsed leaf header.
+    A *node* is::
 
-    Routing logic
-    ~~~~~~~~~~~~~
-    Each component ID is matched to a sub-group by longest common prefix.
-    Example: "GF.H.S" → prefix "GF.H" → "GF.H - Horizontal Spreading".
-    Components that match no defined prefix fall into an (Unclassified) bucket.
+        { "label": str,                   # display label, e.g. "B.10.31 - Steel Columns"
+          "prefix": str,                  # dotted prefix, e.g. "B.10.31"
+          "children": {prefix: node},     # nested groups, in ComponentGroups order
+          "components": [comp_id, ...] }  # components routed directly to this level
+
+    Routing
+    ~~~~~~~
+    ComponentGroups defines the grouping hierarchy and supplies every label
+    (``"<prefix> - <name>"``). Each component is routed to the *deepest*
+    ComponentGroups prefix that is a prefix of its ID — so FEMA's
+    ``B.10.31.001`` lands under ``B → B.10 → B.10.31``, Hazus' ``STR.W1.HC``
+    under ``STR → STR.W1``, and a component matching no group falls back to a
+    bare bucket named after its first segment.
     """
     tree: Dict[str, dict] = {}
 
@@ -199,124 +191,22 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
         meta: dict = data.get("_GeneralInformation", {}) or {}
         short_name: str = meta.get("ShortName", Path(fp).parent.name)
 
-        # Build prefix → descriptive-label maps from ComponentGroups.
-        #
-        # ComponentGroups appears in one of two shapes across the fragility
-        # corpus:
-        #
-        #   (a) dict[str, list[str]] — nested groups with sub-groups. Used by
-        #       most Hazus seismic JSONs (e.g. power, water, building).
-        #         {
-        #           "EP - Electrical Power": [
-        #             "EP.S - Substation",
-        #             "EP.C - Circuit",
-        #             ...
-        #           ]
-        #         }
-        #
-        #   (b) list[str] — a flat list of top-level group entries only, with
-        #       no sub-group information. Used by the Hazus seismic
-        #       Transportation JSON, for example:
-        #         ["HRD - Road segments", "HWB - Bridges", "HTU - Tunnels"]
-        #
-        # Entries in either shape may be bare prefixes (e.g. "DOOR", "STR" —
-        # used by the SimCenter Wind library) or descriptive
-        # "PREFIX - Description" strings.
-        #
-        # The render code matches component-ID segments (e.g. "EP", "EP.S")
-        # against these maps, so the maps must be keyed by the *bare prefix*.
-        # The map values carry the full descriptive string for display in the
-        # Level-3 and Level-4 expander headers, matching the pattern the wind
-        # tree achieves via _WIND_GROUP_LABELS.
-        raw_cg = meta.get("ComponentGroups", {})
+        # Grouping skeleton + prefix → node lookup, straight from ComponentGroups.
+        root: dict = _make_node("", "")
+        node_by_prefix: Dict[str, dict] = {}
+        _build_skeleton(meta.get("ComponentGroups", {}), root, node_by_prefix)
 
-        def _split_prefix_label(s: str) -> tuple[str, str]:
-            """
-            Split a ComponentGroups entry into (prefix, full_label).
-
-            Recognizes both " - " (ASCII hyphen) and " — " (em dash) as the
-            separator between the routing prefix and its description. For
-            bare-prefix entries with no separator, prefix == label, which
-            preserves existing behavior for the wind tree.
-            """
-            for sep in (" — ", " - "):
-                if sep in s:
-                    prefix = s.split(sep, 1)[0].strip()
-                    return prefix, s
-            return s.strip(), s
-
-        group_map: Dict[str, str] = {}
-        subgroup_map: Dict[str, str] = {}
-
-        if isinstance(raw_cg, dict):
-            # Shape (a): keys are top-level groups, values are sub-group lists.
-            for grp_entry, sg_list in raw_cg.items():
-                if isinstance(grp_entry, str):
-                    prefix, label = _split_prefix_label(grp_entry)
-                    group_map[prefix] = label
-                if not isinstance(sg_list, list):
-                    continue
-                for sg_entry in sg_list:
-                    if not isinstance(sg_entry, str):
-                        continue
-                    prefix, label = _split_prefix_label(sg_entry)
-                    subgroup_map[prefix] = label
-        elif isinstance(raw_cg, list):
-            # Shape (b): flat list of top-level group entries only.
-            for grp_entry in raw_cg:
-                if not isinstance(grp_entry, str):
-                    continue
-                prefix, label = _split_prefix_label(grp_entry)
-                group_map[prefix] = label
-            # No sub-group metadata available; sub-group labels will fall back
-            # to the bare two-segment prefix in the routing loop below.
+        # Route real components to their deepest matching group.
+        for comp_id, comp_val in data.items():
+            if comp_id.startswith("_") or comp_id in _NON_COMPONENT_KEYS:
+                continue
+            if not isinstance(comp_val, dict):
+                continue
+            _route_component(comp_id, node_by_prefix, root)["components"].append(comp_id)
 
         _sort_node(root)
 
-        # Route each component into group -> subgroup buckets.
-        # Top-level group: first dot-segment of comp_id (e.g. "GF", "STR").
-        # Sub-group: first two dot-segments joined (e.g. "GF.H", "STR.W1").
-        # When a prefix has no match in the maps (happens for FEMA P-58 IDs
-        # whose sub-groups may not be listed), fall back to the bare segment.
-        #
-        # The description preview used for the Level-5 expander header is
-        # computed here, once, while we already have ``data`` loaded.  This
-        # removes the per-component _load_full_json() / dict.get() /
-        # string-slice work that previously ran on every Streamlit re-run.
-        # Components are stored as ``(comp_id, preview)`` tuples.
-        groups: Dict[str, dict] = {}
-        for comp_id in comp_ids:
-            parts = comp_id.split(".")
-            top_segment = parts[0]
-            sub_segment = ".".join(parts[:2]) if len(parts) >= 2 else top_segment
-
-            group_label = group_map.get(top_segment, top_segment)
-            subgroup_label = subgroup_map.get(sub_segment, sub_segment)
-
-            raw_desc = data.get(comp_id, {}).get("Description", "") or ""
-            preview = raw_desc[:90] + "…" if len(raw_desc) > 90 else raw_desc
-
-            groups.setdefault(group_label, {"subgroups": {}})
-            groups[group_label]["subgroups"].setdefault(
-                subgroup_label, {"components": []}
-            )
-            groups[group_label]["subgroups"][subgroup_label]["components"].append(
-                (comp_id, preview)
-            )
-
-        # Pre-sort component lists and cache per-group counts so the render
-        # loop never has to sort or count on re-runs.  Sort by comp_id (the
-        # first tuple element) so the ordering matches the previous behaviour.
-        total_count = 0
-        for g_data in groups.values():
-            g_count = 0
-            for sg_data in g_data["subgroups"].values():
-                sg_data["components"].sort(key=lambda t: t[0])
-                g_count += len(sg_data["components"])
-            g_data["count"] = g_count
-            total_count += g_count
-
-        tree[short_name] = {
+        tree[fp] = {
             "file_path": fp,
             "short_name": short_name,
             "meta": meta,
@@ -442,93 +332,6 @@ def _build_render_plan(
     return plan, grand_total
 
 
-# ─── Leaf fragments ────────────────────────────────────────────────────────────
-#
-# Why fragments?
-# ~~~~~~~~~~~~~~
-# Previously the "Load details" button used the pattern:
-#
-#     if st.button(...):
-#         st.session_state[load_key] = True
-#         st.rerun()
-#
-# That click triggered two full script re-runs (one for the button event,
-# one for the explicit st.rerun) and each re-run re-evaluated every open
-# expander in the tree, producing a visible 1–2 s stutter.
-#
-# The fragment-based pattern below:
-#   * sets the load flag and falls through to render the detail in the
-#     SAME script execution (no explicit st.rerun), and
-#   * scopes any subsequent reruns triggered from inside the leaf to the
-#     fragment itself, so the rest of the tree is not re-evaluated.
-#
-# Requires Streamlit ≥ 1.37 for st.fragment. If you're pinned to an older
-# version, drop the decorator — the single-rerun improvement still applies.
-
-@st.fragment
-def _render_seismic_leaf_fragment(
-    *,
-    comp_id: str,
-    comp_data: dict,
-    fp: str,
-    fname: str,
-    load_key: str,
-    btn_key: str,
-) -> None:
-    """
-    Render a seismic component leaf inside an isolated fragment.
-
-    A "Load details" click sets the session-state flag and immediately
-    falls through to render the detail panel in the same script
-    execution, avoiding the double-rerun stutter of the previous pattern.
-    """
-    loaded = st.session_state.get(load_key, False)
-
-    if not loaded:
-        if st.button("Load details", key=btn_key, type="secondary"):
-            st.session_state[load_key] = True
-            loaded = True
-
-    if loaded:
-        if comp_data:
-            render_component_leaf(comp_id, comp_data, fp)
-        else:
-            st.warning(
-                f"Full data for `{comp_id}` was not found in `{fname}`. "
-                "The component description is available but detailed fields "
-                "are missing.",
-                icon="⚠️",
-            )
-
-
-@st.fragment
-def _render_wind_leaf_fragment(
-    *,
-    comp_id: str,
-    comp_data: dict,
-    fp: str,
-    fname: str,
-    load_key: str,
-    btn_key: str,
-) -> None:
-    """Wind counterpart to ``_render_seismic_leaf_fragment``."""
-    loaded = st.session_state.get(load_key, False)
-
-    if not loaded:
-        if st.button("Load details", key=btn_key, type="secondary"):
-            st.session_state[load_key] = True
-            loaded = True
-
-    if loaded:
-        if comp_data:
-            render_wind_component_leaf(comp_id, comp_data, fp)
-        else:
-            st.warning(
-                f"Full data for `{comp_id}` was not found in `{fname}`.",
-                icon="⚠️",
-            )
-
-
 # ─── Tree renderer ─────────────────────────────────────────────────────────────
 
 def _render_leaf(
@@ -543,16 +346,31 @@ def _render_leaf(
     appearing in two sources (e.g. Hazus v5.1 and v6.1) never collides on keys.
     The leaf renderer is chosen by ``dataset`` (consequence) and ``hazard``.
     """
-    # ── Session state for tracking which components are open ───────────────
-    if _EXPANDED_KEY not in st.session_state:
-        st.session_state[_EXPANDED_KEY] = set()
-    if _OPENED_SUBGROUPS_KEY not in st.session_state:
-        st.session_state[_OPENED_SUBGROUPS_KEY] = set()
+    full_json: dict = _load_full_json(fp)
+    comp_data: dict = full_json.get(comp_id, {})
+    raw_desc: str = comp_data.get("Description", "")
+    preview = raw_desc[:90] + "…" if len(raw_desc) > 90 else raw_desc
 
-    # ── Load data ──────────────────────────────────────────────────────────
-    if seismic_objects is None:
-        with st.spinner("Loading seismic fragility index…", show_time=True):
-            seismic_objects = _get_cached_index().filter_by_hazard("seismic")
+    load_key = f"{key_prefix}loaded_{comp_id}"
+    with st.expander(f"🔩  **{comp_id}**  ·  {preview}", expanded=False):
+        if load_key not in st.session_state:
+            if st.button(
+                "Load details", key=f"{key_prefix}btn_{comp_id}", type="secondary"
+            ):
+                st.session_state[load_key] = True
+                st.rerun()
+        elif comp_data:
+            if dataset == "consequence":
+                render_consequence_leaf(comp_id, comp_data, fp, key_prefix=key_prefix)
+            elif hazard == "hurricane":
+                render_wind_component_leaf(comp_id, comp_data, fp, key_prefix=key_prefix)
+            else:
+                render_component_leaf(comp_id, comp_data, fp, key_prefix=key_prefix)
+        else:
+            st.warning(
+                f"Full data for `{comp_id}` was not found in `{Path(fp).name}`.",
+                icon="⚠️",
+            )
 
 
 def _render_node(
@@ -651,15 +469,6 @@ def _render_tree(
 
             _render_node(root, fp, hazard, dataset, filtering, src_prefix[fp])
 
-                # ══ Level 3: Component group ══════════════════════════════════
-                with st.expander(
-                    f"**{group_name}**  ·  `{group_total}` components",
-                    expanded=False,
-                ):
-                    for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[tuple[str, str]] = sg_data["components"]  # pre-sorted (id, preview)
-                        if not comps:
-                            continue
 
 def render_seismic_tree(
     seismic_objects: Optional[list] = None,
@@ -668,82 +477,46 @@ def render_seismic_tree(
     """
     Render the seismic component library as a collapsible tree.
 
-                        # ══ Level 4: Sub-group ════════════════════════════════
-                        # Streamlit re-runs all expander children regardless of
-                        # open/closed state.  Without a gate at this level, a
-                        # re-run would iterate every component in every sub-group
-                        # on the page and instantiate a Level-5 st.expander +
-                        # st.fragment + st.button for each one — thousands of
-                        # widgets even when nothing visible is expanded.
-                        #
-                        # The "Show components" button below records that the
-                        # user has opened this sub-group at least once.  After
-                        # that, the inner loop runs (the user's collapsing the
-                        # outer expander doesn't reset the flag — but the leaf
-                        # widgets only do real work after their own "Load
-                        # details" click, so the only residual cost is creating
-                        # the Level-5 expander shells, which is cheap).
-                        sg_key = f"seismic::{short_name}::{group_name}::{sg_name}"
+    Grouping depth mirrors each source's ``ComponentGroups``: FEMA P-58 nests
+    three levels (``B - Shell → B.10 - Super Structure → B.10.31 - Steel Columns
+    → components``), Hazus two. Labels come straight from the JSON.
 
-                        with st.expander(sg_label, expanded=False):
-                            opened = sg_key in st.session_state[_OPENED_SUBGROUPS_KEY]
+    Parameters
+    ----------
+    seismic_objects : list, optional
+        Pre-filtered list of objects exposing a ``file_path`` attribute. When
+        None, the seismic corpus is loaded from the shared tree-file list.
+    allowed_ids : set of str, optional
+        When provided, only components whose ID is in this set are shown, and
+        empty branches are hidden. When None, the full tree renders.
 
-                            if not opened:
-                                if st.button(
-                                    f"Show {n_sg} component{'s' if n_sg != 1 else ''}",
-                                    key=f"sg_btn_{sg_key}",
-                                    type="secondary",
-                                ):
-                                    st.session_state[_OPENED_SUBGROUPS_KEY].add(sg_key)
-                                    opened = True
+    Performance
+    -----------
+    The file list and _build_tree are cached at the process level; component
+    detail panels are guarded by a session-state "Load details" click, so each
+    re-run keeps a small widget tree even though expander bodies always execute.
+    """
+    if seismic_objects is None:
+        file_paths = _hazard_files("seismic")
+    else:
+        file_paths = tuple(
+            dict.fromkeys(
+                o.file_path for o in seismic_objects if getattr(o, "file_path", "")
+            )
+        )
 
-                            if opened:
-                                # Hoist the source JSON load out of the inner
-                                # loop — it is invariant across all components
-                                # in this sub-group.  Cached, so this is also
-                                # O(1) after the first call per process.
-                                full_json: dict = _load_full_json(fp)
-
-                                for comp_id, preview in comps:
-                                    comp_data: dict = full_json.get(comp_id, {})
-
-                                    # ══ Level 5: Component leaf ════════════════
-                                    # Detail content is gated by a session-state
-                                    # flag so closed expanders don't build Plotly
-                                    # figures on every re-run.  The leaf body
-                                    # lives inside an st.fragment so a click only
-                                    # reruns the leaf — not the entire tree.
-                                    load_key = f"loaded_{comp_id}"
-                                    btn_key = f"btn_{comp_id}"
-
-                                    with st.expander(
-                                        f"🔩  **{comp_id}**  ·  {preview}",
-                                        expanded=False,
-                                    ):
-                                        _render_seismic_leaf_fragment(
-                                            comp_id=comp_id,
-                                            comp_data=comp_data,
-                                            fp=fp,
-                                            fname=fname,
-                                            load_key=load_key,
-                                            btn_key=btn_key,
-                                        )
+    _render_tree(
+        file_paths,
+        hazard="seismic",
+        dataset="fragility",
+        header="## 🌍 Seismic",
+        no_data_warning="No seismic fragility data found. Check directory structure.",
+        no_match_info="No seismic components match the current filters.",
+        allowed_ids=allowed_ids,
+    )
 
 
 # ─── Wind tree renderer ────────────────────────────────────────────────────────
-
-# Map top-level component prefixes to human-readable group labels.
-# Derived from the IDs present in the SimCenter Wind Component Library.
-_WIND_GROUP_LABELS: Dict[str, str] = {
-    "DOOR":  "DOOR — Doors",
-    "RCOV":  "RCOV — Roof Cover",
-    "RSH":   "RSH — Roof Sheathing",
-    "RWC":   "RWC — Roof-Wall Connections",
-    "WALL":  "WALL — Walls",
-    "WCOV":  "WCOV — Wall Cover",
-    "WIN":   "WIN — Windows",
-    "WSH":   "WSH — Wall Sheathing",
-}
 
 def render_wind_tree(
     wind_objects: Optional[list] = None,
@@ -767,13 +540,6 @@ def render_wind_tree(
         When provided, only components whose ID is in this set are shown, and
         empty branches are hidden.
     """
-    # ── Session state ──────────────────────────────────────────────────────
-    if _EXPANDED_KEY not in st.session_state:
-        st.session_state[_EXPANDED_KEY] = set()
-    if _OPENED_SUBGROUPS_KEY not in st.session_state:
-        st.session_state[_OPENED_SUBGROUPS_KEY] = set()
-
-    # ── Load data ──────────────────────────────────────────────────────────
     if wind_objects is None:
         file_paths = _hazard_files("hurricane")
     else:
@@ -808,85 +574,19 @@ def render_consequence_tree(allowed_ids: Optional[set] = None) -> None:
     component and therefore never appear in the fragility tree. The SimCenter
     wind library carries no consequence data, so only seismic sources appear.
 
-    for short_name, source_data in tree.items():
-        fp: str = source_data["file_path"]
-        meta: dict = source_data["meta"]
-        groups: Dict[str, dict] = source_data["groups"]
-
-        n_comp = source_data["count"]
-        fname = Path(fp).name if fp else "unknown"
-
-        # ══ Level 2: Source ══════════════════════════════════════════════════
-        with st.expander(
-            f"**{short_name}**  ·  🌐 SimCenter  ·  `{n_comp:,}` components",
-            expanded=False,
-        ):
-            if meta.get("Description"):
-                st.caption(meta["Description"])
-
-            version = meta.get("Version", "")
-            st.caption(f"Version: {version}  ·  File: `{fname}`")
-            st.divider()
-
-            for group_prefix, group_data in groups.items():
-                group_total = group_data["count"]
-                if group_total == 0:
-                    continue
-
-                # Apply human-readable label if available.
-                group_label = _WIND_GROUP_LABELS.get(group_prefix, group_prefix)
-
-                # ══ Level 3: Component group ══════════════════════════════════
-                with st.expander(
-                    f"**{group_label}**  ·  `{group_total}` components",
-                    expanded=False,
-                ):
-                    for sg_name, sg_data in group_data["subgroups"].items():
-                        comps: List[tuple[str, str]] = sg_data["components"]  # (id, preview)
-                        if not comps:
-                            continue
-
-                        n_sg = len(comps)
-                        sg_label = (
-                            f"**{sg_name}**  ·  "
-                            f"`{n_sg}` component{'s' if n_sg != 1 else ''}"
-                        )
-
-                        # ══ Level 4: Sub-group ════════════════════════════════
-                        # See render_seismic_tree for the rationale — same gate.
-                        sg_key = f"wind::{short_name}::{group_prefix}::{sg_name}"
-
-                        with st.expander(sg_label, expanded=False):
-                            opened = sg_key in st.session_state[_OPENED_SUBGROUPS_KEY]
-
-                            if not opened:
-                                if st.button(
-                                    f"Show {n_sg} component{'s' if n_sg != 1 else ''}",
-                                    key=f"sg_btn_{sg_key}",
-                                    type="secondary",
-                                ):
-                                    st.session_state[_OPENED_SUBGROUPS_KEY].add(sg_key)
-                                    opened = True
-
-                            if opened:
-                                full_json: dict = _load_full_json(fp)
-
-                                for comp_id, preview in comps:
-                                    comp_data_entry: dict = full_json.get(comp_id, {})
-
-                                    # ══ Level 5: Component leaf ════════════════
-                                    load_key = f"wind_loaded_{comp_id}"
-                                    btn_key = f"wind_btn_{comp_id}"
-
-                                    with st.expander(
-                                        f"🔩  **{comp_id}**  ·  {preview}",
-                                        expanded=False,
-                                    ):
-                                        _render_wind_leaf_fragment(
-                                            comp_id=comp_id,
-                                            comp_data=comp_data_entry,
-                                            fp=fp,
-                                            fname=fname,
-                                            load_key=load_key,
-                                            btn_key=btn_key,
-                                        )
+    Parameters
+    ----------
+    allowed_ids : set of str, optional
+        When provided, only consequence records whose ID is in this set are
+        shown, and empty branches are hidden. When None, the full tree renders.
+    """
+    file_paths = _hazard_files("seismic", "consequence")
+    _render_tree(
+        file_paths,
+        hazard="seismic",
+        dataset="consequence",
+        header="## 🧾 Repair Consequences",
+        no_data_warning="No consequence data found.",
+        no_match_info="No consequence records match the current filters.",
+        allowed_ids=allowed_ids,
+    )

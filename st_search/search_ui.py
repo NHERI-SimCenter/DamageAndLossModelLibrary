@@ -242,12 +242,12 @@ def render_results(
                     "✅ Added",
                     key=f"sr_added_{rank}_{hit.component_id}",
                     disabled=True,
-                    use_container_width=True,
+                    width="stretch",
                 )
             elif st.button(
                 "➕ Add",
                 key=f"sr_add_{rank}_{hit.component_id}",
-                use_container_width=True,
+                width="stretch",
             ):
                 fp = payload["file_path"]
                 comp_data = load_full_json(fp).get(hit.component_id, {})
