@@ -99,6 +99,11 @@ class ComponentRecord:
     subgroup_label: str      # human label,      e.g. "B.10 - Super Structure"
     dataset: str = "fragility"  # "fragility" | "consequence" — which file it came from
     type: str = "Damage"     # "Damage" | "Consequence"
+    #: Whether this record's description is embedded for semantic search. False
+    #: for the huge hurricane building portfolio (≈51.6k templated near-duplicate
+    #: records) — those stay findable via ID/substring + facet filters and the
+    #: browse tree without paying the (~minutes) embedding cost at startup.
+    embed: bool = True
     #: Extra label names (deepest group chain) used only to enrich the embedding.
     _name_chain: List[str] = field(default_factory=list, repr=False)
 
@@ -231,6 +236,8 @@ def _category_from_path(file_path: str) -> str:
         return "FEMA"
     if "Hazus" in file_path:
         return "HAZUS"
+    if "SimCenter" in file_path:
+        return "SIMCENTER"
     return ""
 
 
@@ -245,6 +252,7 @@ def _record_from_component(
     label_map: Dict[str, str],
     source_type: str,
     dataset: str,
+    embed: bool,
 ) -> Optional[ComponentRecord]:
     """Build one ComponentRecord, or None if it has no usable description."""
     description = (comp_data.get("Description") or "").strip()
@@ -289,12 +297,15 @@ def _record_from_component(
         subgroup=subgroup,
         subgroup_label=subgroup_label,
         dataset=dataset,
+        embed=embed,
         type=comp_type,
         _name_chain=name_chain,
     )
 
 
-def _records_from_file(file_path: str, dataset: str = "fragility") -> List[ComponentRecord]:
+def _records_from_file(
+    file_path: str, dataset: str = "fragility", embed: bool = True
+) -> List[ComponentRecord]:
     try:
         with open(file_path, "r", encoding="utf-8") as fh:
             data = json.load(fh)
@@ -326,16 +337,19 @@ def _records_from_file(file_path: str, dataset: str = "fragility") -> List[Compo
             label_map=label_map,
             source_type=source_type,
             dataset=dataset,
+            embed=embed,
         )
         if rec is not None:
             records.append(rec)
     return records
 
 
-#: Filename per browsable dataset (mirrors tree_visuals._DATASET_FILENAME).
-_DATASET_FILENAME = {
-    "fragility": "fragility.json",
-    "consequence": "consequence_repair.json",
+#: Candidate filenames per dataset. Consequence has two forms: Hazus hurricane
+#: "coupled" uses ``consequence_repair.*`` (damage-state based); "original" uses
+#: ``loss_repair.*`` (a continuous loss function). A directory has at most one.
+_DATASET_FILENAMES = {
+    "fragility": ("fragility.json",),
+    "consequence": ("consequence_repair.json", "loss_repair.json"),
 }
 
 
@@ -343,26 +357,27 @@ def tree_corpus_files(base_path: str = ".", dataset: str = "fragility") -> List[
     """
     Return the tree-visible data files for *dataset*, in a stable order.
 
-    Mirrors the loaders in tree_visuals:
-      * seismic — every file under ``seismic/``
-      * wind    — only ``hurricane/building/component/`` libraries
+    Scope (mirrors tree_visuals):
+      * seismic   — every matching file under ``seismic/``
+      * hurricane — the ``building/component/`` library and the
+                    ``building/portfolio/`` Hazus models.
 
-    ``dataset="consequence"`` globs ``consequence_repair.json`` instead, so
-    sources lacking one (the SimCenter wind library, the power network) simply
-    don't appear.
+    The consequence dataset matches both ``consequence_repair.json`` and
+    ``loss_repair.json``; directories lacking a match simply don't appear.
     """
-    filename = _DATASET_FILENAME[dataset]
+    filenames = _DATASET_FILENAMES[dataset]
     base = Path(base_path)
+    roots = [
+        base / "seismic",
+        base / "hurricane" / "building" / "component",
+        base / "hurricane" / "building" / "portfolio",
+    ]
     files: List[str] = []
-
-    seismic_root = base / "seismic"
-    if seismic_root.exists():
-        files.extend(sorted(str(p) for p in seismic_root.rglob(filename)))
-
-    wind_root = base / "hurricane" / "building" / "component"
-    if wind_root.exists():
-        files.extend(sorted(str(p) for p in wind_root.rglob(filename)))
-
+    for root in roots:
+        if not root.exists():
+            continue
+        for filename in filenames:
+            files.extend(sorted(str(p) for p in root.rglob(filename)))
     return files
 
 
@@ -378,7 +393,12 @@ def build_tree_corpus(base_path: str = ".") -> List[ComponentRecord]:
     records: List[ComponentRecord] = []
     for dataset in ("fragility", "consequence"):
         for fp in tree_corpus_files(base_path, dataset):
-            records.extend(_records_from_file(fp, dataset))
+            parts = Path(fp).parts
+            # The hurricane building portfolio is huge (≈51.6k templated
+            # near-duplicate records). Index it for ID/facet search + the tree,
+            # but don't embed it — that keeps cold start fast.
+            embed = not ("hurricane" in parts and "portfolio" in parts)
+            records.extend(_records_from_file(fp, dataset, embed=embed))
     return records
 
 
@@ -439,19 +459,21 @@ class SemanticIndex:
 
     def _index_records(self) -> None:
         """
-        Embed and upsert every record. Integer ids; component_id in payload.
+        Embed and upsert the embeddable records. Integer ids; component_id in payload.
 
-        ``add`` embeds with both the dense and (if registered) sparse models, so
-        the collection ends up with both a dense and a BM25 sparse vector per
-        component.
+        Only records flagged ``embed=True`` are sent to the model — the huge
+        hurricane portfolio is skipped (it stays in ``self.records`` for ID and
+        facet search but never reaches the embedder). ``add`` embeds with both
+        the dense and (if registered) sparse models.
         """
-        if not self.records:
+        to_embed = [r for r in self.records if r.embed]
+        if not to_embed:
             return
         self.client.add(
             collection_name=self.collection_name,
-            documents=[r.embed_text for r in self.records],
-            metadata=[r.payload for r in self.records],
-            ids=list(range(len(self.records))),
+            documents=[r.embed_text for r in to_embed],
+            metadata=[r.payload for r in to_embed],
+            ids=list(range(len(to_embed))),
         )
 
     # -- filters ---------------------------------------------------------------

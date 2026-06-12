@@ -75,7 +75,7 @@ def render_brand_header() -> None:
         <div style="display:flex;justify-content:flex-end;align-items:center;
                     gap:0.95rem;margin:0;flex-wrap:wrap;">
           <span style="color:#8a8a8a;font-size:0.7rem;letter-spacing:0.09em;
-                       text-transform:uppercase;">Contributors</span>
+                       text-transform:uppercase;"></span>
           <span style="display:inline-flex;align-items:center;gap:1.4rem;
                        background:#ffffff;border:1px solid rgba(128,128,128,0.20);
                        border-radius:10px;padding:0.4rem 1.1rem;
@@ -111,7 +111,7 @@ def render_contributors() -> None:
                      margin-bottom:1.1rem;">
           <p style="text-align:center;color:#8a8a8a;font-size:0.78rem;
                     letter-spacing:0.10em;text-transform:uppercase;
-                    margin-bottom:0.9rem;">Contributors</p>
+                    margin-bottom:0.9rem;"></p>
           <div style="display:flex;align-items:center;justify-content:center;
                       gap:2.75rem;flex-wrap:wrap;background:#ffffff;
                       border:1px solid rgba(128,128,128,0.20);border-radius:14px;

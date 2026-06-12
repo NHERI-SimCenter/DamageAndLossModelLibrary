@@ -3,7 +3,7 @@ from typing import Dict, List
 
 import numpy as np
 import pandas as pd
-from scipy.stats import norm
+from scipy.stats import norm, weibull_min
 import streamlit as st
 
 import plotly.graph_objects as go
@@ -27,6 +27,104 @@ _PUBU_COLORS: Dict[int, List[str]] = {
     6: cl.scales["7"]["seq"]["PuBu"][1:],
     7: cl.scales["7"]["seq"]["PuBu"],
 }
+
+
+def _empty_fig(message: str) -> go.Figure:
+    """A placeholder figure carrying a centered message."""
+    fig = go.Figure()
+    fig.add_annotation(
+        text=message, xref="paper", yref="paper", x=0.5, y=0.5,
+        showarrow=False, font=dict(size=13, color="#9ca3af"), xanchor="center",
+    )
+    fig.update_layout(
+        xaxis=dict(visible=False), yaxis=dict(visible=False), height=300,
+        template="plotly_white", paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)", margin=dict(l=20, r=20, t=30, b=20),
+    )
+    return fig
+
+
+# Hazus hurricane wind building loss functions are tabulated over Peak Gust
+# Wind Speed from 50–250 mph (an 81-point series is the standard 2.5 mph grid).
+_HU_WIND_MIN, _HU_WIND_MAX = 50.0, 250.0
+
+
+@st.cache_data(show_spinner=False)
+def make_loss_function_figure(comp_id: str, c_type: str, json_path: str) -> go.Figure:
+    """
+    Build a Plotly figure for a continuous loss function — the Hazus hurricane
+    "original" ``loss_repair`` model — plotting loss ratio vs Peak Gust Wind
+    Speed.
+
+    The CSV stores a sampled ``LossFunction-Theta_0`` series; the demand axis is
+    the standard Hazus hurricane wind-speed grid (50–250 mph), labelled from the
+    row's Demand metadata.
+    """
+    repair_df = load_consequence_df(json_path)
+    if repair_df is None:
+        return _empty_fig("loss data not found in this source directory")
+
+    lvl0 = repair_df.index.get_level_values(0)
+    if comp_id not in lvl0:
+        return _empty_fig(f"No loss data for {comp_id}")
+
+    row = repair_df.loc[comp_id]
+    if c_type not in row.index:
+        return _empty_fig(f"No {c_type} loss data for {comp_id}")
+    row = row.loc[c_type]
+
+    def _meta(key, default):
+        try:
+            return str(row.loc[key])
+        except KeyError:
+            return default
+
+    try:
+        theta0 = str(row.loc[("LossFunction", "Theta_0")])
+    except KeyError:
+        return _empty_fig(f"No loss function available for {comp_id}")
+
+    # pelicun multilinear format: "y0,y1,…|x0,x1,…" — loss ratios on the left of
+    # the pipe, the demand (wind-speed) grid on the right. Older single-list rows
+    # fall back to the standard Hazus 50–250 mph grid.
+    try:
+        if "|" in theta0:
+            y_str, x_str = theta0.split("|", 1)
+            y = np.array([float(v) for v in y_str.split(",") if v.strip()])
+            x = np.array([float(v) for v in x_str.split(",") if v.strip()])
+            if x.size != y.size:  # defensive: align if lengths disagree
+                n = min(x.size, y.size)
+                x, y = x[:n], y[:n]
+        else:
+            y = np.array([float(v) for v in theta0.split(",") if v.strip()])
+            x = np.linspace(_HU_WIND_MIN, _HU_WIND_MAX, y.size)
+    except ValueError:
+        return _empty_fig(f"Could not parse loss function for {comp_id}")
+    if y.size == 0:
+        return _empty_fig(f"Empty loss function for {comp_id}")
+    demand_type = _meta(("Demand", "Type"), "Peak Gust Wind Speed")
+    demand_unit = _meta(("Demand", "Unit"), "mph")
+    dv_unit = _meta(("DV", "Unit"), "loss_ratio")
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Scatter(
+            x=x, y=y, mode="lines", line=dict(color="#3b82f6", width=2),
+            hovertemplate=(
+                f"{demand_type}: %{{x:.0f}} {demand_unit}"
+                f"<br>{dv_unit}: %{{y:.3f}}<extra></extra>"
+            ),
+        )
+    )
+    fig.update_layout(
+        height=320, template="plotly_white",
+        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+        margin=dict(l=20, r=20, t=30, b=40),
+        xaxis_title=f"{demand_type} ({demand_unit})",
+        yaxis_title=dv_unit.replace("_", " ").title(),
+        showlegend=False,
+    )
+    return fig
 
 
 @st.cache_data(show_spinner=False)

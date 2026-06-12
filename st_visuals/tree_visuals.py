@@ -60,7 +60,11 @@ from st_visuals.helpers_visual import load_consequence_df
 
 # ─── Palette & constants ───────────────────────────────────────────────────────
 
-_CATEGORY_BADGE: Dict[str, str] = {"FEMA": "🔵 FEMA P-58", "HAZUS": "🟠 Hazus"}
+_CATEGORY_BADGE: Dict[str, str] = {
+    "FEMA": "🔵 FEMA P-58",
+    "HAZUS": "🟠 Hazus",
+    "SIMCENTER": "🌐 SimCenter",
+}
 
 # Top-level keys in a fragility.json that are not components.
 _NON_COMPONENT_KEYS = {"References"}
@@ -72,52 +76,44 @@ _NON_COMPONENT_KEYS = {"References"}
 
 # ─── Data helpers ──────────────────────────────────────────────────────────────
 
-# Filenames for each browsable dataset.
-_DATASET_FILENAME = {
-    "fragility": "fragility.json",
-    "consequence": "consequence_repair.json",
-}
-
-
 @st.cache_data(show_spinner=False)
 def _hazard_files(hazard: str, dataset: str = "fragility") -> tuple[str, ...]:
     """
     Tree-visible data files for a hazard + dataset, in stable order.
 
-    Built from the same directory scope the search index uses
-    (``tree_corpus_files``) so the tree and search never disagree, matched by
-    ``Path.parts`` so it works regardless of OS path separators. For the
-    consequence dataset the sibling ``consequence_repair.json`` is used, and
-    sources that lack one (e.g. the SimCenter wind library) are dropped.
+    Uses the same corpus the search index uses (``tree_corpus_files``) so the
+    tree and search never disagree, filtered by ``Path.parts`` so it works
+    regardless of OS path separators. ``tree_corpus_files`` already resolves the
+    per-dataset filenames (e.g. consequence_repair.json / loss_repair.json).
     """
-    filename = _DATASET_FILENAME[dataset]
-    files: list[str] = []
-    for fp in tree_corpus_files("."):
-        if hazard not in Path(fp).parts:
-            continue
-        candidate = Path(fp).with_name(filename)
-        if candidate.exists():
-            files.append(str(candidate))
-    return tuple(files)
+    return tuple(
+        fp for fp in tree_corpus_files(".", dataset) if hazard in Path(fp).parts
+    )
 
 
 def _category_of(file_path: str) -> str:
-    """FEMA / HAZUS badge category parsed from the source path."""
+    """FEMA / HAZUS / SimCenter badge category parsed from the source path."""
     if "FEMA" in file_path:
         return "FEMA"
     if "Hazus" in file_path:
         return "HAZUS"
+    if "SimCenter" in file_path:
+        return "SIMCENTER"
     return ""
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_resource(show_spinner=False)
 def _load_full_json(json_path: str) -> dict:
     """
-    Load and cache the complete fragility.json for a given path.
+    Load and cache the complete fragility/consequence JSON for a given path.
 
-    The search index only stores component descriptions; this function
-    retrieves the full component record (Comments, LimitStates, etc.)
-    so the detail panel and fragility charts can be populated.
+    Uses ``cache_resource`` (NOT ``cache_data``) on purpose: these files are
+    large — the hurricane portfolio JSONs hold ~25.8k components — and are only
+    ever read, never mutated, during rendering. ``cache_data`` deep-copies its
+    return value on *every* call (~0.24 s for a portfolio file); since this is
+    read once per rendered leaf, an 800-component sub-group spent minutes just
+    copying. ``cache_resource`` returns the one shared object, making each read
+    O(1). (Callers must treat the result as read-only.)
     """
     with open(json_path, "r", encoding="utf-8") as fh:
         return json.load(fh)
@@ -143,14 +139,16 @@ def _load_consequence_meta(json_path: str) -> Optional[dict]:
         return None
 
 
-@st.cache_data(show_spinner=False)
+@st.cache_resource(show_spinner=False)
 def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
     """
     Build a nested source → group hierarchy mirroring each file's
     ``_GeneralInformation.ComponentGroups``.
 
-    Accepts a tuple of file paths (hashable for cache_data) so the result
-    survives across re-runs without re-routing all component IDs.
+    Accepts a tuple of file paths (hashable cache key) so the result survives
+    across re-runs without re-routing all component IDs. Uses ``cache_resource``
+    so the large nested tree (the hurricane portfolio alone is ~51.6k routed
+    components) is shared read-only rather than deep-copied on every re-run.
 
     Tree shape
     ~~~~~~~~~~
@@ -335,18 +333,18 @@ def _build_render_plan(
 # ─── Tree renderer ─────────────────────────────────────────────────────────────
 
 def _render_leaf(
-    comp_id: str, fp: str, hazard: str, dataset: str, key_prefix: str
+    comp_id: str, full_json: dict, fp: str, hazard: str, dataset: str, key_prefix: str
 ) -> None:
     """
     Render a single leaf with the lazy "Load details" guard.
 
-    The expander body runs on every re-run regardless of open state, so detail
-    content (tabs / Plotly charts) is gated behind a button to keep re-runs
-    cheap. ``key_prefix`` is unique per source, so the same component ID
-    appearing in two sources (e.g. Hazus v5.1 and v6.1) never collides on keys.
-    The leaf renderer is chosen by ``dataset`` (consequence) and ``hazard``.
+    ``full_json`` is the already-loaded source record dict (passed in so it is
+    fetched once per sub-group, not once per leaf). The expander body runs on
+    every re-run regardless of open state, so detail content (tabs / Plotly
+    charts) is gated behind a button to keep re-runs cheap. ``key_prefix`` is
+    unique per source, so the same component ID appearing in two sources never
+    collides on keys. The leaf renderer is chosen by ``dataset`` and ``hazard``.
     """
-    full_json: dict = _load_full_json(fp)
     comp_data: dict = full_json.get(comp_id, {})
     raw_desc: str = comp_data.get("Description", "")
     preview = raw_desc[:90] + "…" if len(raw_desc) > 90 else raw_desc
@@ -403,8 +401,10 @@ def _render_node(
         f"Show {len(comps)} component{'s' if len(comps) != 1 else ''}",
         key=f"{key_prefix}show_{node['prefix']}",
     ):
+        # Load the source JSON once for the whole sub-group, not per leaf.
+        full_json = _load_full_json(fp)
         for comp_id in comps:
-            _render_leaf(comp_id, fp, hazard, dataset, key_prefix)
+            _render_leaf(comp_id, full_json, fp, hazard, dataset, key_prefix)
 
 
 def _render_tree(
@@ -448,11 +448,9 @@ def _render_tree(
     for short_name, source_data, root, n_comp in plan:
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
-        badge = (
-            "🌐 SimCenter"
-            if hazard == "hurricane"
-            else _CATEGORY_BADGE.get(_category_of(fp), "")
-        )
+        # Badge from the source path (FEMA / Hazus / SimCenter) — works for the
+        # hurricane SimCenter library and the Hazus hurricane portfolio alike.
+        badge = _CATEGORY_BADGE.get(_category_of(fp), "")
 
         # ══ Source ════════════════════════════════════════════════════════════
         with st.expander(
@@ -563,30 +561,41 @@ def render_wind_tree(
     )
 
 
-def render_consequence_tree(allowed_ids: Optional[set] = None) -> None:
+_CONSEQUENCE_HEADERS = {
+    "seismic": "## 🧾 Seismic — Repair Consequences",
+    "hurricane": "## 🧾 Hurricane — Repair Consequences",
+}
+
+
+def render_consequence_tree(
+    hazard: str = "seismic", allowed_ids: Optional[set] = None
+) -> None:
     """
-    Render the repair-consequence library as a collapsible tree.
+    Render the repair-consequence library for *hazard* as a collapsible tree.
 
     Browsed via the dataset toggle. Unlike fragility, consequence records are
-    keyed by component (FEMA P-58) or by occupancy class (Hazus — e.g.
-    ``STR - Structural → STR.RES1 Single-family Dwelling``), so this is a
-    separate tree: it surfaces consequence records that have no fragility
-    component and therefore never appear in the fragility tree. The SimCenter
-    wind library carries no consequence data, so only seismic sources appear.
+    keyed by component (FEMA P-58) or by occupancy / building class (Hazus — e.g.
+    seismic ``STR - Structural → STR.RES1``; hurricane portfolio loss models), so
+    this is a separate tree: it surfaces consequence records that may have no
+    fragility counterpart in the same view. Seismic uses damage-state
+    ``consequence_repair`` data; the hurricane portfolio includes the "coupled"
+    (damage-state) and "original" (continuous loss-function) models.
 
     Parameters
     ----------
+    hazard : {"seismic", "hurricane"}
+        Which hazard's consequence sources to render.
     allowed_ids : set of str, optional
         When provided, only consequence records whose ID is in this set are
         shown, and empty branches are hidden. When None, the full tree renders.
     """
-    file_paths = _hazard_files("seismic", "consequence")
+    file_paths = _hazard_files(hazard, "consequence")
     _render_tree(
         file_paths,
-        hazard="seismic",
+        hazard=hazard,
         dataset="consequence",
-        header="## 🧾 Repair Consequences",
-        no_data_warning="No consequence data found.",
+        header=_CONSEQUENCE_HEADERS.get(hazard, "## 🧾 Repair Consequences"),
+        no_data_warning=f"No {hazard} consequence data found.",
         no_match_info="No consequence records match the current filters.",
         allowed_ids=allowed_ids,
     )

@@ -342,9 +342,9 @@ def render_library(
     Render the browse tree(s), pruned to the active facets.
 
     The dataset selector chooses which trees show: fragility (seismic/wind),
-    consequence (seismic only), or both when "All". ``filter_only`` already
-    respects ``filters.dataset``, so the shared ``allowed_ids`` set prunes each
-    tree to just its own members.
+    consequence (seismic + hurricane), or both when "All". ``filter_only``
+    already respects ``filters.dataset``, so the shared ``allowed_ids`` set
+    prunes each tree to just its own members.
     """
     allowed_ids: Optional[set] = None
     if _has_component_filter(filters):
@@ -352,16 +352,20 @@ def render_library(
 
     show_fragility = dataset in ("fragility", None)
     show_consequence = dataset in ("consequence", None)
+    show_seismic = hazard_label in ("All", "Seismic")
+    show_hurricane = hazard_label in ("All", "Hurricane")
 
     if show_fragility:
-        if hazard_label in ("All", "Seismic"):
+        if show_seismic:
             render_seismic_tree(allowed_ids=allowed_ids)
-        if hazard_label in ("All", "Hurricane"):
+        if show_hurricane:
             render_wind_tree(allowed_ids=allowed_ids)
 
-    # Consequence data is seismic-only, so it's gated by the seismic hazard.
-    if show_consequence and hazard_label in ("All", "Seismic"):
-        render_consequence_tree(allowed_ids=allowed_ids)
+    if show_consequence:
+        if show_seismic:
+            render_consequence_tree("seismic", allowed_ids=allowed_ids)
+        if show_hurricane:
+            render_consequence_tree("hurricane", allowed_ids=allowed_ids)
 
 
 # ─── Orchestrator ────────────────────────────────────────────────────────────

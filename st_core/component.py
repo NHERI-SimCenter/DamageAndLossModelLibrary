@@ -59,7 +59,11 @@ from typing import List, Optional
 
 import streamlit as st
 
-from st_visuals.figures import make_consequence_figure, make_fragility_figure
+from st_visuals.figures import (
+    make_consequence_figure,
+    make_fragility_figure,
+    make_loss_function_figure,
+)
 from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
 from st_core.downloads import render_download_buttons
 
@@ -162,19 +166,21 @@ def _render_consequence_tab(
     key_prefix: str = "",
 ) -> None:
     """
-    Render the consequence-curves tab for a single seismic component.
+    Render the consequence-curves tab for a single component.
 
-    Checks which consequence types are available in ``consequence_repair.csv``
-    and presents a radio selector before plotting.  Falls back to an
-    informational message when no data exists.
+    Handles both consequence forms found in the library: the damage-state
+    ``consequence_repair`` model (seismic, Hazus hurricane "coupled") and the
+    continuous ``loss_repair`` loss function (Hazus hurricane "original"). Picks
+    the matching plot and falls back to an informational message when no data
+    exists.
 
     Parameters
     ----------
     comp_id : str
         Component identifier, e.g. ``"B.10.31.001a"``.
     json_path : str
-        Path to the source ``fragility.json``; used to locate
-        ``consequence_repair.csv`` in the same directory.
+        Path to the source JSON; used to locate the sibling consequence/loss
+        CSV in the same directory.
     key_prefix : str, optional
         Prepended to all widget keys to prevent collisions when the same
         component is rendered more than once on the page.
@@ -202,6 +208,11 @@ def _render_consequence_tab(
         st.info("No consequence types available for this component.", icon="ℹ️")
         return
 
+    # Continuous loss function (loss_repair) vs damage-state consequence model.
+    is_loss = any(
+        "LossFunction" in str(c) for c in repair_df.columns.get_level_values(0)
+    )
+
     c_type = st.radio(
         "Consequence type",
         options=available_types,
@@ -209,11 +220,21 @@ def _render_consequence_tab(
         key=f"{key_prefix}cons_type_{comp_id}",
     )
 
+    figure = (
+        make_loss_function_figure(comp_id, c_type, json_path)
+        if is_loss
+        else make_consequence_figure(comp_id, c_type, json_path)
+    )
     st.plotly_chart(
-        make_consequence_figure(comp_id, c_type, json_path),
+        figure,
         width="stretch",
         key=f"{key_prefix}cons_{comp_id}_{c_type}",
     )
+    if is_loss:
+        st.caption(
+            "Continuous loss function — repair-cost loss ratio vs. peak gust "
+            "wind speed (Hazus hurricane)."
+        )
 
 
 # ─── Internal: add-component button ───────────────────────────────────────────
