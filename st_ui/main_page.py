@@ -1,14 +1,16 @@
 import streamlit as st
 from st_search.search_ui import render_search_and_library
+from st_ui.branding import render_header
 
 
 def render_main_page() -> None:
     """
-    Render the main page: the component search panel and the browse tree.
+    Render the main page: the header (title + contributor logos on one line),
+    the component search panel, and the browse tree.
 
     ``st.set_page_config`` is intentionally NOT called here — it must be the
     first Streamlit command of the run and is set in ``app.py`` before the
     sidebar renders.
     """
-    st.title("Damage and Loss Model Library")
+    render_header("Damage and Loss Model Library")
     render_search_and_library()
