@@ -20,3 +20,10 @@
 *.session
 session_store/
 /.cache/
+
+# Packaging build artifacts
+/dist/
+/build/
+*.egg-info/
+src/*.egg-info/
+__pycache__/

@@ -1,20 +1,117 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "dlml"
-version = "2.1.0"
+version = "3.0.0.dev0"
 description = "Damage and Loss Model Library"
 readme = "README.md"
-license = {text = "BSD-3-Clause"}
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.9"
 authors = [
-    {name = "Adam Zsarnóczay", email = "adamzs@stanford.edu"}
+    { name = "Adam Zsarnóczay", email = "adamzs@stanford.edu" },
+]
+keywords = [
+    "natural-hazards",
+    "fragility",
+    "consequence",
+    "damage-and-loss",
+    "pelicun",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.22",
+    "jsonschema>=4.0",
+]
+
+[project.optional-dependencies]
+web = [
+    "streamlit>=1.48.0",
+    "streamlit-keyup==0.3.0",
+    "rapidfuzz>=3.13.0",
+    "plotly",
+    "colorlover",
+    "Authlib>=1.6.1",
+]
+test = [
+    "pelicun",
+    "pytest>=7",
+    "pytest-cov",
+]
+dev = [
+    "dlml[test,web]",
+    "ruff==0.7.0",
+    "codespell",
+]
+
+[project.urls]
+Homepage = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
+Documentation = "https://nheri-simcenter.github.io/DamageAndLossModelLibrary/"
+Repository = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dlml"]
+exclude = [
+    "**/__pycache__/**",
+    "**/*.pyc",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/dlml",
+    "README.md",
+    "LICENSE",
+]
+exclude = [
+    "**/__pycache__/**",
+    "**/*.pyc",
 ]
 
 [tool.ruff]
 line-length = 85
+extend-exclude = ["src/dlml/data", "doc"]
 
 [tool.ruff.lint]
-# Enable all known categories
 select = ["ALL"]
-ignore = ["ANN", "D211", "D212", "Q000", "Q003", "COM812", "D203", "ISC001", "E501", "ERA001", "PGH003", "FIX002", "TD003", "S101", "N801", "S311", "G004", "SIM102", "SIM108", "NPY002", "F401", "INP001", "PLR2004", "D100"]
+ignore = [
+    "ANN",
+    "D211",
+    "D212",
+    "Q000",
+    "Q003",
+    "COM812",
+    "D203",
+    "ISC001",
+    "E501",
+    "ERA001",
+    "PGH003",
+    "FIX002",
+    "TD003",
+    "S101",
+    "N801",
+    "S311",
+    "G004",
+    "SIM102",
+    "SIM108",
+    "NPY002",
+    "F401",
+    "INP001",
+    "PLR2004",
+    "D100",
+]
 preview = false
 
 [tool.ruff.lint.per-file-ignores]
@@ -24,16 +121,24 @@ preview = false
 convention = "numpy"
 
 [tool.ruff.lint.pylint]
-max-args=15
-max-locals=50
-max-returns=11
-max-branches=50
-max-statements=150
-max-bool-expr=5
+max-args = 15
+max-locals = 50
+max-returns = 11
+max-branches = 50
+max-statements = 150
+max-bool-expr = 5
 
 [tool.ruff.format]
 quote-style = "single"
 
 [tool.codespell]
 ignore-words = ["ignore_words.txt"]
-skip = ["*.html", "*/build/*", "*/DB/*"]
+skip = [
+    "*.html",
+    "*/build/*",
+    "*/DB/*",
+    "src/dlml/data/*",
+    "data_sources/*",
+    "*/.venv/*",
+    "./dist/*",
+]
