@@ -56,6 +56,15 @@ Our vision is to enable a simple workflow where contributors can submit pull req
 
 -----
 
+### For Maintainers — Release Policy (Transition Period)
+
+DLML is transitioning to PyPI distribution (`dlml` v3.0.0+). To keep legacy
+Pelicun (≤3.9) installs working, GitHub `releases/latest` must remain pinned at
+**v2.1.0** throughout the transition. **Do not publish a new non-prerelease
+GitHub Release** until the freeze is lifted; v3.0+ ships to PyPI only.
+
+---
+
 ### License & Acknowledgments
 
 This library is distributed under the BSD 3-Clause license. See `LICENSE` for more information.
