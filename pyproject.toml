@@ -55,6 +55,7 @@ dev = [
     "dlml[test,web]",
     "ruff==0.7.0",
     "codespell",
+    "mypy",
 ]
 
 [project.urls]
@@ -116,6 +117,7 @@ preview = false
 
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["ALL"]
+"tests/*" = ["D", "N802", "SLF001", "PLR2004", "PLR6301"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
@@ -130,6 +132,17 @@ max-bool-expr = 5
 
 [tool.ruff.format]
 quote-style = "single"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+files = ["src/dlml"]
+# The data tree holds pelicun-specific authoring/config scripts (with
+# duplicate module basenames and their own conventions), not part of the
+# typed dlml API -- exclude them from type checking.
+exclude = "^src/dlml/data/"
+ignore_missing_imports = true
 
 [tool.codespell]
 ignore-words = ["ignore_words.txt"]

@@ -27,3 +27,11 @@ session_store/
 *.egg-info/
 src/*.egg-info/
 __pycache__/
+
+# Test & tooling caches
+.coverage
+.coverage.*
+/htmlcov/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/
