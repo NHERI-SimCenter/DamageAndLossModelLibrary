@@ -10,6 +10,7 @@
 
 #Dev Enviornment
 /.vscode/
+/.idea/
 /.venv/
 
 # Auth0 secrets
@@ -20,6 +21,9 @@
 *.session
 session_store/
 /.cache/
+
+# Local scratch data
+/DB/
 
 # Packaging build artifacts
 /dist/

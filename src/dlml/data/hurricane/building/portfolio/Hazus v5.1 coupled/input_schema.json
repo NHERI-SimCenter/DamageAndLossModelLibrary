@@ -682,7 +682,8 @@
 													"type": "number",
 													"exclusiveMinimum": 15
 												}
-											}
+											},
+											"required": ["Height"]
 										},
 										"then": {
 											"properties": {
@@ -1145,7 +1146,8 @@
 									"NumberOfStories": {
 										"const": 1
 									}
-								}
+								},
+								"required": ["NumberOfStories"]
 							},
 							"then": {
 								"properties": {

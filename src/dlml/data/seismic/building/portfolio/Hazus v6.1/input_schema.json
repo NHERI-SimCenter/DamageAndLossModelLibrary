@@ -128,7 +128,8 @@
 					"GroundFailure":{
 						"const": true
 					}
-				}
+				},
+				"required": ["GroundFailure"]
 			},
 			"then": {
 				"required": ["FoundationType"]
