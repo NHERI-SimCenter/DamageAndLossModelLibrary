@@ -27,10 +27,8 @@ from __future__ import annotations
 import difflib
 import functools
 from importlib import resources
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-    from importlib.resources.abc import Traversable
+from pathlib import Path
+from typing import cast
 
 #: Collections a dataset may provide, each stored as a parameters CSV and
 #: an optional metadata JSON.
@@ -49,18 +47,20 @@ class DatasetFileNotFoundError(KeyError):
     """Raised when a requested file is absent for a dataset."""
 
 
-def data_root() -> Traversable:
+def data_root() -> Path:
     """
     Return the root of the packaged library data tree.
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to the ``data`` directory inside the
         installed ``dlml`` package.
 
     """
-    return resources.files('dlml') / 'data'
+    # importlib.resources types this as a Traversable; for a normal
+    # (unpacked) installation it is a concrete pathlib.Path.
+    return cast(Path, resources.files('dlml') / 'data')
 
 
 @functools.lru_cache(maxsize=1)
@@ -79,7 +79,7 @@ def _discover_dataset_ids() -> tuple[str, ...]:
 
     """
     found: list[str] = []
-    stack: list[tuple[Traversable, str]] = [(data_root(), '')]
+    stack: list[tuple[Path, str]] = [(data_root(), '')]
     while stack:
         node, prefix = stack.pop()
         children = list(node.iterdir())
@@ -111,7 +111,16 @@ def dataset_ids() -> list[str]:
 
 
 def _validate_dataset_id(dataset_id: str) -> None:
-    """Raise UnknownDatasetError if the dataset ID is unknown."""
+    """
+    Check that a dataset ID is known.
+
+    Raises
+    ------
+    UnknownDatasetError
+        If the dataset ID does not exist. The error message lists the
+        closest known IDs as suggestions.
+
+    """
     known = dataset_ids()
     if dataset_id in known:
         return
@@ -123,7 +132,7 @@ def _validate_dataset_id(dataset_id: str) -> None:
     raise UnknownDatasetError(msg)
 
 
-def _dataset_root(dataset_id: str) -> Traversable:
+def _dataset_root(dataset_id: str) -> Path:
     """Return the resolved data folder for a validated dataset."""
     _validate_dataset_id(dataset_id)
     node = data_root()
@@ -146,18 +155,21 @@ def available_collections(dataset_id: str) -> list[str]:
     list of str
         The sorted collections whose parameters CSV exists.
 
-    Raises
-    ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
-
     """
     root = _dataset_root(dataset_id)
     return sorted(c for c in _COLLECTIONS if (root / f'{c}.csv').is_file())
 
 
 def _reject_unknown_collection(collection: str) -> None:
-    """Raise DatasetFileNotFoundError if the collection is not recognized."""
+    """
+    Check that a collection name is recognized.
+
+    Raises
+    ------
+    DatasetFileNotFoundError
+        If ``collection`` is not one of the known collections.
+
+    """
     if collection not in _COLLECTIONS:
         msg = (
             f'{collection!r} is not a known collection; '
@@ -166,7 +178,7 @@ def _reject_unknown_collection(collection: str) -> None:
         raise DatasetFileNotFoundError(msg)
 
 
-def parameters_path(dataset_id: str, collection: str) -> Traversable:
+def parameters_path(dataset_id: str, collection: str) -> Path:
     """
     Resolve the parameters CSV for a collection.
 
@@ -180,16 +192,14 @@ def parameters_path(dataset_id: str, collection: str) -> Traversable:
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to ``<collection>.csv``.
 
     Raises
     ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
     DatasetFileNotFoundError
-        If ``collection`` is not recognized, or the dataset provides no
-        parameters for it. The error lists the available collections.
+        If the dataset provides no parameters for the collection. The
+        error lists the available collections.
 
     """
     root = _dataset_root(dataset_id)
@@ -204,7 +214,7 @@ def parameters_path(dataset_id: str, collection: str) -> Traversable:
     return path
 
 
-def metadata_path(dataset_id: str, collection: str) -> Traversable:
+def metadata_path(dataset_id: str, collection: str) -> Path:
     """
     Resolve the metadata JSON for a collection.
 
@@ -220,16 +230,14 @@ def metadata_path(dataset_id: str, collection: str) -> Traversable:
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to ``<collection>.json``.
 
     Raises
     ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
     DatasetFileNotFoundError
-        If ``collection`` is not recognized, or the dataset provides no
-        metadata for it. The error lists the available collections.
+        If the dataset provides no metadata for the collection. The
+        error lists the available collections.
 
     """
     root = _dataset_root(dataset_id)
@@ -244,7 +252,7 @@ def metadata_path(dataset_id: str, collection: str) -> Traversable:
     return path
 
 
-def schema_path(dataset_id: str) -> Traversable:
+def schema_path(dataset_id: str) -> Path:
     """
     Resolve the input-validation schema for a dataset.
 
@@ -255,13 +263,11 @@ def schema_path(dataset_id: str) -> Traversable:
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to ``input_schema.json``.
 
     Raises
     ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
     DatasetFileNotFoundError
         If the dataset has no input schema.
 
@@ -274,7 +280,7 @@ def schema_path(dataset_id: str) -> Traversable:
     return path
 
 
-def config_script_path(dataset_id: str) -> Traversable:
+def config_script_path(dataset_id: str) -> Path:
     """
     Resolve the Pelicun auto-population script for a dataset.
 
@@ -285,13 +291,11 @@ def config_script_path(dataset_id: str) -> Traversable:
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to ``pelicun_config.py``.
 
     Raises
     ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
     DatasetFileNotFoundError
         If the dataset has no config script.
 
@@ -304,7 +308,7 @@ def config_script_path(dataset_id: str) -> Traversable:
     return path
 
 
-def file_path(dataset_id: str, filename: str) -> Traversable:
+def file_path(dataset_id: str, filename: str) -> Path:
     """
     Resolve any file in a dataset's folder by its exact name.
 
@@ -320,13 +324,11 @@ def file_path(dataset_id: str, filename: str) -> Traversable:
 
     Returns
     -------
-    Traversable
+    Path
         A path-like handle to the file.
 
     Raises
     ------
-    UnknownDatasetError
-        If the dataset ID does not exist.
     DatasetFileNotFoundError
         If the folder has no such file. The error lists the folder's
         files.
