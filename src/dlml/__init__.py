@@ -17,6 +17,11 @@ from dlml.api import (
     validate_asset,
     validate_assets,
 )
+from dlml.vocabulary import (
+    DEMAND_TYPES,
+    DISTRIBUTION_FAMILIES,
+    EDP_to_demand_type,
+)
 
 try:
     __version__ = metadata.version('dlml')
@@ -24,7 +29,10 @@ except metadata.PackageNotFoundError:  # pragma: no cover
     __version__ = '0.0.0+local'
 
 __all__ = [
+    'DEMAND_TYPES',
+    'DISTRIBUTION_FAMILIES',
     'DatasetFileNotFoundError',
+    'EDP_to_demand_type',
     'UnknownDatasetError',
     '__version__',
     'available_collections',
