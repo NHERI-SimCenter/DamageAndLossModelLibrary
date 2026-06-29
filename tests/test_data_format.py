@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import re
 
+import jsonschema
 import pandas as pd
 import pytest
 
@@ -49,9 +50,22 @@ _METADATA_PAIR_IDS = [
     f'{collection}::{dataset}' for dataset, collection in _METADATA_PAIRS
 ]
 
+# Pairs whose models carry nested limit/damage states (fragility LimitStates,
+# consequence DamageStates) -- loss models have none. The value is
+# ``(metadata key, CSV group prefix)``. Used by the metadata/CSV cross-check.
+_NESTED_STATES = {
+    'fragility': ('LimitStates', 'LS'),
+    'consequence_repair': ('DamageStates', 'DS'),
+}
+_NESTED_PAIRS = [pair for pair in _METADATA_PAIRS if pair[1] in _NESTED_STATES]
+_NESTED_PAIR_IDS = [
+    f'{collection}::{dataset}' for dataset, collection in _NESTED_PAIRS
+]
+
 # Tripwires: if the packaged data changes shape, these flag it for review.
 _EXPECTED_PAIR_COUNT = 18
 _EXPECTED_METADATA_PAIR_COUNT = 16
+_EXPECTED_NESTED_PAIR_COUNT = 15
 
 # Distribution families that additionally require a dispersion parameter
 # (Theta_1); the rest (deterministic, multilinear_CDF, empirical, ...) define
@@ -210,6 +224,7 @@ def test_discovery_finds_every_parameter_table():
     """The work lists match the known dataset/collection inventory."""
     assert len(_PAIRS) == _EXPECTED_PAIR_COUNT
     assert len(_METADATA_PAIRS) == _EXPECTED_METADATA_PAIR_COUNT
+    assert len(_NESTED_PAIRS) == _EXPECTED_NESTED_PAIR_COUNT
 
 
 # ---------------------------------------------------------------------------
@@ -380,23 +395,198 @@ def test_numbered_groups_complete_unless_incomplete(dataset: str, collection: st
 
 
 # ---------------------------------------------------------------------------
-# Tier C -- metadata documents every model
+# Tier C -- metadata schema
 # ---------------------------------------------------------------------------
+
+# A damage/repair-state entry inside LimitStates / DamageStates.
+_REPAIR_STATE = {
+    'type': 'object',
+    'required': ['Description'],
+    'additionalProperties': False,
+    'properties': {
+        'Description': {'type': 'string'},
+        'RepairAction': {'type': 'string'},
+    },
+}
+# fragility: LimitStates -> LS<n> -> DS<n> -> repair state.
+_LIMIT_STATES = {
+    'type': 'object',
+    'additionalProperties': False,
+    'patternProperties': {
+        r'^LS\d+$': {
+            'type': 'object',
+            'additionalProperties': False,
+            'patternProperties': {r'^DS\d+$': _REPAIR_STATE},
+        }
+    },
+}
+# consequence: DamageStates -> DS<n> -> repair state.
+_DAMAGE_STATES = {
+    'type': 'object',
+    'additionalProperties': False,
+    'patternProperties': {r'^DS\d+$': _REPAIR_STATE},
+}
+_GENERAL_INFORMATION = {
+    'type': 'object',
+    'required': ['ShortName', 'Description', 'Version', 'ComponentGroups'],
+    'additionalProperties': False,
+    'properties': {
+        'ShortName': {'type': 'string'},
+        'Description': {'type': 'string'},
+        'Version': {'type': 'string'},
+        'ComponentGroups': {'type': ['object', 'array']},
+        'DecisionVariables': {'type': 'object'},
+    },
+}
+_REFERENCES = {'type': 'object', 'additionalProperties': {'type': 'string'}}
+
+# Top-level metadata keys that are not models.
+_RESERVED_KEYS = frozenset({'_GeneralInformation', 'References'})
+
+# Fields every model carries, with the closed-world property set extended per
+# collection (RoundUpToIntegerQuantity is a boolean flag stored canonically as
+# the string 'True' or 'False').
+_COMMON_REQUIRED = [
+    'Description',
+    'SuggestedComponentBlockSize',
+    'RoundUpToIntegerQuantity',
+]
+_COMMON_PROPERTIES = {
+    'Description': {'type': 'string'},
+    'SuggestedComponentBlockSize': {'type': 'string'},
+    'RoundUpToIntegerQuantity': {'enum': ['True', 'False']},
+}
+
+
+def _model_schema(required: list, properties: dict) -> dict:
+    """A closed-world model schema: common fields plus per-collection extras."""
+    return {
+        'type': 'object',
+        'additionalProperties': False,
+        'required': [*_COMMON_REQUIRED, *required],
+        'properties': {**_COMMON_PROPERTIES, **properties},
+    }
+
+
+def _file_schema(model_schema: dict) -> dict:
+    """A whole metadata file: ``_GeneralInformation`` (required), optional
+    ``References``, and every other key a model."""
+    return {
+        'type': 'object',
+        'required': ['_GeneralInformation'],
+        'properties': {
+            '_GeneralInformation': _GENERAL_INFORMATION,
+            'References': _REFERENCES,
+        },
+        'additionalProperties': model_schema,
+    }
+
+
+_METADATA_SCHEMAS = {
+    'fragility': _file_schema(
+        _model_schema(
+            ['LimitStates'],
+            {
+                'Comments': {'type': 'string'},
+                'Reference': {'type': 'array', 'items': {'type': 'string'}},
+                'LimitStates': _LIMIT_STATES,
+            },
+        )
+    ),
+    'consequence_repair': _file_schema(
+        _model_schema(
+            ['DamageStates'],
+            {
+                'Comments': {'type': 'string'},
+                'ControllingDemand': {'type': 'string'},
+                'DamageStates': _DAMAGE_STATES,
+            },
+        )
+    ),
+    'loss_repair': _file_schema(_model_schema([], {})),
+}
 
 
 @pytest.mark.parametrize(
     ('dataset', 'collection'), _METADATA_PAIRS, ids=_METADATA_PAIR_IDS
 )
-def test_metadata_documents_every_model(dataset: str, collection: str):
-    """Metadata is a dict carrying ``_GeneralInformation`` and a dict entry
-    for every model in the parameters table (extra non-model keys allowed)."""
+def test_metadata_matches_its_schema(dataset: str, collection: str):
+    """The whole metadata file conforms to its collection's schema: a valid
+    ``_GeneralInformation``, an optional ``References`` bibliography, and every
+    model entry carrying exactly its required and optional fields -- including
+    the nested ``LimitStates`` / ``DamageStates`` structure."""
     metadata = dlml.get_metadata(dataset, collection)
-    assert isinstance(metadata, dict)
-    assert '_GeneralInformation' in metadata
-    model_ids = _model_ids(dlml.get_parameters(dataset, collection))
-    undocumented = model_ids - set(metadata)
-    assert not undocumented, (
-        f'{len(undocumented)} model(s) lack metadata, '
-        f'e.g. {sorted(undocumented)[:3]}'
+    validator = jsonschema.Draft7Validator(_METADATA_SCHEMAS[collection])
+    errors = sorted(
+        f'{error.json_path}: {error.message}'
+        for error in validator.iter_errors(metadata)
     )
-    assert all(isinstance(metadata[model_id], dict) for model_id in model_ids)
+    assert not errors, f'{len(errors)} schema violation(s), e.g. {errors[:3]}'
+
+
+@pytest.mark.parametrize(
+    ('dataset', 'collection'), _METADATA_PAIRS, ids=_METADATA_PAIR_IDS
+)
+def test_metadata_keys_are_exactly_the_models(dataset: str, collection: str):
+    """Top-level keys are precisely the model IDs plus ``_GeneralInformation``
+    and the optional ``References`` -- every model documented, nothing stray."""
+    metadata = dlml.get_metadata(dataset, collection)
+    documented = set(metadata) - _RESERVED_KEYS
+    model_ids = _model_ids(dlml.get_parameters(dataset, collection))
+    assert documented == model_ids, (
+        f'extra={sorted(documented - model_ids)[:3]} '
+        f'missing={sorted(model_ids - documented)[:3]}'
+    )
+
+
+@pytest.mark.parametrize(
+    ('dataset', 'collection'), _METADATA_PAIRS, ids=_METADATA_PAIR_IDS
+)
+def test_model_citations_resolve(dataset: str, collection: str):
+    """Every per-model ``Reference`` citation key resolves to an entry in the
+    file's ``References`` bibliography."""
+    metadata = dlml.get_metadata(dataset, collection)
+    bibliography = set(metadata.get('References', {}))
+    dangling = [
+        (model_id, citation)
+        for model_id, entry in metadata.items()
+        if model_id not in _RESERVED_KEYS and isinstance(entry, dict)
+        for citation in entry.get('Reference', [])
+        if citation not in bibliography
+    ]
+    assert not dangling, f'dangling citations: {dangling[:3]}'
+
+
+def _states_in_parameters(frame: pd.DataFrame, prefix: str) -> dict[str, set[str]]:
+    """Map each model to the ``<prefix><n>`` groups it populates in the CSV."""
+    states: dict[str, set[str]] = {}
+    models = frame.index.get_level_values(0)
+    for top, sub in frame.columns:
+        if re.fullmatch(rf'{prefix}\d+', top):
+            for model in models[frame[(top, sub)].notna().to_numpy()]:
+                states.setdefault(model, set()).add(top)
+    return states
+
+
+@pytest.mark.parametrize(
+    ('dataset', 'collection'), _NESTED_PAIRS, ids=_NESTED_PAIR_IDS
+)
+def test_metadata_states_match_parameters(dataset: str, collection: str):
+    """Each model's documented limit/damage states (minus the ``LS0``/``DS0``
+    undamaged baseline the CSV omits) are exactly the ``LS<n>``/``DS<n>``
+    groups it defines in the parameters table."""
+    nested_key, prefix = _NESTED_STATES[collection]
+    baseline = f'{prefix}0'
+    metadata = dlml.get_metadata(dataset, collection)
+    in_parameters = _states_in_parameters(
+        dlml.get_parameters(dataset, collection), prefix
+    )
+    mismatches = []
+    for model_id, entry in metadata.items():
+        if model_id in _RESERVED_KEYS or not isinstance(entry, dict):
+            continue
+        documented = set(entry.get(nested_key, {})) - {baseline}
+        defined = in_parameters.get(model_id, set())
+        if documented != defined:
+            mismatches.append((model_id, sorted(documented), sorted(defined)))
+    assert not mismatches, f'metadata vs CSV {prefix} mismatch: {mismatches[:3]}'
