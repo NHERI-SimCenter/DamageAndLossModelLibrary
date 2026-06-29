@@ -8,8 +8,10 @@ st.set_page_config(
     layout="wide",
 )
 
+from st_ui.theme import apply_theme
 from st_ui.sidebar import render_sidebar
 from st_ui.main_page import render_main_page
 
+apply_theme()
 render_sidebar()
 render_main_page()

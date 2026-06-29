@@ -50,26 +50,51 @@ def _logos() -> tuple[str, str] | None:
 
 def render_header(title: str, subtitle: str | None = None) -> None:
     """
-    Render the page header — the title (with an optional subtitle beneath it)
-    and the contributor logos on the same line: title on the left, logos
-    vertically centered on the right.
+    Render the page hero — a gradient banner with an eyebrow, the title, an
+    optional subtitle, and the contributor logos on a white card to the right.
 
-    Grouping the two here (rather than calling the title and logos separately
-    from the page) keeps the header layout in one place.
+    The whole hero is emitted as one HTML block (rather than via ``st.title`` +
+    columns) so the gradient, typography, and logo card can be styled as a unit;
+    the matching ``.dlml-hero*`` CSS lives in :mod:`st_ui.theme`. The logo card
+    stays white in both light and dark themes so the dark Degenkolb wordmark
+    stays legible.
     """
-    col_title, col_logos = st.columns([3, 2], vertical_alignment="center")
-    with col_title:
-        st.title(title)
-        if subtitle:
-            st.markdown(
-                f"""
-                <p style="margin-top:-0.6rem;color:#8a8a8a;font-size:1.05rem;
-                          font-weight:500;">{subtitle}</p>
-                """,
-                unsafe_allow_html=True,
-            )
-    with col_logos:
-        render_brand_header()
+    logos = _logos()
+    logo_html = ""
+    if logos is not None:
+        simcenter, degenkolb = logos
+        logo_html = f"""
+          <div class="dlml-logo-card">
+            <a href="{_SIMCENTER_URL}" target="_blank" rel="noopener"
+               title="NSF NHERI SimCenter">
+              <img src="{simcenter}" alt="NSF NHERI SimCenter"
+                   style="height:34px;display:block;">
+            </a>
+            <a href="{_DEGENKOLB_URL}" target="_blank" rel="noopener"
+               title="Degenkolb Engineers">
+              <img src="{degenkolb}" alt="Degenkolb Engineers"
+                   style="height:26px;display:block;">
+            </a>
+          </div>
+        """
+
+    subtitle_html = (
+        f'<p class="dlml-hero-subtitle">{subtitle}</p>' if subtitle else ""
+    )
+
+    st.markdown(
+        f"""
+        <div class="dlml-hero">
+          <div class="dlml-hero-main">
+            <div class="dlml-hero-eyebrow">NHERI SimCenter · Degenkolb Engineers</div>
+            <h1 class="dlml-hero-title">{title}</h1>
+            {subtitle_html}
+          </div>
+          {logo_html}
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 def render_brand_header() -> None:

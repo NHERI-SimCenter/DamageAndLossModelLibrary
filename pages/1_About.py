@@ -23,9 +23,11 @@ st.set_page_config(
 
 from st_ui.branding import render_contributors, render_header
 from st_ui.sidebar import render_sidebar
+from st_ui.theme import apply_theme
 
 
 # ---------------- Header & sidebar ----------------
+apply_theme()
 render_sidebar()
 render_header("DLML Explorer", subtitle="Damage and Loss Model Library")
 st.caption("Open source · BSD 3-Clause License")
