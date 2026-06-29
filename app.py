@@ -3,7 +3,7 @@ import streamlit as st
 # set_page_config must be the first Streamlit command of the run, before the
 # sidebar (which renders widgets) executes.
 st.set_page_config(
-    page_title="Damage and Loss Model Library",
+    page_title="DLML Explorer",
     page_icon="📊",
     layout="wide",
 )
