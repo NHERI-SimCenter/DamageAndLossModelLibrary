@@ -749,7 +749,14 @@ def create_FEMA_P58_repair_files(  # noqa: C901, N802, PLR0915
             'Description': cmp_meta['Component_Name'],
             'Comments': comments,
             'SuggestedComponentBlockSize': ' '.join(block_size),
-            'RoundUpToIntegerQuantity': cmp_meta['Round_to_Integer_Unit'],
+            # The consequence source sheet is read without YES/NO->bool
+            # coercion (unlike the fragility sheet), so normalize here to the
+            # canonical 'True'/'False' the rest of the library uses.
+            'RoundUpToIntegerQuantity': (
+                'True'
+                if cmp_meta['Round_to_Integer_Unit'] in ('YES', 'Yes', 'yes')
+                else 'False'
+            ),
             'ControllingDemand': 'Damage Quantity',
             'DamageStates': {},
         }

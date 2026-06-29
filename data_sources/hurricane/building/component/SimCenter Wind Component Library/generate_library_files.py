@@ -40,7 +40,9 @@ def create_fragility_files():
             'Description': row['Meta-Description'],
             'Comments': row.get('Meta-Comments'),
             'SuggestedComponentBlockSize': row['Meta-SuggestedComponentBlockSize'],
-            'RoundUpToIntegerQuantity': row['Meta-RoundUpToIntegerQuantity'],
+            'RoundUpToIntegerQuantity': (
+                'True' if row['Meta-RoundUpToIntegerQuantity'] else 'False'
+            ),
             'Reference': [ref.strip() for ref in row['Meta-Reference'].split(',')],
             'LimitStates': {
                 'LS1': {
