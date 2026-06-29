@@ -12,5 +12,5 @@ def render_main_page() -> None:
     first Streamlit command of the run and is set in ``app.py`` before the
     sidebar renders.
     """
-    render_header("Damage and Loss Model Library")
+    render_header("DLML Explorer", subtitle="Damage and Loss Model Library")
     render_search_and_library()

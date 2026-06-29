@@ -48,10 +48,11 @@ def _logos() -> tuple[str, str] | None:
         return None
 
 
-def render_header(title: str) -> None:
+def render_header(title: str, subtitle: str | None = None) -> None:
     """
-    Render the page header — the title and the contributor logos on the same
-    line: title on the left, logos vertically centered on the right.
+    Render the page header — the title (with an optional subtitle beneath it)
+    and the contributor logos on the same line: title on the left, logos
+    vertically centered on the right.
 
     Grouping the two here (rather than calling the title and logos separately
     from the page) keeps the header layout in one place.
@@ -59,6 +60,14 @@ def render_header(title: str) -> None:
     col_title, col_logos = st.columns([3, 2], vertical_alignment="center")
     with col_title:
         st.title(title)
+        if subtitle:
+            st.markdown(
+                f"""
+                <p style="margin-top:-0.6rem;color:#8a8a8a;font-size:1.05rem;
+                          font-weight:500;">{subtitle}</p>
+                """,
+                unsafe_allow_html=True,
+            )
     with col_logos:
         render_brand_header()
 
