@@ -55,9 +55,9 @@ def render_header(title: str, subtitle: str | None = None) -> None:
 
     The whole hero is emitted as one HTML block (rather than via ``st.title`` +
     columns) so the gradient, typography, and logo card can be styled as a unit;
-    the matching ``.dlml-hero*`` CSS lives in :mod:`st_ui.theme`. The logo card
-    stays white in both light and dark themes so the dark Degenkolb wordmark
-    stays legible.
+    the matching ``.dlml-hero*`` CSS lives in :mod:`dlml.web.st_ui.theme`. The
+    logo card stays white in both light and dark themes so the dark Degenkolb
+    wordmark stays legible.
     """
     logos = _logos()
     logo_html = ""

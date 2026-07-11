@@ -4,8 +4,8 @@ search_ui.py
 Streamlit UI for the semantic + structured component search.
 
 Replaces the old rapidfuzz ``fuzzy_visuals`` panel. It drives
-``st_search.semantic_index.SemanticIndex`` and follows the hybrid model agreed
-for this library:
+``dlml.web.st_search.semantic_index.SemanticIndex`` and follows the hybrid
+model agreed for this library:
 
     * **Facets always prune the tree.** With no text query, the hazard / source /
       group selectors narrow the collapsible library tree in place (via the
@@ -74,7 +74,7 @@ def get_index() -> SemanticIndex:
     start also downloads the embedding models; subsequent re-runs reuse this
     cached resource.
     """
-    return SemanticIndex(build_tree_corpus("."))
+    return SemanticIndex(build_tree_corpus())
 
 
 # ─── Facet option helpers ────────────────────────────────────────────────────

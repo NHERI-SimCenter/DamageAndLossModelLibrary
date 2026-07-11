@@ -20,9 +20,9 @@ Design notes
   driven from the command line to sanity-check retrieval quality before any UI
   is wired up::
 
-      python -m st_search.semantic_index "steel column connection"
-      python -m st_search.semantic_index --mode id "B.10.31"
-      python -m st_search.semantic_index --hazard seismic "exterior wall debris"
+      python -m dlml.web.st_search.semantic_index "steel column connection"
+      python -m dlml.web.st_search.semantic_index --mode id "B.10.31"
+      python -m dlml.web.st_search.semantic_index --hazard seismic "exterior wall debris"
 
 * **Corpus parity with the tree.** ``build_tree_corpus`` globs exactly the files
   the two tree renderers load: every ``fragility.json`` under ``seismic/`` plus
@@ -49,6 +49,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Dict, List, Optional
+
+from dlml._catalog import data_root
 
 # qdrant-client + fastembed are imported lazily inside SemanticIndex so that the
 # corpus-building half of this module (and `import` in general) does not require
@@ -353,7 +355,9 @@ _DATASET_FILENAMES = {
 }
 
 
-def tree_corpus_files(base_path: str = ".", dataset: str = "fragility") -> List[str]:
+def tree_corpus_files(
+    base_path: str | Path | None = None, dataset: str = "fragility"
+) -> List[str]:
     """
     Return the tree-visible data files for *dataset*, in a stable order.
 
@@ -364,9 +368,14 @@ def tree_corpus_files(base_path: str = ".", dataset: str = "fragility") -> List[
 
     The consequence dataset matches both ``consequence_repair.json`` and
     ``loss_repair.json``; directories lacking a match simply don't appear.
+
+    ``base_path`` defaults to the packaged dlml data root (:func:`data_root`),
+    so discovery is independent of the current working directory. Pass an
+    explicit path only to point the corpus at a different data tree (e.g. the
+    CLI ``--base`` override or a test fixture).
     """
     filenames = _DATASET_FILENAMES[dataset]
-    base = Path(base_path)
+    base = Path(base_path) if base_path is not None else data_root()
     roots = [
         base / "seismic",
         base / "hurricane" / "building" / "component",
@@ -381,7 +390,7 @@ def tree_corpus_files(base_path: str = ".", dataset: str = "fragility") -> List[
     return files
 
 
-def build_tree_corpus(base_path: str = ".") -> List[ComponentRecord]:
+def build_tree_corpus(base_path: str | Path | None = None) -> List[ComponentRecord]:
     """
     Parse every tree-visible record into a flat list of ComponentRecords.
 
@@ -636,12 +645,15 @@ def _main() -> None:
     parser.add_argument("--source", default=None, help="facet: source short name")
     parser.add_argument("--category", default=None, help="facet: FEMA / HAZUS")
     parser.add_argument("--limit", type=int, default=10)
-    parser.add_argument("--base", default=".", help="repo base path")
+    parser.add_argument("--base", default=None,
+                        help="override the data root (defaults to the packaged "
+                             "dlml data)")
     parser.add_argument("--no-hybrid", action="store_true",
                         help="disable BM25 sparse fusion (dense-only, for A/B)")
     args = parser.parse_args()
 
-    print(f"Building corpus from '{args.base}' …")
+    effective_base = args.base if args.base is not None else str(data_root())
+    print(f"Building corpus from '{effective_base}' …")
     records = build_tree_corpus(args.base)
     print(f"  {len(records)} components from {len(tree_corpus_files(args.base))} files")
 

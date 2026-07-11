@@ -87,7 +87,7 @@ def _hazard_files(hazard: str, dataset: str = "fragility") -> tuple[str, ...]:
     per-dataset filenames (e.g. consequence_repair.json / loss_repair.json).
     """
     return tuple(
-        fp for fp in tree_corpus_files(".", dataset) if hazard in Path(fp).parts
+        fp for fp in tree_corpus_files(dataset=dataset) if hazard in Path(fp).parts
     )
 
 

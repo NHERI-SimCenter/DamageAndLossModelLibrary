@@ -18,7 +18,7 @@ session state. That is what this module does:
 Accents differ by theme on purpose: a deep electric blue on light, a luminous
 cyan glow on dark.
 
-The hero/header structure lives in :mod:`st_ui.branding`; the matching
+The hero/header structure lives in :mod:`dlml.web.st_ui.branding`; the matching
 ``.dlml-hero*`` rules live here so all styling stays in one place.
 """
 
@@ -344,7 +344,7 @@ hr { border-color: var(--border) !important; }
 footer { display: none; }
 
 /* ════════════════════════════════════════════════════════════════════════
-   Hero / header (structure rendered by st_ui.branding.render_header)
+   Hero / header (structure rendered by dlml.web.st_ui.branding.render_header)
    ════════════════════════════════════════════════════════════════════════ */
 .dlml-hero {
   display: flex;
@@ -427,9 +427,10 @@ def is_dark() -> bool:
     """
     Public: whether the dark theme is active for this run.
 
-    Used by chart code (``st_visuals.figures``, via ``st_core.component``) to
-    pick a matching Plotly template, since our dark mode is a CSS overlay that
-    Streamlit's native chart theming can't see.
+    Used by chart code (``dlml.web.st_visuals.figures``, via
+    ``dlml.web.st_core.component``) to pick a matching Plotly template, since
+    our dark mode is a CSS overlay that Streamlit's native chart theming can't
+    see.
     """
     return _dark_active()
 
