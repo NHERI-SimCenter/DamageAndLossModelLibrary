@@ -29,6 +29,39 @@ _PUBU_COLORS: Dict[int, List[str]] = {
 }
 
 
+def _theme_layout(dark: bool) -> Dict:
+    """
+    Layout kwargs that flip a figure between the light and dark UI themes.
+
+    Backgrounds stay transparent in both so the chart shows the themed panel
+    behind it (set in CSS); only the template and font color change. The dark
+    flag is threaded in from the caller because the app's dark mode is a CSS
+    overlay Plotly/Streamlit can't otherwise detect.
+    """
+    if dark:
+        return dict(
+            template="plotly_dark",
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="#E7F3EC"),
+        )
+    return dict(
+        template="plotly_white",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+    )
+
+
+def _axis_line_grid(dark: bool) -> Dict:
+    """Axis line/grid colors for the consequence subplot, per UI theme."""
+    if dark:
+        return dict(
+            linecolor="rgba(231,243,236,0.35)",
+            gridcolor="rgba(231,243,236,0.12)",
+        )
+    return dict(linecolor="black", gridcolor="rgb(220,220,220)")
+
+
 def _empty_fig(message: str) -> go.Figure:
     """A placeholder figure carrying a centered message."""
     fig = go.Figure()
@@ -50,7 +83,9 @@ _HU_WIND_MIN, _HU_WIND_MAX = 50.0, 250.0
 
 
 @st.cache_data(show_spinner=False)
-def make_loss_function_figure(comp_id: str, c_type: str, json_path: str) -> go.Figure:
+def make_loss_function_figure(
+    comp_id: str, c_type: str, json_path: str, dark: bool = False
+) -> go.Figure:
     """
     Build a Plotly figure for a continuous loss function — the Hazus hurricane
     "original" ``loss_repair`` model — plotting loss ratio vs Peak Gust Wind
@@ -117,12 +152,12 @@ def make_loss_function_figure(comp_id: str, c_type: str, json_path: str) -> go.F
         )
     )
     fig.update_layout(
-        height=320, template="plotly_white",
-        paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)",
+        height=320,
         margin=dict(l=20, r=20, t=30, b=40),
         xaxis_title=f"{demand_type} ({demand_unit})",
         yaxis_title=dv_unit.replace("_", " ").title(),
         showlegend=False,
+        **_theme_layout(dark),
     )
     return fig
 
@@ -132,6 +167,7 @@ def make_consequence_figure(
     comp_id: str,
     c_type: str,
     json_path: str,
+    dark: bool = False,
 ) -> go.Figure:
     """
     Build a Plotly consequence figure for a single component + consequence type.
@@ -354,16 +390,13 @@ def make_consequence_figure(
 
     shared_ax = dict(
         showgrid=True,
-        linecolor="black",
         gridwidth=0.05,
-        gridcolor="rgb(220,220,220)",
+        **_axis_line_grid(dark),
     )
 
     fig.update_layout(
         margin=dict(b=50, r=5, l=5, t=30),
         height=380,
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
         showlegend=True,
         xaxis1=(
             dict(title_text=f"Damage Quantity [{quantity_unit}]", **shared_ax)
@@ -385,7 +418,7 @@ def make_consequence_figure(
             y=1.0,
             x=-0.08,
         ),
-        template="plotly_white",
+        **_theme_layout(dark),
     )
     return fig
 
@@ -394,6 +427,7 @@ def make_fragility_figure(
     comp_id: str,
     limit_states_json: str,
     csv_row_json: str,
+    dark: bool = False,
 ) -> go.Figure:
     """
     Build a fragility figure for a single component.
@@ -561,8 +595,6 @@ def make_fragility_figure(
         legend=dict(orientation="h", y=-0.38, font=dict(size=10)),
         height=340,
         margin=dict(l=60, r=20, t=36, b=130),
-        template="plotly_white",
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(0,0,0,0)",
+        **_theme_layout(dark),
     )
     return fig

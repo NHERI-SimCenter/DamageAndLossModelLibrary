@@ -1,117 +1,212 @@
-import streamlit as st
-import pandas as pd
-import altair as alt
-from datetime import date
+"""
+1_About.py
+----------
+The About page for the DLML Explorer — a primarily-text page modeled on a good
+project README.
 
-# ---------------- Page config & sidebar ----------------
+It explains what the library and this web interface are, highlights the key
+features as short user stories, and covers extension beyond FEMA P-58, how to
+contribute, the license, acknowledgments, contact, and credits.
+
+Section structure follows the directive from Adam Zsarnoczay.
+"""
+
+import streamlit as st
+
+# set_page_config must be the first Streamlit command of the run, before the
+# other imports (which may render widgets) execute.
 st.set_page_config(
-    page_title="About • Damage & Loss Library",
-    page_icon="🏛️",
+    page_title="About • DLML Explorer",
+    page_icon="📊",
     layout="wide",
 )
 
-# Sidebar branding / quick nav
-with st.sidebar:
-    # st.image("assets/simcenter_logo.png", width=160)   # Place your logo file in assets/
-    st.header("NHERI SimCenter")
-    st.markdown(
-        """
-        **Resilient and Sustainable Infrastructure**  
-        Department of Civil & Environmental Engineering  
-        Stanford University
-        """
-    )
-    st.markdown("---")
-    st.page_link("https://simcenter.designsafe-ci.org", label="Official website 🌐")
+from st_ui.branding import render_contributors, render_header
+from st_ui.sidebar import render_sidebar
+from st_ui.theme import apply_theme
 
-# ---------------- Hero section ----------------
-st.title("About")
-st.caption(
-    "Interactive web app built with **Streamlit** to explore, compare and download "
-    "fragility, consequence, and recovery models curated by the NHERI SimCenter."
-)
-st.success("💡 This page is a live demo—poke around!")
 
-# Metrics row
-col1, col2, col3 = st.columns(3)
-col1.metric("Models", "82", "▲ 9 new")
-col2.metric("Materials", "14", delta="—")
-col3.metric("Last update", date.today().strftime("%b %d, %Y"))
+# ---------------- Header & sidebar ----------------
+apply_theme()
+render_sidebar()
+render_header("DLML Explorer", subtitle="Damage and Loss Model Library")
+st.caption("Open source · BSD 3-Clause License")
 
-# ---------------- Interactive model explorer ----------------
-st.header("🔍 Quick Explorer")
-
-hazards = ["Earthquake", "Hurricane", "Flood", "Wildfire"]
-materials = ["Steel", "Concrete", "Timber", "Masonry"]
-
-hazard = st.selectbox("Choose a hazard type:", hazards, index=0)
-mat = st.selectbox("Choose primary material:", materials, index=0)
-min_year, max_year = st.slider("Year published:", 1995, 2025, (2010, 2025))
-
-# Fake data table (replace with real query)
-sample = pd.DataFrame({
-    "Model Name": [f"{hazard[:3]}-{mat[:2]}-{yr}" for yr in range(min_year, max_year, 3)],
-    "Hazard": hazard,
-    "Material": mat,
-    "Year": list(range(min_year, max_year, 3)),
-    "Authors": ["Doe et al."]*len(range(min_year, max_year, 3)),
-})
-st.dataframe(sample, width='stretch', hide_index=True)
-
-# ---------------- Tiny viz demo ----------------
-with st.expander("📊 Library growth over time (placeholder)"):
-    # Mock data
-    growth = pd.DataFrame({
-        "Year": list(range(2010, 2026)),
-        "Models": [5,7,10,14,18,24,30,37,46,54,62,70,78,82,82,82],
-    })
-    chart = (
-        alt.Chart(growth)
-        .mark_area(interpolate="monotone")
-        .encode(x="Year:O", y="Models:Q", tooltip=["Year","Models"])
-        .properties(height=220)
-    )
-    st.altair_chart(chart, width='stretch')
-
-# ---------------- Collapsible details ----------------
-with st.expander("ℹ️ What is a Damage & Loss Model?"):
-    st.markdown(
-        """
-        A **damage and loss model** links the intensity of a hazard to physical 
-        damage states and quantifies either economic loss or downtime.  
-        They are the backbone of modern **Performance‐Based Engineering** workflows,
-        enabling decision-makers to balance **risk, cost, and resilience**.
-        """
-    )
-
-with st.expander("🛠️ Built with Streamlit (why we love it)"):
-    st.markdown(
-        """
-        * **Markdown + LaTeX** for rich text  
-        * **Widgets** (`st.selectbox`, `st.slider`, `st.toggle`, …) for instant interactivity  
-        * **DataFrames** with in-browser sorting & filtering  
-        * **Altair / Plotly** one-liner charts  
-        * **Session State** to remember user choices  
-        * **st.download_button** for on-the-fly file export  
-        * **st.experimental_data_editor** for quick what-ifs  
-        * **st.secrets / caching** for fast DB calls  
-        * **Theming**—brand the app with your colors & logo
-        """
-    )
-
-# ---------------- Call-to-action ----------------
-st.subheader("📥 Download a sample model")
-st.download_button(
-    label="Get JSON",
-    data='{"model":"Sample"}',
-    file_name="sample_model.json",
-    mime="application/json",
-)
-
-# ---------------- Footnote ----------------
-st.markdown("---")
+# ---------------- What is the DLML Explorer? ----------------
+st.header("What is the DLML Explorer?")
 st.markdown(
-    "Made with ❤️ by the **NHERI SimCenter** research team at Stanford University. "
-    "This project is supported by the **National Science Foundation (CMMI)**."
+    """
+**DLML Explorer** is a project from the NHERI
+SimCenter that addresses a critical gap in natural hazards engineering: the
+lack of a centralized, standardized, and easy-to-use repository for damage and
+loss models. It provides the essential data — model parameters, descriptive
+metadata, and configuration files — that power natural hazard risk assessment
+simulations.
+
+The **DLML Explorer** is the web interface to that library. It makes it easy to
+browse the data, compare models side by side, and extract exactly the component
+data you need for a simulation — without digging through the underlying CSV and
+JSON files by hand.
+    """
 )
-st.caption("Page generated with Streamlit 💫")
+
+# ---------------- Key features ----------------
+st.header("Key Features")
+st.markdown(
+    "Two user stories capture how most people use the Explorer — first to "
+    "**discover** the right models, then to **collect and download** them for "
+    "a project."
+)
+
+feat_search, feat_select = st.columns(2, gap="large")
+with feat_search:
+    st.subheader("1. Discover models")
+    st.markdown(
+        """
+        Use the **search feature** and the **browse tree** to find the models
+        you care about, then **compare fragility and consequence models** across
+        different components to choose what fits your project.
+        """
+    )
+with feat_select:
+    st.subheader("2. Get data for your project")
+    st.markdown(
+        """
+        As you browse, **add components to your selection**. When you're ready,
+        **download them in one bundle** — formatted and ready to drop straight
+        into your simulation.
+        """
+    )
+
+# ---------------- Beyond FEMA P-58 ----------------
+st.header("More Than FEMA P-58")
+st.markdown(
+    """
+The library is **not limited to FEMA P-58**. It is built to grow with the
+community: for example, the **NIST NED nonstructural fragilities** are expected
+to be added by **mid-July 2026** as one such extension.
+
+You can also **run the DLML Explorer locally** and point it at your own
+**private fragilities** — adding them to the database so you can conveniently
+display, discover, and select from them alongside the public models.
+    """
+)
+
+with st.expander("Running locally"):
+    st.markdown(
+        """
+**Prerequisites:** [Python 3.12](https://www.python.org/downloads/) and
+[Git](https://git-scm.com/downloads). Python 3.12 is recommended — the
+`pelicun` dependency requires `numpy < 2`, which does not yet have a working
+build for Python 3.13.
+        """
+    )
+
+    st.markdown("**1. Clone the repository**")
+    st.code(
+        "git clone https://github.com/tleedegen/DamageAndLossModelLibraryStreamlit.git\n"
+        "cd DamageAndLossModelLibraryStreamlit",
+        language="bash",
+    )
+
+    st.markdown(
+        "**2. Create and activate a virtual environment** (recommended, so the "
+        "dependencies stay isolated from your system Python)"
+    )
+    st.code(
+        "# macOS / Linux\n"
+        "python3.12 -m venv .venv\n"
+        "source .venv/bin/activate",
+        language="bash",
+    )
+    st.code(
+        "# Windows (PowerShell)\n"
+        "py -3.12 -m venv .venv\n"
+        ".venv\\Scripts\\Activate.ps1",
+        language="powershell",
+    )
+
+    st.markdown("**3. Install the dependencies**")
+    st.code("pip install -r requirements.txt", language="bash")
+
+    st.markdown("**4. Launch the app**")
+    st.code("streamlit run app.py", language="bash")
+
+    st.markdown(
+        "Streamlit will open the Explorer in your browser at "
+        "[http://localhost:8501](http://localhost:8501). To stop it, press "
+        "`Ctrl+C` in the terminal."
+    )
+
+# ---------------- Contribute ----------------
+st.header("Contribute")
+st.markdown(
+    """
+Have fragility, consequence, or recovery models you'd like to see here? We'd
+love your help building a growing library of **vetted and trusted** models.
+
+We don't yet have a formal path for quality control and vetting, so for now
+please **reach out (see Contact below) and join the conversation** on how to
+build this out together. Our near-term plan is to collect new contributions in
+a dedicated dataset (for example, **“FEMA P-58 ext”**), with clear references
+to the contributors.
+
+The NIST NED database is a valuable resource, but note that it is limited to
+nonstructural fragilities supported by experimental data — a dedicated
+extension dataset lets the community add high-quality models more broadly.
+    """
+)
+
+# ---------------- License ----------------
+st.header("License")
+st.markdown(
+    """
+The DLML Explorer and the underlying Damage and Loss Model Library are
+distributed under the **BSD 3-Clause License**. You are free to use the data
+for any purpose, **including commercial use**. See the `LICENSE` file for the
+full terms.
+    """
+)
+
+# ---------------- Acknowledgments ----------------
+st.header("Acknowledgments")
+st.markdown(
+    """
+We gratefully acknowledge the generous in-kind contribution from Degenkolb
+Engineers, which supported the development work on the DLML Explorer. This
+material is based upon work supported by the U.S. National Science Foundation
+under Grants No. 1612843 and No. 2131111. Any opinions, findings, conclusions,
+or recommendations expressed in this material are those of the author(s) and do
+not necessarily reflect the views of the U.S. National Science Foundation.
+
+We also wish to express our gratitude to colleagues at the NHERI SimCenter and
+Degenkolb Engineers for their feedback and input. The insights shared by many
+engineers and experts in the natural hazards engineering community were
+instrumental in shaping the priorities for this work. In particular,
+discussions with Dustin Cook (NIST), Curt Haselton (HBRisk), Jon Heintz
+(Applied Technology Council), John Hooper (MKA), James Malley (Degenkolb),
+Peter Morris (AECOM), and Robert Pekelnicky (Degenkolb) were especially
+valuable. We also appreciate the collaboration with the NIST NED development
+team.
+    """
+)
+
+# ---------------- Contact ----------------
+st.header("Contact")
+st.markdown(
+    "Adam Zsarnoczay — NHERI SimCenter, Stanford University — "
+    "[adamzs@stanford.edu](mailto:adamzs@stanford.edu)"
+)
+
+# ---------------- Developed by ----------------
+st.header("Developed by")
+st.markdown(
+    """
+- **Tshajlij Lee** — Degenkolb Engineers
+- **Hannah Thompson** — Degenkolb Engineers
+- **Adam Zsarnoczay** — NHERI SimCenter, Stanford University
+    """
+)
+
+# ---------------- Contributor logos ----------------
+render_contributors()

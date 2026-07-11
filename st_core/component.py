@@ -66,6 +66,7 @@ from st_visuals.figures import (
 )
 from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
 from st_core.downloads import render_download_buttons
+from st_ui.theme import is_dark
 
 # Consequence type options shown in the selectbox
 _C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
@@ -221,13 +222,16 @@ def _render_consequence_tab(
     )
 
     figure = (
-        make_loss_function_figure(comp_id, c_type, json_path)
+        make_loss_function_figure(comp_id, c_type, json_path, dark=is_dark())
         if is_loss
-        else make_consequence_figure(comp_id, c_type, json_path)
+        else make_consequence_figure(comp_id, c_type, json_path, dark=is_dark())
     )
     st.plotly_chart(
         figure,
-        width="stretch",
+        use_container_width=True,
+        # theme=None so Plotly honors the figure's own template (plotly_white /
+        # plotly_dark); "streamlit" would re-skin it with the light config theme.
+        theme=None,
         key=f"{key_prefix}cons_{comp_id}_{c_type}",
     )
     if is_loss:
@@ -322,12 +326,70 @@ def _render_fragility_chart(
                 comp_id,
                 json.dumps(limit_states),
                 json.dumps(csv_row_flat, default=str),
+                dark=is_dark(),
             ),
-            width="stretch",
+            use_container_width=True,
+            theme=None,
             key=f"{key_prefix}frag_{comp_id}",
         )
     else:
         st.info("No fragility data available to generate curves.", icon="ℹ️")
+
+
+# ─── Internal: raw-data table ─────────────────────────────────────────────────
+
+def _render_data_table(
+    comp_id: str,
+    json_path: str,
+    *,
+    key_prefix: str = "",
+) -> None:
+    """
+    Render the underlying model parameters for a component as tables.
+
+    Shows whichever data exist for the record:
+    * **Fragility parameters** — the distribution parameters per limit state
+      (Theta_0, Theta_1, Family, …), pivoted to one row per level.
+    * **Consequence parameters** — the repair model parameters per consequence
+      type (Cost / Time / …), as stored in the consequence CSV.
+
+    Used as the "Data table" tab in the detail panels. Each dataframe gets a
+    ``key_prefix``-scoped key so the same component can render in more than one
+    place (tree + added-list) without duplicate-element-id collisions.
+    """
+    shown = False
+
+    frag_df = load_fragility_df(json_path)
+    if frag_df is not None and comp_id in frag_df.index:
+        st.markdown("**Fragility parameters**")
+        row = frag_df.loc[comp_id]
+        # Series indexed by (level, parameter) → rows = level, cols = parameter.
+        try:
+            frag_table = row.unstack()
+        except Exception:
+            frag_table = frag_df.loc[[comp_id]]
+        st.dataframe(
+            frag_table,
+            width="stretch",
+            key=f"{key_prefix}data_frag_{comp_id}",
+        )
+        shown = True
+
+    repair_df = load_consequence_df(json_path)
+    if repair_df is not None and comp_id in repair_df.index.get_level_values(0):
+        st.markdown("**Consequence parameters**")
+        st.dataframe(
+            repair_df.loc[comp_id],
+            width="stretch",
+            key=f"{key_prefix}data_cons_{comp_id}",
+        )
+        shown = True
+
+    if not shown:
+        st.info(
+            "No tabular parameter data available for this component.",
+            icon="ℹ️",
+        )
 
 
 # ─── Internal: seismic detail panel ───────────────────────────────────────────
@@ -427,22 +489,29 @@ def _render_component_detail(
         # class, not by component, so the tab is omitted there (rather than
         # showing a confusing "no records found" message).
         if _has_consequence_data(comp_id, json_path):
-            tab_frag, tab_cons = st.tabs(["Fragility curves", "Consequence curves"])
+            tab_frag, tab_cons, tab_data = st.tabs(
+                ["Fragility curves", "Consequence curves", "Data table"]
+            )
             with tab_frag:
                 _render_fragility_chart(
                     comp_id, json_path, limit_states, key_prefix=key_prefix
                 )
             with tab_cons:
                 _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
+            with tab_data:
+                _render_data_table(comp_id, json_path, key_prefix=key_prefix)
         else:
-            st.markdown("**Fragility curves**")
-            _render_fragility_chart(
-                comp_id, json_path, limit_states, key_prefix=key_prefix
-            )
-            st.caption(
-                "No component-level consequence (repair) curves are available "
-                "for this component in this source."
-            )
+            tab_frag, tab_data = st.tabs(["Fragility curves", "Data table"])
+            with tab_frag:
+                _render_fragility_chart(
+                    comp_id, json_path, limit_states, key_prefix=key_prefix
+                )
+                st.caption(
+                    "No component-level consequence (repair) curves are "
+                    "available for this component in this source."
+                )
+            with tab_data:
+                _render_data_table(comp_id, json_path, key_prefix=key_prefix)
 
 
 # ─── Internal: wind detail panel ──────────────────────────────────────────────
@@ -523,26 +592,32 @@ def _render_wind_component_detail(
             ):
                 st.caption(comments)
 
-        frag_df = load_fragility_df(json_path)
-        if frag_df is not None and comp_id in frag_df.index:
-            csv_row = frag_df.loc[comp_id]
-            csv_row_flat = {
-                f"{a}-{b}" if b else str(a): v
-                for (a, b), v in csv_row.items()
-            }
-            st.plotly_chart(
-                make_fragility_figure(
-                    comp_id,
-                    json.dumps(limit_states),
-                    json.dumps(csv_row_flat, default=str),
-                ),
-                width="stretch",
-                key=f"{key_prefix}wind_frag_{comp_id}",
-            )
-        else:
-            st.info(
-                "No fragility data available to generate curves.", icon="ℹ️"
-            )
+        tab_frag, tab_data = st.tabs(["Fragility curves", "Data table"])
+        with tab_frag:
+            frag_df = load_fragility_df(json_path)
+            if frag_df is not None and comp_id in frag_df.index:
+                csv_row = frag_df.loc[comp_id]
+                csv_row_flat = {
+                    f"{a}-{b}" if b else str(a): v
+                    for (a, b), v in csv_row.items()
+                }
+                st.plotly_chart(
+                    make_fragility_figure(
+                        comp_id,
+                        json.dumps(limit_states),
+                        json.dumps(csv_row_flat, default=str),
+                        dark=is_dark(),
+                    ),
+                    use_container_width=True,
+                    theme=None,
+                    key=f"{key_prefix}wind_frag_{comp_id}",
+                )
+            else:
+                st.info(
+                    "No fragility data available to generate curves.", icon="ℹ️"
+                )
+        with tab_data:
+            _render_data_table(comp_id, json_path, key_prefix=key_prefix)
 
 
 # ─── Public API ────────────────────────────────────────────────────────────────
@@ -673,8 +748,11 @@ def render_consequence_leaf(
             ):
                 st.caption(comments)
 
-        st.markdown("**Repair consequence curves**")
-        _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
+        tab_cons, tab_data = st.tabs(["Consequence curves", "Data table"])
+        with tab_cons:
+            _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
+        with tab_data:
+            _render_data_table(comp_id, json_path, key_prefix=key_prefix)
 
 
 def render_component_leaf_button(
