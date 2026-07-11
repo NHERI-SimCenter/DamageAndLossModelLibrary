@@ -21,9 +21,9 @@ st.set_page_config(
     layout="wide",
 )
 
-from st_ui.branding import render_contributors, render_header
-from st_ui.sidebar import render_sidebar
-from st_ui.theme import apply_theme
+from dlml.web.st_ui.branding import render_contributors, render_header
+from dlml.web.st_ui.sidebar import render_sidebar
+from dlml.web.st_ui.theme import apply_theme
 
 
 # ---------------- Header & sidebar ----------------

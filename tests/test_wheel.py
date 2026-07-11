@@ -46,6 +46,9 @@ _FORBIDDEN_TOKENS = (
     '_header',
     '_filtered',
     'scratch',
+    'secrets',
+    '.env',
+    '.ds_store',
 )
 
 
@@ -95,7 +98,7 @@ def test_wheel_ships_every_library_data_file(wheel: tuple[list[str], int]):
 
 
 def test_wheel_ships_the_package_modules(wheel: tuple[list[str], int]):
-    """The public package modules are present in the wheel."""
+    """The public package modules and the web app entry are present."""
     names = set(wheel[0])
     for module in (
         'dlml/__init__.py',
@@ -103,6 +106,8 @@ def test_wheel_ships_the_package_modules(wheel: tuple[list[str], int]):
         'dlml/vocabulary.py',
         'dlml/_catalog.py',
         'dlml/_tabular.py',
+        'dlml/web/__init__.py',
+        'dlml/web/app.py',
     ):
         assert module in names, f'missing module {module}'
 
@@ -122,13 +127,15 @@ def test_wheel_excludes_authoring_material(wheel: tuple[list[str], int]):
 
 
 def test_wheel_contains_only_library_and_metadata(wheel: tuple[list[str], int]):
-    """Every entry is a data file, a package module, or wheel metadata -- so a
-    stray non-code file left under ``src/dlml/`` (outside ``data/``) cannot
-    ride along unnoticed, which the per-tree checks above would miss."""
+    """Every entry is a data file, the web app, a package module, or wheel
+    metadata -- so a stray non-code file left under ``src/dlml/`` (outside
+    ``data/`` and ``web/``) cannot ride along unnoticed."""
     names, _ = wheel
     for name in names:
         if name.startswith(_DATA_PREFIX):
             continue  # data tree -- validated by the suffix allow-list above
+        if name.startswith('dlml/web/'):
+            continue  # the Streamlit app: code + static assets, any type
         if name.startswith('dlml/'):
             assert name.endswith('.py'), f'non-code file in package: {name!r}'
         elif '.dist-info/' in name:

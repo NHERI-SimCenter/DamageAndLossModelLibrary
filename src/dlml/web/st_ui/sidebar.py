@@ -1,6 +1,6 @@
 import streamlit as st
-from st_ui.theme import render_theme_toggle
-from st_core.component import render_added_components_list
+from dlml.web.st_ui.theme import render_theme_toggle
+from dlml.web.st_core.component import render_added_components_list
 
 def render_sidebar() -> None:
     """

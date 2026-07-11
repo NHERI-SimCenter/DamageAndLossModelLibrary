@@ -25,7 +25,7 @@ Public functions
 
 Usage
 -----
-    from st_core.downloads import render_download_buttons
+    from dlml.web.st_core.downloads import render_download_buttons
 
     render_download_buttons()
 """

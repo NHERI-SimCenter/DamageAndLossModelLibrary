@@ -32,14 +32,14 @@ from typing import Dict, List, Optional, Tuple
 
 import streamlit as st
 
-from st_search.semantic_index import (
+from dlml.web.st_search.semantic_index import (
     SearchFilters,
     SemanticIndex,
     build_tree_corpus,
 )
-from st_core.component import add_component, is_component_added
-from st_visuals.helpers_visual import load_full_json
-from st_visuals.tree_visuals import (
+from dlml.web.st_core.component import add_component, is_component_added
+from dlml.web.st_visuals.helpers_visual import load_full_json
+from dlml.web.st_visuals.tree_visuals import (
     render_consequence_tree,
     render_seismic_tree,
     render_wind_tree,
@@ -291,7 +291,7 @@ def render_results(
 
 def _render_result_details(rank: int, hit) -> None:
     # Imported lazily to keep the module import graph shallow.
-    from st_core.component import render_component_leaf_button, render_consequence_leaf
+    from dlml.web.st_core.component import render_component_leaf_button, render_consequence_leaf
 
     payload = hit.payload
     fp = payload["file_path"]

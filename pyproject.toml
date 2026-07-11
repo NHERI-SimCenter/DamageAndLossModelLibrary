@@ -83,7 +83,10 @@ exclude = [
 
 [tool.ruff]
 line-length = 85
-extend-exclude = ["src/dlml/data", "doc"]
+extend-exclude = ["src/dlml/data", "src/dlml/web", "doc"]
+# Honor extend-exclude even when a path is passed explicitly (pre-commit,
+# editors), so the web app is never linted by any invocation.
+force-exclude = true
 
 [tool.ruff.lint]
 select = ["ALL"]
@@ -136,12 +139,17 @@ quote-style = "single"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
+[tool.coverage.run]
+# The web/ subpackage (the Streamlit app) is not exercised by the test suite;
+# omit it so the UI modules do not count against the coverage.
+omit = ["*/dlml/web/*"]
+
 [tool.mypy]
 files = ["src/dlml"]
-# The data tree holds pelicun-specific authoring/config scripts (with
-# duplicate module basenames and their own conventions), not part of the
-# typed dlml API -- exclude them from type checking.
-exclude = "^src/dlml/data/"
+# The data tree holds pelicun-specific authoring/config scripts, and web/ is
+# the Streamlit app (excluded from every gate for now) -- neither is part of
+# the typed dlml API.
+exclude = "^src/dlml/(data|web)/"
 ignore_missing_imports = true
 
 [tool.codespell]
@@ -151,6 +159,7 @@ skip = [
     "*/build/*",
     "*/DB/*",
     "src/dlml/data/*",
+    "src/dlml/web/*",
     "data_sources/*",
     "*/.venv/*",
     "./dist/*",

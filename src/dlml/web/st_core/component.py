@@ -35,9 +35,9 @@ Leaf detail renderers
 
 Usage
 -----
-    from st_core.component import render_component_leaf, render_wind_component_leaf
-    from st_core.component import render_component_leaf_button
-    from st_core.component import render_added_components_list
+    from dlml.web.st_core.component import render_component_leaf, render_wind_component_leaf
+    from dlml.web.st_core.component import render_component_leaf_button
+    from dlml.web.st_core.component import render_added_components_list
 
     # Render a seismic component directly (no lazy-load gate):
     render_component_leaf("B.10.31.001a", comp_data_dict, "/path/to/fragility.json")
@@ -59,14 +59,14 @@ from typing import List, Optional
 
 import streamlit as st
 
-from st_visuals.figures import (
+from dlml.web.st_visuals.figures import (
     make_consequence_figure,
     make_fragility_figure,
     make_loss_function_figure,
 )
-from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
-from st_core.downloads import render_download_buttons
-from st_ui.theme import is_dark
+from dlml.web.st_visuals.helpers_visual import load_consequence_df, load_fragility_df
+from dlml.web.st_core.downloads import render_download_buttons
+from dlml.web.st_ui.theme import is_dark
 
 # Consequence type options shown in the selectbox
 _C_TYPES: List[str] = ["Cost", "Time", "Carbon", "Energy"]
@@ -819,7 +819,7 @@ def render_added_components_list() -> None:
 
     Usage
     -----
-        from st_core.component import render_added_components_list
+        from dlml.web.st_core.component import render_added_components_list
         render_added_components_list()
     """
     _initialize_added_components_state()

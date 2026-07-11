@@ -1,7 +1,7 @@
 import streamlit as st
-from st_search.search_ui import render_search_and_library
-from st_ui.branding import render_header
-from st_ui.theme import use_full_width
+from dlml.web.st_search.search_ui import render_search_and_library
+from dlml.web.st_ui.branding import render_header
+from dlml.web.st_ui.theme import use_full_width
 
 
 def render_main_page() -> None:

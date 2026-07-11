@@ -11,7 +11,7 @@ from plotly.subplots import make_subplots
 import colorlover as cl
 
 
-from st_visuals.helpers_visual import load_consequence_df, load_fragility_df
+from dlml.web.st_visuals.helpers_visual import load_consequence_df, load_fragility_df
 
 
 # Palette

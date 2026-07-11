@@ -4,10 +4,10 @@
 #     ./scripts/check.sh
 # (also wired up as a git pre-commit hook).
 #
-# Scope note: checks are currently scoped to `src/dlml` and `tests`, the
-# code authored for the v3 package. The legacy Streamlit app still lives at
-# the repository root and migrates into `src/dlml/web` in a later step; once
-# it does, it falls under these same checks automatically.
+# Scope note: checks cover `src/dlml` and `tests`. The Streamlit web app under
+# `src/dlml/web` is intentionally excluded from every gate for now (see the
+# exclusions in pyproject.toml); conforming it to the package's standards is a
+# tracked follow-up.
 
 set -e
 

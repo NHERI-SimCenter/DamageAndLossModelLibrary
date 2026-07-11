@@ -42,19 +42,19 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
-from pelicun.base import convert_to_MultiIndex
+from dlml import convert_to_MultiIndex
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 
-from st_search.semantic_index import tree_corpus_files
-from st_core.component import (
+from dlml.web.st_search.semantic_index import tree_corpus_files
+from dlml.web.st_core.component import (
     _render_wind_component_detail,
     render_component_leaf,
     render_consequence_leaf,
     render_wind_component_leaf,
 )
 
-from st_visuals.helpers_visual import load_consequence_df
+from dlml.web.st_visuals.helpers_visual import load_consequence_df
 
 
 

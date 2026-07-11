@@ -3,7 +3,7 @@ import pandas as pd
 import streamlit as st
 from pathlib import Path
 from typing import Optional
-from pelicun.base import convert_to_MultiIndex
+from dlml import convert_to_MultiIndex
 
 
 @st.cache_data(show_spinner=False)
