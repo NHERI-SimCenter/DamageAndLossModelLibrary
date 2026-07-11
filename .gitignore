@@ -13,8 +13,8 @@
 /.idea/
 /.venv/
 
-# Auth0 secrets
-.streamlit/secrets.toml
+# Secrets (never commit or package these)
+**/secrets.toml
 .env
 
 # Session data
