@@ -3,7 +3,7 @@
 # keep in sync. This one line installs the app from a checkout (e.g. Streamlit
 # Community Cloud, which reads this file and should point its main file at
 # src/dlml/web/app.py). After the package is published to PyPI this can become
-# `dlml[explorer]`.
+# `simcenter-dlml[explorer]`.
 #
 # Note: `[explorer]` pulls onnxruntime (via fastembed), so it targets Python
 # >=3.10.

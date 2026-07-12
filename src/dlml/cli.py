@@ -9,8 +9,8 @@ exposes three subcommands:
 * ``dlml info <dataset>`` -- show a dataset's collections and model counts.
 
 ``list`` and ``info`` use only the core dependencies, so they work from a bare
-``pip install dlml``; ``web`` checks for the optional dependencies and prints an
-install hint if they are missing.
+``pip install simcenter-dlml``; ``explorer`` checks for the optional
+dependencies and prints an install hint if they are missing.
 """
 
 from __future__ import annotations
@@ -110,7 +110,7 @@ def _cmd_explorer(port: int | None) -> int:
     if not _streamlit_installed():
         print(
             "The 'dlml explorer' command needs the optional explorer "
-            "dependencies.\nInstall them with:  pip install 'dlml[explorer]'",
+            "dependencies.\nInstall them with:  pip install 'simcenter-dlml[explorer]'",
             file=sys.stderr,
         )
         return 1

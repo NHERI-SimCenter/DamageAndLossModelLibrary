@@ -39,12 +39,12 @@ jobs:
       - name: Build
         run: uv build
       # On a tag push, refuse to proceed unless the tag matches the built version
-      # exactly (tag v3.0.0 <-> version 3.0.0). Catches a stray tag and a
+      # exactly (tag v3.0 <-> version 3.0). Catches a stray tag and a
       # forgotten `.dev0` bump.
       - name: Verify tag matches the built version
         if: github.ref_type == 'tag'
         run: |
-          version=$(ls dist/*.whl | sed -E 's|.*/dlml-([^-]+)-py3.*|\1|')
+          version=$(ls dist/*.whl | sed -E 's|.*/simcenter_dlml-([^-]+)-py3.*|\1|')
           echo "Built version: $version   Tag: $GITHUB_REF_NAME"
           if [ "$GITHUB_REF_NAME" != "v$version" ]; then
             echo "::error::Tag '$GITHUB_REF_NAME' != built version 'v$version'. Refusing to publish."

@@ -440,7 +440,7 @@ def _render_search_unavailable(exc: Exception) -> None:
         st.info(
             "🔍 **Component search is unavailable** because its optional "
             "dependencies are not installed. Install them with "
-            "`pip install 'dlml[explorer]'` (bundles qdrant-client + fastembed). "
+            "`pip install 'simcenter-dlml[explorer]'` (bundles qdrant-client + fastembed). "
             "You can still browse the full library below."
         )
     else:

@@ -137,8 +137,8 @@ with st.expander("Running locally"):
         "(~64 MB) from HuggingFace and caches it — it fetches this up front at "
         "startup, so it happens only once. Press `Ctrl+C` in the terminal to "
         "stop.\n\n"
-        "Once `dlml` is on PyPI you can skip the clone and install it directly "
-        "with `pip install dlml[explorer]`."
+        "Once `simcenter-dlml` is on PyPI you can skip the clone and install it "
+        "directly with `pip install simcenter-dlml[explorer]`."
     )
 
 # ---------------- Contribute ----------------

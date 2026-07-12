@@ -763,120 +763,6 @@ toml = [
 ]
 
 [[package]]
-name = "dlml"
-version = "3.0.0.dev0"
-source = { editable = "." }
-dependencies = [
-    { name = "jsonschema", version = "4.25.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "jsonschema", version = "4.26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "pandas" },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "codespell" },
-    { name = "colorlover" },
-    { name = "mypy", version = "1.19.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "mypy", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "numpydoc", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numpydoc", version = "1.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "pelicun" },
-    { name = "plotly" },
-    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "pytest", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "pytest-cov" },
-    { name = "qdrant-client", version = "1.16.1", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version < '3.10'" },
-    { name = "qdrant-client", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version >= '3.10'" },
-    { name = "ruff" },
-    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
-    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "sphinx-design", version = "0.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx-design", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinxcontrib-bibtex", version = "2.6.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinxcontrib-bibtex", version = "2.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "streamlit", version = "1.50.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "streamlit", version = "1.58.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "tqdm" },
-]
-doc = [
-    { name = "colorlover" },
-    { name = "numpydoc", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numpydoc", version = "1.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "plotly" },
-    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
-    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
-    { name = "sphinx-design", version = "0.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "sphinx-design", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "sphinx-rtd-theme" },
-    { name = "sphinxcontrib-bibtex", version = "2.6.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "sphinxcontrib-bibtex", version = "2.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "tqdm" },
-]
-explorer = [
-    { name = "colorlover" },
-    { name = "plotly" },
-    { name = "qdrant-client", version = "1.16.1", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version < '3.10'" },
-    { name = "qdrant-client", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version >= '3.10'" },
-    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "streamlit", version = "1.50.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "streamlit", version = "1.58.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-]
-lint = [
-    { name = "codespell" },
-    { name = "mypy", version = "1.19.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "mypy", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "ruff" },
-]
-test = [
-    { name = "pelicun" },
-    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "pytest", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-    { name = "pytest-cov" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "codespell", marker = "extra == 'lint'" },
-    { name = "colorlover", marker = "extra == 'doc'" },
-    { name = "colorlover", marker = "extra == 'explorer'" },
-    { name = "dlml", extras = ["test", "explorer", "lint", "doc"], marker = "extra == 'dev'" },
-    { name = "jsonschema", specifier = ">=4.0" },
-    { name = "mypy", marker = "extra == 'lint'" },
-    { name = "numpy", specifier = ">=1.22" },
-    { name = "numpydoc", marker = "extra == 'doc'" },
-    { name = "pandas", specifier = ">=2.0" },
-    { name = "pelicun", marker = "extra == 'test'", specifier = ">=3.9,<3.10" },
-    { name = "plotly", marker = "extra == 'doc'" },
-    { name = "plotly", marker = "extra == 'explorer'" },
-    { name = "pytest", marker = "extra == 'test'", specifier = ">=7" },
-    { name = "pytest-cov", marker = "extra == 'test'" },
-    { name = "qdrant-client", extras = ["fastembed"], marker = "extra == 'explorer'", specifier = ">=1.14.0" },
-    { name = "ruff", marker = "extra == 'lint'", specifier = "==0.7.0" },
-    { name = "scipy", marker = "extra == 'doc'" },
-    { name = "scipy", marker = "extra == 'explorer'" },
-    { name = "sphinx", marker = "extra == 'doc'" },
-    { name = "sphinx-design", marker = "extra == 'doc'" },
-    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
-    { name = "sphinxcontrib-bibtex", marker = "extra == 'doc'" },
-    { name = "streamlit", marker = "extra == 'explorer'", specifier = ">=1.48.0" },
-    { name = "tqdm", marker = "extra == 'doc'" },
-]
-provides-extras = ["explorer", "test", "lint", "doc", "dev"]
-
-[[package]]
 name = "docutils"
 version = "0.21.2"
 source = { registry = "https://pypi.org/simple" }
@@ -5055,6 +4941,120 @@ sdist = { url = "https://files.pythonhosted.org/packages/58/15/8b3609fd3830ef7b2
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e0/f9/0595336914c5619e5f28a1fb793285925a8cd4b432c9da0a987836c7f822/shellingham-1.5.4-py2.py3-none-any.whl", hash = "sha256:7ecfff8f2fd72616f7481040475a65b2bf8af90a56c89140852d1120324e8686", size = 9755, upload-time = "2023-10-24T04:13:38.866Z" },
 ]
+
+[[package]]
+name = "simcenter-dlml"
+version = "3.0.0.dev0"
+source = { editable = "." }
+dependencies = [
+    { name = "jsonschema", version = "4.25.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "jsonschema", version = "4.26.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "pandas" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "codespell" },
+    { name = "colorlover" },
+    { name = "mypy", version = "1.19.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "mypy", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "numpydoc", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "numpydoc", version = "1.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pelicun" },
+    { name = "plotly" },
+    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "pytest", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pytest-cov" },
+    { name = "qdrant-client", version = "1.16.1", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version < '3.10'" },
+    { name = "qdrant-client", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version >= '3.10'" },
+    { name = "ruff" },
+    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
+    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-design", version = "0.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "sphinx-design", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "sphinx-rtd-theme" },
+    { name = "sphinxcontrib-bibtex", version = "2.6.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sphinxcontrib-bibtex", version = "2.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "streamlit", version = "1.50.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "streamlit", version = "1.58.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "tqdm" },
+]
+doc = [
+    { name = "colorlover" },
+    { name = "numpydoc", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "numpydoc", version = "1.10.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "plotly" },
+    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "sphinx", version = "7.4.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sphinx", version = "8.1.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "sphinx", version = "9.0.4", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.11.*'" },
+    { name = "sphinx", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
+    { name = "sphinx-design", version = "0.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "sphinx-design", version = "0.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "sphinx-rtd-theme" },
+    { name = "sphinxcontrib-bibtex", version = "2.6.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "sphinxcontrib-bibtex", version = "2.7.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "tqdm" },
+]
+explorer = [
+    { name = "colorlover" },
+    { name = "plotly" },
+    { name = "qdrant-client", version = "1.16.1", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version < '3.10'" },
+    { name = "qdrant-client", version = "1.18.0", source = { registry = "https://pypi.org/simple" }, extra = ["fastembed"], marker = "python_full_version >= '3.10'" },
+    { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "streamlit", version = "1.50.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "streamlit", version = "1.58.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+lint = [
+    { name = "codespell" },
+    { name = "mypy", version = "1.19.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "mypy", version = "2.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "ruff" },
+]
+test = [
+    { name = "pelicun" },
+    { name = "pytest", version = "8.4.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "pytest", version = "9.1.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "pytest-cov" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "codespell", marker = "extra == 'lint'" },
+    { name = "colorlover", marker = "extra == 'doc'" },
+    { name = "colorlover", marker = "extra == 'explorer'" },
+    { name = "jsonschema", specifier = ">=4.0" },
+    { name = "mypy", marker = "extra == 'lint'" },
+    { name = "numpy", specifier = ">=1.22" },
+    { name = "numpydoc", marker = "extra == 'doc'" },
+    { name = "pandas", specifier = ">=2.0" },
+    { name = "pelicun", marker = "extra == 'test'", specifier = ">=3.9,<3.10" },
+    { name = "plotly", marker = "extra == 'doc'" },
+    { name = "plotly", marker = "extra == 'explorer'" },
+    { name = "pytest", marker = "extra == 'test'", specifier = ">=7" },
+    { name = "pytest-cov", marker = "extra == 'test'" },
+    { name = "qdrant-client", extras = ["fastembed"], marker = "extra == 'explorer'", specifier = ">=1.14.0" },
+    { name = "ruff", marker = "extra == 'lint'", specifier = "==0.7.0" },
+    { name = "scipy", marker = "extra == 'doc'" },
+    { name = "scipy", marker = "extra == 'explorer'" },
+    { name = "simcenter-dlml", extras = ["test", "explorer", "lint", "doc"], marker = "extra == 'dev'" },
+    { name = "sphinx", marker = "extra == 'doc'" },
+    { name = "sphinx-design", marker = "extra == 'doc'" },
+    { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
+    { name = "sphinxcontrib-bibtex", marker = "extra == 'doc'" },
+    { name = "streamlit", marker = "extra == 'explorer'", specifier = ">=1.48.0" },
+    { name = "tqdm", marker = "extra == 'doc'" },
+]
+provides-extras = ["explorer", "test", "lint", "doc", "dev"]
 
 [[package]]
 name = "six"

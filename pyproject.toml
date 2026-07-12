@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "dlml"
+name = "simcenter-dlml"
 version = "3.0.0.dev0"
 description = "Damage and Loss Model Library"
 readme = "README.md"
@@ -40,7 +40,7 @@ dependencies = [
 [project.optional-dependencies]
 # The DLML Explorer web app (`dlml explorer`). numpy and pandas come from the
 # core dependencies above. Note: qdrant-client[fastembed] pulls onnxruntime,
-# whose wheels target modern CPythons, so `dlml[explorer]` effectively needs
+# whose wheels target modern CPythons, so `simcenter-dlml[explorer]` effectively
 # Python >=3.10 even though the core library supports 3.9. The first search run
 # downloads the embedding model from HuggingFace (`dlml explorer` warms it up
 # front; the app also degrades gracefully if the download or the dependencies
@@ -85,7 +85,7 @@ doc = [
 # Everything for local development. Requires Python >=3.10 (via the `explorer`
 # extra's onnxruntime dependency).
 dev = [
-    "dlml[test,explorer,lint,doc]",
+    "simcenter-dlml[test,explorer,lint,doc]",
 ]
 
 [project.scripts]

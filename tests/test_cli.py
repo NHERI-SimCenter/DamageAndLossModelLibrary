@@ -50,7 +50,7 @@ def test_explorer_without_streamlit_prints_install_hint(monkeypatch, capsys):
     monkeypatch.setattr(cli, '_streamlit_installed', lambda: False)
     rc = cli.main(['explorer'])
     assert rc == 1
-    assert 'dlml[explorer]' in capsys.readouterr().err
+    assert 'simcenter-dlml[explorer]' in capsys.readouterr().err
 
 
 def test_explorer_missing_app_errors(monkeypatch, capsys, tmp_path):
