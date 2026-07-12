@@ -1,47 +1,56 @@
 name: Build and deploy documentation
+
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege by default; the job grants itself write for the gh-pages push.
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: docs-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
-
+        uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc
-          python -m pip install -r requirements.txt
-
-      - name: Compute cache key
+          python-version: '3.12'
+      # Installs the package (so the generators can import dlml) plus the Sphinx
+      # toolchain and the plotting libraries the figure generators need.
+      - name: Install the package and doc dependencies
+        run: python -m pip install ".[doc]"
+      - name: Compute the figure-cache key
         id: compute-cache-key
         run: |
-          cd doc/source/_extensions
-          key=$(python compute_global_hash.py)
-          cd ../../../
-          echo "key=$key" >> $GITHUB_OUTPUT
-
-      - name: Restore cache
-        uses: actions/cache@v3
+          key=$(cd doc/source/_extensions && python compute_global_hash.py)
+          echo "key=$key" >> "$GITHUB_OUTPUT"
+      - name: Restore the figure cache
+        uses: actions/cache@v4
         with:
           path: doc/cache
-          key: ${{ steps.compute-cache-key.outputs.key }}
-
+          key: docs-cache-${{ steps.compute-cache-key.outputs.key }}
+          # Fall back to the most recent cache so a data change re-renders only
+          # the changed figures instead of all of them from a cold cache.
+          restore-keys: |
+            docs-cache-
       - name: Build docs
         run: cd doc && make html
-
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        # Only a push to main deploys; PRs and manual runs build only.
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./doc/build/html
