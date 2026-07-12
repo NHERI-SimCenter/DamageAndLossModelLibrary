@@ -47,11 +47,13 @@ The library includes comprehensive model collections across multiple hazards:
 Usage
 =====
 
-There are three primary ways to interact with the DLML:
+There are several ways to work with the DLML:
 
-1. **Discover and Explore Models**: Use the documentation website to browse and understand available models
-2. **Perform Calculations with Pelicun**: Integrate with the SimCenter's Pelicun simulation engine for damage and loss calculations
-3. **Work with Raw Data**: Access the standardized CSV and JSON files directly from the repository
+1. **Install the Python package**: ``pip install simcenter-dlml``, then read the data with the ``dlml`` API (``import dlml``).
+2. **Explore visually**: launch the DLML Explorer web app (``pip install "simcenter-dlml[explorer]"`` then ``dlml explorer``) to search, visualize, and assemble model collections.
+3. **Browse this documentation website**: model descriptions, parameter tables, and fragility/consequence plots.
+4. **Use with Pelicun**: the library is the data backbone for the SimCenter's Pelicun engine and its PBE and R2D desktop applications.
+5. **Work with the raw data**: access the standardized CSV and JSON files directly from the repository.
 
 Data Organization
 =================

@@ -2,7 +2,7 @@ name: Publish to PyPI
 
 # ┌──────────────────────────────────────────────────────────────────────────┐
 # │ FREEZE POLICY (see README, "Release Policy"). This workflow publishes to  │
-# │ PyPI when a git TAG like `v3.0.0` is pushed. A pushed git tag is only a   │
+# │ PyPI when a git TAG like `v3.0` is pushed. A pushed git tag is only a     │
 # │ ref -- it does NOT create a GitHub Release, so `releases/latest` stays    │
 # │ pinned at v2.1.0 for legacy pelicun (<=3.9) that downloads the data from  │
 # │ there. Do NOT add an `on: release:` trigger, and do NOT add any step that │

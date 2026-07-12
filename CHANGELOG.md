@@ -5,7 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [3.0] - 2026-07-12
+
+This release turns the library into an installable Python package and adds a programmatic API, a command-line interface, and the DLML Explorer web app. The model data itself is unchanged and remains backward compatible.
+
+### Added
+- **Installable package:** the library is published to PyPI as `simcenter-dlml` (imported as `dlml`), with the model data bundled inside the wheel — no runtime download.
+- **Python API** (`import dlml`) for discovering datasets and reading model parameters, metadata, and input schemas: `list_datasets`, `available_collections`, `get_fragility` / `get_consequence_repair` / `get_loss_repair` / `get_parameters`, `get_metadata`, `get_schema`, `get_file`, and `validate_asset` / `validate_assets`.
+- **Command-line interface** (`dlml`): `dlml explorer` launches the web app; `dlml list` and `dlml info` inspect the packaged datasets.
+- **DLML Explorer** web app (the `simcenter-dlml[explorer]` extra) for searching, visualizing, and assembling project-specific model collections.
+- Test suite, continuous integration (lint, type-check, spell-check, a 3.9/3.12/3.13 × Linux/Windows/macOS test matrix, and a bare-install check), and PyPI trusted publishing.
+
+### Changed
+- **Distribution:** the project is now distributed as a pip-installable package in addition to being bundled with Pelicun; the source moved to a `src/dlml` layout with the data under `src/dlml/data`.
+- **Self-contained:** the core library, its API, and the documentation build no longer require Pelicun. The package now bundles the CSV-parsing helper (`convert_to_MultiIndex`) and the controlled vocabularies it validates against (the recognized demand types and probability-distribution families), so the core install depends only on pandas, numpy, and jsonschema.
+
+### Distribution
+- Version 3.0 is distributed through PyPI as `simcenter-dlml`. The GitHub repository's `releases/latest` continues to point to v2.1.0, so existing Pelicun (≤3.9) installations — which download the model data from the latest GitHub release — keep working unchanged. Subsequent v3.x updates are published to PyPI.
 
 ---
 
