@@ -95,17 +95,15 @@ display, discover, and select from them alongside the public models.
 with st.expander("Running locally"):
     st.markdown(
         """
-**Prerequisites:** [Python 3.12](https://www.python.org/downloads/) and
-[Git](https://git-scm.com/downloads). Python 3.12 is recommended — the
-`pelicun` dependency requires `numpy < 2`, which does not yet have a working
-build for Python 3.13.
+**Prerequisites:** [Python 3.10 or newer](https://www.python.org/downloads/)
+(3.12 recommended) and [Git](https://git-scm.com/downloads).
         """
     )
 
     st.markdown("**1. Clone the repository**")
     st.code(
-        "git clone https://github.com/tleedegen/DamageAndLossModelLibraryStreamlit.git\n"
-        "cd DamageAndLossModelLibraryStreamlit",
+        "git clone https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git\n"
+        "cd DamageAndLossModelLibrary",
         language="bash",
     )
 
@@ -126,16 +124,21 @@ build for Python 3.13.
         language="powershell",
     )
 
-    st.markdown("**3. Install the dependencies**")
-    st.code("pip install -r requirements.txt", language="bash")
+    st.markdown("**3. Install the Explorer and its dependencies**")
+    st.code('pip install ".[explorer]"', language="bash")
 
     st.markdown("**4. Launch the app**")
-    st.code("streamlit run app.py", language="bash")
+    st.code("dlml explorer", language="bash")
 
     st.markdown(
-        "Streamlit will open the Explorer in your browser at "
-        "[http://localhost:8501](http://localhost:8501). To stop it, press "
-        "`Ctrl+C` in the terminal."
+        "The Explorer opens in your browser at the URL Streamlit prints "
+        "(typically [http://localhost:8501](http://localhost:8501)). The first "
+        "time you search, the Explorer downloads a small embedding model "
+        "(~64 MB) from HuggingFace and caches it — it fetches this up front at "
+        "startup, so it happens only once. Press `Ctrl+C` in the terminal to "
+        "stop.\n\n"
+        "Once `dlml` is on PyPI you can skip the clone and install it directly "
+        "with `pip install dlml[explorer]`."
     )
 
 # ---------------- Contribute ----------------
