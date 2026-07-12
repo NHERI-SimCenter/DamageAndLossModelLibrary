@@ -38,13 +38,19 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-web = [
+# The DLML Explorer web app (`dlml explorer`). numpy and pandas come from the
+# core dependencies above. Note: qdrant-client[fastembed] pulls onnxruntime,
+# whose wheels target modern CPythons, so `dlml[explorer]` effectively needs
+# Python >=3.10 even though the core library supports 3.9. The first search run
+# downloads the embedding model from HuggingFace (`dlml explorer` warms it up
+# front; the app also degrades gracefully if the download or the dependencies
+# are unavailable).
+explorer = [
     "streamlit>=1.48.0",
-    "streamlit-keyup==0.3.0",
-    "rapidfuzz>=3.13.0",
     "plotly",
     "colorlover",
-    "Authlib>=1.6.1",
+    "scipy",
+    "qdrant-client[fastembed]>=1.14.0",
 ]
 test = [
     "pelicun",
@@ -52,11 +58,14 @@ test = [
     "pytest-cov",
 ]
 dev = [
-    "dlml[test,web]",
+    "dlml[test,explorer]",
     "ruff==0.7.0",
     "codespell",
     "mypy",
 ]
+
+[project.scripts]
+dlml = "dlml.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
@@ -121,6 +130,8 @@ preview = false
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["ALL"]
 "tests/*" = ["D", "N802", "SLF001", "PLR2004", "PLR6301"]
+# The CLI prints to stdout by design (that is its user interface).
+"src/dlml/cli.py" = ["T201"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"

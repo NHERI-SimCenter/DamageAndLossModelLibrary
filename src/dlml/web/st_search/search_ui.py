@@ -349,7 +349,20 @@ def render_library(
     allowed_ids: Optional[set] = None
     if _has_component_filter(filters):
         allowed_ids = set(index.filter_only(filters))
+    _render_trees(dataset, hazard_label, allowed_ids)
 
+
+def _render_trees(
+    dataset: Optional[str], hazard_label: str, allowed_ids: Optional[set]
+) -> None:
+    """
+    Render the browse tree(s) for a dataset + hazard selection.
+
+    ``allowed_ids`` prunes every tree to a shared set of component IDs (facet
+    filtering); pass ``None`` to render the full library unpruned. This is the
+    one place the trees are laid out, shared by the normal facet path and the
+    search-unavailable fallback.
+    """
     show_fragility = dataset in ("fragility", None)
     show_consequence = dataset in ("consequence", None)
     show_seismic = hazard_label in ("All", "Seismic")
@@ -379,9 +392,11 @@ def render_search_and_library() -> None:
     browse. Both datasets are indexed, so a query searches whichever the selector
     allows; with no query, the matching browse tree(s) render. "All" spans both —
     useful for finding a model without knowing which dataset it lives in.
-    """
-    index = get_index()
 
+    If the search index cannot be built (the optional search dependencies are
+    missing, or the first-run model download fails offline), the page degrades
+    gracefully: a notice explains why and the full browse tree still renders.
+    """
     dataset_label = st.radio(
         "Dataset",
         _DATASET_LABELS,
@@ -395,6 +410,14 @@ def render_search_and_library() -> None:
     )
     dataset = _DATASET_TO_VALUE[dataset_label]
 
+    try:
+        index = get_index()
+    except Exception as exc:  # noqa: BLE001 -- degrade gracefully, browsing works
+        _render_search_unavailable(exc)
+        st.divider()
+        _render_trees(dataset, "All", None)
+        return
+
     query, mode, filters, hazard_label = render_search_controls(index, dataset)
     st.divider()
 
@@ -402,3 +425,28 @@ def render_search_and_library() -> None:
         render_results(index, query, mode, filters)
     else:
         render_library(index, hazard_label, filters, dataset)
+
+
+def _render_search_unavailable(exc: Exception) -> None:
+    """
+    Explain why component search is unavailable, without a traceback.
+
+    An ``ImportError`` means the optional search dependencies are not installed;
+    anything else (typically a network error while fetching the embedding models
+    on first run) is reported as a transient failure. Browsing still works in
+    both cases.
+    """
+    if isinstance(exc, ImportError):
+        st.info(
+            "🔍 **Component search is unavailable** because its optional "
+            "dependencies are not installed. Install them with "
+            "`pip install 'dlml[explorer]'` (bundles qdrant-client + fastembed). "
+            "You can still browse the full library below."
+        )
+    else:
+        st.warning(
+            "🔍 **Component search is temporarily unavailable** — the embedding "
+            "models could not be loaded. The first run downloads them and needs "
+            "internet access; check your connection and reload. You can still "
+            "browse the full library below."
+        )

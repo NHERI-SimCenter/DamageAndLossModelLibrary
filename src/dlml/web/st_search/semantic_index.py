@@ -411,6 +411,22 @@ def build_tree_corpus(base_path: str | Path | None = None) -> List[ComponentReco
     return records
 
 
+def prefetch_embedding_models() -> None:
+    """
+    Download the search models into the local cache if not already present.
+
+    Called by ``dlml explorer`` at startup so the first search does not stall on
+    a silent download from HuggingFace. Safe to call repeatedly: fastembed
+    caches the models on disk, so later calls just load from that cache. Requires
+    the search extra (fastembed); instantiating each model triggers its download.
+    """
+    from fastembed import SparseTextEmbedding, TextEmbedding
+
+    TextEmbedding(DEFAULT_MODEL)
+    if DEFAULT_SPARSE_MODEL:
+        SparseTextEmbedding(DEFAULT_SPARSE_MODEL)
+
+
 # ─── The index ───────────────────────────────────────────────────────────────
 
 
