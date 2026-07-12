@@ -14,9 +14,9 @@ from zipfile import ZipFile
 
 import numpy as np
 from tqdm import tqdm
-from visuals import plot_fragility, plot_repair
 
-os.chdir('../')
+from dlml._catalog import data_root
+from visuals import plot_fragility, plot_repair
 
 
 def generate_md5(file_path):
@@ -659,10 +659,17 @@ def ignore_file(dlml):
 
 def main():
     """Run the code."""
-    cache_folder = Path('doc/cache')
+    # The doc output lives under doc/ (this file is doc/source/_extensions/...);
+    # resolve those paths from __file__ so they do not depend on the CWD.
+    doc_root = Path(__file__).resolve().parents[2]
+    cache_folder = doc_root / 'cache'
+    doc_folder = doc_root / 'source' / 'dl_doc'
 
-    doc_folder = Path('doc/source/dl_doc')
-    if Path(doc_folder).exists():
+    # The generators discover datasets via relative paths (./seismic, etc.), so
+    # switch into the packaged data tree first.
+    os.chdir(str(data_root()))
+
+    if doc_folder.exists():
         shutil.rmtree(doc_folder)
     doc_folder.mkdir(parents=True, exist_ok=True)
 
