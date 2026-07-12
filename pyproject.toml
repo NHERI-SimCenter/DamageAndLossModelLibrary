@@ -53,15 +53,39 @@ explorer = [
     "qdrant-client[fastembed]>=1.14.0",
 ]
 test = [
-    "pelicun",
+    # Pin to the 3.9 line: it matches the offline-import guard in
+    # tests/test_pelicun_equivalence.py, and it stops the resolver from picking
+    # a pelicun that would fetch DLML data from the frozen releases/latest during
+    # CI. Pelicun 3.10 will depend on dlml itself -- revisit then.
+    "pelicun>=3.9,<3.10",
     "pytest>=7",
     "pytest-cov",
 ]
-dev = [
-    "dlml[test,explorer]",
+# Lint / type / spell tooling, kept separate from `explorer` so CI can install
+# it on Python 3.9.
+lint = [
     "ruff==0.7.0",
     "codespell",
     "mypy",
+]
+# Dependencies for building the Sphinx documentation website (doc/). The doc
+# generators render fragility/consequence plots, so they need plotly, colorlover
+# and scipy; they use dlml's own convert_to_MultiIndex, so no pelicun.
+doc = [
+    "sphinx",
+    "sphinx-design",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-bibtex",
+    "numpydoc",
+    "tqdm",
+    "plotly",
+    "colorlover",
+    "scipy",
+]
+# Everything for local development. Requires Python >=3.10 (via the `explorer`
+# extra's onnxruntime dependency).
+dev = [
+    "dlml[test,explorer,lint,doc]",
 ]
 
 [project.scripts]
