@@ -2,7 +2,7 @@
 # dark palette over this via CSS — Streamlit itself only supports one default.
 [theme]
 base = "light"
-primaryColor = "#2563EB"
+primaryColor = "#C8382E"
 backgroundColor = "#F4F6FB"
 secondaryBackgroundColor = "#FFFFFF"
 textColor = "#171C26"

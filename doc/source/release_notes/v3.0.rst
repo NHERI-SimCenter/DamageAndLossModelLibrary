@@ -1,7 +1,7 @@
 .. _changes_v3_0:
 
 ===========================
-Version 3.0 (July 12, 2026)
+Version 3.0 (July 13, 2026)
 ===========================
 
 This release turns the library into an installable Python package and adds a programmatic API, a command-line interface, and the DLML Explorer web app. The model data itself is unchanged and remains backward compatible.

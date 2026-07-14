@@ -31,7 +31,7 @@ from dlml import api
 #: light/dark toggle is a CSS overlay and works regardless of these values.
 _THEME = {
     'base': 'light',
-    'primaryColor': '#2563EB',
+    'primaryColor': '#C8382E',
     'backgroundColor': '#F4F6FB',
     'secondaryBackgroundColor': '#FFFFFF',
     'textColor': '#171C26',

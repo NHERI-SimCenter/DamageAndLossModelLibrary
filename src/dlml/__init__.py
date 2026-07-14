@@ -24,7 +24,7 @@ from dlml.vocabulary import (
 )
 
 try:
-    __version__ = metadata.version('dlml')
+    __version__ = metadata.version('simcenter-dlml')
 except metadata.PackageNotFoundError:  # pragma: no cover
     __version__ = '0.0.0+local'
 
