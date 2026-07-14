@@ -5027,6 +5027,11 @@ test = [
     { name = "pytest-cov" },
 ]
 
+[package.dev-dependencies]
+deploy = [
+    { name = "simcenter-dlml", extra = ["explorer"] },
+]
+
 [package.metadata]
 requires-dist = [
     { name = "codespell", marker = "extra == 'lint'" },
@@ -5055,6 +5060,9 @@ requires-dist = [
     { name = "tqdm", marker = "extra == 'doc'" },
 ]
 provides-extras = ["explorer", "test", "lint", "doc", "dev"]
+
+[package.metadata.requires-dev]
+deploy = [{ name = "simcenter-dlml", extras = ["explorer"] }]
 
 [[package]]
 name = "six"

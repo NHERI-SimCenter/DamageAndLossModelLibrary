@@ -96,6 +96,18 @@ Homepage = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
 Documentation = "https://nheri-simcenter.github.io/DamageAndLossModelLibrary/"
 Repository = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
 
+# Streamlit Community Cloud installs dependencies with `uv sync` when a uv.lock
+# is present, and `uv sync` installs the base package plus DEFAULT GROUPS but NOT
+# optional-dependency extras. Expose the web deps as a default group that simply
+# references the `explorer` extra (single source of truth), so the deployed app
+# gets everything it needs. This does not affect the published wheel: dependency
+# groups are dev-time only, so `pip install simcenter-dlml` stays lightweight.
+[dependency-groups]
+deploy = ["simcenter-dlml[explorer]"]
+
+[tool.uv]
+default-groups = ["deploy"]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/dlml"]
 exclude = [
