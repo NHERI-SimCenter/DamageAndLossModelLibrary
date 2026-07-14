@@ -17,7 +17,7 @@ The following models are available:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -69,7 +69,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -120,7 +120,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -172,7 +172,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -223,7 +223,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -275,7 +275,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -326,7 +326,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -378,7 +378,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -429,7 +429,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -480,7 +480,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -531,7 +531,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -582,7 +582,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Unanchored equipment that is not vibration isolated
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -634,7 +634,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -685,7 +685,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -737,7 +737,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -789,7 +789,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -840,7 +840,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -892,7 +892,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -944,7 +944,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -995,7 +995,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1047,7 +1047,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1099,7 +1099,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1150,7 +1150,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Vibration isolated equipment that is not snubbed or restrained
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1202,7 +1202,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1254,7 +1254,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1305,7 +1305,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1357,7 +1357,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1409,7 +1409,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1460,7 +1460,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1512,7 +1512,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1564,7 +1564,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1615,7 +1615,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1667,7 +1667,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1719,7 +1719,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1770,7 +1770,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: Equipment that is either hard anchored or is vibration isolated with seismic snubbers/restraints
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1822,7 +1822,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

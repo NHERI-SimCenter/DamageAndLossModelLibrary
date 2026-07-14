@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The failure can be influenced by factors such as the material and construction of the door, the strength and attachment of the supporting tracks and hardware, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -39,7 +39,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -62,7 +62,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -86,7 +86,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door. The model also does not explicitly account for potential vulnerabilities related to the door's connection to the surrounding wall or the operation of the garage door mechanism itself under pressure loads.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -110,7 +110,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is reasonable to assume that this is a simplified representation. The actual performance of reinforced garage doors can be influenced by the specifics of the reinforcement, the quality of installation of tracks and hardware, and potential impact from debris (though debris impact is modeled separately for openings), details of which are not elaborated upon in these excerpts.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -132,7 +132,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -159,7 +159,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -183,7 +183,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: This capacity function represents a simplification of real-world door behavior, and the sources lack specific information on the test series or engineering analyses used to derive these parameters for this particular type of garage door.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

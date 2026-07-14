@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Though the tiles' fragilities are taken from experimental data, the authors acknowledge this is among the first to analyze the fragility of clay tiles, implying there's a lack of established comparison data.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -39,7 +39,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -61,7 +61,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -83,7 +83,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

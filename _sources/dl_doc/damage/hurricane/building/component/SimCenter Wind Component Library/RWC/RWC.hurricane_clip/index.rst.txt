@@ -17,7 +17,7 @@ The following models are available:
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -40,7 +40,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

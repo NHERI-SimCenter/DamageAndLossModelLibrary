@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: A key limitation is the relatively high variability in the capacity data. The specific interaction between the wet epoxy and the toenails and reliance on this particular epoxy product and application method are factors to consider.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -40,7 +40,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with shorter or longer cure times or different epoxy products.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -64,7 +64,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Use of standardized small wood blocks might not fully represent actual retrofit applications. The short 24-48 hour epoxy set time is specific; performance might vary with different products or cure durations. As with other individual tests, results might not entirely reflect the behavior within a complete roof system
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -88,7 +88,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Use of standardized large wood blocks might not fully represent actual retrofit applications. One-week epoxy set time is specific; performance might differ with various epoxy products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system. Note that larger blocks were shown to provide greater capacity than small blocks
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

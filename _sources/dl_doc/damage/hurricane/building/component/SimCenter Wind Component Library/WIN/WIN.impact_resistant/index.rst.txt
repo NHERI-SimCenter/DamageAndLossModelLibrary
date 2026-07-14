@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly detailed within these excerpts, but it's reasonable to assume that the FPHLM likely relies on standardized testing procedures and that real-world performance could still vary based on factors such as the specific manufacturer and installation quality of the impact-resistant windows, which are not elaborated upon in this dissertation.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

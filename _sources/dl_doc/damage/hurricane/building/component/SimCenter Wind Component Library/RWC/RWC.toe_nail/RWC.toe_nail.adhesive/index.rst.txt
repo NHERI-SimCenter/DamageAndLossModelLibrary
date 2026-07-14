@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Results are based on individual connection tests and may not reflect behavior in a complete roof system where load-sharing and sheathing presence influence performance. Performance is specific to the type of acrylic adhesive, application method (wet toenails), and cure time.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -40,7 +40,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: A significant limitation is the high coefficient of variation, indicating considerable variability in the uplift capacity achieved. Soaking the wood makes these results specific to this pre-treatment. Results may not fully capture the behavior within a complete roof system.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -64,7 +64,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Use of standardized small wood blocks as a retrofit method might not fully represent actual applications. One-week adhesive set time is specific; performance might differ with various acrylic adhesive products or cure durations. As with individual tests, results might not entirely reflect the behavior within a complete roof system.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -88,7 +88,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity. Performance is specific to the application of a 1/4 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system."
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -112,7 +112,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The connection method using small adhesive beads might not provide a substantial contact area, potentially limiting overall uplift capacity, and the relatively high coefficient of variation indicates considerable variability. Performance is specific to the application of a 1/2 inch acrylic adhesive bead. As with individual tests, results may not entirely reflect behavior within a complete roof system.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -136,7 +136,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The small sample size of only three specimens might not provide a comprehensive understanding of the connection's behavior and could affect the statistical significance of the results. Performance is specific to the foaming polyurethane adhesive product and application method. As with individual tests, results may not entirely reflect the behavior within a complete roof system
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

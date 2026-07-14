@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed within the provided text, but it is important to acknowledge that real-world performance can vary based on the specific type and quality of the shutters, the installation methods, and the condition of the underlying window frame, details of which are not elaborated upon.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

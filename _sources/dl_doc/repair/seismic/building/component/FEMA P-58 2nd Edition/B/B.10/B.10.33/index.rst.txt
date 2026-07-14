@@ -15,7 +15,7 @@ The following models are available:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -64,7 +64,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -113,7 +113,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -162,7 +162,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -211,7 +211,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -260,7 +260,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -309,7 +309,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -358,7 +358,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -407,7 +407,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -456,7 +456,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -505,7 +505,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -554,7 +554,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -603,7 +603,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -652,7 +652,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -701,7 +701,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -750,7 +750,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -799,7 +799,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -848,7 +848,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -897,7 +897,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -946,7 +946,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -995,7 +995,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1044,7 +1044,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1093,7 +1093,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1142,7 +1142,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1191,7 +1191,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1240,7 +1240,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1289,7 +1289,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1338,7 +1338,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1387,7 +1387,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1436,7 +1436,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1485,7 +1485,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1534,7 +1534,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1583,7 +1583,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1632,7 +1632,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1681,7 +1681,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1730,7 +1730,7 @@ The following repair consequences are available for this model:
 | Costing is on a per bay basis.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1779,7 +1779,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1828,7 +1828,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1877,7 +1877,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1926,7 +1926,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -1975,7 +1975,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2024,7 +2024,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2073,7 +2073,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2122,7 +2122,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2171,7 +2171,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC minimum SCBF criteria.   Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2220,7 +2220,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2269,7 +2269,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2318,7 +2318,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2367,7 +2367,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2416,7 +2416,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2465,7 +2465,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2514,7 +2514,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2563,7 +2563,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2612,7 +2612,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2661,7 +2661,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2710,7 +2710,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2759,7 +2759,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2808,7 +2808,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2857,7 +2857,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2906,7 +2906,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -2955,7 +2955,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3004,7 +3004,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3053,7 +3053,7 @@ The following repair consequences are available for this model:
 | Costing on a per bay basis, equivalent to AISC OCBF criteria.  Braces may be HSS, WF, or Angle.  Costing does not include fireproofing removal or reapplication cost.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3103,7 +3103,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3153,7 +3153,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3203,7 +3203,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3253,7 +3253,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3303,7 +3303,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3353,7 +3353,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3403,7 +3403,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3453,7 +3453,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3503,7 +3503,7 @@ The following repair consequences are available for this model:
 | Notes: Performance data has 1 damage state where as the cost data has 3 damage states.  The performance data listed in DS1 appears to correspond to the cost data currently shown in DS3…  Please confirm if two additional damage state performances should be added or if only one cost damage state should be included.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3552,7 +3552,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3601,7 +3601,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3650,7 +3650,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3699,7 +3699,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3748,7 +3748,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -3797,7 +3797,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

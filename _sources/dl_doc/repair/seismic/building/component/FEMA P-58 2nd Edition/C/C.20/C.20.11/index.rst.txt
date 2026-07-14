@@ -18,7 +18,7 @@ The following models are available:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -70,7 +70,7 @@ The following repair consequences are available for this model:
 | Notes: Confirm median demand and dispersion values
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -122,7 +122,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -174,7 +174,7 @@ The following repair consequences are available for this model:
 | Notes: Confirm median demand and dispersion values.  Base document noted that there was insufficient data to establish median demand or dispersion values.  The median demand and dispersion values listed are from a best fit approximation of the data performed by MKA.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -226,7 +226,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -278,7 +278,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -330,7 +330,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -382,7 +382,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -434,7 +434,7 @@ The following repair consequences are available for this model:
 | Notes: User to provide median demand and dispersion values.  The values listed are default PACT values and do not represent the response of this component.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -485,7 +485,7 @@ The following repair consequences are available for this model:
 | Seismic Installation Conditions: All
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

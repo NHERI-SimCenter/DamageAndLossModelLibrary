@@ -23,7 +23,7 @@ The following models are available:
 | LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

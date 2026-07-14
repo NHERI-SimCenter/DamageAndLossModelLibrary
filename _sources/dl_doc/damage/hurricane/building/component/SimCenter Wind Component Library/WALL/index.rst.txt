@@ -17,7 +17,7 @@ The following models are available:
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -39,7 +39,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -61,7 +61,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -83,7 +83,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -106,7 +106,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -131,7 +131,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -156,7 +156,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -182,7 +182,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these unreinforced gable end walls, such as materials or specific fastening schedules, are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -207,7 +207,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -232,7 +232,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -257,7 +257,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The wall model in the FPHLM is a simplification, for example, treating walls as having simple supports, which is noted as an oversimplification of true conditions. Specific construction details for these reinforced gable end walls, particularly the nature and extent of the "Reinforcement", are not explicitly detailed within the provided excerpts. Component capacities in the model are statistical representations based on available literature and engineering judgment, which may not fully capture the variability in actual construction practices or performance. Validation of the model, including wall damage, is limited by available detailed damage data
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -280,7 +280,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -302,7 +302,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

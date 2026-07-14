@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and age of shingles, the quality and spacing of nails, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -39,7 +39,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -62,7 +62,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -85,7 +85,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -110,7 +110,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text. The actual failure can be influenced by factors such as the specific type and quality of high wind shingles, the precise application of the 6-nail pattern, the condition of the underlying sheathing, and potential damage from wind-borne debris (though debris impact is modeled separately for openings) - none of which are detailed.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

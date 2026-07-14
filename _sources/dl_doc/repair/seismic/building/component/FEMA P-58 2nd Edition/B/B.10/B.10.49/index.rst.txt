@@ -16,7 +16,7 @@ The following models are available:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -66,7 +66,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -117,7 +117,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -168,7 +168,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -219,7 +219,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -270,7 +270,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -321,7 +321,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -372,7 +372,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -423,7 +423,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -474,7 +474,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -525,7 +525,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -576,7 +576,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -627,7 +627,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -678,7 +678,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -729,7 +729,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -780,7 +780,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -831,7 +831,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -882,7 +882,7 @@ The following repair consequences are available for this model:
 | Author: John Wallace
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

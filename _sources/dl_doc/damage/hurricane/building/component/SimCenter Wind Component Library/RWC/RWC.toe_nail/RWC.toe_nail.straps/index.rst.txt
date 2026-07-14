@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Placing the strap on the inside reduces uplift capacity compared to an outside installation due to the resulting eccentric load path and rotation of the top plate. High variability was also noted for this configuration
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -40,7 +40,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: While showing higher uplift capacity than when the strap was installed on the inside, the capacity data is specific to the idealized test setup. Manufacturers' published values may differ due to their reliance on ASTM testing procedures and safety factors
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -64,7 +64,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: While this configuration significantly increased the uplift capacity compared to a single strap, the capacity was not doubled, suggesting potential interaction or non-linear behavior. System tests (9 and 11) using this configuration did not reach rafter-to-top plate connection failure, as failure occurred in the crib wall. This limits the ultimate capacity data specifically for the connection itself in those system tests.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -88,7 +88,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: While this test aimed to simulate the presence of wall sheathing, the plywood spacer implementation might not fully replicate a full wall sheathing system. Results are from individual tests and may not directly translate to behavior in a continuous roof system.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -112,7 +112,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The un-nailed plywood spacer's effect might differ from a fully integrated wall sheathing system. Results are specific to individual connection tests and may not fully represent performance in a continuous roof system where load-sharing occurs
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -136,7 +136,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: These results are derived from individual connection tests, and the behavior and capacity might differ in a full roof system due to potential load-sharing effects and the presence of sheathing and other structural elements
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -160,7 +160,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: A key limitation is that this 'new large strap' provided a direct connection from the rafter to the wall stud, bypassing the top plate for the strap's nailed connection, which is different from typical large straps. As with individual tests, results may not fully reflect the behavior in a complete roof system
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

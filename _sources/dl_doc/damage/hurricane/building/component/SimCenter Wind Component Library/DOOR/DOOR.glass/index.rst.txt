@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. ASTM E-1300 specifies strength under uniform wind pressure. However, wind loads on buildings, especially during hurricanes, can be complex and non-uniform, with varying pressures at different locations on a window. Additionally, while the study converts the 60-second resistance to a 3-second strength, this conversion factor is an approximation. The actual behavior of glass under different load durations might be more complex. Additionally, the strength of weathered or previously damaged glass might be lower than that of new, undamaged glass, which is likely what ASTM standards address. This time-dependent degradation of glass strength is not explicitly considered.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -40,7 +40,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The sources do not explicitly specify the precise type of entry door that this capacity function considers. Resistances assigned to building components are based on results from laboratory test data, engineering analyses coupled with laboratory data, and in some cases, engineering judgment. The model might not fully capture the wide variety of SG door constructions, installation methods, the condition of the door and its frame, or the complexities of failure mechanisms that can occur during a hurricane. Further, the lack of specific details about the test series or engineering analyses used to derive these fragility parameters for SG doors, makes it difficult to fully understand the empirical or analytical basis for this specific capacity function.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

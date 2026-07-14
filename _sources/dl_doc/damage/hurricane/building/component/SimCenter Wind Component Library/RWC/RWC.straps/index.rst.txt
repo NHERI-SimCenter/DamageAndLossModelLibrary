@@ -19,7 +19,7 @@ The following models are available:
 | LIMITATIONS: A limitation of this capacity function, as with other component resistances in the model, lies in the fact that these are statistical representations based on laboratory data, engineering analyses, and sometimes engineering judgment. Additionally, they do not give a detailed physical description of the straps themselves, such as their dimensions, material, or specific installation methods. The focus is on the functional capacity of the connection rather than a precise engineering specification of the strap itself. The underlying details of what constitutes a "strap" in the model's calculations are likely based on engineering standards and typical construction practices, but these specifics are not elaborated upon in the provided excerpts.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

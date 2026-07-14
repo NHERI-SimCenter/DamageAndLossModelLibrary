@@ -16,7 +16,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to recognize that the model likely uses a simplified representation of window performance, and the actual failure of standard windows in a hurricane can be influenced by a variety of factors not detailed in these excerpts, such as the size and type of the window, the quality of installation, and the impact of wind-borne debris (though debris damage is modeled separately in the study).
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -39,7 +39,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -63,7 +63,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -85,7 +85,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -107,7 +107,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -131,7 +131,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 1-story structure. The specific size of the window described in the capacity function is not mentioned.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -155,7 +155,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: This study does not explicitly specify the type of glass (e.g., annealed, tempered). A limitation of these capacity functions is that they are statistical representations based on laboratory test data, engineering analyses, and in some cases engineering judgment, which may not fully capture the complexities of real-world window installations, the variability in material properties, and the diverse characteristics of windborne debris. The model also simplifies by considering representative building geometries and may not account for specific details of individual windows on a given 2-story structure. The specific size of the window described in the capacity function is not mentioned.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -179,7 +179,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The building archetype may not represent the diversity of real-world residential structures and ages within a community. Further, the study does not account for complex terrain effects on wind loads, potentially limiting the applicability of the findings to more varied real-world scenarios. Finally, the fragility analysis mentions a specific window size (3.175 mm in 3.72 sq. m window) for calibration. Glass strength is known to be dependent on size and boundary conditions, so the fragility derived for this specific size might not be directly applicable to windows of different dimensions or mounting.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -204,7 +204,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -228,7 +228,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -252,7 +252,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -276,7 +276,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -300,7 +300,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -324,7 +324,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -347,7 +347,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 

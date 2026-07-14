@@ -22,7 +22,7 @@ The following models are available:
 | LIMITATIONS: Limitations of this capacity function are not explicitly discussed in the provided text, but it is important to acknowledge that this is a simplified representation of a complex structural element, and its actual performance in a hurricane can be influenced by factors such as the age and condition of the lumber, the quality and installation of the nails, and the specific geometry of the connection, none of which are detailed in relation to a specific test series within these sources.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -47,7 +47,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The high variability observed in individual tests suggests a limitation in the predictability of these connections. Results are specific to the tested materials and setup.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -72,7 +72,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: The provided sources do not explicitly detail specific test series for roof-to-wall connections using toe nails. The capacity function for toe-nailed connections is a statistical representation of their resistance, derived from laboratory test data, engineering analyses, and potentially engineering judgment, as mentioned for other building components. A key limitation of this capacity function is that it represents a simplified model of a complex failure mechanism and relies on statistical data which may not fully capture the variability in actual construction practices and the performance of toe-nailed connections under diverse hurricane conditions.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -96,7 +96,7 @@ Suggested Block Size: 1 EA
 | LIMITATIONS: Limitations of this capacity function are not explicitly detailed in the provided text, but it is important to note that as it is based on unpublished tests at a specific university and assumes the use of Simpson Strong-Tie H10 connectors on every truss, its accuracy in representing the full spectrum of real-world installations and conditions might be limited by variations in construction quality, specific connector installation details, and the age and condition of the underlying structural members, none of which are addressed within these sources. They also do not offer a detailed description of the connector's physical characteristics or design.
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -119,7 +119,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -141,7 +141,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -164,7 +164,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -187,7 +187,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -210,7 +210,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
@@ -233,7 +233,7 @@ Suggested Block Size: 1 EA
 
 
 
-Suggested Block Size: 1 EA 
+Suggested Block Size: 1 EA (round up to integer quantity)
 
 
 
