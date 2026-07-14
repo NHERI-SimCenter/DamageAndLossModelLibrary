@@ -86,7 +86,7 @@ models: search and filter the library, inspect interactive fragility curves and
 consequence functions, add components to a selection, and download a
 project-ready bundle. The easiest way to try it is the hosted version:
 
-**[Open the DLML Explorer »](https://REPLACE-WITH-EXPLORER-URL)**
+**[Open the DLML Explorer »](https://dlml-explorer.streamlit.app)**
 
 You can also run it locally — for example, to explore alongside your own private
 models — by installing the explorer extra:
