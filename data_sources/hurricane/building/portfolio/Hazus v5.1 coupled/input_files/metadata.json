@@ -1,7 +1,7 @@
 {
   "_GeneralInformation": {
-    "ShortName": "Hazus Hurricane Methodology - Buildings",
-    "Description": "The models in this dataset are based on version 4.2 of the Hazus Hurricane Model Technical Manual",
+    "ShortName": "SimCenter Coupled Hurricane Models (Hazus-calibrated)",
+    "Description": "These building models are a SimCenter recalibration of the building models from the Hazus Hurricane Methodology for damage-driven (coupled) loss assessment. The Hazus models provide damage and loss using separate multilinear functions of wind speed; here, normal and lognormal fragility functions were fit to the Hazus damage curves, and a deterministic loss ratio was calibrated for each damage state so that the results closely approximate most of the original Hazus loss functions. This adapts the model form for coupled analysis while preserving the underlying Hazus data. For the unmodified source models, see the 'Hazus Hurricane Methodology - Buildings' dataset.",
     "Version": "1.0",
     "ComponentGroups": {
       "W - Wood": {
