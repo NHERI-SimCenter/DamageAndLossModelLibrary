@@ -1,7 +1,7 @@
 """Configure Sphinx to run a custom script to generate files."""
 
-import os
 import subprocess
+import sys
 from pathlib import Path
 
 from sphinx.application import Sphinx
@@ -21,7 +21,7 @@ def run_script(app: Sphinx):
     """
     script_path = str(Path(app.srcdir) / '_extensions' / 'generate_dl_doc.py')
 
-    result = subprocess.run(['python', script_path], check=True)  # noqa: S603, S607
+    result = subprocess.run([sys.executable, script_path], check=True)  # noqa: S603
 
     if result.returncode != 0:
         msg = 'Script execution failed'

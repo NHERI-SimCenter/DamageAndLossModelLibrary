@@ -1,0 +1,45 @@
+{
+  "name": "DLML Explorer",
+  // Python 3.11 clears the >=3.10 floor that onnxruntime (via fastembed) needs
+  // for the `explorer` extra.
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.11-bullseye",
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md",
+        "src/dlml/web/app.py"
+      ]
+    },
+    "vscode": {
+      "settings": {},
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+  // Install the package (editable) with the explorer extra -- this provides the
+  // `dlml` command and all the app's dependencies. Replaces the old
+  // requirements.txt + standalone streamlit install.
+  "updateContentCommand": "pip install -e \".[explorer]\"",
+  // `dlml explorer` launches Streamlit headless; the first launch downloads the
+  // ~64 MB search model from HuggingFace. Codespaces serves through a proxy, so
+  // CORS/XSRF are disabled via containerEnv below (the CLI doesn't expose those
+  // flags, but Streamlit reads them from the environment).
+  "postAttachCommand": {
+    "server": "dlml explorer"
+  },
+  "containerEnv": {
+    "STREAMLIT_SERVER_ENABLE_CORS": "false",
+    "STREAMLIT_SERVER_ENABLE_XSRF_PROTECTION": "false"
+  },
+  "portsAttributes": {
+    "8501": {
+      "label": "DLML Explorer",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [
+    8501
+  ]
+}

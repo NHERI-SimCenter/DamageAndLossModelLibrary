@@ -6,3 +6,36 @@
 /.ropeproject/
 /doc/cache/
 /doc/source/dl_doc/
+
+
+#Dev Enviornment
+/.vscode/
+/.idea/
+/.venv/
+
+# Secrets (never commit or package these)
+**/secrets.toml
+.env
+
+# Session data
+*.session
+session_store/
+/.cache/
+
+# Local scratch data
+/DB/
+
+# Packaging build artifacts
+/dist/
+/build/
+*.egg-info/
+src/*.egg-info/
+__pycache__/
+
+# Test & tooling caches
+.coverage
+.coverage.*
+/htmlcov/
+/.pytest_cache/
+/.mypy_cache/
+/.ruff_cache/

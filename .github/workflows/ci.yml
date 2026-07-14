@@ -1,0 +1,94 @@
+name: CI
+
+on:
+  push:
+    branches: [main, v3]
+  pull_request:
+  workflow_dispatch:
+
+# Least privilege: CI only reads the checkout.
+permissions:
+  contents: read
+
+# Cancel superseded runs of the same ref (e.g. rapid pushes to a PR).
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Pin uv so CI matches the committed uv.lock resolver and the local dev version.
+  UV_VERSION: "0.10.9"
+
+jobs:
+  checks:
+    name: Lint, type, spell, tests + coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: "3.12"
+          enable-cache: true
+      - name: Sync the checks environment (test + lint)
+        run: uv sync --locked --extra test --extra lint
+      # scripts/check.sh is the single source of truth (also the pre-commit hook):
+      - name: Run the full gate
+        run: bash scripts/check.sh
+        env:
+          # The env is already synced above; keep check.sh's inner `uv run`
+          # calls from re-syncing to defaults.
+          UV_NO_SYNC: "1"
+
+  test:
+    name: Tests (${{ matrix.os }}, py${{ matrix.python }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-latest, python: "3.9" }
+          - { os: ubuntu-latest, python: "3.12" }
+          - { os: ubuntu-latest, python: "3.13" }
+          - { os: windows-latest, python: "3.12" }
+          - { os: macos-latest, python: "3.12" }
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - name: Run the test suite
+        run: uv run --locked --extra test pytest
+
+  bare-install:
+    name: Bare install (core only)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: ${{ env.UV_VERSION }}
+          python-version: "3.12"
+          enable-cache: true
+      - name: Build the sdist and wheel
+        run: uv build
+      # Install from the SDIST (not the tree) into a clean, extras-free env, so a
+      # missing data file in the sdist would surface as an empty dataset list.
+      - name: Install from sdist and smoke-test the core API + CLI
+        run: |
+          uv venv /tmp/bare --python 3.12
+          source /tmp/bare/bin/activate
+          uv pip install dist/*.tar.gz
+          python -c "import dlml; ids = dlml.list_datasets(); assert ids, 'no datasets discovered'; print(len(ids), 'datasets')"
+          dlml list | head -3
+          FIRST=$(dlml list | head -1 | sed 's/  \[.*//')
+          dlml info "$FIRST"
+          if dlml explorer >/dev/null 2>&1; then
+            echo "ERROR: bare 'dlml explorer' should exit non-zero"; exit 1
+          fi
+          echo "bare 'dlml explorer' correctly refused (exit 1)"

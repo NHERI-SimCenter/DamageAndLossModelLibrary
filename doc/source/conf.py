@@ -67,8 +67,8 @@ autosummary_generate = True  # Turn on sphinx.ext.autosummary
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'numpy': ('https://numpy.org/doc/stable/objects.inv', None),
-    'scipy': ('https://docs.scipy.org/doc/scipy/objects.inv', None),
+    'numpy': ('https://numpy.org/doc/stable/', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy/', None),
 }
 
 numpydoc_show_class_members = False  # TODO(JVM): remove and extend docstrings

@@ -1,39 +1,201 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "dlml"
-version = "2.1.0"
+name = "simcenter-dlml"
+version = "3.0"
 description = "Damage and Loss Model Library"
 readme = "README.md"
-license = {text = "BSD-3-Clause"}
+license = { text = "BSD-3-Clause" }
+requires-python = ">=3.9"
 authors = [
-    {name = "Adam Zsarnóczay", email = "adamzs@stanford.edu"}
+    { name = "Adam Zsarnóczay", email = "adamzs@stanford.edu" },
+]
+keywords = [
+    "natural-hazards",
+    "fragility",
+    "consequence",
+    "damage-and-loss",
+    "pelicun",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = [
+    "pandas>=2.0",
+    "numpy>=1.22",
+    "jsonschema>=4.0",
+]
+
+[project.optional-dependencies]
+# The DLML Explorer web app (`dlml explorer`). numpy and pandas come from the
+# core dependencies above. Note: qdrant-client[fastembed] pulls onnxruntime,
+# whose wheels target modern CPythons, so `simcenter-dlml[explorer]` effectively
+# Python >=3.10 even though the core library supports 3.9. The first search run
+# downloads the embedding model from HuggingFace (`dlml explorer` warms it up
+# front; the app also degrades gracefully if the download or the dependencies
+# are unavailable).
+explorer = [
+    "streamlit>=1.48.0",
+    "plotly",
+    "colorlover",
+    "scipy",
+    "qdrant-client[fastembed]>=1.14.0",
+]
+test = [
+    # Pin to the 3.9 line: it matches the offline-import guard in
+    # tests/test_pelicun_equivalence.py, and it stops the resolver from picking
+    # a pelicun that would fetch DLML data from the frozen releases/latest during
+    # CI. Pelicun 3.10 will depend on dlml itself -- revisit then.
+    "pelicun>=3.9,<3.10",
+    "pytest>=7",
+    "pytest-cov",
+]
+# Lint / type / spell tooling, kept separate from `explorer` so CI can install
+# it on Python 3.9.
+lint = [
+    "ruff==0.7.0",
+    "codespell",
+    "mypy",
+]
+# Dependencies for building the Sphinx documentation website (doc/). The doc
+# generators render fragility/consequence plots, so they need plotly, colorlover
+# and scipy; they use dlml's own convert_to_MultiIndex, so no pelicun.
+doc = [
+    "sphinx",
+    "sphinx-design",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-bibtex",
+    "numpydoc",
+    "tqdm",
+    "plotly",
+    "colorlover",
+    "scipy",
+]
+# Everything for local development. Requires Python >=3.10 (via the `explorer`
+# extra's onnxruntime dependency).
+dev = [
+    "simcenter-dlml[test,explorer,lint,doc]",
+]
+
+[project.scripts]
+dlml = "dlml.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
+Documentation = "https://nheri-simcenter.github.io/DamageAndLossModelLibrary/"
+Repository = "https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/dlml"]
+exclude = [
+    "**/__pycache__/**",
+    "**/*.pyc",
+]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/dlml",
+    "README.md",
+    "LICENSE",
+]
+exclude = [
+    "**/__pycache__/**",
+    "**/*.pyc",
 ]
 
 [tool.ruff]
 line-length = 85
+extend-exclude = ["src/dlml/data", "src/dlml/web", "doc"]
+# Honor extend-exclude even when a path is passed explicitly (pre-commit,
+# editors), so the web app is never linted by any invocation.
+force-exclude = true
 
 [tool.ruff.lint]
-# Enable all known categories
 select = ["ALL"]
-ignore = ["ANN", "D211", "D212", "Q000", "Q003", "COM812", "D203", "ISC001", "E501", "ERA001", "PGH003", "FIX002", "TD003", "S101", "N801", "S311", "G004", "SIM102", "SIM108", "NPY002", "F401", "INP001", "PLR2004", "D100"]
+ignore = [
+    "ANN",
+    "D211",
+    "D212",
+    "Q000",
+    "Q003",
+    "COM812",
+    "D203",
+    "ISC001",
+    "E501",
+    "ERA001",
+    "PGH003",
+    "FIX002",
+    "TD003",
+    "S101",
+    "N801",
+    "S311",
+    "G004",
+    "SIM102",
+    "SIM108",
+    "NPY002",
+    "F401",
+    "INP001",
+    "PLR2004",
+    "D100",
+]
 preview = false
 
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = ["ALL"]
+"tests/*" = ["D", "N802", "SLF001", "PLR2004", "PLR6301"]
+# The CLI prints to stdout by design (that is its user interface).
+"src/dlml/cli.py" = ["T201"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
 
 [tool.ruff.lint.pylint]
-max-args=15
-max-locals=50
-max-returns=11
-max-branches=50
-max-statements=150
-max-bool-expr=5
+max-args = 15
+max-locals = 50
+max-returns = 11
+max-branches = 50
+max-statements = 150
+max-bool-expr = 5
 
 [tool.ruff.format]
 quote-style = "single"
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+# The web/ subpackage (the Streamlit app) is not exercised by the test suite;
+# omit it so the UI modules do not count against the coverage.
+omit = ["*/dlml/web/*"]
+
+[tool.mypy]
+files = ["src/dlml"]
+# The data tree holds pelicun-specific authoring/config scripts, and web/ is
+# the Streamlit app (excluded from every gate for now) -- neither is part of
+# the typed dlml API.
+exclude = "^src/dlml/(data|web)/"
+ignore_missing_imports = true
+
 [tool.codespell]
 ignore-words = ["ignore_words.txt"]
-skip = ["*.html", "*/build/*", "*/DB/*"]
+skip = [
+    "*.html",
+    "*/build/*",
+    "*/DB/*",
+    "src/dlml/data/*",
+    "src/dlml/web/*",
+    "data_sources/*",
+    "*/.venv/*",
+    "./dist/*",
+]

@@ -1,0 +1,9 @@
+# Light is the default theme. The in-app dark toggle (st_ui/theme.py) layers a
+# dark palette over this via CSS — Streamlit itself only supports one default.
+[theme]
+base = "light"
+primaryColor = "#C8382E"
+backgroundColor = "#F4F6FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#171C26"
+font = "sans serif"

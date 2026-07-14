@@ -19,6 +19,8 @@ This library is a project from the NHERI SimCenter designed to address a critica
 
 The library includes comprehensive model collections for **seismic**, **hurricane**, and **flood** hazards, covering buildings, infrastructure networks, and individual components from sources including FEMA P-58, FEMA Hazus, and peer-reviewed academic research.
 
+**Getting started:** install the Python package with ``pip install simcenter-dlml`` and read the data with the ``dlml`` API, or launch the interactive DLML Explorer with ``pip install "simcenter-dlml[explorer]"`` and ``dlml explorer``. See the project `README <https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary>`_ for details.
+
 .. toctree::
    :caption: Documentation
    :maxdepth: 4

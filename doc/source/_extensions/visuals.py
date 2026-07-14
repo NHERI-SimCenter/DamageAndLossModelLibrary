@@ -36,11 +36,9 @@
 # Contributors:
 # Adam Zsarnóczay
 
-import argparse
 import json
 import os
 import shutil
-import sys
 from copy import deepcopy
 from pathlib import Path
 from textwrap import wrap
@@ -49,10 +47,11 @@ from zipfile import ZipFile
 import colorlover as cl
 import numpy as np
 import pandas as pd
-from pelicun.base import convert_to_MultiIndex, pelicun_path
 from plotly import graph_objects as go
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
+
+from dlml import convert_to_MultiIndex
 
 
 def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D103, PLR0912
@@ -1093,37 +1092,3 @@ def check_diff(comp_db_path, output_path):  # noqa: D103
     # if the output path does not exist, we need to generate
     else:  # noqa: RET505
         return True
-
-
-def main(args):  # noqa: D103
-    parser = argparse.ArgumentParser()
-    parser.add_argument('viz_type')
-    parser.add_argument('comp_db_path')
-    parser.add_argument(
-        '-o', '--output_path', default='./comp_viz/'
-    )  # replace with None
-    parser.add_argument('-z', '--zip', default='0')
-
-    args = parser.parse_args(args)
-
-    viz_type = args.viz_type
-    comp_db_path = args.comp_db_path
-    output_path = args.output_path
-    create_zip = args.zip
-
-    if viz_type == 'fragility':
-        plot_fragility(comp_db_path, output_path, create_zip)
-
-    elif viz_type == 'repair':
-        plot_repair(comp_db_path, output_path, create_zip)
-
-    elif viz_type == 'query':
-        if comp_db_path == 'default_db':
-            print(pelicun_path)  # noqa: T201
-
-    msg = f'Invalid `viz_type`: {viz_type}'
-    raise ValueError(msg)
-
-
-if __name__ == '__main__':
-    main(sys.argv[1:])

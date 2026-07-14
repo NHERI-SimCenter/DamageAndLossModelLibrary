@@ -1,71 +1,152 @@
-
 # Damage and Loss Model Library (DLML)
 
 [![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-A curated, open-source repository of standardized model parameters and metadata for quantifying the impact of natural hazard events on the built environment.
+A curated, open-source, version-controlled library of standardized damage and
+loss models for natural-hazard risk assessment.
 
 ---
 
-### About This Library
+## About the library
 
-The Damage and Loss Model Library (DLML) is a project from the NHERI SimCenter designed to address a critical gap in natural hazards engineering: the lack of a centralized, standardized, and easy-to-use repository for damage and loss models. This library provides the essential data—model parameters, descriptive metadata, and configuration files—that power natural hazard risk assessment simulations.
+The Damage and Loss Model Library (DLML) is a project from the
+[NHERI SimCenter](https://simcenter.designsafe-ci.org/) that addresses a
+persistent gap in natural-hazards engineering: the lack of a centralized,
+standardized, and easy-to-use home for damage and loss models. It gathers
+performance models from established sources — the component library from
+**FEMA P-58** and building- and infrastructure-level models from **FEMA
+Hazus** — alongside peer-reviewed models from the research community, and
+publishes them in one consistent, machine-readable form.
 
-This `v2.1.0` release continues the evolution of the project, building on the improved data schema, extensive model collection, and documentation system introduced in v2.0.0, with enhanced code quality and improved usability for Hazus assessments.
+The library is built on three principles:
 
-**Key Features:**
-* **Standardized Data Schema:** A robust yet flexible schema for organizing models by hazard, asset type, and resolution, making it easy to use data and supporting new contributions.
-* **Rich Metadata & Clear Citations:** Every model is paired with detailed metadata and a clear citation to the original source.
-* **A Broad & Inclusive Collection:** We feature a growing collection of models, from large-scale industry standards like **FEMA P-58** and **FEMA Hazus** to peer-reviewed models from the broader research community. Our goal is to provide a home for all high-quality damage and loss models.
-* **Automated Documentation:** The metadata and parameters are used to automatically generate a user-friendly documentation website, complete with model descriptions, parameter tables, and plots of fragility and consequence functions.
+- **Version-controlled.** Every model belongs to a released snapshot, so an
+  analysis can be tied permanently to a specific version of the data —
+  supporting reproducible research and defensible professional practice.
+- **Standardized and machine-readable.** Models are converted to a single
+  tabular schema (CSV parameters plus JSON metadata), ready for computational
+  workflows with no manual transcription.
+- **Documented provenance.** Every model carries rich metadata and a citation
+  to its source, so users can trace it to its origin and credit the original
+  developers.
 
----
+**Hazard coverage:** seismic, hurricane, and flood — spanning building
+components, whole buildings, and infrastructure network assets.
 
-### Three Ways to Use This Library
+## Data Organization
 
-There are three primary ways to interact with the DLML, depending on your needs.
+The data is a tree of **datasets**. A *dataset* is a leaf folder identified by
+its path (`hazard/asset_type/resolution/methodology`), for example
+`seismic/building/component/FEMA P-58 2nd Edition`. Each dataset provides one or
+more **collections** — `fragility`, `consequence_repair`, and/or `loss_repair` —
+and each collection is a table of **models**, one per row (typically one per
+component/building/asset). Parameters are in `<collection>.csv`; the matching
+`<collection>.json` holds the metadata (descriptions, limit and damage state
+details, citations).
 
-#### 1. Discover and Explore Models
+## How to use the DLML
 
-The best way to get started is by exploring our documentation website. It provides a searchable, lightweight interface to discover all available models, view their parameters, and understand their assumptions.
+Each of these is a different route to the same curated data.
 
-[**➡️ Visit the Documentation Website**](https://nheri-simcenter.github.io/DamageAndLossModelLibrary/)
+### Install the Python package
 
-#### 2. Perform Calculations with Pelicun
-
-For performing damage and loss calculations, we recommend using **Pelicun**, the SimCenter's open-source simulation engine or SimCenter's **PBE** and **R2D** desktop applications that utilize Pelicun in the background. Pelicun is designed to seamlessly use the models from this library as its inputs. This library is bundled with Pelicun, so all models are available automatically after installation.
-
-[**➡️ Learn More About Pelicun**](https://github.com/NHERI-SimCenter/Pelicun)
-
-#### 3. Work with the Raw Data
-
-You can also work directly with the raw data files in this repository. The library is structured in a clear hierarchy of `hazard/asset_type/resolution/methodology`. Within each methodology, **model parameters are stored in standardized CSV files** (e.g., for fragility, loss, or consequences) and metadata in corresponding JSON files.
-
-To get a local copy, clone the repository:
 ```bash
-git clone [https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git](https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git)
-````
+pip install simcenter-dlml
+```
 
------
+The data ships inside the package (no runtime download), and you can read it 
+with the `dlml` API:
 
-### Contributing
+```python
+import dlml
 
-We welcome contributions of new and improved models from the researchers and practitioners. While we are in the process of creating a formal contributor's guide, the best way to start is by opening a GitHub Issue to discuss the model data you would like to add.
+dlml.list_datasets()
+# ['flood/building/portfolio/Hazus v6.1',
+#  'seismic/building/component/FEMA P-58 2nd Edition', ...]
 
-Our vision is to enable a simple workflow where contributors can submit pull requests with data that conforms to our schema. We appreciate your patience and collaboration as we work towards this goal.
+fema_p58 = "seismic/building/component/FEMA P-58 2nd Edition"
+dlml.available_collections(fema_p58)      # ['consequence_repair', 'fragility']
+fragility = dlml.get_fragility(fema_p58)  # a pandas DataFrame of model parameters
+metadata = dlml.get_metadata(fema_p58, "fragility")
 
------
+# Validate asset features against a dataset's input schema:
+seismic = "seismic/building/portfolio/Hazus v6.1"
+dlml.validate_asset(seismic, {"StructureType": "W1", "DesignLevel": "Pre-Code"})
+# []  -> valid
+dlml.validate_asset(seismic, {"StructureType": "W1"})
+# ["$: 'DesignLevel' is a required property"]
+```
 
-### License & Acknowledgments
+The core package needs only Python 3.9+, pandas, numpy, and jsonschema.
 
-This library is distributed under the BSD 3-Clause license. See `LICENSE` for more information.
+### Explore the models with the DLML Explorer
 
-This material is based upon work supported by the National Science Foundation under Grants No. 1612843 2131111. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the authors and do not necessarily reflect the views of the National Science Foundation.
+The **DLML Explorer** is a web app for discovering, visualizing, and assembling
+models: search and filter the library, inspect interactive fragility curves and
+consequence functions, add components to a selection, and download a
+project-ready bundle. The easiest way to try it is the hosted version:
 
------
+**[Open the DLML Explorer »](https://REPLACE-WITH-EXPLORER-URL)**
 
-### Contact
+You can also run it locally — for example, to explore alongside your own private
+models — by installing the explorer extra:
+
+```bash
+pip install "simcenter-dlml[explorer]"
+dlml explorer
+```
+
+(The explorer extra targets Python 3.10+.) And you can inspect the library
+straight from the command line:
+
+```bash
+dlml list                 # every dataset and its collections
+dlml info <dataset-id>    # a dataset's collections and model counts
+```
+
+### Use with Pelicun and the SimCenter tools
+
+The library is the data backbone for
+[Pelicun](https://github.com/NHERI-SimCenter/Pelicun), SimCenter's open-source
+damage-and-loss engine, and is available automatically through the **PBE** and
+**R2D** desktop applications that run Pelicun under the hood.
+
+### Work with the raw data
+
+You can also read the CSV/JSON files directly from a clone of this repository:
+
+```bash
+git clone https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git
+```
+
+> A legacy [documentation website](https://nheri-simcenter.github.io/DamageAndLossModelLibrary/)
+> with auto-generated model pages also remains available; it will be revised over
+> time to complement the DLML Explorer.
+
+## Contributing
+
+We welcome new and improved models from researchers and practitioners. A formal
+contributor's guide is in progress; for now, the best way to start is to open a
+GitHub Issue to discuss the model data you'd like to add. Our goal is a simple
+pull-request workflow for data that conforms to the schema.
+
+## License and acknowledgments
+
+This library is distributed under the BSD 3-Clause license. See `LICENSE` for
+details.
+
+We gratefully acknowledge the generous in-kind contribution from Degenkolb
+Engineers — and in particular Tshajlij Lee and Hannah Thompson — to the
+development of the DLML Explorer.
+
+This material is based upon work supported by the U.S. National Science
+Foundation under Grants No. 1612843 and No. 2131111. Any opinions, findings, and
+conclusions or recommendations expressed in this material are those of the
+authors and do not necessarily reflect the views of the U.S. National Science
+Foundation.
+
+## Contact
 
 For questions or support, please open an issue on the GitHub repository.
 
-Adam Zsarnóczay, NHERI SimCenter, Stanford University, adamzs@stanford.edu
+Adam Zsarnóczay, NHERI SimCenter, Stanford University — adamzs@stanford.edu
