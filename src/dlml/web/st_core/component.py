@@ -54,9 +54,11 @@ Usage
 
 from __future__ import annotations
 
+import html
 import json
 from typing import List, Optional
 
+import pandas as pd
 import streamlit as st
 
 from dlml.web.st_visuals.figures import (
@@ -64,8 +66,12 @@ from dlml.web.st_visuals.figures import (
     make_fragility_figure,
     make_loss_function_figure,
 )
-from dlml.web.st_visuals.helpers_visual import load_consequence_df, load_fragility_df
-from dlml.web.st_core.downloads import render_download_buttons
+from dlml.web.st_visuals.helpers_visual import (
+    load_consequence_df,
+    load_fragility_df,
+    load_full_json,
+)
+from dlml.web.st_core.downloads import render_download_section
 from dlml.web.st_ui.theme import is_dark
 
 # Consequence type options shown in the selectbox
@@ -274,19 +280,42 @@ def _render_add_button(
         Record kind, forwarded to :func:`add_component`.
     """
     _initialize_added_components_state()
-    st.divider()
 
     if _is_component_added(comp_id, json_path):
-        st.caption(f"✅ `{comp_id}` is already in your component list.")
+        st.caption(f"✅ `{comp_id}` is already in your selection.")
     else:
         if st.button(
-            "➕ Add component",
+            "➕ Add model to selection",
             key=f"{key_prefix}add_btn_{comp_id}",
             type="primary",
             help="Add this record to the page list for side-by-side review and download.",
         ):
             add_component(comp_id, comp_data, json_path, hazard, kind=kind)
             st.rerun()
+
+
+def _render_remove_button(
+    comp_id: str, list_index: int, *, key_prefix: str = ""
+) -> None:
+    """
+    Render the "Remove from selection" button.
+
+    Shown in the header action slot (where the Add button sits in Browse &
+    Search) when a panel is rendered inside the selection list. ``list_index``
+    is the slot to drop; it is bounds-checked in case the list changed between
+    reruns.
+    """
+    _initialize_added_components_state()
+    if st.button(
+        "🗑️ Remove from selection",
+        key=f"{key_prefix}remove_btn_{comp_id}",
+        type="secondary",
+        help="Remove this model from your selection.",
+    ):
+        entries: list = st.session_state[_ADDED_KEY]
+        if 0 <= list_index < len(entries):
+            entries.pop(list_index)
+        st.rerun()
 
 
 # ─── Internal: fragility chart + consequence availability ─────────────────────
@@ -338,6 +367,55 @@ def _render_fragility_chart(
 
 # ─── Internal: raw-data table ─────────────────────────────────────────────────
 
+def _render_fragility_characteristics(full: pd.DataFrame) -> None:
+    """Show demand + completeness characteristics above the limit-state table."""
+    if "Demand" in full.index:
+        demand = full.loc["Demand"]
+        dtype = demand.get("Type")
+        if dtype is not None and pd.notna(dtype):
+            unit = demand.get("Unit")
+            suffix = (
+                f" [{unit}]"
+                if unit is not None and pd.notna(unit) and str(unit) != "unitless"
+                else ""
+            )
+            st.caption(f"**Demand type:** {dtype}{suffix}")
+        directional = demand.get("Directional")
+        if directional is not None and pd.notna(directional):
+            label = "Directional" if float(directional) else "Non-directional"
+            st.caption(f"**Directionality:** {label}")
+        offset = demand.get("Offset")
+        if (
+            offset is not None
+            and pd.notna(offset)
+            and str(offset) not in ("0", "0.0")
+        ):
+            st.caption(f"**Demand offset:** {offset}")
+    if "Incomplete" in full.index:
+        incomplete = full.loc["Incomplete"].dropna()
+        if len(incomplete) and str(incomplete.iloc[0]) in ("1", "1.0"):
+            st.caption("⚠️ **Incomplete:** some model parameters are missing.")
+
+
+def _render_param_table(frame: pd.DataFrame) -> None:
+    """
+    Render a small parameter table as themed HTML instead of ``st.dataframe``.
+
+    ``st.dataframe`` renders to a canvas that (a) sizes each column to its
+    *cell* contents, so longer headers like "Incomplete"/"Quantity" clip, and
+    (b) cannot follow our CSS dark-mode overlay, so it stays white. A plain HTML
+    table sizes columns to fit the header too, renders MultiIndex columns as a
+    grouped two-row header, and inherits the theme variables (transparent fill,
+    light text in dark mode). It is wrapped in a horizontally scrollable card so
+    a wide table stays inside its panel.
+    """
+    html_table = frame.to_html(border=0, na_rep="", classes="dlml-table")
+    st.markdown(
+        f"<div class='dlml-table-wrap'>{html_table}</div>",
+        unsafe_allow_html=True,
+    )
+
+
 def _render_data_table(
     comp_id: str,
     json_path: str,
@@ -361,28 +439,30 @@ def _render_data_table(
 
     frag_df = load_fragility_df(json_path)
     if frag_df is not None and comp_id in frag_df.index:
-        st.markdown("**Fragility parameters**")
-        row = frag_df.loc[comp_id]
+        _section_label("Fragility parameters")
         # Series indexed by (level, parameter) → rows = level, cols = parameter.
         try:
-            frag_table = row.unstack()
+            full = frag_df.loc[comp_id].unstack()
         except Exception:
-            frag_table = frag_df.loc[[comp_id]]
-        st.dataframe(
-            frag_table,
-            width="stretch",
-            key=f"{key_prefix}data_frag_{comp_id}",
-        )
+            full = None
+        if full is not None:
+            _render_fragility_characteristics(full)
+            # Keep only limit states that carry parameters, and drop the
+            # demand-only (all-empty) columns, leaving a clean
+            # limit-state × parameter grid.
+            ls_rows = [lvl for lvl in full.index if str(lvl).startswith("LS")]
+            defined = [ls for ls in ls_rows if full.loc[ls].notna().any()]
+            if defined:
+                _render_param_table(full.loc[defined].dropna(axis=1, how="all"))
+        else:
+            _render_param_table(frag_df.loc[[comp_id]])
         shown = True
 
     repair_df = load_consequence_df(json_path)
     if repair_df is not None and comp_id in repair_df.index.get_level_values(0):
-        st.markdown("**Consequence parameters**")
-        st.dataframe(
-            repair_df.loc[comp_id],
-            width="stretch",
-            key=f"{key_prefix}data_cons_{comp_id}",
-        )
+        _section_label("Consequence parameters")
+        # Drop damage states with no data so undefined DS columns don't appear.
+        _render_param_table(repair_df.loc[comp_id].dropna(axis=1, how="all"))
         shown = True
 
     if not shown:
@@ -390,6 +470,105 @@ def _render_data_table(
             "No tabular parameter data available for this component.",
             icon="ℹ️",
         )
+
+
+# ─── Shared panel header (metadata + notes + add button + references) ─────────
+
+def _load_references(json_path: str) -> dict:
+    """Return the ``{reference_id: citation text}`` map from the source JSON."""
+    try:
+        return load_full_json(json_path).get("References", {}) or {}
+    except Exception:  # noqa: BLE001 -- references are best-effort, never fatal
+        return {}
+
+
+def _section_label(text: str) -> None:
+    """
+    Render a bold section label with a little more air than the base gap.
+
+    Uses the ``dlml-section-label`` class (see :mod:`dlml.web.st_ui.theme`) so
+    labels like "Model metadata" and "Damage states" read as headers instead of
+    crowding the content directly beneath them.
+    """
+    st.markdown(
+        f"<div class='dlml-section-label'>{html.escape(text)}</div>",
+        unsafe_allow_html=True,
+    )
+
+
+def _render_panel_header(
+    comp_id: str,
+    comp_data: dict,
+    json_path: str,
+    *,
+    hazard: str,
+    key_prefix: str,
+    kind: str = "fragility",
+    list_index: int | None = None,
+) -> None:
+    """
+    Render the shared top of a model detail panel.
+
+    Consistent across the seismic, wind, and consequence panels: a **Model
+    metadata** heading, the full-width description, a row pairing the
+    technical-notes expander (wide, left) with an action button (far right),
+    and a collapsible **References** section that resolves each reference ID to
+    its full citation text.
+
+    The far-right action depends on context: in Browse & Search it is the
+    "Add model to selection" button; when the panel is shown inside the
+    selection list (``list_index`` given, the slot to drop on removal) it is a
+    "Remove from selection" button instead — so the list never shows the
+    "already in your selection" note, which makes no sense there.
+    """
+    description = comp_data.get("Description", "")
+    comments = comp_data.get("Comments", "")
+    references = comp_data.get("Reference", []) or []
+
+    _section_label("Model metadata")
+    if description:
+        st.markdown(
+            f"<div class='dlml-model-desc'>{html.escape(description)}</div>",
+            unsafe_allow_html=True,
+        )
+
+    # Technical notes (wide, collapsible) share a row with the add button (far
+    # right): collapsed, they line up; expanded, the notes just grow taller.
+    notes_col, btn_col = st.columns([3, 1], gap="medium")
+    with notes_col:
+        if comments:
+            with st.expander(
+                "**Technical notes**",
+                expanded=False,
+                key=f"{key_prefix}notes_{comp_id}",
+            ):
+                st.caption(comments)
+        else:
+            st.caption("_No technical notes for this model._")
+    with btn_col:
+        if list_index is not None:
+            _render_remove_button(comp_id, list_index, key_prefix=key_prefix)
+        else:
+            _render_add_button(
+                comp_id,
+                comp_data,
+                json_path,
+                hazard=hazard,
+                key_prefix=key_prefix,
+                kind=kind,
+            )
+
+    if references:
+        ref_map = _load_references(json_path)
+        with st.expander(
+            f"**References ({len(references)})**",
+            expanded=False,
+            key=f"{key_prefix}refs_{comp_id}",
+        ):
+            for i, ref_id in enumerate(references, start=1):
+                st.caption(f"{i}. {ref_map.get(ref_id, ref_id)}")
+
+    st.divider()
 
 
 # ─── Internal: seismic detail panel ───────────────────────────────────────────
@@ -400,6 +579,7 @@ def _render_component_detail(
     json_path: str,
     *,
     key_prefix: str = "",
+    list_index: int | None = None,
 ) -> None:
     """
     Render the full inline detail panel for a seismic component leaf.
@@ -423,18 +603,23 @@ def _render_component_detail(
         when the same component is rendered more than once on the page (e.g.
         simultaneously in the tree and in the added-components list).
     """
-    description = comp_data.get("Description", "")
-    comments = comp_data.get("Comments", "")
     block_size = comp_data.get("SuggestedComponentBlockSize", "")
     round_up = comp_data.get("RoundUpToIntegerQuantity", "")
     limit_states: dict = comp_data.get("LimitStates", {})
 
-    col_left, col_right = st.columns([1, 2], gap="large")
+    _render_panel_header(
+        comp_id,
+        comp_data,
+        json_path,
+        hazard="seismic",
+        key_prefix=key_prefix,
+        list_index=list_index,
+    )
 
-    # ── Left: metadata + damage states ────────────────────────────────────
+    col_left, col_right = st.columns([1, 2], gap="medium")
+
+    # ── Left: metadata rows + damage states ───────────────────────────────
     with col_left:
-        st.markdown("**Component metadata**")
-
         for label, value in [
             ("ID", f"`{comp_id}`"),
             ("Block size", f"`{block_size}`" if block_size else "—"),
@@ -444,11 +629,7 @@ def _render_component_detail(
             c1.caption(label)
             c2.caption(value)
 
-        if description:
-            st.caption(f"_{description}_")
-
-        st.divider()
-        st.markdown("**Damage states**")
+        _section_label("Damage states")
 
         total_ds = sum(len(ds_dict) for ds_dict in limit_states.values())
         if total_ds:
@@ -459,10 +640,12 @@ def _render_component_detail(
                         if isinstance(ds_data, dict)
                         else str(ds_data)
                     )
-                    # key_prefix in the label prevents duplicate-label warnings
-                    # when this component is rendered in two places at once.
+                    # key_prefix goes in the key (not the label) so the same
+                    # component can render twice on the page without a collision.
                     with st.expander(
-                        f"{key_prefix}{ls_key} / {ds_key}", expanded=False
+                        f"{ls_key} / {ds_key}",
+                        expanded=False,
+                        key=f"{key_prefix}ds_{comp_id}_{ls_key}_{ds_key}",
                     ):
                         st.caption(desc_text)
                         if isinstance(ds_data, dict) and ds_data.get("RepairAction"):
@@ -472,18 +655,8 @@ def _render_component_detail(
         else:
             st.caption("No limit-state data found.")
 
-    # ── Right: add button + comments + charts ─────────────────────────────
+    # ── Right: charts ─────────────────────────────────────────────────────
     with col_right:
-        _render_add_button(
-            comp_id, comp_data, json_path, hazard="seismic", key_prefix=key_prefix
-        )
-
-        if comments:
-            with st.expander(
-                f"{key_prefix}Technical notes / comments", expanded=False
-            ):
-                st.caption(comments)
-
         # Only show the Consequence tab when this component actually has
         # consequence records. Hazus sources key consequences by occupancy
         # class, not by component, so the tab is omitted there (rather than
@@ -522,6 +695,7 @@ def _render_wind_component_detail(
     json_path: str,
     *,
     key_prefix: str = "",
+    list_index: int | None = None,
 ) -> None:
     """
     Render the inline detail panel for a wind library component leaf.
@@ -541,29 +715,28 @@ def _render_wind_component_detail(
         Prepended to all widget keys and expander labels to prevent collisions
         when the same component is rendered more than once on the page.
     """
-    description: str = comp_data.get("Description", "")
-    comments: str = comp_data.get("Comments", "")
-    references: list = comp_data.get("Reference", [])
     block_size: str = comp_data.get("SuggestedComponentBlockSize", "")
     limit_states: dict = comp_data.get("LimitStates", {})
 
-    col_left, col_right = st.columns([1, 2])
+    _render_panel_header(
+        comp_id,
+        comp_data,
+        json_path,
+        hazard="wind",
+        key_prefix=key_prefix,
+        list_index=list_index,
+    )
 
-    # ── Left: metadata ─────────────────────────────────────────────────────
+    col_left, col_right = st.columns([1, 2], gap="medium")
+
+    # ── Left: metadata rows + damage states ───────────────────────────────
     with col_left:
-        if description:
-            st.markdown(f"**Description:** {description}")
-
-        if block_size:
-            st.caption(f"Block size: `{block_size}`")
-
-        if references:
-            st.caption(
-                "References: " + ", ".join(f"`{r}`" for r in references)
-            )
+        c1, c2 = st.columns([1, 1])
+        c1.caption("Block size")
+        c2.caption(f"`{block_size}`" if block_size else "—")
 
         if limit_states:
-            st.markdown("**Limit states / damage states**")
+            _section_label("Damage states")
             for ls_key, ls_data in limit_states.items():
                 if not isinstance(ls_data, dict):
                     continue
@@ -574,24 +747,16 @@ def _render_wind_component_detail(
                         else str(ds_data)
                     )
                     with st.expander(
-                        f"{key_prefix}{ls_key} / {ds_key}", expanded=False
+                        f"{ls_key} / {ds_key}",
+                        expanded=False,
+                        key=f"{key_prefix}ds_{comp_id}_{ls_key}_{ds_key}",
                     ):
                         st.caption(desc_text)
         else:
             st.caption("No limit-state data found.")
 
-    # ── Right: add button + comments + fragility chart ─────────────────────
+    # ── Right: fragility chart ────────────────────────────────────────────
     with col_right:
-        _render_add_button(
-            comp_id, comp_data, json_path, hazard="wind", key_prefix=key_prefix
-        )
-
-        if comments:
-            with st.expander(
-                f"{key_prefix}Technical notes / comments", expanded=False
-            ):
-                st.caption(comments)
-
         tab_frag, tab_data = st.tabs(["Fragility curves", "Data table"])
         with tab_frag:
             frag_df = load_fragility_df(json_path)
@@ -677,6 +842,7 @@ def render_consequence_leaf(
     json_path: str,
     *,
     key_prefix: str = "",
+    list_index: int | None = None,
 ) -> None:
     """
     Render the detail panel for a consequence_repair leaf node.
@@ -698,17 +864,23 @@ def render_consequence_leaf(
     key_prefix : str, optional
         Prepended to widget keys to prevent collisions.
     """
-    description = comp_data.get("Description", "")
-    comments = comp_data.get("Comments", "")
     block_size = comp_data.get("SuggestedComponentBlockSize", "")
     damage_states: dict = comp_data.get("DamageStates", {})
 
-    col_left, col_right = st.columns([1, 2], gap="large")
+    _render_panel_header(
+        comp_id,
+        comp_data,
+        json_path,
+        hazard="seismic",
+        key_prefix=key_prefix,
+        kind="consequence",
+        list_index=list_index,
+    )
 
-    # ── Left: metadata + damage states ────────────────────────────────────
+    col_left, col_right = st.columns([1, 2], gap="medium")
+
+    # ── Left: metadata rows + damage states ───────────────────────────────
     with col_left:
-        st.markdown("**Consequence metadata**")
-
         for label, value in [
             ("ID", f"`{comp_id}`"),
             ("Block size", f"`{block_size}`" if block_size else "—"),
@@ -717,11 +889,7 @@ def render_consequence_leaf(
             c1.caption(label)
             c2.caption(value)
 
-        if description:
-            st.caption(f"_{description}_")
-
-        st.divider()
-        st.markdown("**Damage states**")
+        _section_label("Damage states")
 
         if damage_states:
             for ds_key, ds_data in damage_states.items():
@@ -730,24 +898,17 @@ def render_consequence_leaf(
                     if isinstance(ds_data, dict)
                     else str(ds_data)
                 )
-                with st.expander(f"{key_prefix}{ds_key}", expanded=False):
+                with st.expander(
+                    f"{ds_key}",
+                    expanded=False,
+                    key=f"{key_prefix}ds_{comp_id}_{ds_key}",
+                ):
                     st.caption(desc_text)
         else:
             st.caption("No damage-state data found.")
 
-    # ── Right: add button + comments + consequence curves ─────────────────
+    # ── Right: consequence curves ─────────────────────────────────────────
     with col_right:
-        _render_add_button(
-            comp_id, comp_data, json_path, hazard="seismic",
-            key_prefix=key_prefix, kind="consequence",
-        )
-
-        if comments:
-            with st.expander(
-                f"{key_prefix}Technical notes / comments", expanded=False
-            ):
-                st.caption(comments)
-
         tab_cons, tab_data = st.tabs(["Consequence curves", "Data table"])
         with tab_cons:
             _render_consequence_tab(comp_id, json_path, key_prefix=key_prefix)
@@ -813,9 +974,10 @@ def render_added_components_list() -> None:
     index so that widget keys never collide — even if the same component
     appears in both the tree and this list simultaneously.
 
-    A **🗑️ Remove** button appears at the top of each expanded panel, and a
-    **🗑️ Clear all** button sits below the list.  If the list is empty, an
-    info message is shown instead.
+    The detail panel's header action slot shows a **🗑️ Remove from selection**
+    button here (via ``list_index``), where Browse & Search shows the Add
+    button. A **🗑️ Clear all** button and the download tools sit below the
+    list; if the list is empty, an info message is shown instead.
 
     Usage
     -----
@@ -827,13 +989,15 @@ def render_added_components_list() -> None:
 
     if not entries:
         st.info(
-            "No components added yet. Use the **➕ Add component** button "
-            "inside any component detail panel.",
+            "No models selected yet. Open **Browse & Search**, find a model, "
+            "and use its **➕ Add model to selection** button.",
             icon="📋",
         )
         return
 
-    st.markdown(f"### 📋 Added Components  `{len(entries)}`")
+    st.caption(
+        f"**{len(entries)}** model{'s' if len(entries) != 1 else ''} selected"
+    )
 
     for idx, entry in enumerate(entries):
         comp_id: str = entry["comp_id"]
@@ -848,38 +1012,28 @@ def render_added_components_list() -> None:
 
         raw_desc: str = comp_data.get("Description", "")
         preview = raw_desc[:80] + "…" if len(raw_desc) > 80 else raw_desc
-        badge = "🧾" if kind == "consequence" else ("🌊" if hazard == "wind" else "🌍")
+        badge = "🧾" if kind == "consequence" else ("🌀" if hazard == "wind" else "〰️")
 
         with st.expander(
             f"{badge}  **{comp_id}**  ·  {preview}",
             expanded=False,
         ):
-            # Remove button at the top of the expanded panel
-            _, btn_col = st.columns([5, 1])
-            with btn_col:
-                if st.button(
-                    "🗑️ Remove",
-                    key=f"list_remove_{comp_id}_{idx}",
-                    type="secondary",
-                    help=f"Remove {comp_id} from the list",
-                ):
-                    st.session_state[_ADDED_KEY].pop(idx)
-                    st.rerun()
-
-            # Full detail panel rendered with a unique key_prefix.
-            # The add button inside will show "✅ already added" since the
-            # record is already present in the list.
+            # Full detail panel, keyed per slot. `list_index` swaps the header's
+            # Add button for a "Remove from selection" button scoped to this slot.
             if kind == "consequence":
                 render_consequence_leaf(
-                    comp_id, comp_data, json_path, key_prefix=slot_prefix
+                    comp_id, comp_data, json_path,
+                    key_prefix=slot_prefix, list_index=idx,
                 )
             elif hazard == "wind":
                 _render_wind_component_detail(
-                    comp_id, comp_data, json_path, key_prefix=slot_prefix
+                    comp_id, comp_data, json_path,
+                    key_prefix=slot_prefix, list_index=idx,
                 )
             else:
                 _render_component_detail(
-                    comp_id, comp_data, json_path, key_prefix=slot_prefix
+                    comp_id, comp_data, json_path,
+                    key_prefix=slot_prefix, list_index=idx,
                 )
 
     st.divider()
@@ -890,5 +1044,5 @@ def render_added_components_list() -> None:
     ):
         st.session_state[_ADDED_KEY].clear()
         st.rerun()
-    
-    render_download_buttons()
+
+    render_download_section()

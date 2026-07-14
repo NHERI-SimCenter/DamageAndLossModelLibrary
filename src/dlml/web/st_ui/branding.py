@@ -50,51 +50,95 @@ def _logos() -> tuple[str, str] | None:
 
 def render_header(title: str, subtitle: str | None = None) -> None:
     """
-    Render the page hero — a gradient banner with an eyebrow, the title, an
-    optional subtitle, and the contributor logos on a white card to the right.
+    Render the page hero — an editorial header: the title with a short
+    SimCenter-red rule, an optional subtitle, and a one-line note making it
+    clear the Explorer is managed by the SimCenter and was built with
+    Degenkolb's support. The contributor logos live in the sticky top bar
+    (:func:`render_top_bar`) and the footer, so the hero stays text-only.
 
-    The whole hero is emitted as one HTML block (rather than via ``st.title`` +
-    columns) so the gradient, typography, and logo card can be styled as a unit;
-    the matching ``.dlml-hero*`` CSS lives in :mod:`dlml.web.st_ui.theme`. The
-    logo card stays white in both light and dark themes so the dark Degenkolb
-    wordmark stays legible.
+    Emitted as one HTML block so the typography and red rule style as a unit;
+    the matching ``.dlml-hero*`` CSS lives in :mod:`dlml.web.st_ui.theme`.
     """
-    logos = _logos()
-    logo_html = ""
-    if logos is not None:
-        simcenter, degenkolb = logos
-        logo_html = f"""
-          <div class="dlml-logo-card">
-            <a href="{_SIMCENTER_URL}" target="_blank" rel="noopener"
-               title="NSF NHERI SimCenter">
-              <img src="{simcenter}" alt="NSF NHERI SimCenter"
-                   style="height:34px;display:block;">
-            </a>
-            <a href="{_DEGENKOLB_URL}" target="_blank" rel="noopener"
-               title="Degenkolb Engineers">
-              <img src="{degenkolb}" alt="Degenkolb Engineers"
-                   style="height:26px;display:block;">
-            </a>
-          </div>
-        """
-
+    # Flush-left HTML (no leading whitespace on any line) — st.markdown parses
+    # the string as Markdown first, and any line indented 4+ spaces becomes a
+    # literal code block instead of rendered HTML. The contributor logos live in
+    # the sticky top bar (render_top_bar) and the footer, not here.
     subtitle_html = (
         f'<p class="dlml-hero-subtitle">{subtitle}</p>' if subtitle else ""
     )
-
     st.markdown(
-        f"""
-        <div class="dlml-hero">
-          <div class="dlml-hero-main">
-            <div class="dlml-hero-eyebrow">NHERI SimCenter · Degenkolb Engineers</div>
-            <h1 class="dlml-hero-title">{title}</h1>
-            {subtitle_html}
-          </div>
-          {logo_html}
-        </div>
-        """,
+        '<div class="dlml-hero">'
+        '<div class="dlml-hero-main">'
+        f'<h1 class="dlml-hero-title">{title}</h1>'
+        f'{subtitle_html}'
+        '<p class="dlml-hero-brandline">Managed by the NHERI SimCenter'
+        ' · developed with support from Degenkolb Engineers</p>'
+        '</div>'
+        '</div>',
         unsafe_allow_html=True,
     )
+
+
+def render_top_bar() -> None:
+    """
+    Render the slim, sticky brand bar shown on every page.
+
+    Left: the two contributor logos on a white card and the "DLML Explorer"
+    wordmark. Right: the page links and the light/dark switch. The
+    ``.st-key-dlml-topbar`` rules (see :mod:`dlml.web.st_ui.theme`) pin it to the
+    top so the branding and nav stay visible on scroll, and Streamlit's own
+    header chrome is hidden. The sidebar is left entirely for selected models.
+    Page-link paths are relative to the entry script (``app.py``, the About
+    landing page).
+    """
+    from dlml.web.st_ui.theme import render_theme_toggle
+
+    # Brand block (flush-left HTML — see render_header): the two contributor
+    # logos on a white card, then the "DLML Explorer" wordmark.
+    logos = _logos()
+    if logos is not None:
+        simcenter, degenkolb = logos
+        logos_html = (
+            '<span class="dlml-brand-logos">'
+            f'<a href="{_SIMCENTER_URL}" target="_blank" rel="noopener" '
+            'title="NSF NHERI SimCenter">'
+            f'<img src="{simcenter}" alt="NSF NHERI SimCenter" '
+            'style="height:22px;display:block;"></a>'
+            f'<a href="{_DEGENKOLB_URL}" target="_blank" rel="noopener" '
+            'title="Degenkolb Engineers">'
+            f'<img src="{degenkolb}" alt="Degenkolb Engineers" '
+            'style="height:16px;display:block;"></a>'
+            '</span>'
+        )
+    else:
+        logos_html = ""
+    brand_html = (
+        '<div class="dlml-brand">'
+        + logos_html
+        + '<span class="dlml-brand-name">DLML Explorer</span>'
+        + '</div>'
+    )
+
+    # Keyed container so the theme can pin this bar to the top and keep its
+    # columns from wrapping (see the .st-key-dlml-topbar rules). The empty
+    # marker div is what the sticky CSS selector keys off (the proven Streamlit
+    # sticky-header recipe: target the flow element that *contains* the marker).
+    # Order: brand, Browse, About, toggle — left-packed. The theme makes the row
+    # wrap (not full-stack) and pushes the toggle to the right, so on a narrow
+    # bar the toggle wraps first, then the two links join it on the second row.
+    with st.container(key="dlml-topbar"):
+        st.markdown('<div class="dlml-sticky-marker"></div>', unsafe_allow_html=True)
+        brand, browse, about, toggle = st.columns(
+            [5, 2.6, 1.3, 2.2], gap="small", vertical_alignment="center"
+        )
+        with brand:
+            st.markdown(brand_html, unsafe_allow_html=True)
+        browse.page_link(
+            "pages/1_Browse_and_Search.py", label="Browse & Search", icon="🔍"
+        )
+        about.page_link("app.py", label="About", icon="ℹ️")
+        with toggle:
+            render_theme_toggle()
 
 
 def render_brand_header() -> None:
@@ -164,7 +208,7 @@ def render_contributors() -> None:
           </div>
           <p style="text-align:center;color:#9a9a9a;font-size:0.72rem;
                     margin-top:0.85rem;">
-            Built by Degenkolb Engineers on the NHERI SimCenter
+            Built with the support of Degenkolb Engineers on the NHERI SimCenter
             Damage and Loss Model Library.
           </p>
         </div>

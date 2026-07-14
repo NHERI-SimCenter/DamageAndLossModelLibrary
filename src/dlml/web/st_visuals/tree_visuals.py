@@ -386,7 +386,7 @@ def _render_node(
     """
     for child in node["children"].values():
         with st.expander(
-            f"**{child['label']}**  ·  `{child['count']:,}` components",
+            f"**{child['label']}**  ·  `{child['count']:,}` models",
             expanded=filtering,
         ):
             _render_node(child, fp, hazard, dataset, filtering, key_prefix)
@@ -398,7 +398,7 @@ def _render_node(
     # `filtering or st.checkbox(...)` short-circuits so the checkbox is only
     # built (and the leaves only deferred) in browse mode.
     if filtering or st.checkbox(
-        f"Show {len(comps)} component{'s' if len(comps) != 1 else ''}",
+        f"Show {len(comps)} model{'s' if len(comps) != 1 else ''}",
         key=f"{key_prefix}show_{node['prefix']}",
     ):
         # Load the source JSON once for the whole sub-group, not per leaf.
@@ -437,7 +437,7 @@ def _render_tree(
 
     st.markdown(header)
     st.caption(
-        f"{len(plan)} source{'s' if len(plan) != 1 else ''} · {total:,} components"
+        f"{len(plan)} source{'s' if len(plan) != 1 else ''} · {total:,} models"
     )
     st.divider()
 
@@ -454,7 +454,7 @@ def _render_tree(
 
         # ══ Source ════════════════════════════════════════════════════════════
         with st.expander(
-            f"**{short_name}**  ·  {badge}  ·  `{n_comp:,}` components",
+            f"**{short_name}**  ·  {badge}  ·  `{n_comp:,}` models",
             expanded=filtering,
         ):
             if meta.get("Description"):
@@ -507,7 +507,7 @@ def render_seismic_tree(
         file_paths,
         hazard="seismic",
         dataset="fragility",
-        header="## 🌍 Seismic",
+        header="## 〰️ Seismic",
         no_data_warning="No seismic fragility data found. Check directory structure.",
         no_match_info="No seismic components match the current filters.",
         allowed_ids=allowed_ids,
@@ -562,8 +562,8 @@ def render_wind_tree(
 
 
 _CONSEQUENCE_HEADERS = {
-    "seismic": "## 🧾 Seismic — Repair Consequences",
-    "hurricane": "## 🧾 Hurricane — Repair Consequences",
+    "seismic": "## 〰️ Seismic — Repair Consequences",
+    "hurricane": "## 🌀 Hurricane — Repair Consequences",
 }
 
 

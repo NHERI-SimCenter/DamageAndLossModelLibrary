@@ -20,22 +20,24 @@ Public functions
         components (all consequence types: Cost, Time, Carbon, Energy),
         preserving the exact column layout of each source CSV.
 
-    render_download_buttons()
-        Render Streamlit download buttons for all available download files.
+    render_download_section()
+        Render the download checklist and a single button (CSV, or a zip when
+        several files are selected) for the user's current selection.
 
 Usage
 -----
-    from dlml.web.st_core.downloads import render_download_buttons
+    from dlml.web.st_core.downloads import render_download_section
 
-    render_download_buttons()
+    render_download_section()
 """
 
 from __future__ import annotations
 
 import io
+import zipfile
 from collections import defaultdict
 from pathlib import Path
-from typing import Optional
+from typing import Callable, Optional
 
 import pandas as pd
 import streamlit as st
@@ -217,68 +219,86 @@ def get_consequence_csv() -> bytes:
 
 # ─── Streamlit renderers ───────────────────────────────────────────────────────
 
-def render_download_buttons() -> None:
-    """
-    Render download buttons for all available download files.
+# The download menu: (state key, checkbox label, file name, CSV builder, help).
+_DOWNLOAD_FILES: list[tuple[str, str, str, Callable[[], bytes], str]] = [
+    (
+        "quantity",
+        "Component quantity table",
+        "component_quantity.csv",
+        get_component_quantity_csv,
+        "One row per selected model; the ID column is filled in, the rest are "
+        "blank for you to complete.",
+    ),
+    (
+        "fragility",
+        "Fragility parameters",
+        "fragility.csv",
+        get_fragility_csv,
+        "Fragility model parameters for the selected models, in the source "
+        "CSV layout.",
+    ),
+    (
+        "consequence",
+        "Consequence data",
+        "consequence_repair.csv",
+        get_consequence_csv,
+        "Repair consequence data (Cost, Time, Carbon, Energy) for the selected "
+        "models, in the source CSV layout.",
+    ),
+]
 
-    Provides:
-    - **component_quantity.csv** — one row per added component; ID column
-      populated, all other columns blank.
-    - **fragility.csv** — rows from the source fragility data matching the
-      added components, preserving the original column layout.
-    - **consequence_repair.csv** — rows from the source consequence data
-      matching the added components (all consequence types), preserving the
-      original column layout.
+
+def _build_zip(files: list[tuple[str, bytes]]) -> bytes:
+    """Bundle ``(file_name, csv_bytes)`` pairs into a single zip archive."""
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED) as archive:
+        for name, data in files:
+            archive.writestr(name, data)
+    return buffer.getvalue()
+
+
+def render_download_section() -> None:
+    """
+    Render the download tools for the current selection.
+
+    A checklist (all checked by default) picks which CSVs to include —
+    component quantity table, fragility parameters, consequence data — and a
+    single button downloads them: the CSV directly when one file is chosen, or
+    a zip of the CSVs when several are. Assumes the caller has already handled
+    the empty-selection case (see :func:`render_added_components_list`).
     """
     entries: list = st.session_state.get(_ADDED_KEY, [])
-
     if not entries:
-        st.info(
-            "No components added yet. Add components using the "
-            "**➕ Add component** button to enable downloads.",
-            icon="📥",
-        )
         return
 
-    st.markdown(f"### 📥 Downloads  ·  `{len(entries)}` component(s)")
+    st.markdown("### 📥 Download model data")
+    st.caption("Choose what to include, then download. Several files come as a zip.")
 
-    col1, col2, col3 = st.columns(3)
+    chosen: list[tuple[str, bytes]] = []
+    for key, label, file_name, builder, help_text in _DOWNLOAD_FILES:
+        if st.checkbox(label, value=True, key=f"dl_{key}", help=help_text):
+            chosen.append((file_name, builder()))
 
-    with col1:
+    if not chosen:
+        st.caption("Select at least one file to enable the download.")
+        return
+
+    if len(chosen) == 1:
+        file_name, data = chosen[0]
         st.download_button(
-            label="⬇️ component_quantity.csv",
-            data=get_component_quantity_csv(),
-            file_name="component_quantity.csv",
+            label="⬇️ Download CSV",
+            data=data,
+            file_name=file_name,
             mime="text/csv",
-            width='stretch',
-            help=(
-                "One row per added component. "
-                "ID column is populated; remaining columns are blank."
-            ),
+            type="primary",
+            width="stretch",
         )
-
-    with col2:
+    else:
         st.download_button(
-            label="⬇️ fragility.csv",
-            data=get_fragility_csv(),
-            file_name="fragility.csv",
-            mime="text/csv",
-            width='stretch',
-            help=(
-                "Fragility data for the selected components, "
-                "in the original source format."
-            ),
-        )
-
-    with col3:
-        st.download_button(
-            label="⬇️ consequence_repair.csv",
-            data=get_consequence_csv(),
-            file_name="consequence_repair.csv",
-            mime="text/csv",
-            width='stretch',
-            help=(
-                "Consequence repair data (Cost, Time, Carbon, Energy) "
-                "for the selected components, in the original source format."
-            ),
+            label=f"⬇️ Download {len(chosen)} files (zip)",
+            data=_build_zip(chosen),
+            file_name="dlml_model_data.zip",
+            mime="application/zip",
+            type="primary",
+            width="stretch",
         )

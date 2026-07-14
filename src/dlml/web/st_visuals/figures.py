@@ -153,7 +153,7 @@ def make_loss_function_figure(
     )
     fig.update_layout(
         height=320,
-        margin=dict(l=20, r=20, t=30, b=40),
+        margin=dict(l=20, r=20, t=30, b=60),
         xaxis_title=f"{demand_type} ({demand_unit})",
         yaxis_title=dv_unit.replace("_", " ").title(),
         showlegend=False,
@@ -270,7 +270,7 @@ def make_consequence_figure(
     fig = make_subplots(
         rows=1, cols=2,
         shared_yaxes=True,
-        column_widths=[0.85, 0.15],
+        column_widths=[0.8, 0.2],
         horizontal_spacing=0.02,
     )
 
@@ -395,7 +395,7 @@ def make_consequence_figure(
     )
 
     fig.update_layout(
-        margin=dict(b=50, r=5, l=5, t=30),
+        margin=dict(b=70, r=30, l=5, t=30),
         height=380,
         showlegend=True,
         xaxis1=(
