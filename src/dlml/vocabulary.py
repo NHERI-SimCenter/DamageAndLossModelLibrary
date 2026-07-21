@@ -3,9 +3,10 @@ Canonical controlled vocabularies for the model parameters.
 
 These enumerations are the authoritative definition of the controlled
 vocabularies that appear in the packaged model parameters: the demand types a
-fragility or loss model may be conditioned on, and the statistical
-distribution families a model parameter may use. They are owned here, in the
-data library, so a single source of truth governs what the data may contain.
+fragility or loss model may be conditioned on, the unit type each demand is
+measured in, and the statistical distribution families a model parameter may
+use. They are owned here, in the data library, so a single source of truth
+governs what the data may contain.
 
 The values mirror pelicun's current definitions -- ``EDP_to_demand_type`` in
 ``pelicun.base`` and the ``rv_class_map`` registry in ``pelicun.uq`` -- and
@@ -14,51 +15,78 @@ are intended to be imported from here by pelicun rather than redefined there.
 
 from __future__ import annotations
 
-#: Mapping from a demand's full descriptive name to its short demand-type
-#: code (e.g. ``'Peak Floor Acceleration' -> 'PFA'``). The keys are the
-#: demand-type names a model's ``Demand``/``Type`` field may use; a spectral
-#: name may additionally carry a ``|<period>`` qualifier in the data, such as
+#: The valid unit types a demand may be measured in. A demand type's unit
+#: type identifies the physical quantity its values represent (so a consumer
+#: can pick the appropriate unit for it); ``'unitless'`` marks dimensionless
+#: demands, and ``'rotation'`` marks radian-measured demands that undergo no
+#: unit conversion.
+UNIT_TYPES: frozenset[str] = frozenset(
+    {
+        'acceleration',
+        'speed',
+        'displacement',
+        'unitless',
+        'rotation',
+        'force',
+        'force_per_length',
+        'pressure',
+    }
+)
+
+#: Mapping from a demand's full descriptive name to its properties: the short
+#: demand-type code under ``'Acronym'`` (e.g. ``'Peak Floor Acceleration' ->
+#: 'PFA'``) and the physical quantity it is measured in under ``'UnitType'``
+#: (one of :data:`UNIT_TYPES`). The keys are the demand-type names a model's
+#: ``Demand``/``Type`` field may use. Some demands carry an additional
+#: qualifier, such as the period for spectral accelerations as ``|<period>``:
 #: ``'Spectral Acceleration|1.0'``.
-EDP_to_demand_type: dict[str, str] = {  # pelicun-compatible name
+EDP_TYPES: dict[str, dict[str, str]] = {
     # Drifts
-    'Story Drift Ratio': 'PID',
-    'Peak Interstory Drift Ratio': 'PID',
-    'Roof Drift Ratio': 'PRD',
-    'Peak Roof Drift Ratio': 'PRD',
-    'Damageable Wall Drift': 'DWD',
-    'Racking Drift Ratio': 'RDR',
-    'Mega Drift Ratio': 'PMD',
-    'Residual Drift Ratio': 'RID',
-    'Residual Interstory Drift Ratio': 'RID',
-    'Peak Effective Drift Ratio': 'EDR',
+    'Story Drift Ratio': {'Acronym': 'PID', 'UnitType': 'unitless'},
+    'Peak Interstory Drift Ratio': {'Acronym': 'PID', 'UnitType': 'unitless'},
+    'Roof Drift Ratio': {'Acronym': 'PRD', 'UnitType': 'unitless'},
+    'Peak Roof Drift Ratio': {'Acronym': 'PRD', 'UnitType': 'unitless'},
+    'Damageable Wall Drift': {'Acronym': 'DWD', 'UnitType': 'unitless'},
+    'Racking Drift Ratio': {'Acronym': 'RDR', 'UnitType': 'unitless'},
+    'Mega Drift Ratio': {'Acronym': 'PMD', 'UnitType': 'unitless'},
+    'Residual Drift Ratio': {'Acronym': 'RID', 'UnitType': 'unitless'},
+    'Residual Interstory Drift Ratio': {'Acronym': 'RID', 'UnitType': 'unitless'},
+    'Peak Effective Drift Ratio': {'Acronym': 'EDR', 'UnitType': 'unitless'},
     # Floor response
-    'Peak Floor Acceleration': 'PFA',
-    'Peak Floor Velocity': 'PFV',
-    'Peak Floor Displacement': 'PFD',
+    'Peak Floor Acceleration': {'Acronym': 'PFA', 'UnitType': 'acceleration'},
+    'Peak Floor Velocity': {'Acronym': 'PFV', 'UnitType': 'speed'},
+    'Peak Floor Displacement': {'Acronym': 'PFD', 'UnitType': 'displacement'},
     # Component response
-    'Peak Link Rotation Angle': 'LR',
-    'Peak Link Beam Chord Rotation': 'LBR',
+    'Peak Link Rotation Angle': {'Acronym': 'LR', 'UnitType': 'rotation'},
+    'Peak Link Beam Chord Rotation': {'Acronym': 'LBR', 'UnitType': 'rotation'},
     # Wind Intensity
-    'Peak Gust Wind Speed': 'PWS',
+    'Peak Gust Wind Speed': {'Acronym': 'PWS', 'UnitType': 'speed'},
     # Wind Demands
-    'Peak Wind Force': 'PWF',
-    'Peak Internal Force': 'PIF',
-    'Peak Line Force': 'PLF',
-    'Peak Wind Pressure': 'PWP',
+    'Peak Wind Force': {'Acronym': 'PWF', 'UnitType': 'force'},
+    'Peak Internal Force': {'Acronym': 'PIF', 'UnitType': 'force'},
+    'Peak Line Force': {'Acronym': 'PLF', 'UnitType': 'force_per_length'},
+    'Peak Wind Pressure': {'Acronym': 'PWP', 'UnitType': 'pressure'},
     # Inundation Intensity
-    'Peak Inundation Height': 'PIH',
+    'Peak Inundation Height': {'Acronym': 'PIH', 'UnitType': 'displacement'},
     # Shaking Intensity
-    'Peak Ground Acceleration': 'PGA',
-    'Peak Ground Velocity': 'PGV',
-    'Spectral Acceleration': 'SA',
-    'Spectral Velocity': 'SV',
-    'Spectral Displacement': 'SD',
-    'Peak Spectral Acceleration': 'SA',
-    'Peak Spectral Velocity': 'SV',
-    'Peak Spectral Displacement': 'SD',
-    'Permanent Ground Deformation': 'PGD',
+    'Peak Ground Acceleration': {'Acronym': 'PGA', 'UnitType': 'acceleration'},
+    'Peak Ground Velocity': {'Acronym': 'PGV', 'UnitType': 'speed'},
+    'Spectral Acceleration': {'Acronym': 'SA', 'UnitType': 'acceleration'},
+    'Spectral Velocity': {'Acronym': 'SV', 'UnitType': 'speed'},
+    'Spectral Displacement': {'Acronym': 'SD', 'UnitType': 'displacement'},
+    'Peak Spectral Acceleration': {'Acronym': 'SA', 'UnitType': 'acceleration'},
+    'Peak Spectral Velocity': {'Acronym': 'SV', 'UnitType': 'speed'},
+    'Peak Spectral Displacement': {'Acronym': 'SD', 'UnitType': 'displacement'},
+    'Permanent Ground Deformation': {'Acronym': 'PGD', 'UnitType': 'displacement'},
     # Placeholder for advanced calculations
-    'One': 'ONE',
+    'One': {'Acronym': 'ONE', 'UnitType': 'unitless'},
+}
+
+#: Mapping from a demand's full descriptive name to its short demand-type
+#: code, derived from :data:`EDP_TYPES` (e.g.
+#: ``'Peak Floor Acceleration' -> 'PFA'``).
+EDP_to_demand_type: dict[str, str] = {  # pelicun-compatible name
+    name: info['Acronym'] for name, info in EDP_TYPES.items()
 }
 
 #: The valid demand-type names (the keys of :data:`EDP_to_demand_type`). A
