@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.1] - 2026-07-22
+
+This release extends the controlled vocabularies with unit-type information for demand types. The model data itself is unchanged.
+
+### Added
+- **Unit types in the demand-type vocabulary:** the new canonical `EDP_TYPES` mapping records each demand type's short acronym and the physical quantity it is measured in (`UnitType`), and the new `UNIT_TYPES` vocabulary enumerates the valid unit types: `acceleration`, `speed`, `displacement`, `unitless`, `rotation`, `force`, `force_per_length`, and `pressure`. Consumers (e.g., Pelicun 3.10+) can infer physical units for demand data from the vocabulary instead of maintaining hardcoded lists.
+
+### Changed
+- `EDP_to_demand_type` is now derived from `EDP_TYPES`. Its content is identical to before, so existing consumers are unaffected.
+
+### Distribution
+- Version 3.1 is published to PyPI as `simcenter-dlml`. The GitHub repository's `releases/latest` continues to point to v2.1.0 for legacy Pelicun (≤3.9) compatibility.
+
+---
+
 ## [3.0] - 2026-07-13
 
 This release turns the library into an installable Python package and adds a programmatic API, a command-line interface, and the DLML Explorer web app. The model data itself is unchanged and remains backward compatible.

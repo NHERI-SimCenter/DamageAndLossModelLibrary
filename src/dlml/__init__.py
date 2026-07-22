@@ -20,6 +20,8 @@ from dlml.api import (
 from dlml.vocabulary import (
     DEMAND_TYPES,
     DISTRIBUTION_FAMILIES,
+    EDP_TYPES,
+    UNIT_TYPES,
     EDP_to_demand_type,
 )
 
@@ -32,7 +34,9 @@ __all__ = [
     'DEMAND_TYPES',
     'DISTRIBUTION_FAMILIES',
     'DatasetFileNotFoundError',
+    'EDP_TYPES',
     'EDP_to_demand_type',
+    'UNIT_TYPES',
     'UnknownDatasetError',
     '__version__',
     'available_collections',
