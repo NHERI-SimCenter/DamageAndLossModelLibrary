@@ -26,7 +26,7 @@ from dlml._catalog import (
 
 # Invariants of the packaged data tree.
 EXPECTED_DATASET_COUNT = 11
-EXPECTED_FILE_COUNT = 46
+EXPECTED_FILE_COUNT = 48
 
 EXPECTED_DATASET_IDS = [
     'flood/building/portfolio/Hazus v6.1',

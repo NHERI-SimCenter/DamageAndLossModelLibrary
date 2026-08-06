@@ -41,7 +41,7 @@ from dlml._catalog import data_root
 if TYPE_CHECKING:
     from pathlib import Path
 
-_EXPECTED_SCHEMA_COUNT = 2
+_EXPECTED_SCHEMA_COUNT = 3
 
 
 def _discover_schemas() -> list[Path]:
@@ -299,3 +299,28 @@ def test_then_guard_credits_only_if_required_not_if_properties():
         ],
     }
     assert len(_vacuous_if_violations(schema)) == 2
+
+
+# ---------------------------------------------------------------------------
+# Cross-version consistency
+# ---------------------------------------------------------------------------
+
+
+def test_seismic_v51_schema_is_v61_minus_the_new_design_levels():
+    """The two seismic building schemas must not drift apart.
+
+    The v5.1 dataset holds the four-design-level subset of the v6.1 data,
+    and its input schema is maintained as a copy of the v6.1 schema with
+    the two levels introduced in Hazus 6.1 removed. Any other difference
+    between the two files is unintended.
+    """
+    seismic = data_root() / 'seismic' / 'building' / 'portfolio'
+    v51 = json.loads((seismic / 'Hazus v5.1' / 'input_schema.json').read_text())
+    v61 = json.loads((seismic / 'Hazus v6.1' / 'input_schema.json').read_text())
+
+    v61['properties']['DesignLevel']['enum'] = [
+        level
+        for level in v61['properties']['DesignLevel']['enum']
+        if level not in ('Very High-Code', 'Severe-Code')
+    ]
+    assert v51 == v61
