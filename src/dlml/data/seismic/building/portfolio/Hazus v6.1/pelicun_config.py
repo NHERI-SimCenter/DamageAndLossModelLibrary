@@ -141,11 +141,16 @@ def auto_populate(aim):  # noqa: C901
         height_class_data = None
 
     if gi.get('LifelineFacility'):
+        # the PGA-based lifeline facility fragilities are only available up
+        # to High-Code; buildings designed to the stronger levels are
+        # evaluated with the High-Code models, a conservative substitution
+        lf_design_level = 'HC' if design_level in ('VC', 'SC') else design_level
+
         if height_class_data is not None:
             height_class = height_class_map[height_class_data]
-            model_id = f'LF.{structure_type}.{height_class}.{design_level}'
+            model_id = f'LF.{structure_type}.{height_class}.{lf_design_level}'
         else:
-            model_id = f'LF.{structure_type}.{design_level}'
+            model_id = f'LF.{structure_type}.{lf_design_level}'
 
         comp = pd.DataFrame(
             {f'{model_id}': ['ea', 1, 1, 1, 'N/A']},
