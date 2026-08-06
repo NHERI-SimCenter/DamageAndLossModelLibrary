@@ -36,11 +36,12 @@
 		"GroundFailure": {
 			"type": "boolean"
 		},
-		"FoundationType":{
-			"type": "string",
+		"FoundationDepth":{
+			"type": ["string","null"],
 			"enum": [
 				"Shallow",
-				"Deep"
+				"Deep",
+				null
 			]
 		},
 		"OccupancyClass": {
@@ -133,7 +134,12 @@
 				"required": ["GroundFailure"]
 			},
 			"then": {
-				"required": ["FoundationType"]
+				"properties": {
+					"FoundationDepth": {
+						"type": "string"
+					}
+				},
+				"required": ["FoundationDepth"]
 			}
 		}
 	]

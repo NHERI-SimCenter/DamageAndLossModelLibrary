@@ -84,6 +84,15 @@ def auto_populate(aim):  # noqa: C901
     if gi.get('LifelineFacility', None) is None:
         gi['LifelineFacility'] = dl_app_data.get('lifeline_facility', None)
 
+    # accept the pre-3.2 name of the foundation input; the 3.2 schema
+    # renamed FoundationType to FoundationDepth to free the former for
+    # foundation system descriptions
+    if gi.get('FoundationDepth') is None and gi.get('FoundationType') in (
+        'Shallow',
+        'Deep',
+    ):
+        gi['FoundationDepth'] = gi['FoundationType']
+
     # load the schema assuming it is called "input_schema.json" and it is
     # stored next to the mapping script
     current_file_path = Path(__file__)
@@ -156,11 +165,11 @@ def auto_populate(aim):  # noqa: C901
 
     # if needed, add components to simulate damage from ground failure
     if gi.get('GroundFailure'):
-        foundation_type_map = {'Shallow': 'S', 'Deep': 'D'}
-        foundation_type = foundation_type_map[gi['FoundationType']]
+        foundation_depth_map = {'Shallow': 'S', 'Deep': 'D'}
+        foundation_depth = foundation_depth_map[gi['FoundationDepth']]
 
-        gf_model_id_h = f'GF.H.{foundation_type}'
-        gf_model_id_v = f'GF.V.{foundation_type}'
+        gf_model_id_h = f'GF.H.{foundation_depth}'
+        gf_model_id_v = f'GF.V.{foundation_depth}'
 
         comp_gf = pd.DataFrame(
             {
