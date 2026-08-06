@@ -36,6 +36,9 @@
 		"GroundFailure": {
 			"type": "boolean"
 		},
+		"LifelineFacility": {
+			"type": "boolean"
+		},
 		"FoundationDepth":{
 			"type": ["string","null"],
 			"enum": [
@@ -58,7 +61,7 @@
 			]
 		}
 	},
-	"required": ["StructureType","DesignLevel"],
+	"required": ["StructureType","DesignLevel","OccupancyClass"],
 	"allOf": [
 		{
 			"if": {

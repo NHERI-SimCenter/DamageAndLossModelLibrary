@@ -77,12 +77,20 @@ def auto_populate(aim):  # noqa: C901
         if pd.isna(item) or item == '':
             gi[key] = None
 
-    # add configuration data to the gi if it is not already there
+    # add configuration data to the gi if it is not already there; when
+    # neither the GI nor the application data specifies one of these flags,
+    # it defaults to False
     dl_app_data = aim['Applications']['DL']['ApplicationData']
     if gi.get('GroundFailure', None) is None:
-        gi['GroundFailure'] = dl_app_data.get('ground_failure', None)
+        ground_failure = dl_app_data.get('ground_failure')
+        gi['GroundFailure'] = (
+            ground_failure if ground_failure is not None else False
+        )
     if gi.get('LifelineFacility', None) is None:
-        gi['LifelineFacility'] = dl_app_data.get('lifeline_facility', None)
+        lifeline_facility = dl_app_data.get('lifeline_facility')
+        gi['LifelineFacility'] = (
+            lifeline_facility if lifeline_facility is not None else False
+        )
 
     # accept the pre-3.2 name of the foundation input; the 3.2 schema
     # renamed FoundationType to FoundationDepth to free the former for

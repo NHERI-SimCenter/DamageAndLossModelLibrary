@@ -205,6 +205,7 @@ def test_validate_asset_accepts_conforming_features():
         'StructureType': 'W1',
         'DesignLevel': 'High-Code',
         'FoundationDepth': 'Shallow',
+        'OccupancyClass': 'RES1',
     }
     assert validate_asset(DATASET_WITH_SCHEMA, features) == []
 
@@ -243,11 +244,13 @@ def test_validate_assets_reports_only_failures():
             'StructureType': 'W1',
             'DesignLevel': 'High-Code',
             'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
         'bad_enum': {
             'StructureType': 'NOPE',
             'DesignLevel': 'High-Code',
             'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
         'missing': {},
     }
@@ -262,6 +265,7 @@ def test_validate_assets_empty_when_all_pass():
             'StructureType': 'W1',
             'DesignLevel': 'High-Code',
             'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
     }
     assert validate_assets(DATASET_WITH_SCHEMA, assets) == {}
