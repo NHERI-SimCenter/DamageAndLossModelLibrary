@@ -172,8 +172,13 @@ def auto_populate(aim):  # noqa: C901
 
         comp = pd.concat([comp, comp_gf], axis=0)
 
-    # get the occupancy class
+    # get the occupancy class; the RES3 subtypes (RES3A-RES3F) carry
+    # unit-count detail that the damage and loss models do not distinguish,
+    # so they are collapsed to RES3 for model selection while the asset
+    # keeps its subtype
     occupancy_type = gi['OccupancyClass']
+    if occupancy_type.startswith('RES3'):
+        occupancy_type = 'RES3'
 
     dl_ap = {
         'Asset': {
