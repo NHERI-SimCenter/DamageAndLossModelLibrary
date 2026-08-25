@@ -1,18 +1,18 @@
 name: Publish to PyPI
 
-# ┌──────────────────────────────────────────────────────────────────────────┐
-# │ FREEZE POLICY (see README, "Release Policy"). This workflow publishes to  │
-# │ PyPI when a git TAG like `v3.0` is pushed. A pushed git tag is only a     │
-# │ ref -- it does NOT create a GitHub Release, so `releases/latest` stays    │
-# │ pinned at v2.1.0 for legacy pelicun (<=3.9) that downloads the data from  │
-# │ there. Do NOT add an `on: release:` trigger, and do NOT add any step that │
-# │ creates a GitHub Release or moves a tag while the freeze is in effect.    │
-# └──────────────────────────────────────────────────────────────────────────┘
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │ RELEASE POLICY (see README, "Release policy"). This workflow publishes to │
+# │ PyPI when a git TAG like `v3.2` is pushed. Shipping the wheel and         │
+# │ announcing the release are separate steps: the tag does the upload, and   │
+# │ the GitHub Release is written by hand afterward. Do NOT add an           │
+# │ `on: release:` trigger -- PyPI uploads are immutable, so a release event  │
+# │ could only retry an upload that has already succeeded.               │
+# └───────────────────────────────────────────────────────────────────────────┘
 
 on:
   push:
     tags:
-      # v3-v9 majors publish to PyPI; v2.x is deliberately excluded (freeze).
+      # v3-v9 majors publish to PyPI; v2.x predates the PyPI distribution.
       - "v[3-9].*"
   # Manual runs build + validate only; the publish job is gated on a tag ref,
   # so a dispatch is a safe no-upload dry run (inspect the artifacts afterward).

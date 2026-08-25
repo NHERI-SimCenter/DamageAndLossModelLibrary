@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+- **Distribution:** v3.0 and v3.1 are now published as GitHub Releases, and `releases/latest` resolves to the current version rather than to v2.1.0. Pelicun 3.10 and later are unaffected — they install `simcenter-dlml` from PyPI. Pelicun 3.9 and earlier, which read the model data from the latest GitHub release, no longer work against it; see the README's release policy for the upgrade path and for pinning the data to v2.1.0.
+
+### Removed
+- The root `model_files.txt` manifest, which described the pre-v3.0 top-level data layout and no longer matched the packaged data.
+
+---
+
 ## [3.1] - 2026-07-22
 
 This release extends the controlled vocabularies with unit-type information for demand types. The model data itself is unchanged.

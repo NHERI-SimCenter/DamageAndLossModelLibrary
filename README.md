@@ -111,6 +111,10 @@ The library is the data backbone for
 damage-and-loss engine, and is available automatically through the **PBE** and
 **R2D** desktop applications that run Pelicun under the hood.
 
+Pelicun 3.10 and later install this library from PyPI and need no further setup.
+Pelicun 3.9 and earlier read the model data from this repository instead; see
+[Release policy](#release-policy) if you are still on one of those versions.
+
 ### Work with the raw data
 
 You can also read the CSV/JSON files directly from a clone of this repository:
@@ -122,6 +126,36 @@ git clone https://github.com/NHERI-SimCenter/DamageAndLossModelLibrary.git
 > A legacy [documentation website](https://nheri-simcenter.github.io/DamageAndLossModelLibrary/)
 > with auto-generated model pages also remains available; it will be revised over
 > time to complement the DLML Explorer.
+
+## Release policy
+
+Releases are published to PyPI as [`simcenter-dlml`](https://pypi.org/project/simcenter-dlml/)
+and tagged here, with matching entries in [`CHANGELOG.md`](CHANGELOG.md). Version
+numbers use two segments (`3.0`, `3.1`, ...), and every model in a release is a
+fixed snapshot, so an analysis can cite the exact data it used.
+
+### Migrating from Pelicun 3.9 and earlier
+
+Pelicun 3.9 and earlier downloaded the model data from this repository's latest
+GitHub release when you imported them. Since v3.0 the data lives under
+`src/dlml/data/`, a layout those versions cannot read, so they now fail with a
+download error.
+
+We recommend upgrading. Pelicun 3.10 and later depend on `simcenter-dlml` directly
+and download nothing:
+
+```bash
+pip install --upgrade pelicun
+```
+
+If you need to stay on Pelicun 3.9 or earlier, pin the model data to the last
+release those versions can read:
+
+```bash
+pelicun dlml update v2.1.0
+```
+
+The `v2.1.0` release stays available for this purpose.
 
 ## Contributing
 
