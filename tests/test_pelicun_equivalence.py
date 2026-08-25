@@ -7,23 +7,17 @@ parameters table, ``dlml.get_parameters`` must equal
 exact call dlml mirrors -- and the re-exported ``convert_to_MultiIndex`` must
 match pelicun's on both axes.
 
+Pelicun keeps its own tabular implementation and takes only the vocabulary from
+dlml, so the two sides of the comparison stay independent.
+
 This is the one test that needs pelicun (the ``test`` extra); it is skipped
-where pelicun is unavailable. Importing pelicun currently triggers a one-time
-DLML data download, so *before* the import we point ``DLML_DATA_DIR`` at a
-throwaway directory holding the manifest file pelicun probes for plus a fresh
-version-check cache -- making the import offline and side-effect-free.
+where pelicun is unavailable. Pelicun 3.10 and later get their model data from
+this package, so importing them is offline and side-effect-free.
 """
 
 from __future__ import annotations
 
-import atexit
 import importlib.util
-import json
-import os
-import shutil
-import tempfile
-from datetime import datetime
-from pathlib import Path
 
 import pandas as pd
 import pytest
@@ -32,35 +26,13 @@ import dlml
 from dlml import _catalog
 
 # Skip the whole module only when pelicun (the ``test`` extra) is genuinely not
-# installed -- checked via find_spec, which locates the top-level package
-# WITHOUT executing its __init__ (and thus without triggering the DLML
-# download).
+# installed -- checked via find_spec so that a pelicun which *is* installed but
+# fails to import raises here instead of silently skipping the gate.
 if importlib.util.find_spec('pelicun') is None:
     pytest.skip('pelicun (the test extra) is not installed', allow_module_level=True)
 
-# --- Offline pelicun import (configured before pelicun is imported) ----------
-_STUB_DATA_DIR = Path(tempfile.mkdtemp(prefix='dlml-pelicun-stub-'))
-atexit.register(shutil.rmtree, _STUB_DATA_DIR, ignore_errors=True)
-# The manifest's presence tells pelicun the data is installed (no download).
-(_STUB_DATA_DIR / 'model_files.txt').write_text('', encoding='utf-8')
-# A recent check timestamp short-circuits pelicun's daily network version
-# check.
-(_STUB_DATA_DIR / '.dlml_cache.json').write_text(
-    json.dumps(
-        {
-            'last_version_check': datetime.now().isoformat(),  # noqa: DTZ005
-            'update_available': False,
-        }
-    ),
-    encoding='utf-8',
-)
-os.environ['DLML_DATA_DIR'] = str(_STUB_DATA_DIR)
-
-# pelicun is installed, so with the guard above the import must succeed
-# offline. Importing directly (not importorskip) makes a future guard
-# regression a hard error here rather than a silently skipped gate.
-import pelicun.base as pelicun_base  # noqa: E402
-import pelicun.file_io as pelicun_file_io  # noqa: E402
+import pelicun.base as pelicun_base
+import pelicun.file_io as pelicun_file_io
 
 _PAIRS = [
     (dataset, collection)
