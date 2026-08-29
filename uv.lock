@@ -2961,7 +2961,7 @@ wheels = [
 
 [[package]]
 name = "pelicun"
-version = "3.9.0"
+version = "3.10.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama" },
@@ -2973,21 +2973,18 @@ dependencies = [
     { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "packaging", version = "25.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "packaging", version = "26.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "pandas" },
-    { name = "requests", version = "2.32.5", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "requests", version = "2.34.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
     { name = "scikit-learn", version = "1.6.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "scikit-learn", version = "1.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
     { name = "scikit-learn", version = "1.9.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
     { name = "scipy", version = "1.13.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
     { name = "scipy", version = "1.15.3", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+    { name = "simcenter-dlml" },
     { name = "tqdm" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a7/bd/2f2038091f800b400cbfa6cfc3b5d536a55643a3315ec42681d31ec0d8cb/pelicun-3.9.0.tar.gz", hash = "sha256:78636bda49c74f771ccc8ddbf4df0415a5efaac12735a4181cf3122ae019ee23", size = 325326, upload-time = "2026-04-21T06:59:53.456Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/9c/51/56c112532dc74f77396691f3220ee1892e7c54c0c08d0d4060a1b4bee47a/pelicun-3.10.0.tar.gz", hash = "sha256:8521eee2c2ea0eeafc9ffdc7d05db0364546561c4391163680ce713b3fa9ad07", size = 316618, upload-time = "2026-08-05T19:55:42.644Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/c6/8f/825003fad8968193408130891f608c7f4852b92377bd2460e9b8c6fec53c/pelicun-3.9.0-py3-none-any.whl", hash = "sha256:8a986892c6406496ff1e4310c7be7ee6147f09260ecf43a6b26daabcd7cab27d", size = 427138, upload-time = "2026-04-21T06:59:51.701Z" },
+    { url = "https://files.pythonhosted.org/packages/35/e2/f35527d6b6a1b016bd2e0cda0b2e15a02f15717c584e4a98231adf76e6c3/pelicun-3.10.0-py3-none-any.whl", hash = "sha256:d2e56b845afa6b0a4b14ad7ca6cf686bc151c2a7ac7ed887fd78edaec25f0b8f", size = 415436, upload-time = "2026-08-05T19:55:41.102Z" },
 ]
 
 [[package]]
@@ -5042,7 +5039,7 @@ requires-dist = [
     { name = "numpy", specifier = ">=1.22" },
     { name = "numpydoc", marker = "extra == 'doc'" },
     { name = "pandas", specifier = ">=2.0" },
-    { name = "pelicun", marker = "extra == 'test'", specifier = ">=3.9,<3.10" },
+    { name = "pelicun", marker = "extra == 'test'", specifier = ">=3.10,<4" },
     { name = "plotly", marker = "extra == 'doc'" },
     { name = "plotly", marker = "extra == 'explorer'" },
     { name = "pytest", marker = "extra == 'test'", specifier = ">=7" },
