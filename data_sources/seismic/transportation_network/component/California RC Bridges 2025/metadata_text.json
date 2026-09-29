@@ -1,6 +1,6 @@
 {
   "description": {
-    "model": "{component} fragility for {group}.{attributes} Source: {citation}, compiled by Chen et al. (2025).",
+    "model": "{component} fragility for {group}.{attributes}",
     "group": "{era} bridge with {parts}",
     "attributes": " Model attributes: {attributes}."
   },
@@ -70,16 +70,6 @@
     "Slope10": "slope offset with a 10 ft approach slab",
     "Slope30": "slope offset with a 30 ft approach slab",
     "Slope45": "slope offset with a 45 ft approach slab"
-  },
-  "citations": {
-    "M17": "Mangalathu (2017)",
-    "MSJ17": "Mangalathu, Soleimani, and Jeon (2017)",
-    "MCP18": "Mangalathu, Choi, Park, and Jeon (2018)",
-    "S17": "Soleimani (2017)",
-    "SMD17": "Soleimani, Mangalathu, and DesRoches (2017)",
-    "JML19": "Jeon, Mangalathu, and Lee (2019)",
-    "SXR22": "Shao, Xie, Roblee, and Zhang (2022)",
-    "CPR22": "Cavalcante et al. (2022)"
   },
   "shared_sentences": {
     "sa_not_stated": "The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.",

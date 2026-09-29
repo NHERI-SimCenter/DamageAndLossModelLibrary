@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **California RC bridge fragilities (Chen et al. 2025):** two datasets from the Sa(1.0 s)-based fragility database of Chen et al. (2025, Earthquake Spectra 41(4)), published on DesignSafe as PRJ-5910. `seismic/transportation_network/portfolio/California RC Bridges 2025` holds 116 bridge system models and `seismic/transportation_network/component/California RC Bridges 2025` holds 801 bridge component models, covering 26 bridge groups by design era, span count, bent type, and abutment type. Each model's metadata cites its source study and records every correction made to the published values or labels.
 ### Changed
 - **Distribution:** v3.0 and v3.1 are now published as GitHub Releases, and `releases/latest` resolves to the current version rather than to v2.1.0. Pelicun 3.10 and later are unaffected — they install `simcenter-dlml` from PyPI. Pelicun 3.9 and earlier, which read the model data from the latest GitHub release, no longer work against it; see the README's release policy for the upgrade path and for pinning the data to v2.1.0.
 

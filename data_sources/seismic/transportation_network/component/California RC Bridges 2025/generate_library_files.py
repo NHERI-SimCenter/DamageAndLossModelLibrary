@@ -853,7 +853,6 @@ def description(model: pd.Series) -> str:
         attributes=templates['attributes'].format(attributes=', '.join(attrs))
         if attrs
         else '',
-        citation=TEXT['citations'][model['source']],
     )
 
 
@@ -1210,7 +1209,7 @@ CSV_HEADER = [
 ] + [
     f'LS{i}-{field}'
     for i in range(1, 5)
-    for field in ('Family', 'Theta_0', 'Theta_1', 'DamageStateWeights')
+    for field in ('Family', 'Theta_0', 'Theta_1')
 ]
 
 
@@ -1227,7 +1226,7 @@ def write_csv(path: Path, rows: pd.DataFrame) -> None:
                 if pd.isna(median):
                     check(pd.isna(beta), 'dispersion without a median', [model.name])
                     seen_empty = True
-                    line += ['', '', '', '']
+                    line += ['', '', '']
                     continue
                 check(
                     not seen_empty,
@@ -1235,7 +1234,7 @@ def write_csv(path: Path, rows: pd.DataFrame) -> None:
                     [model.name],
                 )
                 check(not pd.isna(beta) and beta > 0, 'bad dispersion', [model.name])
-                line += ['lognormal', fmt(median), fmt(beta), '']
+                line += ['lognormal', fmt(median), fmt(beta)]
             writer.writerow(line)
 
 

@@ -25,8 +25,8 @@ from dlml._catalog import (
 )
 
 # Invariants of the packaged data tree.
-EXPECTED_DATASET_COUNT = 11
-EXPECTED_FILE_COUNT = 48
+EXPECTED_DATASET_COUNT = 13
+EXPECTED_FILE_COUNT = 52
 
 EXPECTED_DATASET_IDS = [
     'flood/building/portfolio/Hazus v6.1',
@@ -38,6 +38,8 @@ EXPECTED_DATASET_IDS = [
     'seismic/building/portfolio/Hazus v6.1',
     'seismic/building/subassembly/Hazus v5.1',
     'seismic/power_network/portfolio/Hazus v5.1',
+    'seismic/transportation_network/component/California RC Bridges 2025',
+    'seismic/transportation_network/portfolio/California RC Bridges 2025',
     'seismic/transportation_network/portfolio/Hazus v5.1',
     'seismic/water_network/portfolio/Hazus v6.1',
 ]

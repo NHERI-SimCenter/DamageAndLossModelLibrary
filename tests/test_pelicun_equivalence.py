@@ -40,7 +40,7 @@ _PAIRS = [
     for collection in dlml.available_collections(dataset)
 ]
 _PAIR_IDS = [f'{collection}::{dataset}' for dataset, collection in _PAIRS]
-_EXPECTED_PAIR_COUNT = 18
+_EXPECTED_PAIR_COUNT = 20
 
 
 def test_discovery_is_non_vacuous():
