@@ -1,0 +1,25 @@
+Fragility notation,EDP (unit),Slight_median,Moderate_median,Extensive_median,Complete_median,Dispersion,Notes,References
+Column,Curvature ductility,0.8,2,5,8,0.35,For Era 1 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)"
+Column,Curvature ductility,1,5,8,11,0.35,For Era 2 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)"
+Column,Curvature ductility,1,5,11,17,0.35,For Era 3 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)"
+Column,Column drift (%),0.7,1.5,2.5,5,0.35,For E1-S3P-C1-D bridge group,Mangalathu et al. (2018)
+Column,Column drift (%),1,2.5,5,7.5,0.35,For E2-S3P-C1-D bridge group,Mangalathu et al. (2018)
+Column,Column drift (%),1,2.5,7.5,10,0.35,For E3-S3P-C1-D bridge group,Mangalathu et al. (2018)
+Unseating,Displacement (in.),,,6,9,0.35,"Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S ","Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)"
+Unseating,Displacement (in.),0.5,1,2,3,0.35,For Era 1 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) "
+Unseating,Displacement (in.),1,4.5,10,15,0.35,For Era 2 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) "
+Unseating,Displacement (in.),1.5,4.5,14,21,0.35,For Era 3 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) "
+AbAct,Displacement (in.),1.5,4,,,0.35,,All six listed in Table 3 of the paper
+AbPass,Displacement (in.),3,10,,,0.35,,All six listed in Table 3 of the paper
+AbTran,Displacement (in.),1,4,,,0.35,,All six listed in Table 3 of the paper
+Bearing,Displacement (in.),1,4,,,0.35,,All six listed in Table 3 of the paper
+Bearing,Displacement (in.),1,3,,,0.35,For E123-S1-C0-S bridge group,Cavalcante et al. (2022)
+DeckMax,Displacement (in.),4,12,,,0.35,,All six listed in Table 3 of the paper
+FndRot,Rotation (rad),1.5,6,,,0.35,,All six listed in Table 3 of the paper
+FndTran,Displacement (in.),1,4,,,0.35,,All six listed in Table 3 of the paper
+Key,Displacement (in.),1,5,,,0.35,,All six listed in Table 3 of the paper
+Seal,Displacement (in.),2,5,,,0.35,,All six listed in Table 3 of the paper
+Approach,Settlement (in.),1.4,2.5,,,0.35,Approach with step offset,Shao et al. (2022)
+Approach,Settlement (in.),2.1,4.2,,,0.35,10 ft approach with slope offset,Shao et al. (2022)
+Approach,Settlement (in.),6.4,12.7,,,0.35,30 ft approach with slope offset,Shao et al. (2022)
+Approach,Settlement (in.),9.5,19.1,,,0.35,45 ft approach with slope offset,Shao et al. (2022)
