@@ -46,7 +46,7 @@ from dlml import convert_to_MultiIndex
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 
-from dlml.web.st_search.semantic_index import tree_corpus_files
+from dlml.web.st_search.semantic_index import _category_from_path, tree_corpus_files
 from dlml.web.st_core.component import (
     _render_wind_component_detail,
     render_component_leaf,
@@ -64,6 +64,7 @@ _CATEGORY_BADGE: Dict[str, str] = {
     "FEMA": "🔵 FEMA P-58",
     "HAZUS": "🟠 Hazus",
     "SIMCENTER": "🌐 SimCenter",
+    "RESEARCH": "🔬 Research",
 }
 
 # Top-level keys in a fragility.json that are not components.
@@ -89,17 +90,6 @@ def _hazard_files(hazard: str, dataset: str = "fragility") -> tuple[str, ...]:
     return tuple(
         fp for fp in tree_corpus_files(dataset=dataset) if hazard in Path(fp).parts
     )
-
-
-def _category_of(file_path: str) -> str:
-    """FEMA / HAZUS / SimCenter badge category parsed from the source path."""
-    if "FEMA" in file_path:
-        return "FEMA"
-    if "Hazus" in file_path:
-        return "HAZUS"
-    if "SimCenter" in file_path:
-        return "SIMCENTER"
-    return ""
 
 
 @st.cache_resource(show_spinner=False)
@@ -448,9 +438,9 @@ def _render_tree(
     for short_name, source_data, root, n_comp in plan:
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
-        # Badge from the source path (FEMA / Hazus / SimCenter) — works for the
-        # hurricane SimCenter library and the Hazus hurricane portfolio alike.
-        badge = _CATEGORY_BADGE.get(_category_of(fp), "")
+        # Badge from the source path (FEMA / Hazus / SimCenter / Research) — works
+        # for the hurricane SimCenter library and the Hazus hurricane portfolio alike.
+        badge = _CATEGORY_BADGE.get(_category_from_path(fp), "")
 
         # ══ Source ════════════════════════════════════════════════════════════
         with st.expander(

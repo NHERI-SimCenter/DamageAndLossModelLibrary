@@ -94,7 +94,7 @@ class ComponentRecord:
     short_name: str          # source library, e.g. "FEMA P-58 2nd Edition"
     file_path: str
     hazard: str              # "seismic" | "hurricane" | "flood" | ""
-    category: str            # "FEMA" | "HAZUS" | ""
+    category: str            # "FEMA" | "HAZUS" | "SIMCENTER" | "RESEARCH"
     group: str               # 1-segment prefix, e.g. "B"        (tree level 3)
     group_label: str         # human label,      e.g. "B - Shell"
     subgroup: str            # 2-segment prefix, e.g. "B.10"     (tree level 4)
@@ -234,13 +234,18 @@ def _hazard_from_path(file_path: str) -> str:
 
 
 def _category_from_path(file_path: str) -> str:
+    """Source category for the badge and the search facet.
+
+    Every dataset not recognized as FEMA, Hazus, or SimCenter gets the
+    RESEARCH category.
+    """
     if "FEMA" in file_path:
         return "FEMA"
     if "Hazus" in file_path:
         return "HAZUS"
     if "SimCenter" in file_path:
         return "SIMCENTER"
-    return ""
+    return "RESEARCH"
 
 
 def _record_from_component(
@@ -659,7 +664,8 @@ def _main() -> None:
                         choices=["description", "id"])
     parser.add_argument("--hazard", default=None, help="facet: seismic / hurricane")
     parser.add_argument("--source", default=None, help="facet: source short name")
-    parser.add_argument("--category", default=None, help="facet: FEMA / HAZUS")
+    parser.add_argument("--category", default=None,
+                        help="facet: FEMA / HAZUS / SIMCENTER / RESEARCH")
     parser.add_argument("--limit", type=int, default=10)
     parser.add_argument("--base", default=None,
                         help="override the data root (defaults to the packaged "
@@ -698,7 +704,7 @@ def _main() -> None:
     for i, h in enumerate(hits, 1):
         p = h.payload
         desc = (h.description[:90] + "…") if len(h.description) > 90 else h.description
-        print(f"  {i:>2}. {h.score:.3f}  [{p.get('category') or p.get('hazard')}] "
+        print(f"  {i:>2}. {h.score:.3f}  [{p.get('category')}] "
               f"{h.component_id}  ({p.get('subgroup_label')})")
         print(f"        {desc}")
 
