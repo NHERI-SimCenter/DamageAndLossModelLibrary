@@ -1,7 +1,7 @@
 # Source data
 
-`Sa_1_Fragility Database.csv` is a byte-for-byte copy of the file of the same
-name in DesignSafe project PRJ-5910, version 1 (published 2025-04-29,
+`Sa_1_Fragility Database.csv` is a copy of the file of the same name in
+DesignSafe project PRJ-5910, version 1 (published 2025-04-29,
 doi:10.17603/ds2-c73m-nj37, Open Data Commons Attribution License):
 
 Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025.
@@ -11,12 +11,16 @@ Reinforced Concrete Bridges in California. DesignSafe-CI, PRJ-5910.
 The data paper describing it is Chen et al. (2025), Earthquake Spectra 41(4):
 3234–3253, doi:10.1177/87552930251343634.
 
-`EDP_Fragility Database.csv` is a byte-for-byte copy of the file of the same
-name in the same project version. It lists the median capacities of each
-component for its damage states, in terms of the engineering demand parameter
-(EDP) of the component. The generator reads it only to confirm the capacities
-quoted in the damage-state descriptions (see [Damage-state
-descriptions](#damage-state-descriptions)); it changes no fragility parameter.
+The same project version also publishes `EDP_Fragility Database.csv`, which
+lists the median capacities of each component for its damage states, in terms of
+the engineering demand parameter (EDP) of the component. That file is kept in
+`../../California RC Bridges 2025 EDP/source/`. The generator in
+`../../California RC Bridges 2025 EDP/` builds the EDP-based dataset
+`seismic/transportation_network/component/California RC Bridges 2025 EDP` from
+it. The generator of this folder, `../generate_library_files.py`, reads it only
+to confirm the capacities quoted in the damage-state descriptions (see
+[Damage-state descriptions](#damage-state-descriptions)); it changes no
+fragility parameter here.
 
 This file is the record of every change the generator makes to the published
 labels and values and of every published row it omits. The same changes are
@@ -27,28 +31,19 @@ of each affected model.
 
 `Sa_1_Fragility Database.csv`:
 
-- UTF-8 with a byte-order mark, CRLF line endings, 1,018 data rows.
+- UTF-8 with a byte-order mark, 1,018 data rows; CRLF line endings in the
+  DesignSafe file, stored here with LF endings.
 - Columns: `Bridge group`, `Fragility notation`, the lognormal median (`_λ`, in
   g) and dispersion (`_ζ`) of Sa(1.0 s) for the `Slight`, `Moderate`,
   `Extensive`, and `Complete` damage states, `Notes`, and `Reference`.
 - `N/A` marks a damage state with negligible probability of damage from ground
   shaking; an empty cell marks a state the source does not define.
 
-`EDP_Fragility Database.csv`:
-
-- ASCII text without a byte-order mark, CRLF line endings, 24 data rows.
-- Columns: `Fragility notation`, `EDP (unit)`, the median capacity of each
-  damage state (`Slight_median` to `Complete_median`, empty where a component
-  has fewer states), a `Dispersion`, `Notes` that name the design era, the
-  bridge groups, or the approach configuration a row applies to (empty in the
-  nine rows that apply to every group), and `References` that name the source
-  studies.
-
 Row numbers used in the generator, the crosswalk, the model metadata, and this
 file are 0-based data rows of `Sa_1_Fragility Database.csv`; the spreadsheet row
 is the data row plus 2.
 
-Keep both files unchanged. Corrections are applied by
+Keep the file unchanged. Corrections are applied by
 `../generate_library_files.py`.
 
 ## Number formatting
@@ -377,13 +372,13 @@ wording in `../metadata_text.json` (`limit_states`). Their sources are:
 - Cavalcante et al. (2022) bearings: Cavalcante et al. (2022) Table 8.
 
 The median capacities that the descriptions quote come from `EDP_Fragility
-Database.csv`, where they are expressed in the EDP of each component (curvature
-ductility, column drift in percent, displacement or settlement in inches, or
-rotation in radians). The generator keeps them in its `CAPACITIES` table and
-stops unless every quoted value equals the value of the matching row of the EDP
-file; its function `edp_row_key` documents how rows are matched by component,
-EDP, and the era or group in `Notes`. Some values of the EDP file are
-deliberately not quoted:
+Database.csv` in `../../California RC Bridges 2025 EDP/source/`, where they are
+expressed in the EDP of each component (curvature ductility, column drift in
+percent, displacement or settlement in inches, or rotation in radians). The
+generator keeps them in its `CAPACITIES` table and stops unless every quoted
+value equals the value of the matching row of the EDP file; its function
+`edp_row_key` documents how rows are matched by component, EDP, and the era or
+group in `Notes`. Some values of the EDP file are deliberately not quoted:
 
 - The moderate joint seal description quotes no capacity. The EDP file gives 5
   in., which the published seal curves do not reproduce (see the seal sentence

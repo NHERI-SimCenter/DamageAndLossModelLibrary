@@ -11,9 +11,10 @@ It also writes ``id_crosswalk.csv`` beside this script, which maps every model
 ID to its row in the source file and lists the rows that were omitted.
 
 The damage-state descriptions quote median capacities that are confirmed
-against ``source/EDP_Fragility Database.csv`` of the same project; that file
-changes no fragility parameter. Every change to the published labels and values
-is recorded in ``source/README.md``.
+against ``EDP_Fragility Database.csv`` of the same project, kept in
+``../California RC Bridges 2025 EDP/source/``; that file changes no fragility
+parameter here. Every change to the published labels and values is recorded in
+``source/README.md``.
 
 The metadata text (phrase tables, source-study paragraphs, correction
 sentences, and damage-state descriptions) is read from ``metadata_text.json``,
@@ -43,7 +44,12 @@ import pandas as pd
 HERE = Path(__file__).resolve().parent
 REPO_ROOT = Path(__file__).resolve().parents[5]
 SOURCE_FILE = HERE / 'source' / 'Sa_1_Fragility Database.csv'
-EDP_FILE = HERE / 'source' / 'EDP_Fragility Database.csv'
+EDP_FILE = (
+    HERE.parent
+    / 'California RC Bridges 2025 EDP'
+    / 'source'
+    / 'EDP_Fragility Database.csv'
+)
 DATA_ROOT = (
     REPO_ROOT / 'src' / 'dlml' / 'data' / 'seismic' / 'transportation_network'
 )
@@ -173,13 +179,14 @@ NOTE_PATTERNS = [
 # one value per damage state, keyed by (component, threshold set, variant);
 # None where a description quotes no number. They are text only and change no
 # fragility parameter; the fragility curves come from the Sa(1.0 s) file alone.
-# Every value comes from a row of source/EDP_Fragility Database.csv of the same
-# DesignSafe project, and check_thresholds() confirms it against that file. The
-# row for the Cavalcante et al. (2022) bearing carries the values of that
-# study's Table 8; the Approach rows carry the Shao et al. (2022) Table 2 LS2 and
-# LS3 values converted from cm to inches. The System descriptions quote no
-# number, and the moderate Seal description quotes none because the published
-# curve does not match the 5 in. of the file (see the seal Comments sentence).
+# Every value comes from a row of EDP_Fragility Database.csv of the same
+# DesignSafe project (in ../California RC Bridges 2025 EDP/source/), and
+# check_thresholds() confirms it against that file. The row for the Cavalcante
+# et al. (2022) bearing carries the values of that study's Table 8; the Approach
+# rows carry the Shao et al. (2022) Table 2 LS2 and LS3 values converted from cm
+# to inches. The System descriptions quote no number, and the moderate Seal
+# description quotes none because the published curve does not match the 5 in.
+# of the file (see the seal Comments sentence).
 # The unit and the wording of each set are in metadata_text.json. Values are
 # written as the EDP file prints them, except the Key slight 1.0 and the FndRot
 # moderate 6.0, which follow Mangalathu (2017) Table 6.13 (the EDP file prints 1
@@ -985,7 +992,8 @@ def threshold_set(model: pd.Series) -> tuple:
 def edp_row_key(key: tuple) -> tuple:
     """The EDP-file row behind a CAPACITIES key, or () where there is none.
 
-    Rows of source/EDP_Fragility Database.csv are identified by (Fragility
+    Rows of EDP_Fragility Database.csv, kept in
+    ../California RC Bridges 2025 EDP/source/, are identified by (Fragility
     notation, EDP (unit), Notes), whitespace collapsed. The mapping is:
 
     - Column curvature ductility (M17, S17, MSJ17, JML19), variant E<n>: the

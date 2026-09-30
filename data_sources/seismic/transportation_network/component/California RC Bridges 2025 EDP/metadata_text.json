@@ -1,0 +1,138 @@
+{
+  "description": "{component} fragility in terms of {demand} for {scope}.",
+  "component_phrases": {
+    "Column": "Column",
+    "Unseating": "Span unseating",
+    "AbAct": "Abutment",
+    "AbPass": "Abutment",
+    "AbTran": "Abutment",
+    "Bearing": "Bearing",
+    "DeckMax": "Deck",
+    "FndRot": "Column foundation",
+    "FndTran": "Column foundation",
+    "Key": "Shear key",
+    "Seal": "Joint seal",
+    "Approach": "Approach"
+  },
+  "eras": "E1 pre-1970, E2 1971–1990, E3 post-1991",
+  "group_root": "CRCB - California RC bridges (Chen et al. 2025)",
+  "component_groups": {
+    "Column": "Column",
+    "Unseating": "Span unseating",
+    "AbAct": "Active abutment",
+    "AbPass": "Passive abutment",
+    "AbTran": "Transverse abutment",
+    "Bearing": "Bearing",
+    "DeckMax": "Deck displacement",
+    "FndRot": "Column foundation rotation",
+    "FndTran": "Column foundation translation",
+    "Key": "Shear key",
+    "Seal": "Joint seal",
+    "Approach": "Approach settlement"
+  },
+  "scopes": {
+    "E1": "Era 1 (pre-1970) multi-span bridges",
+    "E2": "Era 2 (1971–1990) multi-span bridges",
+    "E3": "Era 3 (post-1991) multi-span bridges",
+    "E1.MCP18": "Era 1 (pre-1970) bridges with three or more spans, single-column bents, and diaphragm abutments ({group})",
+    "E2.MCP18": "Era 2 (1971–1990) bridges with three or more spans, single-column bents, and diaphragm abutments ({group})",
+    "E3.MCP18": "Era 3 (post-1991) bridges with three or more spans, single-column bents, and diaphragm abutments ({group})",
+    "E1.MSJ17": "Era 1 (pre-1970) bridges with multi-column bents and seat abutments ({group})",
+    "SingleSpan": "single-span bridges of any era ({group})",
+    "MultiSpan": "multi-span bridges of any era",
+    "Step": "an approach with a step offset",
+    "Slope10": "a 10 ft approach slab with a slope offset",
+    "Slope30": "a 30 ft approach slab with a slope offset",
+    "Slope45": "a 45 ft approach slab with a slope offset"
+  },
+  "capacity": {
+    "Column.CD.M17": "The capacities are the {era} column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.",
+    "Column.DR.MCP18": "The capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for {era} columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of {group}. The study gives them as column drift in percent; they are stored as ratios: {conversions}.",
+    "Unseating.M17": "The capacities are the four-state joint-opening capacities for {era} bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017).",
+    "Unseating.E1.M17": "Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 1 values equal those of this set.",
+    "Unseating.E2.M17": "Mangalathu et al. (2018, Table 2) and Jeon, Mangalathu, and Lee (2019, Table 2) define unseating capacity for the extensive and complete states only, and their Era 2 values equal those of this set.",
+    "Unseating.E3.M17": "Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 3 values equal those of this set. The Era 3 Sa(1.0 s) unseating curves of Mangalathu (2017, Appendix C) equal its Era 2 curves, so these Era 3 capacities were not used to build them. The values are stored as published.",
+    "Unseating.MSJ17": "The capacities are those of Mangalathu, Soleimani, and Jeon (2017, Table 4, p. 762), 152 and 229 mm (6 and 9 in.), for Era 1 bridges with seat abutments and multi-column bents (the study models two-column bents); the study takes them from Mangalathu (2017) Table 7.4 and uses them for its system curves.",
+    "Unseating.CPR22": "The capacities are those of Cavalcante et al. (2022, Table 8), 152 and 229 mm (6 and 9 in.), for single-span bridges in northeastern Brazil, which Chen et al. (2025) use as a proxy for California single-span bridges.",
+    "AbAct.M17": "The capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13.",
+    "AbPass.M17": "The capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13.",
+    "AbTran.M17": "The capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13.",
+    "Bearing.M17": "The capacities are those of Ramanathan (2012) Tables 5.16 and 5.17 as adopted by Mangalathu (2017) Table 6.13. Mangalathu, Soleimani, and Jeon (2017, Table 4) give a moderate bearing capacity of 76 mm (3 in.) for the Era 1 bridges of that study, where this set has 4 in.",
+    "Bearing.CPR22": "The capacities are those of Cavalcante et al. (2022, Table 8), 25 and 76 mm (1 and 3 in.), for the elastomeric bearings of single-span bridges with seat abutments in northeastern Brazil, which Chen et al. (2025) use as a proxy for California single-span bridges.",
+    "DeckMax.M17": "The capacities are those of Ramanathan (2012) Table 5.17 as adopted by Mangalathu (2017) Table 6.13.",
+    "FndRot.M17": "The capacities of 1.5 and 6 rad are those given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13, and they are stored as published. Ramanathan (2012, p. 181) states the basis as an axial pile movement of ±0.5 in. at the opposite edges of a 20 ft wide pile cap, about 0.004 rad, far smaller than the published values. The published Sa(1.0 s) curves of the database are consistent with the values having been applied in radians.",
+    "FndTran.M17": "The capacities are those of Ramanathan (2012) Tables 5.15 and 5.17 as adopted by Mangalathu (2017) Table 6.13.",
+    "Key.M17": "The slight capacity of 1 in. is the value published in Mangalathu (2017) Table 6.13; Ramanathan (2012) Table 5.16 gives 1.5 in. Both give 5 in. for the moderate state. The values are stored as published.",
+    "Seal.M17": "The capacities are those of Mangalathu (2017) Table 6.13, which equal the strip-seal values of Ramanathan (2012) Table 5.17. With the demand model of the unseating curves of the same bridge class, the Sa(1.0 s) seal curves of Mangalathu (2017) reproduce the slight state with a 2 in. joint-opening capacity but imply a capacity of about 75 in. for the moderate state, against the published 5 in. The values are stored as published.",
+    "Approach.SXR22": "The capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for {scope}, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included.",
+    "Approach.Slope10.SXR22": "In the study, the 10 ft approach slab represents early-designed bridges.",
+    "Approach.Slope30.SXR22": "In the study, the 30 ft approach slab represents modern bridges.",
+    "Approach.Slope45.SXR22": "In the study, the 45 ft approach slab represents modern bridges.",
+    "MultiSpan": "The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3)."
+  },
+  "use": {
+    "template": "The model gives the probability of reaching or exceeding each damage state as a lognormal function of the {response} of the component. The demand comes from {analysis}. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type {acronym} at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. {definition}.",
+    "default": {
+      "response": "peak response",
+      "analysis": "a structural analysis of the bridge",
+      "definition": "The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1"
+    },
+    "sources": {
+      "MCP18": {
+        "definition": "The EDP definition follows Mangalathu et al. (2018)"
+      },
+      "CPR22": {
+        "definition": "The EDP definition follows Cavalcante et al. (2022)"
+      },
+      "SXR22": {
+        "response": "permanent settlement",
+        "analysis": "a settlement analysis of the approach backfill, as in Shao et al. (2022)",
+        "definition": "The EDP definition follows Shao et al. (2022)"
+      }
+    },
+    "components": {
+      "Seal": {
+        "definition": "The demand is the same peak joint opening as in the span unseating models, whose EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1; that table lists no separate joint-seal EDP"
+      }
+    }
+  },
+  "comments": {
+    "provenance": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row {row} (spreadsheet row {sheet_row}), {notation}, EDP \"{edp}\"{source_note}; source reference \"{references}\".",
+    "source_note": "; source note \"{notes}\"",
+    "row_split": "The row lists four bridge groups and is represented here by two models with identical parameters: CRCB.Unseating.E1.MSJ17 for the two Era 1 groups (Mangalathu, Soleimani, and Jeon 2017) and CRCB.Unseating.SingleSpan.CPR22 for the two single-span groups (Cavalcante et al. 2022).",
+    "filled_states": "The source defines unseating capacity for the extensive and complete states only. The slight and moderate medians are set equal to the extensive median; those two states cannot occur."
+  },
+  "limit_states": {
+    "thresholds": {
+      "Column.CD": {
+        "note": " for {era} bridges"
+      },
+      "Column.DR": {
+        "edp": "column drift ratio",
+        "unit": "",
+        "note": " ({percent}%)"
+      },
+      "Unseating": {
+        "note": " for {era} bridges"
+      },
+      "Unseating.SingleSpan.CPR22": {
+        "note": " for single-span bridges"
+      },
+      "FndRot": {
+        "note": " as given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13; the value is stored as published"
+      }
+    },
+    "bases": {
+      "Step": "Approach Step",
+      "Slope10": "Approach Slope",
+      "Slope30": "Approach Slope",
+      "Slope45": "Approach Slope"
+    },
+    "labels": {
+      "Approach": [
+        "Slight damage (the Minor state of Shao et al. 2022)",
+        "Moderate damage (the Moderate state of Shao et al. 2022)"
+      ]
+    }
+  }
+}
