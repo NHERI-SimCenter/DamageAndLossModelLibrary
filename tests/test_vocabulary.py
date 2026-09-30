@@ -43,9 +43,9 @@ def test_demand_types_are_the_mapping_keys():
     """DEMAND_TYPES is exactly the set of demand-type names in the mapping."""
     assert frozenset(vocabulary.EDP_to_demand_type) == vocabulary.DEMAND_TYPES
     assert vocabulary.DEMAND_TYPES
-    # Fidelity tripwire: an accidental edit to the pelicun-mirrored mapping
-    # must be conscious. Update this count deliberately when pelicun changes.
-    assert len(vocabulary.EDP_to_demand_type) == 31
+    # Fidelity tripwire: an accidental edit to the mapping must be conscious.
+    # Update this count deliberately when the vocabulary changes.
+    assert len(vocabulary.EDP_to_demand_type) == 43
 
 
 def test_demand_type_codes_are_nonempty_strings():

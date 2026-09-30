@@ -8,9 +8,11 @@ measured in, and the statistical distribution families a model parameter may
 use. They are owned here, in the data library, so a single source of truth
 governs what the data may contain.
 
-The values mirror pelicun's current definitions -- ``EDP_to_demand_type`` in
-``pelicun.base`` and the ``rv_class_map`` registry in ``pelicun.uq`` -- and
-are intended to be imported from here by pelicun rather than redefined there.
+pelicun imports ``EDP_TYPES`` and ``UNIT_TYPES`` from this module instead of
+defining them in ``pelicun.base``, so an entry added here, such as the bridge
+component demands, becomes valid in pelicun without a pelicun change.
+``DISTRIBUTION_FAMILIES`` mirrors the family names of pelicun's
+random-variable registry (``rv_class_map`` in ``pelicun.uq``).
 """
 
 from __future__ import annotations
@@ -59,6 +61,28 @@ EDP_TYPES: dict[str, dict[str, str]] = {
     # Component response
     'Peak Link Rotation Angle': {'Acronym': 'LR', 'UnitType': 'rotation'},
     'Peak Link Beam Chord Rotation': {'Acronym': 'LBR', 'UnitType': 'rotation'},
+    # Bridge component response
+    'Peak Column Curvature Ductility': {'Acronym': 'CCD', 'UnitType': 'unitless'},
+    'Peak Column Drift Ratio': {'Acronym': 'CDR', 'UnitType': 'unitless'},
+    'Peak Joint Opening': {'Acronym': 'JOP', 'UnitType': 'displacement'},
+    'Peak Abutment Active Displacement': {
+        'Acronym': 'ABA',
+        'UnitType': 'displacement',
+    },
+    'Peak Abutment Passive Displacement': {
+        'Acronym': 'ABP',
+        'UnitType': 'displacement',
+    },
+    'Peak Abutment Transverse Displacement': {
+        'Acronym': 'ABT',
+        'UnitType': 'displacement',
+    },
+    'Peak Bearing Deformation': {'Acronym': 'BRD', 'UnitType': 'displacement'},
+    'Peak Deck Displacement': {'Acronym': 'DEC', 'UnitType': 'displacement'},
+    'Peak Foundation Translation': {'Acronym': 'FNT', 'UnitType': 'displacement'},
+    'Peak Foundation Rotation': {'Acronym': 'FNR', 'UnitType': 'rotation'},
+    'Peak Shear Key Deformation': {'Acronym': 'KEY', 'UnitType': 'displacement'},
+    'Permanent Approach Settlement': {'Acronym': 'PAS', 'UnitType': 'displacement'},
     # Wind Intensity
     'Peak Gust Wind Speed': {'Acronym': 'PWS', 'UnitType': 'speed'},
     # Wind Demands
