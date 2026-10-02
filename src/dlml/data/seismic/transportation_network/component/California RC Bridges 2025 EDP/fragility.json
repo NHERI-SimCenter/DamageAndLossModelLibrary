@@ -1,0 +1,697 @@
+{
+  "_GeneralInformation": {
+    "ShortName": "California RC Bridges 2025 (Chen et al.) - Bridge Components, EDP-based",
+    "Description": "Seismic fragility models for the components of California reinforced concrete bridges, conditioned on the response of the component (peak values; the permanent settlement for approaches), from the database of Chen et al. (2025), Earthquake Spectra 41(4), doi:10.1177/87552930251343634, published on DesignSafe as PRJ-5910 (doi:10.17603/ds2-c73m-nj37, version 1, Open Data Commons Attribution License). The 25 models come from the 24 rows of EDP_Fragility Database.csv, which lists the median component capacities that the database associates with its Sa(1.0 s) curves; the Comments of the joint seal and Era 3 unseating models record where the published curves do not reflect them. Each model is a lognormal fragility function of that response, with the median capacity of the source and a dispersion of 0.35. Model IDs follow the pattern CRCB.<component>[.<qualifier>].<scope>.<source>. The qualifier appears only for Column models, where CD marks curvature ductility and DR drift ratio. The scope is a design era (E1 pre-1970, E2 1971–1990, E3 post-1991), SingleSpan for single-span bridges, MultiSpan for capacities that the database assigns to all six multi-span studies listed in Chen et al. (2025, Table 3), or an approach configuration (Step for a step offset; Slope10, Slope30, and Slope45 for a slope offset with a 10, 30, or 45 ft slab). The MultiSpan models do not cover the single-span bridge groups. The source token names the study the capacities come from: M17 for Mangalathu (2017), whose Table 6.13 holds the capacities that the database assigns to all six multi-span studies or to five of them; MCP18 for Mangalathu et al. (2018); MSJ17 for Mangalathu, Soleimani, and Jeon (2017); CPR22 for Cavalcante et al. (2022); and SXR22 for Shao et al. (2022). The demands are directional. They come from a structural analysis of the bridge, except the approach settlements, which come from a settlement analysis of the approach backfill. The EDP definitions follow Mangalathu (2017) Sec. 6.1, except for the column drift models, the two Cavalcante et al. (2022) models, and the approach models, whose Comments name the source of the definition. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The Comments of each model give the source of its capacities and every change to the published values: column drift converted from percent to ratio, and the one row that defines only the extensive and complete unseating states, represented here by two models whose slight and moderate states are set equal to extensive.",
+    "Version": "1.0",
+    "ComponentGroups": {
+      "CRCB - California RC bridges (Chen et al. 2025)": [
+        "CRCB.Column - Column",
+        "CRCB.Unseating - Span unseating",
+        "CRCB.AbAct - Active abutment",
+        "CRCB.AbPass - Passive abutment",
+        "CRCB.AbTran - Transverse abutment",
+        "CRCB.Bearing - Bearing",
+        "CRCB.DeckMax - Deck displacement",
+        "CRCB.FndRot - Column foundation rotation",
+        "CRCB.FndTran - Column foundation translation",
+        "CRCB.Key - Shear key",
+        "CRCB.Seal - Joint seal",
+        "CRCB.Approach - Approach settlement"
+      ]
+    }
+  },
+  "References": {
+    "baker2011": "Baker, J. W., T. Lin, S. K. Shahi, and N. Jayaram. 2011. New Ground Motion Selection Procedures and Selected Motions for the PEER Transportation Research Program. PEER Report 2011/03, Pacific Earthquake Engineering Research Center, University of California, Berkeley, CA.",
+    "cavalcante2022": "Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.",
+    "chen2025": "Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.",
+    "designsafe2025": "Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-Generation Component and System-Level Seismic Fragility Models for Reinforced Concrete Bridges in California. DesignSafe-CI, PRJ-5910, version 1, Open Data Commons Attribution License. https://doi.org/10.17603/ds2-c73m-nj37.",
+    "jeon2019": "Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.",
+    "mangalathu2017": "Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.",
+    "mangalathu2017b": "Mangalathu, S., F. Soleimani, and J.-S. Jeon. 2017. Bridge classes for regional seismic risk assessment: Improving HAZUS models. Engineering Structures, 148: 755–766. https://doi.org/10.1016/j.engstruct.2017.07.019.",
+    "mangalathu2018": "Mangalathu, S., E. Choi, H. C. Park, and J.-S. Jeon. 2018. Probabilistic seismic vulnerability assessment of tall horizontally curved concrete bridges in California. Journal of Performance of Constructed Facilities, 32 (6): 04018080. https://doi.org/10.1061/(ASCE)CF.1943-5509.0001231.",
+    "ramanathan2012": "Ramanathan, K. N. 2012. Next Generation Seismic Fragility Curves for California Bridges Incorporating the Evolution in Seismic Design Philosophy. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/44883.",
+    "shao2022": "Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.",
+    "soleimani2017": "Soleimani, F. 2017. Fragility of California Bridges: Development of Modification Factors. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58300.",
+    "soleimani2017b": "Soleimani, F., S. Mangalathu, and R. DesRoches. 2017. A comparative analytical study on the fragility assessment of box-girder bridges with various column shapes. Engineering Structures, 153: 460–478. https://doi.org/10.1016/j.engstruct.2017.10.036."
+  },
+  "CRCB.AbAct.MultiSpan.M17": {
+    "Description": "Abutment fragility in terms of peak abutment active displacement for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 10 (spreadsheet row 12), AbAct, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type ABA at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the abutment in the active direction, near first yield of the abutment piles; active abutment displacement exceeds a median capacity of 1.5 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage to the abutment in the active direction, near the ultimate deformation of the abutment piles; active abutment displacement exceeds a median capacity of 4 in."
+        }
+      }
+    }
+  },
+  "CRCB.AbPass.MultiSpan.M17": {
+    "Description": "Abutment fragility in terms of peak abutment passive displacement for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 11 (spreadsheet row 13), AbPass, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type ABP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the abutment backwall, at about 0.5% drift at the top of the backwall; passive abutment displacement exceeds a median capacity of 3 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage to the abutment backwall, which may also require replacing the approach slab; passive abutment displacement exceeds a median capacity of 10 in."
+        }
+      }
+    }
+  },
+  "CRCB.AbTran.MultiSpan.M17": {
+    "Description": "Abutment fragility in terms of peak abutment transverse displacement for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 12 (spreadsheet row 14), AbTran, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type ABT at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Tables 5.14 and 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the abutment in the transverse direction, near first yield of the abutment piles; transverse abutment displacement exceeds a median capacity of 1 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage to the abutment in the transverse direction, near the ultimate deformation of the abutment piles; transverse abutment displacement exceeds a median capacity of 4 in."
+        }
+      }
+    }
+  },
+  "CRCB.Approach.Slope10.SXR22": {
+    "Description": "Approach fragility in terms of permanent approach settlement for a 10 ft approach slab with a slope offset.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 21 (spreadsheet row 23), Approach, EDP \"Settlement (in.)\"; source note \"10 ft approach with slope offset\"; source reference \"Shao et al. (2022)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).\n\nThe capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 10 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 10 ft approach slab represents early-designed bridges.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "shao2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage (the Minor state of Shao et al. 2022): rotation of the 10 ft approach slab from backfill settlement, with a slope change of about 1/80 to 1/40; approach settlement exceeds a median capacity of 2.1 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage (the Moderate state of Shao et al. 2022): rotation of the 10 ft approach slab from backfill settlement, with a slope change of about 1/40 to 1/20; approach settlement exceeds a median capacity of 4.2 in."
+        }
+      }
+    }
+  },
+  "CRCB.Approach.Slope30.SXR22": {
+    "Description": "Approach fragility in terms of permanent approach settlement for a 30 ft approach slab with a slope offset.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 22 (spreadsheet row 24), Approach, EDP \"Settlement (in.)\"; source note \"30 ft approach with slope offset\"; source reference \"Shao et al. (2022)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).\n\nThe capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 30 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 30 ft approach slab represents modern bridges.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "shao2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage (the Minor state of Shao et al. 2022): rotation of the 30 ft approach slab from backfill settlement, with a slope change of about 1/80 to 1/40; approach settlement exceeds a median capacity of 6.4 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage (the Moderate state of Shao et al. 2022): rotation of the 30 ft approach slab from backfill settlement, with a slope change of about 1/40 to 1/20; approach settlement exceeds a median capacity of 12.7 in."
+        }
+      }
+    }
+  },
+  "CRCB.Approach.Slope45.SXR22": {
+    "Description": "Approach fragility in terms of permanent approach settlement for a 45 ft approach slab with a slope offset.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 23 (spreadsheet row 25), Approach, EDP \"Settlement (in.)\"; source note \"45 ft approach with slope offset\"; source reference \"Shao et al. (2022)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).\n\nThe capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 45 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 45 ft approach slab represents modern bridges.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "shao2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage (the Minor state of Shao et al. 2022): rotation of the 45 ft approach slab from backfill settlement, with a slope change of about 1/80 to 1/40; approach settlement exceeds a median capacity of 9.5 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage (the Moderate state of Shao et al. 2022): rotation of the 45 ft approach slab from backfill settlement, with a slope change of about 1/40 to 1/20; approach settlement exceeds a median capacity of 19.1 in."
+        }
+      }
+    }
+  },
+  "CRCB.Approach.Step.SXR22": {
+    "Description": "Approach fragility in terms of permanent approach settlement for an approach with a step offset.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 20 (spreadsheet row 22), Approach, EDP \"Settlement (in.)\"; source note \"Approach with step offset\"; source reference \"Shao et al. (2022)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).\n\nThe capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for an approach with a step offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "shao2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage (the Minor state of Shao et al. 2022): step offset between the approach pavement and the abutment from backfill settlement; approach settlement exceeds a median capacity of 1.4 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage (the Moderate state of Shao et al. 2022): step offset between the approach pavement and the abutment from backfill settlement; approach settlement exceeds a median capacity of 2.5 in."
+        }
+      }
+    }
+  },
+  "CRCB.Bearing.MultiSpan.M17": {
+    "Description": "Bearing fragility in terms of peak bearing deformation for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 13 (spreadsheet row 15), Bearing, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type BRD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Tables 5.16 and 5.17 as adopted by Mangalathu (2017) Table 6.13. Mangalathu, Soleimani, and Jeon (2017, Table 4) give a moderate bearing capacity of 76 mm (3 in.) for the Era 1 bridges of that study, where this set has 4 in. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the elastomeric bearing pads; bearing deformation exceeds a median capacity of 1 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: significant damage and tearing of the elastomeric bearing pads, which are replaced; bearing deformation exceeds a median capacity of 4 in."
+        }
+      }
+    }
+  },
+  "CRCB.Bearing.SingleSpan.CPR22": {
+    "Description": "Bearing fragility in terms of peak bearing deformation for single-span bridges of any era (group E123-S1-C0-S).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 14 (spreadsheet row 16), Bearing, EDP \"Displacement (in.)\"; source note \"For E123-S1-C0-S bridge group\"; source reference \"Cavalcante et al. (2022)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type BRD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Cavalcante et al. (2022).\n\nThe capacities are those of Cavalcante et al. (2022, Table 8), 25 and 76 mm (1 and 3 in.), for the elastomeric bearings of single-span bridges with seat abutments in northeastern Brazil, which Chen et al. (2025) use as a proxy for California single-span bridges.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "cavalcante2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the elastomeric bearing pads; bearing deformation exceeds a median capacity of 1 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: significant damage and tearing of the elastomeric bearing pads, which are replaced; bearing deformation exceeds a median capacity of 3 in."
+        }
+      }
+    }
+  },
+  "CRCB.Column.CD.E1.M17": {
+    "Description": "Column fragility in terms of peak column curvature ductility for Era 1 (pre-1970) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 0 (spreadsheet row 2), Column, EDP \"Curvature ductility\"; source note \"For Era 1 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the Era 1 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column curvature ductility exceeds a median capacity of 0.8 for Era 1 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column curvature ductility exceeds a median capacity of 2 for Era 1 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column curvature ductility exceeds a median capacity of 5 for Era 1 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column curvature ductility exceeds a median capacity of 8 for Era 1 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Column.CD.E2.M17": {
+    "Description": "Column fragility in terms of peak column curvature ductility for Era 2 (1971–1990) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 1 (spreadsheet row 3), Column, EDP \"Curvature ductility\"; source note \"For Era 2 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the Era 2 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column curvature ductility exceeds a median capacity of 1 for Era 2 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column curvature ductility exceeds a median capacity of 5 for Era 2 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column curvature ductility exceeds a median capacity of 8 for Era 2 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column curvature ductility exceeds a median capacity of 11 for Era 2 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Column.CD.E3.M17": {
+    "Description": "Column fragility in terms of peak column curvature ductility for Era 3 (post-1991) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 2 (spreadsheet row 4), Column, EDP \"Curvature ductility\"; source note \"For Era 3 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the Era 3 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column curvature ductility exceeds a median capacity of 1 for Era 3 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column curvature ductility exceeds a median capacity of 5 for Era 3 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column curvature ductility exceeds a median capacity of 11 for Era 3 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column curvature ductility exceeds a median capacity of 17 for Era 3 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Column.DR.E1.MCP18": {
+    "Description": "Column fragility in terms of peak column drift ratio for Era 1 (pre-1970) bridges with three or more spans, single-column bents, and diaphragm abutments (group E1-S3P-C1-D).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 3 (spreadsheet row 5), Column, EDP \"Column drift (%)\"; source note \"For E1-S3P-C1-D bridge group\"; source reference \"Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).\n\nThe capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 1 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E1-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 0.7% as 0.007, 1.5% as 0.015, 2.5% as 0.025, and 5% as 0.05.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2018",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column drift ratio exceeds a median capacity of 0.007 (0.7%)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column drift ratio exceeds a median capacity of 0.015 (1.5%)."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column drift ratio exceeds a median capacity of 0.025 (2.5%)."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column drift ratio exceeds a median capacity of 0.05 (5%)."
+        }
+      }
+    }
+  },
+  "CRCB.Column.DR.E2.MCP18": {
+    "Description": "Column fragility in terms of peak column drift ratio for Era 2 (1971–1990) bridges with three or more spans, single-column bents, and diaphragm abutments (group E2-S3P-C1-D).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 4 (spreadsheet row 6), Column, EDP \"Column drift (%)\"; source note \"For E2-S3P-C1-D bridge group\"; source reference \"Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).\n\nThe capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 2 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E2-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 1% as 0.01, 2.5% as 0.025, 5% as 0.05, and 7.5% as 0.075.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2018",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column drift ratio exceeds a median capacity of 0.01 (1%)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column drift ratio exceeds a median capacity of 0.025 (2.5%)."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column drift ratio exceeds a median capacity of 0.05 (5%)."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column drift ratio exceeds a median capacity of 0.075 (7.5%)."
+        }
+      }
+    }
+  },
+  "CRCB.Column.DR.E3.MCP18": {
+    "Description": "Column fragility in terms of peak column drift ratio for Era 3 (post-1991) bridges with three or more spans, single-column bents, and diaphragm abutments (group E3-S3P-C1-D).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 5 (spreadsheet row 7), Column, EDP \"Column drift (%)\"; source note \"For E3-S3P-C1-D bridge group\"; source reference \"Mangalathu et al. (2018)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).\n\nThe capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 3 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E3-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 1% as 0.01, 2.5% as 0.025, 7.5% as 0.075, and 10% as 0.1.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2018",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: cracking of the column, repaired by sealing and painting; column drift ratio exceeds a median capacity of 0.01 (1%)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching; column drift ratio exceeds a median capacity of 0.025 (2.5%)."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function; column drift ratio exceeds a median capacity of 0.075 (7.5%)."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced; column drift ratio exceeds a median capacity of 0.1 (10%)."
+        }
+      }
+    }
+  },
+  "CRCB.DeckMax.MultiSpan.M17": {
+    "Description": "Deck fragility in terms of peak deck displacement for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 15 (spreadsheet row 17), DeckMax, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type DEC at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Table 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage associated with large deck displacement, typically repaired by injecting epoxy into cracks; maximum deck displacement exceeds a median capacity of 4 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage associated with large deck displacement; maximum deck displacement exceeds a median capacity of 12 in."
+        }
+      }
+    }
+  },
+  "CRCB.FndRot.MultiSpan.M17": {
+    "Description": "Column foundation fragility in terms of peak foundation rotation for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 16 (spreadsheet row 18), FndRot, EDP \"Rotation (rad)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type FNR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities of 1.5 and 6 rad are those given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13, and they are stored as published. Ramanathan (2012, p. 181) states the basis as an axial pile movement of ±0.5 in. at the opposite edges of a 20 ft wide pile cap, about 0.004 rad, far smaller than the published values. The published Sa(1.0 s) curves of the database are consistent with the values having been applied in radians. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the column foundation; column foundation rotation exceeds a median capacity of 1.5 rad as given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13; the value is stored as published."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage to the column foundation, typically repaired by enlarging the pile cap and adding piles; column foundation rotation exceeds a median capacity of 6 rad as given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13; the value is stored as published."
+        }
+      }
+    }
+  },
+  "CRCB.FndTran.MultiSpan.M17": {
+    "Description": "Column foundation fragility in terms of peak foundation translation for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 17 (spreadsheet row 19), FndTran, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type FNT at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Ramanathan (2012) Tables 5.15 and 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: aesthetic or minor functional damage to the column foundation; column foundation translation exceeds a median capacity of 1 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: major functional damage to the column foundation, typically repaired by enlarging the pile cap and adding piles; column foundation translation exceeds a median capacity of 4 in."
+        }
+      }
+    }
+  },
+  "CRCB.Key.MultiSpan.M17": {
+    "Description": "Shear key fragility in terms of peak shear key deformation for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 18 (spreadsheet row 20), Key, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type KEY at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe slight capacity of 1 in. is the value published in Mangalathu (2017) Table 6.13; Ramanathan (2012) Table 5.16 gives 1.5 in. Both give 5 in. for the moderate state. The values are stored as published. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: minor cracking of the exterior shear key, repaired by epoxy injection; shear key deformation exceeds a median capacity of 1 in. (as published; Ramanathan 2012 gives 1.5 in.)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: the shear key breaks off and is replaced; shear key deformation exceeds a median capacity of 5 in."
+        }
+      }
+    }
+  },
+  "CRCB.Seal.MultiSpan.M17": {
+    "Description": "Joint seal fragility in terms of peak joint opening for multi-span bridges of any era.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 19 (spreadsheet row 21), Seal, EDP \"Displacement (in.)\"; source reference \"All six listed in Table 3 of the paper\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The demand is the same peak joint opening as in the span unseating models, whose EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1; that table lists no separate joint-seal EDP.\n\nThe capacities are those of Mangalathu (2017) Table 6.13, which equal the strip-seal values of Ramanathan (2012) Table 5.17. With the demand model of the unseating curves of the same bridge class, the Sa(1.0 s) seal curves of Mangalathu (2017) reproduce the slight state with a 2 in. joint-opening capacity but imply a capacity of about 75 in. for the moderate state, against the published 5 in. The values are stored as published. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: damage to the joint seal, which is replaced; joint opening exceeds a median capacity of 2 in."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: damage to the mechanical elements of the joint seal assembly beyond the seal itself; joint opening exceeds a median capacity of 5 in."
+        }
+      }
+    }
+  },
+  "CRCB.Unseating.E1.M17": {
+    "Description": "Span unseating fragility in terms of peak joint opening for Era 1 (pre-1970) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 7 (spreadsheet row 9), Unseating, EDP \"Displacement (in.)\"; source note \"For Era 1 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the four-state joint-opening capacities for Era 1 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 1 values equal those of this set.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: joint opening about equal to the expansion-joint gap; onset of pounding damage; joint opening exceeds a median capacity of 0.5 in. for Era 1 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: significant pounding at the seat joint; joint opening exceeds a median capacity of 1 in. for Era 1 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: seat displacement of more than about half the minimum seat width; joint opening exceeds a median capacity of 2 in. for Era 1 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: loss of seat support, with potential unseating of the span; joint opening exceeds a median capacity of 3 in. for Era 1 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Unseating.E1.MSJ17": {
+    "Description": "Span unseating fragility in terms of peak joint opening for Era 1 (pre-1970) bridges with multi-column bents and seat abutments (groups E1-S2-C2P-S and E1-S3P-C2P-S).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 6 (spreadsheet row 8), Unseating, EDP \"Displacement (in.)\"; source note \"Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S\"; source reference \"Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)\". The row lists four bridge groups and is represented here by two models with identical parameters: CRCB.Unseating.E1.MSJ17 for the two Era 1 groups (Mangalathu, Soleimani, and Jeon 2017) and CRCB.Unseating.SingleSpan.CPR22 for the two single-span groups (Cavalcante et al. 2022).\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are those of Mangalathu, Soleimani, and Jeon (2017, Table 4, p. 762), 152 and 229 mm (6 and 9 in.), for Era 1 bridges with seat abutments and multi-column bents (the study models two-column bents); the study takes them from Mangalathu (2017) Table 7.4 and uses them for its system curves.\n\nThe source defines unseating capacity for the extensive and complete states only. The slight and moderate medians are set equal to the extensive median; those two states cannot occur.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017b",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: not defined by the source; this state cannot occur (capacity set equal to extensive)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: not defined by the source; this state cannot occur (capacity set equal to extensive)."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: seat displacement of more than about half the minimum seat width; joint opening exceeds a median capacity of 6 in. for Era 1 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: loss of seat support, with potential unseating of the span; joint opening exceeds a median capacity of 9 in. for Era 1 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Unseating.E2.M17": {
+    "Description": "Span unseating fragility in terms of peak joint opening for Era 2 (1971–1990) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 8 (spreadsheet row 10), Unseating, EDP \"Displacement (in.)\"; source note \"For Era 2 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the four-state joint-opening capacities for Era 2 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) and Jeon, Mangalathu, and Lee (2019, Table 2) define unseating capacity for the extensive and complete states only, and their Era 2 values equal those of this set.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: joint opening about equal to the expansion-joint gap; onset of pounding damage; joint opening exceeds a median capacity of 1 in. for Era 2 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: significant pounding at the seat joint; joint opening exceeds a median capacity of 4.5 in. for Era 2 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: seat displacement of more than about half the minimum seat width; joint opening exceeds a median capacity of 10 in. for Era 2 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: loss of seat support, with potential unseating of the span; joint opening exceeds a median capacity of 15 in. for Era 2 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Unseating.E3.M17": {
+    "Description": "Span unseating fragility in terms of peak joint opening for Era 3 (post-1991) multi-span bridges.",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 9 (spreadsheet row 11), Unseating, EDP \"Displacement (in.)\"; source note \"For Era 3 bridges\"; source reference \"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)\".\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.\n\nThe capacities are the four-state joint-opening capacities for Era 3 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 3 values equal those of this set. The Era 3 Sa(1.0 s) unseating curves of Mangalathu (2017, Appendix C) equal its Era 2 curves, so these Era 3 capacities were not used to build them. The values are stored as published.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "mangalathu2017",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: joint opening about equal to the expansion-joint gap; onset of pounding damage; joint opening exceeds a median capacity of 1.5 in. for Era 3 bridges."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: significant pounding at the seat joint; joint opening exceeds a median capacity of 4.5 in. for Era 3 bridges."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: seat displacement of more than about half the minimum seat width; joint opening exceeds a median capacity of 14 in. for Era 3 bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: loss of seat support, with potential unseating of the span; joint opening exceeds a median capacity of 21 in. for Era 3 bridges."
+        }
+      }
+    }
+  },
+  "CRCB.Unseating.SingleSpan.CPR22": {
+    "Description": "Span unseating fragility in terms of peak joint opening for single-span bridges of any era (groups E123-S1-C0-D and E123-S1-C0-S).",
+    "Comments": "DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 6 (spreadsheet row 8), Unseating, EDP \"Displacement (in.)\"; source note \"Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S\"; source reference \"Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)\". The row lists four bridge groups and is represented here by two models with identical parameters: CRCB.Unseating.E1.MSJ17 for the two Era 1 groups (Mangalathu, Soleimani, and Jeon 2017) and CRCB.Unseating.SingleSpan.CPR22 for the two single-span groups (Cavalcante et al. 2022).\n\nThe model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Cavalcante et al. (2022).\n\nThe capacities are those of Cavalcante et al. (2022, Table 8), 152 and 229 mm (6 and 9 in.), for single-span bridges in northeastern Brazil, which Chen et al. (2025) use as a proxy for California single-span bridges.\n\nThe source defines unseating capacity for the extensive and complete states only. The slight and moderate medians are set equal to the extensive median; those two states cannot occur.",
+    "SuggestedComponentBlockSize": "1 EA",
+    "RoundUpToIntegerQuantity": "True",
+    "Reference": [
+      "cavalcante2022",
+      "chen2025"
+    ],
+    "LimitStates": {
+      "LS1": {
+        "DS1": {
+          "Description": "Slight damage: not defined by the source; this state cannot occur (capacity set equal to extensive)."
+        }
+      },
+      "LS2": {
+        "DS2": {
+          "Description": "Moderate damage: not defined by the source; this state cannot occur (capacity set equal to extensive)."
+        }
+      },
+      "LS3": {
+        "DS3": {
+          "Description": "Extensive damage: seat displacement of more than about half the minimum seat width; joint opening exceeds a median capacity of 6 in. for single-span bridges."
+        }
+      },
+      "LS4": {
+        "DS4": {
+          "Description": "Complete damage: loss of seat support, with potential unseating of the span; joint opening exceeds a median capacity of 9 in. for single-span bridges."
+        }
+      }
+    }
+  }
+}

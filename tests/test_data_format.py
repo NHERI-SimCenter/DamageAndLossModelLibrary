@@ -63,9 +63,9 @@ _NESTED_PAIR_IDS = [
 ]
 
 # Tripwires: if the packaged data changes shape, these flag it for review.
-_EXPECTED_PAIR_COUNT = 20
-_EXPECTED_METADATA_PAIR_COUNT = 18
-_EXPECTED_NESTED_PAIR_COUNT = 17
+_EXPECTED_PAIR_COUNT = 21
+_EXPECTED_METADATA_PAIR_COUNT = 19
+_EXPECTED_NESTED_PAIR_COUNT = 18
 
 # Distribution families that additionally require a dispersion parameter
 # (Theta_1); the rest (deterministic, multilinear_CDF, empirical, ...) define

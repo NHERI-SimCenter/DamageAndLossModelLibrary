@@ -29,7 +29,7 @@ from dlml import (
     validate_assets,
 )
 
-EXPECTED_DATASET_COUNT = 13
+EXPECTED_DATASET_COUNT = 14
 EXPECTED_DATASET_IDS = [
     'flood/building/portfolio/Hazus v6.1',
     'hurricane/building/component/SimCenter Wind Component Library',
@@ -41,6 +41,7 @@ EXPECTED_DATASET_IDS = [
     'seismic/building/subassembly/Hazus v5.1',
     'seismic/power_network/portfolio/Hazus v5.1',
     'seismic/transportation_network/component/California RC Bridges 2025',
+    'seismic/transportation_network/component/California RC Bridges 2025 EDP',
     'seismic/transportation_network/portfolio/California RC Bridges 2025',
     'seismic/transportation_network/portfolio/Hazus v5.1',
     'seismic/water_network/portfolio/Hazus v6.1',

@@ -1,0 +1,26 @@
+ID,models_row,data_row,sheet_row,notation,edp_unit,notes,references,change
+CRCB.AbAct.MultiSpan.M17,11,10,12,AbAct,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.AbPass.MultiSpan.M17,12,11,13,AbPass,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.AbTran.MultiSpan.M17,13,12,14,AbTran,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.Approach.Slope10.SXR22,22,21,23,Approach,Settlement (in.),10 ft approach with slope offset,Shao et al. (2022),
+CRCB.Approach.Slope30.SXR22,23,22,24,Approach,Settlement (in.),30 ft approach with slope offset,Shao et al. (2022),
+CRCB.Approach.Slope45.SXR22,24,23,25,Approach,Settlement (in.),45 ft approach with slope offset,Shao et al. (2022),
+CRCB.Approach.Step.SXR22,21,20,22,Approach,Settlement (in.),Approach with step offset,Shao et al. (2022),
+CRCB.Bearing.MultiSpan.M17,14,13,15,Bearing,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.Bearing.SingleSpan.CPR22,15,14,16,Bearing,Displacement (in.),For E123-S1-C0-S bridge group,Cavalcante et al. (2022),
+CRCB.Column.CD.E1.M17,0,0,2,Column,Curvature ductility,For Era 1 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)",
+CRCB.Column.CD.E2.M17,1,1,3,Column,Curvature ductility,For Era 2 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)",
+CRCB.Column.CD.E3.M17,2,2,4,Column,Curvature ductility,For Era 3 bridges,"All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)",
+CRCB.Column.DR.E1.MCP18,3,3,5,Column,Column drift (%),For E1-S3P-C1-D bridge group,Mangalathu et al. (2018),column drift converted from percent to ratio
+CRCB.Column.DR.E2.MCP18,4,4,6,Column,Column drift (%),For E2-S3P-C1-D bridge group,Mangalathu et al. (2018),column drift converted from percent to ratio
+CRCB.Column.DR.E3.MCP18,5,5,7,Column,Column drift (%),For E3-S3P-C1-D bridge group,Mangalathu et al. (2018),column drift converted from percent to ratio
+CRCB.DeckMax.MultiSpan.M17,16,15,17,DeckMax,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.FndRot.MultiSpan.M17,17,16,18,FndRot,Rotation (rad),,All six listed in Table 3 of the paper,
+CRCB.FndTran.MultiSpan.M17,18,17,19,FndTran,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.Key.MultiSpan.M17,19,18,20,Key,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.Seal.MultiSpan.M17,20,19,21,Seal,Displacement (in.),,All six listed in Table 3 of the paper,
+CRCB.Unseating.E1.M17,8,7,9,Unseating,Displacement (in.),For Era 1 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) ",
+CRCB.Unseating.E1.MSJ17,6,6,8,Unseating,Displacement (in.),"Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S ","Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)",slight and moderate set equal to extensive
+CRCB.Unseating.E2.M17,9,8,10,Unseating,Displacement (in.),For Era 2 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) ",
+CRCB.Unseating.E3.M17,10,9,11,Unseating,Displacement (in.),For Era 3 bridges,"All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017) ",
+CRCB.Unseating.SingleSpan.CPR22,7,6,8,Unseating,Displacement (in.),"Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S ","Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)",slight and moderate set equal to extensive
