@@ -651,7 +651,6 @@ def general_information(general: dict, text: dict) -> dict:
 
 CSV_HEADER = [
     'ID',
-    'Incomplete',
     'Demand-Type',
     'Demand-Unit',
     'Demand-Offset',
@@ -670,7 +669,7 @@ def write_csv(path: Path, pairs: list) -> None:
         writer.writerow(CSV_HEADER)
         for ident, model in sorted(pairs, key=lambda pair: pair[0].model_id):
             demand = DEMAND_TYPES[ident.kind]
-            line = [ident.model_id, 0, demand, demand_unit(model), 0, 1]
+            line = [ident.model_id, demand, demand_unit(model), 0, 1]
             for median in stored_medians(model):
                 if median:
                     line += ['lognormal', median, model['Dispersion']]

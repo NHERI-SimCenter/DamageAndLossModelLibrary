@@ -113,7 +113,8 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
             5: cl.scales['5']['seq']['Reds'],
         }
 
-        if comp_data.loc[('Incomplete', '')] != 1:  # noqa: RUF031, RUF100
+        # A table without the Incomplete column holds complete models only.
+        if comp_data.get(('Incomplete', ''), 0) != 1:
             p_min, p_max = 0.01, 0.9
             d_min = np.inf
             d_max = -np.inf
@@ -659,7 +660,8 @@ def plot_repair(  # noqa: C901, PLR0912, PLR0915
                 ),
             }
 
-            if comp_data.loc[('Incomplete', '')] != 1:  # noqa: RUF031, RUF100
+            # A table without the Incomplete column holds complete models only.
+            if comp_data.get(('Incomplete', ''), 0) != 1:
                 # set the parameters for displaying uncertainty
                 p_min, p_max = 0.16, 0.84  # +- 1 std  # noqa: F841
 

@@ -1209,7 +1209,6 @@ def component_groups(ids: list, depth: int) -> dict:
 
 CSV_HEADER = [
     'ID',
-    'Incomplete',
     'Demand-Type',
     'Demand-Unit',
     'Demand-Offset',
@@ -1227,7 +1226,7 @@ def write_csv(path: Path, rows: pd.DataFrame) -> None:
         writer = csv.writer(f, lineterminator='\n')
         writer.writerow(CSV_HEADER)
         for _, model in rows.sort_values('ID').iterrows():
-            line = [model['ID'], 0, 'Spectral Acceleration|1.0', 'g', 0, 0]
+            line = [model['ID'], 'Spectral Acceleration|1.0', 'g', 0, 0]
             seen_empty = False
             for state in STATES:
                 median, beta = model[f'{state}_λ'], model[f'{state}_ζ']
