@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [3.2] - 2026-10-02
 
 ### Added
 - **California RC bridge fragilities (Chen et al. 2025):** two datasets from the Sa(1.0 s)-based fragility database of Chen et al. (2025, Earthquake Spectra 41(4)), published on DesignSafe as PRJ-5910. `seismic/transportation_network/portfolio/California RC Bridges 2025` holds 116 bridge system models and `seismic/transportation_network/component/California RC Bridges 2025` holds 801 bridge component models, covering 26 bridge groups by design era, span count, bent type, and abutment type. Each model's metadata cites its source study and records every correction made to the published values or labels.
@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Distribution:** v3.0 and v3.1 are now published as GitHub Releases, and `releases/latest` resolves to the current version rather than to v2.1.0. Pelicun 3.10 and later are unaffected — they install `simcenter-dlml` from PyPI. Pelicun 3.9 and earlier, which read the model data from the latest GitHub release, no longer work against it; see the README's release policy for the upgrade path and for pinning the data to v2.1.0.
 - **Dataset titles and descriptions:** the Hazus datasets are titled by methodology and version (`Hazus Earthquake Methodology v5.1`, `Hazus Earthquake Methodology v6.1`, `Hazus Hurricane Methodology v5.1`), with the asset type dropped from the title and "HAZUS" written as "Hazus"; the story-level building dataset is `Hazus Earthquake Methodology v5.1, story-level prototype`, with a description of how it was derived; the v6.1 description names version 6.1 and the two added design levels; the original hurricane description names version 5.1 instead of 4.2; the California RC bridge datasets are titled `California RC Bridges 2025 (Chen et al.): Systems`, `California RC Bridges 2025 (Chen et al.): Components`, and `California RC Bridges 2025 (Chen et al.): Components, EDP-based`, and their descriptions are organized in paragraphs.
 - **DLML Explorer:** on the Browse and Search page, the Dataset selector is renamed Collection (Fragility, Consequence, All), and an Asset type filter joins the Hazard and Source filters, each list narrowed by the selections before it; choosing a Source opens that source without expanding its models; the tree groups sources under asset-type headings where a hazard section holds more than one asset type; the Component group filter and the source badges are gone.
+- **Explorer dependencies:** the `explorer` extra requires Streamlit 1.58 or later on Python 3.10 and later.
 
 ### Removed
 - The root `model_files.txt` manifest, which described the pre-v3.0 top-level data layout and no longer matched the packaged data.

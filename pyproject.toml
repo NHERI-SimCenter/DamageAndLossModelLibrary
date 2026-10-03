@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "simcenter-dlml"
-version = "3.2.dev0"
+version = "3.2"
 description = "Damage and Loss Model Library"
 readme = "README.md"
 license = { text = "BSD-3-Clause" }
@@ -46,7 +46,8 @@ dependencies = [
 # front; the app also degrades gracefully if the download or the dependencies
 # are unavailable).
 explorer = [
-    "streamlit>=1.48.0",
+    "streamlit>=1.58.0; python_version >= '3.10'",
+    "streamlit>=1.48.0; python_version < '3.10'",
     "plotly",
     "colorlover",
     "scipy",
