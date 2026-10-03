@@ -236,7 +236,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
                     comp_data_dict.get('Theta_0'),
                     comp_data_dict.get('Family'),
                     comp_data_dict.get('Theta_1', 'N/A'),
-                    comp_data_dict.get('DemageStateWeights', None),
+                    comp_data_dict.get('DamageStateWeights', None),
                 ]
 
                 # For weibull, replace parameters with median and dispersion stats
@@ -253,7 +253,7 @@ def plot_fragility(comp_db_path, output_path, create_zip='0'):  # noqa: C901, D1
 
                 table_vals.append(comp_data_vals)
 
-            table_vals = np.array(table_vals).T
+            table_vals = np.array(table_vals, dtype=object).T
 
             ds_list = []
             ds_i = 1

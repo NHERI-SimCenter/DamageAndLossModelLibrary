@@ -3,6 +3,7 @@
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -17,6 +18,22 @@ from tqdm import tqdm
 
 from dlml._catalog import data_root
 from visuals import plot_fragility, plot_repair
+
+
+_MD_LINK = re.compile(r'\[([^\]]+)\]\((https?://[^)\s]+)\)')
+
+
+def _rst_description(text: str, margin: int = 12) -> str:
+    """
+    Prepare a Markdown description for an indented RST page template.
+
+    Markdown links become anonymous RST links, and continuation lines are
+    indented to the template margin so that ``dedent`` keeps the paragraphs.
+    Other text passes through unchanged; paragraphs and ``- `` lists are
+    already valid RST.
+    """
+    text = _MD_LINK.sub(r'`\1 <\2>`__', text)
+    return text.replace('\n', '\n' + ' ' * margin)
 
 
 def generate_md5(file_path):
@@ -204,8 +221,10 @@ def generate_damage_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
             # create the top of the dlml index file
             dlml_short_name = dlml_general.get('ShortName', dlml)
 
-            dlml_description = dlml_general.get(
-                'Description', f'The following models are available in {dlml}:'
+            dlml_description = _rst_description(
+                dlml_general.get(
+                    'Description', f'The following models are available in {dlml}:'
+                )
             )
 
             dlml_index_contents = dedent(
@@ -458,8 +477,10 @@ def generate_repair_docs(doc_folder: Path, cache_folder: Path):  # noqa: C901
             # create the top of the dlml index file
             dlml_short_name = dlml_general.get('ShortName', dlml)
 
-            dlml_description = dlml_general.get(
-                'Description', f'The following models are available in {dlml}:'
+            dlml_description = _rst_description(
+                dlml_general.get(
+                    'Description', f'The following models are available in {dlml}:'
+                )
             )
 
             dlml_index_contents = dedent(

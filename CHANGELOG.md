@@ -19,6 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - The root `model_files.txt` manifest, which described the pre-v3.0 top-level data layout and no longer matched the packaged data.
 
+### Fixed
+- **Documentation:** dataset descriptions with several paragraphs or Markdown links render correctly on the generated pages, and damage-state weights appear in the damage-state tables.
+
 ---
 
 ## [3.1] - 2026-07-22
