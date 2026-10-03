@@ -4941,7 +4941,7 @@ wheels = [
 
 [[package]]
 name = "simcenter-dlml"
-version = "3.2.dev0"
+version = "3.2"
 source = { editable = "." }
 dependencies = [
     { name = "jsonschema", version = "4.25.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
@@ -5053,7 +5053,8 @@ requires-dist = [
     { name = "sphinx-design", marker = "extra == 'doc'" },
     { name = "sphinx-rtd-theme", marker = "extra == 'doc'" },
     { name = "sphinxcontrib-bibtex", marker = "extra == 'doc'" },
-    { name = "streamlit", marker = "extra == 'explorer'", specifier = ">=1.48.0" },
+    { name = "streamlit", marker = "python_full_version >= '3.10' and extra == 'explorer'", specifier = ">=1.58.0" },
+    { name = "streamlit", marker = "python_full_version < '3.10' and extra == 'explorer'", specifier = ">=1.48.0" },
     { name = "tqdm", marker = "extra == 'doc'" },
 ]
 provides-extras = ["explorer", "test", "lint", "doc", "dev"]

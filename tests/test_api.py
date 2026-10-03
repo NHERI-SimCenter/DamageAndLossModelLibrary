@@ -29,7 +29,7 @@ from dlml import (
     validate_assets,
 )
 
-EXPECTED_DATASET_COUNT = 11
+EXPECTED_DATASET_COUNT = 14
 EXPECTED_DATASET_IDS = [
     'flood/building/portfolio/Hazus v6.1',
     'hurricane/building/component/SimCenter Wind Component Library',
@@ -40,6 +40,9 @@ EXPECTED_DATASET_IDS = [
     'seismic/building/portfolio/Hazus v6.1',
     'seismic/building/subassembly/Hazus v5.1',
     'seismic/power_network/portfolio/Hazus v5.1',
+    'seismic/transportation_network/component/California RC Bridges 2025',
+    'seismic/transportation_network/component/California RC Bridges 2025 EDP',
+    'seismic/transportation_network/portfolio/California RC Bridges 2025',
     'seismic/transportation_network/portfolio/Hazus v5.1',
     'seismic/water_network/portfolio/Hazus v6.1',
 ]
@@ -204,7 +207,8 @@ def test_validate_asset_accepts_conforming_features():
     features = {
         'StructureType': 'W1',
         'DesignLevel': 'High-Code',
-        'FoundationType': 'Shallow',
+        'FoundationDepth': 'Shallow',
+        'OccupancyClass': 'RES1',
     }
     assert validate_asset(DATASET_WITH_SCHEMA, features) == []
 
@@ -242,12 +246,14 @@ def test_validate_assets_reports_only_failures():
         'good': {
             'StructureType': 'W1',
             'DesignLevel': 'High-Code',
-            'FoundationType': 'Shallow',
+            'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
         'bad_enum': {
             'StructureType': 'NOPE',
             'DesignLevel': 'High-Code',
-            'FoundationType': 'Shallow',
+            'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
         'missing': {},
     }
@@ -261,7 +267,8 @@ def test_validate_assets_empty_when_all_pass():
         'a': {
             'StructureType': 'W1',
             'DesignLevel': 'High-Code',
-            'FoundationType': 'Shallow',
+            'FoundationDepth': 'Shallow',
+            'OccupancyClass': 'RES1',
         },
     }
     assert validate_assets(DATASET_WITH_SCHEMA, assets) == {}

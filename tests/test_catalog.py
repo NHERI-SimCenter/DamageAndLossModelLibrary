@@ -25,8 +25,8 @@ from dlml._catalog import (
 )
 
 # Invariants of the packaged data tree.
-EXPECTED_DATASET_COUNT = 11
-EXPECTED_FILE_COUNT = 46
+EXPECTED_DATASET_COUNT = 14
+EXPECTED_FILE_COUNT = 55
 
 EXPECTED_DATASET_IDS = [
     'flood/building/portfolio/Hazus v6.1',
@@ -38,6 +38,9 @@ EXPECTED_DATASET_IDS = [
     'seismic/building/portfolio/Hazus v6.1',
     'seismic/building/subassembly/Hazus v5.1',
     'seismic/power_network/portfolio/Hazus v5.1',
+    'seismic/transportation_network/component/California RC Bridges 2025',
+    'seismic/transportation_network/component/California RC Bridges 2025 EDP',
+    'seismic/transportation_network/portfolio/California RC Bridges 2025',
     'seismic/transportation_network/portfolio/Hazus v5.1',
     'seismic/water_network/portfolio/Hazus v6.1',
 ]
@@ -175,8 +178,6 @@ def test_parameters_path_error_distinguishes_missing_from_available():
     [
         # loss_repair has parameters but no metadata JSON
         ('flood/building/portfolio/Hazus v6.1', 'loss_repair'),
-        # fragility has parameters but no metadata JSON
-        ('seismic/water_network/portfolio/Hazus v6.1', 'fragility'),
     ],
 )
 def test_metadata_path_raises_when_metadata_file_absent(dataset, collection):

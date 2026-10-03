@@ -665,36 +665,50 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
 
 def main():
-    """Generate HAZUS 5.1 story seismic damage and loss library files."""
+    """Generate Hazus v5.1 story-level seismic damage and loss library files.
+
+    The models are derived from the Hazus v5.1 building portfolio inputs.
+    After the two metadata files are written, the ``ShortName`` and
+    ``Description`` in ``general_information.json`` beside this script
+    replace the values copied from the portfolio inputs.
+    """
+    here = Path(__file__).resolve().parent
+    input_dir = here.parents[1] / 'portfolio' / 'Hazus v5.1' / 'input_files'
+    target_dir = (
+        here.parents[4]
+        / 'src'
+        / 'dlml'
+        / 'data'
+        / 'seismic'
+        / 'building'
+        / 'subassembly'
+        / 'Hazus v5.1'
+    )
+
     create_Hazus_EQ_fragility_db(
-        source_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/hazus_data_eq.json'
-        ),
-        meta_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/Hazus_meta.json'
-        ),
-        target_data_file='seismic/building/subassembly/Hazus v5.1/fragility.csv',
-        target_meta_file='seismic/building/subassembly/Hazus v5.1/fragility.json',
+        source_file=input_dir / 'hazus_data_eq.json',
+        meta_file=input_dir / 'Hazus_meta.json',
+        target_data_file=target_dir / 'fragility.csv',
+        target_meta_file=target_dir / 'fragility.json',
     )
 
     create_Hazus_EQ_repair_db(
-        source_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/hazus_data_eq.json'
-        ),
-        meta_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/Hazus_meta.json'
-        ),
-        target_data_file=(
-            'seismic/building/subassembly/Hazus v5.1/consequence_repair.csv'
-        ),
-        target_meta_file=(
-            'seismic/building/subassembly/Hazus v5.1/consequence_repair.json'
-        ),
+        source_file=input_dir / 'hazus_data_eq.json',
+        meta_file=input_dir / 'Hazus_meta.json',
+        target_data_file=target_dir / 'consequence_repair.csv',
+        target_meta_file=target_dir / 'consequence_repair.json',
     )
+
+    with open(here / 'general_information.json', encoding='utf-8') as f:  # noqa: PTH123
+        general_information = json.load(f)
+
+    for name in ('fragility.json', 'consequence_repair.json'):
+        target_meta_file = target_dir / name
+        with open(target_meta_file, encoding='utf-8') as f:  # noqa: PTH123
+            meta_dict = json.load(f)
+        meta_dict['_GeneralInformation'].update(general_information)
+        with open(target_meta_file, 'w+', encoding='utf-8') as f:  # noqa: PTH123
+            json.dump(meta_dict, f, indent=2)
 
 
 if __name__ == '__main__':

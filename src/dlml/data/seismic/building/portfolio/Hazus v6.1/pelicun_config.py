@@ -77,12 +77,29 @@ def auto_populate(aim):  # noqa: C901
         if pd.isna(item) or item == '':
             gi[key] = None
 
-    # add configuration data to the gi if it is not already there
+    # add configuration data to the gi if it is not already there; when
+    # neither the GI nor the application data specifies one of these flags,
+    # it defaults to False
     dl_app_data = aim['Applications']['DL']['ApplicationData']
     if gi.get('GroundFailure', None) is None:
-        gi['GroundFailure'] = dl_app_data.get('ground_failure', None)
+        ground_failure = dl_app_data.get('ground_failure')
+        gi['GroundFailure'] = (
+            ground_failure if ground_failure is not None else False
+        )
     if gi.get('LifelineFacility', None) is None:
-        gi['LifelineFacility'] = dl_app_data.get('lifeline_facility', None)
+        lifeline_facility = dl_app_data.get('lifeline_facility')
+        gi['LifelineFacility'] = (
+            lifeline_facility if lifeline_facility is not None else False
+        )
+
+    # accept the pre-3.2 name of the foundation input; the 3.2 schema
+    # renamed FoundationType to FoundationDepth to free the former for
+    # foundation system descriptions
+    if gi.get('FoundationDepth') is None and gi.get('FoundationType') in (
+        'Shallow',
+        'Deep',
+    ):
+        gi['FoundationDepth'] = gi['FoundationType']
 
     # load the schema assuming it is called "input_schema.json" and it is
     # stored next to the mapping script
@@ -124,11 +141,16 @@ def auto_populate(aim):  # noqa: C901
         height_class_data = None
 
     if gi.get('LifelineFacility'):
+        # the PGA-based lifeline facility fragilities are only available up
+        # to High-Code; buildings designed to the stronger levels are
+        # evaluated with the High-Code models, a conservative substitution
+        lf_design_level = 'HC' if design_level in ('VC', 'SC') else design_level
+
         if height_class_data is not None:
             height_class = height_class_map[height_class_data]
-            model_id = f'LF.{structure_type}.{height_class}.{design_level}'
+            model_id = f'LF.{structure_type}.{height_class}.{lf_design_level}'
         else:
-            model_id = f'LF.{structure_type}.{design_level}'
+            model_id = f'LF.{structure_type}.{lf_design_level}'
 
         comp = pd.DataFrame(
             {f'{model_id}': ['ea', 1, 1, 1, 'N/A']},
@@ -156,11 +178,11 @@ def auto_populate(aim):  # noqa: C901
 
     # if needed, add components to simulate damage from ground failure
     if gi.get('GroundFailure'):
-        foundation_type_map = {'Shallow': 'S', 'Deep': 'D'}
-        foundation_type = foundation_type_map[gi['FoundationType']]
+        foundation_depth_map = {'Shallow': 'S', 'Deep': 'D'}
+        foundation_depth = foundation_depth_map[gi['FoundationDepth']]
 
-        gf_model_id_h = f'GF.H.{foundation_type}'
-        gf_model_id_v = f'GF.V.{foundation_type}'
+        gf_model_id_h = f'GF.H.{foundation_depth}'
+        gf_model_id_v = f'GF.V.{foundation_depth}'
 
         comp_gf = pd.DataFrame(
             {
@@ -172,8 +194,13 @@ def auto_populate(aim):  # noqa: C901
 
         comp = pd.concat([comp, comp_gf], axis=0)
 
-    # get the occupancy class
+    # get the occupancy class; the RES3 subtypes (RES3A-RES3F) carry
+    # unit-count detail that the damage and loss models do not distinguish,
+    # so they are collapsed to RES3 for model selection while the asset
+    # keeps its subtype
     occupancy_type = gi['OccupancyClass']
+    if occupancy_type.startswith('RES3'):
+        occupancy_type = 'RES3'
 
     dl_ap = {
         'Asset': {

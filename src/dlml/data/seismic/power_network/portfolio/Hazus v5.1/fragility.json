@@ -1,7 +1,7 @@
 {
   "_GeneralInformation": {
-    "ShortName": "HAZUS Earthquake Methodology - Power",
-    "Description": "The models in this dataset are based on version 5.1 of the HAZUS Earthquake Model Technical Manual",
+    "ShortName": "Hazus Earthquake Methodology v5.1",
+    "Description": "The models in this dataset are based on version 5.1 of the Hazus Earthquake Model Technical Manual.",
     "Version": "1.0",
     "ComponentGroups": {
       "EP - Electrical Power": [

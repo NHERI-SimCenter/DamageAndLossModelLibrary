@@ -1,0 +1,217 @@
+{
+  "description": {
+    "model": "{component} fragility for {group}.{attributes}",
+    "group": "{era} bridge with {parts}",
+    "attributes": " Model attributes: {attributes}."
+  },
+  "component_phrases": {
+    "System": "Bridge system",
+    "Column": "Column",
+    "Unseating": "Span unseating",
+    "AbAct": "Active abutment",
+    "AbPass": "Passive abutment",
+    "AbTran": "Transverse abutment",
+    "Bearing": "Bearing",
+    "DeckMax": "Deck displacement",
+    "FndRot": "Column foundation rotation",
+    "FndTran": "Column foundation translation",
+    "Key": "Shear key",
+    "Seal": "Joint seal",
+    "Approach": "Approach settlement"
+  },
+  "group_root": "CRCB - California RC bridges (Chen et al. 2025)",
+  "era_phrases": {
+    "E1": "an Era 1 (pre-1970)",
+    "E2": "an Era 2 (1971–1990)",
+    "E3": "an Era 3 (post-1991)",
+    "E123": "a single-span (any era)"
+  },
+  "span_phrases": {
+    "S1": "a single span",
+    "S2": "two spans",
+    "S3P": "three or more spans"
+  },
+  "bent_phrases": {
+    "C0": "no bents",
+    "C1": "single-column bents",
+    "C2P": "multi-column bents"
+  },
+  "abutment_phrases": {
+    "D": "diaphragm abutments",
+    "S": "seat abutments"
+  },
+  "attribute_phrases": {
+    "BoxGirder": "box-girder deck",
+    "Slab": "slab deck",
+    "TBeam": "T-beam deck",
+    "TCB": "two-column bents",
+    "MCB": "bents with three to five columns",
+    "Span3": "three modeled spans",
+    "Span4": "four modeled spans",
+    "Span5": "five modeled spans",
+    "MF": "multiple frames",
+    "Disc": "in-span hinge",
+    "Circ": "circular columns",
+    "Obl": "oblong columns",
+    "Rect": "rectangular columns",
+    "Flr1": "one-way flared columns with a 102 mm (4 in.) gap",
+    "Flr1T": "one-way flared columns (transverse flare, no gap)",
+    "Flr2": "two-way flared columns",
+    "Lng": "longitudinal direction",
+    "Trn": "transverse direction",
+    "Mod1": "modification factors from Era 1 two-span, single-column bridges",
+    "Mod2": "modification factors from Era 2 two-span, single-column bridges",
+    "Mod3": "modification factors from Era 3 two-span, single-column bridges",
+    "Mod23": "modification factors from Era 2 and 3 two-span, single-column bridges",
+    "Pile": "abutment on piles",
+    "Cant": "cantilever abutment on spread footing",
+    "Reg": "regular-height abutment on spread footing",
+    "Step": "step offset",
+    "Slope10": "slope offset with a 10 ft approach slab",
+    "Slope30": "slope offset with a 30 ft approach slab",
+    "Slope45": "slope offset with a 45 ft approach slab"
+  },
+  "shared_sentences": {
+    "sa_not_stated": "The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.",
+    "baker_x2": "The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions)."
+  },
+  "source_study": {
+    "M17": "Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.",
+    "S17": "Source study: Soleimani (2017), a doctoral thesis that develops modification factors for irregular California box-girder bridges. This curve is the regular base model of the unbalanced-frame study of the thesis (Tables 7.10 and I.5). The author states in the Acknowledgements that the thesis curves \"are illustrative and should not be used for deployment in ShakeCast, or other risk analysis software\". This library distributes models and is not a risk-analysis application, but its models are meant for damage and loss assessments such as pelicun's, which is the kind of use the author cautions against. Users must judge for themselves whether these curves suit their use before deploying them. The ground-motion suite behind this curve is ambiguous: the thesis points both to the 320-motion Caltrans list of its Appendix F and to the 160-motion suite of Baker et al. (2011) used in its Sec. 5.1.3. {sa_not_stated}",
+    "SMD17": "Source study: Soleimani, Mangalathu, and DesRoches (2017), a comparative study of box-girder bridges with various column shapes. The analyses use the 160 motions of the Baker et al. (2011) PEER transportation suite. The multi-column class of the study combines bents with two or more columns (its Table 3), so the identifiers in multi-column groups carry no bent-type token. {sa_not_stated}",
+    "MSJ17": "Source study: Mangalathu, Soleimani, and Jeon (2017), which proposes bridge classes for regional seismic risk assessment as an improvement on the Hazus classes. {baker_x2} The study presents its Table 9 as an illustration of the grouping. Its curves are for Era 1 bridges with seat abutments, two-column bents, and circular columns; the number of spans modeled is given by the group code or, in groups with three or more spans, by the Span token of the identifier. {sa_not_stated}",
+    "MCP18": "Source study: Mangalathu, Choi, Park, and Jeon (2018), a study of tall, horizontally curved concrete box-girder bridges in California. {baker_x2} The study models one configuration: two frames, five spans, single-column bents with circular columns, an in-span hinge, and integral abutments, with three column heights and several deck curvatures. The database does not state which column height and curvature its curves represent. Chen et al. (2025, Table 3) list the study as seat-type; its bridges have integral abutments (Fig. 3 and Conclusions of the study), which is consistent with the placement of its curves in the diaphragm groups. Curves marked Disc (in-span hinge) describe the bearings and the seat at the hinge and apply only to bridges with an intermediate expansion joint. {sa_not_stated}",
+    "JML19": "Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. {baker_x2} The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). {sa_not_stated}",
+    "SXR22": "Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. {sa_not_stated}",
+    "CPR22": "Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. {sa_not_stated}"
+  },
+  "cpr22_diaphragm": "In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.",
+  "comments": {
+    "provenance": "DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row {row} (spreadsheet row {sheet_row}), group {group}, {notation}; source note \"{notes}\".",
+    "system": "The curve is a series-system fragility that the source study derived from correlated component demands. This curve and the component curves of the same group (seismic/transportation_network/component/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.",
+    "component": "The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.",
+    "filled_states": "The source defines unseating capacity for extensive and complete only. The slight and moderate limit states are set equal to the extensive limit state so that pelicun can evaluate the model; those two states cannot occur.",
+    "na_moderate": "The source gives N/A for the moderate state, which the database uses to mark a negligible probability of that damage from ground shaking.",
+    "e123_system": "Extensive and complete damage are not defined for single-span bridges with diaphragm abutments, which have no seats or columns.",
+    "twin": "The parameters are identical to those of {partners}; the duplication is in the source.",
+    "twin_jml19": "The published parameters equal those of {partners} at the two decimals of the source; Jeon, Mangalathu, and Lee (2019, Tables 4 and 5) give values for the two configurations that differ by less than that rounding.",
+    "e3_unseating": "The curve equals the Era 2 curve of the same class, as in Mangalathu (2017) Appendix C.",
+    "seal": "The slight curve is reproduced by the demand model of the Unseating curve of the same class with a 2 in. joint-opening capacity; the moderate curve implies a capacity of about 75 in. with the same demand model, against the published 5 in. The values are stored as published.",
+    "key": "The slight curve uses the shear key capacity of 1.0 in. published in Mangalathu (2017) Table 6.13; Ramanathan (2012) Table 5.16 gives 1.5 in."
+  },
+  "corrections": {
+    "shape": {
+      "298": "The source note labels the columns circular; the published values match the oblong-column class S-E2-S34-O-D of Mangalathu (2017), so the label is corrected to oblong.",
+      "299": "The source note labels the columns oblong; Mangalathu et al. (2018) model circular columns only (Fig. 2c, Fig. 3, and Table 1 of the study), so the label is corrected to circular. The source swaps the shape labels of this row and the preceding Mangalathu (2017) row (data row 298); the values are in the correct rows.",
+      "741": "The source note labels the columns circular; the published values match the rectangular-column class S-E1-S34-R-S of Mangalathu (2017) and the omitted rectangular-column Soleimani (2017) entry of the same group (data row 744), so the label is corrected to rectangular."
+    },
+    "swap": "The source lists this curve as {old}; its values are those that Cavalcante et al. (2022, Table 9) give for the {direction} abutment, so it is stored as {new}.",
+    "recomputed": "Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels {notation} (data row {labeled_row}), which holds the {labeled_direction}-direction values. This dataset applies the same factors to the seat-abutment curve that holds the {direction}-direction values (data row {correct_row}, relabeled here); each published value is multiplied by the ratio of the {direction}-direction to the {labeled_direction}-direction seat value: {changes}.",
+    "recomputed_change": "{name} {old} to {new} (ratio {ratio})",
+    "recomputed_unchanged": "{names} unchanged",
+    "dispersion": "The source prints a moderate dispersion of 1.99, as do Shao et al. (2022, Table 6); this dataset stores 0.99. Shao et al. (2022, Sec. 4.4) define the dispersion of the integrated model as the square root of the sum of squares of the three methods' dispersions, and for this configuration Tables 3 to 5 give 0.41, 0.62, and 0.65, which combine to 0.987."
+  },
+  "omitted": {
+    "component": "{count} {component} ({notation}) entries, {where}{exceptions}",
+    "all_groups": "all those in the {n} groups where the component occurs",
+    "all_groups_one": "all those in the one group where the component occurs",
+    "some_groups": "all those in {groups}",
+    "exceptions": " except {items}",
+    "exception": "{kept} of the {total} in {group}"
+  },
+  "limit_states": {
+    "threshold": "{base}; {edp} exceeds a median capacity of {value}{unit}{note}",
+    "undefined": "{state} damage: not defined by the source; this state cannot occur (capacity set equal to extensive)",
+    "bases": {
+      "System": [
+        "Slight damage: minor cracking and spalling to the abutment, cracks in shear keys at abutments, minor spalling and cracks at hinges, minor spalling at the column (damage requires no more than cosmetic repair), or minor cracking to the deck (Hazus definition)",
+        "Moderate damage: any column experiencing moderate (shear cracks) cracking and spalling (column structurally still sound), moderate movement of the abutment (<2 inches), extensive cracking and spalling of shear keys, any connection having cracked shear keys or bent bolts, keeper bar failure without unseating, rocker bearing failure, or moderate settlement of the approach (Hazus definition)",
+        "Extensive damage: any column degrading without collapse, shear failure (column structurally unsafe), significant residual movement at connections, major settlement of the approach, major vertical offset of the abutment, differential settlement at connections, or shear key failure at abutments (Hazus definition)",
+        "Complete damage: any column collapsing and connection losing all bearing support, which may lead to imminent deck collapse, or tilting of substructure due to foundation failure (Hazus definition)"
+      ],
+      "Column": [
+        "Slight damage: cracking of the column, repaired by sealing and painting",
+        "Moderate damage: minor spalling of the cover concrete, repaired by epoxy injection and minor concrete removal and patching",
+        "Extensive damage: exposed core and yielding of the transverse reinforcement; major repairs are needed, but the column keeps its function",
+        "Complete damage: longitudinal bar buckling, core crushing, or large drift; the column function is compromised and the column (or the bridge) is replaced"
+      ],
+      "Unseating": [
+        "Slight damage: joint opening about equal to the expansion-joint gap; onset of pounding damage",
+        "Moderate damage: significant pounding at the seat joint",
+        "Extensive damage: seat displacement of more than about half the minimum seat width",
+        "Complete damage: loss of seat support, with potential unseating of the span"
+      ],
+      "AbAct": [
+        "Slight damage: aesthetic or minor functional damage to the abutment in the active direction, near first yield of the abutment piles",
+        "Moderate damage: major functional damage to the abutment in the active direction, near the ultimate deformation of the abutment piles"
+      ],
+      "AbPass": [
+        "Slight damage: aesthetic or minor functional damage to the abutment backwall, at about 0.5% drift at the top of the backwall",
+        "Moderate damage: major functional damage to the abutment backwall, which may also require replacing the approach slab"
+      ],
+      "AbTran": [
+        "Slight damage: aesthetic or minor functional damage to the abutment in the transverse direction, near first yield of the abutment piles",
+        "Moderate damage: major functional damage to the abutment in the transverse direction, near the ultimate deformation of the abutment piles"
+      ],
+      "Bearing": [
+        "Slight damage: aesthetic or minor functional damage to the elastomeric bearing pads",
+        "Moderate damage: significant damage and tearing of the elastomeric bearing pads, which are replaced"
+      ],
+      "DeckMax": [
+        "Slight damage: aesthetic or minor functional damage associated with large deck displacement, typically repaired by injecting epoxy into cracks",
+        "Moderate damage: major functional damage associated with large deck displacement"
+      ],
+      "FndTran": [
+        "Slight damage: aesthetic or minor functional damage to the column foundation",
+        "Moderate damage: major functional damage to the column foundation, typically repaired by enlarging the pile cap and adding piles"
+      ],
+      "FndRot": [
+        "Slight damage: aesthetic or minor functional damage to the column foundation",
+        "Moderate damage: major functional damage to the column foundation, typically repaired by enlarging the pile cap and adding piles"
+      ],
+      "Key": [
+        "Slight damage: minor cracking of the exterior shear key, repaired by epoxy injection",
+        "Moderate damage: the shear key breaks off and is replaced"
+      ],
+      "Seal": [
+        "Slight damage: damage to the joint seal, which is replaced",
+        "Moderate damage: damage to the mechanical elements of the joint seal assembly beyond the seal itself"
+      ],
+      "Approach Step": [
+        "Slight damage, the Minor (LS2) state of Shao et al. (2022): step offset between the approach pavement and the abutment from backfill settlement",
+        "Moderate damage, the Moderate (LS3) state of Shao et al. (2022): step offset between the approach pavement and the abutment from backfill settlement"
+      ],
+      "Approach Slope": [
+        "Slight damage, the Minor (LS2) state of Shao et al. (2022): rotation of the {length} ft approach slab from backfill settlement, with a slope change of about 1/80 to 1/40",
+        "Moderate damage, the Moderate (LS3) state of Shao et al. (2022): rotation of the {length} ft approach slab from backfill settlement, with a slope change of about 1/40 to 1/20"
+      ]
+    },
+    "thresholds": {
+      "Column": {"edp": "column curvature ductility", "unit": "", "note": " ({era})"},
+      "Column drift": {"edp": "column drift", "unit": "%"},
+      "Unseating": {"edp": "joint opening", "unit": " in.", "note": " ({era})"},
+      "Unseating E3": {"note": " (Era 2 value)"},
+            "AbAct": {"edp": "active abutment displacement", "unit": " in.", "note": ""},
+      "AbPass": {"edp": "passive abutment displacement", "unit": " in.", "note": ""},
+      "AbTran": {"edp": "transverse abutment displacement", "unit": " in.", "note": ""},
+      "Bearing": {"edp": "bearing deformation", "unit": " in.", "note": ""},
+      "DeckMax": {"edp": "maximum deck displacement", "unit": " in.", "note": ""},
+      "FndTran": {"edp": "column foundation translation", "unit": " in.", "note": ""},
+      "FndRot": {
+        "edp": "column foundation rotation",
+        "unit": " rad",
+        "note": [
+          " as given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13. Ramanathan (2012, p. 181) states the basis as an axial pile movement of ±0.5 in. at the opposite edges of a 20 ft wide pile cap, about 0.004 rad, so the published 1.5 rad is far larger than that basis implies. The value is stored as published",
+          " as given by Ramanathan (2012) Table 5.15 and Mangalathu (2017) Table 6.13; the value is stored as published"
+        ]
+      },
+      "Key": {
+        "edp": "shear key deformation",
+        "unit": " in.",
+        "note": [" (as published; Ramanathan 2012 gives 1.5 in.)", ""]
+      },
+      "Seal": {"edp": "joint opening", "unit": " in.", "note": ""},
+      "Approach": {"edp": "approach settlement", "unit": " in.", "note": ""}
+    }
+  }
+}

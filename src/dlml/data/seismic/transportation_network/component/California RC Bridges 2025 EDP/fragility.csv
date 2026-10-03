@@ -1,0 +1,26 @@
+ID,Demand-Type,Demand-Unit,Demand-Offset,Demand-Directional,LS1-Family,LS1-Theta_0,LS1-Theta_1,LS2-Family,LS2-Theta_0,LS2-Theta_1,LS3-Family,LS3-Theta_0,LS3-Theta_1,LS4-Family,LS4-Theta_0,LS4-Theta_1
+CRCB.AbAct.MultiSpan.M17,Peak Abutment Active Displacement,inch,0,1,lognormal,1.5,0.35,lognormal,4,0.35,,,,,,
+CRCB.AbPass.MultiSpan.M17,Peak Abutment Passive Displacement,inch,0,1,lognormal,3,0.35,lognormal,10,0.35,,,,,,
+CRCB.AbTran.MultiSpan.M17,Peak Abutment Transverse Displacement,inch,0,1,lognormal,1,0.35,lognormal,4,0.35,,,,,,
+CRCB.Approach.Slope10.SXR22,Permanent Approach Settlement,inch,0,1,lognormal,2.1,0.35,lognormal,4.2,0.35,,,,,,
+CRCB.Approach.Slope30.SXR22,Permanent Approach Settlement,inch,0,1,lognormal,6.4,0.35,lognormal,12.7,0.35,,,,,,
+CRCB.Approach.Slope45.SXR22,Permanent Approach Settlement,inch,0,1,lognormal,9.5,0.35,lognormal,19.1,0.35,,,,,,
+CRCB.Approach.Step.SXR22,Permanent Approach Settlement,inch,0,1,lognormal,1.4,0.35,lognormal,2.5,0.35,,,,,,
+CRCB.Bearing.MultiSpan.M17,Peak Bearing Deformation,inch,0,1,lognormal,1,0.35,lognormal,4,0.35,,,,,,
+CRCB.Bearing.SingleSpan.CPR22,Peak Bearing Deformation,inch,0,1,lognormal,1,0.35,lognormal,3,0.35,,,,,,
+CRCB.Column.CD.E1.M17,Peak Column Curvature Ductility,unitless,0,1,lognormal,0.8,0.35,lognormal,2,0.35,lognormal,5,0.35,lognormal,8,0.35
+CRCB.Column.CD.E2.M17,Peak Column Curvature Ductility,unitless,0,1,lognormal,1,0.35,lognormal,5,0.35,lognormal,8,0.35,lognormal,11,0.35
+CRCB.Column.CD.E3.M17,Peak Column Curvature Ductility,unitless,0,1,lognormal,1,0.35,lognormal,5,0.35,lognormal,11,0.35,lognormal,17,0.35
+CRCB.Column.DR.E1.MCP18,Peak Column Drift Ratio,unitless,0,1,lognormal,0.007,0.35,lognormal,0.015,0.35,lognormal,0.025,0.35,lognormal,0.05,0.35
+CRCB.Column.DR.E2.MCP18,Peak Column Drift Ratio,unitless,0,1,lognormal,0.01,0.35,lognormal,0.025,0.35,lognormal,0.05,0.35,lognormal,0.075,0.35
+CRCB.Column.DR.E3.MCP18,Peak Column Drift Ratio,unitless,0,1,lognormal,0.01,0.35,lognormal,0.025,0.35,lognormal,0.075,0.35,lognormal,0.1,0.35
+CRCB.DeckMax.MultiSpan.M17,Peak Deck Displacement,inch,0,1,lognormal,4,0.35,lognormal,12,0.35,,,,,,
+CRCB.FndRot.MultiSpan.M17,Peak Foundation Rotation,rad,0,1,lognormal,1.5,0.35,lognormal,6,0.35,,,,,,
+CRCB.FndTran.MultiSpan.M17,Peak Foundation Translation,inch,0,1,lognormal,1,0.35,lognormal,4,0.35,,,,,,
+CRCB.Key.MultiSpan.M17,Peak Shear Key Deformation,inch,0,1,lognormal,1,0.35,lognormal,5,0.35,,,,,,
+CRCB.Seal.MultiSpan.M17,Peak Joint Opening,inch,0,1,lognormal,2,0.35,lognormal,5,0.35,,,,,,
+CRCB.Unseating.E1.M17,Peak Joint Opening,inch,0,1,lognormal,0.5,0.35,lognormal,1,0.35,lognormal,2,0.35,lognormal,3,0.35
+CRCB.Unseating.E1.MSJ17,Peak Joint Opening,inch,0,1,lognormal,6,0.35,lognormal,6,0.35,lognormal,6,0.35,lognormal,9,0.35
+CRCB.Unseating.E2.M17,Peak Joint Opening,inch,0,1,lognormal,1,0.35,lognormal,4.5,0.35,lognormal,10,0.35,lognormal,15,0.35
+CRCB.Unseating.E3.M17,Peak Joint Opening,inch,0,1,lognormal,1.5,0.35,lognormal,4.5,0.35,lognormal,14,0.35,lognormal,21,0.35
+CRCB.Unseating.SingleSpan.CPR22,Peak Joint Opening,inch,0,1,lognormal,6,0.35,lognormal,6,0.35,lognormal,6,0.35,lognormal,9,0.35

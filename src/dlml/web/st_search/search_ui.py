@@ -7,9 +7,10 @@ Replaces the old rapidfuzz ``fuzzy_visuals`` panel. It drives
 ``dlml.web.st_search.semantic_index.SemanticIndex`` and follows the hybrid
 model agreed for this library:
 
-    * **Facets always prune the tree.** With no text query, the hazard / source /
-      group selectors narrow the collapsible library tree in place (via the
-      ``allowed_ids`` parameter the tree renderers now accept).
+    * **Facets narrow the tree.** With no text query, the Hazard selector
+      chooses which hazard sections of the collapsible library tree render, and
+      the Asset type and Source selectors narrow them to the matching data files
+      (via the ``allowed_files`` parameter of the tree renderers).
     * **A text query swaps in a ranked list.** When the user types a query, the
       tree is replaced by relevance-ranked results — each with a breadcrumb back
       to its tree location, a lazy details panel, and an "Add" button that feeds
@@ -22,7 +23,7 @@ Note on scores
 ~~~~~~~~~~~~~~
 Hybrid description scores are RRF (reciprocal-rank-fusion) values, not cosine
 similarities — meaningful for ordering, not as an absolute "match %". The result
-list shows a *relative* relevance bar (normalised to the top hit), never a
+list shows a *relative* relevance bar (normalized to the top hit), never a
 percentage.
 """
 
@@ -40,6 +41,7 @@ from dlml.web.st_search.semantic_index import (
 from dlml.web.st_core.component import add_component, is_component_added
 from dlml.web.st_visuals.helpers_visual import load_full_json
 from dlml.web.st_visuals.tree_visuals import (
+    asset_type_label,
     render_consequence_tree,
     render_seismic_tree,
     render_wind_tree,
@@ -53,7 +55,8 @@ _HAZARD_TO_VALUE = {"Seismic": "seismic", "Hurricane": "hurricane"}
 _MODE_LABELS = ["Description", "ID"]
 _MODE_TO_ENGINE = {"Description": "description", "ID": "id"}
 
-# Dataset selector — scopes both search and browse. "All" spans both datasets.
+# Collection selector: scopes both search and browse. "All" spans both
+# collections.
 _DATASET_LABELS = ["Fragility", "Consequence", "All"]
 _DATASET_TO_VALUE = {"Fragility": "fragility", "Consequence": "consequence", "All": None}
 _DATASET_BADGE = {"fragility": "🔧", "consequence": "🧾"}
@@ -69,10 +72,11 @@ def get_index() -> SemanticIndex:
     """
     Build the semantic index once per process.
 
-    Embeds the ~2.6k tree-visible records — both fragility (damage) and
-    consequence (repair) models — with fastembed (dense + BM25). The first cold
-    start also downloads the embedding models; subsequent re-runs reuse this
-    cached resource.
+    Indexes the tree-visible records, both fragility (damage) and consequence
+    (repair) models, and embeds all of them except the Hazus hurricane
+    portfolio records with fastembed (dense + BM25); those are found by ID and
+    facet search only. The first cold start also downloads the embedding
+    models; subsequent re-runs reuse this cached resource.
     """
     return SemanticIndex(build_tree_corpus())
 
@@ -84,39 +88,50 @@ def _hazard_value(label: str) -> Optional[str]:
     return _HAZARD_TO_VALUE.get(label)
 
 
-def _source_options(
+def _asset_type_options(
     index: SemanticIndex, hazard: Optional[str], dataset: Optional[str]
-) -> List[str]:
-    """Distinct source library names, scoped to the hazard + dataset selection."""
-    names = {
-        r.short_name
-        for r in index.records
-        if (hazard is None or r.hazard == hazard)
-        and (dataset is None or r.dataset == dataset)
-    }
-    return sorted(names)
-
-
-def _group_options(
-    index: SemanticIndex,
-    hazard: Optional[str],
-    source: Optional[str],
-    dataset: Optional[str],
 ) -> Dict[str, str]:
     """
-    ``{display label -> group prefix}`` for the group selector, scoped to the
-    current hazard / source / dataset selection so the choices stay relevant.
+    Map display labels to asset types for the Asset type selector.
+
+    Covers the asset types present in the index for the hazard and collection
+    selection, sorted by label.
     """
-    labels: Dict[str, str] = {}
-    for r in index.records:
-        if hazard is not None and r.hazard != hazard:
-            continue
-        if source is not None and r.short_name != source:
-            continue
-        if dataset is not None and r.dataset != dataset:
-            continue
-        labels[r.group_label] = r.group
-    return dict(sorted(labels.items()))
+    scope = SearchFilters(hazard=hazard, dataset=dataset)
+    asset_types = {
+        row["asset_type"]
+        for row in index.file_facets
+        if row["asset_type"] and scope.matches(row)
+    }
+    return dict(sorted((asset_type_label(a), a) for a in asset_types))
+
+
+def _source_options(
+    index: SemanticIndex,
+    hazard: Optional[str],
+    asset_type: Optional[str],
+    dataset: Optional[str],
+) -> List[str]:
+    """
+    Distinct source titles for the Source selector, sorted case-insensitively.
+
+    Scoped to the hazard, asset type and collection selection.
+    """
+    scope = SearchFilters(hazard=hazard, asset_type=asset_type, dataset=dataset)
+    names = {row["short_name"] for row in index.file_facets if scope.matches(row)}
+    return sorted(names, key=str.casefold)
+
+
+def _reset_if_missing(key: str, options: List[str]) -> None:
+    """
+    Reset a selectbox's stored value to "All" when the value is no longer among the options.
+
+    Called before the widget is created in each script run, so the widget
+    starts from a valid value when an upstream selection removed the stored
+    one.
+    """
+    if st.session_state.get(key, "All") not in options:
+        st.session_state[key] = "All"
 
 
 def _clear_search_query() -> None:
@@ -140,8 +155,11 @@ def render_search_controls(
     """
     Render the query box, mode selector, and facet filters.
 
-    ``dataset`` (from the dataset selector) scopes the source/group options and
-    is baked into the returned filters so search and browse stay in sync.
+    ``dataset`` (from the Collection selector) scopes the asset type and source
+    options and is included in the returned filters so search and browse stay
+    in sync. Each filter's options follow the selections before it (Hazard,
+    then Asset type, then Source); a stored value that is no longer offered
+    falls back to "All".
 
     Returns
     -------
@@ -180,21 +198,25 @@ def render_search_controls(
         hazard = _hazard_value(hazard_label)
 
         with c2:
-            sources = _source_options(index, hazard, dataset)
-            source_label = st.selectbox(
-                "Source", ["All"] + sources, key="filter_source"
+            asset_type_map = _asset_type_options(index, hazard, dataset)
+            asset_type_labels = ["All", *asset_type_map]
+            _reset_if_missing("filter_asset_type", asset_type_labels)
+            asset_type_choice = st.selectbox(
+                "Asset type", asset_type_labels, key="filter_asset_type"
             )
-        source = None if source_label == "All" else source_label
+        asset_type = asset_type_map.get(asset_type_choice)
 
         with c3:
-            group_map = _group_options(index, hazard, source, dataset)
-            group_label = st.selectbox(
-                "Component group", ["All"] + list(group_map), key="filter_group"
-            )
-        group = None if group_label == "All" else group_map.get(group_label)
+            source_labels = [
+                "All",
+                *_source_options(index, hazard, asset_type, dataset),
+            ]
+            _reset_if_missing("filter_source", source_labels)
+            source_label = st.selectbox("Source", source_labels, key="filter_source")
+        source = None if source_label == "All" else source_label
 
     filters = SearchFilters(
-        hazard=hazard, source=source, group=group, dataset=dataset
+        hazard=hazard, asset_type=asset_type, source=source, dataset=dataset
     )
     return query, _MODE_TO_ENGINE[mode_label], filters, hazard_label
 
@@ -325,10 +347,14 @@ def _render_result_details(rank: int, hit) -> None:
 
 
 def _has_component_filter(filters: SearchFilters) -> bool:
-    """True when a facet narrows *within* a hazard (source/group), needing IDs."""
+    """
+    True when a facet narrows *within* a data file and so needs component IDs.
+
+    These facets are category, group, subgroup and type.
+    """
     return any(
         getattr(filters, f) is not None
-        for f in ("source", "category", "group", "subgroup", "type")
+        for f in ("category", "group", "subgroup", "type")
     )
 
 
@@ -339,46 +365,72 @@ def render_library(
     dataset: Optional[str],
 ) -> None:
     """
-    Render the browse tree(s), pruned to the active facets.
+    Render the browse tree(s), narrowed to the active facets.
 
-    The dataset selector chooses which trees show: fragility (seismic/wind),
-    consequence (seismic + hurricane), or both when "All". ``filter_only``
-    already respects ``filters.dataset``, so the shared ``allowed_ids`` set
-    prunes each tree to just its own members.
+    The Collection selector chooses which trees show (fragility, consequence,
+    or both when "All") and the Hazard selector which hazard sections. Asset
+    type and Source select whole data files: when either is set,
+    ``allowed_files`` holds the matching files and each tree renders only those
+    sources. A chosen Source also opens its expander, without opening its
+    groups or rendering its models. ``allowed_ids`` is computed only for facets
+    that narrow within a file.
     """
     allowed_ids: Optional[set] = None
     if _has_component_filter(filters):
         allowed_ids = set(index.filter_only(filters))
-    _render_trees(dataset, hazard_label, allowed_ids)
+    allowed_files: Optional[set] = None
+    if filters.asset_type is not None or filters.source is not None:
+        allowed_files = index.allowed_files(filters)
+    _render_trees(
+        dataset,
+        hazard_label,
+        allowed_ids,
+        allowed_files=allowed_files,
+        expand_sources=filters.source is not None,
+    )
 
 
 def _render_trees(
-    dataset: Optional[str], hazard_label: str, allowed_ids: Optional[set]
+    dataset: Optional[str],
+    hazard_label: str,
+    allowed_ids: Optional[set],
+    *,
+    allowed_files: Optional[set] = None,
+    expand_sources: bool = False,
 ) -> None:
     """
-    Render the browse tree(s) for a dataset + hazard selection.
+    Render the browse tree(s) for a collection + hazard selection.
 
-    ``allowed_ids`` prunes every tree to a shared set of component IDs (facet
-    filtering); pass ``None`` to render the full library unpruned. This is the
-    one place the trees are laid out, shared by the normal facet path and the
-    search-unavailable fallback.
+    ``allowed_files`` limits every tree to the sources whose data file is in
+    the set; a tree with none of them renders nothing. ``allowed_ids`` prunes
+    every tree to a shared set of component IDs and opens every level.
+    ``expand_sources`` opens the source expanders.
+    Pass ``None``, ``None`` and ``False`` to render the full library unpruned
+    and collapsed. This is the one place the trees are laid out, shared by the
+    normal facet path and the search-unavailable fallback.
     """
     show_fragility = dataset in ("fragility", None)
     show_consequence = dataset in ("consequence", None)
     show_seismic = hazard_label in ("All", "Seismic")
     show_hurricane = hazard_label in ("All", "Hurricane")
 
+    tree_kwargs = {
+        "allowed_ids": allowed_ids,
+        "allowed_files": allowed_files,
+        "expand_sources": expand_sources,
+    }
+
     if show_fragility:
         if show_seismic:
-            render_seismic_tree(allowed_ids=allowed_ids)
+            render_seismic_tree(**tree_kwargs)
         if show_hurricane:
-            render_wind_tree(allowed_ids=allowed_ids)
+            render_wind_tree(**tree_kwargs)
 
     if show_consequence:
         if show_seismic:
-            render_consequence_tree("seismic", allowed_ids=allowed_ids)
+            render_consequence_tree("seismic", **tree_kwargs)
         if show_hurricane:
-            render_consequence_tree("hurricane", allowed_ids=allowed_ids)
+            render_consequence_tree("hurricane", **tree_kwargs)
 
 
 # ─── Orchestrator ────────────────────────────────────────────────────────────
@@ -388,24 +440,25 @@ def render_search_and_library() -> None:
     """
     Top-level entry.
 
-    A **Dataset** selector (Fragility / Consequence / All) scopes both search and
-    browse. Both datasets are indexed, so a query searches whichever the selector
-    allows; with no query, the matching browse tree(s) render. "All" spans both —
-    useful for finding a model without knowing which dataset it lives in.
+    A **Collection** selector (Fragility / Consequence / All) scopes both search
+    and browse. Both collections are indexed, so a query searches whichever the
+    selector allows; with no query, the matching browse tree(s) render. "All"
+    spans both, which helps to find a model without knowing which collection it
+    is in.
 
     If the search index cannot be built (the optional search dependencies are
     missing, or the first-run model download fails offline), the page degrades
     gracefully: a notice explains why and the full browse tree still renders.
     """
     dataset_label = st.radio(
-        "Dataset",
+        "Collection",
         _DATASET_LABELS,
         horizontal=True,
         key="dataset_filter",
         help=(
-            "Fragility = damage models. Consequence = repair cost/time models "
-            "(some keyed by occupancy class, with no fragility component). "
-            "Both are searchable; 'All' spans both."
+            "The model collection to browse and search. Fragility = damage models. "
+            "Consequence = repair cost/time models (some keyed by occupancy "
+            "class, with no fragility component). 'All' shows both."
         ),
     )
     dataset = _DATASET_TO_VALUE[dataset_label]
@@ -415,7 +468,7 @@ def render_search_and_library() -> None:
     except Exception as exc:  # noqa: BLE001 -- degrade gracefully, browsing works
         _render_search_unavailable(exc)
         st.divider()
-        _render_trees(dataset, "All", None)
+        _render_trees(dataset, "All", None, allowed_files=None, expand_sources=False)
         return
 
     query, mode, filters, hazard_label = render_search_controls(index, dataset)

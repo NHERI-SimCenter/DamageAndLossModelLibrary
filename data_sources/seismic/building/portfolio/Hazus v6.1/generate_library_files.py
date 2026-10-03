@@ -832,35 +832,31 @@ def create_Hazus_EQ_repair_db(  # noqa: C901, N802
 
 
 def main():
-    """Generate HAZUS 5.1 building seismic damage and loss library files."""
+    """Generate Hazus v6.1 building seismic damage and loss library files."""
+    input_dir = Path(__file__).resolve().parent / 'input_files'
+    target_dir = (
+        Path(__file__).resolve().parents[5]
+        / 'src'
+        / 'dlml'
+        / 'data'
+        / 'seismic'
+        / 'building'
+        / 'portfolio'
+        / 'Hazus v6.1'
+    )
+
     create_Hazus_EQ_fragility_db(
-        source_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/hazus_data_eq.json'
-        ),
-        meta_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/Hazus_meta.json'
-        ),
-        target_data_file='seismic/building/portfolio/Hazus v6.1/fragility.csv',
-        target_meta_file='seismic/building/portfolio/Hazus v6.1/fragility.json',
+        source_file=input_dir / 'hazus_data_eq.json',
+        meta_file=input_dir / 'Hazus_meta.json',
+        target_data_file=target_dir / 'fragility.csv',
+        target_meta_file=target_dir / 'fragility.json',
     )
 
     create_Hazus_EQ_repair_db(
-        source_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/hazus_data_eq.json'
-        ),
-        meta_file=(
-            'seismic/building/portfolio/Hazus v5.1/'
-            'data_sources/input_files/Hazus_meta.json'
-        ),
-        target_data_file=(
-            'seismic/building/portfolio/Hazus v6.1/consequence_repair.csv'
-        ),
-        target_meta_file=(
-            'seismic/building/portfolio/Hazus v6.1/consequence_repair.json'
-        ),
+        source_file=input_dir / 'hazus_data_eq.json',
+        meta_file=input_dir / 'Hazus_meta.json',
+        target_data_file=target_dir / 'consequence_repair.csv',
+        target_meta_file=target_dir / 'consequence_repair.json',
     )
 
 

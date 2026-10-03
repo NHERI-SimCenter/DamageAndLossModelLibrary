@@ -36,17 +36,22 @@
 		"GroundFailure": {
 			"type": "boolean"
 		},
-		"FoundationType":{
-			"type": "string",
+		"LifelineFacility": {
+			"type": "boolean"
+		},
+		"FoundationDepth":{
+			"type": ["string","null"],
 			"enum": [
 				"Shallow",
-				"Deep"
+				"Deep",
+				null
 			]
 		},
 		"OccupancyClass": {
 			"type": "string",
 			"enum": [
 				"RES1","RES2","RES3","RES4","RES5","RES6",
+				"RES3A","RES3B","RES3C","RES3D","RES3E","RES3F",
 				"COM1","COM2","COM3","COM4","COM5","COM6","COM7","COM8","COM9","COM10",
 				"IND1","IND2","IND3","IND4","IND5","IND6",
 				"AGR1",
@@ -56,7 +61,7 @@
 			]
 		}
 	},
-	"required": ["StructureType","DesignLevel"],
+	"required": ["StructureType","DesignLevel","OccupancyClass"],
 	"allOf": [
 		{
 			"if": {
@@ -132,7 +137,12 @@
 				"required": ["GroundFailure"]
 			},
 			"then": {
-				"required": ["FoundationType"]
+				"properties": {
+					"FoundationDepth": {
+						"type": "string"
+					}
+				},
+				"required": ["FoundationDepth"]
 			}
 		}
 	]

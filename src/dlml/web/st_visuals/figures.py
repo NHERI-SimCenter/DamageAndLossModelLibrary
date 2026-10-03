@@ -232,7 +232,8 @@ def make_consequence_figure(
     comp_data = comp_rows.loc[c_type]
 
     # ── Guard against incomplete data ─────────────────────────────────────
-    if comp_data.loc[("Incomplete", "")] == 1:
+    # A table without the Incomplete column holds complete models only.
+    if comp_data.get(("Incomplete", ""), 0) == 1:
         return _empty_fig(f"Incomplete {c_type} consequence data for {comp_id}")
 
     # ── Damage state model parameters ─────────────────────────────────────
