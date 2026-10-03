@@ -1,17 +1,18 @@
 """
 tree_visuals.py
 ---------------
-Hierarchical tree view for the fragility component library.
+Hierarchical tree view for the fragility and consequence libraries.
 
 Renders a collapsible tree whose grouping depth mirrors each source's
 ``_GeneralInformation.ComponentGroups`` (FEMA P-58 nests three levels, Hazus two):
 
   Seismic
-  └── Source                (FEMA P-58 / Hazus …)
-      └── Group              (B - Shell …)
-          └── Sub-Group      (B.10 - Super Structure …)
-              └── Sub-Sub-Group  (B.10.31 - Steel Columns …)
-                  └── Component  [detail panel + fragility / consequence charts]
+  └── Asset type heading    (only where a section mixes asset types)
+      └── Source                (FEMA P-58 / Hazus …)
+          └── Group              (B - Shell …)
+              └── Sub-Group      (B.10 - Super Structure …)
+                  └── Sub-Sub-Group  (B.10.31 - Steel Columns …)
+                      └── Component  [detail panel + fragility / consequence charts]
 
 Usage
 -----
@@ -46,7 +47,11 @@ from dlml import convert_to_MultiIndex
 from plotly.subplots import make_subplots
 from scipy.stats import norm, weibull_min
 
-from dlml.web.st_search.semantic_index import _category_from_path, tree_corpus_files
+from dlml.web.st_search.semantic_index import (
+    asset_type_from_path,
+    dataset_id_from_path,
+    tree_corpus_files,
+)
 from dlml.web.st_core.component import (
     _render_wind_component_detail,
     render_component_leaf,
@@ -59,13 +64,6 @@ from dlml.web.st_visuals.helpers_visual import load_consequence_df
 
 
 # ─── Palette & constants ───────────────────────────────────────────────────────
-
-_CATEGORY_BADGE: Dict[str, str] = {
-    "FEMA": "🔵 FEMA P-58",
-    "HAZUS": "🟠 Hazus",
-    "SIMCENTER": "🌐 SimCenter",
-    "RESEARCH": "🔬 Research",
-}
 
 # Top-level keys in a fragility.json that are not components.
 _NON_COMPONENT_KEYS = {"References"}
@@ -83,13 +81,20 @@ def _hazard_files(hazard: str, dataset: str = "fragility") -> tuple[str, ...]:
     Tree-visible data files for a hazard + dataset, in stable order.
 
     Uses the same corpus the search index uses (``tree_corpus_files``) so the
-    tree and search never disagree, filtered by ``Path.parts`` so it works
-    regardless of OS path separators. ``tree_corpus_files`` already resolves the
-    per-dataset filenames (e.g. consequence_repair.json / loss_repair.json).
+    tree and search never disagree, filtered on the first segment of each
+    file's dataset ID. ``tree_corpus_files`` already resolves the per-dataset
+    filenames (e.g. consequence_repair.json / loss_repair.json).
     """
     return tuple(
-        fp for fp in tree_corpus_files(dataset=dataset) if hazard in Path(fp).parts
+        fp
+        for fp in tree_corpus_files(dataset=dataset)
+        if dataset_id_from_path(fp).split("/")[0] == hazard
     )
+
+
+def asset_type_label(asset_type: str) -> str:
+    """Display label of an asset type: ``"power_network"`` -> ``"Power network"``."""
+    return asset_type.replace("_", " ").capitalize()
 
 
 @st.cache_resource(show_spinner=False)
@@ -197,6 +202,7 @@ def _build_tree(file_paths: tuple[str, ...]) -> Dict[str, dict]:
         tree[fp] = {
             "file_path": fp,
             "short_name": short_name,
+            "asset_type": asset_type_from_path(fp),
             "meta": meta,
             "root": root,
         }
@@ -300,18 +306,22 @@ def _prune_node(node: dict, allowed_ids: Optional[set]) -> tuple[Optional[dict],
 def _build_render_plan(
     tree: Dict[str, dict],
     allowed_ids: Optional[set],
+    allowed_files: Optional[set] = None,
 ) -> tuple[list, int]:
     """
-    Build a per-source render plan, pruned to ``allowed_ids``.
+    Build a per-source render plan from ``allowed_files`` and ``allowed_ids``.
 
     Returns ``(plan, grand_total)`` where each plan entry is
-    ``(short_name, source_data, pruned_root, count)``. Sources with no surviving
+    ``(short_name, source_data, pruned_root, count)``. Sources whose file is not
+    in ``allowed_files`` (when it is given) and sources with no surviving
     components are dropped.
     """
     plan: list = []
     grand_total = 0
 
     for source_data in tree.values():
+        if allowed_files is not None and source_data["file_path"] not in allowed_files:
+            continue
         pruned_root, count = _prune_node(source_data["root"], allowed_ids)
         if pruned_root is not None:
             plan.append((source_data["short_name"], source_data, pruned_root, count))
@@ -368,11 +378,11 @@ def _render_node(
     Recursively render a grouping node: child groups first, then the component
     leaves held directly at this level.
 
-    In browse mode the leaf rows are deferred behind a "Show N components"
-    checkbox, so a closed branch builds a single widget instead of hundreds of
-    leaf expanders on every re-run (Streamlit executes expander bodies even
-    while collapsed). In a filtered view the matches are few and meant to be
-    seen, so they render immediately.
+    The leaf rows are deferred behind a "Show N models" checkbox, so a closed
+    branch builds a single widget instead of hundreds of leaf expanders on every
+    re-run (Streamlit executes expander bodies even while collapsed). With
+    ``filtering`` (an ``allowed_ids`` set), every level opens and the leaves
+    render immediately.
     """
     for child in node["children"].values():
         with st.expander(
@@ -406,8 +416,16 @@ def _render_tree(
     no_data_warning: str,
     no_match_info: str,
     allowed_ids: Optional[set],
+    allowed_files: Optional[set] = None,
+    expand_sources: bool = False,
 ) -> None:
-    """Shared renderer for the fragility and consequence trees (depth follows the data)."""
+    """
+    Shared renderer for the fragility and consequence trees (depth follows the data).
+
+    With ``allowed_files``, a section with no allowed source renders nothing,
+    not even its header. Asset-type headings separate the sources when the
+    section's full tree holds more than one asset type.
+    """
     if not file_paths:
         st.warning(no_data_warning, icon="⚠️")
         return
@@ -420,10 +438,22 @@ def _render_tree(
     # same page ("All" browse) and share component IDs (e.g. FEMA B.10.31).
     src_prefix = {fp: f"{dataset}_{hazard}_{i}_" for i, fp in enumerate(tree)}
 
-    # Prune to allowed_ids (no-op when None). A filtered view auto-expands so
-    # matches are visible without clicking through every level.
-    plan, total = _build_render_plan(tree, allowed_ids)
+    # Limit to allowed_files and prune to allowed_ids (no-op when both are None).
+    # An allowed_ids set opens every level and renders the leaves;
+    # expand_sources opens only the source expanders, and their models stay
+    # behind the "Show N models" checkboxes.
+    plan, total = _build_render_plan(tree, allowed_ids, allowed_files)
     filtering = allowed_ids is not None
+    if allowed_files is not None and not plan:
+        return
+
+    # Asset-type headings only where the full tree (before filtering) mixes
+    # asset types, so a single-type section carries no lone heading. The stable
+    # sort groups the plan by asset type, so each heading is emitted once.
+    show_headings = len({src["asset_type"] for src in tree.values()}) > 1
+    if show_headings:
+        plan.sort(key=lambda entry: entry[1]["asset_type"])
+    current_asset_type: Optional[str] = None
 
     st.markdown(header)
     st.caption(
@@ -438,14 +468,17 @@ def _render_tree(
     for short_name, source_data, root, n_comp in plan:
         fp: str = source_data["file_path"]
         meta: dict = source_data["meta"]
-        # Badge from the source path (FEMA / Hazus / SimCenter / Research) — works
-        # for the hurricane SimCenter library and the Hazus hurricane portfolio alike.
-        badge = _CATEGORY_BADGE.get(_category_from_path(fp), "")
+
+        if show_headings:
+            asset_type = source_data["asset_type"]
+            if asset_type != current_asset_type:
+                st.markdown(f"#### {asset_type_label(asset_type)}")
+                current_asset_type = asset_type
 
         # ══ Source ════════════════════════════════════════════════════════════
         with st.expander(
-            f"**{short_name}**  ·  {badge}  ·  `{n_comp:,}` models",
-            expanded=filtering,
+            f"**{short_name}**  ·  `{n_comp:,}` models",
+            expanded=filtering or expand_sources,
         ):
             if meta.get("Description"):
                 st.caption(meta["Description"])
@@ -461,6 +494,9 @@ def _render_tree(
 def render_seismic_tree(
     seismic_objects: Optional[list] = None,
     allowed_ids: Optional[set] = None,
+    *,
+    allowed_files: Optional[set] = None,
+    expand_sources: bool = False,
 ) -> None:
     """
     Render the seismic component library as a collapsible tree.
@@ -475,8 +511,17 @@ def render_seismic_tree(
         Pre-filtered list of objects exposing a ``file_path`` attribute. When
         None, the seismic corpus is loaded from the shared tree-file list.
     allowed_ids : set of str, optional
-        When provided, only components whose ID is in this set are shown, and
-        empty branches are hidden. When None, the full tree renders.
+        When provided, only components whose ID is in this set are shown, empty
+        branches are hidden, and every level opens with its models rendered.
+        Meant for facets that narrow within a data file; no Explorer UI
+        selection produces one. When None, components are not pruned.
+    allowed_files : set of str, optional
+        When provided, only the sources whose data file is in this set are
+        shown, and the section renders nothing, not even its header, if none
+        of them is. When None, every source is shown.
+    expand_sources : bool
+        Open the source expanders without opening their groups or rendering
+        their models. Set when a Source filter is chosen.
 
     Performance
     -----------
@@ -501,32 +546,47 @@ def render_seismic_tree(
         no_data_warning="No seismic fragility data found. Check directory structure.",
         no_match_info="No seismic components match the current filters.",
         allowed_ids=allowed_ids,
+        allowed_files=allowed_files,
+        expand_sources=expand_sources,
     )
 
 
-# ─── Wind tree renderer ────────────────────────────────────────────────────────
+# ─── Hurricane tree renderer ───────────────────────────────────────────────────
 
 def render_wind_tree(
     wind_objects: Optional[list] = None,
     allowed_ids: Optional[set] = None,
+    *,
+    allowed_files: Optional[set] = None,
+    expand_sources: bool = False,
 ) -> None:
     """
-    Render the SimCenter Wind Component Library as a collapsible tree.
+    Render the hurricane fragility datasets as a collapsible tree.
 
-    Same structure as ``render_seismic_tree``, driven by the wind library's
+    Same structure as ``render_seismic_tree``, driven by each source's
     ``ComponentGroups`` (e.g. ``RWC - Roof-Wall Connection → RWC.toe_nail - Toe
-    nail → RWC.toe_nail.straps - Toe nail with straps → components``).
+    nail → RWC.toe_nail.straps - Toe nail with straps → components`` in the
+    SimCenter Wind Component Library).
 
     Parameters
     ----------
     wind_objects : list, optional
         Pre-filtered list of objects exposing a ``file_path`` attribute. When
         ``None``, the shared tree-file list supplies the hurricane component
-        libraries (``hurricane/building/component/``); Hazus portfolio sources
-        are excluded by construction.
+        library (``hurricane/building/component/``) and the Hazus hurricane
+        portfolio sets (``hurricane/building/portfolio/``).
     allowed_ids : set of str, optional
-        When provided, only components whose ID is in this set are shown, and
-        empty branches are hidden.
+        When provided, only components whose ID is in this set are shown, empty
+        branches are hidden, and every level opens with its models rendered.
+        Meant for facets that narrow within a data file; no Explorer UI
+        selection produces one. When None, components are not pruned.
+    allowed_files : set of str, optional
+        When provided, only the sources whose data file is in this set are
+        shown, and the section renders nothing, not even its header, if none
+        of them is. When None, every source is shown.
+    expand_sources : bool
+        Open the source expanders without opening their groups or rendering
+        their models. Set when a Source filter is chosen.
     """
     if wind_objects is None:
         file_paths = _hazard_files("hurricane")
@@ -541,13 +601,15 @@ def render_wind_tree(
         file_paths,
         hazard="hurricane",
         dataset="fragility",
-        header="## 🌀 Wind (Hurricane)",
+        header="## 🌀 Hurricane",
         no_data_warning=(
-            "No wind component fragility data found. "
-            "Check that hurricane/building/component/ exists in the directory structure."
+            "No hurricane fragility data found. "
+            "Check that hurricane/building/ exists in the directory structure."
         ),
-        no_match_info="No wind components match the current filters.",
+        no_match_info="No hurricane models match the current filters.",
         allowed_ids=allowed_ids,
+        allowed_files=allowed_files,
+        expand_sources=expand_sources,
     )
 
 
@@ -558,7 +620,11 @@ _CONSEQUENCE_HEADERS = {
 
 
 def render_consequence_tree(
-    hazard: str = "seismic", allowed_ids: Optional[set] = None
+    hazard: str = "seismic",
+    allowed_ids: Optional[set] = None,
+    *,
+    allowed_files: Optional[set] = None,
+    expand_sources: bool = False,
 ) -> None:
     """
     Render the repair-consequence library for *hazard* as a collapsible tree.
@@ -577,7 +643,16 @@ def render_consequence_tree(
         Which hazard's consequence sources to render.
     allowed_ids : set of str, optional
         When provided, only consequence records whose ID is in this set are
-        shown, and empty branches are hidden. When None, the full tree renders.
+        shown, empty branches are hidden, and every level opens with its records
+        rendered. Meant for facets that narrow within a data file; no Explorer
+        UI selection produces one. When None, records are not pruned.
+    allowed_files : set of str, optional
+        When provided, only the sources whose data file is in this set are
+        shown, and the section renders nothing, not even its header, if none
+        of them is. When None, every source is shown.
+    expand_sources : bool
+        Open the source expanders without opening their groups or rendering
+        their records. Set when a Source filter is chosen.
     """
     file_paths = _hazard_files(hazard, "consequence")
     _render_tree(
@@ -588,4 +663,6 @@ def render_consequence_tree(
         no_data_warning=f"No {hazard} consequence data found.",
         no_match_info="No consequence records match the current filters.",
         allowed_ids=allowed_ids,
+        allowed_files=allowed_files,
+        expand_sources=expand_sources,
     )

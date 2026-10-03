@@ -1,18 +1,25 @@
 """
 semantic_index.py
 -----------------
-Semantic + structured retrieval engine for the fragility component library.
+Semantic + structured retrieval engine for the fragility and consequence models
+shown in the Explorer's browse tree.
 
 This replaces the description half of the old rapidfuzz search. It indexes the
-*tree-visible* component libraries (the same files ``render_seismic_tree`` and
-``render_wind_tree`` render) into an in-process Qdrant collection backed by
-fastembed, and exposes a small hybrid API:
+*tree-visible* data files (the same files ``render_seismic_tree``,
+``render_wind_tree`` and ``render_consequence_tree`` render) into an in-process
+Qdrant collection backed by fastembed, and exposes a small hybrid API:
 
     * ``search(query, mode=...)``  — hybrid dense + BM25 (RRF-fused) for
                                      descriptions, exact/substring matching for
                                      component IDs.
-    * ``filter_only(filters)``     — facet pruning with no text query, used to
-                                     narrow the tree.
+    * ``filter_only(filters)``     — component IDs matching the facets, with no
+                                     text query.
+    * ``allowed_files(filters)``   — data files whose records match the facets;
+                                     the browse tree is narrowed to these.
+
+The module also defines the tree corpus that the tree renderers and the index
+share: the list of data files, the dataset ID and asset type of each file, and
+the list of excluded datasets.
 
 Design notes
 ~~~~~~~~~~~~
@@ -24,11 +31,13 @@ Design notes
       python -m dlml.web.st_search.semantic_index --mode id "B.10.31"
       python -m dlml.web.st_search.semantic_index --hazard seismic "exterior wall debris"
 
-* **Corpus parity with the tree.** ``build_tree_corpus`` globs exactly the files
-  the two tree renderers load: every ``fragility.json`` under ``seismic/`` plus
-  the ``hurricane/building/component/`` libraries. The 25k-row Hazus hurricane
-  *portfolio* files are deliberately excluded — they are near-duplicate
-  templated strings and are not shown in the tree.
+* **Corpus parity with the tree.** ``build_tree_corpus`` reads exactly the files
+  the tree renderers load (``tree_corpus_files``): the fragility and consequence
+  files under ``seismic/``, ``hurricane/building/component/`` and
+  ``hurricane/building/portfolio/``. The Hazus hurricane *portfolio* files hold
+  about 25.8k templated, near-duplicate models each. They are shown in the tree
+  and indexed with ``embed=False``, so they are found by ID and facet search but
+  their descriptions are not embedded.
 
 * **Rich embedding context.** ``ComponentGroups`` in the source JSON carries
   human-readable labels ("B.10.31 - Steel Columns", "RWC - Roof-Wall
@@ -37,14 +46,16 @@ Design notes
   query like "roof to wall connection" matches even when the raw description
   never spells it out.
 
-* **In-process Qdrant.** ``location=":memory:"`` builds a fresh collection at
-  startup (cheap at ~1.6k vectors). Pass ``path=...`` instead to persist on
-  disk. No server required.
+* **In-process Qdrant.** ``location=":memory:"`` builds a fresh collection from
+  the embedded records at every process start. Pass ``path=...`` instead to
+  persist on disk. No server required.
 """
 
 from __future__ import annotations
 
 import argparse
+import dataclasses
+import functools
 import json
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -101,10 +112,13 @@ class ComponentRecord:
     subgroup_label: str      # human label,      e.g. "B.10 - Super Structure"
     dataset: str = "fragility"  # "fragility" | "consequence" — which file it came from
     type: str = "Damage"     # "Damage" | "Consequence"
+    #: Second segment of the dataset ID, e.g. "building" or "power_network".
+    asset_type: str = ""
     #: Whether this record's description is embedded for semantic search. False
-    #: for the huge hurricane building portfolio (≈51.6k templated near-duplicate
-    #: records) — those stay findable via ID/substring + facet filters and the
-    #: browse tree without paying the (~minutes) embedding cost at startup.
+    #: for the huge hurricane building portfolio (about 25.8k templated
+    #: near-duplicate models per file) — those stay findable via ID/substring +
+    #: facet filters and the browse tree without paying the (~minutes) embedding
+    #: cost at startup.
     embed: bool = True
     #: Extra label names (deepest group chain) used only to enrich the embedding.
     _name_chain: List[str] = field(default_factory=list, repr=False)
@@ -131,6 +145,7 @@ class ComponentRecord:
             "short_name": self.short_name,
             "file_path": self.file_path,
             "hazard": self.hazard,
+            "asset_type": self.asset_type,
             "category": self.category,
             "group": self.group,
             "group_label": self.group_label,
@@ -152,25 +167,27 @@ class SearchFilters:
     subgroup: Optional[str] = None     # 2-segment prefix
     dataset: Optional[str] = None      # "fragility" | "consequence"
     type: Optional[str] = None
+    asset_type: Optional[str] = None   # e.g. "building", "power_network"
 
     def is_empty(self) -> bool:
-        return all(
-            getattr(self, f) is None
-            for f in ("hazard", "category", "source", "group", "subgroup", "dataset", "type")
-        )
+        return all(getattr(self, f.name) is None for f in dataclasses.fields(self))
+
+    def conditions(self) -> dict[str, str]:
+        """Map the payload key of each set facet to its value.
+
+        Every field is stored under its own name in the payload, except
+        ``source``, which is stored as ``short_name``.
+        """
+        conditions: dict[str, str] = {}
+        for f in dataclasses.fields(self):
+            value = getattr(self, f.name)
+            if value is not None:
+                conditions["short_name" if f.name == "source" else f.name] = value
+        return conditions
 
     def matches(self, payload: dict) -> bool:
-        """Pure-Python evaluation, used for ID mode and ``filter_only``."""
-        checks = {
-            "hazard": self.hazard,
-            "category": self.category,
-            "short_name": self.source,
-            "group": self.group,
-            "subgroup": self.subgroup,
-            "dataset": self.dataset,
-            "type": self.type,
-        }
-        return all(want is None or payload.get(key) == want for key, want in checks.items())
+        """Pure-Python evaluation of the facets against a payload."""
+        return all(payload.get(key) == want for key, want in self.conditions().items())
 
 
 @dataclass
@@ -225,16 +242,32 @@ def _flatten_group_labels(node, acc: Dict[str, str]) -> Dict[str, str]:
     return acc
 
 
-def _hazard_from_path(file_path: str) -> str:
-    parts = Path(file_path).parts
-    for hz in ("seismic", "hurricane", "flood"):
-        if hz in parts:
-            return hz
-    return ""
+def dataset_id_from_path(file_path: str, base: str | Path | None = None) -> str:
+    """
+    Return the dataset ID of a data file.
+
+    The ID is the file's parent folder relative to *base* (default
+    :func:`data_root`), as a POSIX string, e.g.
+    ``seismic/building/portfolio/Hazus v5.1``. Its second segment is the
+    asset type.
+    """
+    base_dir = Path(base) if base is not None else data_root()
+    return Path(file_path).parent.relative_to(base_dir).as_posix()
+
+
+def asset_type_from_path(file_path: str, base: str | Path | None = None) -> str:
+    """
+    Return the asset type of a data file, the second segment of its dataset ID.
+
+    Returns ``""`` for a dataset ID with one segment. Raises ``ValueError`` for
+    a path outside *base*, as :func:`dataset_id_from_path` does.
+    """
+    segments = dataset_id_from_path(file_path, base).split("/")
+    return segments[1] if len(segments) > 1 else ""
 
 
 def _category_from_path(file_path: str) -> str:
-    """Source category for the badge and the search facet.
+    """Source category for the search facet (the CLI's ``--category``).
 
     Every dataset not recognized as FEMA, Hazus, or SimCenter gets the
     RESEARCH category.
@@ -255,6 +288,7 @@ def _record_from_component(
     short_name: str,
     file_path: str,
     hazard: str,
+    asset_type: str,
     category: str,
     label_map: Dict[str, str],
     source_type: str,
@@ -286,7 +320,7 @@ def _record_from_component(
             if name and name not in name_chain:
                 name_chain.append(name)
 
-    # Type: prefer explicit JSON, else keyword heuristic (mirrors old behaviour).
+    # Type: prefer explicit JSON, else a keyword heuristic.
     comp_type = source_type
     text = (short_name + " " + description).lower()
     if "consequence" in text:
@@ -298,6 +332,7 @@ def _record_from_component(
         short_name=short_name,
         file_path=file_path,
         hazard=hazard,
+        asset_type=asset_type,
         category=category,
         group=group,
         group_label=group_label,
@@ -311,7 +346,9 @@ def _record_from_component(
 
 
 def _records_from_file(
-    file_path: str, dataset: str = "fragility", embed: bool = True
+    file_path: str,
+    dataset: str = "fragility",
+    base: str | Path | None = None,
 ) -> List[ComponentRecord]:
     try:
         with open(file_path, "r", encoding="utf-8") as fh:
@@ -324,7 +361,14 @@ def _records_from_file(
     short_name: str = meta.get("ShortName", Path(file_path).parent.name)
     label_map = _flatten_group_labels(meta.get("ComponentGroups", {}), {})
 
-    hazard = _hazard_from_path(file_path)
+    dataset_id = dataset_id_from_path(file_path, base)
+    segments = dataset_id.split("/")
+    hazard = segments[0]
+    asset_type = segments[1] if len(segments) > 1 else ""
+    # The hurricane building portfolio holds about 25.8k templated
+    # near-duplicate models per file. Index it for ID/facet search and the
+    # tree, but do not embed it, which keeps cold start fast.
+    embed = not dataset_id.startswith("hurricane/building/portfolio/")
     category = _category_from_path(file_path)
     source_type = "Consequence" if "consequence" in str(meta.get("Type", "")).lower() else "Damage"
 
@@ -340,6 +384,7 @@ def _records_from_file(
             short_name=short_name,
             file_path=file_path,
             hazard=hazard,
+            asset_type=asset_type,
             category=category,
             label_map=label_map,
             source_type=source_type,
@@ -359,6 +404,12 @@ _DATASET_FILENAMES = {
     "consequence": ("consequence_repair.json", "loss_repair.json"),
 }
 
+EXCLUDED_DATASETS: frozenset[str] = frozenset()
+"""Dataset IDs (paths relative to the data root, in the form
+``seismic/building/portfolio/Hazus v5.1``) that the Explorer leaves out of
+the tree and the search index. Meant for datasets whose models duplicate
+those of another dataset. The set is empty."""
+
 
 def tree_corpus_files(
     base_path: str | Path | None = None, dataset: str = "fragility"
@@ -372,7 +423,8 @@ def tree_corpus_files(
                     ``building/portfolio/`` Hazus models.
 
     The consequence dataset matches both ``consequence_repair.json`` and
-    ``loss_repair.json``; directories lacking a match simply don't appear.
+    ``loss_repair.json``; directories without a match are not listed. Datasets
+    in ``EXCLUDED_DATASETS`` are skipped.
 
     ``base_path`` defaults to the packaged dlml data root (:func:`data_root`),
     so discovery is independent of the current working directory. Pass an
@@ -391,7 +443,11 @@ def tree_corpus_files(
         if not root.exists():
             continue
         for filename in filenames:
-            files.extend(sorted(str(p) for p in root.rglob(filename)))
+            files.extend(
+                p
+                for p in sorted(str(q) for q in root.rglob(filename))
+                if dataset_id_from_path(p, base) not in EXCLUDED_DATASETS
+            )
     return files
 
 
@@ -407,12 +463,7 @@ def build_tree_corpus(base_path: str | Path | None = None) -> List[ComponentReco
     records: List[ComponentRecord] = []
     for dataset in ("fragility", "consequence"):
         for fp in tree_corpus_files(base_path, dataset):
-            parts = Path(fp).parts
-            # The hurricane building portfolio is huge (≈51.6k templated
-            # near-duplicate records). Index it for ID/facet search + the tree,
-            # but don't embed it — that keeps cold start fast.
-            embed = not ("hurricane" in parts and "portfolio" in parts)
-            records.extend(_records_from_file(fp, dataset, embed=embed))
+            records.extend(_records_from_file(fp, dataset, base=base_path))
     return records
 
 
@@ -512,21 +563,10 @@ class SemanticIndex:
         if filters is None or filters.is_empty():
             return None
         m = self._models
-        conditions = []
-        field_map = {
-            "hazard": filters.hazard,
-            "category": filters.category,
-            "short_name": filters.source,
-            "group": filters.group,
-            "subgroup": filters.subgroup,
-            "dataset": filters.dataset,
-            "type": filters.type,
-        }
-        for key, value in field_map.items():
-            if value is not None:
-                conditions.append(
-                    m.FieldCondition(key=key, match=m.MatchValue(value=value))
-                )
+        conditions = [
+            m.FieldCondition(key=key, match=m.MatchValue(value=value))
+            for key, value in filters.conditions().items()
+        ]
         return m.Filter(must=conditions) if conditions else None
 
     # -- queries ---------------------------------------------------------------
@@ -633,12 +673,55 @@ class SemanticIndex:
         """
         Return component IDs matching the facets, with no text query.
 
-        Used to prune the tree when the user has selected facets but not typed a
-        query. Order follows the corpus (stable).
+        Order follows the corpus (stable). The browse tree accepts such a set
+        for facets that narrow within a data file, but no Explorer UI selection
+        produces one: Hazard, Asset type and Source select whole files through
+        :meth:`allowed_files`.
         """
         if filters is None or filters.is_empty():
             return [r.component_id for r in self.records]
         return [r.component_id for r in self.records if filters.matches(r.payload)]
+
+    @functools.cached_property
+    def file_facets(self) -> list[dict]:
+        """
+        One payload-like dict per distinct data file in the records.
+
+        Each dict holds the file-level fields ``file_path``, ``hazard``,
+        ``asset_type``, ``short_name`` and ``dataset``, so a file-level filter
+        is evaluated with :meth:`SearchFilters.matches` once per file instead
+        of once per record.
+        """
+        facets: dict[str, dict] = {}
+        for r in self.records:
+            if r.file_path not in facets:
+                facets[r.file_path] = {
+                    "file_path": r.file_path,
+                    "hazard": r.hazard,
+                    "asset_type": r.asset_type,
+                    "short_name": r.short_name,
+                    "dataset": r.dataset,
+                }
+        return list(facets.values())
+
+    def allowed_files(self, filters: Optional[SearchFilters] = None) -> set:
+        """
+        Return the ``file_path`` values of the records that match the facets.
+
+        Only the file-level facets (hazard, asset type, source and dataset) are
+        evaluated, once for each entry of :attr:`file_facets`; the other fields
+        of *filters* are ignored.
+        """
+        file_filters = (
+            SearchFilters()
+            if filters is None
+            else dataclasses.replace(
+                filters, category=None, group=None, subgroup=None, type=None
+            )
+        )
+        return {
+            row["file_path"] for row in self.file_facets if file_filters.matches(row)
+        }
 
     # -- introspection ---------------------------------------------------------
 
