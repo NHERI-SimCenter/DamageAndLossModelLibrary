@@ -1,0 +1,112 @@
+
+
+***********************************
+CRCB.Approach - Approach settlement
+***********************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Approach.Slope10.SXR22</b> | Approach fragility in terms of permanent approach settlement for a 10 ft approach slab with a slope offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 21 (spreadsheet row 23), Approach, EDP "Settlement (in.)"; source note "10 ft approach with slope offset"; source reference "Shao et al. (2022)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).
+| The capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 10 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 10 ft approach slab represents early-designed bridges.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Approach.Slope10.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Approach.Slope30.SXR22</b> | Approach fragility in terms of permanent approach settlement for a 30 ft approach slab with a slope offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 22 (spreadsheet row 24), Approach, EDP "Settlement (in.)"; source note "30 ft approach with slope offset"; source reference "Shao et al. (2022)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).
+| The capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 30 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 30 ft approach slab represents modern bridges.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Approach.Slope30.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Approach.Slope45.SXR22</b> | Approach fragility in terms of permanent approach settlement for a 45 ft approach slab with a slope offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 23 (spreadsheet row 25), Approach, EDP "Settlement (in.)"; source note "45 ft approach with slope offset"; source reference "Shao et al. (2022)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).
+| The capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for a 45 ft approach slab with a slope offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included. In the study, the 45 ft approach slab represents modern bridges.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Approach.Slope45.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Approach.Step.SXR22</b> | Approach fragility in terms of permanent approach settlement for an approach with a step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 20 (spreadsheet row 22), Approach, EDP "Settlement (in.)"; source note "Approach with step offset"; source reference "Shao et al. (2022)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the permanent settlement of the component. The demand comes from a settlement analysis of the approach backfill, as in Shao et al. (2022). The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type PAS at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Shao et al. (2022).
+| The capacities are the Minor (LS2) and Moderate (LS3) settlement capacities of Shao et al. (2022, Table 2) for an approach with a step offset, converted from cm to inches. The study's Observable state, and its Major and Severe states where it defines them, are not included.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Approach.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>

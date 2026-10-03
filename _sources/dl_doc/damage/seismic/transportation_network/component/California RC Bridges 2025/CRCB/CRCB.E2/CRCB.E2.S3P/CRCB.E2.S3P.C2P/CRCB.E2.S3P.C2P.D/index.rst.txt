@@ -1,0 +1,1175 @@
+
+
+***************************************
+CRCB.E2.S3P.C2P.D - diaphragm abutments
+***************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Circ.M17</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 330 (spreadsheet row 332), group E2-S3P-C2P-D, AbAct; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Obl.M17</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 331 (spreadsheet row 333), group E2-S3P-C2P-D, AbAct; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Circ.M17</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 328 (spreadsheet row 330), group E2-S3P-C2P-D, AbAct; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Obl.M17</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 329 (spreadsheet row 331), group E2-S3P-C2P-D, AbAct; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr1.JML19</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns with a 102 mm (4 in.) gap.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 333 (spreadsheet row 335), group E2-S3P-C2P-D, AbAct; source note "Box-girder, one-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The published parameters equal those of CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Obl.JML19 at the two decimals of the source; Jeon, Mangalathu, and Lee (2019, Tables 4 and 5) give values for the two configurations that differ by less than that rounding.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr1.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr1T.JML19</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns (transverse flare, no gap).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 334 (spreadsheet row 336), group E2-S3P-C2P-D, AbAct; source note "Box-girder, one-way flared column along the transverse direction". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr1T.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr2.JML19</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, two-way flared columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 335 (spreadsheet row 337), group E2-S3P-C2P-D, AbAct; source note "Box-girder, two-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr2.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Obl.JML19</b> | Active abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 332 (spreadsheet row 334), group E2-S3P-C2P-D, AbAct; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The published parameters equal those of CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Flr1.JML19 at the two decimals of the source; Jeon, Mangalathu, and Lee (2019, Tables 4 and 5) give values for the two configurations that differ by less than that rounding.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbAct.BoxGirder.TCB.Span3.Obl.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Circ.M17</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 338 (spreadsheet row 340), group E2-S3P-C2P-D, AbPass; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Obl.M17</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 339 (spreadsheet row 341), group E2-S3P-C2P-D, AbPass; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Circ.M17</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 336 (spreadsheet row 338), group E2-S3P-C2P-D, AbPass; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Obl.M17</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 337 (spreadsheet row 339), group E2-S3P-C2P-D, AbPass; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr1.JML19</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns with a 102 mm (4 in.) gap.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 341 (spreadsheet row 343), group E2-S3P-C2P-D, AbPass; source note "Box-girder, one-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr1.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr1T.JML19</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns (transverse flare, no gap).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 342 (spreadsheet row 344), group E2-S3P-C2P-D, AbPass; source note "Box-girder, one-way flared column along the transverse direction". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr1T.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr2.JML19</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, two-way flared columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 343 (spreadsheet row 345), group E2-S3P-C2P-D, AbPass; source note "Box-girder, two-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Flr2.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Obl.JML19</b> | Passive abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 340 (spreadsheet row 342), group E2-S3P-C2P-D, AbPass; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbPass.BoxGirder.TCB.Span3.Obl.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Circ.M17</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 346 (spreadsheet row 348), group E2-S3P-C2P-D, AbTran; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Obl.M17</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 347 (spreadsheet row 349), group E2-S3P-C2P-D, AbTran; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Circ.M17</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 344 (spreadsheet row 346), group E2-S3P-C2P-D, AbTran; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Obl.M17</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 345 (spreadsheet row 347), group E2-S3P-C2P-D, AbTran; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr1.JML19</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns with a 102 mm (4 in.) gap.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 349 (spreadsheet row 351), group E2-S3P-C2P-D, AbTran; source note "Box-girder, one-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr1.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr1T.JML19</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns (transverse flare, no gap).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 350 (spreadsheet row 352), group E2-S3P-C2P-D, AbTran; source note "Box-girder, one-way flared column along the transverse direction". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr1T.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr2.JML19</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, two-way flared columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 351 (spreadsheet row 353), group E2-S3P-C2P-D, AbTran; source note "Box-girder, two-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Flr2.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Obl.JML19</b> | Transverse abutment fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 348 (spreadsheet row 350), group E2-S3P-C2P-D, AbTran; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.AbTran.BoxGirder.TCB.Span3.Obl.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Pile.Slope30.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: abutment on piles, slope offset with a 30 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 367 (spreadsheet row 369), group E2-S3P-C2P-D, Approach; source note "Abutment on piles with approach slab (length 30 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Pile.Slope30.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Pile.Slope45.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: abutment on piles, slope offset with a 45 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 369 (spreadsheet row 371), group E2-S3P-C2P-D, Approach; source note "Abutment on piles with approach slab (length 45 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The source gives N/A for the moderate state, which the database uses to mark a negligible probability of that damage from ground shaking.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Pile.Slope45.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Pile.Step.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: abutment on piles, step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 365 (spreadsheet row 367), group E2-S3P-C2P-D, Approach; source note "Abutment on piles with approach slab damage through step offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Pile.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Reg.Slope30.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: regular-height abutment on spread footing, slope offset with a 30 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 366 (spreadsheet row 368), group E2-S3P-C2P-D, Approach; source note "Regular-height abutment on spread footing with approach slab (length 30 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The source gives N/A for the moderate state, which the database uses to mark a negligible probability of that damage from ground shaking.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Reg.Slope30.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Reg.Slope45.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: regular-height abutment on spread footing, slope offset with a 45 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 368 (spreadsheet row 370), group E2-S3P-C2P-D, Approach; source note "Regular-height abutment on spread footing with approach slab (length 45 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The source gives N/A for the moderate state, which the database uses to mark a negligible probability of that damage from ground shaking.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Reg.Slope45.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Approach.Reg.Step.SXR22</b> | Approach settlement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: regular-height abutment on spread footing, step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 364 (spreadsheet row 366), group E2-S3P-C2P-D, Approach; source note "Regular-height abutment on spread footing with approach slab damage through step offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Approach.Reg.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Circ.M17</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 322 (spreadsheet row 324), group E2-S3P-C2P-D, Column; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Obl.M17</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 323 (spreadsheet row 325), group E2-S3P-C2P-D, Column; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Circ.M17</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 320 (spreadsheet row 322), group E2-S3P-C2P-D, Column; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Obl.M17</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 321 (spreadsheet row 323), group E2-S3P-C2P-D, Column; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr1.JML19</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns with a 102 mm (4 in.) gap.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 325 (spreadsheet row 327), group E2-S3P-C2P-D, Column; source note "Box-girder, one-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr1.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr1T.JML19</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, one-way flared columns (transverse flare, no gap).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 326 (spreadsheet row 328), group E2-S3P-C2P-D, Column; source note "Box-girder, one-way flared column along the transverse direction". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr1T.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr2.JML19</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, two-way flared columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 327 (spreadsheet row 329), group E2-S3P-C2P-D, Column; source note "Box-girder, two-way flared column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Flr2.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Obl.JML19</b> | Column fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, three modeled spans, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 324 (spreadsheet row 326), group E2-S3P-C2P-D, Column; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Jeon, Mangalathu, and Lee (2019), a study of California concrete box-girder bridges with flared two-column bents. The analyses use the Baker et al. (2011) PEER transportation suite scaled by a factor of two (320 motions). The authors state that the curves are valid only for the selected bridge classes: straight three-span Era 2 bridges with two-column bents. Flared columns: Flr1 is a one-way flared column with a 102 mm (4 in.) gap between the flare and the superstructure (BRIDGE-G of the study), Flr1T a one-way flared column along the transverse direction without a gap (BRIDGE-F1), and Flr2 a two-way flared column (BRIDGE-F2). The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.Column.BoxGirder.TCB.Span3.Obl.JML19.html
+
+|
+| Jeon, J.-S., S. Mangalathu, and S.-Y. Lee. 2019. Seismic fragility curves for California concrete bridges with flared two-column bents. Bulletin of Earthquake Engineering, 17 (7): 4299–4319. https://doi.org/10.1007/s10518-019-00621-4.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Circ.M17</b> | Deck displacement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 354 (spreadsheet row 356), group E2-S3P-C2P-D, DeckMax; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Obl.M17</b> | Deck displacement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 355 (spreadsheet row 357), group E2-S3P-C2P-D, DeckMax; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.TCB.Circ.M17</b> | Deck displacement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 352 (spreadsheet row 354), group E2-S3P-C2P-D, DeckMax; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.TCB.Obl.M17</b> | Deck displacement fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 353 (spreadsheet row 355), group E2-S3P-C2P-D, DeckMax; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.DeckMax.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Circ.M17</b> | Column foundation translation fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 362 (spreadsheet row 364), group E2-S3P-C2P-D, FndTran; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Obl.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Obl.M17</b> | Column foundation translation fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, bents with three to five columns, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 363 (spreadsheet row 365), group E2-S3P-C2P-D, FndTran; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+| The parameters are identical to those of CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Circ.M17; the duplication is in the source.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.MCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.TCB.Circ.M17</b> | Column foundation translation fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, circular columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 360 (spreadsheet row 362), group E2-S3P-C2P-D, FndTran; source note "Box-girder, circular column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.TCB.Circ.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.TCB.Obl.M17</b> | Column foundation translation fragility for an Era 2 (1971–1990) bridge with three or more spans, multi-column bents, and diaphragm abutments. Model attributes: box-girder deck, two-column bents, oblong columns.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 361 (spreadsheet row 363), group E2-S3P-C2P-D, FndTran; source note "Box-girder, oblong column". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Mangalathu (2017), a doctoral thesis that groups California box-girder bridges into classes by design era, span count, bent type, abutment type, and column shape, and derives component and system fragilities for each class from nonlinear time-history analyses. The fragility analyses use 320 scaled motions from 228 records of a Caltrans NGA-West2 suite listed in thesis Appendix A. Sa(1.0 s) is the RotD50 spectral acceleration at 5% damping: for 317 of the 320 motions, the Appendix A value equals the NGA-West2 RotD50 value times the tabulated scale factor.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E2.S3P.C2P.D.FndTran.BoxGirder.TCB.Obl.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>

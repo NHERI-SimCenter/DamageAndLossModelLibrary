@@ -1,0 +1,15 @@
+
+
+*********************************
+Hazus Earthquake Methodology v6.1
+*********************************
+
+Seismic damage models for buried potable water pipelines based on version 6.1 of the Hazus Earthquake Model Technical Manual (Section 8.1). Hazus expresses pipeline damage as a repair rate per unit length. Under ground shaking, the repair rate of brittle pipes is 0.0001 × PGV^2.25 repairs per km, with the peak ground velocity in cm/s. Under ground failure, it is PGD^0.56 repairs per km multiplied by the probability of liquefaction, with the permanent ground deformation in inches. Ductile pipes take 0.3 times either rate. Hazus classifies cast iron, asbestos cement, and concrete pipes as brittle, and ductile iron, PVC, and steel pipes as ductile, except that welded steel pipes with gas-welded joints, and pre-1935 steel pipes whose weld type is unknown, count as brittle.
+
+The four models in this dataset convert the repair rates into fragility curves for a 20 ft pipe segment. Each curve gives RR × L, the expected number of repairs in the segment with L = 20 ft (0.006096 km), as the probability that the segment needs a repair, up to a probability of 1 where RR × L reaches 1. For small values this approximates the probability of at least one repair under a Poisson assumption; for larger values it is higher. The ground failure models take the probability of liquefaction as 1; it is not included in the curves and has to be accounted for separately. The dataset's pelicun configuration script divides each pipe into 20 ft segments and assigns to each segment the ground shaking and the ground failure model of the pipe's class; the manual's worked example (Section 8.1.7.1) uses the same segment length. Hazus splits the repairs into leaks and breaks, 80% leaks and 20% breaks under ground shaking and 20% leaks and 80% breaks under ground failure. The models carry this split as the damage state weights of a single limit state with two damage states, leak and break.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   PWP/index

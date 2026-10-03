@@ -1,10 +1,10 @@
 
 
-****************************************
-Hazus Earthquake Methodology - Buildings
-****************************************
+*********************************
+Hazus Earthquake Methodology v6.1
+*********************************
 
-The models in this dataset are based on version 5.1 of the Hazus Earthquake Model Technical Manual
+Building-level seismic damage and loss models from version 6.1 of the Hazus Earthquake Model Technical Manual. Version 6.1 adds two seismic design levels, Severe-Code (SC) and Very High-Code (VC), which contribute 58 of the 323 fragility models in this dataset. The other fragility models and all repair consequence models are the same as in the Hazus v5.1 dataset.
 
 
 .. toctree::

@@ -1,0 +1,54 @@
+
+
+*********************
+PWP.B - Brittle pipes
+*********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>PWP.B.GF</b> | Brittle potable water pipe (cast iron, asbestos cement, concrete, gas-welded steel, or pre-1935 steel of unknown weld type) under ground failure.</p>
+   <div>
+
+| Hazus repair rate PGD^0.56 repairs per km for a liquefaction probability of 1 (Table 8-12, PWP1), multiplied by a 20 ft (0.006096 km) segment length and capped at 1.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: PWP.B.GF.html
+
+|
+| FEMA. 2024. Hazus Earthquake Model Technical Manual, Hazus 6.1. Federal Emergency Management Agency, Washington, D.C. https://www.fema.gov/sites/default/files/documents/fema_hazus-earthquake-model-technical-manual-6-1.pdf
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>PWP.B.GS</b> | Brittle potable water pipe (cast iron, asbestos cement, concrete, gas-welded steel, or pre-1935 steel of unknown weld type) under ground shaking.</p>
+   <div>
+
+| Hazus repair rate 0.0001 × PGV^2.25 repairs per km (Table 8-12, PWP1), multiplied by a 20 ft (0.006096 km) segment length and capped at 1.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: PWP.B.GS.html
+
+|
+| FEMA. 2024. Hazus Earthquake Model Technical Manual, Hazus 6.1. Federal Emergency Management Agency, Washington, D.C. https://www.fema.gov/sites/default/files/documents/fema_hazus-earthquake-model-technical-manual-6-1.pdf
+
+
+.. raw:: html
+
+   <hr>

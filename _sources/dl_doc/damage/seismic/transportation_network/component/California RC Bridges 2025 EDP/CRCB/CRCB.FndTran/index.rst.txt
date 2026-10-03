@@ -1,0 +1,34 @@
+
+
+********************************************
+CRCB.FndTran - Column foundation translation
+********************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.FndTran.MultiSpan.M17</b> | Column foundation fragility in terms of peak foundation translation for multi-span bridges of any era.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 17 (spreadsheet row 19), FndTran, EDP "Displacement (in.)"; source reference "All six listed in Table 3 of the paper".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type FNT at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are those of Ramanathan (2012) Tables 5.15 and 5.17 as adopted by Mangalathu (2017) Table 6.13. The database assigns these capacities to all six multi-span studies listed in Chen et al. (2025, Table 3).
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.FndTran.MultiSpan.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>

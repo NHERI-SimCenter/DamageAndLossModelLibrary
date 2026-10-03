@@ -1,0 +1,467 @@
+
+
+***************************************
+CRCB.E123.S1.C0.D - diaphragm abutments
+***************************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbAct.Slab.Mod1.CPR22</b> | Active abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 0 (spreadsheet row 2), group E123-S1-C0-D, AbAct; source note "Slab deck, modification factors computed using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbAct (data row 26), which holds the passive-direction values. This dataset applies the same factors to the seat-abutment curve that holds the active-direction values (data row 28, relabeled here); each published value is multiplied by the ratio of the active-direction to the passive-direction seat value: slight median 17.56 g to 7.7179 g (ratio 0.4395); moderate median 78.73 g to 26.9499 g (ratio 0.3423); slight dispersion and moderate dispersion unchanged.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbAct.Slab.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbAct.Slab.Mod23.CPR22</b> | Active abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 1 (spreadsheet row 3), group E123-S1-C0-D, AbAct; source note "Slab deck, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbAct (data row 26), which holds the passive-direction values. This dataset applies the same factors to the seat-abutment curve that holds the active-direction values (data row 28, relabeled here); each published value is multiplied by the ratio of the active-direction to the passive-direction seat value: slight median 16.38 g to 7.1993 g (ratio 0.4395); moderate median 95.16 g to 32.574 g (ratio 0.3423); slight dispersion and moderate dispersion unchanged.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbAct.Slab.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbAct.TBeam.Mod1.CPR22</b> | Active abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 2 (spreadsheet row 4), group E123-S1-C0-D, AbAct; source note "T-beam, modification factors computed by using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbAct (data row 27), which holds the passive-direction values. This dataset applies the same factors to the seat-abutment curve that holds the active-direction values (data row 29, relabeled here); each published value is multiplied by the ratio of the active-direction to the passive-direction seat value: slight median 19.62 g to 9.1371 g (ratio 0.4657); slight dispersion 0.78 to 0.77 (ratio 0.9872); moderate median 88.57 g to 32.5514 g (ratio 0.3675); moderate dispersion 0.78 to 0.77 (ratio 0.9872).
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbAct.TBeam.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbAct.TBeam.Mod23.CPR22</b> | Active abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 3 (spreadsheet row 5), group E123-S1-C0-D, AbAct; source note "T-beam, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbAct (data row 27), which holds the passive-direction values. This dataset applies the same factors to the seat-abutment curve that holds the active-direction values (data row 29, relabeled here); each published value is multiplied by the ratio of the active-direction to the passive-direction seat value: slight median 18.3 g to 8.5224 g (ratio 0.4657); slight dispersion 0.96 to 0.9477 (ratio 0.9872); moderate median 107.06 g to 39.3468 g (ratio 0.3675); moderate dispersion 0.96 to 0.9477 (ratio 0.9872).
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbAct.TBeam.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbPass.Slab.Mod1.CPR22</b> | Passive abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 4 (spreadsheet row 6), group E123-S1-C0-D, AbPass; source note "Slab deck, modification factors computed by using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbPass (data row 28), which holds the active-direction values. This dataset applies the same factors to the seat-abutment curve that holds the passive-direction values (data row 26, relabeled here); each published value is multiplied by the ratio of the passive-direction to the active-direction seat value: slight median 7.75 g to 17.633 g (ratio 2.2752); moderate median 26.3 g to 76.8315 g (ratio 2.9213); slight dispersion and moderate dispersion unchanged.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbPass.Slab.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbPass.Slab.Mod23.CPR22</b> | Passive abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 5 (spreadsheet row 7), group E123-S1-C0-D, AbPass; source note "Slab deck, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbPass (data row 28), which holds the active-direction values. This dataset applies the same factors to the seat-abutment curve that holds the passive-direction values (data row 26, relabeled here); each published value is multiplied by the ratio of the passive-direction to the active-direction seat value: slight median 8.5 g to 19.3394 g (ratio 2.2752); moderate median 37.22 g to 108.7326 g (ratio 2.9213); slight dispersion and moderate dispersion unchanged.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbPass.Slab.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbPass.TBeam.Mod1.CPR22</b> | Passive abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 6 (spreadsheet row 8), group E123-S1-C0-D, AbPass; source note "T-beam, modification factors computed by using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbPass (data row 29), which holds the active-direction values. This dataset applies the same factors to the seat-abutment curve that holds the passive-direction values (data row 27, relabeled here); each published value is multiplied by the ratio of the passive-direction to the active-direction seat value: slight median 9.17 g to 19.6906 g (ratio 2.1473); slight dispersion 0.81 to 0.8205 (ratio 1.0130); moderate median 31.77 g to 86.444 g (ratio 2.7209); moderate dispersion 0.81 to 0.8205 (ratio 1.0130).
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbPass.TBeam.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbPass.TBeam.Mod23.CPR22</b> | Passive abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 7 (spreadsheet row 9), group E123-S1-C0-D, AbPass; source note "T-beam, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+| Chen et al. (2025) derived this curve with modification factors from the seat-abutment curve that the source labels AbPass (data row 29), which holds the active-direction values. This dataset applies the same factors to the seat-abutment curve that holds the passive-direction values (data row 27, relabeled here); each published value is multiplied by the ratio of the passive-direction to the active-direction seat value: slight median 10.06 g to 21.6017 g (ratio 2.1473); slight dispersion 0.96 to 0.9725 (ratio 1.0130); moderate median 44.96 g to 122.333 g (ratio 2.7209); moderate dispersion 0.96 to 0.9725 (ratio 1.0130).
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbPass.TBeam.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbTran.Slab.Mod1.CPR22</b> | Transverse abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 8 (spreadsheet row 10), group E123-S1-C0-D, AbTran; source note "Slab deck, modification factors computed by using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbTran.Slab.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbTran.Slab.Mod23.CPR22</b> | Transverse abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: slab deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 9 (spreadsheet row 11), group E123-S1-C0-D, AbTran; source note "Slab deck, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbTran.Slab.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbTran.TBeam.Mod1.CPR22</b> | Transverse abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 1 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 10 (spreadsheet row 12), group E123-S1-C0-D, AbTran; source note "T-beam, modification factors computed by using Era 1 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbTran.TBeam.Mod1.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.AbTran.TBeam.Mod23.CPR22</b> | Transverse abutment fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: T-beam deck, modification factors from Era 2 and 3 two-span, single-column bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 11 (spreadsheet row 13), group E123-S1-C0-D, AbTran; source note "T-beam, modification factors computed using Era 2 and Era 3 bridge fragilities". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Cavalcante et al. (2022), a study of typical bridges in northeastern Brazil, including single-span T-beam and slab-deck bridges with seat abutments. Chen et al. (2025) use these curves as a proxy for California single-span bridges. They found no era-specific fragility models for single-span bridges, so the E123 groups apply to bridges of any era. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated. In the literature they surveyed, Chen et al. (2025) found no viable set of fragility models for single-span bridges with diaphragm abutments. They derived this curve from the seat-abutment curve with modification factors, the ratios of the diaphragm-abutment to the seat-abutment fragility parameters of the two-span, single-column groups of the named era. The published values show the factors applied to the medians and the dispersions; the paper describes the adjustment of the medians only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.AbTran.TBeam.Mod23.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Cant.Slope10.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: cantilever abutment on spread footing, slope offset with a 10 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 16 (spreadsheet row 18), group E123-S1-C0-D, Approach; source note "Cantilever abutment on spread footing with approach slab (length 10 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Cant.Slope10.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Cant.Step.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: cantilever abutment on spread footing, step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 13 (spreadsheet row 15), group E123-S1-C0-D, Approach; source note "Cantilever abutment on spread footing with approach slab damage through step offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Cant.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Pile.Slope10.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: abutment on piles, slope offset with a 10 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 17 (spreadsheet row 19), group E123-S1-C0-D, Approach; source note "Abutment on piles with approach slab (length 10 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+| The source prints a moderate dispersion of 1.99, as do Shao et al. (2022, Table 6); this dataset stores 0.99. Shao et al. (2022, Sec. 4.4) define the dispersion of the integrated model as the square root of the sum of squares of the three methods' dispersions, and for this configuration Tables 3 to 5 give 0.41, 0.62, and 0.65, which combine to 0.987.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Pile.Slope10.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Pile.Step.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: abutment on piles, step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 14 (spreadsheet row 16), group E123-S1-C0-D, Approach; source note "Abutment on piles with approach slab damage through step offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Pile.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Reg.Slope10.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: regular-height abutment on spread footing, slope offset with a 10 ft approach slab.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 15 (spreadsheet row 17), group E123-S1-C0-D, Approach; source note "Regular-height abutment on spread footing with approach slab (length 10 ft) damage through slope offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Reg.Slope10.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.E123.S1.C0.D.Approach.Reg.Step.SXR22</b> | Approach settlement fragility for a single-span (any era) bridge with no bents and diaphragm abutments. Model attributes: regular-height abutment on spread footing, step offset.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, Sa_1_Fragility Database.csv, data row 12 (spreadsheet row 14), group E123-S1-C0-D, Approach; source note "Regular-height abutment on spread footing with approach slab damage through step offset". The curve describes the most-damaged unit of this component type in the bridge (the source analyses record one peak demand per component type), so assign a quantity of one per bridge. Curves for the same component and group from different sources are alternatives, and the database publishes no weights for choosing among them. The component curves do not carry the demand correlation behind the system curves. The component curves and the system curve of the same group (seismic/transportation_network/portfolio/California RC Bridges 2025) are two representations of the same bridge. Apply one or the other to a given bridge, because applying both to the same bridge double-counts its damage; different bridges in one regional assessment may use different representations.
+| Source study: Shao, Xie, Roblee, and Zhang (2022), a study of approach backfill differential settlement for California bridges. The integrated fragility model of the study takes the mean of the three methods' medians and the square root of the sum of squares (SRSS) of their dispersions. The 2D dynamic method uses 320 motions from a parallel Caltrans project with scale factors of 0.8 to 2.5, whose count and range agree with the Caltrans suite of Mangalathu (2017); the 1D static method works from PGA and the 1D dynamic method from stochastic motions, so neither uses these records. The slight and moderate states are the Minor (LS2) and Moderate (LS3) states of the study; its Observable, Major, and Severe states are not included. In the study, the 10 ft approach slab represents early-designed bridges. It distinguishes abutment foundation types, not seat and diaphragm abutments, so the same curves appear in seat and diaphragm groups. The horizontal-component definition and the spectral damping of Sa(1.0 s) are not stated.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.E123.S1.C0.D.Approach.Reg.Step.SXR22.html
+
+|
+| Shao, Y., Y. Xie, C. J. Roblee, and J. Zhang. 2022. Seismic fragility of approach backfill differential settlement for statewide bridges in California. Soil Dynamics and Earthquake Engineering, 153: 107049. https://doi.org/10.1016/j.soildyn.2021.107049.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>

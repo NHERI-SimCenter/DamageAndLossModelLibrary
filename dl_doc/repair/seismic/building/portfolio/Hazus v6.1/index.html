@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hazus Earthquake Methodology - Buildings &mdash; Damage and Loss Model Library  documentation</title>
+  <title>Hazus Earthquake Methodology v6.1 &mdash; Damage and Loss Model Library  documentation</title>
       <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -23,7 +23,7 @@
     <link rel="index" title="Index" href="../../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../../search.html" />
     <link rel="next" title="LF - Lifeline Facilities" href="LF/index.html" />
-    <link rel="prev" title="STR - Structural" href="../Hazus%20v5.1/STR/index.html" /> 
+    <link rel="prev" title="Repair Consequence Models" href="../../../../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,6 +58,14 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../../release_notes/index.html">Release Notes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../../release_notes/index.html#version-3">Version 3</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../../release_notes/v3.2.html">Version 3.2 (October 2, 2026)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.2.html#added">Added</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.2.html#changed">Changed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.2.html#removed">Removed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.2.html#fixed">Fixed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.2.html#distribution">Distribution</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../../release_notes/v3.1.html">Version 3.1 (July 22, 2026)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.1.html#added">Added</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../../release_notes/v3.1.html#changed">Changed</a></li>
@@ -90,59 +98,16 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../../damage/index.html">Damage Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/index.html">GF - Geotechnical Failure</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/GF.H/index.html">GF.H - Horizontal Spreading</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/GF.V/index.html">GF.V - Vertical Settlement</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.W1/index.html">LF.W1 - Wood, Light Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.W2/index.html">LF.W2 - Wood, Commercial &amp; Industrial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S1/index.html">LF.S1 - Steel Moment Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S2/index.html">LF.S2 - Steel Braced Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S3/index.html">LF.S3 - Steel Light Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S4/index.html">LF.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S5/index.html">LF.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C1/index.html">LF.C1 - Concrete Moment Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C2/index.html">LF.C2 - Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C3/index.html">LF.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.PC1/index.html">LF.PC1 - Precast Concrete Tilt-Up Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.PC2/index.html">LF.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.RM1/index.html">LF.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.RM2/index.html">LF.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.URM/index.html">LF.URM - Unreinforced Masonry Bearing Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.MH/index.html">LF.MH - Mobile Homes</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/index.html">STR - Structural</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.W1/index.html">STR.W1 - Wood, Light Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.W2/index.html">STR.W2 - Wood, Commercial &amp; Industrial</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S1/index.html">STR.S1 - Steel Moment Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S2/index.html">STR.S2 - Steel Braced Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S3/index.html">STR.S3 - Steel Light Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S4/index.html">STR.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S5/index.html">STR.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C1/index.html">STR.C1 - Concrete Moment Frame</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C2/index.html">STR.C2 - Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C3/index.html">STR.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.PC1/index.html">STR.PC1 - Precast Concrete Tilt-Up Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.PC2/index.html">STR.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.RM1/index.html">STR.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.RM2/index.html">STR.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.URM/index.html">STR.URM - Unreinforced Masonry Bearing Walls</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.MH/index.html">STR.MH - Mobile Homes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology v5.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/index.html">EP - Electrical Power</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.S/index.html">EP.S - Substation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.C/index.html">EP.C - Circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.G/index.html">EP.G - Generation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/index.html">Hazus Earthquake Methodology v6.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/GF/index.html">GF - Geotechnical Failure</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/GF/GF.H/index.html">GF.H - Horizontal Spreading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/GF/GF.V/index.html">GF.V - Vertical Settlement</a></li>
@@ -190,6 +155,58 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/STR/STR.RM2/index.html">STR.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/STR/STR.URM/index.html">STR.URM - Unreinforced Masonry Bearing Walls</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v6.1/STR/STR.MH/index.html">STR.MH - Mobile Homes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology v5.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/index.html">GF - Geotechnical Failure</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/GF.H/index.html">GF.H - Horizontal Spreading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/GF/GF.V/index.html">GF.V - Vertical Settlement</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.W1/index.html">LF.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.W2/index.html">LF.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S1/index.html">LF.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S2/index.html">LF.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S3/index.html">LF.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S4/index.html">LF.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.S5/index.html">LF.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C1/index.html">LF.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C2/index.html">LF.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.C3/index.html">LF.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.PC1/index.html">LF.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.PC2/index.html">LF.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.RM1/index.html">LF.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.RM2/index.html">LF.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.URM/index.html">LF.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/LF/LF.MH/index.html">LF.MH - Mobile Homes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/index.html">STR - Structural</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.W1/index.html">STR.W1 - Wood, Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.W2/index.html">STR.W2 - Wood, Commercial &amp; Industrial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S1/index.html">STR.S1 - Steel Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S2/index.html">STR.S2 - Steel Braced Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S3/index.html">STR.S3 - Steel Light Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S4/index.html">STR.S4 - Steel Frame with Cast-in-Place Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.S5/index.html">STR.S5 - Steel Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C1/index.html">STR.C1 - Concrete Moment Frame</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C2/index.html">STR.C2 - Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.C3/index.html">STR.C3 - Concrete Frame with Unreinforced Masonry Infill Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.PC1/index.html">STR.PC1 - Precast Concrete Tilt-Up Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.PC2/index.html">STR.PC2 - Precast Concrete Frames with Concrete Shear Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.RM1/index.html">STR.RM1 - Reinforced Masonry Bearing Walls with Wood or Metal Deck Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.RM2/index.html">STR.RM2 - Reinforced Masonry Bearing Walls with Precast Concrete Diaphragms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.URM/index.html">STR.URM - Unreinforced Masonry Bearing Walls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/building/portfolio/Hazus%20v5.1/STR/STR.MH/index.html">STR.MH - Mobile Homes</a></li>
 </ul>
 </li>
 </ul>
@@ -292,19 +309,165 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/index.html">HAZUS Earthquake Methodology - Power</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/index.html">EP - Electrical Power</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.S/index.html">EP.S - Substation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.C/index.html">EP.C - Circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/power_network/portfolio/Hazus%20v5.1/EP/EP.G/index.html">EP.G - Generation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/index.html">California RC Bridges 2025 (Chen et al.): Systems</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/index.html">CRCB - California RC bridges (Chen et al. 2025)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E1/index.html">CRCB.E1 - Era 1 (pre-1970)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/index.html">CRCB.E1.S2 - two spans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/index.html">CRCB.E1.S3P - three or more spans</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E2/index.html">CRCB.E2 - Era 2 (1971–1990)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/index.html">CRCB.E2.S2 - two spans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/index.html">CRCB.E2.S3P - three or more spans</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E3/index.html">CRCB.E3 - Era 3 (post-1991)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/index.html">CRCB.E3.S2 - two spans</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/index.html">CRCB.E3.S3P - three or more spans</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E123/index.html">CRCB.E123 - single-span (any era)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/California%20RC%20Bridges%202025/CRCB/CRCB.E123/CRCB.E123.S1/index.html">CRCB.E123.S1 - single span</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Transportation</a><ul>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology v5.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/Hazus%20v5.1/HRD/index.html">HRD - Road segments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/Hazus%20v5.1/HWB/index.html">HWB - Bridges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/portfolio/Hazus%20v5.1/HTU/index.html">HTU - Tunnels</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/index.html">California RC Bridges 2025 (Chen et al.): Components, EDP-based</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/index.html">CRCB - California RC bridges (Chen et al. 2025)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Column/index.html">CRCB.Column - Column</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Unseating/index.html">CRCB.Unseating - Span unseating</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.AbAct/index.html">CRCB.AbAct - Active abutment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.AbPass/index.html">CRCB.AbPass - Passive abutment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.AbTran/index.html">CRCB.AbTran - Transverse abutment</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Bearing/index.html">CRCB.Bearing - Bearing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.DeckMax/index.html">CRCB.DeckMax - Deck displacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.FndRot/index.html">CRCB.FndRot - Column foundation rotation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.FndTran/index.html">CRCB.FndTran - Column foundation translation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Key/index.html">CRCB.Key - Shear key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Seal/index.html">CRCB.Seal - Joint seal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025%20EDP/CRCB/CRCB.Approach/index.html">CRCB.Approach - Approach settlement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/index.html">California RC Bridges 2025 (Chen et al.): Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/index.html">CRCB - California RC bridges (Chen et al. 2025)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/index.html">CRCB.E1 - Era 1 (pre-1970)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/index.html">CRCB.E1.S2 - two spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C1/index.html">CRCB.E1.S2.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C1/CRCB.E1.S2.C1.D/index.html">CRCB.E1.S2.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C1/CRCB.E1.S2.C1.S/index.html">CRCB.E1.S2.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C2P/index.html">CRCB.E1.S2.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C2P/CRCB.E1.S2.C2P.D/index.html">CRCB.E1.S2.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S2/CRCB.E1.S2.C2P/CRCB.E1.S2.C2P.S/index.html">CRCB.E1.S2.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/index.html">CRCB.E1.S3P - three or more spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C1/index.html">CRCB.E1.S3P.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C1/CRCB.E1.S3P.C1.D/index.html">CRCB.E1.S3P.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C1/CRCB.E1.S3P.C1.S/index.html">CRCB.E1.S3P.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C2P/index.html">CRCB.E1.S3P.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C2P/CRCB.E1.S3P.C2P.D/index.html">CRCB.E1.S3P.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E1/CRCB.E1.S3P/CRCB.E1.S3P.C2P/CRCB.E1.S3P.C2P.S/index.html">CRCB.E1.S3P.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/index.html">CRCB.E2 - Era 2 (1971–1990)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/index.html">CRCB.E2.S2 - two spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C1/index.html">CRCB.E2.S2.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C1/CRCB.E2.S2.C1.D/index.html">CRCB.E2.S2.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C1/CRCB.E2.S2.C1.S/index.html">CRCB.E2.S2.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C2P/index.html">CRCB.E2.S2.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C2P/CRCB.E2.S2.C2P.D/index.html">CRCB.E2.S2.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S2/CRCB.E2.S2.C2P/CRCB.E2.S2.C2P.S/index.html">CRCB.E2.S2.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/index.html">CRCB.E2.S3P - three or more spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C1/index.html">CRCB.E2.S3P.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C1/CRCB.E2.S3P.C1.D/index.html">CRCB.E2.S3P.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C1/CRCB.E2.S3P.C1.S/index.html">CRCB.E2.S3P.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C2P/index.html">CRCB.E2.S3P.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C2P/CRCB.E2.S3P.C2P.D/index.html">CRCB.E2.S3P.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E2/CRCB.E2.S3P/CRCB.E2.S3P.C2P/CRCB.E2.S3P.C2P.S/index.html">CRCB.E2.S3P.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/index.html">CRCB.E3 - Era 3 (post-1991)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/index.html">CRCB.E3.S2 - two spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C1/index.html">CRCB.E3.S2.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C1/CRCB.E3.S2.C1.D/index.html">CRCB.E3.S2.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C1/CRCB.E3.S2.C1.S/index.html">CRCB.E3.S2.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C2P/index.html">CRCB.E3.S2.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C2P/CRCB.E3.S2.C2P.D/index.html">CRCB.E3.S2.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S2/CRCB.E3.S2.C2P/CRCB.E3.S2.C2P.S/index.html">CRCB.E3.S2.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/index.html">CRCB.E3.S3P - three or more spans</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C1/index.html">CRCB.E3.S3P.C1 - single-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C1/CRCB.E3.S3P.C1.D/index.html">CRCB.E3.S3P.C1.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C1/CRCB.E3.S3P.C1.S/index.html">CRCB.E3.S3P.C1.S - seat abutments</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C2P/index.html">CRCB.E3.S3P.C2P - multi-column bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C2P/CRCB.E3.S3P.C2P.D/index.html">CRCB.E3.S3P.C2P.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E3/CRCB.E3.S3P/CRCB.E3.S3P.C2P/CRCB.E3.S3P.C2P.S/index.html">CRCB.E3.S3P.C2P.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E123/index.html">CRCB.E123 - single-span (any era)</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E123/CRCB.E123.S1/index.html">CRCB.E123.S1 - single span</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E123/CRCB.E123.S1/CRCB.E123.S1.C0/index.html">CRCB.E123.S1.C0 - no bents</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E123/CRCB.E123.S1/CRCB.E123.S1.C0/CRCB.E123.S1.C0.D/index.html">CRCB.E123.S1.C0.D - diaphragm abutments</a></li>
+<li class="toctree-l7"><a class="reference internal" href="../../../../../damage/seismic/transportation_network/component/California%20RC%20Bridges%202025/CRCB/CRCB.E123/CRCB.E123.S1/CRCB.E123.S1.C0/CRCB.E123.S1.C0.S/index.html">CRCB.E123.S1.C0.S - seat abutments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../../damage/seismic/water_network/portfolio/Hazus%20v6.1/index.html">Hazus Earthquake Methodology v6.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../../../damage/seismic/water_network/portfolio/Hazus%20v6.1/PWP/index.html">PWP - Potable water pipes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/water_network/portfolio/Hazus%20v6.1/PWP/PWP.B/index.html">PWP.B - Brittle pipes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../damage/seismic/water_network/portfolio/Hazus%20v6.1/PWP/PWP.D/index.html">PWP.D - Ductile pipes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../../../damage/hurricane/building/component/SimCenter%20Wind%20Component%20Library/index.html">SimCenter Hurricane Wind Component Library</a><ul>
@@ -375,18 +538,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">Repair Consequence Models</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Buildings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/STR/index.html">STR - Structural</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Hazus Earthquake Methodology - Buildings</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hazus Earthquake Methodology v6.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="LF/index.html">LF - Lifeline Facilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a></li>
 <li class="toctree-l3"><a class="reference internal" href="NSD/index.html">NSD - Non-Structural Drift-Sensitive</a></li>
 <li class="toctree-l3"><a class="reference internal" href="STR/index.html">STR - Structural</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Hazus%20v5.1/index.html">Hazus Earthquake Methodology v5.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/LF/index.html">LF - Lifeline Facilities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/NSA/index.html">NSA - Non-Structural Acceleration-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/NSD/index.html">NSD - Non-Structural Drift-Sensitive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Hazus%20v5.1/STR/index.html">STR - Structural</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../component/FEMA%20P-58%202nd%20Edition/index.html">FEMA P-58 2nd Edition</a><ul>
@@ -487,7 +650,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology - Transportation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../transportation_network/portfolio/Hazus%20v5.1/index.html">Hazus Earthquake Methodology v5.1</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../transportation_network/portfolio/Hazus%20v5.1/HRD/index.html">HRD - Road segments</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../transportation_network/portfolio/Hazus%20v5.1/HWB/index.html">HWB - Bridges</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../transportation_network/portfolio/Hazus%20v5.1/HTU/index.html">HTU - Tunnels</a></li>
@@ -512,7 +675,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../../../../index.html">Repair Consequence Models</a></li>
-      <li class="breadcrumb-item active">Hazus Earthquake Methodology - Buildings</li>
+      <li class="breadcrumb-item active">Hazus Earthquake Methodology v6.1</li>
       <li class="wy-breadcrumbs-aside">
       </li>
   </ul>
@@ -521,9 +684,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="hazus-earthquake-methodology-buildings">
-<h1>Hazus Earthquake Methodology - Buildings<a class="headerlink" href="#hazus-earthquake-methodology-buildings" title="Link to this heading"></a></h1>
-<p>The models in this dataset are based on version 5.1 of the Hazus Earthquake Model Technical Manual</p>
+  <section id="hazus-earthquake-methodology-v6-1">
+<h1>Hazus Earthquake Methodology v6.1<a class="headerlink" href="#hazus-earthquake-methodology-v6-1" title="Link to this heading"></a></h1>
+<p>Building-level seismic damage and loss models from version 6.1 of the Hazus Earthquake Model Technical Manual. Version 6.1 adds two seismic design levels, Severe-Code (SC) and Very High-Code (VC), which contribute 58 of the 323 fragility models in this dataset. The other fragility models and all repair consequence models are the same as in the Hazus v5.1 dataset.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="LF/index.html">LF - Lifeline Facilities</a></li>

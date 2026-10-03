@@ -1,0 +1,13 @@
+
+
+***********************************
+CRCB.E2.S2.C1 - single-column bents
+***********************************
+
+The following models are available:
+
+.. toctree::
+   :maxdepth: 1
+
+   CRCB.E2.S2.C1.D/index
+   CRCB.E2.S2.C1.S/index

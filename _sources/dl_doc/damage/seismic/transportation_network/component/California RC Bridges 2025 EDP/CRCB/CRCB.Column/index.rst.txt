@@ -1,0 +1,164 @@
+
+
+********************
+CRCB.Column - Column
+********************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.CD.E1.M17</b> | Column fragility in terms of peak column curvature ductility for Era 1 (pre-1970) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 0 (spreadsheet row 2), Column, EDP "Curvature ductility"; source note "For Era 1 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the Era 1 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.CD.E1.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.CD.E2.M17</b> | Column fragility in terms of peak column curvature ductility for Era 2 (1971–1990) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 1 (spreadsheet row 3), Column, EDP "Curvature ductility"; source note "For Era 2 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the Era 2 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.CD.E2.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.CD.E3.M17</b> | Column fragility in terms of peak column curvature ductility for Era 3 (post-1991) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 2 (spreadsheet row 4), Column, EDP "Curvature ductility"; source note "For Era 3 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CCD at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the Era 3 column curvature ductility capacities of Mangalathu (2017) Table 6.13, based on the review of column tests by design era in Sec. 6.1.2.1 and Table 6.11 of that thesis; Soleimani (2017) Table 7.5 gives the same values. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu et al. (2018), whose curves use column drift. Soleimani, Mangalathu, and DesRoches (2017, p. 469) use column displacement ductility, not curvature ductility, as the column EDP; their curves in the database are system curves only.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.CD.E3.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.DR.E1.MCP18</b> | Column fragility in terms of peak column drift ratio for Era 1 (pre-1970) bridges with three or more spans, single-column bents, and diaphragm abutments (group E1-S3P-C1-D).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 3 (spreadsheet row 5), Column, EDP "Column drift (%)"; source note "For E1-S3P-C1-D bridge group"; source reference "Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).
+| The capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 1 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E1-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 0.7% as 0.007, 1.5% as 0.015, 2.5% as 0.025, and 5% as 0.05.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.DR.E1.MCP18.html
+
+|
+| Mangalathu, S., E. Choi, H. C. Park, and J.-S. Jeon. 2018. Probabilistic seismic vulnerability assessment of tall horizontally curved concrete bridges in California. Journal of Performance of Constructed Facilities, 32 (6): 04018080. https://doi.org/10.1061/(ASCE)CF.1943-5509.0001231.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.DR.E2.MCP18</b> | Column fragility in terms of peak column drift ratio for Era 2 (1971–1990) bridges with three or more spans, single-column bents, and diaphragm abutments (group E2-S3P-C1-D).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 4 (spreadsheet row 6), Column, EDP "Column drift (%)"; source note "For E2-S3P-C1-D bridge group"; source reference "Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).
+| The capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 2 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E2-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 1% as 0.01, 2.5% as 0.025, 5% as 0.05, and 7.5% as 0.075.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.DR.E2.MCP18.html
+
+|
+| Mangalathu, S., E. Choi, H. C. Park, and J.-S. Jeon. 2018. Probabilistic seismic vulnerability assessment of tall horizontally curved concrete bridges in California. Journal of Performance of Constructed Facilities, 32 (6): 04018080. https://doi.org/10.1061/(ASCE)CF.1943-5509.0001231.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Column.DR.E3.MCP18</b> | Column fragility in terms of peak column drift ratio for Era 3 (post-1991) bridges with three or more spans, single-column bents, and diaphragm abutments (group E3-S3P-C1-D).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 5 (spreadsheet row 7), Column, EDP "Column drift (%)"; source note "For E3-S3P-C1-D bridge group"; source reference "Mangalathu et al. (2018)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type CDR at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu et al. (2018).
+| The capacities are those of Mangalathu et al. (2018, Table 2, p. 8) for Era 3 columns of the two-frame, five-span bridges with single-column bents that the study models, the configuration of group E3-S3P-C1-D. The study gives them as column drift in percent; they are stored as ratios: 1% as 0.01, 2.5% as 0.025, 7.5% as 0.075, and 10% as 0.1.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Column.DR.E3.MCP18.html
+
+|
+| Mangalathu, S., E. Choi, H. C. Park, and J.-S. Jeon. 2018. Probabilistic seismic vulnerability assessment of tall horizontally curved concrete bridges in California. Journal of Performance of Constructed Facilities, 32 (6): 04018080. https://doi.org/10.1061/(ASCE)CF.1943-5509.0001231.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>

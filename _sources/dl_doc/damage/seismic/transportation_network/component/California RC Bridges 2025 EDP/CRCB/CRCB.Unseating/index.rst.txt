@@ -1,0 +1,140 @@
+
+
+*******************************
+CRCB.Unseating - Span unseating
+*******************************
+
+The following models are available:
+
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Unseating.E1.M17</b> | Span unseating fragility in terms of peak joint opening for Era 1 (pre-1970) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 7 (spreadsheet row 9), Unseating, EDP "Displacement (in.)"; source note "For Era 1 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the four-state joint-opening capacities for Era 1 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 1 values equal those of this set.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Unseating.E1.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Unseating.E1.MSJ17</b> | Span unseating fragility in terms of peak joint opening for Era 1 (pre-1970) bridges with multi-column bents and seat abutments (groups E1-S2-C2P-S and E1-S3P-C2P-S).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 6 (spreadsheet row 8), Unseating, EDP "Displacement (in.)"; source note "Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S"; source reference "Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)". The row lists four bridge groups and is represented here by two models with identical parameters: CRCB.Unseating.E1.MSJ17 for the two Era 1 groups (Mangalathu, Soleimani, and Jeon 2017) and CRCB.Unseating.SingleSpan.CPR22 for the two single-span groups (Cavalcante et al. 2022).
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are those of Mangalathu, Soleimani, and Jeon (2017, Table 4, p. 762), 152 and 229 mm (6 and 9 in.), for Era 1 bridges with seat abutments and multi-column bents (the study models two-column bents); the study takes them from Mangalathu (2017) Table 7.4 and uses them for its system curves.
+| The source defines unseating capacity for the extensive and complete states only. The slight and moderate medians are set equal to the extensive median; those two states cannot occur.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Unseating.E1.MSJ17.html
+
+|
+| Mangalathu, S., F. Soleimani, and J.-S. Jeon. 2017. Bridge classes for regional seismic risk assessment: Improving HAZUS models. Engineering Structures, 148: 755–766. https://doi.org/10.1016/j.engstruct.2017.07.019.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Unseating.E2.M17</b> | Span unseating fragility in terms of peak joint opening for Era 2 (1971–1990) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 8 (spreadsheet row 10), Unseating, EDP "Displacement (in.)"; source note "For Era 2 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the four-state joint-opening capacities for Era 2 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) and Jeon, Mangalathu, and Lee (2019, Table 2) define unseating capacity for the extensive and complete states only, and their Era 2 values equal those of this set.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Unseating.E2.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Unseating.E3.M17</b> | Span unseating fragility in terms of peak joint opening for Era 3 (post-1991) multi-span bridges.</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 9 (spreadsheet row 11), Unseating, EDP "Displacement (in.)"; source note "For Era 3 bridges"; source reference "All six listed in Table 3 of the paper, except for Mangalathu, Soleimani, et al. (2017)".
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Mangalathu (2017) Sec. 6.1 and Table 6.1.
+| The capacities are the four-state joint-opening capacities for Era 3 bridges of Mangalathu (2017) Table 6.13 and Soleimani (2017) Table 7.5, which Mangalathu (2017, p. 129) developed from Ramanathan (2012) and discussion with Caltrans engineers. The database assigns them to five of the six multi-span studies listed in Chen et al. (2025, Table 3), all but Mangalathu, Soleimani, and Jeon (2017). Mangalathu et al. (2018, Table 2) define unseating capacity for the extensive and complete states only, and their Era 3 values equal those of this set. The Era 3 Sa(1.0 s) unseating curves of Mangalathu (2017, Appendix C) equal its Era 2 curves, so these Era 3 capacities were not used to build them. The values are stored as published.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Unseating.E3.M17.html
+
+|
+| Mangalathu, S. 2017. Performance Based Grouping and Fragility Analysis of Box-Girder Bridges in California. PhD thesis, Georgia Institute of Technology, Atlanta, GA. https://hdl.handle.net/1853/58291.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
+
+.. raw:: html
+
+   <p class="dl_comp_name"><b>CRCB.Unseating.SingleSpan.CPR22</b> | Span unseating fragility in terms of peak joint opening for single-span bridges of any era (groups E123-S1-C0-D and E123-S1-C0-S).</p>
+   <div>
+
+| DesignSafe PRJ-5910 v1, EDP_Fragility Database.csv, data row 6 (spreadsheet row 8), Unseating, EDP "Displacement (in.)"; source note "Bridge groups: E1-S2-C2P-S, E1-S3P-C2P-S, E123-S1-C0-D, E123-S1-C0-S"; source reference "Mangalathu, Soleimani, et al. (2017); Cavalcante et al. (2022)". The row lists four bridge groups and is represented here by two models with identical parameters: CRCB.Unseating.E1.MSJ17 for the two Era 1 groups (Mangalathu, Soleimani, and Jeon 2017) and CRCB.Unseating.SingleSpan.CPR22 for the two single-span groups (Cavalcante et al. 2022).
+| The model gives the probability of reaching or exceeding each damage state as a lognormal function of the peak response of the component. The demand comes from a structural analysis of the bridge. The model uses the median capacity of the source and the dispersion of 0.35 that the database assigns to every EDP-based model. Each capacity applies to one unit of the component, and the demand is the response of that unit. The demand is directional (Demand-Directional 1), so it is supplied in the direction in which the EDP is defined, as a demand of type JOP at the location and direction of the component. These models and the Sa(1.0 s)-based models of seismic/transportation_network/component/California RC Bridges 2025 and seismic/transportation_network/portfolio/California RC Bridges 2025 are alternative representations of the same damage; apply only one of them to a given bridge. The EDP definition follows Cavalcante et al. (2022).
+| The capacities are those of Cavalcante et al. (2022, Table 8), 152 and 229 mm (6 and 9 in.), for single-span bridges in northeastern Brazil, which Chen et al. (2025) use as a proxy for California single-span bridges.
+| The source defines unseating capacity for the extensive and complete states only. The slight and moderate medians are set equal to the extensive median; those two states cannot occur.
+
+
+Suggested Block Size: 1 EA (round up to integer quantity)
+
+
+
+.. raw:: html
+   :file: CRCB.Unseating.SingleSpan.CPR22.html
+
+|
+| Cavalcante, G. H. F., E. M. V. Pereira, I. D. Rodrigues, L. C. M. Vieira Junior, J. E. Padgett, and G. H. Siqueira. 2022. Seismic fragility assessment of typical bridges in Northeastern Brazil. Latin American Journal of Solids and Structures, 19 (5): e457. https://doi.org/10.1590/1679-78257062.
+| Chen, S., Y. Xie, C. Wu, H. V. Burton, J. E. Padgett, and Á. Zsarnóczay. 2025. Second-generation component and system-level seismic fragility models for reinforced concrete bridges in California. Earthquake Spectra, 41 (4): 3234–3253. https://doi.org/10.1177/87552930251343634.
+
+
+.. raw:: html
+
+   <hr>
