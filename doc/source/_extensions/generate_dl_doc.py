@@ -672,7 +672,6 @@ def ignore_file(dlml):
     return str(dlml.parent) in {
         'hurricane/building/portfolio/Hazus v5.1 original',
         'hurricane/building/portfolio/Hazus v5.1 coupled',
-        'seismic/water_network/portfolio/Hazus v6.1',
         'seismic/building/subassembly/Hazus v5.1',
         'flood/building/portfolio/Hazus v6.1',
     }
