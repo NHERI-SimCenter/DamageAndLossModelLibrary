@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - **Distribution:** v3.0 and v3.1 are now published as GitHub Releases, and `releases/latest` resolves to the current version rather than to v2.1.0. Pelicun 3.10 and later are unaffected — they install `simcenter-dlml` from PyPI. Pelicun 3.9 and earlier, which read the model data from the latest GitHub release, no longer work against it; see the README's release policy for the upgrade path and for pinning the data to v2.1.0.
+- **Dataset titles and descriptions:** the Hazus datasets are titled by methodology and version (`Hazus Earthquake Methodology v5.1`, `Hazus Earthquake Methodology v6.1`, `Hazus Hurricane Methodology v5.1`), with the asset type dropped from the title and "HAZUS" written as "Hazus"; the story-level building dataset is `Hazus Earthquake Methodology v5.1, story-level prototype`, with a description of how it was derived; the v6.1 description names the two added design levels; the original hurricane description names version 5.1 instead of 4.2; the California RC bridge datasets are titled `California RC Bridges 2025 (Chen et al.): Systems`, `California RC Bridges 2025 (Chen et al.): Components`, and `California RC Bridges 2025 (Chen et al.): Components, EDP-based`, and their descriptions are organized in paragraphs.
 
 ### Removed
 - The root `model_files.txt` manifest, which described the pre-v3.0 top-level data layout and no longer matched the packaged data.

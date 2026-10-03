@@ -1,7 +1,7 @@
 {
   "_GeneralInformation": {
-    "ShortName": "Hazus Earthquake Methodology - Buildings",
-    "Description": "The models in this dataset are based on version 5.1 of the Hazus Earthquake Model Technical Manual",
+    "ShortName": "Hazus Earthquake Methodology v5.1, story-level prototype",
+    "Description": "Story-level seismic damage and loss models for buildings. This dataset is a SimCenter prototype derived from the building-level models of the Hazus Earthquake Model Technical Manual, version 5.1; it is not a FEMA product.\n\nThe Hazus building fragilities were developed from story-level drift and acceleration limits and an assumed drift profile over the building height. This dataset extracts those story-level limits, so that users can supply their own story drifts and floor accelerations and obtain damage per story. The structural and drift-sensitive nonstructural models are conditioned on peak interstory drift ratio, and the acceleration-sensitive nonstructural models on peak floor acceleration. The model IDs carry no height class; the structural limits are those of the low-rise building types.\n\nThe repair consequence models are more approximate than the damage models. Losses are computed per story, and a heavily damaged story can cost more than its share of the building value. The dataset accounts for this by inflating the story value by a factor that increases with the number of stories, so that severe damage in one story can produce disproportionately high losses. The factor was calibrated by comparing aggregate building losses from these story-level models with building-level losses from the Hazus Earthquake Methodology across the 1.8 million buildings of the SimCenter San Francisco Bay Area testbed. The factor is applied by the dataset's pelicun configuration script.",
     "Version": "1.0",
     "ComponentGroups": {
       "GF - Geotechnical Failure": [
